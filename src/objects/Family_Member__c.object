@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object represents a family member for a person</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Address__c</fullName>
+        <description>Holding field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Holding field</inlineHelpText>
+        <label>Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <description>The family members Address: City</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family members Address: City</inlineHelpText>
+        <label>City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>The person to which this family member is related</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The person to which this family member is related</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Families</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CountryCode__c</fullName>
+        <description>The family member&apos;s Address: Country</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s Address: Country</inlineHelpText>
+        <label>CountryCode</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>The family member&apos;s Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s Email</inlineHelpText>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <description>The family member&apos;s First Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s First Name</inlineHelpText>
+        <label>First Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>High_School_Graduation_Year__c</fullName>
+        <description>The family member&apos;s High School Graduation year</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s High School Graduation year</inlineHelpText>
+        <label>High School Graduation Year</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Year_List</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Holding_Name__c</fullName>
+        <description>Required EASY field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field</inlineHelpText>
+        <label>Holding Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Home_Phone__c</fullName>
+        <description>The family member&apos;s home phone</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s home phone</inlineHelpText>
+        <label>Home Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <description>The family member&apos;s Last Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s Last Name</inlineHelpText>
+        <label>Last Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mobile_Phone__c</fullName>
+        <description>The family member&apos;s mobile phone</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s mobile phone</inlineHelpText>
+        <label>Mobile Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>PostalCode__c</fullName>
+        <description>The family member&apos;s Address: Postal Code/Zip</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s Address: Postal Code/Zip</inlineHelpText>
+        <label>Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The person to which the this person is related to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The person to which the this person is related to</inlineHelpText>
+        <label>Related Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Families1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Object_JSON__c</fullName>
+        <description>Required EASY field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field</inlineHelpText>
+        <label>Related Object JSON</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salutation__c</fullName>
+        <description>The family member&apos;s title or salutation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s title or salutation</inlineHelpText>
+        <label>Salutation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Mr.</fullName>
+                    <default>false</default>
+                    <label>Mr.</label>
+                </value>
+                <value>
+                    <fullName>Ms.</fullName>
+                    <default>false</default>
+                    <label>Ms.</label>
+                </value>
+                <value>
+                    <fullName>Mrs.</fullName>
+                    <default>false</default>
+                    <label>Mrs.</label>
+                </value>
+                <value>
+                    <fullName>Dr.</fullName>
+                    <default>false</default>
+                    <label>Dr.</label>
+                </value>
+                <value>
+                    <fullName>Prof.</fullName>
+                    <default>false</default>
+                    <label>Prof.</label>
+                </value>
+                <value>
+                    <fullName>Rev.</fullName>
+                    <default>false</default>
+                    <label>Rev.</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StateCode__c</fullName>
+        <description>The family member&apos;s Address: State</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s Address: State</inlineHelpText>
+        <label>State/Province Code</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <description>The family member&apos;s address: street</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The family member&apos;s address: street</inlineHelpText>
+        <label>Street</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>The relationship type between the person and the family member</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The relationship type between the person and the family member</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Brother</fullName>
+                    <default>false</default>
+                    <label>Brother</label>
+                </value>
+                <value>
+                    <fullName>Father</fullName>
+                    <default>false</default>
+                    <label>Father</label>
+                </value>
+                <value>
+                    <fullName>Guardian</fullName>
+                    <default>false</default>
+                    <label>Guardian</label>
+                </value>
+                <value>
+                    <fullName>Mother</fullName>
+                    <default>false</default>
+                    <label>Mother</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Sister</fullName>
+                    <default>false</default>
+                    <label>Sister</label>
+                </value>
+                <value>
+                    <fullName>Stepbrother</fullName>
+                    <default>false</default>
+                    <label>Stepbrother</label>
+                </value>
+                <value>
+                    <fullName>Stepfather</fullName>
+                    <default>false</default>
+                    <label>Stepfather</label>
+                </value>
+                <value>
+                    <fullName>Stepmother</fullName>
+                    <default>false</default>
+                    <label>Stepmother</label>
+                </value>
+                <value>
+                    <fullName>Stepsister</fullName>
+                    <default>false</default>
+                    <label>Stepsister</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>User_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Required EASY field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field</inlineHelpText>
+        <label>User Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Family Member</label>
+    <nameField>
+        <displayFormat>F-{000000}</displayFormat>
+        <label>Family Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Family Members</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

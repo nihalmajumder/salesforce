@@ -1,6 +1,6 @@
 @isTest
 private class ApplicationFilterTest {
-	
+    
     @isTest
     static void test_application_filter() {
         

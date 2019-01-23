@@ -45,12 +45,24 @@
         <type>Flexipage</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Application_Custom_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Application_Custom_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Contact__c</fields>
+        <fields>Applicant_Type__c</fields>
+        <fields>Intended_Program__c</fields>
+        <fields>Intended_Term_of_Entry__c</fields>
+        <fields>Application_Status__c</fields>
+        <fields>Admission_Decision__c</fields>
+        <label>Application Custom Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>true</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
@@ -64,7 +76,17 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
+            <field>School_College__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>Applicant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Residency__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -76,11 +98,99 @@
         <label>Admission Decision</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
             <restricted>true</restricted>
             <valueSetName>Admission_Decision</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Agree_To_Affirmation_Response__c</fullName>
+        <description>The response from the applicant about the Affirmation of Faith</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The response from the applicant about the Affirmation of Faith</inlineHelpText>
+        <label>Agree To Affirmation Response</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Agree_To_Affirmation__c</fullName>
+        <description>Specifies if the applicant agrees to the Affirmation of Faith</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant agrees to the Affirmation of Faith</inlineHelpText>
+        <label>Agree To Affirmation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Agree_To_Community_Agreement_Response__c</fullName>
+        <description>The response from the applicant about the Community Agreement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The response from the applicant about the Community Agreement</inlineHelpText>
+        <label>Agree To Community Agreement Response</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Agree_To_Community_Agreement__c</fullName>
+        <description>Specifies if the applicant agrees with the Community Agreement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant agrees with the Community Agreement</inlineHelpText>
+        <label>Agree To Community Agreement</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Agree_To_Covenant_Response__c</fullName>
+        <description>Applicants response if they do not agree with the Covenant</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicants response if they do not agree with the Covenant</inlineHelpText>
+        <label>Agree To Covenant Response</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Agree_To_Covenant__c</fullName>
+        <description>Specifies if the applicant agrees to covenant</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant agrees to covenant</inlineHelpText>
+        <label>Agree To Covenant</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
         </valueSet>
     </fields>
     <fields>
@@ -90,6 +200,7 @@
         <label>Applicant Type</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -107,6 +218,7 @@
         <relationshipName>Applications</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -116,6 +228,7 @@
         <label>Application Status</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -130,6 +243,7 @@
         <label>Citizenship</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -137,12 +251,110 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
+                    <fullName>Citizen</fullName>
+                    <default>false</default>
+                    <label>Citizen</label>
+                </value>
+                <value>
+                    <fullName>Permanent Resident Alien</fullName>
+                    <default>false</default>
+                    <label>Permanent Resident Alien</label>
+                </value>
+                <value>
+                    <fullName>Not Citizen or Permanent Resident</fullName>
+                    <default>false</default>
+                    <label>Not Citizen or Permanent Resident</label>
+                </value>
+                <value>
                     <fullName>Domestic</fullName>
                     <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Domestic</label>
                 </value>
                 <value>
                     <fullName>International</fullName>
                     <default>false</default>
+                    <isActive>false</isActive>
+                    <label>International</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>College_Credits_Transferred__c</fullName>
+        <description>Applicants response to how many college credits will be transferring</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicants response to how many college credits will be transferring</inlineHelpText>
+        <label>College Credits Transferred</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No transfer credits</fullName>
+                    <default>false</default>
+                    <label>No transfer credits</label>
+                </value>
+                <value>
+                    <fullName>1-30 transfer credits</fullName>
+                    <default>false</default>
+                    <label>1-30 transfer credits</label>
+                </value>
+                <value>
+                    <fullName>More than 30 transfer credits</fullName>
+                    <default>false</default>
+                    <label>More than 30 transfer credits</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Applicant comments about anything they would like to share regarding their application</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant comments about anything they would like to share regarding their application</inlineHelpText>
+        <label>Comments</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Completed_Requirements_For_Degree__c</fullName>
+        <description>Specifies if the applicant has already completed the requirements for a bachelors degree</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant has already completed the requirements for a bachelors degree</inlineHelpText>
+        <label>Completed Requirements For Degree</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes: Bachelor of Arts</fullName>
+                    <default>false</default>
+                    <label>Yes: Bachelor of Arts</label>
+                </value>
+                <value>
+                    <fullName>Yes: Bachelor of Science</fullName>
+                    <default>false</default>
+                    <label>Yes: Bachelor of Science</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -157,8 +369,22 @@
         <relationshipName>Applications</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Conviction_Description__c</fullName>
+        <description>Applicant&apos;s description of a conviction of a crime in any court</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s description of a conviction of a crime in any court</inlineHelpText>
+        <label>Conviction Description</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>Delivery_Location__c</fullName>
@@ -166,6 +392,7 @@
         <label>Delivery Location</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -175,18 +402,17 @@
                 <value>
                     <fullName>On-Campus</fullName>
                     <default>false</default>
+                    <label>On-Campus</label>
                 </value>
                 <value>
                     <fullName>Online</fullName>
                     <default>false</default>
-                </value>
-                <value>
-                    <fullName>Scott Air force Base</fullName>
-                    <default>false</default>
+                    <label>Online</label>
                 </value>
                 <value>
                     <fullName>Blended</fullName>
                     <default>false</default>
+                    <label>Blended</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -198,6 +424,7 @@
         <label>Delivery Type</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -211,6 +438,7 @@
         <label>Educational Background</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -220,20 +448,134 @@
                 <value>
                     <fullName>Freshman</fullName>
                     <default>false</default>
+                    <label>Freshman</label>
                 </value>
                 <value>
                     <fullName>AdultFreshman</fullName>
                     <default>false</default>
+                    <label>Adult Freshman</label>
                 </value>
                 <value>
                     <fullName>Transfer</fullName>
                     <default>false</default>
+                    <label>Transfer</label>
                 </value>
                 <value>
                     <fullName>Graduate</fullName>
                     <default>false</default>
+                    <label>Graduate</label>
                 </value>
             </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Emotional_And_Interpersonal_Goals_Respon__c</fullName>
+        <description>Applicant&apos;s Emotional And Interpersonal Goals Response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s Emotional And Interpersonal Goals Response</inlineHelpText>
+        <label>Emotional And Interpersonal Goals Respon</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Family_Pastor_Denomination__c</fullName>
+        <description>Specifies the denomination of a family member pastor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the denomination of a family member pastor</inlineHelpText>
+        <label>Family Pastor Denomination</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Denominations</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Follower_Of_Christ__c</fullName>
+        <description>Applicants answer to the question: Have you accepted Jesus Christ as your personal Lord and Savior?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicants answer to the question: Have you accepted Jesus Christ as your personal Lord and Savior?</inlineHelpText>
+        <label>Follower Of Christ</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unsure</fullName>
+                    <default>false</default>
+                    <label>Unsure</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Has_Been_Convicted_Of_Offense__c</fullName>
+        <description>Specifies if the applicant has ever been convicted of an offense involving inappropriate sexual conduct or violent behavior or found guilty of a professional or ethical violation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant has ever been convicted of an offense involving inappropriate sexual conduct or violent behavior or found guilty of a professional or ethical violation</inlineHelpText>
+        <label>Has Been Convicted Of Offense</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Has_Been_Convicted__c</fullName>
+        <description>Specifies if the applicant has ever pled guilty, been adjudicated, or otherwise been convicted of a crime in any court</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant has ever pled guilty, been adjudicated, or otherwise been convicted of a crime in any court</inlineHelpText>
+        <label>Has Been Convicted</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Has_Family_Attended__c</fullName>
+        <description>Specifies if applicant has family that attended</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if applicant has family that attended</inlineHelpText>
+        <label>Has Family Attended</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
         </valueSet>
     </fields>
     <fields>
@@ -244,6 +586,19 @@
         <length>255</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Intended_Program_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Intended_Program__r.Program_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Intended Program Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -258,6 +613,7 @@
         <relationshipName>Applications</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -271,8 +627,347 @@
         <relationshipName>Applications</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Is_Applying_For_PSEO__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if the applicant is applying for Bethel&apos;s PSEO program</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant is applying for Bethel&apos;s PSEO program</inlineHelpText>
+        <label>Is Applying For PSEO</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Family_Employee__c</fullName>
+        <description>Specifies if applicant has a family member who is an employee</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if applicant has a family member who is an employee</inlineHelpText>
+        <label>Is Family Employee</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_Family_Pastor__c</fullName>
+        <description>Specifies if the applicant has a family member who is a pastor or missionary</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant has a family member who is a pastor or missionary</inlineHelpText>
+        <label>Is Family Pastor</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_Transfer_Student__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if the applicant is a transfer student</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant is a transfer student</inlineHelpText>
+        <label>Is Transfer Student</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Member_of_Partner_Church__c</fullName>
+        <description>Specifies if applicant is a member or employee of an official ministry partner church or organization</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if applicant is a member or employee of an official ministry partner church or organization</inlineHelpText>
+        <label>Member of Partner Church</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ministry_Involvement_Response__c</fullName>
+        <description>Applicant&apos;s ministry involvement response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s ministry involvement response</inlineHelpText>
+        <label>Ministry Involvement Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Offense_Description__c</fullName>
+        <description>Applicant&apos;s description of a offense involving inappropriate sexual conduct or violent behavior or found guilty of a professional or ethical violation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s description of a conviction  involving inappropriate sexual conduct or violent behavior or found guilty of a professional or ethical violation</inlineHelpText>
+        <label>Offense Description</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Activities__c</fullName>
+        <description>Other high school activities or experiences for the applicant</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Other high school activities or experiences for the applicant</inlineHelpText>
+        <label>Other Activities</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Colleges__c</fullName>
+        <description>Specifies a list of other colleges for which the applicant is applying</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies a list of other colleges for which the applicant is applying</inlineHelpText>
+        <label>Other Colleges</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PSEO_Approach__c</fullName>
+        <description>Applicants response to PSEO Approach</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicants response to PSEO Approach</inlineHelpText>
+        <label>PSEO Approach</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>I want to get ahead on college credits</fullName>
+                    <default>false</default>
+                    <label>I want to get ahead on college credits</label>
+                </value>
+                <value>
+                    <fullName>I want to attend Bethel for PSEO and beyond</fullName>
+                    <default>false</default>
+                    <label>I want to attend Bethel for PSEO and beyond</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PSEO_Experience_Response__c</fullName>
+        <description>Applicants response to PSEO Experience</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicants response to PSEO Experience</inlineHelpText>
+        <label>PSEO Experience Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PSEO_Live_On_Campus__c</fullName>
+        <description>Applicants response to PSEO Live on campus</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicants response to PSEO Live on campus</inlineHelpText>
+        <label>PSEO Live On Campus</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unsure</fullName>
+                    <default>false</default>
+                    <label>Unsure</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PSEO_Number_Of_Courses__c</fullName>
+        <description>Applicants response to the number of PSEO courses</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicants response to the number of PSEO courses</inlineHelpText>
+        <label>PSEO Number Of Courses</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Part-time (Approximately 1-3 classes per semester)</fullName>
+                    <default>false</default>
+                    <label>Part-time (Approximately 1-3 classes per semester)</label>
+                </value>
+                <value>
+                    <fullName>Full-time (Approximately 4-6 classes per semester)</fullName>
+                    <default>false</default>
+                    <label>Full-time (Approximately 4-6 classes per semester)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Partner_Church__c</fullName>
+        <description>The partner church or organization in which the applicant is a member</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The partner church or organization in which the applicant is a member</inlineHelpText>
+        <label>Partner Church</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Personal_Story_Response__c</fullName>
+        <description>Applicant&apos;s personal story response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s personal story response</inlineHelpText>
+        <label>Personal Story Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Plan_Music_Scholarship__c</fullName>
+        <description>Specifies if the applicant plans ot apply for a music performance scholarship</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant plans ot apply for a music performance scholarship</inlineHelpText>
+        <label>Plan Music Scholarship</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Plan_Play_Sport_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if the applicant plans to play a second NCAA sport</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant plans to play a second NCAA sport</inlineHelpText>
+        <label>Plan Play Sport 2</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Plan_Play_Sport__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if the applicant plans to play a NCAA sport</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant plans to play a NCAA sport</inlineHelpText>
+        <label>Plan Play Sport</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Professional_Goals_Response__c</fullName>
+        <description>Applicant&apos;s professional goals response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s professional goals response</inlineHelpText>
+        <label>Professional Goals Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Read_Affirmation__c</fullName>
+        <description>Specifies if the applicant read the Affirmation of Faith</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant read the Affirmation of Faith</inlineHelpText>
+        <label>Read Affirmation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Read_Covenant__c</fullName>
+        <description>Specifies if the applicant read the Covenant</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if the applicant read the Covenant</inlineHelpText>
+        <label>Read Covenant</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Related_Object_JSON__c</fullName>
@@ -281,6 +976,20 @@
         <label>Related Object JSON</label>
         <length>32768</length>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Relationship_With_Christ_Response__c</fullName>
+        <description>Applicants response to describe relationship with Christ</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicants response to describe relationship with Christ</inlineHelpText>
+        <label>Relationship With Christ Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
@@ -291,6 +1000,7 @@
         <label>Residency</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -304,11 +1014,86 @@
         <label>School / College</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
             <restricted>true</restricted>
             <valueSetName>School_College</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Secondary_Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The second program the applicant is considering</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The second program the applicant is considering</inlineHelpText>
+        <label>Secondary Program</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Applications (Secondary Program)</relationshipLabel>
+        <relationshipName>Applications1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Seminary_Response__c</fullName>
+        <description>Applicant&apos;s Bethel Seminary response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s Bethel Seminary response</inlineHelpText>
+        <label>Seminary Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Significant_People_Response__c</fullName>
+        <description>Applicant&apos;s significant people response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s significant people response</inlineHelpText>
+        <label>Significant People Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sport_2__c</fullName>
+        <description>The second NCAA sport the applicant is planning to play</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The second NCAA sport the applicant is planning to play</inlineHelpText>
+        <label>Sport 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Sports</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sport__c</fullName>
+        <description>The NCAA sport the applicant is planning to play</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The NCAA sport the applicant is planning to play</inlineHelpText>
+        <label>Sport</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Sports</valueSetName>
         </valueSet>
     </fields>
     <fields>
@@ -318,6 +1103,7 @@
         <label>Student Type</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -326,27 +1112,122 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Unofficial_ACT_Score__c</fullName>
+        <description>Unofficial ACT Score from the applicant</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unofficial ACT Score from the applicant</inlineHelpText>
+        <label>Unofficial ACT Score</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unofficial_SAT_Score__c</fullName>
+        <description>Unofficial SAT Score from the applicant</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unofficial SAT Score from the applicant</inlineHelpText>
+        <label>Unofficial SAT Score</label>
+        <length>5</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>User_Created__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Only used for test classes</description>
         <externalId>false</externalId>
         <label>User Created</label>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Experience_Response__c</fullName>
+        <description>Applicant&apos;s volunteer experience response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s volunteer experience response</inlineHelpText>
+        <label>Volunteer Experience Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>When_College_Credits_Earned__c</fullName>
+        <description>Specifies when the applicant earned college credits</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies when the applicant earned college credits</inlineHelpText>
+        <label>When College Credits Earned</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>During High School (PSEO, AP, CLEP, IB, other)</fullName>
+                    <default>false</default>
+                    <label>During High School (PSEO, AP, CLEP, IB, other)</label>
+                </value>
+                <value>
+                    <fullName>After High School graduation</fullName>
+                    <default>false</default>
+                    <label>After High School graduation</label>
+                </value>
+                <value>
+                    <fullName>Both during and after High School</fullName>
+                    <default>false</default>
+                    <label>Both during and after High School</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Why_Attend_Response__c</fullName>
+        <description>Applicant&apos;s response to why they want to attend Bethel</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applicant&apos;s response to why they want to attend Bethel</inlineHelpText>
+        <label>Why Attend Response</label>
+        <length>16000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <label>Application</label>
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
+        <columns>Contact__c</columns>
         <columns>Intended_Program__c</columns>
         <columns>Application_Status__c</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>All1</fullName>
+        <columns>NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Applicant_Type__c</columns>
+        <columns>Application_Status__c</columns>
+        <columns>Admission_Decision__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -354,13 +1235,20 @@
         <displayFormat>A-{0000000}</displayFormat>
         <label>Application Name</label>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Applications</pluralLabel>
     <searchLayouts>
         <customTabListAdditionalFields>Intended_Program__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Intended_Program__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Intended_Term_of_Entry__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Application_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Admission_Decision__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>Admin_View</fullName>
         <availability>online</availability>

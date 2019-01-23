@@ -45,6 +45,7 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
@@ -224,6 +225,20 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>School_College__c</fullName>
+        <description>Application control for a specific school</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Application control for a specific school</inlineHelpText>
+        <label>School / College</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>School_College</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Submit_Status__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Application status that the &quot;Submit&quot; button sets an application to</inlineHelpText>
@@ -275,17 +290,25 @@
     <label>Application Control</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Active__c</columns>
+        <columns>School_College__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Application Control Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Application Controls</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>School_College__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>Related_Object_Review</fullName>
         <availability>online</availability>

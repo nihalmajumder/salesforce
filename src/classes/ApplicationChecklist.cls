@@ -25,7 +25,16 @@ public class ApplicationChecklist {
             return appControl;
         } set;
     }
-    
+
+    // Added for support of Admin view off of the Opportunity - Todd Mitchell
+    public Opportunity opp {get; set;}
+
+    public ApplicationChecklist() { 
+    }
+    public ApplicationChecklist(ApexPages.StandardController stdController) {
+        opp = (Opportunity) stdController.getRecord();
+    }
+
     /*******************************************************************************
     * @description Initialize the page - Checks if requirements have been completed
     ********************************************************************************/
@@ -38,8 +47,17 @@ public class ApplicationChecklist {
         if (UserInfo.getUserType().equals('Standard'))
             contactId = Id.valueOf(ApexPages.currentPage().getParameters().get('contactId'));
         applicationId = Id.valueOf(ApexPages.currentPage().getParameters().get('applicationId'));
+
+        // Added for support of Admin view off of the Opportunity - Todd Mitchell
+        if (opp != null) {
+            Opportunity theOpp = [SELECT Id, Contact__c, Application__c FROM Opportunity WHERE Id = :opp.Id];
+            contactId = theOpp.Contact__c;
+            applicationId = theOpp.Application__c;
+        }
+       
         
-        app = [SELECT Id, Intended_Program__r.Name, Intended_Program__r.Program_Name_on_Application__c, Intended_Term_of_Entry__r.Name, Intended_Program__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Application_Status__c, School_College__c, Residency__c, Application_Control__c FROM Application__c WHERE Id = :applicationId];
+        // Add Intended_Program_Code__c to query - Todd Mitchell
+        app = [SELECT Id, Intended_Program__r.Name, Intended_Program__r.Program_Name_on_Application__c, Intended_Term_of_Entry__r.Name, Intended_Program__c, Intended_Program_Code__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Application_Status__c, School_College__c, Residency__c, Application_Control__c FROM Application__c WHERE Id = :applicationId];
         appControl = ApplicationUtilities.getApplicationControls(app.Application_Control__c);
         
         allowCancel = String.isNotBlank(appControl.Allow_Cancel_From__c) && new Set<String>(appControl.Allow_Cancel_From__c.split(';')).contains(app.Application_Status__c);
@@ -47,7 +65,8 @@ public class ApplicationChecklist {
         
         reqMap = new Map<Id, RequirementWrapper>();
         Set<Id> reqIds = new Set<Id>();
-        for (Requirement__c r:[SELECT Id, Internal_Only__c, Internal_Only_Show_on_Checklist__c, Name, Label__c, Active__c, Intended_Program__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c FROM Requirement__c WHERE Application_Control__c = :appControl.Id AND Active__c = :true and Show_On_Application_Creation__c = false ORDER BY Display_Order__c ASC NULLS LAST]){
+        // Add Intended_Program_Codes__c to query - Todd Mitchell
+        for (Requirement__c r:[SELECT Id, Internal_Only__c, Internal_Only_Show_on_Checklist__c, Name, Label__c, Active__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c FROM Requirement__c WHERE Application_Control__c = :appControl.Id AND Active__c = :true and Show_On_Application_Creation__c = false ORDER BY Display_Order__c ASC NULLS LAST]){
             if (ApplicationFilter.filter(app, r)) {
                 reqIds.add(r.Id);
                 reqMap.put(r.Id,new RequirementWrapper(r));
@@ -58,7 +77,8 @@ public class ApplicationChecklist {
         Map<Id, Boolean> viewedRequirement = new Map<Id, Boolean>();
         
         Set<Id> riIds = new Set<Id>();
-        riList = [SELECT Id, Required__c, Requirement__c, Internal_Only__c, Internal_Only_Show_on_Checklist__c, Active__c, Required_Number_of_Children__c, Maximum_Number_of_Children__c, Requirement__r.Name, Requirement__r.Label__c, Name, Label__c, Instructions__c, Intended_Program__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c, Related_List_Object_Master__c, Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Internal_Requirement_Item__c, Editable_Application_Status__c, (SELECT Id, Active__c, Hardcoded_value__c, Required__c, Label__c, Intended_Program__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Lookup_Object__c, Lookup_Where_Clause__c, Name_Field_API_Name__c, Contact_Field__c, Application_Field__c, External_Email_Field__c, Editable_Application_Status__c, New_Reference_Field__c, URL_Parameter__c,Static_Text__c, Display_as_Picklist__c FROM Questions__r ORDER BY Display_Order__c ASC NULLS LAST) FROM Requirement_Item__c WHERE Requirement__c in :reqIds ORDER BY Display_Order__c ASC NULLS LAST];
+        // Add Intended_Program_Codes__c to query - Todd Mitchell
+        riList = [SELECT Id, Required__c, Requirement__c, Internal_Only__c, Internal_Only_Show_on_Checklist__c, Active__c, Required_Number_of_Children__c, Maximum_Number_of_Children__c, Requirement__r.Name, Requirement__r.Label__c, Name, Label__c, Instructions__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c, Related_List_Object_Master__c, Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Internal_Requirement_Item__c, Editable_Application_Status__c, (SELECT Id, Active__c, Hardcoded_value__c, Required__c, Label__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Lookup_Object__c, Lookup_Where_Clause__c, Name_Field_API_Name__c, Contact_Field__c, Application_Field__c, External_Email_Field__c, Editable_Application_Status__c, New_Reference_Field__c, URL_Parameter__c,Static_Text__c, Display_as_Picklist__c FROM Questions__r ORDER BY Display_Order__c ASC NULLS LAST) FROM Requirement_Item__c WHERE Requirement__c in :reqIds ORDER BY Display_Order__c ASC NULLS LAST];
         for (Requirement_Item__c ri : riList) {
             if (ApplicationFilter.filter(app, ri)) {
                 reqMap.get(ri.Requirement__c).reqItemMap.put(ri.Id,new RequirementItemWrapper(ri));
@@ -279,6 +299,10 @@ public class ApplicationChecklist {
                 for(String s : new Set<String>{'contactId','applicationId','at'}){
                     pr.getParameters().put(s,ApexPages.currentPage().getParameters().get(s));
                 }
+
+                // Added to create interaction when app is submitted - Todd Mitchell
+                InteractionHelper.createInteractionForSubmittedApplication(app.Id);
+
             }
         }
         return pr;

@@ -45,6 +45,7 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
@@ -115,6 +116,20 @@ Term_Start_Date__c &lt;= TODAY() &amp;&amp; Term_End_Date__c &gt;= TODAY(), &quo
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>Term__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The HEDA Term record that maps to this Academic Term</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The HEDA Term record that maps to this Academic Term</inlineHelpText>
+        <label>Term</label>
+        <referenceTo>hed__Term__c</referenceTo>
+        <relationshipLabel>Academic Terms</relationshipLabel>
+        <relationshipName>Academic_Terms</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
     <label>Academic Term</label>
     <listViews>
         <fullName>All</fullName>
@@ -125,6 +140,7 @@ Term_Start_Date__c &lt;= TODAY() &amp;&amp; Term_End_Date__c &gt;= TODAY(), &quo
         <columns>Term_Start_Date__c</columns>
         <columns>Term_End_Date__c</columns>
         <columns>Term_Status__c</columns>
+        <columns>Term__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -135,4 +151,5 @@ Term_Start_Date__c &lt;= TODAY() &amp;&amp; Term_End_Date__c &gt;= TODAY(), &quo
     <pluralLabel>Academic Terms</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

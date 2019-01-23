@@ -308,9 +308,8 @@
                 <apex:outputPanel rendered="{!question.fieldType == 'Reference'}" >
                     <div class="form-group" >
                         <label for="referenceField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <apex:selectList id="referenceField" value="{!question.response.ValueText__c}" size="1" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
+                        <apex:selectList id="referenceField" onchange="reRenderAllGroups();" value="{!question.response.ValueText__c}" size="1" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
                             <apex:selectOptions value="{!question.options}" />
-                            <apex:actionSupport event="onchange" reRender="questionGroup" />
                         </apex:selectList>
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
@@ -445,24 +444,7 @@
                 <tbody>
                     <apex:repeat value="{!group.relatedObjects}" var="rr">
                         <tr data-recid="{!rr.idx}" style="border-top: none; border-bottom: 2px solid #ddd;" >
-                            <td style="border-top: none; border-bottom: 1px solid #ddd;" >
-                                <apex:outputPanel layout="none" rendered="{!rr.obj['User_Created__c'] && !rr.isEditMode && !preventUpdates && group.isEditable}">
-                                    <apex:commandLink action="{!group.enableEditMode}" reRender="theTable" value="Edit">
-                                        <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
-                                    </apex:commandLink>&nbsp;|&nbsp;
-                                    <apex:commandLink action="{!group.enableDeleteMode}" reRender="theTable" value="Del">
-                                        <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
-                                    </apex:commandLink>
-                                </apex:outputPanel>
-                                <apex:outputPanel layout="none" rendered="{!rr.obj['User_Created__c'] && rr.isEditMode}">
-                                    <apex:commandLink action="{!group.enableConfirmMode}" reRender="theTable" value="Ok">
-                                        <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
-                                    </apex:commandLink>&nbsp;|&nbsp;
-                                    <apex:commandLink action="{!group.enableViewMode}" reRender="theTable" value="Cancel">
-                                        <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
-                                    </apex:commandLink>
-                                </apex:outputPanel>
-                            </td>
+                            
                             <apex:repeat value="{!group.questions}" var="question" >
                                 <apex:outputPanel layout="none" rendered="{!rr.showQuestions[question]}">
                                     <td class="ui-front" style="border:none;" data-label="{!question.question.Label__c}:{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}" >
@@ -781,9 +763,9 @@
             </apex:outputPanel>
             </div>
             </div>
-            </td>
-            </apex:outputPanel>
-            </apex:repeat>
+            						</td>
+            					</apex:outputPanel>
+            				</apex:repeat>
                             <apex:outputPanel layout="none" rendered="{!ISPICKVAL($User.UserType,'Standard')}">
                                 <td class="ui-front">
                                     <apex:outputLink value="/{!rr.att.ContentDocumentId}" rendered="{!rr.att != null}" target="_blank">View
@@ -797,6 +779,24 @@
                                     </apex:commandLink>
                                 </td>
                             </apex:outputPanel>
+                            <td style="border-top: none; border-bottom: 1px solid #ddd;" >
+                                <apex:outputPanel layout="none" rendered="{!rr.obj['User_Created__c'] && !rr.isEditMode && !preventUpdates && group.isEditable}">
+                                    <apex:commandLink action="{!group.enableEditMode}" reRender="theTable" value="Edit">
+                                        <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
+                                    </apex:commandLink>&nbsp;|&nbsp;
+                                    <apex:commandLink action="{!group.enableDeleteMode}" reRender="theTable" value="Delete">
+                                        <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
+                                    </apex:commandLink>
+                                </apex:outputPanel>
+                                <apex:outputPanel layout="none" rendered="{!rr.obj['User_Created__c'] && rr.isEditMode}">
+                                    <apex:commandLink action="{!group.enableConfirmMode}" reRender="theTable" value="Ok">
+                                        <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
+                                    </apex:commandLink>&nbsp;|&nbsp;
+                                    <apex:commandLink action="{!group.enableViewMode}" reRender="theTable" value="Cancel">
+                                        <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
+                                    </apex:commandLink>
+                                </apex:outputPanel>
+                            </td>
                         </tr>
                     </apex:repeat>
                 </tbody>

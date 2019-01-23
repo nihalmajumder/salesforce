@@ -57,6 +57,8 @@ public class ApplicationRequirement {
         this.questionResponses = questionResponses;
         this.questionDependencies = questionDependencies;
         this.preventUpdates = true;
+        this.contactId = contactId; //Added - Todd Mitchell
+        this.applicationId = applicationId; //Added - Todd Mitchell
         queryItems = false;
         isInvalid = false;
     }
@@ -82,10 +84,14 @@ public class ApplicationRequirement {
         if (String.isBlank(applicationId)) {
             if (ApexPages.currentPage().getParameters().containsKey('applicationId')) {
                 applicationId = Id.valueOf(ApexPages.currentPage().getParameters().get('applicationId'));
-				
-                app = [SELECT Id, Intended_Program__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Contact__c, School_College__c, Residency__c, Application_Status__c, Application_Control__c FROM Application__c WHERE Contact__c = :contactId AND Id = :applicationId];
-                appControl = ApplicationUtilities.getApplicationControls(app.Application_Control__c);
             }
+        }
+				
+        // Added Intended Term to query, put outside previous if statement - Todd Mitchell
+        // Add Intended_Program_Code__c to query - Todd Mitchell
+        if (String.isNotBlank(applicationId)) {
+            app = [SELECT Id, Intended_Program__c, Intended_Program_Code__c, Intended_Term_of_Entry__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Contact__c, School_College__c, Residency__c, Application_Status__c, Application_Control__c FROM Application__c WHERE Contact__c = :contactId AND Id = :applicationId];
+            appControl = ApplicationUtilities.getApplicationControls(app.Application_Control__c);
         }
 
         if (String.isBlank(requirementId))
@@ -93,7 +99,8 @@ public class ApplicationRequirement {
         
         if (queryItems == true) {
             
-            String itemQuery = 'SELECT Id, Internal_Only__c, Requirement__r.Internal_Only__c, Internal_Only_Applicant_Instructions__c, Active__c, Required__c, Required_Number_of_Children__c, Maximum_Number_of_Children__c, Requirement__r.Name, Requirement__r.Label__c, Name, Label__c, Instructions__c, Intended_Program__c, Application_Status__c, Applicant_Type__c , Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c, Related_List_Object_Master__c, Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Internal_Requirement_Item__c, Editable_Application_Status__c, Holding_Record_Id__c, (SELECT Id, Active__c, Required__c, Label__c, Intended_Program__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Lookup_Object__c, Lookup_Where_Clause__c, Name_Field_API_Name__c, Contact_Field__c, Application_Field__c, External_Email_Field__c,Hardcoded_Value__c, Editable_Application_Status__c, URL_Parameter__c, New_Reference_Field__c ,Static_Text__c, Display_as_Picklist__c FROM Questions__r WHERE Active__c = true ORDER BY Display_Order__c ASC NULLS LAST) FROM Requirement_Item__c WHERE Requirement__c = :requirementId AND Requirement__r.Show_on_Application_Creation__c = false AND Requirement__r.Active__c = true AND Active__c = true';
+            // Add Intended_Program_Codes__c to query - Todd Mitchell
+            String itemQuery = 'SELECT Id, Internal_Only__c, Requirement__r.Internal_Only__c, Internal_Only_Applicant_Instructions__c, Active__c, Required__c, Required_Number_of_Children__c, Maximum_Number_of_Children__c, Requirement__r.Name, Requirement__r.Label__c, Name, Label__c, Instructions__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c , Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c, Related_List_Object_Master__c, Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Internal_Requirement_Item__c, Editable_Application_Status__c, Holding_Record_Id__c, (SELECT Id, Active__c, Required__c, Label__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Lookup_Object__c, Lookup_Where_Clause__c, Name_Field_API_Name__c, Contact_Field__c, Application_Field__c, External_Email_Field__c,Hardcoded_Value__c, Editable_Application_Status__c, URL_Parameter__c, New_Reference_Field__c ,Static_Text__c, Display_as_Picklist__c FROM Questions__r WHERE Active__c = true ORDER BY Display_Order__c ASC NULLS LAST) FROM Requirement_Item__c WHERE Requirement__c = :requirementId AND Requirement__r.Show_on_Application_Creation__c = false AND Requirement__r.Active__c = true AND Active__c = true';
             
             if (isExternalUser)
                 itemQuery += ' AND Internal_Requirement_Item__c=\''+ApexPages.currentPage().getParameters().get('r') + '\'';
@@ -304,7 +311,8 @@ public class ApplicationRequirement {
                 if (!UserInfo.getUserType().equals('Standard') && String.isNotBlank(ApexPages.currentPage().getParameters().get('h'))&& String.isNotBlank(ApexPages.currentPage().getParameters().get('r'))){
                     showSuccess = true;
                 } else if (redirectPage == 'checklist') {
-                    PageReference pr = new PageReference('/apex/ApplicationChecklist?applicationId=' + app.Id + '&contactId=' + contactId+(ApexPages.currentPage().getParameters().containsKey('at')?'&at='+ApexPages.currentPage().getParameters().get('at'):''));
+                    // Remove at parameter - Todd Mitchell
+                    PageReference pr = new PageReference('/apex/ApplicationChecklist?applicationId=' + app.Id + '&contactId=' + contactId);
                     pr.setRedirect(true);
                     return pr;
                 } else if (redirectPage == 'submit') {
@@ -323,7 +331,8 @@ public class ApplicationRequirement {
                     return pr;
                     
                 } else {
-                    PageReference pr = new PageReference('/apex/ApplicationRequirement?requirementId=' + redirectPage + '&applicationId=' + applicationId + '&contactId=' + contactId + (String.isBlank(appControl.URL_Parameter__c) ? '' : ('&at=' + appControl.URL_Parameter__c)));
+                    // Remove at parameter - Todd Mitchell
+                    PageReference pr = new PageReference('/apex/ApplicationRequirement?requirementId=' + redirectPage + '&applicationId=' + applicationId + '&contactId=' + contactId);
                     pr.setRedirect(true);
                     return pr;                   
                 }

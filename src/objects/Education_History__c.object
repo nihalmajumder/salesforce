@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Represents the education history for a person at an education institution</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>The person for this education history record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The person for this education history record</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Education Histories</relationshipLabel>
+        <relationshipName>Education_Histories</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Educational_Institution__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The Educational Institution for this education history. This should be a Educational Institution Account record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Educational Institution for this education history</inlineHelpText>
+        <label>Educational Institution</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Educational Institution</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Education Histories</relationshipLabel>
+        <relationshipName>Education_Histories</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Full_Name_On_Transcript__c</fullName>
+        <description>The full name of the person on the transcription for this education record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The full name of the person on the transcription for this education record</inlineHelpText>
+        <label>Full Name On Transcript</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Holding_Name__c</fullName>
+        <description>The holding name for the school if an Education Institution Account is not found. Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The holding name for the school</inlineHelpText>
+        <label>Holding Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Object_JSON__c</fullName>
+        <description>Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field for a custom object</inlineHelpText>
+        <label>Related Object JSON</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>The type of education institution or school for this education history</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The type of education institution or school for this education history</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>College</fullName>
+                    <default>false</default>
+                    <label>College</label>
+                </value>
+                <value>
+                    <fullName>High School</fullName>
+                    <default>false</default>
+                    <label>High School</label>
+                </value>
+                <value>
+                    <fullName>Church</fullName>
+                    <default>false</default>
+                    <label>Church</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unofficial_GPA__c</fullName>
+        <description>The unofficial GPA for this educational institute specified by the applicant.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The unofficial GPA for this educational institute specified by the applicant.</inlineHelpText>
+        <label>Unofficial GPA</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field</inlineHelpText>
+        <label>User Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Education History</label>
+    <nameField>
+        <displayFormat>EH-{000000}</displayFormat>
+        <label>Education History Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Education Histories</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -109,8 +109,21 @@ public class ApplicationQuestionGroup {
                 
                 for (ApplicationQuestion aq:showQuestions.keySet()) {
                     aq.dependencyCalculated = false;
-                    if (showQuestions.get(aq) && String.isNotBlank(aq.question.Related_Object_Field__c))
+                    if (showQuestions.get(aq) && String.isNotBlank(aq.question.Related_Object_Field__c)) {
                         obj.put(aq.question.Related_Object_Field__c, objCopy.get(aq.question.Related_Object_Field__c));
+
+                        // Customized code to fix gap in Address support on custom objects - Todd Mitchell
+                        if (aq.question.RecordType.DeveloperName == 'Address') { // If Address, populate the address fields
+                            if (aq.question.Related_Object_Field__c == 'Address__c') {
+                                obj.put('Street__c', objCopy.get('Street__c'));
+                                obj.put('City__c', objCopy.get('City__c'));
+                                obj.put('StateCode__c', objCopy.get('StateCode__c'));
+                                obj.put('CountryCode__c', objCopy.get('CountryCode__c'));
+                                obj.put('PostalCode__c', objCopy.get('PostalCode__c'));
+                            }
+                        }
+
+                    }
                 }
                 
                 return showQuestions;
@@ -429,6 +442,18 @@ public class ApplicationQuestionGroup {
                                 newReferenceObjectType = q.Lookup_Object__c;
                             if (fieldResultMap.containsKey(q.Related_Object_Field__c.toLowerCase()) && (Boolean)fieldResultMap.get(q.Related_Object_Field__c.toLowerCase()).get('isReference') && q.Related_Object_Field__c.endsWith('__c'))
                                 fieldsSet.add(q.Related_Object_Field__c.substring(0,q.Related_Object_Field__c.length()-1)+'r.Name');
+                        
+                            // Customized code to fix gap in Address support on custom objects - Todd Mitchell
+                            if (q.RecordType.DeveloperName == 'Address') { // If Address, populate the address fields
+                                if (q.Related_Object_Field__c == 'Address__c') {
+                                    fieldsSet.add('street__c');
+                                    fieldsSet.add('city__c');
+                                    fieldsSet.add('statecode__c');
+                                    fieldsSet.add('countrycode__c');
+                                    fieldsSet.add('postalcode__c');
+                                }
+                            }
+
                         }
                     }
                 relatedObjectsMap = new Map<String,SObjectWrapper>();

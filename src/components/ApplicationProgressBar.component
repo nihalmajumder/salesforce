@@ -53,7 +53,7 @@
 				    	<!--"{!$Site.BaseUrl}/apex/ApplicationRequirement?requirementId={!r.req.Id}&applicationId={!app.Id}&contactId={!contactId}&at={!$CurrentPage.parameters.at}"-->
 				    <button onclick="appShowLoadingSpinner();redirect('{!r.req.Id}');return false;" class="slds-button {!IF(r.reqStatus,'slds-button_icon slds-button_icon slds-progress__marker_icon','slds-button_icon slds-button_icon slds-progress__marker_icon')} slds-progress__marker " >
 				      		<div class="progress-tooltip" >
-							    <span class="progress-tooltip-text">{!r.req.Name}</span>
+							    <span class="progress-tooltip-text">{!r.req.Label__c}</span>
 					      		<apex:outputPanel rendered="{!r.reqStatus  && requirementId != r.req.Id}">
 						      		<svg class="slds-button__icon slds-icon_small icon-Complete" aria-hidden="true">
 							          <use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#success"></use>

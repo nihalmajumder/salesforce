@@ -50,7 +50,6 @@ public class INT_InteractionMappingService {
      */
     public SObject applyDataToSObject(Interaction__c interaction, SObject theObject) {
         String objectName = theObject.getSObjectType().getDescribe().getName();
-
         if (intMappingMap.containsKey(objectName)) {
             for (Interaction_Mapping__c mapping : intMappingMap.get(objectName)) {
                 // Only copy the field value if the Interaction__c field value is different than the Object field value.

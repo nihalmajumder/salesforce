@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used to store official test score results.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>ACT_Composite_Score__c</fullName>
+        <description>ACT Composite Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ACT Composite Score</inlineHelpText>
+        <label>ACT Composite Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACT_English_Score__c</fullName>
+        <description>ACT English Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ACT English Score</inlineHelpText>
+        <label>ACT English Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACT_Mathematics_Score__c</fullName>
+        <description>ACT Mathematics Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ACT Mathematics Score</inlineHelpText>
+        <label>ACT Mathematics Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACT_Reading_Score__c</fullName>
+        <description>ACT Reading Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ACT Reading Score</inlineHelpText>
+        <label>ACT Reading Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACT_Science_Score__c</fullName>
+        <description>ACT Science Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ACT Science Score</inlineHelpText>
+        <label>ACT Science Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACT_Writing_Score__c</fullName>
+        <description>ACT Writing Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ACT Writing Score</inlineHelpText>
+        <label>ACT Writing Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>The person for which this test score belongs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The person for which this test score belongs</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Test Scores</relationshipLabel>
+        <relationshipName>Test_Scores</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>GRE_Analytical_Writing_Score__c</fullName>
+        <description>GRE Analytical Writing Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GRE Analytical Writing Score</inlineHelpText>
+        <label>GRE Analytical Writing Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GRE_Quantitative_Reasoning_Score__c</fullName>
+        <description>GRE Quantitative Reasoning Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GRE Quantitative Reasoning Score</inlineHelpText>
+        <label>GRE Quantitative Reasoning Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GRE_Verbal_Reasoning_Score__c</fullName>
+        <description>GRE Verbal Reasoning Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GRE Verbal Reasoning Score</inlineHelpText>
+        <label>GRE Verbal Reasoning Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Holding_Name__c</fullName>
+        <description>Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field for a custom object</inlineHelpText>
+        <label>Holding Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MAT_Percentile_for_Intended_Major__c</fullName>
+        <description>MAT Percentile for Intended Major</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MAT Percentile for Intended Major</inlineHelpText>
+        <label>MAT Percentile for Intended Major</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MAT_Percentile_for_Total_Group__c</fullName>
+        <description>MAT Percentile for Total Group</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MAT Percentile for Total Group</inlineHelpText>
+        <label>MAT Percentile for Total Group</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MAT_Scaled_Score__c</fullName>
+        <description>MAT Scaled Score, range: 200 - 600</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MAT Scaled Score</inlineHelpText>
+        <label>MAT Scaled Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Object_JSON__c</fullName>
+        <description>Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field for a custom object</inlineHelpText>
+        <label>Related Object JSON</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SAT_Composite_Score__c</fullName>
+        <description>SAT Composite Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SAT Composite Score</inlineHelpText>
+        <label>SAT Composite Score</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAT_Mathematics_Score__c</fullName>
+        <description>SAT Mathematics Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SAT Mathematics Score</inlineHelpText>
+        <label>SAT Mathematics Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAT_Reading_Score__c</fullName>
+        <description>SAT Reading Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SAT Reading Score</inlineHelpText>
+        <label>SAT Reading Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test_Date__c</fullName>
+        <description>The date the test was taken</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the test was taken</inlineHelpText>
+        <label>Test Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Test_Type__c</fullName>
+        <description>The Test type name. This should match the record type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The test type</inlineHelpText>
+        <label>Test Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Test_Types</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>User_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field for a custom object</inlineHelpText>
+        <label>User Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Test Score</label>
+    <nameField>
+        <displayFormat>TS-{000000}</displayFormat>
+        <label>Test Score Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Test Scores</pluralLabel>
+    <recordTypes>
+        <fullName>ACT</fullName>
+        <active>true</active>
+        <description>Record type for an ACT test scores</description>
+        <label>ACT</label>
+        <picklistValues>
+            <picklist>Test_Type__c</picklist>
+            <values>
+                <fullName>ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GRE</fullName>
+        <active>true</active>
+        <description>Record type for an GRE test scores</description>
+        <label>GRE</label>
+        <picklistValues>
+            <picklist>Test_Type__c</picklist>
+            <values>
+                <fullName>ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MAT</fullName>
+        <active>true</active>
+        <description>Record type for an MAT test scores</description>
+        <label>MAT</label>
+        <picklistValues>
+            <picklist>Test_Type__c</picklist>
+            <values>
+                <fullName>ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SAT</fullName>
+        <active>true</active>
+        <description>Record type for an SAT test scores</description>
+        <label>SAT</label>
+        <picklistValues>
+            <picklist>Test_Type__c</picklist>
+            <values>
+                <fullName>ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

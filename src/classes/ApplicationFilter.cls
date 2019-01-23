@@ -3,13 +3,12 @@
 @author Huron Consulting Group
 *******************************************************************************/
 public class ApplicationFilter {
-	
+    
     public static Boolean filter(Application__c app, SObject obj) {
         return filter(app, obj, true);
     }
     
     public static Boolean filter(Application__c app, SObject obj, Boolean checkStatus) {
-        
         Set<String> objFields = new Set<String>();
         for (String fn:obj.getSObjectType().getDescribe().fields.getMap().keySet())
             objFields.add(fn.toLowerCase());
@@ -23,6 +22,9 @@ public class ApplicationFilter {
         String residency = objFields.contains('residency__c') ? String.valueOf(obj.get('residency__c')) : null;
         String studentTypes = objFields.contains('student_type__c') ? String.valueOf(obj.get('student_type__c')) : null;
         String appStatuses = objFields.contains('application_status__c') ? String.valueOf(obj.get('application_status__c')) : null;
+
+        // Added filters - Todd Mitchell
+        String programCodes = objFields.contains('intended_program_codes__c') ? String.valueOf(obj.get('intended_program_codes__c')) : null;
         
         if (app == null)
             return true;
@@ -30,6 +32,11 @@ public class ApplicationFilter {
             return false;
         if (String.isNotBlank(programId) && (app.Intended_Program__c == null || !String.valueOf(app.Intended_Program__c).equals(programId)))
             return false;
+
+        // Added filter check - Todd Mitchell
+        if (String.isNotBlank(programCodes) && (String.isBlank(app.Intended_Program_Code__c) || !(new Set<String>(programCodes.split(';'))).contains(app.Intended_Program_Code__c)))
+            return false;
+
         if (String.isNotBlank(applicantTypes) && (String.isBlank(app.Applicant_Type__c) || !(new Set<String>(applicantTypes.split(';'))).contains(app.Applicant_Type__c)))
             return false;
         if (String.isNotBlank(citizenships) && (String.isBlank(app.Citizenship__c) || !(new Set<String>(citizenships.split(';'))).contains(app.Citizenship__c)))

@@ -63,12 +63,13 @@ public class ApplicationCreate {
             groups.add(firstGroup);
         
         // Query for Requirement Items and Questions to display on Application Creation
+        // Add Intended_Program_Codes__c to query - Todd Mitchell
         items = [SELECT Id, Requirement__r.Application_Creation_Display_Order__c, Active__c, Required__c, Required_Number_of_Children__c, Maximum_Number_of_Children__c, Requirement__r.Name, Name, Label__c,
-                 Instructions__c, Intended_Program__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c,
+                 Instructions__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c,
                  Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c, Related_List_Object_Master__c,
                  Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Holding_Record_Id__c, Internal_Requirement_Item__c, Editable_Application_Status__c,
                  Internal_Only__c, Requirement__r.Internal_Only__c, Internal_Only_Applicant_Instructions__c,
-                 (SELECT Id, Active__c, Required__c, Label__c, Intended_Program__c, Application_Status__c, Applicant_Type__c, Citizenship__c,
+                 (SELECT Id, Active__c, Required__c, Label__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c,
                   Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName,
                   Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Name_Field_API_Name__c,
                   Lookup_Object__c, Lookup_Where_Clause__c, New_Reference_Field__c, Contact_Field__c, Application_Field__c, External_Email_Field__c, Hardcoded_Value__c, Static_Text__c,
@@ -124,7 +125,7 @@ public class ApplicationCreate {
             
             // Create new program question and add to list
             programQuestion = new ApplicationQuestion(con, app, '', app, 'Intended_Program__c');
-            programQuestion.addQuestionObject(new Question__c(Label__c = 'What program are you applying to?', Required__c = app.Application_Status__c, Active__c = true, URL_Parameter__c = 'Program'));
+            programQuestion.addQuestionObject(new Question__c(Label__c = 'What program are you applying to?', Required__c = app.Application_Status__c, Active__c = true, URL_Parameter__c = 'Program', Application_Field__c = 'Intended_Program__c'));
             programQuestion.addIntendedProgramFilteringList(intendedPrograms.values());
             
             // Get map of term names with id as key
@@ -136,9 +137,12 @@ public class ApplicationCreate {
             ApplicationQuestion termQuestion = new ApplicationQuestion(con, app, '', app, 'Intended_Term_of_Entry__c');
             termQuestion.addQuestionObject(new Question__c(Label__c = 'What term are you applying for?', Required__c = app.Application_Status__c, Active__c = true, URL_Parameter__c = 'Term'));
             termQuestion.setReferenceOptions(termMap);
+            termQuestion.useTermsBasedOnProgram = true; // Added - Todd Mitchell
             
             // Create question group out of term/program questions and add to list
-            groups.add(new ApplicationQuestionGroup(new List<ApplicationQuestion>{termQuestion, programQuestion}));
+            // Split these out to two groups - Todd Mitchell
+            groups.add(new ApplicationQuestionGroup(new List<ApplicationQuestion>{programQuestion}));
+            groups.add(new ApplicationQuestionGroup(new List<ApplicationQuestion>{termQuestion}));
         }
         
         // Create question groups for requirements we should display
@@ -283,6 +287,11 @@ public class ApplicationCreate {
     * @description Saves application and returns URL to new application checklist
     ********************************************************************************/
     public String saveApplication() {
+        // Add switch of application control for school - Todd Mitchell
+        Application_Control__c newControl =  ApplicationUtilities.getApplicationControlsForSchool(app.School_College__c);
+        if (newControl != null) {
+            app.Application_Control__c = newControl.Id;
+        }
         
         app.Id = null;
         insert app; // Insert application
@@ -325,9 +334,13 @@ public class ApplicationCreate {
         }
         
         upsert qResponses; // Insert question responses
+
+        // Added to create interaction when app is created - Todd Mitchell
+        InteractionHelper.createInteractionForNewApplication(app);
         
         // Return URL for checklist page for new application
-        return '/apex/ApplicationChecklist?applicationId=' + app.Id + '&contactId=' + app.Contact__c + (String.isBlank(appControl.URL_Parameter__c) ? '' : ('&at=' + appControl.URL_Parameter__c));
+        // Remove at parameter - Todd Mitchell
+        return '/apex/ApplicationChecklist?applicationId=' + app.Id + '&contactId=' + app.Contact__c;
     }
     
     @RemoteAction

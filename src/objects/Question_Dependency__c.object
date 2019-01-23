@@ -45,6 +45,7 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
@@ -93,10 +94,12 @@
                 <value>
                     <fullName>True</fullName>
                     <default>true</default>
+                    <label>True</label>
                 </value>
                 <value>
                     <fullName>False</fullName>
                     <default>false</default>
+                    <label>False</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -172,4 +175,5 @@
     </recordTypes>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

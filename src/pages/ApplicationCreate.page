@@ -27,7 +27,7 @@
                 <button Class="btn btn-lg navButton left  createSlide" href="#myCarousel" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; float:left; margin: 10px;" 
                         role="button" data-slide="prev"
                     >Back</button>
-                    <a class="btn btn-lg" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; margin: 10px;" href="{!$Site.BaseUrl}/apex/ApplicationPortal?contactId={!$CurrentPage.parameters.contactId}&at={!$CurrentPage.parameters.at}" >Cancel</a>
+                    <a class="btn btn-lg" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; margin: 10px;" href="{!$Site.BaseUrl}/apex/ApplicationPortal?contactId={!$CurrentPage.parameters.contactId}" >Cancel</a>
                     <apex:actionFunction name="saveWithDocs" action="{!save}" reRender="regMessages,formPageMessages" oncomplete="appHideLoadingSpinner();">
                         <apex:param name="p1" value="" assignTo="{!additionalDataString}"/>
                     </apex:actionFunction>
