@@ -46,6 +46,7 @@
     <description>An item that&apos;s part of an admissions requirement.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -181,26 +182,32 @@
                 <value>
                     <fullName>PDF</fullName>
                     <default>false</default>
+                    <label>PDF</label>
                 </value>
                 <value>
                     <fullName>DOC</fullName>
                     <default>false</default>
+                    <label>DOC</label>
                 </value>
                 <value>
                     <fullName>TXT</fullName>
                     <default>false</default>
+                    <label>TXT</label>
                 </value>
                 <value>
                     <fullName>RTF</fullName>
                     <default>false</default>
+                    <label>RTF</label>
                 </value>
                 <value>
                     <fullName>JPG</fullName>
                     <default>false</default>
+                    <label>JPG</label>
                 </value>
                 <value>
                     <fullName>PNG</fullName>
                     <default>false</default>
+                    <label>PNG</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -226,6 +233,21 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Intended_Program_Codes__c</fullName>
+        <description>Intended program codes that this requirement applies to (applies to all if blank)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Intended program codes that this requirement applies to (applies to all if blank)</inlineHelpText>
+        <label>Intended Program Codes</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Program_Codes</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
     </fields>
     <fields>
         <fullName>Intended_Program__c</fullName>
@@ -334,14 +356,17 @@
                 <value>
                     <fullName>Applicant</fullName>
                     <default>false</default>
+                    <label>Applicant</label>
                 </value>
                 <value>
                     <fullName>Application</fullName>
                     <default>false</default>
+                    <label>Application</label>
                 </value>
                 <value>
                     <fullName>Contact</fullName>
                     <default>false</default>
+                    <label>Contact</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -360,10 +385,27 @@
                 <value>
                     <fullName>Education_History__c</fullName>
                     <default>false</default>
+                    <label>Education_History__c</label>
+                </value>
+                <value>
+                    <fullName>Extracurricular_Activity__c</fullName>
+                    <default>false</default>
+                    <label>Extracurricular_Activity__c</label>
+                </value>
+                <value>
+                    <fullName>Family_Member__c</fullName>
+                    <default>false</default>
+                    <label>Family_Member__c</label>
                 </value>
                 <value>
                     <fullName>Employment_History__c</fullName>
                     <default>false</default>
+                    <label>Employment_History__c</label>
+                </value>
+                <value>
+                    <fullName>Test_Score__c</fullName>
+                    <default>false</default>
+                    <label>Test_Score__c</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -506,7 +548,7 @@
         <description>Document to upload.</description>
         <label>Document Upload</label>
         <picklistValues>
-            <picklist>Applicant_Types</picklist>
+            <picklist>Applicant_Type__c</picklist>
             <values>
                 <fullName>Freshman</fullName>
                 <default>false</default>
@@ -516,12 +558,16 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>PSEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Transfer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Application_Status</picklist>
+            <picklist>Application_Status__c</picklist>
             <values>
                 <fullName>Complete-Decision Made</fullName>
                 <default>false</default>
@@ -568,7 +614,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Citizenship_Types</picklist>
+            <picklist>Citizenship__c</picklist>
             <values>
                 <fullName>Domestic</fullName>
                 <default>false</default>
@@ -579,7 +625,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Degree_Types</picklist>
+            <picklist>Degree_Type__c</picklist>
             <values>
                 <fullName>Associate</fullName>
                 <default>false</default>
@@ -602,17 +648,64 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Delivery_Types</picklist>
+            <picklist>Delivery_Type__c</picklist>
             <values>
-                <fullName>Evenings and Weekends</fullName>
+                <fullName>Face-to-Face</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>On-Campus</fullName>
+                <fullName>Hybrid</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Editable_Application_Status__c</picklist>
+            <values>
+                <fullName>Complete-Decision Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Additional Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -644,6 +737,745 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Intended_Program_Codes__c</picklist>
+            <values>
+                <fullName>1-BA-ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ARW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ATR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-BAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-FIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-HRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-INE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-INT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-MKT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BKE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BUP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-HCM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-RES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-RPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CHA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CLV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-COA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-COH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CPM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-DES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-DHM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ECF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ECO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-EDE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ELW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ENL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ENR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-EST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-HIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-CMV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-LFV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-PYV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-INF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-INR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-JRN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-LIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MAV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MPR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-EMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-EVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-HCM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-STR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ORG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PEV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PEW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PHI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PHY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-POL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PSY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-REC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-S-CRJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-S-UST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SCV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SOW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SPW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SSV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-T-THD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-T-THM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-TES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-TFL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BFA-ARB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUE-M-MIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUE-M-MVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-INS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-AFN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-BCS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-BIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-CEN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-CHS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-ELE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-EVS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-K-BES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-K-BHB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-MDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-NEU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-BMD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-CMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-ELC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-MCN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-OPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-PHA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-PHS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-SWE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-EXP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-PRN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-AA-GESA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-AS-INDA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-CHMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-HUSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-O-CHMC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-O-HUSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-ORLP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-ACCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-B-GBUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-B-MGMT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-FINP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-MISP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-NURP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CENV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CITL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CLDR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-AD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-DNP-NRSD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-EDD-LHED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-EDD-LKAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-DSPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-PRID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-SUPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-ABST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-ASDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-DCDL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-DCDQ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-TEAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-TLNG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-TCKT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-TWBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-ATLG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-COUG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-ATSD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-CUST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-EDLE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-ENVY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-INBE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-SPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-TCED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-TWBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-ABST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-ASDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-DCDL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-SLDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-SPEG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-TEAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-EXEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-FINA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-GLOB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-HCAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-MGMT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MS-ATRG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MS-MIDW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-AUD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-BL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-C3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-TS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-B1-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-CH-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-CO-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-TL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-CF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-TL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-TS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MD-DV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-SPE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Related_List_Object_Master__c</picklist>
             <values>
                 <fullName>Applicant</fullName>
@@ -666,7 +1498,54 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Residency_Types</picklist>
+            <picklist>Required__c</picklist>
+            <values>
+                <fullName>Complete-Decision Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Additional Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency__c</picklist>
             <values>
                 <fullName>Non-Resident</fullName>
                 <default>false</default>
@@ -677,13 +1556,9 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>School_College</picklist>
+            <picklist>School_College__c</picklist>
             <values>
-                <fullName>College of Arts and Sciences</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>College of Health Professions</fullName>
+                <fullName>Adult Undergraduate</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -691,16 +1566,16 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>School of Business</fullName>
+                <fullName>Seminary</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>School of Education</fullName>
+                <fullName>Undergraduate</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Student_Types</picklist>
+            <picklist>Student_Type__c</picklist>
             <values>
                 <fullName>Adult</fullName>
                 <default>false</default>
@@ -717,7 +1592,7 @@
         <description>Group of questions.</description>
         <label>Question Group</label>
         <picklistValues>
-            <picklist>Applicant_Types</picklist>
+            <picklist>Applicant_Type__c</picklist>
             <values>
                 <fullName>Freshman</fullName>
                 <default>false</default>
@@ -727,12 +1602,16 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>PSEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Transfer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Application_Status</picklist>
+            <picklist>Application_Status__c</picklist>
             <values>
                 <fullName>Complete-Decision Made</fullName>
                 <default>false</default>
@@ -779,7 +1658,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Citizenship_Types</picklist>
+            <picklist>Citizenship__c</picklist>
             <values>
                 <fullName>Domestic</fullName>
                 <default>false</default>
@@ -790,7 +1669,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Degree_Types</picklist>
+            <picklist>Degree_Type__c</picklist>
             <values>
                 <fullName>Associate</fullName>
                 <default>false</default>
@@ -813,17 +1692,64 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Delivery_Types</picklist>
+            <picklist>Delivery_Type__c</picklist>
             <values>
-                <fullName>Evenings and Weekends</fullName>
+                <fullName>Face-to-Face</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>On-Campus</fullName>
+                <fullName>Hybrid</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Editable_Application_Status__c</picklist>
+            <values>
+                <fullName>Complete-Decision Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Additional Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -851,6 +1777,745 @@
             </values>
             <values>
                 <fullName>TXT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intended_Program_Codes__c</picklist>
+            <values>
+                <fullName>1-BA-ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ARW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ATR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-BAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-FIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-HRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-INE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-INT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-MKT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BKE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BUP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-HCM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-RES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-RPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CHA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CLV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-COA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-COH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CPM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-DES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-DHM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ECF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ECO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-EDE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ELW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ENL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ENR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-EST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-HIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-CMV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-LFV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-PYV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-INF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-INR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-JRN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-LIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MAV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MPR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-EMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-EVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-HCM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-STR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ORG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PEV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PEW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PHI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PHY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-POL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PSY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-REC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-S-CRJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-S-UST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SCV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SOW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SPW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SSV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-T-THD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-T-THM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-TES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-TFL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BFA-ARB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUE-M-MIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUE-M-MVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-INS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-AFN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-BCS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-BIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-CEN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-CHS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-ELE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-EVS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-K-BES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-K-BHB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-MDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-NEU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-BMD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-CMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-ELC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-MCN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-OPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-PHA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-PHS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-SWE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-EXP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-PRN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-AA-GESA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-AS-INDA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-CHMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-HUSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-O-CHMC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-O-HUSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-ORLP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-ACCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-B-GBUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-B-MGMT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-FINP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-MISP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-NURP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CENV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CITL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CLDR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-AD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-DNP-NRSD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-EDD-LHED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-EDD-LKAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-DSPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-PRID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-SUPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-ABST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-ASDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-DCDL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-DCDQ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-TEAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-TLNG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-TCKT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-TWBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-ATLG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-COUG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-ATSD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-CUST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-EDLE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-ENVY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-INBE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-SPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-TCED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-TWBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-ABST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-ASDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-DCDL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-SLDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-SPEG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-TEAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-EXEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-FINA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-GLOB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-HCAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-MGMT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MS-ATRG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MS-MIDW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-AUD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-BL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-C3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-TS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-B1-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-CH-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-CO-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-TL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-CF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-TL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-TS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MD-DV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-SPE</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -877,72 +2542,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Residency_Types</picklist>
-            <values>
-                <fullName>Non-Resident</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Resident</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>School_College</picklist>
-            <values>
-                <fullName>College of Arts and Sciences</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>College of Health Professions</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Graduate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>School of Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>School of Education</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Student_Types</picklist>
-            <values>
-                <fullName>Adult</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Traditional</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Related_Object</fullName>
-        <active>true</active>
-        <label>Related Object</label>
-        <picklistValues>
-            <picklist>Applicant_Types</picklist>
-            <values>
-                <fullName>Freshman</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Graduate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transfer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Application_Status</picklist>
+            <picklist>Required__c</picklist>
             <values>
                 <fullName>Complete-Decision Made</fullName>
                 <default>false</default>
@@ -989,7 +2589,119 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Citizenship_Types</picklist>
+            <picklist>Residency__c</picklist>
+            <values>
+                <fullName>Non-Resident</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>School_College__c</picklist>
+            <values>
+                <fullName>Adult Undergraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undergraduate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Student_Type__c</picklist>
+            <values>
+                <fullName>Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Related_Object</fullName>
+        <active>true</active>
+        <label>Related Object</label>
+        <picklistValues>
+            <picklist>Applicant_Type__c</picklist>
+            <values>
+                <fullName>Freshman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Application_Status__c</picklist>
+            <values>
+                <fullName>Complete-Decision Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Additional Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Citizenship__c</picklist>
             <values>
                 <fullName>Domestic</fullName>
                 <default>false</default>
@@ -1000,7 +2712,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Degree_Types</picklist>
+            <picklist>Degree_Type__c</picklist>
             <values>
                 <fullName>Associate</fullName>
                 <default>false</default>
@@ -1023,17 +2735,64 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Delivery_Types</picklist>
+            <picklist>Delivery_Type__c</picklist>
             <values>
-                <fullName>Evenings and Weekends</fullName>
+                <fullName>Face-to-Face</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>On-Campus</fullName>
+                <fullName>Hybrid</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Editable_Application_Status__c</picklist>
+            <values>
+                <fullName>Complete-Decision Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Additional Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1061,6 +2820,745 @@
             </values>
             <values>
                 <fullName>TXT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intended_Program_Codes__c</picklist>
+            <values>
+                <fullName>1-BA-ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ARW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ATR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-BAA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-FIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-HRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-INE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-INT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-B-MKT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BKE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BUP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-BUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-HCM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-RES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-C-RPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CHA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CLV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-COA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-COH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CPM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-CST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-DES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-DHM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ECF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ECO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-EDE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ELW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ENL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ENR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-EST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-HIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-CMV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-LFV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-I-PYV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-INF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-INR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-JRN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-LIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MAV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MPR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-MUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-EMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-EVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-HCM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-O-STR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-ORG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PEV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PEW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PHI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PHY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-POL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-PSY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-REC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-S-CRJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-S-UST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SCV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SOW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SPW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-SSV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-T-THD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-T-THM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-TES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BA-TFL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BFA-ARB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUE-M-MIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUE-M-MVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-INS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BMUS-M-MPV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-AFN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-BCS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-BIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-CEN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-CHS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-ELE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-EVS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-K-BES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-K-BHB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-MDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-NEU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-BMD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-CMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-ELC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-MCN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-P-OPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-PHA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-PHS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-BS-SWE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-EXP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-PRN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-TCN-EEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-AA-GESA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-AS-INDA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-CHMP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-HUSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-O-CHMC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-O-HUSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BA-ORLP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-ACCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-B-GBUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-B-MGMT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-FINP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-MISP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BS-NURP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CENV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CITL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CLDR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-AD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-UG-SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-DNP-NRSD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-EDD-LHED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-EDD-LKAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-DSPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-PRID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-E-SUPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-ABST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-ASDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-DCDL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-DCDQ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-TEAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-TLNG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-TCKT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-TWBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-ATLG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-COUG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-ATSD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-CUST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-EDLE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-ENVY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-INBE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-SPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-TCED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-E-TWBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-ABST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-ASDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-DCDL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-SLDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-SPEG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MA-TEAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-EXEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-FINA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-GLOB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-HCAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MBA-B-MGMT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MS-ATRG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-MS-MIDW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-AUD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-BL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-C3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-CRT-TS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-B1-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-CH-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-CO-GE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-DM-TL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-CF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-MT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-TL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MA-TS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-MD-DV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-SPE</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1089,9 +3587,68 @@
                 <fullName>Employment_History%5F%5Fc</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Extracurricular_Activity%5F%5Fc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family_Member%5F%5Fc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test_Score%5F%5Fc</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Residency_Types</picklist>
+            <picklist>Required__c</picklist>
+            <values>
+                <fullName>Complete-Decision Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Additional Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete-Pending Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency__c</picklist>
             <values>
                 <fullName>Non-Resident</fullName>
                 <default>false</default>
@@ -1102,13 +3659,9 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>School_College</picklist>
+            <picklist>School_College__c</picklist>
             <values>
-                <fullName>College of Arts and Sciences</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>College of Health Professions</fullName>
+                <fullName>Adult Undergraduate</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1116,16 +3669,16 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>School of Business</fullName>
+                <fullName>Seminary</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>School of Education</fullName>
+                <fullName>Undergraduate</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Student_Types</picklist>
+            <picklist>Student_Type__c</picklist>
             <values>
                 <fullName>Adult</fullName>
                 <default>false</default>
@@ -1138,4 +3691,5 @@
     </recordTypes>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

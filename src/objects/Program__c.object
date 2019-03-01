@@ -60,6 +60,7 @@
     <description>An object for housing recruitment and academic program records. There are two record types: Recruitment Programs and Academic Programs.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -81,13 +82,38 @@
                 <value>
                     <fullName>Graduate</fullName>
                     <default>false</default>
+                    <label>Graduate</label>
                 </value>
                 <value>
                     <fullName>Undergraduate</fullName>
                     <default>false</default>
+                    <label>Undergraduate</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Academic_Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The Academic Program Account that maps to this Program</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Academic Program Account that maps to this Program</inlineHelpText>
+        <label>Academic Program</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Academic Program</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Programs (Academic Program)</relationshipLabel>
+        <relationshipName>Academic_Programs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Active__c</fullName>
@@ -139,10 +165,22 @@
                 <value>
                     <fullName>Undergraduate</fullName>
                     <default>false</default>
+                    <label>Undergraduate</label>
                 </value>
                 <value>
                     <fullName>Graduate</fullName>
                     <default>false</default>
+                    <label>Graduate</label>
+                </value>
+                <value>
+                    <fullName>Adult Undergraduate</fullName>
+                    <default>false</default>
+                    <label>Adult Undergraduate</label>
+                </value>
+                <value>
+                    <fullName>Seminary</fullName>
+                    <default>false</default>
+                    <label>Seminary</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -189,22 +227,97 @@
                 <value>
                     <fullName>BA</fullName>
                     <default>false</default>
+                    <label>BA</label>
                 </value>
                 <value>
                     <fullName>BS</fullName>
                     <default>false</default>
+                    <label>BS</label>
                 </value>
                 <value>
                     <fullName>MA</fullName>
                     <default>false</default>
+                    <label>MA</label>
                 </value>
                 <value>
                     <fullName>MS</fullName>
                     <default>false</default>
+                    <label>MS</label>
                 </value>
                 <value>
                     <fullName>MBA</fullName>
                     <default>false</default>
+                    <label>MBA</label>
+                </value>
+                <value>
+                    <fullName>AA</fullName>
+                    <default>false</default>
+                    <label>AA</label>
+                </value>
+                <value>
+                    <fullName>BMUS</fullName>
+                    <default>false</default>
+                    <label>BMUS</label>
+                </value>
+                <value>
+                    <fullName>BFA</fullName>
+                    <default>false</default>
+                    <label>BFA</label>
+                </value>
+                <value>
+                    <fullName>CERT</fullName>
+                    <default>false</default>
+                    <label>CERT</label>
+                </value>
+                <value>
+                    <fullName>CERTUG</fullName>
+                    <default>false</default>
+                    <label>CERTUG</label>
+                </value>
+                <value>
+                    <fullName>AS</fullName>
+                    <default>false</default>
+                    <label>AS</label>
+                </value>
+                <value>
+                    <fullName>TCN</fullName>
+                    <default>false</default>
+                    <label>TCN</label>
+                </value>
+                <value>
+                    <fullName>LISC</fullName>
+                    <default>false</default>
+                    <label>LISC</label>
+                </value>
+                <value>
+                    <fullName>MDIV</fullName>
+                    <default>false</default>
+                    <label>MDIV</label>
+                </value>
+                <value>
+                    <fullName>DM</fullName>
+                    <default>false</default>
+                    <label>DM</label>
+                </value>
+                <value>
+                    <fullName>BMUE</fullName>
+                    <default>false</default>
+                    <label>BMUE</label>
+                </value>
+                <value>
+                    <fullName>EDD</fullName>
+                    <default>false</default>
+                    <label>EDD</label>
+                </value>
+                <value>
+                    <fullName>DNP</fullName>
+                    <default>false</default>
+                    <label>DNP</label>
+                </value>
+                <value>
+                    <fullName>NO</fullName>
+                    <default>false</default>
+                    <label>NO</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -230,6 +343,15 @@
         <externalId>false</externalId>
         <inlineHelpText>Enter the departmental account (i.e. School of Business) the Program belongs to.</inlineHelpText>
         <label>Department</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>University Department</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Academic and Recruitment Programs</relationshipLabel>
         <relationshipName>Programs</relationshipName>
@@ -318,18 +440,22 @@ One Application Per Term Per Program (Only one application for the selected term
                 <value>
                     <fullName>One Application</fullName>
                     <default>false</default>
+                    <label>One Application</label>
                 </value>
                 <value>
                     <fullName>One Application Per Term</fullName>
                     <default>false</default>
+                    <label>One Application Per Term</label>
                 </value>
                 <value>
                     <fullName>One Application Per Program</fullName>
                     <default>false</default>
+                    <label>One Application Per Program</label>
                 </value>
                 <value>
                     <fullName>One Application Per Term Per Program</fullName>
                     <default>false</default>
+                    <label>One Application Per Term Per Program</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -372,10 +498,12 @@ One Application Per Term Per Program (Only one application for the selected term
                 <value>
                     <fullName>Recruitment Program</fullName>
                     <default>false</default>
+                    <label>Recruitment Program</label>
                 </value>
                 <value>
                     <fullName>Academic Program</fullName>
                     <default>false</default>
+                    <label>Academic Program</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -396,14 +524,17 @@ One Application Per Term Per Program (Only one application for the selected term
                 <value>
                     <fullName>Major</fullName>
                     <default>false</default>
+                    <label>Major</label>
                 </value>
                 <value>
                     <fullName>Minor</fullName>
                     <default>false</default>
+                    <label>Minor</label>
                 </value>
                 <value>
                     <fullName>Certificate</fullName>
                     <default>false</default>
+                    <label>Certificate</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -482,14 +613,14 @@ One Application Per Term Per Program (Only one application for the selected term
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
+        <columns>School_College__c</columns>
         <columns>Degree__c</columns>
-        <columns>Career__c</columns>
         <columns>Department__c</columns>
-        <columns>Recruitment_Program__c</columns>
         <columns>Program_Code__c</columns>
         <columns>Active__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>All1</fullName>
@@ -531,24 +662,24 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Applicant_Types</picklist>
-            <values>
-                <fullName>Freshman</fullName>
-                <default>false</default>
-            </values>
+            <picklist>Applicant_Type__c</picklist>
             <values>
                 <fullName>Graduate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transfer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
             <picklist>Career__c</picklist>
             <values>
+                <fullName>Adult Undergraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminary</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -557,7 +688,7 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Citizenship_Types</picklist>
+            <picklist>Citizenship__c</picklist>
             <values>
                 <fullName>Domestic</fullName>
                 <default>false</default>
@@ -568,7 +699,7 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Degree_Types</picklist>
+            <picklist>Degree_Type__c</picklist>
             <values>
                 <fullName>Associate</fullName>
                 <default>false</default>
@@ -593,11 +724,55 @@ One Application Per Term Per Program (Only one application for the selected term
         <picklistValues>
             <picklist>Degree__c</picklist>
             <values>
+                <fullName>AA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>BA</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>BFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BMUE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BMUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>BS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTUG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DNP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EDD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LISC</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -609,22 +784,63 @@ One Application Per Term Per Program (Only one application for the selected term
                 <default>false</default>
             </values>
             <values>
+                <fullName>MDIV</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TCN</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Delivery_Types</picklist>
+            <picklist>Delivery_Type__c</picklist>
             <values>
-                <fullName>Evenings and Weekends</fullName>
+                <fullName>Face-to-Face</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>On-Campus</fullName>
+                <fullName>Hybrid</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hide_Applicant_Type__c</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hide_Citizenship__c</picklist>
+            <values>
+                <fullName>Domestic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hide_Student_Type__c</picklist>
+            <values>
+                <fullName>Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -674,7 +890,7 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Residency_Types</picklist>
+            <picklist>Residency__c</picklist>
             <values>
                 <fullName>Non-Resident</fullName>
                 <default>false</default>
@@ -685,13 +901,9 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>School_College</picklist>
+            <picklist>School_College__c</picklist>
             <values>
-                <fullName>College of Arts and Sciences</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>College of Health Professions</fullName>
+                <fullName>Adult Undergraduate</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -699,16 +911,16 @@ One Application Per Term Per Program (Only one application for the selected term
                 <default>false</default>
             </values>
             <values>
-                <fullName>School of Business</fullName>
+                <fullName>Seminary</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>School of Education</fullName>
+                <fullName>Undergraduate</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Student_Types</picklist>
+            <picklist>Student_Type__c</picklist>
             <values>
                 <fullName>Adult</fullName>
                 <default>false</default>
@@ -736,24 +948,24 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Applicant_Types</picklist>
-            <values>
-                <fullName>Freshman</fullName>
-                <default>false</default>
-            </values>
+            <picklist>Applicant_Type__c</picklist>
             <values>
                 <fullName>Graduate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transfer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
             <picklist>Career__c</picklist>
             <values>
+                <fullName>Adult Undergraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminary</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -762,7 +974,7 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Citizenship_Types</picklist>
+            <picklist>Citizenship__c</picklist>
             <values>
                 <fullName>Domestic</fullName>
                 <default>false</default>
@@ -773,7 +985,7 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Degree_Types</picklist>
+            <picklist>Degree_Type__c</picklist>
             <values>
                 <fullName>Associate</fullName>
                 <default>false</default>
@@ -798,11 +1010,47 @@ One Application Per Term Per Program (Only one application for the selected term
         <picklistValues>
             <picklist>Degree__c</picklist>
             <values>
+                <fullName>AA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>BA</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>BFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BMUE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BMUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>BS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTUG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LISC</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -814,22 +1062,59 @@ One Application Per Term Per Program (Only one application for the selected term
                 <default>false</default>
             </values>
             <values>
+                <fullName>MDIV</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TCN</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Delivery_Types</picklist>
+            <picklist>Delivery_Type__c</picklist>
             <values>
-                <fullName>Evenings and Weekends</fullName>
+                <fullName>Face-to-Face</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>On-Campus</fullName>
+                <fullName>Hybrid</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hide_Applicant_Type__c</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hide_Citizenship__c</picklist>
+            <values>
+                <fullName>Domestic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hide_Student_Type__c</picklist>
+            <values>
+                <fullName>Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -879,7 +1164,7 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Residency_Types</picklist>
+            <picklist>Residency__c</picklist>
             <values>
                 <fullName>Non-Resident</fullName>
                 <default>false</default>
@@ -890,30 +1175,18 @@ One Application Per Term Per Program (Only one application for the selected term
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>School_College</picklist>
-            <values>
-                <fullName>College of Arts and Sciences</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>College of Health Professions</fullName>
-                <default>false</default>
-            </values>
+            <picklist>School_College__c</picklist>
             <values>
                 <fullName>Graduate</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>School of Business</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>School of Education</fullName>
+                <fullName>Seminary</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Student_Types</picklist>
+            <picklist>Student_Type__c</picklist>
             <values>
                 <fullName>Adult</fullName>
                 <default>false</default>
@@ -929,8 +1202,8 @@ One Application Per Term Per Program (Only one application for the selected term
         <customTabListAdditionalFields>Career__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Department__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Program_Code__c</customTabListAdditionalFields>
-        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
         <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
         <lookupDialogsAdditionalFields>Active__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Career__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Program_Code__c</lookupDialogsAdditionalFields>
@@ -946,4 +1219,5 @@ One Application Per Term Per Program (Only one application for the selected term
         <searchResultsAdditionalFields>Program_Code__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

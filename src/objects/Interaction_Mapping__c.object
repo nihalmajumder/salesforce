@@ -46,6 +46,7 @@
     <description>Used to map fields from source Object to target Object in the Interactions process.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -100,18 +101,22 @@
                 <value>
                     <fullName>Manual Entry</fullName>
                     <default>false</default>
+                    <label>Manual Entry</label>
                 </value>
                 <value>
                     <fullName>Purchase List</fullName>
                     <default>false</default>
+                    <label>Purchase List</label>
                 </value>
                 <value>
                     <fullName>Student Information System</fullName>
                     <default>false</default>
+                    <label>Student Information System</label>
                 </value>
                 <value>
                     <fullName>Webform</fullName>
                     <default>false</default>
+                    <label>Webform</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -144,22 +149,27 @@
                 <value>
                     <fullName>CampaignMember</fullName>
                     <default>false</default>
+                    <label>CampaignMember</label>
                 </value>
                 <value>
                     <fullName>Contact</fullName>
                     <default>false</default>
+                    <label>Contact</label>
                 </value>
                 <value>
                     <fullName>hed__Affiliation__c</fullName>
                     <default>false</default>
+                    <label>hed__Affiliation__c</label>
                 </value>
                 <value>
                     <fullName>Lead</fullName>
                     <default>false</default>
+                    <label>Lead</label>
                 </value>
                 <value>
                     <fullName>Opportunity</fullName>
                     <default>false</default>
+                    <label>Opportunity</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -275,8 +285,8 @@
         <customTabListAdditionalFields>Interaction_Source_Field_API_Name__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Insert_Null__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Skip_Mapping__c</customTabListAdditionalFields>
-        <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
         <lookupDialogsAdditionalFields>Active__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Target_Object_API_Name__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Target_Field_API_Name__c</lookupDialogsAdditionalFields>
@@ -294,4 +304,5 @@
         <searchResultsAdditionalFields>Skip_Mapping__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

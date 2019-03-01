@@ -45,6 +45,7 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -103,10 +104,12 @@
                 <value>
                     <fullName>Before Term/Program Questions</fullName>
                     <default>false</default>
+                    <label>Before Term/Program Questions</label>
                 </value>
                 <value>
                     <fullName>After Term/Program Questions</fullName>
                     <default>false</default>
+                    <label>After Term/Program Questions</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -178,6 +181,21 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Intended_Program_Codes__c</fullName>
+        <description>Intended program codes that this requirement applies to (applies to all if blank)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Intended program codes that this requirement applies to (applies to all if blank)</inlineHelpText>
+        <label>Intended Program Codes</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Program_Codes</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
     </fields>
     <fields>
         <fullName>Intended_Program__c</fullName>
@@ -296,14 +314,13 @@
         <fullName>All</fullName>
         <columns>NAME</columns>
         <columns>Active__c</columns>
-        <columns>Degree_Type__c</columns>
-        <columns>Residency__c</columns>
-        <columns>Citizenship__c</columns>
-        <columns>Student_Type__c</columns>
+        <columns>Display_Order__c</columns>
         <columns>LAST_UPDATE</columns>
         <columns>Application_Control__c</columns>
+        <columns>School_College__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>All1</fullName>
@@ -315,8 +332,13 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Requirements</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Display_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>School_College__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>Preview</fullName>
         <availability>online</availability>

@@ -64,7 +64,19 @@ public class ApplicationQuestion {
                 
                 return options;
                 
-            } else if (dependentOptions == null) {
+            } 
+            // Added to get list of terms based on Program - Todd Mitchell
+            else if (useTermsBasedOnProgram == true) {
+                if (section != null) section.pushValuesToObjects();
+                options = new List<SelectOption>{new SelectOption('', '--None--')};
+                for (Intended_Program_Term__c itp :[SELECT Id, Academic_Term__c, Academic_Term__r.Name FROM Intended_Program_Term__c WHERE Intended_Program__c = : application.Intended_Program__c AND Academic_Term__r.Application_Status__c = :'Active' ORDER BY Academic_Term__r.Activate_Application_Date__c ASC]) {
+                    options.add(new SelectOption(itp.Academic_Term__c, itp.Academic_Term__r.Name));
+
+                }
+                                
+                return options;                
+            }
+            else if (dependentOptions == null) {
                 return options;
             }
             
@@ -89,8 +101,13 @@ public class ApplicationQuestion {
                 String nameField = String.isBlank(question.Name_Field_API_Name__c) ? 'Name' : question.Name_Field_API_Name__c;
                 
                 String queryString = 'SELECT ' + nameField + ', Id FROM ' + question.Lookup_object__c;
-                if (String.isNotBlank(question.Lookup_Where_Clause__c))
+                if (String.isNotBlank(question.Lookup_Where_Clause__c)) 
                     queryString += ' WHERE ' + question.Lookup_Where_Clause__c;
+                // Additional WHERE clause needed to restricct by TERM for Program query - Todd Mitchell
+                if (application != null && question.Lookup_object__c == 'Program__c' && application.Intended_Term_of_Entry__c != null) {
+                    queryString += ' AND ID IN (SELECT Intended_Program__c FROM Intended_Program_Term__c WHERE Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\')';
+                }
+                System.debug(queryString);
                 
                 for (SObject sObj:database.query(queryString))
                     options.add(new SelectOption(sObj.Id, String.isBlank((String)sObj.get(nameField)) ? String.valueOf(sObj.Id) : (String)sObj.get(nameField)));
@@ -109,6 +126,7 @@ public class ApplicationQuestion {
     public String filteringValue;
     public Map<ApplicationQuestion,Set<String>> multiControllingQuestions;
     public List<Program__c> intendedPrograms;
+    public Boolean useTermsBasedOnProgram {get;set;} // Added - Todd Mitchell
     public Set<String> showValues {get;set;}
     public Map<String, List<SelectOption>> dependentOptions {get;set;}
     public Boolean radio {get;set;}
@@ -147,6 +165,10 @@ public class ApplicationQuestion {
     * @description calculates if this specific program should be shown
     ********************************************************************************/
     public Boolean showIntendedProgram(Program__c ip) {
+        // Filter by school - Todd Mitchell
+        if (String.isNotBlank(ip.School_College__c) && String.isNotBlank(application.School_College__c) && (ip.School_College__c != application.School_College__c))
+            return false;
+
         if ((String.isNotBlank(ip.Hide_Applicant_Type__c) && (String.isNotBlank(application.Applicant_Type__c) && (new Set<String>(ip.Hide_Applicant_Type__c.split(';'))).contains(application.Applicant_Type__c))) || (String.isNotBlank(ip.Applicant_Type__c) && (String.isBlank(application.Applicant_Type__c) || !(new Set<String>(ip.Applicant_Type__c.split(';'))).contains(application.Applicant_Type__c))))
             return false;
 
@@ -420,6 +442,8 @@ public class ApplicationQuestion {
         this.helpText = question.Help_Text__c;
         
         populateContactFieldOnResponse();
+        // Added to support population from Application - Todd Mitchell
+        populateApplicationFieldOnResponse();
         
         this.con = new Contact();
         if(String.isNotBlank(fieldType)){
@@ -484,6 +508,8 @@ public class ApplicationQuestion {
         }
         
         populateContactFieldOnResponse();
+        // Added to support population from Application - Todd Mitchell
+        populateApplicationFieldOnResponse();
     }
     
     public void populateContactFieldOnResponse() {
@@ -500,6 +526,17 @@ public class ApplicationQuestion {
                     } else {
                         writeResponse(String.valueOf(contact.get(fieldName)));
                     }
+                }
+            } catch (Exception e) {}
+        }
+    }
+
+    // Added to populate from application - Todd Mitchell
+    public void populateApplicationFieldOnResponse() {
+        if (application != null && String.isNotBlank(fieldName)) {
+            try {
+                if (response != null && application.get(fieldName) != null) {
+                    writeResponse(String.valueOf(application.get(fieldName)));
                 }
             } catch (Exception e) {}
         }
@@ -680,13 +717,15 @@ public class ApplicationQuestion {
     // Writes a string to the response based on the questions type
     public void writeResponse(String resp) {
         try {
-            
             if (fieldType.equals('Checkbox') && (resp.toLowerCase().equals('true') || resp.toLowerCase().equals('false')))
                 response.ValueCheckbox__c = Boolean.valueOf(resp);
             else if (fieldType.equals('Currency'))
                 response.ValueCurrency__c = Double.valueOf(resp);
-            else if (fieldType.equals('Date'))
-                response.ValueDate__c = date.parse(resp);
+            else if (fieldType.equals('Date')) {
+                //response.ValueDate__c = date.parse(resp);
+                // Rewrite since this throws an exception - Todd Mitchell
+                response.ValueDate__c = Date.valueOf(resp);
+            }
             else if (fieldType.equals('DateTime'))
                 response.ValueDateTime__c = dateTime.parse(resp);
             else if (fieldType.equals('Email'))
@@ -698,6 +737,8 @@ public class ApplicationQuestion {
             else if (fieldType.equals('Phone'))
                 response.ValuePhone__c = resp;
             else if (fieldType.equals('Picklist') || fieldType.equals('MultiPicklist') || fieldType.equals('Radio') || fieldType.equals('Text'))
+                response.ValueText__c = resp;
+            else if (fieldType.equals('Reference')) // Added to support populating a reference - Todd Mitchell
                 response.ValueText__c = resp;
             else if (fieldType.equals('TextEncrypted'))
                 response.ValueTextEncrypted__c = resp;
@@ -711,7 +752,8 @@ public class ApplicationQuestion {
             if (response.PopulatedOn__c == null)
                 response.PopulatedOn__c = System.NOW();
             response.IsPopulated__c = true;
-        } catch (Exception e) {}
+        } catch (Exception e) {
+        }
     }
     
     /*******************************************************************************

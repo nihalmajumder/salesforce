@@ -7,7 +7,7 @@ public class ApplicationUtilities {
     /*******************************************************************************
     * @description Returns the application control based on urlParameter or the default one if no param is found.
     ********************************************************************************/
-	public static Application_Control__c getApplicationControls(String param) {
+    public static Application_Control__c getApplicationControls(String param) {
         
         Application_Control__c appControl;
         Application_Control__c defaultControl;
@@ -27,8 +27,8 @@ public class ApplicationUtilities {
                 appControl = ac;
         }
         
-		return appControl == null ? defaultControl : appControl;
-	}
+        return appControl == null ? defaultControl : appControl;
+    }
     
     public static Boolean containsValue(String multiPicklistValue, String value) {
         return String.isNotBlank(multiPicklistValue) && (new Set<String>(multiPicklistValue.split(';'))).contains(value);
@@ -53,5 +53,15 @@ public class ApplicationUtilities {
             this(e, doRollback);
             this.isError = isError;
         }
+    }
+
+    // Method added to get the application control for the given school - Todd Mitchell
+    public static Application_Control__c getApplicationControlsForSchool(String school) {
+        Application_Control__c appControl = null;
+        List<Application_Control__c> controls = [SELECT Id FROM Application_Control__c WHERE School_College__c = :school AND Active__c = :true];
+        if (controls != null && !controls.isEmpty()) {
+            appControl = controls[0];
+        }
+        return appControl;
     }
 }
