@@ -181,8 +181,8 @@ private class INT_InteractionProcessor_TEST {
         Map<String, Schema.RecordTypeInfo> accRTInfo = Account.SObjectType.getDescribe().getRecordTypeInfosByName();
 
         Account testCollege = new Account(
-            Name = 'College of Arts & Sciences'//,
-            //RecordTypeId = accRTInfo.get('University Department').getRecordTypeId()
+            Name = 'College of Arts & Sciences',
+            RecordTypeId = accRTInfo.get('University Department').getRecordTypeId()
         );
         insert testCollege;
 

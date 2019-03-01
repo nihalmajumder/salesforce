@@ -1,5 +1,28 @@
 <apex:page controller="ApplicationRequirement" extensions="ApplicationProgressBar" action="{!init}" showHeader="false" standardStylesheets="false" docType="html-5.0" >
    <script>
+       
+       //map holds possible special characters returned from function - Luke
+        var entityMap = {
+             "&amp;" : "&",
+             "&lt;" : "<",
+             "&gt;" : ">" ,
+             "&quot;" : '"' ,
+             "&#39;" : "'" ,
+             "&#x2F;" :  "/",
+             "&#x60;" : "`",
+             "&#x3D;" :  "="
+        };
+        
+        //loops through map of entities if any of the special characters are found convert them - Luke
+        function unescapeHtml (string) {
+            for(var key in entityMap){
+                if(string.indexOf(key) > -1){
+                    string = string.replace(key, entityMap[key]);
+                }
+            }
+            return string;
+        }
+
         function lookupSearchJS(sObj,sObjFilter,sObjNameField,searchTerm,callback){
             console.log("in application requirement vfp");
             console.log(sObj);
@@ -10,6 +33,12 @@
                 function(result, event){
                     if (event.status) {
                         console.log(result);
+                        //added loop to fix special characters, unable to fix server side and selectOptions does not have a attribute to set escape false - Luke
+                        for(var i = 0; i < result.length; i++){
+                            if(result[i] != null && result[i][sObjNameField] != null){
+                                result[i][sObjNameField] = unescapeHtml(result[i][sObjNameField]);
+                            }
+                        }
                         callback(result)
                     } else if (event.type === 'exception') {
                     } else {

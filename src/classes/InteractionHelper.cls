@@ -1,3 +1,9 @@
+/*
+ * 
+ * Test class - TDTMApplicationTriggerHandlerTest, InteractionHelperTest
+ * 
+ * 
+ */ 
 public class InteractionHelper {
 
     public static Interaction__c createInteractionForNewApplication(Application__c app) {
@@ -11,7 +17,8 @@ public class InteractionHelper {
             Academic_Program__c = app.Intended_Program__c,
             Academic_Term__c = app.Intended_Term_of_Entry__c,
             Application__c = app.Id,
-            Interaction_Source__c = 'Application Create',
+            Interaction_Source__c = 'Application',
+            Lead_Source__c = 'Application Create',
             Opportunity_Stage__c = 'Inquired',
             Opportunity_Stage_Detail__c = 'App Started'
         );
@@ -32,7 +39,8 @@ public class InteractionHelper {
             Academic_Program__c = app.Intended_Program__c,
             Academic_Term__c = app.Intended_Term_of_Entry__c,
             Application__c = app.Id,
-            Interaction_Source__c = 'Application Submit',
+            Interaction_Source__c = 'Application',
+            Lead_Source__c = 'Application Submit',
             Opportunity_Stage__c = 'Applied',
             Opportunity_Stage_Detail__c = 'App Submitted',
             Opportunity__c = o.Id
@@ -52,7 +60,8 @@ public class InteractionHelper {
             Academic_Program__c = app.Intended_Program__c,
             Academic_Term__c = app.Intended_Term_of_Entry__c,
             Application__c = app.Id,
-            Interaction_Source__c = 'Application Change'
+            Interaction_Source__c = 'Application',
+            Lead_Source__c = 'Application Change'
         );
         insert i;
         return i;
@@ -77,7 +86,8 @@ public class InteractionHelper {
                     Academic_Program__c = app.Intended_Program__c,
                     Academic_Term__c = app.Intended_Term_of_Entry__c,
                     Application__c = app.Id,
-                    Interaction_Source__c = 'Application Change'
+                    Interaction_Source__c = 'Application',
+                    Lead_Source__c = 'Application Change'
                 );
                 interactions.add(i);
             }

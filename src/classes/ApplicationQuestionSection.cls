@@ -50,7 +50,7 @@ public class ApplicationQuestionSection {
                 groups.add(ApplicationQuestionSection.createQuestionGroup(con, app, i, dQuestions, responses.get(i.Id), dResponses.get(i.Id),fieldDescribeMap));
             }
         }
-        
+
         addDependencies(dQuestions, dResponses);
         setProgress();
     }
@@ -116,7 +116,6 @@ public class ApplicationQuestionSection {
             if (g.questionGroup && g.questions != null) {
                 for (ApplicationQuestion q:g.questions) {
                     if (q.question != null && (String.isNotBlank(q.question.Contact_Field__c) || String.isNotBlank(q.question.Application_Field__c))) {
-                        
                         if (con != null && String.isNotBlank(q.question.Contact_Field__c))
                             allContactFields.add(q.question.Contact_Field__c.toLowerCase());
                         if (application != null && String.isNotBlank(q.question.Application_Field__c))

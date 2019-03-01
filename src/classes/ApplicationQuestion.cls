@@ -26,8 +26,8 @@ public class ApplicationQuestion {
         Schema.DisplayType.URL => 'URL'
     };
 
-    public String fieldType { get { return tableBased ? question.RecordType.DeveloperName : fieldTypes.get(displayType); } }
-
+    public String fieldType { get { return tableBased ? question.RecordType.DeveloperName == 'Yes_Or_No' ? 'YesOrNo' : question.RecordType.DeveloperName : fieldTypes.get(displayType); } }
+    
     public String label {get;private set;}
     public sObject obj {get;set;}
     public String fieldName {get;set;}
@@ -69,7 +69,7 @@ public class ApplicationQuestion {
             else if (useTermsBasedOnProgram == true) {
                 if (section != null) section.pushValuesToObjects();
                 options = new List<SelectOption>{new SelectOption('', '--None--')};
-                for (Intended_Program_Term__c itp :[SELECT Id, Academic_Term__c, Academic_Term__r.Name FROM Intended_Program_Term__c WHERE Intended_Program__c = : application.Intended_Program__c AND Academic_Term__r.Application_Status__c = :'Active' ORDER BY Academic_Term__r.Activate_Application_Date__c ASC]) {
+                for (Intended_Program_Term__c itp :[SELECT Id, Academic_Term__c, Academic_Term__r.Name FROM Intended_Program_Term__c WHERE Intended_Program__c = : application.Intended_Program__c AND Academic_Term__r.Application_Status__c = :'Active' ORDER BY Academic_Term__r.Term_Start_Date__c ASC]) {
                     options.add(new SelectOption(itp.Academic_Term__c, itp.Academic_Term__r.Name));
 
                 }
@@ -88,9 +88,9 @@ public class ApplicationQuestion {
     public List<String> multiPicklistValues;
     public Question__c question { get;
         set {
-            
+           
             this.question = value;
-            
+
             if (String.isNotBlank(value.URL_Parameter__c) && ApexPages.currentPage().getParameters().keySet().contains(question.URL_Parameter__c))
                 this.writeResponse(ApexPages.currentPage().getParameters().get(value.URL_Parameter__c));
             
@@ -105,12 +105,32 @@ public class ApplicationQuestion {
                     queryString += ' WHERE ' + question.Lookup_Where_Clause__c;
                 // Additional WHERE clause needed to restricct by TERM for Program query - Todd Mitchell
                 if (application != null && question.Lookup_object__c == 'Program__c' && application.Intended_Term_of_Entry__c != null) {
-                    queryString += ' AND ID IN (SELECT Intended_Program__c FROM Intended_Program_Term__c WHERE Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\')';
+                    queryString += ' AND ID IN (SELECT Intended_Program__c FROM Intended_Program_Term__c WHERE Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\') ORDER BY ' + nameField + ' ASC';
                 }
+                // Additional WHERE clause needed to get locations - Todd Mitchell
+                else if (application != null && question.Lookup_object__c == 'Intended_Program_Term__c' && application.Intended_Term_of_Entry__c != null && application.Intended_Program__c != null) {
+                    queryString += ' AND Intended_Program__c = \'' + application.Intended_Program__c + '\' AND Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\'';
+                }
+                System.debug('---- question -----');
                 System.debug(queryString);
                 
-                for (SObject sObj:database.query(queryString))
-                    options.add(new SelectOption(sObj.Id, String.isBlank((String)sObj.get(nameField)) ? String.valueOf(sObj.Id) : (String)sObj.get(nameField)));
+                // Add if statement to handle special picklist generation - Todd Mitchell
+                if (nameField == 'Delivery_Type__c' && question.Lookup_object__c == 'Intended_Program_Term__c') {
+                    for (SObject sObj : Database.query(queryString)) {
+                        String deliveryTypes = (String) sObj.get(nameField);
+                        if (deliveryTypes != null) {
+                            List<String> types = deliveryTypes.split(';');
+                            for (String s : types) {
+                                options.add(new SelectOption(s.trim(), s.trim()));
+                            }
+                        }
+                    }
+                }
+                else {
+                    for (SObject sObj:database.query(queryString)) {
+                        options.add(new SelectOption(sObj.Id, String.isBlank((String)sObj.get(nameField)) ? String.valueOf(sObj.Id) : (String)sObj.get(nameField)));
+                    }
+                }
             }
         }
     }
@@ -210,29 +230,30 @@ public class ApplicationQuestion {
     
     public Boolean getShowQuestion(SObject obj) {
 
+
         if (dependencyCalculated)
             return showQuestion;
 
         if (forceShowQuestion == true)
             return returnShowQuestion(true, obj);
-        
+
         if (application != null && question != null && !ApplicationFilter.filter(application, question))
             return returnShowQuestion(false, obj);
-        
+            
         if (dQuestions == null || controllingQuestions == null || dQuestions.isEmpty() || controllingQuestions.isEmpty())
             return returnShowQuestion(true, obj);
-        
+            
         Boolean satisfied;
         if (controllingResponses == null)
             controllingResponses = new Map<Id, Object>();
-        
+
         // Based on Question_Dependency records, should this question be shown.
         if (String.isBlank(question.Dependency_Logic__c) || question.Dependency_Logic__c.equals('AND')) {
             
             satisfied = true;
             
             for (Question_Dependency__c qd:dQuestions) {
-                
+
                 if (controllingQuestions.containsKey(qd.Controlling_Question__c)) {
                     
                     ApplicationQuestion cq = controllingQuestions.get(qd.Controlling_Question__c);
@@ -243,8 +264,8 @@ public class ApplicationQuestion {
                     }
                     
                     Object resp = controllingResponses.get(qd.Controlling_Question__c);
-                    
-                    if (qd.RecordType.DeveloperName.equals('Checkbox') && Boolean.valueOf(qd.ValueCheckbox__c) != (Boolean)resp) {
+
+                    if (qd.RecordType.DeveloperName.equals('Checkbox') && Boolean.valueOf(qd.ValueCheckbox__c) != (Boolean) resp ) {
                         satisfied = false;
                         break;
                     } else if (qd.RecordType.DeveloperName.equals('Picklist') && (String.isBlank(String.valueOf(resp)) || !qd.Value__c.equals((String)resp))) {
@@ -278,7 +299,7 @@ public class ApplicationQuestion {
             }
             
         } else {
-            
+
             satisfied = false;
             
             for (Question_Dependency__c qd:dQuestions) {
@@ -296,8 +317,7 @@ public class ApplicationQuestion {
                 }
                 
                 Object resp = controllingResponses.get(qd.Controlling_Question__c);
-                
-                if (qd.RecordType.DeveloperName.equals('Checkbox') && Boolean.valueOf(qd.ValueCheckbox__c) == (Boolean)resp) {
+                if (qd.RecordType.DeveloperName.equals('Checkbox') && Boolean.valueOf(qd.ValueCheckbox__c) == (Boolean) resp) {
                     satisfied = true;
                     break;
                 } else if (qd.RecordType.DeveloperName.equals('Picklist') && String.isNotBlank(String.valueOf(resp)) && qd.Value__c.equals((String)cq.response.ValueText__c)) {
@@ -328,7 +348,6 @@ public class ApplicationQuestion {
         
         Boolean showBehavior = String.isBlank(question.Dependency_Behavior__c) || question.Dependency_Behavior__c.equals('Show');
         Boolean ret = (satisfied && showBehavior) || (!satisfied && !showBehavior);
-        
         return returnShowQuestion(ret, obj);
     }
     
@@ -369,7 +388,7 @@ public class ApplicationQuestion {
             }
             
         } else if (question != null && String.isNotBlank(question.Hardcoded_Value__c) && (fieldType.equals('Text') || fieldType.equals('Radio') || fieldType.contains('Picklist'))) {
-            
+                
             if (response != null)
                 response.ValueText__c = question.Hardcoded_Value__c;
             
@@ -404,7 +423,7 @@ public class ApplicationQuestion {
         }
     }
     public ApplicationQuestion(SObject obj, Question__c question, Question_Response__c response) {
-        
+
         this.response = response;
         
         if (obj != null && obj.getSObjectType() == Schema.getGlobalDescribe().get('Contact')) {
@@ -447,13 +466,18 @@ public class ApplicationQuestion {
         
         this.con = new Contact();
         if(String.isNotBlank(fieldType)){
-            if (fieldType.contains('Picklist') || fieldType.equals('Radio')) {
+            if (fieldType.contains('Picklist') || fieldType.equals('Radio') || question.RecordType.DeveloperName == 'Yes_Or_No') {
                 options = new List<SelectOption>();
                 if (fieldType.equals('Picklist')) options.add(new SelectOption('', '--None--'));
                 if(String.isNotBlank(question.Picklist_Values__c)){
                     for (String str:question.Picklist_Values__c.split('\n')){
                         options.add(new SelectOption(str.trim(), str.trim()));
                     }
+                }
+                //added to support yes or no type questions - luke Vang
+                if(question.RecordType.DeveloperName == 'Yes_Or_No'){
+                    options.add(new SelectOption('False', 'No'));
+                    options.add(new SelectOption('True', 'Yes'));
                 }
             }
             if (fieldType.equals('Address') && this.response != null) {
@@ -685,7 +709,7 @@ public class ApplicationQuestion {
             return null;
         else if (String.isNotBlank(response.ValueText__c))
             return response.ValueText__c;
-        else if (fieldType != null && fieldType.equals('Checkbox'))
+        else if (fieldType != null && (fieldType.equals('Checkbox')))
             return response.ValueCheckbox__c;
         else if (String.isNotBlank(response.ValuePhone__c))
             return response.ValuePhone__c;
@@ -736,7 +760,8 @@ public class ApplicationQuestion {
                 response.ValuePercent__c = Double.valueOf(resp);
             else if (fieldType.equals('Phone'))
                 response.ValuePhone__c = resp;
-            else if (fieldType.equals('Picklist') || fieldType.equals('MultiPicklist') || fieldType.equals('Radio') || fieldType.equals('Text'))
+            //updated to support yes or no type questions - Luke Vang
+            else if ( fieldType.equals('Picklist') || fieldType.equals('MultiPicklist') || fieldType.equals('Radio') || fieldType.equals('Text'))
                 response.ValueText__c = resp;
             else if (fieldType.equals('Reference')) // Added to support populating a reference - Todd Mitchell
                 response.ValueText__c = resp;

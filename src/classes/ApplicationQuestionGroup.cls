@@ -615,10 +615,21 @@ public class ApplicationQuestionGroup {
                 }
                 if (questionGroup){
                     for (ApplicationQuestion q:questions){
+
                         if(q.isEditable == true || UserInfo.getUserType() == 'Standard'){
                             q.processValue();
                             if(q.question.External_Email_Field__c){
                                 response.External_Email__c = q.response.ValueEmail__c;
+                            }
+                            // Added to move reference answers to response - Todd Mitchell
+                            else if (q.question.Reference_First_Name_Field__c){
+                                response.Reference_First_Name__c = q.response.ValueText__c;
+                            }
+                            else if (q.question.Reference_Last_Name_Field__c){
+                                response.Reference_Last_Name__c = q.response.ValueText__c;
+                            }
+                            else if (q.question.Reference_Access_Rights_Field__c){
+                                response.Reference_Access_Rights__c = q.response.ValueCheckbox__c;
                             }
                             
                             if (con != null && String.isNotBlank(q.question.Contact_Field__c)) {

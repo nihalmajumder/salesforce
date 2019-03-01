@@ -1,3 +1,9 @@
+/*
+ * 
+ * Test class - TDTMApplicationTriggerHandlerTest
+ * 
+ * 
+ */ 
 global class TDTMApplicationTriggerHandler extends TDTMVirtualTriggerHandler {
 
     global override void onBeforeUpdate(List<SObject> newList, List<SObject> oldList, Map<Id, SObject> newMap, Map<Id, SObject> oldMap, hed.TDTM_Runnable.DmlWrapper wrapper) {

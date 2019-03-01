@@ -30,6 +30,11 @@
         	font-size:14px;
         	height:36px;
         }
+
+        .required-label:after {
+            color: #c23934;
+            content: " *";
+        }
     </style>
     <apex:actionFunction name="setCreatingNewRelatedRecordAF{!group.item.Id}" action="{!groupNewRelatedRecord}" rerender="theSection">
         <apex:param name="p1" assignTo="{!group.newReferenceObjectSelectedWrapper}" value=""/>
@@ -329,7 +334,7 @@
                         });
                     </script>
                     <div class="form-group" >
-                        <label for="textField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
+                        <label for="textField">{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
                         <apex:inputField id="textField" value="{!question.response.ValueText__c}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
@@ -419,7 +424,7 @@
                     content: attr(data-label);
                     float: left;
                     font-weight: bold;
-                    width: 30%;
+                    width: 40%; /* change from 30 - 40, for text wrapping - Luke Vang*/
                     margin-right: 10px;
                 }
     		</style>
@@ -781,18 +786,18 @@
                             </apex:outputPanel>
                             <td style="border-top: none; border-bottom: 1px solid #ddd;" >
                                 <apex:outputPanel layout="none" rendered="{!rr.obj['User_Created__c'] && !rr.isEditMode && !preventUpdates && group.isEditable}">
-                                    <apex:commandLink action="{!group.enableEditMode}" reRender="theTable" value="Edit">
+                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableEditMode}" reRender="theTable" value="Edit">
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>&nbsp;|&nbsp;
-                                    <apex:commandLink action="{!group.enableDeleteMode}" reRender="theTable" value="Delete">
+                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableDeleteMode}" reRender="theTable" value="Delete">
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>
                                 </apex:outputPanel>
                                 <apex:outputPanel layout="none" rendered="{!rr.obj['User_Created__c'] && rr.isEditMode}">
-                                    <apex:commandLink action="{!group.enableConfirmMode}" reRender="theTable" value="Ok">
+                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableConfirmMode}" reRender="theTable" value="Save">
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>&nbsp;|&nbsp;
-                                    <apex:commandLink action="{!group.enableViewMode}" reRender="theTable" value="Cancel">
+                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableViewMode}" reRender="theTable" value="Cancel">
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>
                                 </apex:outputPanel>
@@ -824,6 +829,7 @@
                             minLength:3,
                             source: function(request, response){lookupSearchJS(objType,objTypeFilter,objTypeNameField,request.term,function(results){
                                 var retResults = jQuery.map(results, function(item){
+                                    console.log(item);
                                     return {
                                         label: item[objTypeNameField],
                                         value: item.Id

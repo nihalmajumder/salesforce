@@ -73,7 +73,7 @@ public class ApplicationCreate {
                   Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName,
                   Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Name_Field_API_Name__c,
                   Lookup_Object__c, Lookup_Where_Clause__c, New_Reference_Field__c, Contact_Field__c, Application_Field__c, External_Email_Field__c, Hardcoded_Value__c, Static_Text__c,
-                  URL_Parameter__c, Editable_Application_Status__c, Display_as_Picklist__c FROM Questions__r WHERE Active__c = :true ORDER BY Display_Order__c ASC NULLS LAST)
+                  URL_Parameter__c, Editable_Application_Status__c, Display_as_Picklist__c, Reference_Access_Rights_Field__c, Reference_First_Name_Field__c, Reference_Last_Name_Field__c FROM Questions__r WHERE Active__c = :true ORDER BY Display_Order__c ASC NULLS LAST)
                  FROM Requirement_Item__c WHERE Requirement__r.Application_Control__c = :appControl.Id AND Requirement__r.Show_on_Application_Creation__c = :true
                  AND Requirement__r.Active__c = :true AND Active__c = :true ORDER BY Display_Order__c ASC NULLS LAST];
         
@@ -121,11 +121,12 @@ public class ApplicationCreate {
         if (!appControl.Hide_Term_Program__c) {
             
             // Get map of intended programs with id as key
-            intendedPrograms = new Map<Id, Program__c>([SELECT Id, Name, Academic_Level__c, Program_Name_on_Application__c, Active__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, Hide_Applicant_Type__c, Hide_Citizenship__c, Hide_Student_Type__c, Number_of_Applications_Limit__c FROM Program__c WHERE Hide_from_Application__c = :false AND Active__c = :true ORDER BY Name ASC]);
+            //change field to sort on to Program_Name_on_Application__c - Luke Vang
+            intendedPrograms = new Map<Id, Program__c>([SELECT Id, Name, Academic_Level__c, Program_Name_on_Application__c, Active__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, Hide_Applicant_Type__c, Hide_Citizenship__c, Hide_Student_Type__c, Number_of_Applications_Limit__c FROM Program__c WHERE Hide_from_Application__c = :false AND Active__c = :true ORDER BY Program_Name_on_Application__c ASC]);
             
             // Create new program question and add to list
             programQuestion = new ApplicationQuestion(con, app, '', app, 'Intended_Program__c');
-            programQuestion.addQuestionObject(new Question__c(Label__c = 'What program are you applying to?', Required__c = app.Application_Status__c, Active__c = true, URL_Parameter__c = 'Program', Application_Field__c = 'Intended_Program__c'));
+            programQuestion.addQuestionObject(new Question__c(Label__c = 'What do you want to study?', Required__c = app.Application_Status__c, Active__c = true, URL_Parameter__c = 'Program', Application_Field__c = 'Intended_Program__c'));
             programQuestion.addIntendedProgramFilteringList(intendedPrograms.values());
             
             // Get map of term names with id as key
@@ -135,7 +136,7 @@ public class ApplicationCreate {
             
             // Create new term question and add to list
             ApplicationQuestion termQuestion = new ApplicationQuestion(con, app, '', app, 'Intended_Term_of_Entry__c');
-            termQuestion.addQuestionObject(new Question__c(Label__c = 'What term are you applying for?', Required__c = app.Application_Status__c, Active__c = true, URL_Parameter__c = 'Term'));
+            termQuestion.addQuestionObject(new Question__c(Label__c = 'When do you want to start?', Required__c = app.Application_Status__c, Active__c = true, URL_Parameter__c = 'Term'));
             termQuestion.setReferenceOptions(termMap);
             termQuestion.useTermsBasedOnProgram = true; // Added - Todd Mitchell
             

@@ -3,6 +3,7 @@
     <c:ApplicationBody title="Application Checklist" subtitle="{!IF(appControl.Hide_Term_Program__c, '', IF(ISBLANK(app.Intended_Program__r.Program_Name_on_Application__c), app.Intended_Program__r.Name, app.Intended_Program__r.Program_Name_on_Application__c) + ' - ' + app.Intended_Term_of_Entry__r.Name)}" appControl="{!appControl}" hideLogo="true">
         <apex:form id="theForm" >
             <apex:pageMessages />
+
             <div class="row" >
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
                     <apex:repeat value="{!reqs}" var="r" >
