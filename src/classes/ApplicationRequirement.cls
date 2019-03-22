@@ -113,22 +113,37 @@ global class ApplicationRequirement {
         }
         
         Set<String> contactFields = new Set<String>();
+        Set<String> applicationFields = new Set<String>{'intended_program__c', 'intended_program_code__c', 'intended_term_of_entry__c', 'applicant_type__c', 'citizenship__c', 'delivery_type__c', 'student_type__c', 'contact__c', 'school_college__c', 'residency__c'}; // Get application fields - Todd Mitchell
         // Loop over questions and get contact fields
         contactFields = new Set<String>{'id', 'mailingstreet', 'mailingcity', 'mailingpostalcode', 'otherstreet', 'othercity', 'otherpostalcode'};
         if (Account.sObjectType.getDescribe().fields.getMap().containsKey('BillingCountryCode'))
             contactFields.addAll(new Set<String>{'mailingstatecode', 'mailingcountrycode', 'otherstatecode', 'othercountrycode'});
         else
             contactFields.addAll(new Set<String>{'mailingstate', 'mailingcountry', 'otherstate', 'othercountry'});
-        for (Requirement_Item__c ri:items)
-            for (Question__c q:ri.Questions__r)
-            	if (String.isNotBlank(q.Contact_Field__c))
-            		contactFields.add(q.Contact_Field__c.toLowerCase());
+        for (Requirement_Item__c ri:items) {
+            for (Question__c q:ri.Questions__r) {
+                if (String.isNotBlank(q.Contact_Field__c))
+                    contactFields.add(q.Contact_Field__c.toLowerCase());
+                if (String.isNotBlank(q.Application_Field__c)) { // Get application fields - Todd Mitchell
+                    applicationFields.add(q.Application_Field__c.toLowerCase());
+                }
+            }
+        }
             
         // Query for contact
         Id contactId = app.Contact__c;
         String query = 'SELECT ' + String.join(new List<String>(contactFields), ',') + ' FROM Contact WHERE Id = :contactId';
         if (contactId != null)
         	con = ((List<Contact>)Database.query(query)).get(0);
+
+        // Requery app if application field is not empty - Todd Mitchell
+        if (!applicationFields.isEmpty()) {
+            String appQuery = 'SELECT Application_Status__c, Application_Control__c, ' + String.join(new List<String>(applicationFields), ',') + ' FROM Application__c WHERE Contact__c = :contactId AND Id = :applicationId';
+            List<Application__c> apps = Database.query(appQuery);
+            if (!apps.isEmpty()) {
+                app = ((List<Application__c>)Database.query(appQuery)).get(0);
+            }
+        }
 
         // Question Dependencies
         Map<Id, List<Question_Dependency__c>> dQuestions = new Map<Id, List<Question_Dependency__c>>();
@@ -204,6 +219,9 @@ global class ApplicationRequirement {
                 // Filter out external requirements based on the hashcode
                 if (!(i.Internal_Requirement_Item__c != null && UserInfo.getUserType() != 'Standard' && !ApexPages.currentPage().getParameters().containsKey('h')))
                     riLst.add(i);
+            }
+            if (ApplicationFilter.isExternalRequirement(app, i)) { // Add block to handle external requirements in Started state
+                preventUpdates = false;
             }
         }
         

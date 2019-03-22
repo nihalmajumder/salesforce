@@ -5,8 +5,6 @@ global virtual class TDTMVirtualTriggerHandler extends hed.TDTM_Runnable {
         hed.TDTM_Runnable.dmlWrapper dmlWrapper = new hed.TDTM_Runnable.DmlWrapper();
 
         if (triggerAction == hed.TDTM_Runnable.Action.BeforeInsert) {
-        }
-        else if (triggerAction == hed.TDTM_Runnable.Action.BeforeInsert) {
             onBeforeInsert(newList, Trigger.newMap, dmlWrapper);
         }
         else if (triggerAction == hed.TDTM_Runnable.Action.BeforeUpdate) {

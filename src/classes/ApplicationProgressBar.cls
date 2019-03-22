@@ -108,10 +108,12 @@ public class ApplicationProgressBar  {
         Set<Id> reqIds = new Set<Id>();
         // Add Label__c - Todd Mitchell
         // Add Intended_Program_Codes__c to query - Todd Mitchell
-        for (Requirement__c r:[SELECT Id, Internal_Only__c, Name, Label__c, Active__c,Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c FROM Requirement__c WHERE Application_Control__c = :appControl.Id AND Active__c = :true and Show_On_Application_Creation__c = false ORDER BY Display_Order__c ASC NULLS LAST]){
+        for (Requirement__c r:[SELECT Id, Internal_Only__c, Internal_Only_Show_on_Checklist__c, Name, Label__c, Active__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c FROM Requirement__c WHERE Application_Control__c = :appControl.Id AND Active__c = :true and Show_On_Application_Creation__c = false ORDER BY Display_Order__c ASC NULLS LAST]){
             if (ApplicationFilter.filter(app, r)){
-                reqIds.add(r.Id);
-                reqMap.put(r.Id,new RequirementWrapper(r));
+                if (UserInfo.getUserType().equals('Standard') || !r.Internal_Only__c) { // Add additional check to remove internal only - Todd Mitchell
+                    reqIds.add(r.Id);
+                    reqMap.put(r.Id,new RequirementWrapper(r));
+                }
             }
         }
 

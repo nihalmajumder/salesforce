@@ -60,7 +60,8 @@
             }
 
             /* Show the tooltip text when you mouse over the tooltip container */
-            .progress-tooltip:hover .progress-tooltip-text {
+            /* style needs to be applied on outter most element, to be visible in FF - Luke Vang*/
+            button.slds-button:hover div.progress-tooltip span {
                 visibility: visible;
             }
             

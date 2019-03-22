@@ -43,10 +43,14 @@ public class ApplicationChecklist {
         allowCancel = false;
         allowWithdraw = false;
         
-        contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
-        if (UserInfo.getUserType().equals('Standard'))
-            contactId = Id.valueOf(ApexPages.currentPage().getParameters().get('contactId'));
-        applicationId = Id.valueOf(ApexPages.currentPage().getParameters().get('applicationId'));
+        if (contactId == null) { // Add check in case set in a different way - Todd Mitchell
+            contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
+            if (UserInfo.getUserType().equals('Standard'))
+                contactId = Id.valueOf(ApexPages.currentPage().getParameters().get('contactId'));
+        }
+        if (applicationId == null) { // Add check in case set in a different way - Todd Mitchell
+            applicationId = Id.valueOf(ApexPages.currentPage().getParameters().get('applicationId'));
+        }
 
         // Added for support of Admin view off of the Opportunity - Todd Mitchell
         if (opp != null) {

@@ -42,9 +42,11 @@ public class InteractionHelper {
             Interaction_Source__c = 'Application',
             Lead_Source__c = 'Application Submit',
             Opportunity_Stage__c = 'Applied',
-            Opportunity_Stage_Detail__c = 'App Submitted',
-            Opportunity__c = o.Id
+            Opportunity_Stage_Detail__c = 'App Submitted'
         );
+        if (o != null) {
+            i.Opportunity__c = o.Id;
+        }
         insert i;
         return i;
     }

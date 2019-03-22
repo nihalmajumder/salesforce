@@ -109,6 +109,12 @@
                     <apex:outputPanel rendered="{!subtitle != null}" >
                     	<h2 style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:24px;" >{!subtitle}</h2>
                     </apex:outputPanel>
+                    <apex:outputPanel rendered="{!appControl.Application_Start_Status__c == 'Started' || appControl.Application_Start_Status__c = 'Submitted'}" >
+                            <p class="help-block">
+                                <apex:outputText value="{!appControl.Started_Status_Help_Text__c}" escape="false" rendered="{!appControl.Application_Start_Status__c == 'Started'}"/>
+                                <apex:outputText value="{!appControl.Submitted_Status_Help_Text__c}" escape="false" rendered="{!appControl.Application_Start_Status__c == 'Submitted'}"/>
+                            </p>
+                    </apex:outputPanel>
                 </div>
             </div>
             <div class="row" >

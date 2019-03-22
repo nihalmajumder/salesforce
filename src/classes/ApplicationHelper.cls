@@ -18,6 +18,7 @@ public with sharing class ApplicationHelper {
     public final static String ADULT_TYPE = 'Adult';
     public final static String ADULT_LESS_TYPE = 'Adult Transfer: Less than 30 Credits';
     public final static String ADULT_MORE_TYPE = 'Adult Transfer: More than 30 Credits';
+    public final static String UNDERGRADUATE_TRANSFER_TYPE = 'Undergraduate Transfer';
     
     public static void updateFilters(List<Application__c> newList) {
         Set<Id> contactIds = new Set<Id>();
@@ -36,12 +37,17 @@ public with sharing class ApplicationHelper {
         if (app.School_College__c == UNDERGRADUATE_SCHOOL) {
             if (app.Is_Applying_For_PSEO__c == 'Yes') {
                 app.Applicant_Type__c = PSEO_TYPE;
+                if (app.Is_Transfer_Student__c == 'Yes') {
+                    app.Student_Type__c = UNDERGRADUATE_TRANSFER_TYPE;
+                }
             }
-            if (app.Is_Transfer_Student__c == 'Yes') {
+            else if (app.Is_Transfer_Student__c == 'Yes') {
                 app.Applicant_Type__c = TRANSFER_TYPE;
+                app.Student_Type__c = UNDERGRADUATE_TRANSFER_TYPE;
             }
             else {
                 app.Applicant_Type__c = FRESHMAN_TYPE;
+                app.Student_Type__c = null;
             }
         }
         else if (app.School_College__c == ADULT_UNDERGRADUATE_SCHOOL) {

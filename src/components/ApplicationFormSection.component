@@ -1,5 +1,7 @@
 <apex:component id="applicationFormSectionComponent" >
     <script>
+             
+              
         function makeNonEditable(){
             //Not Editable
             jQuery('.fieldNotEditable,.fieldNotEditable input,.fieldNotEditable select,.fieldNotEditable textarea').attr('disabled','disabled');
@@ -11,8 +13,26 @@
             jQuery('.statePicklist select:not(.form-control)').addClass('form-control');
             makeNonEditable();
         });
+        
+        //loops through all the form groups elements labels, if there is a * then the element is required
+        //replace the existing * with a new span element with the required class, this way we don't have to add any classes 
+        //manually to each label.
+        //This change should be compatible to new versions of EASY, as we
+        //are programmatically modifying the label and not changing how labels are created - Luke Vang
+        function addRequiredStyling(){
+            jQuery(".form-group > label:contains('*')").each(function(){
+                jQuery(this).html(jQuery(this).html().replace("*", "<span class='required'>*<span>"));
+            });
+
+            //look at data-label-tr classes and add new span class with red * if a * exists
+            jQuery(".data-label-tr:contains('*')").each(function(){
+                jQuery(this).html(jQuery(this).html().replace("*", "<span class='required'>*<span>"));
+            });
+        }
+
         jQuery(function(){
             makeNonEditable();
+            addRequiredStyling();
         });
     </script>
     <style>
@@ -29,6 +49,10 @@
         	font-weight:400;
         	font-size:14px;
         	height:36px;
+        }
+
+        .required{
+            color:#c23934;
         }
 
         .required-label:after {
@@ -420,8 +444,8 @@
                 	border: none;
                 }
     
-                table td::before {
-                    content: attr(data-label);
+                /* change style from table td tr to a data label class and removed content attribute in style - Luke Vang */
+                .data-label-tr{
                     float: left;
                     font-weight: bold;
                     width: 40%; /* change from 30 - 40, for text wrapping - Luke Vang*/
@@ -451,8 +475,14 @@
                         <tr data-recid="{!rr.idx}" style="border-top: none; border-bottom: 2px solid #ddd;" >
                             
                             <apex:repeat value="{!group.questions}" var="question" >
+                                
                                 <apex:outputPanel layout="none" rendered="{!rr.showQuestions[question]}">
-                                    <td class="ui-front" style="border:none;" data-label="{!question.question.Label__c}:{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}" >
+                                    <!-- removed data-label attribute - Luke Vang -->
+                                    <td class="ui-front" style="border:none;">
+                                        <!-- created lable element to hold data-label -->
+                                        <label class="data-label-tr">
+                                            {!question.question.Label__c}:{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}
+                                        </label>
                                         <apex:outputPanel styleClass="appReferenceField">
                                             <apex:outputField value="{!rr.obj[IF(NOT(ISBLANK(rr.obj['Holding_Name__c'])),'Holding_Name__c',question.question.Related_Object_Field__c)]}" style="{!IF(rr.isEditMode,'display:none;','')}" rendered="{!!rr.isEditMode && group.fieldResultMap[lower(question.question.Related_Object_Field__c)].isReference}"/>
                                         </apex:outputPanel>
@@ -579,7 +609,7 @@
                     <script>
                     	var jq = jQuery.noConflict();
                     	jq(document).ready(function(){
-                        	jq('input[id$=numberField1]').attr('placeholder','{{!question.placeholder}}');
+                        	jq('input[id$=numberField1]').attr('placeholder','{!question.placeholder}');
                         	jq('input[id$=numberField1]').attr('maxlength','{!question.length}');
                     	});
                    </script>
@@ -777,27 +807,28 @@
                                     </apex:outputLink>
                                 </td>
                             </apex:outputPanel>
+                            <!-- command buttons updated to re-call function addRequiredStyling(); to set red * -->
                             <apex:outputPanel layout="none" rendered="{!ISPICKVAL($User.UserType,'Standard') && preventUpdates==false && rr.obj.Id != null}">
                                 <td class="ui-front">
-                                    <apex:commandLink action="{!group.RelatedUpload}" reRender="theTable" oncomplete="if('{!group.selectedRelatedId}')window.open('{!$Page.RelatedDocumentUpload+'?Id='+group.selectedRelatedId}','_blank');">Upload
+                                    <apex:commandLink action="{!group.RelatedUpload}" reRender="theTable" oncomplete="if('{!group.selectedRelatedId}')window.open('{!$Page.RelatedDocumentUpload+'?Id='+group.selectedRelatedId}','_blank'); addRequiredStyling();">Upload
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>
                                 </td>
                             </apex:outputPanel>
                             <td style="border-top: none; border-bottom: 1px solid #ddd;" >
                                 <apex:outputPanel layout="none" rendered="{!rr.obj['User_Created__c'] && !rr.isEditMode && !preventUpdates && group.isEditable}">
-                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableEditMode}" reRender="theTable" value="Edit">
+                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableEditMode}" reRender="theTable" value="Edit" oncomplete="addRequiredStyling();">
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>&nbsp;|&nbsp;
-                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableDeleteMode}" reRender="theTable" value="Delete">
+                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableDeleteMode}" reRender="theTable" value="Delete" oncomplete="addRequiredStyling();">
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>
                                 </apex:outputPanel>
                                 <apex:outputPanel layout="none" rendered="{!rr.obj['User_Created__c'] && rr.isEditMode}">
-                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableConfirmMode}" reRender="theTable" value="Save">
+                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableConfirmMode}" reRender="theTable" value="Save" oncomplete="addRequiredStyling();">
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>&nbsp;|&nbsp;
-                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableViewMode}" reRender="theTable" value="Cancel">
+                                    <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" action="{!group.enableViewMode}" reRender="theTable" value="Cancel" oncomplete="addRequiredStyling();">
                                         <apex:param name="p1" value="{!rr.idx}" assignTo="{!group.selectedRelatedId}"/>
                                     </apex:commandLink>
                                 </apex:outputPanel>
@@ -808,11 +839,14 @@
             </table>
         	</apex:outputPanel>
             <div class="col-lg-8 col-md-10 col-xs-12" >
-                <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="New Record" action="{!group.newRow}" reRender="theTable" rendered="{!!preventUpdates && group.isEditable && (group.item.Maximum_Number_of_Children__c == null || group.relatedObjects.size < group.item.Maximum_Number_of_Children__c)}"/>
+                <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="New Record" action="{!group.newRow}" reRender="theTable" rendered="{!!preventUpdates && group.isEditable && (group.item.Maximum_Number_of_Children__c == null || group.relatedObjects.size < group.item.Maximum_Number_of_Children__c)}" oncomplete="addRequiredStyling();"/>
             </div>
             <apex:outputPanel >
             <script>
                 jQuery(function(){
+
+              
+
                     jQuery('.appReferenceField').find('[id^=lookup]').each(function(idx,lookup){
                         var lookupJQ = jQuery(lookup);
                         lookupJQ.closest('td').html(lookupJQ.html());
@@ -883,6 +917,7 @@
                         jQuery(this).closest('.form-group').find('.lookupPanel').remove();
                     });
                 });
+
             </script>
             </apex:outputPanel>
         </apex:outputPanel>
