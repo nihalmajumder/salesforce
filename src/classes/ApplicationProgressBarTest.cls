@@ -68,6 +68,7 @@ public class ApplicationProgressBarTest {
         ar.init();
         ApplicationProgressBar pb = new ApplicationProgressBar(ar);
         pb.start();
+        System.assertEquals(true, pb.displayProgressBar);
         Map<Id,RequirementWrapper> reqMap = pb.reqMap;
         String requirementIdString = pb.requirementIdString;
         Id nextReqId = pb.nextReqId;

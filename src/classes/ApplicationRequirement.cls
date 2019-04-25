@@ -69,7 +69,8 @@ global class ApplicationRequirement {
         allowSubmit = true;
         isExternalUser = false;
         if(String.isBlank(contactId)){
-            contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
+            contactId = ApplicationQueryCache.getContactId(UserInfo.getUserId()); // Add cache of query - Todd Mitchell
+            //contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
             if (UserInfo.getUserType().equals('Standard')){
                 if(ApexPages.currentPage().getParameters().containsKey('contactId')){
                     contactId = Id.valueOf(ApexPages.currentPage().getParameters().get('contactId'));
@@ -100,7 +101,7 @@ global class ApplicationRequirement {
         if (queryItems == true) {
             
             // Add Intended_Program_Codes__c to query - Todd Mitchell
-            String itemQuery = 'SELECT Id, Internal_Only__c, Requirement__r.Internal_Only__c, Internal_Only_Applicant_Instructions__c, Active__c, Required__c, Required_Number_of_Children__c, Maximum_Number_of_Children__c, Requirement__r.Name, Requirement__r.Label__c, Name, Label__c, Instructions__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c , Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c, Related_List_Object_Master__c, Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Internal_Requirement_Item__c, Editable_Application_Status__c, Holding_Record_Id__c, (SELECT Id, Active__c, Required__c, Label__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Lookup_Object__c, Lookup_Where_Clause__c, Name_Field_API_Name__c, Contact_Field__c, Application_Field__c, External_Email_Field__c,Hardcoded_Value__c, Editable_Application_Status__c, URL_Parameter__c, New_Reference_Field__c ,Static_Text__c, Display_as_Picklist__c, Reference_Access_Rights_Field__c, Reference_First_Name_Field__c, Reference_Last_Name_Field__c FROM Questions__r WHERE Active__c = true ORDER BY Display_Order__c ASC NULLS LAST) FROM Requirement_Item__c WHERE Requirement__c = :requirementId AND Requirement__r.Show_on_Application_Creation__c = false AND Requirement__r.Active__c = true AND Active__c = true';
+            String itemQuery = 'SELECT Id, Internal_Only__c, Requirement__r.Internal_Only__c, Internal_Only_Applicant_Instructions__c, Active__c, Required__c, Required_Number_of_Children__c, Maximum_Number_of_Children__c, Requirement__r.Name, Requirement__r.Label__c, Name, Label__c, Instructions__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c , Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c, Related_List_Object_Master__c, Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Internal_Requirement_Item__c, Editable_Application_Status__c, Holding_Record_Id__c, Admissions_Document_Type__c, Is_Reference__c, Reference_Type__c, Application_Status_Field__c, (SELECT Id, Active__c, Required__c, Label__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Lookup_Object__c, Lookup_Where_Clause__c, Name_Field_API_Name__c, Contact_Field__c, Application_Field__c, External_Email_Field__c,Hardcoded_Value__c, Editable_Application_Status__c, URL_Parameter__c, New_Reference_Field__c ,Static_Text__c, Display_as_Picklist__c, Reference_Access_Rights_Field__c, Reference_First_Name_Field__c, Reference_Last_Name_Field__c, Reference_Field__c FROM Questions__r WHERE Active__c = true ORDER BY Display_Order__c ASC NULLS LAST) FROM Requirement_Item__c WHERE Requirement__c = :requirementId AND Requirement__r.Show_on_Application_Creation__c = false AND Requirement__r.Active__c = true AND Active__c = true';
             
             if (isExternalUser)
                 itemQuery += ' AND Internal_Requirement_Item__c=\''+ApexPages.currentPage().getParameters().get('r') + '\'';
@@ -127,6 +128,10 @@ global class ApplicationRequirement {
                 if (String.isNotBlank(q.Application_Field__c)) { // Get application fields - Todd Mitchell
                     applicationFields.add(q.Application_Field__c.toLowerCase());
                 }
+            }
+            // Added to support status fields on requirement item - Todd Mitchell
+            if (String.isNotBlank(ri.Application_Status_Field__c)) {
+                applicationFields.add(ri.Application_Status_Field__c.toLowerCase());
             }
         }
             
@@ -170,7 +175,7 @@ global class ApplicationRequirement {
         Map<Id, Requirement_Response__c> responses = new Map<Id, Requirement_Response__c>();
         Map<Id, List<Question_Response__c>> dResponses = new Map<Id, List<Question_Response__c>>();
         if (requirementResponses == null && String.isNotBlank(applicationId))
-            requirementResponses = [SELECT Id, Requirement_Item__c, Requirement_Item__r.Internal_Only__c, ValueTextEntry__c, Fulfilled_On__c, Incomplete_Questions__c, Question_Group_Requirement_Fulfilled_On__c, HasDocument__c, Document_Requirement_Fulfilled_On__c, Has_Child_Requirement__c, Child_Requirement_Fulfilled_On__c, Application__c, Application__r.Contact__c, External_Email__c, Hashcode__c, Send_Reminder__c, Reference_Access_Rights__c, Reference_First_Name__c, Reference_Last_Name__c, (SELECT Id, IsPopulated__c, PopulatedOn__c, Question__c, Question__r.Required__c, ValueText__c, ValueCheckbox__c, ValuePhone__c, ValueEmail__c, ValueCurrency__c, ValueDate__c, ValueDateTime__c, ValueNumber__c, ValuePercent__c, ValueTextArea__c, ValueTextEncrypted__c, ValueLongTextArea__c, ValueURL__c, Street__c, City__c, State__c, Country__c, PostalCode__c, Requirement_Response__c, Requirement_Response__r.Has_Child_Requirement__c FROM Question_Responses__r), (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) FROM Requirement_Response__c WHERE Requirement_Item__r.Requirement__c = :requirementId AND Application__c = :applicationId];
+            requirementResponses = [SELECT Id, Requirement_Item__c, Requirement_Item__r.Internal_Only__c, ValueTextEntry__c, Fulfilled_On__c, Incomplete_Questions__c, Question_Group_Requirement_Fulfilled_On__c, HasDocument__c, Document_Requirement_Fulfilled_On__c, Has_Child_Requirement__c, Child_Requirement_Fulfilled_On__c, Application__c, Application__r.Contact__c, External_Email__c, Hashcode__c, Send_Reminder__c, Reference_Access_Rights__c, Reference_First_Name__c, Reference_Last_Name__c, Admissions_Document__c, Reference__c, (SELECT Id, IsPopulated__c, PopulatedOn__c, Question__c, Question__r.Required__c, ValueText__c, ValueCheckbox__c, ValuePhone__c, ValueEmail__c, ValueCurrency__c, ValueDate__c, ValueDateTime__c, ValueNumber__c, ValuePercent__c, ValueTextArea__c, ValueTextEncrypted__c, ValueLongTextArea__c, ValueURL__c, Street__c, City__c, State__c, Country__c, PostalCode__c, Requirement_Response__c, Requirement_Response__r.Has_Child_Requirement__c FROM Question_Responses__r), (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) FROM Requirement_Response__c WHERE Requirement_Item__r.Requirement__c = :requirementId AND Application__c = :applicationId];
         else if (requirementResponses == null)
             requirementResponses = new List<Requirement_Response__c>();
         
@@ -220,9 +225,9 @@ global class ApplicationRequirement {
                 if (!(i.Internal_Requirement_Item__c != null && UserInfo.getUserType() != 'Standard' && !ApexPages.currentPage().getParameters().containsKey('h')))
                     riLst.add(i);
             }
-            if (ApplicationFilter.isExternalRequirement(app, i)) { // Add block to handle external requirements in Started state
-                preventUpdates = false;
-            }
+            //if (ApplicationFilter.isExternalRequirement(app, i)) { // Add block to handle external requirements in Started state - Todd Mitchell
+            //    preventUpdates = false;
+            //}
         }
         
         if (!relatedObjects.isEmpty())
@@ -366,6 +371,11 @@ global class ApplicationRequirement {
             ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.Error, e.getMessage()));
         }
         
+        return null;
+    }
+
+    public PageReference doTest() {
+        System.debug('doTest');
         return null;
     }
 }

@@ -31,7 +31,8 @@ public class ApplicationCreate {
             return null;
         
         // Get contact id from user or URL parameter if standard user
-        contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
+        contactId = ApplicationQueryCache.getContactId(UserInfo.getUserId()); // Add cache of query - Todd Mitchell
+        //contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
         if (UserInfo.getUserType().equals('Standard'))
             contactId = Id.valueOf(ApexPages.currentPage().getParameters().get('contactId'));
         
@@ -68,12 +69,12 @@ public class ApplicationCreate {
                  Instructions__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c,
                  Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c, Related_List_Object_Master__c,
                  Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Holding_Record_Id__c, Internal_Requirement_Item__c, Editable_Application_Status__c,
-                 Internal_Only__c, Requirement__r.Internal_Only__c, Internal_Only_Applicant_Instructions__c,
+                 Internal_Only__c, Requirement__r.Internal_Only__c, Internal_Only_Applicant_Instructions__c, Is_Reference__c, Reference_Type__c,
                  (SELECT Id, Active__c, Required__c, Label__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c,
                   Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName,
                   Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Name_Field_API_Name__c,
                   Lookup_Object__c, Lookup_Where_Clause__c, New_Reference_Field__c, Contact_Field__c, Application_Field__c, External_Email_Field__c, Hardcoded_Value__c, Static_Text__c,
-                  URL_Parameter__c, Editable_Application_Status__c, Display_as_Picklist__c, Reference_Access_Rights_Field__c, Reference_First_Name_Field__c, Reference_Last_Name_Field__c FROM Questions__r WHERE Active__c = :true ORDER BY Display_Order__c ASC NULLS LAST)
+                  URL_Parameter__c, Editable_Application_Status__c, Display_as_Picklist__c, Reference_Access_Rights_Field__c, Reference_First_Name_Field__c, Reference_Last_Name_Field__c, Reference_Field__c FROM Questions__r WHERE Active__c = :true ORDER BY Display_Order__c ASC NULLS LAST)
                  FROM Requirement_Item__c WHERE Requirement__r.Application_Control__c = :appControl.Id AND Requirement__r.Show_on_Application_Creation__c = :true
                  AND Requirement__r.Active__c = :true AND Active__c = :true ORDER BY Display_Order__c ASC NULLS LAST];
         
@@ -197,16 +198,20 @@ public class ApplicationCreate {
             return new PageReference(saveApplication());
         
         } catch (DmlException err) {
+            System.debug(err);
             ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, err.getDMLMessage(0)));
             dmlException = true;
             Database.rollback(sp);
         } catch (ApplicationUtilities.ApplicationException err) {
+            System.debug(err);
             
             ApexPages.addMessage(new ApexPages.Message(err.isError ? ApexPages.Severity.ERROR : ApexPages.Severity.CONFIRM, err.getMessage()));
             if (err.doRollback)
                 Database.rollback(sp);
             
         } catch (Exception err) {
+            System.debug(err.getMessage());
+            System.debug(err.getStackTraceString());
             if (!dmlException) {
                 ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, err.getMessage()));
                 Database.rollback(sp);

@@ -6,6 +6,25 @@ Revision (s):
 *******************************************************************************/
 public class ApplicationProgressBar  {
 
+    static String signedInUserProfile = [SELECT Id, Name FROM Profile WHERE Id =: UserInfo.getProfileId()].Name;
+
+    //hide's progress bar for specific requirements
+    //for specific profiles defined in the requirement record - Luke Vang
+    public Boolean displayProgressBar{
+        get{
+            Set<String> profiles = new set<String>();
+            if(reqMap.get(requirementId) != null && reqMap.get(requirementId).req.Profiles_To_Hide_Progress_Bar__c != null){
+                profiles.addAll(reqMap.get(requirementId).req.Profiles_To_Hide_Progress_Bar__c.trim().split(','));
+            }
+            //hide progress bar 
+            if(profiles.contains(signedInUserProfile))
+            {
+                return false;
+            }
+            return true;
+        }set;
+    }
+
     // public List<Requirement__c> reqs {get;set;}
     public Map<Id,RequirementWrapper> reqMap {get{
         if (reqMap == null) {
@@ -87,7 +106,8 @@ public class ApplicationProgressBar  {
         allowCancel = false;
         allowWithdraw = false;
         
-        contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
+        contactId = ApplicationQueryCache.getContactId(UserInfo.getUserId()); // Add cache of query - Todd Mitchell
+        //contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
         if (UserInfo.getUserType().equals('Standard')) {
             contactId = Id.valueOf(ApexPages.currentPage().getParameters().get('contactId'));
         }
@@ -108,7 +128,7 @@ public class ApplicationProgressBar  {
         Set<Id> reqIds = new Set<Id>();
         // Add Label__c - Todd Mitchell
         // Add Intended_Program_Codes__c to query - Todd Mitchell
-        for (Requirement__c r:[SELECT Id, Internal_Only__c, Internal_Only_Show_on_Checklist__c, Name, Label__c, Active__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c FROM Requirement__c WHERE Application_Control__c = :appControl.Id AND Active__c = :true and Show_On_Application_Creation__c = false ORDER BY Display_Order__c ASC NULLS LAST]){
+        for (Requirement__c r:[SELECT Id, Internal_Only__c, Internal_Only_Show_on_Checklist__c, Name, Label__c, Active__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c, Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, Profiles_To_Hide_Progress_Bar__c FROM Requirement__c WHERE Application_Control__c = :appControl.Id AND Active__c = :true and Show_On_Application_Creation__c = false ORDER BY Display_Order__c ASC NULLS LAST]){
             if (ApplicationFilter.filter(app, r)){
                 if (UserInfo.getUserType().equals('Standard') || !r.Internal_Only__c) { // Add additional check to remove internal only - Todd Mitchell
                     reqIds.add(r.Id);
@@ -122,7 +142,7 @@ public class ApplicationProgressBar  {
         
         Set<Id> riIds = new Set<Id>();
         // Add Intended_Program_Codes__c to query - Todd Mitchell
-        riList = [SELECT Id, Required__c,Requirement__c, Internal_Only__c, Active__c,Required_Number_of_Children__c,Requirement__r.Name, Name, Instructions__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c , Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c,Related_List_Object_Master__c, Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Internal_Requirement_Item__c, Editable_Application_Status__c, (SELECT Id, Active__c,Hardcoded_value__c,Required__c, Label__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c , Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Lookup_Object__c, Lookup_Where_Clause__c, Contact_Field__c, Application_Field__c, External_Email_Field__c, Editable_Application_Status__c, New_Reference_Field__c, URL_Parameter__c,Static_Text__c, Name_Field_API_Name__c, Display_as_Picklist__c, Reference_Access_Rights_Field__c, Reference_First_Name_Field__c, Reference_Last_Name_Field__c FROM Questions__r ORDER BY Display_Order__c ASC NULLS LAST) FROM Requirement_Item__c WHERE Requirement__c in :reqIds ORDER BY Display_Order__c ASC NULLS LAST];
+        riList = [SELECT Id, Required__c,Requirement__c, Internal_Only__c, Active__c,Required_Number_of_Children__c,Requirement__r.Name, Name, Instructions__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c , Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Allow_Text_Entry__c, Related_List_Object__c,Related_List_Object_Master__c, Related_List_Object_Master_Field__c, Related_List_Where_Clause__c, Internal_Requirement_Item__c, Editable_Application_Status__c, Is_Reference__c, Admissions_Document_Type__c, Reference_Type__c, Application_Status_Field__c, (SELECT Id, Active__c,Hardcoded_value__c,Required__c, Label__c, Intended_Program__c, Intended_Program_Codes__c, Application_Status__c, Applicant_Type__c , Citizenship__c, Degree_Type__c, Delivery_Type__c, Residency__c, School_College__c, Student_Type__c, RecordType.DeveloperName, Picklist_Values__c, Placeholder__c, Length__c, Help_Text__c, Dependency_Logic__c, Dependency_Behavior__c, Related_Object_Field__c, Lookup_Object__c, Lookup_Where_Clause__c, Contact_Field__c, Application_Field__c, External_Email_Field__c, Editable_Application_Status__c, New_Reference_Field__c, URL_Parameter__c,Static_Text__c, Name_Field_API_Name__c, Display_as_Picklist__c, Reference_Access_Rights_Field__c, Reference_First_Name_Field__c, Reference_Last_Name_Field__c, Reference_Field__c FROM Questions__r ORDER BY Display_Order__c ASC NULLS LAST) FROM Requirement_Item__c WHERE Requirement__c in :reqIds ORDER BY Display_Order__c ASC NULLS LAST];
         for(Requirement_Item__c ri : riList){
             Boolean isValid = ApplicationFilter.filter(app,ri);
             if(isValid){
@@ -131,7 +151,7 @@ public class ApplicationProgressBar  {
             }
         }
         checkRequirementCompletion();
-        for(Requirement_Response__c rr : [Select Id, Requirement_Item__r.Required__c,Has_Child_Requirement__c,Requirement_Item__c,Requirement_Item__r.RecordType.DeveloperName,Requirement_Item__r.Requirement__c,Incomplete_Questions__c, HasDocument__c,Send_Reminder__c,External_Email__c,Viewed__c,Requirement_Item__r.Viewing_Requirement_Formula__c, Reference_Access_Rights__c, Reference_First_Name__c, Reference_Last_Name__c from Requirement_Response__c WHERE Application__c = :applicationId and Requirement_Item__r.Requirement__c in :reqIds]){
+        for(Requirement_Response__c rr : [Select Id, Requirement_Item__r.Required__c,Has_Child_Requirement__c,Requirement_Item__c,Requirement_Item__r.RecordType.DeveloperName,Requirement_Item__r.Requirement__c,Incomplete_Questions__c, HasDocument__c,Send_Reminder__c,External_Email__c,Viewed__c,Requirement_Item__r.Viewing_Requirement_Formula__c, Reference_Access_Rights__c, Reference_First_Name__c, Reference_Last_Name__c, Admissions_Document__c, Reference__c from Requirement_Response__c WHERE Application__c = :applicationId and Requirement_Item__r.Requirement__c in :reqIds]){
             if(riIds.contains(rr.Requirement_Item__c)){
                 Boolean itemCompleted = true;
                 if(!completedRequirement.containsKey(rr.Requirement_Item__r.Requirement__c)){
@@ -214,7 +234,7 @@ public class ApplicationProgressBar  {
 
         //Requirement Responses
         Map<Id,List<Requirement_Response__c>> rrMap = new Map<Id,List<Requirement_Response__c>>();
-        for(Requirement_Response__c rr : [SELECT Id, Requirement_Item__r.Requirement__c,Requirement_Item__c,ValueTextEntry__c, Has_Child_Requirement__c, Child_Requirement_Fulfilled_On__c, HasDocument__c,Application__c,Application__r.Contact__c,External_Email__c,Hashcode__c,Send_Reminder__c,Viewed__c, Reference_Access_Rights__c, Reference_First_Name__c, Reference_Last_Name__c, (SELECT Id, Question__c, Question__r.Required__c, ValueText__c, ValueCheckbox__c, ValuePhone__c, ValueEmail__c, ValueCurrency__c, ValueDate__c, ValueDateTime__c, ValueNumber__c, ValuePercent__c, ValueTextArea__c, ValueTextEncrypted__c, ValueLongTextArea__c, ValueURL__c, Street__c, City__c, State__c, Country__c, PostalCode__c,Requirement_Response__c FROM Question_Responses__r), (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) FROM Requirement_Response__c WHERE Requirement_Item__r.Requirement__c in :requirementIds AND Application__c = :applicationId]){
+        for(Requirement_Response__c rr : [SELECT Id, Requirement_Item__r.Requirement__c,Requirement_Item__c,ValueTextEntry__c, Has_Child_Requirement__c, Child_Requirement_Fulfilled_On__c, HasDocument__c,Application__c,Application__r.Contact__c,External_Email__c,Hashcode__c,Send_Reminder__c,Viewed__c, Reference_Access_Rights__c, Reference_First_Name__c, Reference_Last_Name__c, Admissions_Document__c, Reference__c, (SELECT Id, Question__c, Question__r.Required__c, ValueText__c, ValueCheckbox__c, ValuePhone__c, ValueEmail__c, ValueCurrency__c, ValueDate__c, ValueDateTime__c, ValueNumber__c, ValuePercent__c, ValueTextArea__c, ValueTextEncrypted__c, ValueLongTextArea__c, ValueURL__c, Street__c, City__c, State__c, Country__c, PostalCode__c,Requirement_Response__c FROM Question_Responses__r), (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) FROM Requirement_Response__c WHERE Requirement_Item__r.Requirement__c in :requirementIds AND Application__c = :applicationId]){
             if(!rrMap.containsKey(rr.Requirement_Item__r.Requirement__c)){
                 rrMap.put(rr.Requirement_Item__r.Requirement__c,new List<Requirement_Response__c>());
             }
@@ -285,7 +305,7 @@ public class ApplicationProgressBar  {
             responses.addAll(ar.newResponses);
         }
         if(responses.size()>0){
-            insert responses;
+            upsert responses;
         }
         try{
             Map<Question_Response__c,Requirement_Response__c> questionToResponseMap = new Map<Question_Response__c,Requirement_Response__c>();

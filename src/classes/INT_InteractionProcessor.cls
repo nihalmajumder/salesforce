@@ -442,6 +442,18 @@ public class INT_InteractionProcessor {
         List<Database.LeadConvert> leadsToReconvert = new List<Database.LeadConvert>();
         Database.LeadConvertResult[] leadConvertResults = Database.convertLead(leadsToConvert, false); // Convert Leads
 
+        // Get existing opportunities - Todd Mitchell
+        Set<String> oppKeys = new Set<String>();
+        for (Database.LeadConvertResult lcr : leadConvertResults) {
+            Interaction__c interaction = (leadIdToInteractionMap.containsKey(lcr.getLeadId())) ? leadIdToInteractionMap.get(lcr.getLeadId()) : null;
+            if (lcr.isSuccess()) {
+                if (!String.isEmpty(interaction.Opportunity_Key__c)) {
+                    oppKeys.add(lcr.getContactId() + interaction.Opportunity_Key__c);
+                }
+            }
+        }
+        Map<String, Opportunity> oppMap = OpportunityHelper.getOpportunitiesForKeys(oppKeys);
+
         for (Database.LeadConvertResult lcr : leadConvertResults) {
             Interaction__c interaction = (leadIdToInteractionMap.containsKey(lcr.getLeadId())) ? leadIdToInteractionMap.get(lcr.getLeadId()) : null;
 
@@ -451,13 +463,23 @@ public class INT_InteractionProcessor {
 
                 // Create new Opportunity for upsert if Opportunity Key is populated.
                 if (!String.isEmpty(interaction.Opportunity_Key__c)) {
+                    // Add check so that Stage is not reverted to Inquired - Todd Mitchell
+                    Opportunity oldOppty = oppMap.get(lcr.getContactId() + interaction.Opportunity_Key__c);
+                    String stageName = interaction.Opportunity_Stage__c;
+                    if (oldOppty != null && stageName == 'Inquired' && oldOppty.StageName != 'Inquired') {
+                        stageName = oldOppty.StageName;
+                    }
                     Opportunity newOppty = new Opportunity(
                         CloseDate = System.today(),
-                        StageName = interaction.Opportunity_Stage__c,
+                        StageName = stageName,
                         Opportunity_Key__c = lcr.getContactId() + interaction.Opportunity_Key__c,
                         AccountId = lcr.getAccountId()
                     );
-                    intMappingService.applyDataToSObject(interaction, newOppty);
+                    if (stageName == 'Inquired') {
+                        newOppty.stage_detail__c = 'Inquired';
+                    }
+                    // Call custom method for Opportunity - Todd Mitchell
+                    intMappingService.applyDataToOpportunity(interaction, newOppty);
                     interaction.Opportunity__r = newOppty;
                     opportunitiesToUpsert.add(newOppty);
                 }
@@ -471,11 +493,19 @@ public class INT_InteractionProcessor {
                             Contact matchedContact;
 
                             for (Datacloud.MatchRecord match : matchResult.getMatchRecords()) {
+
+                                // EJ -- this was matching Account objects as potential duplicates.
+                                // Just skip if it doesn't cast to a contact?
+
                                 // We want to use the oldest matched record, it will be the source Contact.
-                                Contact compareContact = (Contact) match.getRecord();
-                                if (matchedContact == null || (compareContact.CreatedDate < matchedContact.CreatedDate)) {
-                                    matchedContact = new Contact();
-                                    matchedContact = compareContact;
+                                try{
+                                    Contact compareContact = (Contact) match.getRecord();
+                                    if (matchedContact == null || (compareContact.CreatedDate < matchedContact.CreatedDate)) {
+                                        matchedContact = new Contact();
+                                        matchedContact = compareContact;
+                                    }
+                                }catch(TypeException e){
+
                                 }
                             }
 

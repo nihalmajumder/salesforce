@@ -14,6 +14,7 @@ public class OpportunityHelper {
     public final static String PROVISIONAL_TYPE = 'Provisional';
     public final static String CONDITIONAL_TYPE = 'Conditional';
     public final static String CONDITIONAL_AND_PROVISIONAL_TYPE = 'Conditional and Provisional';
+    static Id studentSuccessCaseRecTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('SSR - Student Success Case').getRecordTypeId();
     
     public static Boolean createdCases = false;
     
@@ -43,13 +44,13 @@ public class OpportunityHelper {
             Map<Id, Contact> contactMap = getContactMap(contactIds);
             for (Case c : newCases) {
                 Contact theContact = contactMap.get(c.ContactId);
-                if (c.Care_Area__c == 'Provisional Acceptance') {
+                if (c.Type == 'Provisional Acceptance') {
                     if (theContact != null) {
                         c.Subject = 'Provisional Acceptance - ' + theContact.Name;
                         c.Description = 'Provisional Acceptance - ' + theContact.Name;
                     }
                 }
-                if (c.Care_Area__c == 'Conditional Acceptance') {
+                if (c.Type == 'Conditional Acceptance') {
                     if (theContact != null) {
                         c.Subject = 'Conditional Acceptance - ' + theContact.Name;
                         c.Description = 'Conditional Acceptance - ' + theContact.Name;
@@ -71,12 +72,12 @@ public class OpportunityHelper {
     
     private static Case createProvisionalCase(Opportunity opp) {
         Case c = new Case(
-            /*RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Student Success Case').getRecordTypeId(), - no record types*/
+            RecordTypeId = studentSuccessCaseRecTypeId,
             ContactId = opp.Contact__c,
             /*HEDA_Program__c = opp.HEDA_Program__c, - no matching field - Luke*/
             Status = 'New',
             Priority = 'High',
-            Care_Area__c = 'Provisional Acceptance',
+            Type = 'Provisional Acceptance',
             Origin = 'Admission Process',
             Subject = 'Provisional Acceptance',
             Description = 'Provisional Acceptance',
@@ -87,19 +88,70 @@ public class OpportunityHelper {
     
     private static Case createConditionalCase(Opportunity opp) {
         Case c = new Case(
-            /* RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Student Success Case').getRecordTypeId(), - no record types*/
+             RecordTypeId = studentSuccessCaseRecTypeId,
             ContactId = opp.Contact__c,
             /*HEDA_Program__c = opp.HEDA_Program__c,  - no matching field - Luke*/
             /*Case_Manager__c = opp.OwnerId,  - no matching field - Luke*/
             Status = 'New',
             Priority = 'High',
-            Care_Area__c = 'Conditional Acceptance',
+            Type = 'Conditional Acceptance',
             Origin = 'Admission Process',
             Subject = 'Conditional Acceptance',
             Description = 'Conditional Acceptance',
             OwnerId = SSR_ADVISING_QUEUE_ID
         );
         return c;
+    }
+
+    public static List<Opportunity> getOpportunitiesForApplication(Id appId) {
+        List<Opportunity> opps = [
+            SELECT 
+                Id,
+                Application__c,
+                StageName,
+                Stage_Detail__c
+            FROM 
+                Opportunity
+            WHERE 
+                Application__c = :appId 
+        ];
+        return opps;
+    }
+
+    public static void updateOpportunityStatusAppCompleted(Id appId) {
+        List<Opportunity> opps = getOpportunitiesForApplication(appId);
+        List<Opportunity> updateList = new List<Opportunity>();
+        for (Opportunity o : opps) {
+            if (o.StageName == 'Applied' && o.Stage_Detail__c == 'App Submitted') {
+                o.Stage_Detail__c = 'App Completed';
+                updateList.add(o);
+            }
+        }
+        if (!updateList.isEmpty()) {
+            update updateList;
+        }
+    }
+
+    public static Map<String, Opportunity> getOpportunitiesForKeys(Set<String> keys) {
+        Map<String, Opportunity> oppMap = new Map<String, Opportunity>();
+        List<Opportunity> opps = [
+            SELECT 
+                Id,
+                CloseDate,
+                StageName,
+                Opportunity_Key__c,
+                AccountId
+            FROM 
+                Opportunity
+            WHERE 
+                Opportunity_Key__c IN :keys 
+        ];
+        if (!opps.isEmpty()) {
+            for (Opportunity o : opps) {
+                oppMap.put(o.Opportunity_Key__c, o);
+            }
+        }
+        return oppMap;
     }
 
 }

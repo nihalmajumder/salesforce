@@ -27,6 +27,10 @@ public class ApplicationQuestionGroup {
     public Boolean externalResponse {get;set;}
     private Integer newIndex;
     public Requirement_Response__c response{get;set;}
+    // Add Admissions Document - Todd Mitchell
+    public Admissions_Document__c admissionsDocument {get;set;}
+    // Add Admissions Document - Todd Mitchell
+    public Reference__c reference {get;set;}
     
     public String instructions {
         get {
@@ -361,6 +365,19 @@ public class ApplicationQuestionGroup {
             relatedObject = false;
             externalResponse = false;
 
+            // Add Is Reference check and code - Todd Mitchell
+            if (item.Is_Reference__c == true) {
+                if (item.Internal_Requirement_Item__c != null) {
+                    reference = ReferenceHelper.getReference(app.Id, item.Internal_Requirement_Item__c);
+                }
+                else {
+                    reference = ReferenceHelper.getReference(app.Id, item.Id);
+                    if (reference == null) {
+                        reference = ReferenceHelper.createReference(con.Id, item.Reference_Type__c, item.School_College__c);
+                    }
+                }
+            }
+
             questions = new List<ApplicationQuestion>();
             for (Question__c q:item.Questions__r) {
                 if (isAppCreate && String.isNotBlank(q.Contact_Field__c)) {
@@ -382,6 +399,11 @@ public class ApplicationQuestionGroup {
                     ApplicationQuestion aq = new ApplicationQuestion(String.isNotBlank(q.Contact_Field__c) ? (SObject)con : (SObject)app, q, qResponses.get(q.Id));
                     if (aq.application == null)
                         aq.application = app;
+                    // Set reference - Todd Mitchell
+                    if (reference != null) {
+                        aq.reference = reference;
+                        aq.populateReferenceFieldOnResponse();
+                    }
                     aq.setRequirementResponse(response);
                     questions.add(aq);
                 }
@@ -398,12 +420,27 @@ public class ApplicationQuestionGroup {
                     att.Title = title;
                 oldAttId = response.ContentDocumentLinks[0].Id;
                 oldAttLink = response.ContentDocumentLinks[0];
-                List<ContentVersion> conV = [Select Id from ContentVersion where ContentDocumentId = :oldAttLink.ContentDocumentId order by createddate desc limit 1];
+                List<ContentVersion> conV = [Select Id, ContentDocumentId from ContentVersion where ContentDocumentId = :oldAttLink.ContentDocumentId order by createddate desc limit 1];
                 if(conV.size()>0){
                     oldAttVersion = conV[0];
                 }
             }else{
                 att = new ContentVersion();
+                // Add admissions document to response
+                if (response.Admissions_Document__c == null && item.Admissions_Document_Type__c != null && oldAttVersion == null) {
+                    admissionsDocument = AdmissionsDocumentHelper.getAdmissionsDocument(con, response, item.Admissions_Document_Type__c);
+                    if (admissionsDocument != null && admissionsDocument.ContentDocumentLinks != null && admissionsDocument.ContentDocumentLinks.size()>0) {
+                        att.Title = admissionsDocument.ContentDocumentLinks[0].ContentDocument.Title;
+                        ContentDocumentLink link = new ContentDocumentLink(ContentDocumentId = admissionsDocument.ContentDocumentLinks[0].ContentDocumentId, LinkedEntityId = response.Id, ShareType = 'V', Visibility = 'AllUsers');
+                        insert link;
+                        oldAttId = link.Id;
+                        oldAttLink = link;
+                        List<ContentVersion> conV = [Select Id, ContentDocumentId from ContentVersion where ContentDocumentId = :admissionsDocument.ContentDocumentLinks[0].ContentDocumentId order by createddate desc limit 1];
+                        if(conV.size()>0){
+                            oldAttVersion = conV[0];
+                        }
+                    }
+                }
             }
         } else if (item.RecordType.DeveloperName.equals('Related_Object')) {
             
@@ -658,7 +695,38 @@ public class ApplicationQuestionGroup {
                                     system.debug(e.getMessage());
                                 }
                             }
+
+                            // Add support for reference
+                            if (reference != null) {
+                                if (String.isNotBlank(q.question.Reference_Field__c)) {
+                                    try {
+                                        reference.put(q.question.Reference_Field__c, q.resp);
+                                    } catch(Exception e) {
+                                        system.debug(e.getMessage());
+                                    }
+                                }
+                                else if (q.fieldType.equals('Address')) {
+                                    try {
+                                        reference.put('Street__c', q.response.Street__c);
+                                        reference.put('City__c', q.response.City__c);
+                                        reference.put('State__c', q.response.State__c);
+                                        reference.put('Country__c', q.response.Country__c);
+                                        reference.put('PostalCode__c', q.response.PostalCode__c);
+                                    } catch(Exception e) {
+                                        system.debug(e.getMessage());
+                                    }
+                                }
+                            }
+
                         }
+                    }
+
+                    // Set Reference object - Todd Mitchell
+                    if (response != null && item.Is_Reference__c == true && reference != null) {
+                        if (response.Reference__c == null) {
+                            response.Reference__c = reference.Id;
+                        }
+                        update reference;
                     }
                 }
                 if(documentUpload == true && additionalData!= null && additionalData.containsKey('attData')){
@@ -671,31 +739,63 @@ public class ApplicationQuestionGroup {
                         att.VersionData = EncodingUtil.base64Decode(((String)attData.get('data')).substringAfter(','));
                     }
                 }
-                if (documentUpload == true && att != null && att.Title != null && att.VersionData != null && response != null) {
+                if (documentUpload == true && response != null) {
+                    // Add admissions document if it exists - Todd Mitchell
+                    if (this.admissionsDocument != null) {
+                        response.Admissions_Document__c = admissionsDocument.Id;
+                        response.HasDocument__c = true;
+                        if (response.Document_Requirement_Fulfilled_On__c == null) {
+                            response.Document_Requirement_Fulfilled_On__c = System.NOW();
+                        }
+                    }
+                    if (att != null && att.Title != null && att.VersionData != null) {
                     
-                    att.PathOnClient = att.Title;
-                    att.firstPublishLocationId = response.Id;
-                    if(!Test.isRunningTest()){
-                        att.put('NetworkId',Network.getNetworkId());
+                        att.PathOnClient = att.Title;
+                        // Create new version of existing document - Todd Mitchell
+                        if(oldAttLink != null && oldAttLink.ContentDocumentId != null){
+                            att.ContentDocumentId = oldAttLink.ContentDocumentId;
+                        }
+                        else {
+                            att.firstPublishLocationId = response.Id;
+                        }
+                        if(!Test.isRunningTest()){
+                            att.put('NetworkId',Network.getNetworkId());
+                        }
+
+                        insert att;
+                        att.VersionData = null;
+
+                        // Add admissions doc - Todd Mitchelll
+                        if (response.Admissions_Document__c == null && item.Admissions_Document_Type__c != null) {
+                            Admissions_Document__c admissionsDocument = new Admissions_Document__c(Contact__c = con.Id, Type__c = item.Admissions_Document_Type__c, Date_Received__c = Date.today());
+                            insert admissionsDocument;
+                            ContentVersion conV = [Select Id, ContentDocumentId from ContentVersion WHERE Id = :att.Id];
+                            ContentDocumentLink link = new ContentDocumentLink(ContentDocumentId = conV.ContentDocumentId, LinkedEntityId = admissionsDocument.Id, ShareType = 'V', Visibility = 'AllUsers');
+                            insert link;
+                            response.Admissions_Document__c = admissionsDocument.Id;
+                        }
+
+                        // Don't delete old documents, make new versions - Todd Mitchell
+                        //if(oldAttLink != null && oldAttLink.ContentDocumentId != null){
+                        //    delete new ContentDocument(Id=oldAttLink.ContentDocumentId);
+                        //}
+                        response.HasDocument__c = true;
+                        if (response.Document_Requirement_Fulfilled_On__c == null)
+                            response.Document_Requirement_Fulfilled_On__c = System.NOW();
                     }
-                    insert att;
-                    att.VersionData = null;
-                    if(oldAttLink != null && oldAttLink.ContentDocumentId != null){
-                        delete new ContentDocument(Id=oldAttLink.ContentDocumentId);
+                    if (String.isNotBlank(response.ValueTextEntry__c)) {
+                        response.HasDocument__c = true;
+                        if (response.Document_Requirement_Fulfilled_On__c == null)
+                            response.Document_Requirement_Fulfilled_On__c = System.NOW();
                     }
-                    response.HasDocument__c = true;
-                    if (response.Document_Requirement_Fulfilled_On__c == null)
-                        response.Document_Requirement_Fulfilled_On__c = System.NOW();
-                }
-                if (documentUpload == true && response != null && String.isNotBlank(response.ValueTextEntry__c)) {
-                    response.HasDocument__c = true;
-                    if (response.Document_Requirement_Fulfilled_On__c == null)
-                        response.Document_Requirement_Fulfilled_On__c = System.NOW();
-                }
-                if (documentUpload == true && response != null && response.HasDocument__c == true && att.Title == null && String.isBlank(response.ValueTextEntry__c)){
-                    response.HasDocument__c = false;
-                    response.ValueTextEntry__c = null;
-                    response.Document_Requirement_Fulfilled_On__c = null;
+                    if (response.HasDocument__c == true && att.Title == null && String.isBlank(response.ValueTextEntry__c)){
+                        response.HasDocument__c = false;
+                        response.ValueTextEntry__c = null;
+                        response.Document_Requirement_Fulfilled_On__c = null;
+                    }
+                    if (item.Application_Status_Field__c != null) {
+                        app.put(item.Application_Status_Field__c, response.HasDocument__c);
+                    }
                 }
             }
         }catch(DmlException e){

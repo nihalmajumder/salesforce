@@ -30,7 +30,7 @@
                 border-radius: 4px;
             }
             .dateFormat {
-            	padding: 0 0px;
+                padding: 0 0px;
             }
             div.slds-progress{
                 padding-top: 30px;
@@ -43,10 +43,7 @@
 
             /* Tooltip text */
             .progress-tooltip .progress-tooltip-text {
-                visibility: hidden;
                 width: 120px;
-                background-color:#005290 !important;
-                color: #fff;
                 font-family:"Salesforce Sans", Arial, sans-serif;
                 font-size:10px;
                 text-align: center;
@@ -54,7 +51,7 @@
                 border-radius: 6px;
                 position: absolute;
                 z-index: 1;
-                top:-22px;
+                top:-26px;
                 left:calc(50% + 6px);
                 transform:translateX(-50%);
             }
@@ -67,6 +64,84 @@
             
             .ui-autocomplete{
                 overflow: scroll; /*Needed to make the autocomplete results scroll*/
+            }
+            .form-group {
+                margin-bottom: 30px;
+            }
+            .item.active {
+                margin-bottom: 1em;
+                margin-top: 1em;
+            }
+            #btn-lightning-desktop {
+                margin-top: 1em;
+            }
+            #btn-lightning-mobile {
+                margin-top: 1em;
+            }
+            .slds-scope .slds-button_icon, .slds-scope .slds-button--icon, .slds-scope .slds-button_icon-inverse, .slds-scope .slds-button--icon-inverse, .slds-scope .slds-button_icon-container, .slds-scope .slds-button--icon-container, .slds-scope .slds-button_icon-border, .slds-scope .slds-button--icon-border, .slds-scope .slds-button_icon-border-filled, .slds-scope .slds-button--icon-border-filled, .slds-scope .slds-button_icon-border-inverse, .slds-scope .slds-button--icon-border-inverse, .slds-scope .slds-button_icon-more, .slds-scope .slds-button--icon-more, .slds-scope .slds-button_icon-error, .slds-scope .slds-button--icon-error {
+                color: rgb(22, 50, 92);
+            }
+            .slds-scope caption {
+                text-align: center;
+            }
+            .slds-scope .slds-progress {
+                max-width: 65%;
+            }
+            .container-fluid {
+                margin-top: 2em;
+                max-width: 1400px;
+            }
+            span.input-group-addon {
+                display: none;
+            }
+            .input-group {
+                width: 100%;
+            }
+            a {
+                transition: all .15s ease-in-out;
+            }
+            a:hover, a:focus, a:active {
+                color: #0056b3 !important;
+            }
+            a.btn:hover, a.btn:focus, a.btn:active {
+                background-color: #0069d9 !important;
+                color: #ffffff !important;
+                text-decoration: none !important;
+            }
+            a.btn {
+                transition: all .15s ease-in-out;
+            }
+            .messageText {
+                text-align: center;
+            }
+            .messageText * {
+                margin: 5px;
+            }
+            .message {
+                max-width: 777px;
+                margin: auto;
+                color: #a94442;
+                background-color: #f2dede;
+                padding: 15px;
+                margin-bottom: 40px;
+                margin-top: 40px;
+                border: 3px solid #ebccd1;
+                border-radius: 4px;
+            }
+            .input-group input.form-control {
+                border-radius: 4px !important;
+            }
+            @media(max-width:991px) {
+                .slds-scope .slds-progress {
+                    max-width: 95%;
+                }
+                .progress-tooltip .progress-tooltip-text {
+                    width: 80px;
+                    top: -30px;
+                }
+                .container-fluid {
+                    margin-top: 0;
+                }
             }
         </style>
     </head>

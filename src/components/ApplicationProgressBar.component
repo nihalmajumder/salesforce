@@ -5,6 +5,7 @@
     <apex:attribute name="requirementId" description="Current requirement" type="String" required="false"/>
     <apex:attribute name="reqs" description="All rquirements which need to be completed for this application" type="RequirementWrapper[]" required="false"/>
     <apex:attribute name="progress" description="Completion percentage of the app" type="Integer" required="false"/>
+		<apex:attribute name="displayProgressBar" description="Flag to show progress bar or not" type="Boolean" />
 
 	<apex:slds />
 	<script>
@@ -46,9 +47,9 @@
 	    </div>-->
 		<apex:outputPanel rendered="{!$CurrentPage.Name == 'ApplicationRequirement' ||$CurrentPage.Name == 'ApplicationChecklist'}">
 		<div style="padding:3.5rem 1rem 0">
-		<div class="slds-progress">
+		<div class="slds-progress" style="{!IF(displayProgressBar == false, 'display:none;', '')}">
 			<ol class="slds-progress__list">
-			  	<apex:repeat value="{!reqs}" var="r">
+			  	<apex:repeat value="{!reqs}" var="r" >
 				    <li class="slds-progress__item {!IF(requirementId == r.req.Id,'',IF(r.reqStatus,'slds-is-completed','slds-has-error'))}">
 				    	<!--"{!$Site.BaseUrl}/apex/ApplicationRequirement?requirementId={!r.req.Id}&applicationId={!app.Id}&contactId={!contactId}&at={!$CurrentPage.parameters.at}"-->
 				    <button onclick="appShowLoadingSpinner();redirect('{!r.req.Id}');return false;" class="slds-button {!IF(r.reqStatus,'slds-button_icon slds-button_icon slds-progress__marker_icon','slds-button_icon slds-button_icon slds-progress__marker_icon')} slds-progress__marker " >

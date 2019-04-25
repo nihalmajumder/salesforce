@@ -10,6 +10,7 @@
             <apex:variable var="reqIndex" value="{!VALUE(reqIndex) + 1}"/>
         </apex:repeat>
     </div>
+<!-- Comment out Review Questions - Todd Mitchell
   <apex:form id="appReviewForm">
         <div class="container-fluid" >
             <div class="row" >
@@ -47,6 +48,7 @@
         </div>
         <apex:outputPanel id="themessages"><apex:pageMessages ></apex:pageMessages></apex:outputPanel>
     </apex:form>
+-->
     <script>
         jQuery(function(){
             jQuery('.appBodyReview .statePicklist select').addClass('form-control');

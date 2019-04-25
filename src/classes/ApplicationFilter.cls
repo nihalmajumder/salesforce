@@ -37,9 +37,9 @@ public class ApplicationFilter {
         if (String.isNotBlank(programCodes) && (String.isBlank(app.Intended_Program_Code__c) || !(new Set<String>(programCodes.split(';'))).contains(app.Intended_Program_Code__c)))
             return false;
         // Allow external requirements during Started status
-        if (objFields.contains('internal_requirement_item__c') && String.valueOf(obj.get('internal_requirement_item__c')) != null && app.Application_Status__c == 'Started' && ApexPages.currentPage().getParameters().containsKey('h')) {
-            return true;
-        }
+        //if (objFields.contains('internal_requirement_item__c') && String.valueOf(obj.get('internal_requirement_item__c')) != null && app.Application_Status__c == 'Started' && ApexPages.currentPage().getParameters().containsKey('h')) {
+        //    return true;
+        //}
 
         if (String.isNotBlank(applicantTypes) && (String.isBlank(app.Applicant_Type__c) || !(new Set<String>(applicantTypes.split(';'))).contains(app.Applicant_Type__c)))
             return false;
@@ -59,15 +59,15 @@ public class ApplicationFilter {
         return true;
     }
     
-    // Detect if eternal requirement during Started status
-    public static Boolean isExternalRequirement(Application__c app, Requirement_Item__c ri) {
+    // Detect if eternal requirement during Started status - Todd Mitchell
+    //public static Boolean isExternalRequirement(Application__c app, Requirement_Item__c ri) {
+    //    
+    //    if (ri.Internal_Requirement_Item__c != null && app.Application_Status__c == 'Started' && ApexPages.currentPage().getParameters().containsKey('h')) {
+    //        return true;
+    //    }
         
-        if (ri.Internal_Requirement_Item__c != null && app.Application_Status__c == 'Started' && ApexPages.currentPage().getParameters().containsKey('h')) {
-            return true;
-        }
-        
-        return false;
-    }
+    //    return false;
+    //}
 
 
 }

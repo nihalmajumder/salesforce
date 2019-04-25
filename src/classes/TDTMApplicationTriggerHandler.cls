@@ -15,7 +15,7 @@ global class TDTMApplicationTriggerHandler extends TDTMVirtualTriggerHandler {
         for (SObject o : newList) {
             Application__c app = (Application__c) o;
             Application__c oldApp = (Application__c) oldMap.get(o.Id);
-            if (app.Intended_Program__c != oldApp.Intended_Program__c) {
+            if (app.Intended_Program__c != oldApp.Intended_Program__c && oldApp.Intended_Program__c != null) {
                 apps.add(app);
             }
         }

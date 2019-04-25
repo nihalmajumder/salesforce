@@ -47,6 +47,8 @@ public class ApplicationQuestion {
     public Object resp{get;set;}
     private Requirement_Response__c reqResponse;
     public ApplicationQuestionSection section {private get; set;}
+    // Add Admissions Document - Todd Mitchell
+    public Reference__c reference {get;set;}
     
     /*******************************************************************************
     * @description Returns the list of selct options for picklists/multiselect picklists and radios. For Intended Programs we also filter out programs that should not be shown.
@@ -105,7 +107,7 @@ public class ApplicationQuestion {
                     queryString += ' WHERE ' + question.Lookup_Where_Clause__c;
                 // Additional WHERE clause needed to restricct by TERM for Program query - Todd Mitchell
                 if (application != null && question.Lookup_object__c == 'Program__c' && application.Intended_Term_of_Entry__c != null) {
-                    queryString += ' AND ID IN (SELECT Intended_Program__c FROM Intended_Program_Term__c WHERE Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\') ORDER BY ' + nameField + ' ASC';
+                    queryString += ' AND ID IN (SELECT Intended_Program__c FROM Intended_Program_Term__c WHERE Application_Status__c = \'Active\' AND Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\') ORDER BY ' + nameField + ' ASC';
                 }
                 // Additional WHERE clause needed to get locations - Todd Mitchell
                 else if (application != null && question.Lookup_object__c == 'Intended_Program_Term__c' && application.Intended_Term_of_Entry__c != null && application.Intended_Program__c != null) {
@@ -565,6 +567,18 @@ public class ApplicationQuestion {
             } catch (Exception e) {}
         }
     }
+
+    // Added to populate from reference - Todd Mitchell
+    public void populateReferenceFieldOnResponse() {
+        String name = question.Reference_Field__c;
+        if (reference != null && String.isNotBlank(name)) {
+            try {
+                if (response != null && reference.get(name) != null) {
+                    writeResponse(String.valueOf(reference.get(name)));
+                }
+            } catch (Exception e) {}
+        }
+    }
     
     public void addQuestionObject(Question__c question) {
         
@@ -733,8 +747,11 @@ public class ApplicationQuestion {
             return response.ValueURL__c;
         else if (String.isNotBlank(response.ValueTextEncrypted__c))
             return response.ValueTextEncrypted__c;
-        else if (String.isNotBlank(response.State__c) && String.isNotBlank(response.Street__c) && String.isNotBlank(response.PostalCode__c) && String.isNotBlank(response.Country__c) && String.isNotBlank(response.City__c))
-            return response.Street__c + ', ' + response.City__c + ', ' + response.State__c + ', ' + response.Country__c + ', ' + response.PostalCode__c;
+        else if (String.isNotBlank(response.Street__c) && String.isNotBlank(response.PostalCode__c) && String.isNotBlank(response.Country__c) && String.isNotBlank(response.City__c)) {
+            if (String.isNotBlank(response.State__c) || (response.Country__c != 'US' && response.Country__c != 'CA')) { // Modified for State to only be requred for US and CA - Todd Mitchell
+                return response.Street__c + ', ' + response.City__c + ', ' + response.State__c + ', ' + response.Country__c + ', ' + response.PostalCode__c;
+            }
+        }
         return null;
     }
     

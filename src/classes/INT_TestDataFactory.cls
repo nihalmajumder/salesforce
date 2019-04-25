@@ -402,7 +402,7 @@ public class INT_TestDataFactory {
     public static List<Interaction__c> createBulkTestInteractions() {
         List<Interaction__c> testInteractionsToInsert = new List<Interaction__c>();
 
-        for (Integer i = 0; i < 500; i++) {
+        for (Integer i = 0; i < 250; i++) {  // Lower size due to CPU limits (500 to 250)
             Interaction__c testInt = new Interaction__c(
                 First_Name__c = 'Test' + i,
                 Last_Name__c = 'Person' + i,

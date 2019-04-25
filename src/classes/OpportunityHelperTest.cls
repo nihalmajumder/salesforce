@@ -33,17 +33,17 @@ public class OpportunityHelperTest {
         );
         insert appControl;
 
-		Academic_Term__c at = new Academic_Term__c(Name = 'test', Activate_Application_Date__c = Date.TODAY().addDays(-2), End_Application_Date__c = Date.TODAY().addDays(2));
+        Academic_Term__c at = new Academic_Term__c(Name = 'test', Activate_Application_Date__c = Date.TODAY().addDays(-2), End_Application_Date__c = Date.TODAY().addDays(2));
         insert at;
 
-		Program__c p1 = new Program__c(Name = 'test1', Number_of_Applications_Limit__c = 'One Application', Applicant_Type__c = Program__c.Applicant_Type__c.getDescribe().getPicklistValues()[0].getValue());
+        Program__c p1 = new Program__c(Name = 'test1', Number_of_Applications_Limit__c = 'One Application', Applicant_Type__c = Program__c.Applicant_Type__c.getDescribe().getPicklistValues()[0].getValue());
         Program__c p2 = new Program__c(Name = 'test2', Number_of_Applications_Limit__c = 'One Application Per Term', Hide_Applicant_Type__c = Program__c.Hide_Applicant_Type__c.getDescribe().getPicklistValues()[0].getValue());
         Program__c p3 = new Program__c(Name = 'test3', Number_of_Applications_Limit__c = 'One Application Per Program', Hide_Student_Type__c = Program__c.Hide_Student_Type__c.getDescribe().getPicklistValues()[0].getValue());
         Program__c p4 = new Program__c(Name = 'test4', Hide_Citizenship__c = Program__c.Hide_Citizenship__c.getDescribe().getPicklistValues()[0].getValue());
         Program__c p5 = new Program__c(Name = 'test5');
         insert new List<Program__c>{p1, p2, p3, p4, p5};
 
-		Intended_Program_Term__c ipt = new Intended_Program_Term__c(Academic_Term__c = at.Id, Activate_Application_Date__c = Date.TODAY().addDays(-1), End_Application_Date__c = Date.TODAY().addDays(-1), Applicant_Type__c = Intended_Program_Term__c.Applicant_Type__c.getDescribe().getPicklistValues()[0].getValue());
+        Intended_Program_Term__c ipt = new Intended_Program_Term__c(Academic_Term__c = at.Id, Activate_Application_Date__c = Date.TODAY().addDays(-1), End_Application_Date__c = Date.TODAY().addDays(-1), Applicant_Type__c = Intended_Program_Term__c.Applicant_Type__c.getDescribe().getPicklistValues()[0].getValue());
         insert ipt;
 
         Account acc = new Account(Name='NewAcc');
@@ -53,52 +53,113 @@ public class OpportunityHelperTest {
         insert student;
 
         Application__c app = new Application__c(
-			Contact__c=student.Id,
-			School_College__c = 'Graduate',
-			Application_Status__c=Application__c.Application_Status__c.getDescribe().getPicklistValues()[0].getValue(),
-			Intended_Program__c =  p3.Id,
-			Intended_Term_of_Entry__c = at.Id);
+            Contact__c=student.Id,
+            School_College__c = 'Graduate',
+            Application_Status__c=Application__c.Application_Status__c.getDescribe().getPicklistValues()[0].getValue(),
+            Intended_Program__c =  p3.Id,
+            Intended_Term_of_Entry__c = at.Id);
         insert app;
 
-        Opportunity opp = new Opportunity(Name='Test Opp', Application__c = app.Id, 
+        Opportunity opp = new Opportunity(Name='Test Opp', Application__c = app.Id, Academic_Program__c = p3.Id, Academic_Term__c = at.Id, School_College__c = 'Graduate',
             Contact__c = app.Contact__c, StageName = 'Applied', Stage_Detail__c = 'App Submitted', CloseDate = Date.today());
-		insert opp;
+        insert opp;
     }
 
     static testMethod void testCreateCaseOnConfirmedPROVISIONALTYPE(){
         Opportunity opp = [SELECT id, StageName, School_College__c, Admission_Type__c  FROM Opportunity];
-        System.assertEquals(0, [SELECT COUNT() FROM Case WHERE OwnerId =: OpportunityHelper.SSR_ADVISING_QUEUE_ID AND Subject LIKE 'Provisional Acceptance%']);
+        System.assertEquals(0, [SELECT COUNT() FROM Case WHERE Subject LIKE 'Provisional Acceptance%']);
+        opp.StageName = 'Applied';
+        opp.Stage_Detail__c = 'App Completed';
+        update opp;
+        opp.StageName = 'Accepted';
+        opp.Stage_Detail__c = 'Accepted';
+        update opp;
         Test.startTest();
         opp.StageName = 'Confirmed';
+        opp.Stage_Detail__c = 'Registered';
         opp.Admission_Type__c = 'Provisional';
         opp.School_College__c = 'Graduate';
         update opp;
         Test.stopTest();
-        System.assertEquals(1, [SELECT COUNT() FROM Case WHERE OwnerId =: OpportunityHelper.SSR_ADVISING_QUEUE_ID AND Subject LIKE 'Provisional Acceptance%']);
+        System.assertEquals(1, [SELECT COUNT() FROM Case WHERE Subject LIKE 'Provisional Acceptance%']);
     }
 
     static testMethod void testCreateCaseOnConfirmedCONDITIONALTYPE(){
         Opportunity opp = [SELECT id, StageName, School_College__c, Admission_Type__c  FROM Opportunity];
-        System.assertEquals(0, [SELECT COUNT() FROM Case WHERE OwnerId =: OpportunityHelper.SSR_ADVISING_QUEUE_ID AND Subject LIKE 'Conditional Acceptance%']);
+        System.assertEquals(0, [SELECT COUNT() FROM Case WHERE Subject LIKE 'Conditional Acceptance%']);
+        opp.StageName = 'Applied';
+        opp.Stage_Detail__c = 'App Completed';
+        update opp;
+        opp.StageName = 'Accepted';
+        opp.Stage_Detail__c = 'Accepted';
+        update opp;
         Test.startTest();
         opp.StageName = 'Confirmed';
+        opp.Stage_Detail__c = 'Registered';
         opp.Admission_Type__c = 'Conditional';
         opp.School_College__c = 'Graduate';
         update opp;
         Test.stopTest();
-        System.assertEquals(1, [SELECT COUNT() FROM Case WHERE OwnerId =: OpportunityHelper.SSR_ADVISING_QUEUE_ID AND Subject LIKE 'Conditional Acceptance%']);
+        System.debug([SELECT COUNT() FROM Case]);
+        System.assertEquals(1, [SELECT COUNT() FROM Case WHERE Subject LIKE 'Conditional Acceptance%']);
     }
 
     static testMethod void testCreateCaseOnConfirmedPROVISIONALANDCONDITIONALTYPE(){
         Opportunity opp = [SELECT id, StageName, School_College__c, Admission_Type__c  FROM Opportunity];
-        System.assertEquals(0, [SELECT COUNT() FROM Case WHERE OwnerId =: OpportunityHelper.SSR_ADVISING_QUEUE_ID AND (Subject LIKE 'Conditional Acceptance%' OR Subject LIKE 'Provisional Acceptance%')]);
+        System.assertEquals(0, [SELECT COUNT() FROM Case WHERE  (Subject LIKE 'Conditional Acceptance%' OR Subject LIKE 'Provisional Acceptance%')]);
+        opp.StageName = 'Applied';
+        opp.Stage_Detail__c = 'App Completed';
+        update opp;
+        opp.StageName = 'Accepted';
+        opp.Stage_Detail__c = 'Accepted';
+        update opp;
         Test.startTest();
         opp.StageName = 'Confirmed';
+        opp.Stage_Detail__c = 'Registered';
         opp.Admission_Type__c = 'Conditional and Provisional';
         opp.School_College__c = 'Graduate';
         update opp;
         Test.stopTest();
-        System.assertEquals(2, [SELECT COUNT() FROM Case WHERE OwnerId =: OpportunityHelper.SSR_ADVISING_QUEUE_ID AND (Subject LIKE 'Conditional Acceptance%' OR Subject LIKE 'Provisional Acceptance%')]);
+        System.assertEquals(2, [SELECT COUNT() FROM Case WHERE (Subject LIKE 'Conditional Acceptance%' OR Subject LIKE 'Provisional Acceptance%')]);
+    }
+
+    static testMethod void getOpportunitiesForApplicationTest() {
+        Application__c app = [SELECT Id FROM Application__c];
+
+        List<Opportunity> opps = null;
+        Test.startTest();
+        opps = OpportunityHelper.getOpportunitiesForApplication(app.Id);
+        Test.stopTest();
+
+        System.assert(opps != null);
+        System.assertEquals(1, opps.size());
+    }
+
+    static testMethod void getOpportunitiesForKeysTest() {
+        Opportunity opp = [SELECT id, StageName, Stage_Detail__c, School_College__c, Admission_Type__c, Opportunity_Key__c  FROM Opportunity];
+
+        Map<String, Opportunity> opps = null;
+        Test.startTest();
+        opps = OpportunityHelper.getOpportunitiesForKeys(new Set<String>{opp.Opportunity_Key__c});
+        Test.stopTest();
+
+        System.assert(opps != null);
+        System.assertEquals(1, opps.size());
+        System.assert(opps.get(opp.Opportunity_Key__c) != null);
+    }
+
+    static testMethod void updateOpportunityStatusAppCompletedTest(){
+        Opportunity opp = [SELECT id, StageName, Stage_Detail__c, School_College__c, Admission_Type__c  FROM Opportunity];
+        Application__c app = [SELECT Id FROM Application__c];
+
+        Test.startTest();
+        OpportunityHelper.updateOpportunityStatusAppCompleted(app.Id);
+        Test.stopTest();
+
+        Opportunity updatedOpp = [SELECT id, StageName, Stage_Detail__c, School_College__c, Admission_Type__c  FROM Opportunity];
+        System.assert(updatedOpp != null);
+        System.assertEquals('Applied', updatedOpp.StageName);
+        System.assertEquals('App Completed', updatedOpp.Stage_Detail__c);
     }
     
 }

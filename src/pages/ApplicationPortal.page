@@ -1,56 +1,111 @@
 <apex:page controller="ApplicationPortal" showHeader="false" standardStylesheets="false" docType="html-5.0" >
+    <style>
+        /* display mobile view - Luke Vang*/
+        @media only screen and (max-width: 720px){
+            .desktop_view{display : none};
+        }
+        @media only screen and (min-width: 720px){
+            .mobile_view{display:none;}
+        }
+        .portal-header {
+            font-weight: bold;
+        }
+    </style>
     <c:ApplicationHead />
     <c:ApplicationBody title="Application Portal" appControl="{!appControl}">
         <apex:form id="theForm" >
             <apex:pageMessages />
-            <div class="row" >
+            
+            <div class="row desktop_view" >
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
-                    <div class="row" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >
-                        <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')}" >
-                            Application Number
+                    <div class="row" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;margin-bottom:.5em;" >
+                        <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
+                        <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')} portal-text" >
+                            <span class="portal-header">Application</span>
                         </div>
                         <apex:outputPanel rendered="{!!appControl.Hide_Term_Program__c}" >
-                            <div class="col-lg-4 col-lg-offset-1 col-xs-4 col-xs-offset-1" >
-                                Intended Program
+                            <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
+                            <div class="col-lg-4 col-xs-4 portal-text" >
+                                <span class="portal-header">Program</span>
                             </div>
-                            <div class="col-xs-3" >
-                                Intended Term of Enrollment
+                            <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
+                            <div class="col-xs-4 portal-text" >
+                                <span class="portal-header">Term</span>
                             </div>
                         </apex:outputPanel>
-                        <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')}" >
-                            Application Status
+                        <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
+                        <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')} portal-text" >
+                           <span class="portal-header">Status</span>
                         </div>
                     </div>
                     <apex:repeat value="{!apps}" var="a" >
                         <div class="row" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >
-                            <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')}" >
+                            <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
+                            <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')} portal-text" >
                                 <a target="_self" href="{!$Site.BaseUrl}/apex/ApplicationChecklist?applicationId={!a.Id}&contactId={!contactId}" style="color:#{!appControl.Link_Color__c}" >{!a.Name}</a>
                             </div>
                             <apex:outputPanel rendered="{!!appControl.Hide_Term_Program__c}" >
-                                <div class="col-lg-4 col-lg-offset-1 col-xs-4 col-xs-offset-1" >
-                                   {!IF(ISBLANK(a.Intended_Program__r.Program_Name_on_Application__c), a.Intended_Program__r.Name, a.Intended_Program__r.Program_Name_on_Application__c)}
+                                <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
+                                <div class="col-lg-4 col-xs-4 portal-text" >
+                                    {!IF(ISBLANK(a.Intended_Program__r.Program_Name_on_Application__c), a.Intended_Program__r.Name, a.Intended_Program__r.Program_Name_on_Application__c)}
                                 </div>
-                                <div class="col-xs-3" >
+                                <div class="col-xs-4 portal-text" >
                                     {!a.Intended_Term_of_Entry__r.Name}
                                 </div>
                             </apex:outputPanel>
-                            <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')}" >
+                            <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
+                            <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')} portal-text" >
                                 {!a.Application_Status__c}
                             </div>
                         </div>
                     </apex:repeat>
                 </div>
             </div>
-            <div class="row" >
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
-                    <hr style="border:solid #{!appControl.Line_Color__c};border-width:1px 0 0;clear:both;margin:1.25rem 0 1.1875rem;height:0;" />
-                </div>
+            
+            <!-- mobile view - Luke Vang-->
+            <div class="row mobile_view" >
+                <apex:repeat value="{!apps}" var="a" >
+                    <div class="row" style="padding: 20px; font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >
+                        <div class="col-xs-12" >
+                            <span class="portal-header">Application:</span>
+                            <span>
+                                <a target="_self" href="{!$Site.BaseUrl}/apex/ApplicationChecklist?applicationId={!a.Id}&contactId={!contactId}" style="color:#{!appControl.Link_Color__c}" >{!a.Name}</a>
+                            </span>
+                        </div>
+                        <div class="col-lg-12 col-xs-12" >
+                            <span class="portal-header">Program:</span>
+                            <span>
+                                {!IF(ISBLANK(a.Intended_Program__r.Program_Name_on_Application__c), a.Intended_Program__r.Name, a.Intended_Program__r.Program_Name_on_Application__c)}
+                            </span>
+                        </div>
+                        <apex:outputPanel rendered="{!!appControl.Hide_Term_Program__c}" >
+                            <div class="col-xs-12" >
+                                <span class="portal-header">Term:</span>
+                            <span>
+                                {!a.Intended_Term_of_Entry__r.Name}
+                            </span>
+                            </div>
+                        </apex:outputPanel>
+                        <div class="col-xs-12" >
+                            <span class="portal-header">Status:</span>
+                            <span>
+                                {!a.Application_Status__c}
+                            </span>
+                        </div>
+                    </div>
+                </apex:repeat>
             </div>
-            <div class="row" >
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
-                    <a class="btn btn-lg" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" href="{!$Site.BaseUrl}/apex/ApplicationCreate?contactId={!contactId}" >New Application</a>
-                </div>
+            <!-- end mobile view -->
+        <div class="row" style="margin-bottom:1em;" >
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
+                <hr style="border:solid #{!appControl.Line_Color__c};border-width:1px 0 0;clear:both;margin:1.25rem 0 1.1875rem;height:0;" />
             </div>
-        </apex:form>
-    </c:ApplicationBody>
+        </div>
+        <div class="row" >
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
+                <a id="new_app_btn" class="btn btn-lg" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" href="{!$Site.BaseUrl}/apex/ApplicationCreate?contactId={!contactId}" >New Application</a>
+            </div>
+        </div>
+    </apex:form>
+</c:ApplicationBody>
 </apex:page>

@@ -36,19 +36,26 @@
         });
     </script>
     <style>
-    	label {
-        	font-family: sans-serif;
-        	color:#{!appControl.Text_Color__c};
-        	font-weight:400;
-        	font-size:18px;
+        label {
+            font-family: sans-serif;
+            color:#{!appControl.Text_Color__c};
+            font-weight:400;
+            font-size:18px;
         }
         
+        /* adding to fix wrapping for small screens - Luke Vang */
+        @media only screen and (max-width: 410px){
+            label{
+                display: inline;
+            }
+        }
+
         .formControl {
-        	font-family: sans-serif;
-        	color:#{!appControl.Text_Color__c};
-        	font-weight:400;
-        	font-size:14px;
-        	height:36px;
+            font-family: sans-serif;
+            color:#{!appControl.Text_Color__c};
+            font-weight:400;
+            font-size:14px;
+            height:36px;
         }
 
         .required{
@@ -64,6 +71,7 @@
         <apex:param name="p1" assignTo="{!group.newReferenceObjectSelectedWrapper}" value=""/>
         <apex:param name="p2" assignTo="{!group.newReferenceObjectSelectedWrapperName}" value=""/>
     </apex:actionFunction>
+  
     <apex:attribute name="group" description="The ApplicationQuestionGroup for this section" type="ApplicationQuestionGroup" required="true" />
     <apex:attribute name="preventUpdates" description="" type="Boolean" default="false" required="false" />
     <apex:attribute name="appControl" description="ApplicationSettings" type="Application_Control__c" required="true" />
@@ -82,8 +90,8 @@
         <apex:outputPanel rendered="{!group.isInternal && (group.response != null && group.response.Fulfilled_On__c != null)}" >
             <p>
                 <apex:outputText value="Completed on {0, Date}.">
-					<apex:param value="{!group.response.Fulfilled_On__c}" />
-				</apex:outputText>
+                    <apex:param value="{!group.response.Fulfilled_On__c}" />
+                </apex:outputText>
             </p>
             <br />
         </apex:outputPanel>
@@ -102,7 +110,7 @@
                         <style>
                             .statePicklist select {
                                 font-family: 'Open Sans', sans-serif;
-                                color: {!appControl.Text_Color__c};
+                                color: #{!appControl.Text_Color__c};
                                 font-weight: 400;
                                 font-size: 14px;
                                 display: block;
@@ -182,10 +190,8 @@
                </script>
                     <div class="form-group" >
                         <label for="CurrencyField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                            <apex:inputField id="CurrencyField" value="{!question.response.ValueCurrency__c}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" rendered="{!question.response != null}"/>
-                        </div>                        <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
+                        <apex:inputField id="CurrencyField" value="{!question.response.ValueCurrency__c}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" rendered="{!question.response != null}"/>
+                        <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Date'}" >
@@ -197,29 +203,23 @@
                     </style>
                     <div class="form-group" >
                         <label for="DateField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                            <apex:input id="DateField" type="auto" value="{!question.dateValue}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:input id="DateField" type="auto" value="{!question.dateValue}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'DateTime'}" >
                     <div class="form-group" >
                         <label for="dateTimeField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                            <apex:input id="dateTimeField" type="auto" value="{!question.datetimeValue}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:input id="dateTimeField" type="auto" value="{!question.datetimeValue}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Decimal' || question.fieldType == 'Integer' || question.fieldType == 'Number'}" >
-                	<script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=numberField]').attr('placeholder','{!question.placeholder}');
-                    	});
+                    <script>
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=numberField]').attr('placeholder','{!question.placeholder}');
+                        });
                    </script>
                     <div class="form-group" >
                         <label for="numberField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
@@ -227,19 +227,19 @@
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
-                <apex:outputPanel rendered="{!question.fieldType == 'Email'}" >
+               <apex:outputPanel rendered="{!question.fieldType == 'Email'}" > 
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=field]').prop('placeholder','{!IF(question.placeholder == null || question.placeholder == '', 'name@example.com', question.placeholder)}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=field]').prop('placeholder','{!IF(question.placeholder == null || question.placeholder == '', 'name@example.com', question.placeholder)}');
+                        });
                    </script>
                     <div class="form-group" >
                         <label for="field" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
                         <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                             <apex:inputField id="field" value="{!question.response.ValueEmail__c}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                            <apex:commandLink styleClass="btn-lightning" style="width:1%;display:table-cell;color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="Send Reminder" action="{!questionSendReminder}" onclick="appShowLoadingSpinner();" oncomplete="appHideLoadingSpinner();" reRender="none" rendered="{!!preventUpdates && question.isEditable && question.question.External_Email_Field__c == true}"/>
+                            <!-- added check for application status, only display send reminder button when application is submitted - Luke Vang  -->
+                            <apex:commandLink styleClass="btn-lightning" style="width:1%;display:table-cell;color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="Send Reminder" action="{!questionSendReminder}" onclick="appShowLoadingSpinner();" oncomplete="appHideLoadingSpinner();" reRender="none" rendered="{!!preventUpdates && question.isEditable && question.question.External_Email_Field__c == true && group.app.Application_Status__c == 'Submitted'}"/>
                         </div>
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
@@ -248,7 +248,7 @@
                     <script>
                         var jq = jQuery.noConflict();
                         jq(document).ready(function() {
-                        	jq('input[id$=textEncryptedField]').attr('placeholder','{!question.placeholder}');
+                            jq('input[id$=textEncryptedField]').attr('placeholder','{!question.placeholder}');
                         });
                    </script>
                     <div class="form-group" >
@@ -297,10 +297,7 @@
                     </script>
                     <div class="form-group" >
                         <label for="phoneField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                            <apex:inputField id="phoneField" value="{!question.response.ValuePhone__c}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:inputField id="phoneField" value="{!question.response.ValuePhone__c}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
@@ -402,7 +399,7 @@
                             <label for="urlField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
                             <apex:inputField id="urlField" value="{!question.response.ValueURL__c}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                                 <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
-                     	</div>
+                        </div>
                     </apex:outputPanel>
                     </apex:outputPanel>
                     </div>
@@ -441,7 +438,7 @@
     
                 table td {
                     display: block;
-                	border: none;
+                    border: none;
                 }
     
                 /* change style from table td tr to a data label class and removed content attribute in style - Luke Vang */
@@ -451,7 +448,7 @@
                     width: 40%; /* change from 30 - 40, for text wrapping - Luke Vang*/
                     margin-right: 10px;
                 }
-    		</style>
+            </style>
     <div class="container-fluid" >
         <div class="row" >
             <div class="col-lg-12" style="border-bottom: 2px solid #ddd" >
@@ -494,7 +491,7 @@
                         <style>
                             .statePicklist select {
                                 font-family: 'Open Sans', sans-serif;
-                                color: {!appControl.Text_Color__c};
+                                color: #{!appControl.Text_Color__c};
                                 font-weight: 400;
                                 font-size: 14px;
                                 display: block;
@@ -574,10 +571,7 @@
                 });
                </script>
                     <div class="form-group" >
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                            <apex:inputField id="CurrencyField1" value="{!rr.obj[question.question.Related_Object_Field__c]}"  styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" rendered="{!NOT(ISBLANK(question.question.Related_Object_Field__c)) && NOT(ISBLANK(rr.obj))}" />
-                        </div>
+                        <apex:inputField id="CurrencyField1" value="{!rr.obj[question.question.Related_Object_Field__c]}"  styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" rendered="{!NOT(ISBLANK(question.question.Related_Object_Field__c)) && NOT(ISBLANK(rr.obj))}" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
@@ -589,29 +583,23 @@
                     }
                     </style>
                     <div class="form-group" >
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                            <apex:inputField id="DateField1" type="auto" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:inputField id="DateField1" type="auto" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'DateTime'}" >
                     <div class="form-group" >
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                            <apex:inputField id="dateTimeField1" type="auto" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:inputField id="dateTimeField1" type="auto" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Decimal' || question.fieldType == 'Integer' || question.fieldType == 'Number'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function(){
-                        	jq('input[id$=numberField1]').attr('placeholder','{!question.placeholder}');
-                        	jq('input[id$=numberField1]').attr('maxlength','{!question.length}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function(){
+                            jq('input[id$=numberField1]').attr('placeholder','{!question.placeholder}');
+                            jq('input[id$=numberField1]').attr('maxlength','{!question.length}');
+                        });
                    </script>
                     <div class="form-group" >
                         <apex:inputField type="auto" id="numberField1" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
@@ -619,27 +607,23 @@
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Email'}" >
-                	<script>
-                		var jq = jQuery.noConflict();
-                		jq(document).ready(function(){
-                    		jq('input[id$=field1]').prop('placeholder','{!IF(question.placeholder == null || question.placeholder == '', 'name@example.com', question.placeholder)}');
-                		});
-               		</script>
+                    <script>
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function(){
+                            jq('input[id$=field1]').prop('placeholder','{!IF(question.placeholder == null || question.placeholder == '', 'name@example.com', question.placeholder)}');
+                        });
+                    </script>
                     <div class="form-group" >
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <apex:inputField id="field1" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                            <apex:commandLink styleClass="btn-lightning" style="width:1%;display:table-cell;color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="Send Reminder" action="{!questionSendReminder}" onclick="appShowLoadingSpinner();" oncomplete="appHideLoadingSpinner();" reRender="none" rendered="{!!preventUpdates && question.isEditable && question.question.External_Email_Field__c == true}"/>
-                        </div>
+                        <apex:inputField id="field1" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'TextEncrypted'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                    		jq('input[id$=textEncryptedField1]').attr('placeholder','{!question.placeholder}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=textEncryptedField1]').attr('placeholder','{!question.placeholder}');
+                        });
                    </script>
                     <div class="form-group" >
                         <apex:inputSecret redisplay="true" id="textEncryptedField1" value="{!rr.obj[question.question.Related_Object_Field__c]}" maxlength="{!if(question.length == null || question.length > 175, 175, question.length)}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#676767;font-weight:400;font-size:14px;height:36px;"/>
@@ -652,10 +636,10 @@
                             font-weight:400;
                         }
                         .selectCheckboxes tr {
-                        	border-bottom: 0px;
+                            border-bottom: 0px;
                         }
                         .selectCheckboxes td {
-                        	border-bottom: 0px;
+                            border-bottom: 0px;
                         }
                     </style>
                     <div class="form-group" >
@@ -667,12 +651,12 @@
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Percent'}" >
-                	<script>
-                		var jq = jQuery.noConflict();
-                		jq(document).ready(function(){
-                    		jq('input[id$=percentField1]').attr('placeholder','{!IF(question.placeholder == null || question.placeholder == '', '99.00', question.placeholder)}');
-                		});
-               		</script>
+                    <script>
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function(){
+                            jq('input[id$=percentField1]').attr('placeholder','{!IF(question.placeholder == null || question.placeholder == '', '99.00', question.placeholder)}');
+                        });
+                    </script>
                     <div class="form-group" >
                         <div class="input-group" >
                             <span class="input-group-addon">%</span>
@@ -689,10 +673,7 @@
                         });
                     </script>
                     <div class="form-group" >
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                            <apex:inputField id="phoneField1" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:inputField id="phoneField1" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
@@ -746,11 +727,11 @@
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Text'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=textField1]').attr('placeholder','{!question.placeholder}');
-                        	jq('input[id$=textField1]').attr('maxlength','{!if(question.length == null || question.length > 255, 255, question.length)}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=textField1]').attr('placeholder','{!question.placeholder}');
+                            jq('input[id$=textField1]').attr('maxlength','{!if(question.length == null || question.length > 255, 255, question.length)}');
+                        });
                     </script>
                     <div class="form-group" >
                         <apex:inputField type="auto" id="textField1" value="{!rr.obj[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
@@ -798,9 +779,9 @@
             </apex:outputPanel>
             </div>
             </div>
-            						</td>
-            					</apex:outputPanel>
-            				</apex:repeat>
+                                    </td>
+                                </apex:outputPanel>
+                            </apex:repeat>
                             <apex:outputPanel layout="none" rendered="{!ISPICKVAL($User.UserType,'Standard')}">
                                 <td class="ui-front">
                                     <apex:outputLink value="/{!rr.att.ContentDocumentId}" rendered="{!rr.att != null}" target="_blank">View
@@ -837,7 +818,7 @@
                     </apex:repeat>
                 </tbody>
             </table>
-        	</apex:outputPanel>
+            </apex:outputPanel>
             <div class="col-lg-8 col-md-10 col-xs-12" >
                 <apex:commandLink styleClass="btn" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="New Record" action="{!group.newRow}" reRender="theTable" rendered="{!!preventUpdates && group.isEditable && (group.item.Maximum_Number_of_Children__c == null || group.relatedObjects.size < group.item.Maximum_Number_of_Children__c)}" oncomplete="addRequiredStyling();"/>
             </div>
@@ -932,7 +913,7 @@
                         <style>
                             .statePicklist select {
                                 font-family: 'Open Sans', sans-serif;
-                                color: {!appControl.Text_Color__c};
+                                color: #{!appControl.Text_Color__c};
                                 font-weight: 400;
                                 font-size: 14px;
                                 display: block;
@@ -1007,17 +988,14 @@
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Currency'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=CurrencyField1]').attr('placeholder','{!IF(question.placeholder == null || question.placeholder == '', '100.00', question.placeholder)}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=CurrencyField1]').attr('placeholder','{!IF(question.placeholder == null || question.placeholder == '', '100.00', question.placeholder)}');
+                        });
                     </script>
                     <div class="form-group" >
                         <label for="CurrencyField" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                            <apex:inputField id="CurrencyField1" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}"  styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" rendered="{!NOT(ISBLANK(question.question.Related_Object_Field__c)) && NOT(ISBLANK(group.newReferenceObject))}" />
-                        </div>
+                        <apex:inputField id="CurrencyField1" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}"  styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" rendered="{!NOT(ISBLANK(question.question.Related_Object_Field__c)) && NOT(ISBLANK(group.newReferenceObject))}" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
@@ -1030,30 +1008,24 @@
                     </style>
                     <div class="form-group" >
                         <label for="DateField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                            <apex:inputField id="DateField1" type="auto" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:inputField id="DateField1" type="auto" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'DateTime'}" >
                     <div class="form-group" >
                         <label for="dateTimeField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                            <apex:inputField id="dateTimeField1" type="auto" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:inputField id="dateTimeField1" type="auto" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Decimal' || question.fieldType == 'Integer' || question.fieldType == 'Number'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=numberField1]').attr('placeholder','{{!question.placeholder}}');
-                        	jq('input[id$=numberField1]').attr('maxlength','{!question.length}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=numberField1]').attr('placeholder','{{!question.placeholder}}');
+                            jq('input[id$=numberField1]').attr('maxlength','{!question.length}');
+                        });
                     </script>
                     <div class="form-group" >
                         <label for="numberField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
@@ -1063,27 +1035,23 @@
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Email'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=field1]').prop('placeholder','{!IF(question.placeholder == null || question.placeholder == '', 'name@example.com', question.placeholder)}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=field1]').prop('placeholder','{!IF(question.placeholder == null || question.placeholder == '', 'name@example.com', question.placeholder)}');
+                        });
                     </script>
                     <div class="form-group" >
                         <label for="field1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <apex:inputField id="field1" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                            <apex:commandLink styleClass="btn-lightning" style="width:1%;display:table-cell;color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="Send Reminder" action="{!questionSendReminder}" onclick="appShowLoadingSpinner();" oncomplete="appHideLoadingSpinner();" reRender="none" rendered="{!!preventUpdates && question.isEditable && question.question.External_Email_Field__c == true}"/>
-                        </div>
+                        <apex:inputField id="field1" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'TextEncrypted'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=textEncryptedField1]').attr('placeholder','{!question.placeholder}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=textEncryptedField1]').attr('placeholder','{!question.placeholder}');
+                        });
                     </script>
                     <div class="form-group" >
                         <label for="textEncryptedField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
@@ -1097,7 +1065,7 @@
                             font-weight:400;
                         }
                         .selectCheckboxes tr {
-                        	border-bottom:0px;
+                            border-bottom:0px;
                         }
                     </style>
                     <div class="form-group" >
@@ -1111,10 +1079,10 @@
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'Percent'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=percentField1]').attr('placeholder','{!IF(question.placeholder == null || question.placeholder == '', '99.00', question.placeholder)}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=percentField1]').attr('placeholder','{!IF(question.placeholder == null || question.placeholder == '', '99.00', question.placeholder)}');
+                        });
                     </script>
                     <div class="form-group" >
                         <label for="percentField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
@@ -1129,15 +1097,12 @@
                     <script>
                         var jq = jQuery.noConflict();
                         jq(document).ready(fucntion() {
-                        	jq('input[id$=phoneField1]').attr('placeholder','{!IF(question.placeholder == null || question.placeholder == '', '(123) 456-7890', question.placeholder)}');
+                            jq('input[id$=phoneField1]').attr('placeholder','{!IF(question.placeholder == null || question.placeholder == '', '(123) 456-7890', question.placeholder)}');
                         });
                     </script>
                     <div class="form-group" >
                         <label for="phoneField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                            <apex:inputField id="phoneField1" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
-                        </div>
+                        <apex:inputField id="phoneField1" value="{!group.newReferenceObject[question.question.Related_Object_Field__c]}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>
                 </apex:outputPanel>
@@ -1194,11 +1159,11 @@
                 </apex:outputPanel>
                  <apex:outputPanel rendered="{!question.fieldType == 'Text'}" >
                      <script>
-                     	var jq = jQuery.noConflict();
-                     	jq(document).ready(function() {
-                         	jq('input[id$=textField1]').attr('placeholder','{!question.placeholder}');
-                         	jq('input[id$=textField1]').attr('maxlength','{!if(question.length == null || question.length > 255, 255, question.length)}');
-                     	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=textField1]').attr('placeholder','{!question.placeholder}');
+                            jq('input[id$=textField1]').attr('maxlength','{!if(question.length == null || question.length > 255, 255, question.length)}');
+                        });
                      </script>
                     <div class="form-group" >
                         <label for="textField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
@@ -1208,11 +1173,11 @@
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'TextArea'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() {
-                        	jq('input[id$=textAreaField1]').attr('placeholder','{!question.placeholder}');
-                        	jq('input[id$=textAreaField1]').attr('maxlength','{!if(question.length == null || question.length > 255, 255, question.length)}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() {
+                            jq('input[id$=textAreaField1]').attr('placeholder','{!question.placeholder}');
+                            jq('input[id$=textAreaField1]').attr('maxlength','{!if(question.length == null || question.length > 255, 255, question.length)}');
+                        });
                     </script>
                     <div class="form-group" >
                         <label for="textAreaField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>
@@ -1222,11 +1187,11 @@
                 </apex:outputPanel>
                 <apex:outputPanel rendered="{!question.fieldType == 'LongTextArea'}" >
                     <script>
-                    	var jq = jQuery.noConflict();
-                    	jq(document).ready(function() { 
-                        	jq('input[id$=textAreaField1]').attr('placeholder','{!question.placeholder}');
-                        	jq('input[id$=textAreaField1]').attr('maxlength','{!if(question.length == null || question.length > 32768, 32768, question.length)}');
-                    	});
+                        var jq = jQuery.noConflict();
+                        jq(document).ready(function() { 
+                            jq('input[id$=textAreaField1]').attr('placeholder','{!question.placeholder}');
+                            jq('input[id$=textAreaField1]').attr('maxlength','{!if(question.length == null || question.length > 32768, 32768, question.length)}');
+                        });
                     </script>
                     <div class="form-group" >
                         <label for="longTextAreaField1" >{!question.label}{!if(CONTAINS(question.question.Required__c,question.application.Application_Status__c),'*','')}</label>

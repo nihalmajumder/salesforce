@@ -215,9 +215,39 @@ public class ApplicationHelperTest {
 			 if(app.Contact__r.MailingStateCode == 'MN'){
                 System.assertEquals('Resident',  app.Residency__c);
             }else{
-                 System.assertEquals('Non-Resident',  app.Residency__c);
+                System.assertEquals('Non-Resident',  app.Residency__c);
             }
-
-		}
-	}
+                
+            }
+    }
+    
+    static testMethod void testSendReferenceRemail(){
+        Application__c app = [SELECT id FROM Application__c WHERE School_College__c = :'Seminary' LIMIT 1];
+        Requirement__c requirement = new Requirement__c();
+        requirement.Application_Control__c = [SELECT id FROM Application_Control__c].Id;
+        requirement.Name = 'testing';
+        insert requirement;
+        
+        Requirement_Item__c item = new Requirement_Item__c();
+        item.Name = 'test';
+        item.Requirement__c = requirement.Id;
+        insert item;
+        
+        Requirement_Response__c response = new Requirement_Response__c();
+        response.Application__c = app.Id;
+        response.External_Email__c = 'example@example.com';
+        response.Hashcode__c = 'hashcode';
+        response.Reference_First_Name__c = 'test';
+        response.Reference_Last_Name__c = 'test';
+        response.Reference_Access_Rights__c = true;
+        response.Requirement_Item__c  = item.Id;
+        response.Send_Reference__c = false;
+        
+        insert response;
+        
+        test.startTest();
+        ApplicationHelper.sendReferenceRemail(app.Id);
+        test.stopTest();
+        System.assert([SELECT Send_Reference__c FROM Requirement_Response__c WHERE Application__c =: app.Id ].Send_Reference__c);
+    }
 }

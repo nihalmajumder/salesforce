@@ -9,7 +9,7 @@ public class INT_InteractionMappingService {
 
     public INT_InteractionMappingService() {
         for (Interaction_Mapping__c mapping : [
-            SELECT Skip_Mapping__c, Insert_Null__c, Target_Object_API_Name__c, Interaction_Source_Field_API_Name__c, Target_Field_API_Name__c
+            SELECT Skip_Mapping__c, Insert_Null__c, Target_Object_API_Name__c, Interaction_Source_Field_API_Name__c, Target_Field_API_Name__c, Valid_Status__c
             FROM Interaction_Mapping__c
             WHERE Active__c = true
         ]) {
@@ -67,4 +67,30 @@ public class INT_InteractionMappingService {
 
         return theObject;
     }
+
+    // Added to handle specify processing for Opportunity - Todd Mitchell
+    public Opportunity applyDataToOpportunity(Interaction__c interaction, Opportunity theObject) {
+        String objectName = theObject.getSObjectType().getDescribe().getName();
+
+        if (intMappingMap.containsKey(objectName)) {
+            for (Interaction_Mapping__c mapping : intMappingMap.get(objectName)) {
+                // Only copy the field value if the Interaction__c field value is different than the Object field value.
+                if (isSkipOrPreserveSourceField(mapping.Id, interaction.Interaction_Source__c, skipMappingMap)) {
+                    continue; // Prevent mapping of field if it's a skip field or a preserve target source
+                } 
+                else if (mapping.Insert_Null__c
+                    || (interaction.get(mapping.Interaction_Source_Field_API_Name__c) != null
+                        && interaction.get(mapping.Interaction_Source_Field_API_Name__c) != '')
+                ) {
+                    if (mapping.Valid_Status__c == null || (new Set<String>(mapping.Valid_Status__c.split(';'))).contains(theObject.StageName)) {
+                        theObject.put(mapping.Target_Field_API_Name__c, interaction.get(mapping.Interaction_Source_Field_API_Name__c));
+                    }
+                }
+
+            }
+        }
+
+        return theObject;
+    }
+
 }

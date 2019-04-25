@@ -1,6 +1,7 @@
 <apex:page controller="ApplicationRequirement" extensions="ApplicationProgressBar" action="{!init}" showHeader="false" standardStylesheets="false" docType="html-5.0" >
    <script>
        
+       
        //map holds possible special characters returned from function - Luke
         var entityMap = {
              "&amp;" : "&",
@@ -15,6 +16,7 @@
         
         //loops through map of entities if any of the special characters are found convert them - Luke
         function unescapeHtml (string) {
+            
             for(var key in entityMap){
                 if(string.indexOf(key) > -1){
                     string = string.replace(key, entityMap[key]);
@@ -48,12 +50,29 @@
             );
         }
     </script>
+    <style>
+       /* hide nav for mobile - Luke Vang */
+        @media only screen and (min-width: 767px){
+            #btn-lightning-mobile{
+                display:none;
+            }
+        }
+
+        /* hide nav for desktop - Luke Vang */
+            @media only screen and (max-width: 767px){
+            #btn-lightning-desktop{
+                display:none;
+            }
+        }
+
+    </style>
     <c:ApplicationHead />
     <c:ApplicationBody title="{!if(isInvalid,'An Error has occured',title)}" subtitle="{!if(isInvalid,'An error has occured and you do not have access to this page.','')}" appControl="{!appControl}">
        <c:ApplicationForm section="{!section}" rendered="{!!showSuccess && !isInvalid}" appControl="{!appControl}" nextID="{!nextReqId}" prevId="{!prevReqId}"
         requirementId="{!requirementId}"
         reqs="{!reqs}"
-        progress="{!progress}"> 
+        progress="{!progress}"
+        displayProgressBar="{!displayProgressBar}"> 
             <div class="row" >
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
                     <apex:actionFunction name="saveWithDocs" action="{!submit}" reRender="formPageMessages" oncomplete="appHideLoadingSpinner();">
@@ -68,14 +87,30 @@
                             	}
                             }
                         </style>
-                        <div class="col-xs-3 col-md-2" ><apex:commandLink onclick="redirect('back');" styleClass="btn btn-lg leftNav btn-lightning"  reRender="none" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; float:left; width:100%; margin: 10px;" value="Previous" /></div>
-                        <div class="col-xs-6 col-md-4 col-md-offset-2">
-                            <center>
-                                <apex:commandLink styleClass="btn btn-lg btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; width:100%; margin: 10px;" value="Back to Checklist" reRender="none" onclick="performDocUploadSave('checklist');appShowLoadingSpinner();" rendered="{!!isExternalUser}" />
-                                <apex:commandLink styleClass="btn btn-lg btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; width:100%; margin: 10px;" value="Save" reRender="none" onclick="performDocUploadSave('');appShowLoadingSpinner();" rendered="{!isExternalUser}" />
-                            </center>
+                        <!-- nav layout for desktop - Luke -->
+                        <div id="btn-lightning-desktop">
+                            <div class="col-xs-3 col-md-2" ><apex:commandLink onclick="redirect('back');" styleClass="btn btn-lg leftNav btn-lightning"  reRender="none" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; float:left; width:100%; margin: 10px;" value="Previous" /></div>
+                            <div class="col-xs-6 col-md-4 col-md-offset-2">
+                                <center>
+                                     <!-- added 1px margin-left styling to back to back to checklist button to fix it's positioning  Luke Vang -->
+                                    <apex:commandLink styleClass="btn btn-lg btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; width:100%; margin: 10px; margin-left: 1px;" value="Back to Checklist" reRender="none" onclick="performDocUploadSave('checklist');appShowLoadingSpinner();" rendered="{!!isExternalUser}" />
+                                    <apex:commandLink styleClass="btn btn-lg btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; width:100%; margin: 10px;" value="Save" reRender="none" onclick="performDocUploadSave('');appShowLoadingSpinner();" rendered="{!isExternalUser}" />
+                                </center>
+                            </div>
+                            <div class="col-xs-3 col-md-2 col-md-offset-2"><apex:commandLink onclick="redirect('forwards');" styleClass="btn btn-lg rightNav btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; float:right; width:100%; margin: 10px;" value="Next"  reRender="none" /></div>     
                         </div>
-                        <div class="col-xs-3 col-md-2 col-md-offset-2"><apex:commandLink onclick="redirect('forwards');" styleClass="btn btn-lg rightNav btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; float:right; width:100%; margin: 10px;" value="Next"  reRender="none" /></div>     
+                        <!-- nav layout for mobile - Luke Vang -->
+                        <div id="btn-lightning-mobile">
+                                <div class="col-xs-12 col-md-4">
+                                        <center>
+                                            <!-- added 1px margin-left styling to back to back to checklist button to fix it's positioning  Luke Vang -->
+                                            <apex:commandLink styleClass="btn btn-lg btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; width:100%; margin: 10px; margin-left: 1px;" value="Back to Checklist" reRender="none" onclick="performDocUploadSave('checklist');appShowLoadingSpinner();" rendered="{!!isExternalUser}" />
+                                            <apex:commandLink styleClass="btn btn-lg btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; width:100%; margin: 10px;" value="Save" reRender="none" onclick="performDocUploadSave('');appShowLoadingSpinner();" rendered="{!isExternalUser}" />
+                                        </center>
+                                    </div>
+                            <div class="col-xs-6 col-md-2" ><apex:commandLink onclick="redirect('back');" styleClass="btn btn-lg leftNav btn-lightning"  reRender="none" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; float:left; width:100%; margin: 10px;" value="Previous" /></div>
+                            <div class="col-xs-6 col-md-2"><apex:commandLink onclick="redirect('forwards');" styleClass="btn btn-lg rightNav btn-lightning" style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; float:right; width:100%; margin: 10px;" value="Next"  reRender="none" /></div>     
+                        </div>
                     </div>
                 </div>
             </div>

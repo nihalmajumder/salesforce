@@ -9,7 +9,8 @@
     <apex:attribute name="requirementId" description="Current requirement" type="String" required="false"/>
     <apex:attribute name="reqs" description="All rquirements which need to be completed for this application" type="RequirementWrapper[]" required="false"/>
     <apex:attribute name="progress" description="Completion percentage of the app" type="Integer" required="false"/>
-   
+    <apex:attribute name="displayProgressBar" description="Flag to show progress bar or not" type="Boolean" />
+
     <script>
     var jq = jQuery.noConflict();
         if({!hidePaging} == false){
@@ -46,6 +47,11 @@
             jQuery(function(){
                 checkitem();
                 jq("#myCarousel").on("slid.bs.carousel", "", checkitem);
+
+                //if a nav button is clicked scroll to the top of the page smoothly - Luke
+                jq(".navButton,.rightNav,.leftNav").on('click', function(event){
+                    jq("html, body").animate({ scrollTop: 0 }, "slow");
+                });
             })
         }
 
@@ -56,7 +62,8 @@
         nextReqId="{!nextId}"
         requirementId="{!requirementId}"
         reqs="{!reqs}"
-        progress="{!progress}"/>
+        progress="{!progress}"
+        displayProgressBar="{!displayProgressBar}"/>
         <apex:outputPanel id="formPageMessages">
             <apex:pageMessages />
         </apex:outputPanel>

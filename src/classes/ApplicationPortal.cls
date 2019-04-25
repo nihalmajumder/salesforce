@@ -18,7 +18,8 @@ public class ApplicationPortal {
     }
 
     public ApplicationPortal() {
-        contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
+        contactId = ApplicationQueryCache.getContactId(UserInfo.getUserId()); // Add cache of query - Todd Mitchell
+        //contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
         if (UserInfo.getUserType().equals('Standard'))
             contactId = Id.valueOf(ApexPages.currentPage().getParameters().get('contactId'));
         if(contactId != null){
