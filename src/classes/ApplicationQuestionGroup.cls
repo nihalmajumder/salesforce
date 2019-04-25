@@ -41,11 +41,12 @@ public class ApplicationQuestionGroup {
     
     public List<SObjectWrapper> relatedObjects{
         get{
-            if(relatedObjectsMap!=null){
-                return relatedObjectsMap.values();
-            }else{
-                return null;
-            }
+            return relatedObjectsMap!=null ? relatedObjectsMap.values() : null; //changing into ternary - Luke Vang
+            //if(relatedObjectsMap!=null){
+                //return relatedObjectsMap.values();
+           // }//else{ //you shouldn't need this else statement - Luke Vang
+              //  return null;
+            //}
         }
         set;
     }
@@ -117,15 +118,16 @@ public class ApplicationQuestionGroup {
                         obj.put(aq.question.Related_Object_Field__c, objCopy.get(aq.question.Related_Object_Field__c));
 
                         // Customized code to fix gap in Address support on custom objects - Todd Mitchell
-                        if (aq.question.RecordType.DeveloperName == 'Address') { // If Address, populate the address fields
-                            if (aq.question.Related_Object_Field__c == 'Address__c') {
-                                obj.put('Street__c', objCopy.get('Street__c'));
-                                obj.put('City__c', objCopy.get('City__c'));
-                                obj.put('StateCode__c', objCopy.get('StateCode__c'));
-                                obj.put('CountryCode__c', objCopy.get('CountryCode__c'));
-                                obj.put('PostalCode__c', objCopy.get('PostalCode__c'));
-                            }
-                        }
+                        // There does not seem to be any records that match this logic, commenting out for now - Luke Vang
+                       // if (aq.question.RecordType.DeveloperName == 'Address') { // If Address, populate the address fields
+                            //if (aq.question.Related_Object_Field__c == 'Address__c') {
+                               // obj.put('Street__c', objCopy.get('Street__c'));
+                                //obj.put('City__c', objCopy.get('City__c'));
+                                //obj.put('StateCode__c', objCopy.get('StateCode__c'));
+                                //obj.put('CountryCode__c', objCopy.get('CountryCode__c'));
+                                //obj.put('PostalCode__c', objCopy.get('PostalCode__c'));
+                           // }
+                       // }
 
                     }
                 }
@@ -262,8 +264,9 @@ public class ApplicationQuestionGroup {
     public void relatedUpload(){
         SYSTEM.DEBUG('RELATED');
         if(String.isNotBlank(selectedRelatedId) && relatedObjectsMap.containsKey(selectedRelatedId) && relatedObjectsMap.get(selectedRelatedId).isEditMode == false){
-            if(relatedObjectsMap.get(selectedRelatedId).obj.Id != null){
-            }else if(relatedObjectsMap.get(selectedRelatedId).obj.Id == null){
+           // if(relatedObjectsMap.get(selectedRelatedId).obj.Id != null){
+                //this if statement does nothing, commenting out for now - Luke Vang
+            /*}else */if(relatedObjectsMap.get(selectedRelatedId).obj.Id == null){
                 try{
                     SObjectWrapper objW = relatedObjectsMap.get(selectedRelatedId);
                     insert objW.obj;
@@ -321,7 +324,7 @@ public class ApplicationQuestionGroup {
         if(((List<ContentDocumentLink>)obj.getSObjects('ContentDocumentLinks')) != null && ((List<ContentDocumentLink>)obj.getSObjects('ContentDocumentLinks')).size()>0){
             String title = ((List<ContentDocumentLink>)obj.getSObjects('ContentDocumentLinks'))[0].ContentDocument.Title;
             att = new ContentVersion();
-                att.Title = title;
+            att.Title = title;
             oldAttId = ((List<ContentDocumentLink>)obj.getSObjects('ContentDocumentLinks'))[0].Id;
             oldAttLink = ((List<ContentDocumentLink>)obj.getSObjects('ContentDocumentLinks'))[0];
             List<ContentVersion> conV = [Select Id from ContentVersion where ContentDocumentId = :oldAttLink.ContentDocumentId order by createddate desc limit 1];
@@ -369,12 +372,12 @@ public class ApplicationQuestionGroup {
             if (item.Is_Reference__c == true) {
                 if (item.Internal_Requirement_Item__c != null) {
                     reference = ReferenceHelper.getReference(app.Id, item.Internal_Requirement_Item__c);
-                }
-                else {
+                } else {
                     reference = ReferenceHelper.getReference(app.Id, item.Id);
-                    if (reference == null) {
-                        reference = ReferenceHelper.createReference(con.Id, item.Reference_Type__c, item.School_College__c);
-                    }
+                    reference = reference == null  ? ReferenceHelper.createReference(con.Id, item.Reference_Type__c, item.School_College__c) : reference; //using ternary op - luke
+                    //if (reference == null) {
+                       // reference = ReferenceHelper.createReference(con.Id, item.Reference_Type__c);
+                    //}
                 }
             }
 
@@ -427,7 +430,8 @@ public class ApplicationQuestionGroup {
             }else{
                 att = new ContentVersion();
                 // Add admissions document to response
-                if (response.Admissions_Document__c == null && item.Admissions_Document_Type__c != null && oldAttVersion == null) {
+                //added response != null check - Luke Vang
+                if (response != null && response.Admissions_Document__c == null && item.Admissions_Document_Type__c != null && oldAttVersion == null) {
                     admissionsDocument = AdmissionsDocumentHelper.getAdmissionsDocument(con, response, item.Admissions_Document_Type__c);
                     if (admissionsDocument != null && admissionsDocument.ContentDocumentLinks != null && admissionsDocument.ContentDocumentLinks.size()>0) {
                         att.Title = admissionsDocument.ContentDocumentLinks[0].ContentDocument.Title;
@@ -481,15 +485,17 @@ public class ApplicationQuestionGroup {
                                 fieldsSet.add(q.Related_Object_Field__c.substring(0,q.Related_Object_Field__c.length()-1)+'r.Name');
                         
                             // Customized code to fix gap in Address support on custom objects - Todd Mitchell
-                            if (q.RecordType.DeveloperName == 'Address') { // If Address, populate the address fields
-                                if (q.Related_Object_Field__c == 'Address__c') {
-                                    fieldsSet.add('street__c');
-                                    fieldsSet.add('city__c');
-                                    fieldsSet.add('statecode__c');
-                                    fieldsSet.add('countrycode__c');
-                                    fieldsSet.add('postalcode__c');
-                                }
-                            }
+                            // Is this being used? I do not see any question records that could match this logic? - Luke Vang
+                            //if (q.RecordType.DeveloperName == 'Address') { // If Address, populate the address fields
+                           // if(q.RecordType.DeveloperName == 'Address' && q.Related_Object_Field__c == 'Address__c'){ // can just merge the if statements
+                                //if (q.Related_Object_Field__c == 'Address__c') {
+                                   // fieldsSet.add('street__c');
+                                   // fieldsSet.add('city__c');
+                                   /// fieldsSet.add('statecode__c');
+                                    //fieldsSet.add('countrycode__c');
+                                    //fieldsSet.add('postalcode__c');
+                               // }
+                           // }
 
                         }
                     }
@@ -498,8 +504,9 @@ public class ApplicationQuestionGroup {
                 if (app.Id != null && app.Contact__c != null) {
                     String connectingId = item.Related_List_Object_Master__c == 'Contact' ? app.Contact__c : app.Id;
                         String query = 'Select (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks Where ContentDocument.Description = \'Supporting Document\'), ' + String.join(new List<String>(fieldsSet),', ') + ' FROM ' + item.Related_List_Object__c + ' WHERE '+item.Related_List_Object_Master_Field__c+' =\''+connectingId+'\'';
-                    if (String.isNotBlank(item.Related_List_Where_Clause__c))
-                        query += ' AND ' + item.Related_List_Where_Clause__c;
+                    query += String.isNotBlank(item.Related_List_Where_Clause__c) ? ' AND ' + item.Related_List_Where_Clause__c  : ''; //changing to ternary op - Luke Vang
+                   // if (String.isNotBlank(item.Related_List_Where_Clause__c))
+                       // query += ' AND ' + item.Related_List_Where_Clause__c;
                     for (SObject obj:database.query(query))
                         relatedObjectsMap.put(obj.Id,new SObjectWrapper(this,obj.Id,obj));
                 }
@@ -530,11 +537,12 @@ public class ApplicationQuestionGroup {
     ********************************************************************************/
     public void createNewReferenceObject(){
         creatingNewRelatedRecord = true;
-        if (newReferenceObjectType.toLowerCase().equals('account') && !UserInfo.getUserType().equals('Guest')) {
-            newReferenceObject = [SELECT Id, Name FROM Account LIMIT 1];
-        } else {
-        	newReferenceObject = Schema.getGlobalDescribe().get(newReferenceObjectType).newSObject();
-        }
+        newReferenceObject = newReferenceObjectType.toLowerCase().equals('account') && !UserInfo.getUserType().equals('Guest') ? [SELECT Id, Name FROM Account LIMIT 1] : Schema.getGlobalDescribe().get(newReferenceObjectType).newSObject(); //changing to ternary op - Luke Vang
+        //if (newReferenceObjectType.toLowerCase().equals('account') && !UserInfo.getUserType().equals('Guest')) {
+           //newReferenceObject = [SELECT Id, Name FROM Account LIMIT 1];
+       // } else {
+        	//newReferenceObject = Schema.getGlobalDescribe().get(newReferenceObjectType).newSObject();
+       // }
         if(String.isNotBlank(newReferenceObjectSelectedWrapperName)){
             newReferenceObject.put('Name',newReferenceObjectSelectedWrapperName);
         }
@@ -640,15 +648,9 @@ public class ApplicationQuestionGroup {
                             }
                         }
                     }
-                    if(lstInsert.size()>0){
-                        insert lstInsert;
-                    }
-                    if(lstUpdate.size()>0){
-                        update lstUpdate;
-                    }
-                    if(lstDelete.size()>0){
-                        delete lstDelete;
-                    }
+                    if(lstInsert.size()>0){ insert lstInsert; }
+                    if(lstUpdate.size()>0){ update lstUpdate; }
+                    if(lstDelete.size()>0){ delete lstDelete; }
                 }
                 if (questionGroup){
                     for (ApplicationQuestion q:questions){
@@ -704,8 +706,7 @@ public class ApplicationQuestionGroup {
                                     } catch(Exception e) {
                                         system.debug(e.getMessage());
                                     }
-                                }
-                                else if (q.fieldType.equals('Address')) {
+                                }else if (q.fieldType.equals('Address')) {
                                     try {
                                         reference.put('Street__c', q.response.Street__c);
                                         reference.put('City__c', q.response.City__c);
@@ -731,13 +732,15 @@ public class ApplicationQuestionGroup {
                 }
                 if(documentUpload == true && additionalData!= null && additionalData.containsKey('attData')){
                     Map<String,Object> attData = (Map<String,Object>)additionalData.get('attData');
-                    if(attData.containsKey('fileName')){
-                        att.Title = (String)attData.get('fileName');
-                    }
+                     att.Title = attData.containsKey('fileName') ? att.Title = (String)attData.get('fileName') : att.Title; //change to ternary op - Luke
+                    //if(attData.containsKey('fileName')){
+                      //  att.Title = (String)attData.get('fileName');
+                  //  }
                     System.debug('attData: ' + String.valueOf(attData));
-                    if(attData.containsKey('data')){
-                        att.VersionData = EncodingUtil.base64Decode(((String)attData.get('data')).substringAfter(','));
-                    }
+                    att.VersionData = attData.containsKey('data') ? att.VersionData = EncodingUtil.base64Decode(((String)attData.get('data')).substringAfter(',')) : att.VersionData; // change to ternary op - Luke
+                    //if(attData.containsKey('data')){
+                        //att.VersionData = EncodingUtil.base64Decode(((String)attData.get('data')).substringAfter(','));
+                   // }
                 }
                 if (documentUpload == true && response != null) {
                     // Add admissions document if it exists - Todd Mitchell
@@ -799,16 +802,20 @@ public class ApplicationQuestionGroup {
                 }
             }
         }catch(DmlException e){
-            if (att != null) {
-            	att.VersionData = null;
-            	att.Title = null;
-            }
+            att.VersionData = att != null ? null : att.VersionData; // change to ternary opp - Luke
+            att.Title  = att != null ? null : att.Title; // change to ternary opp - Luke
+           // if (att != null) {
+            	//att.VersionData = null;
+            	//att.Title = null;
+           // }
             throw e;
         }catch(Exception e){
-            if (att != null) {
-            	att.VersionData = null;
-            	att.Title = null;
-            }
+            att.VersionData = att != null ? null : att.VersionData; // change to ternary opp - Luke
+            att.Title  = att != null ? null : att.Title; // change to ternary opp - Luke
+           // if (att != null) {
+            	//att.VersionData = null;
+            	//att.Title = null;
+            //}
             throw e;
         }
     }

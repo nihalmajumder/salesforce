@@ -5,7 +5,7 @@
 ******************************************/
 @isTest
 private class INT_OpportunityContactRoleHandler_TEST {
-    /*@testSetup static void setUp() {
+    @testSetup static void setUp() {
         hed__Trigger_Handler__c oppHandler = new hed__Trigger_Handler__c(
             Name = 'Update Opportunity Contact Role',
             hed__Object__c = 'Opportunity',
@@ -15,7 +15,7 @@ private class INT_OpportunityContactRoleHandler_TEST {
             hed__Load_Order__c = 1
         );
         insert oppHandler;
-    }*/
+    }
 
     private static testmethod void testOpportunityContactRoleHandler() {
         // Arrange
@@ -29,8 +29,9 @@ private class INT_OpportunityContactRoleHandler_TEST {
             Name = 'test',
             AccountId = aContact.AccountId,
             CloseDate = Date.today(),
-            StageName = 'Prospect',
-            Contact__c = aContact.Id
+            StageName = 'Inquired',
+            Contact__c = aContact.Id,
+            Stage_Detail__c = 'Inquired'
         );
 
         // Act

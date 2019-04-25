@@ -174,7 +174,10 @@ public class ApplicationRequirementTest {
         Question__c q1 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Reference'),Related_Object_Field__c='Intended_Program__c',Required__c='Started',Lookup_Object__c='Program__c',Requirement_Item__c=riMap.get('Related_Object'));
         Question__c q2 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Checkbox'),Related_Object_Field__c='User_Created__c',Hardcoded_Value__c='true',Requirement_Item__c=riMap.get('Related_Object'));
         Question__c q3 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Text'),Related_Object_Field__c='Intended_Program__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'));
-        insert new List<Question__c>{q1,q2,q3};
+        Question__c q4 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Checkbox'),Related_Object_Field__c='Hide_from_Application__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'), Hardcoded_Value__c='false'); // adding hard coded text field for testing coverage - Luke Vang
+        Question__c q5 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Number'),Related_Object_Field__c='CIP_Code__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'), Hardcoded_Value__c='12345'); // adding hard coded text field for testing coverage - Luke Vang
+
+        insert new List<Question__c>{q1,q2,q3,q4,q5};
 
         Requirement_Response__c rrRO = new Requirement_Response__c(Application__c=app.Id,Requirement_Item__c=riMap.get('Related_Object'),Has_Child_Requirement__c=true);
         insert new List<Requirement_Response__c>{rrRO};
@@ -297,6 +300,7 @@ public class ApplicationRequirementTest {
         Question__c q3 = new Question__c(Active__c = true,RecordTypeId=rtMap.get('Text'),Name='Test3',Label__c='Test3',Requirement_Item__c=riMap.get('Question_Group'));
         Question__c q4 = new Question__c(Active__c = true,RecordTypeId=rtMap.get('Text'),Name='Test4',Label__c='Test4',Requirement_Item__c=riMap.get('Question_Group'));
         Question__c q5 = new Question__c(Active__c = true,RecordTypeId=rtMap.get('Text'),Name='Test5',Label__c='Test5',Requirement_Item__c=riMap.get('Question_Group'));
+    
         insert new List<Question__c>{q1,q2,q3,q4,q5};
 
         Question_Dependency__c qd1 = new Question_Dependency__c(Question__c=q1.Id,Controlling_Question__c=q2.Id,Value__c='Test', RecordTypeId=rtMapQD.get('Picklist'));

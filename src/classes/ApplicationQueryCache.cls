@@ -1,3 +1,9 @@
+/*
+ * 
+ * 
+ * test - ApplicationQueryCacheTest
+ * 
+ */ 
 public with sharing class ApplicationQueryCache {
 
     public static Map<Id, User> userCache = new Map<Id, User>();

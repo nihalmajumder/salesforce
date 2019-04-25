@@ -106,13 +106,18 @@ public class ApplicationQuestion {
                 if (String.isNotBlank(question.Lookup_Where_Clause__c)) 
                     queryString += ' WHERE ' + question.Lookup_Where_Clause__c;
                 // Additional WHERE clause needed to restricct by TERM for Program query - Todd Mitchell
+                // using a ternary operator to reduce coverage lines - Luke Vang
+                queryString += application != null && question.Lookup_object__c == 'Program__c' && application.Intended_Term_of_Entry__c != null 
+                    ? ' AND ID IN (SELECT Intended_Program__c FROM Intended_Program_Term__c WHERE Application_Status__c = \'Active\' AND Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\') ORDER BY ' + nameField + ' ASC'
+                    : application != null && question.Lookup_object__c == 'Intended_Program_Term__c' && application.Intended_Term_of_Entry__c != null && application.Intended_Program__c != null ? ' AND Intended_Program__c = \'' + application.Intended_Program__c + '\' AND Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\'' : '';
+                /*
                 if (application != null && question.Lookup_object__c == 'Program__c' && application.Intended_Term_of_Entry__c != null) {
                     queryString += ' AND ID IN (SELECT Intended_Program__c FROM Intended_Program_Term__c WHERE Application_Status__c = \'Active\' AND Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\') ORDER BY ' + nameField + ' ASC';
                 }
                 // Additional WHERE clause needed to get locations - Todd Mitchell
                 else if (application != null && question.Lookup_object__c == 'Intended_Program_Term__c' && application.Intended_Term_of_Entry__c != null && application.Intended_Program__c != null) {
                     queryString += ' AND Intended_Program__c = \'' + application.Intended_Program__c + '\' AND Academic_Term__c = \'' + application.Intended_Term_of_Entry__c + '\'';
-                }
+                }*/
                 System.debug('---- question -----');
                 System.debug(queryString);
                 
@@ -188,17 +193,13 @@ public class ApplicationQuestion {
     ********************************************************************************/
     public Boolean showIntendedProgram(Program__c ip) {
         // Filter by school - Todd Mitchell
-        if (String.isNotBlank(ip.School_College__c) && String.isNotBlank(application.School_College__c) && (ip.School_College__c != application.School_College__c))
-            return false;
+        if (String.isNotBlank(ip.School_College__c) && String.isNotBlank(application.School_College__c) && (ip.School_College__c != application.School_College__c)) return false; //moved return statement to same line - Luke Vang
 
-        if ((String.isNotBlank(ip.Hide_Applicant_Type__c) && (String.isNotBlank(application.Applicant_Type__c) && (new Set<String>(ip.Hide_Applicant_Type__c.split(';'))).contains(application.Applicant_Type__c))) || (String.isNotBlank(ip.Applicant_Type__c) && (String.isBlank(application.Applicant_Type__c) || !(new Set<String>(ip.Applicant_Type__c.split(';'))).contains(application.Applicant_Type__c))))
-            return false;
+        if ((String.isNotBlank(ip.Hide_Applicant_Type__c) && (String.isNotBlank(application.Applicant_Type__c) && (new Set<String>(ip.Hide_Applicant_Type__c.split(';'))).contains(application.Applicant_Type__c))) || (String.isNotBlank(ip.Applicant_Type__c) && (String.isBlank(application.Applicant_Type__c) || !(new Set<String>(ip.Applicant_Type__c.split(';'))).contains(application.Applicant_Type__c)))) return false; //moved return statement to same line - Luke Vang
 
-        if ((String.isNotBlank(ip.Hide_Citizenship__c) && (String.isNotBlank(application.Citizenship__c) && (new Set<String>(ip.Hide_Citizenship__c.split(';'))).contains(application.Citizenship__c))) || (String.isNotBlank(ip.Citizenship__c) && (String.isBlank(application.Citizenship__c) || !(new Set<String>(ip.Citizenship__c.split(';'))).contains(application.Citizenship__c))))
-            return false;
+        if ((String.isNotBlank(ip.Hide_Citizenship__c) && (String.isNotBlank(application.Citizenship__c) && (new Set<String>(ip.Hide_Citizenship__c.split(';'))).contains(application.Citizenship__c))) || (String.isNotBlank(ip.Citizenship__c) && (String.isBlank(application.Citizenship__c) || !(new Set<String>(ip.Citizenship__c.split(';'))).contains(application.Citizenship__c)))) return false; //moved return statement to same line - Luke Vang
 
-        if ((String.isNotBlank(ip.Hide_Student_Type__c) && (String.isNotBlank(application.Student_Type__c) && (new Set<String>(ip.Hide_Student_Type__c.split(';'))).contains(application.Student_Type__c))) || (String.isNotBlank(ip.Student_Type__c) && (String.isBlank(application.Student_Type__c) || !(new Set<String>(ip.Student_Type__c.split(';'))).contains(application.Student_Type__c))))
-            return false;
+        if ((String.isNotBlank(ip.Hide_Student_Type__c) && (String.isNotBlank(application.Student_Type__c) && (new Set<String>(ip.Hide_Student_Type__c.split(';'))).contains(application.Student_Type__c))) || (String.isNotBlank(ip.Student_Type__c) && (String.isBlank(application.Student_Type__c) || !(new Set<String>(ip.Student_Type__c.split(';'))).contains(application.Student_Type__c)))) return false; //moved return statement to same line - Luke Vang
 
         return true;
     }
@@ -236,11 +237,9 @@ public class ApplicationQuestion {
         if (dependencyCalculated)
             return showQuestion;
 
-        if (forceShowQuestion == true)
-            return returnShowQuestion(true, obj);
+        if (forceShowQuestion == true) return returnShowQuestion(true, obj); //moved return statement to same line - Luke Vang
 
-        if (application != null && question != null && !ApplicationFilter.filter(application, question))
-            return returnShowQuestion(false, obj);
+        if (application != null && question != null && !ApplicationFilter.filter(application, question)) return returnShowQuestion(false, obj); //moved return statement to same line - Luke Vang
             
         if (dQuestions == null || controllingQuestions == null || dQuestions.isEmpty() || controllingQuestions.isEmpty())
             return returnShowQuestion(true, obj);

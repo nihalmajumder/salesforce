@@ -34,8 +34,7 @@ public class ApplicationChecklist {
     public ApplicationChecklist(ApexPages.StandardController stdController) {
         if (stdController.getRecord() instanceof Opportunity) {
             opp = (Opportunity) stdController.getRecord();
-        }
-        else if (stdController.getRecord() instanceof Application__c) {
+        }else if (stdController.getRecord() instanceof Application__c) {
             Application__c a = [SELECT Id, Contact__c FROM Application__c WHERE Id = :stdController.getRecord().Id];
             contactId = a.Contact__c;
             applicationId = a.Id;
@@ -104,6 +103,7 @@ public class ApplicationChecklist {
         for (Requirement_Response__c rr:[SELECT Id, Requirement_Item__r.Required__c,Requirement_Item__c,Requirement_Item__r.RecordType.DeveloperName,Requirement_Item__r.Requirement__c,Fulfilled_On__c,Incomplete_Questions__c,Question_Group_Requirement_Fulfilled_On__c,HasDocument__c,Document_Requirement_Fulfilled_On__c,Has_Child_Requirement__c,Child_Requirement_Fulfilled_On__c,Send_Reminder__c,External_Email__c,Viewed__c,Requirement_Item__r.Viewing_Requirement_Formula__c, Reference_Access_Rights__c, Reference_First_Name__c, Reference_Last_Name__c, Admissions_Document__c, Reference__c from Requirement_Response__c WHERE Application__c = :applicationId and Requirement_Item__r.Requirement__c in :reqIds]){
             if (riIds.contains(rr.Requirement_Item__c)) {
                 Boolean itemCompleted = true;
+                
                 if (!completedRequirement.containsKey(rr.Requirement_Item__r.Requirement__c))
                     completedRequirement.put(rr.Requirement_Item__r.Requirement__c, true);
                 
@@ -229,35 +229,43 @@ public class ApplicationChecklist {
         for(Id rid : requirementIds){
             //Requirement Items
             List<Requirement_Item__c> items;
+            items = riMap.containsKey(rid) ? riMap.get(rid) : new List<Requirement_Item__c>(); // using ternary operator to reduce lines - Luke Vang
+            /*
             if(riMap.containsKey(rid)){
                 items = riMap.get(rid);
             }else{
                 items = new List<Requirement_Item__c>();
-            }
+            }*/
 
             //Requirement Responses
             List<Requirement_Response__c> requirementResponses;
+            requirementResponses = rrMap.containsKey(rid) ? rrMap.get(rid) : new List<Requirement_Response__c>(); // using ternary operator to reduce lines - Luke Vang
+           /*
             if(rrMap.containsKey(rid)){
                 requirementResponses = rrMap.get(rid);
             }else{
                 requirementResponses = new List<Requirement_Response__c>();
-            }
+            }*/
 
             //Question Dependencies
             List<Question_Dependency__c> questionDependencies;
+            questionDependencies = qdMap.containsKey(rid) ? qdMap.get(rid) : new List<Question_Dependency__c>(); // using ternary operator to reduce lines - Luke Vang
+            /*
             if(qdMap.containsKey(rid)){
                 questionDependencies = qdMap.get(rid);
             }else{
                 questionDependencies = new List<Question_Dependency__c>();
-            }
+            }*/
 
             //Question Responses
             List<Question_Response__c> questionResponses;
+            questionResponses = qrMap.containsKey(rid) ? qrMap.get(rid) : new List<Question_Response__c>(); // using ternary operator to reduce lines - Luke Vang
+            /*
             if(qrMap.containsKey(rid)){
                 questionResponses = qrMap.get(rid);
             }else{
                 questionResponses = new List<Question_Response__c>();
-            }
+            }*/
             ApplicationRequirement ar = new ApplicationRequirement(contactId, applicationId, rid,items, requirementResponses, questionResponses, questionDependencies);
             ar.preventUpdates = true;
             arLst.add(ar);
@@ -291,9 +299,11 @@ public class ApplicationChecklist {
                 update rrLst;
             }
             for(Question_Response__c qr : questionToResponseMap.keySet()){
-                if(qr.Requirement_Response__c == null){
+                qr.Requirement_Response__c = qr.Requirement_Response__c == null ? questionToResponseMap.get(qr).Id : qr.Requirement_Response__c; // using ternary operator to reduce lines - Luke Vang
+                /* 
+                    if(qr.Requirement_Response__c == null){
                     qr.Requirement_Response__c = questionToResponseMap.get(qr).Id;
-                }
+                }*/
             }
             upsert qResponses;
             update app;
