@@ -4,13 +4,14 @@
 * AdmissionsDocumentHelperTest
 *
 */
-public with sharing class AdmissionsDocumentHelper {
+public inherited sharing class AdmissionsDocumentHelper {
     public static List<Admissions_Document__c> findAdmissionsDocument(Id contactId, String typeName) {
         List<Admissions_Document__c> docs = [
             Select 
                 Id, 
                 Type__c, 
-                Contact__c, 
+                Contact__c,
+                Status__c, 
                 (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) 
             FROM 
                 Admissions_Document__c 
@@ -34,6 +35,26 @@ public with sharing class AdmissionsDocumentHelper {
             doc = docs[0];
         }
         return doc;
+    }
+
+    public static Admissions_Document__c getAdmissionsDocument(Id theId) {
+        Admissions_Document__c doc = null;
+        List<Admissions_Document__c> docs = [
+            Select 
+                Id, 
+                Type__c, 
+                Contact__c,
+                Status__c, 
+                (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) 
+            FROM 
+                Admissions_Document__c 
+            WHERE 
+                Id = :theId
+        ];
+        if (!docs.isEmpty()) {
+            doc = docs[0];
+        }
+        return  doc;
     }
 
 }

@@ -107,4 +107,55 @@ public with sharing class ApplicationHelper {
         
         update requirementResponses;
     }
+
+    public static void checkCompletion(Id appId) {
+        ApplicationChecklist controller = new ApplicationChecklist(new Application__c(Id = appId));
+        controller.init();
+    }
+
+    public static List<Application__c> getApplicationsForContacts(Set<Id> theIds) {
+        List<Application__c> apps = [
+            SELECT 
+                Id, 
+                Contact__c,
+                Application_Status__c
+            FROM 
+                Application__c 
+            WHERE 
+                Contact__c IN :theIds
+        ];
+        return apps;
+    }
+
+    public static void checkCompletion(List<Application__c> apps) {
+        for (Application__c app : apps) {
+            if (app.Application_Status__c == 'Submitted') {
+                checkCompletion(app.Id);
+                break;
+            }
+        }
+    }
+
+/*
+    public static void checkCompletionBatch(List<Application__c> apps) {
+        List<Application_Queue__c> items = new List<Application_Queue__c>();
+        Boolean hasRun = false;
+        for (Application__c app : apps) {
+            if (app.Application_Status__c == 'Submitted') {
+                if (hasRun) {
+                    items.add(new Application_Queue__c(Application__c = app.Id, Process_Type = 'Completion Check'))
+                }
+                else {
+                    checkCompletion(app.Id);
+                    hasRun = true;
+                }
+            }
+        }
+        if (!items.isEmpty()) {
+            insert items;
+            AsyncApexJob job = [SELECT Id, ApexClassId, Id, JobItemsProcessed, JobType, LastProcessed, LastProcessedOffset, MethodName, NumberOfErrors, ParentJobId, Status, TotalJobItems from AsyncApexJob where ApexClassId IN (Select Id from ApexClass where Name = 'ClassName1', 'ClassName2', 'Etc')
+        }
+    }
+    */
+
 }

@@ -52,8 +52,10 @@
                 position: absolute;
                 z-index: 1;
                 top:-26px;
-                left:calc(50% + 6px);
+                left:calc(50% + 0px);
                 transform:translateX(-50%);
+                visibility: hidden;
+                transition: all .15s ease-in-out;
             }
 
             /* Show the tooltip text when you mouse over the tooltip container */

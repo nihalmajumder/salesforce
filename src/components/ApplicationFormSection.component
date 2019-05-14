@@ -1,4 +1,4 @@
-<apex:component id="applicationFormSectionComponent" >
+<apex:component id="applicationFormSectionComponent" allowDML="true">
     <script>
              
               
@@ -70,6 +70,9 @@
     <apex:actionFunction name="setCreatingNewRelatedRecordAF{!group.item.Id}" action="{!groupNewRelatedRecord}" rerender="theSection">
         <apex:param name="p1" assignTo="{!group.newReferenceObjectSelectedWrapper}" value=""/>
         <apex:param name="p2" assignTo="{!group.newReferenceObjectSelectedWrapperName}" value=""/>
+    </apex:actionFunction>
+
+    <apex:actionFunction name="doSendReminder" action="{!group.sendReminder}" rerender="none">
     </apex:actionFunction>
   
     <apex:attribute name="group" description="The ApplicationQuestionGroup for this section" type="ApplicationQuestionGroup" required="true" />
@@ -239,7 +242,7 @@
                         <div class="input-group" >
                             <apex:inputField id="field" value="{!question.response.ValueEmail__c}" styleClass="form-control {!if(question.isEditable && group.isEditable && !preventUpdates,'','fieldNotEditable')}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                             <!-- added check for application status, only display send reminder button when application is submitted - Luke Vang  -->
-                            <apex:commandLink styleClass="btn-lightning" style="width:1%;display:table-cell;color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="Send Reminder" action="{!questionSendReminder}" onclick="appShowLoadingSpinner();" oncomplete="appHideLoadingSpinner();" reRender="none" rendered="{!!preventUpdates && question.isEditable && question.question.External_Email_Field__c == true && group.app.Application_Status__c == 'Submitted'}"/>
+                            <apex:commandLink styleClass="btn-lightning" style="width:1%;display:table-cell;color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" value="Send Reminder" onclick="appShowLoadingSpinner();doSendReminder();" oncomplete="appHideLoadingSpinner();" reRender="none" rendered="{!!preventUpdates && question.isEditable && question.question.External_Email_Field__c == true && group.app.Application_Status__c == 'Submitted'}"/>
                         </div>
                         <p class="help-block" style="{!IF(question.helpText != null && !ISBLANK(question.helpText), '', 'display:none;')}" ><apex:outputText value="{!question.helpText}" escape="false" /></p>
                     </div>

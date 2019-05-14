@@ -469,6 +469,7 @@ public class INT_InteractionProcessor {
                     if (oldOppty != null && stageName == 'Inquired' && oldOppty.StageName != 'Inquired') {
                         stageName = oldOppty.StageName;
                     }
+                    System.debug(stageName);
                     Opportunity newOppty = new Opportunity(
                         CloseDate = System.today(),
                         StageName = stageName,

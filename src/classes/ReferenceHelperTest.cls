@@ -31,8 +31,8 @@ public class ReferenceHelperTest {
         
         
         Contact ref1 = new Contact(LastName='Ref1');
-           Contact ref2 = new Contact(LastName='Ref2');
-           Contact ref3 = new Contact(LastName='Ref3');
+        Contact ref2 = new Contact(LastName='Ref2');
+        Contact ref3 = new Contact(LastName='Ref3');
  
         insert new List<Contact>{student, ref1, ref2, ref3};
         
@@ -56,16 +56,16 @@ public class ReferenceHelperTest {
             
           
             
-           Reference__c reference1 = new Reference__c(Contact__c = ref1.Id);
-         Reference__c reference2 = new Reference__c(Contact__c = ref2.Id);
-         Reference__c reference3 = new Reference__c(Contact__c = ref3.Id);
+        Reference__c reference1 = new Reference__c(Contact__c = ref1.Id, RecordTypeId = Schema.SObjectType.Reference__c.getRecordTypeInfosByName().get('Seminary Marriage Family').getRecordTypeId(), Type__c = 'Professional');
+        Reference__c reference2 = new Reference__c(Contact__c = ref2.Id, RecordTypeId = Schema.SObjectType.Reference__c.getRecordTypeInfosByName().get('Seminary Marriage Family').getRecordTypeId(), Type__c = 'Professional');
+        Reference__c reference3 = new Reference__c(Contact__c = ref3.Id, RecordTypeId = Schema.SObjectType.Reference__c.getRecordTypeInfosByName().get('Seminary General').getRecordTypeId(), Type__c = 'Personal');
         insert new List<Reference__c>{reference1, reference2, reference3};
             
-              Requirement_Response__c response1 = new Requirement_Response__c(Reference__c = reference1.Id, Application__c = app.Id, Requirement_Item__c = riQG.Id);
+        Requirement_Response__c response1 = new Requirement_Response__c(Reference__c = reference1.Id, Application__c = app.Id, Requirement_Item__c = riQG.Id);
         Requirement_Response__c response2 = new Requirement_Response__c(Reference__c = reference2.Id, Application__c = app.Id, Requirement_Item__c = riDU.Id);
         Requirement_Response__c response3 = new Requirement_Response__c(Reference__c = reference3.Id, Application__c = app.Id, Requirement_Item__c = riRO.Id);
-         insert new List<Requirement_Response__c>{response1, response2, response3};
-            }
+        insert new List<Requirement_Response__c>{response1, response2, response3};
+    }
     
     static testMethod void testGetReference(){
         Set<Id> refIds = new Set<Id>();
@@ -82,11 +82,30 @@ public class ReferenceHelperTest {
         }
         
     }
+
+    static testMethod void testFindReference(){
+        Contact ref1 = [SELECT Id FROM Contact WHERE LastName='Ref1'];
+        Contact ref2 = [SELECT Id FROM Contact WHERE LastName='Ref2'];
+        Contact ref3 = [SELECT Id FROM Contact WHERE LastName='Ref3'];
+        
+        System.assert(ReferenceHelper.findReference(ref1.Id, 'Professional', 'Seminary', 'Professional Reference') != null);
+        System.assert(ReferenceHelper.findReference(ref2.Id, 'Professional', 'Seminary', 'Second Professional Reference') != null);
+        System.assert(ReferenceHelper.findReference(ref3.Id, 'Personal', 'Seminary', 'Personal Reference') != null);
+        
+    }
     
     static testMethod void testCreateReference(){
         Contact ref = new Contact(LastName='Ref4');
         insert ref;
        System.assert(ReferenceHelper.createReference(ref.Id, 'Personal', 'Seminary') != null);
+       System.assert(ReferenceHelper.createReference(ref.Id, 'Vocational', 'Seminary') != null);
+       System.assert(ReferenceHelper.createReference(ref.Id, 'Doctor of Ministry', 'Seminary') != null);
+       System.assert(ReferenceHelper.createReference(ref.Id, 'Vocational', 'Seminary') != null);
+       System.assert(ReferenceHelper.createReference(ref.Id, 'Ministry', 'Seminary') != null);
+       System.assert(ReferenceHelper.createReference(ref.Id, 'Professional', 'Graduate') != null);
+       System.assert(ReferenceHelper.createReference(ref.Id, 'Supervisor', 'Graduate') != null);
+       System.assert(ReferenceHelper.createReference(ref.Id, 'Supervisor', 'Adult Undergraduate') != null);
+       System.assert(ReferenceHelper.createReference(ref.Id, 'Spiritual', 'Adult Undergraduate') != null);
         
     }
 }

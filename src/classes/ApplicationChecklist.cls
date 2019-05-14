@@ -40,6 +40,13 @@ public class ApplicationChecklist {
             applicationId = a.Id;
         }
     }
+    public ApplicationChecklist(Application__c theApplication) {
+        if (theApplication != null && theApplication.Id != null) {
+            Application__c a = [SELECT Id, Contact__c FROM Application__c WHERE Id = :theApplication.Id];
+            contactId = a.Contact__c;
+            applicationId = a.Id;
+        }
+    }
 
     /*******************************************************************************
     * @description Initialize the page - Checks if requirements have been completed
@@ -69,8 +76,9 @@ public class ApplicationChecklist {
             applicationId = Id.valueOf(ApexPages.currentPage().getParameters().get('applicationId'));
         }
         
-        // Add Intended_Program_Code__c to query - Todd Mitchell
-        app = [SELECT Id, Intended_Program__r.Name, Intended_Program__r.Program_Name_on_Application__c, Intended_Term_of_Entry__r.Name, Intended_Program__c, Intended_Program_Code__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Application_Status__c, School_College__c, Residency__c, Application_Control__c FROM Application__c WHERE Id = :applicationId];
+        // Add Intended_Program_Code__c to query, cache - Todd Mitchell
+        //app = [SELECT Id, Intended_Program__r.Name, Intended_Program__r.Program_Name_on_Application__c, Intended_Term_of_Entry__r.Name, Intended_Program__c, Intended_Program_Code__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Application_Status__c, School_College__c, Residency__c, Application_Control__c FROM Application__c WHERE Id = :applicationId];
+        app = ApplicationQueryCache.getApplication(applicationId);
         appControl = ApplicationUtilities.getApplicationControls(app.Application_Control__c);
         
         allowCancel = String.isNotBlank(appControl.Allow_Cancel_From__c) && new Set<String>(appControl.Allow_Cancel_From__c.split(';')).contains(app.Application_Status__c);
@@ -107,7 +115,8 @@ public class ApplicationChecklist {
                 if (!completedRequirement.containsKey(rr.Requirement_Item__r.Requirement__c))
                     completedRequirement.put(rr.Requirement_Item__r.Requirement__c, true);
                 
-                if (!rr.Viewed__c && rr.Requirement_Item__r.Viewing_Requirement_Formula__c) {
+                // only check viewed for community users - Todd Mitchell
+                if (!rr.Viewed__c && rr.Requirement_Item__r.Viewing_Requirement_Formula__c && !UserInfo.getUserType().equals('Standard')) {
                     completedRequirement.put(rr.Requirement_Item__r.Requirement__c, false);
                     viewedRequirement.put(rr.Requirement_Item__r.Requirement__c, false);
                     itemCompleted = false;                    
@@ -169,6 +178,8 @@ public class ApplicationChecklist {
         // Add check for complete - Todd Mitchell
         if (complete == total && app.Application_Status__c == 'Submitted') {
             OpportunityHelper.updateOpportunityStatusAppCompleted(app.Id);
+            app.Application_Status__c = 'Completed';
+            update app;
         }
     }
     
@@ -295,6 +306,7 @@ public class ApplicationChecklist {
                     }
                 }
             }
+
             if(rrLst.size()>0){
                 update rrLst;
             }

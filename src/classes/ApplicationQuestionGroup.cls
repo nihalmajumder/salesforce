@@ -5,7 +5,7 @@
 Revision (s): 
 *******************************************************************************/
 public class ApplicationQuestionGroup {
-	
+    
     public Contact con {get;private set;}
     public Application__c app {get;private set;}
     public List<ApplicationQuestion> questions {get;private set;}
@@ -74,7 +74,7 @@ public class ApplicationQuestionGroup {
     public Map<String,Map<String,Object>> fieldResultMap{get;set;}
 
     public String selectedRelatedId{get;set;}
-	
+    
     public class MultiPicklistWrapper {
         
         public SObject obj {get;set;}
@@ -82,12 +82,12 @@ public class ApplicationQuestionGroup {
         public List<String> multiPicklistValues;
         
         public List<String> getMultiPicklistValues() {
-        	return String.isNotBlank((String)(obj.get(fieldName))) ? ((String)(obj.get(fieldName))).split(';') : new List<String>();
-    	}
+            return String.isNotBlank((String)(obj.get(fieldName))) ? ((String)(obj.get(fieldName))).split(';') : new List<String>();
+        }
 
-    	public void setMultiPicklistValues(List<String> v) {
-        	obj.put(fieldName, String.join(v, ';'));
-    	}
+        public void setMultiPicklistValues(List<String> v) {
+            obj.put(fieldName, String.join(v, ';'));
+        }
         
         public MultiPicklistWrapper(SObject obj, String fieldName) {
             this.obj = obj;
@@ -157,7 +157,7 @@ public class ApplicationQuestionGroup {
             isEditMode = false;
             isDeleted = false;
             isValid = true;
-			
+            
             if(((List<ContentDocumentLink>)obj.getSObjects('ContentDocumentLinks')) != null && ((List<ContentDocumentLink>)obj.getSObjects('ContentDocumentLinks')).size()>0){
                 att = ((List<ContentDocumentLink>)obj.getSObjects('ContentDocumentLinks'))[0];
             }
@@ -198,6 +198,10 @@ public class ApplicationQuestionGroup {
                 
                 try {
                     if (String.isNotBlank(question.question.Related_Object_Field__c) && (question.application != null && String.isNotBlank(question.question.Required__c) && new Set<String>(question.question.Required__c.split(';')).contains(question.application.Application_Status__c)) && obj.get(question.question.Related_Object_Field__c) == '')
+                        valid = false;
+                        
+                    // Add extra status field condition
+                    if (String.isNotBlank(question.question.Related_Object_Field__c) && (question.application != null && String.isNotBlank(question.question.Required__c) && new Set<String>(question.question.Required__c.split(';')).contains(question.application.Application_Status__c)) && question.question.Related_Object_Field__c == 'Document_Status__c' && obj.get(question.question.Related_Object_Field__c) == 'Mandatory')
                         valid = false;
                     
                 } catch (Exception e) {}
@@ -374,7 +378,7 @@ public class ApplicationQuestionGroup {
                     reference = ReferenceHelper.getReference(app.Id, item.Internal_Requirement_Item__c);
                 } else {
                     reference = ReferenceHelper.getReference(app.Id, item.Id);
-                    reference = reference == null  ? ReferenceHelper.createReference(con.Id, item.Reference_Type__c, item.School_College__c) : reference; //using ternary op - luke
+                    reference = reference == null  ? ReferenceHelper.findReference(con.Id, item.Reference_Type__c, item.School_College__c, item.Name) : reference; //using ternary op - luke
                     //if (reference == null) {
                        // reference = ReferenceHelper.createReference(con.Id, item.Reference_Type__c);
                     //}
@@ -433,16 +437,37 @@ public class ApplicationQuestionGroup {
                 //added response != null check - Luke Vang
                 if (response != null && response.Admissions_Document__c == null && item.Admissions_Document_Type__c != null && oldAttVersion == null) {
                     admissionsDocument = AdmissionsDocumentHelper.getAdmissionsDocument(con, response, item.Admissions_Document_Type__c);
-                    if (admissionsDocument != null && admissionsDocument.ContentDocumentLinks != null && admissionsDocument.ContentDocumentLinks.size()>0) {
-                        att.Title = admissionsDocument.ContentDocumentLinks[0].ContentDocument.Title;
-                        ContentDocumentLink link = new ContentDocumentLink(ContentDocumentId = admissionsDocument.ContentDocumentLinks[0].ContentDocumentId, LinkedEntityId = response.Id, ShareType = 'V', Visibility = 'AllUsers');
-                        insert link;
-                        oldAttId = link.Id;
-                        oldAttLink = link;
-                        List<ContentVersion> conV = [Select Id, ContentDocumentId from ContentVersion where ContentDocumentId = :admissionsDocument.ContentDocumentLinks[0].ContentDocumentId order by createddate desc limit 1];
-                        if(conV.size()>0){
-                            oldAttVersion = conV[0];
+                    if (admissionsDocument != null) { 
+                        response.Admissions_Document__c = admissionsDocument.Id;
+                        if (admissionsDocument.Status__c == 'Received' || admissionsDocument.Status__c == 'Waived' || admissionsDocument.Status__c == 'Conditional') {
+                            response.HasDocument__c = true;
+                            if (response.Document_Requirement_Fulfilled_On__c == null) {
+                                response.Document_Requirement_Fulfilled_On__c = System.NOW();
+                            }
                         }
+
+                        if (admissionsDocument.ContentDocumentLinks != null && admissionsDocument.ContentDocumentLinks.size()>0) {
+                            att.Title = admissionsDocument.ContentDocumentLinks[0].ContentDocument.Title;
+                            ContentDocumentLink link = new ContentDocumentLink(ContentDocumentId = admissionsDocument.ContentDocumentLinks[0].ContentDocumentId, LinkedEntityId = response.Id, ShareType = 'V', Visibility = 'AllUsers');
+                            if (link.LinkedEntityId != null) {
+                                insert link;
+                            }
+                            oldAttId = link.Id;
+                            oldAttLink = link;
+                            List<ContentVersion> conV = [Select Id, ContentDocumentId from ContentVersion where ContentDocumentId = :admissionsDocument.ContentDocumentLinks[0].ContentDocumentId order by createddate desc limit 1];
+                            if(conV.size()>0){
+                                oldAttVersion = conV[0];
+                            }
+                        }
+                    }
+                }
+            }
+            if (response != null && response.Admissions_Document__c != null && admissionsDocument == null) {
+                admissionsDocument = AdmissionsDocumentHelper.getAdmissionsDocument(response.Admissions_Document__c);
+                if (admissionsDocument != null && (admissionsDocument.Status__c == 'Received' || admissionsDocument.Status__c == 'Waived' || admissionsDocument.Status__c == 'Conditional')) {
+                    response.HasDocument__c = true;
+                    if (response.Document_Requirement_Fulfilled_On__c == null) {
+                        response.Document_Requirement_Fulfilled_On__c = System.NOW();
                     }
                 }
             }
@@ -509,6 +534,22 @@ public class ApplicationQuestionGroup {
                        // query += ' AND ' + item.Related_List_Where_Clause__c;
                     for (SObject obj:database.query(query))
                         relatedObjectsMap.put(obj.Id,new SObjectWrapper(this,obj.Id,obj));
+
+                    // Add code to validate related objects -Todd Mitchell
+                    Integer childCount = 0;
+                    if(relatedObjects != null){
+                        for (SObjectWrapper objW : relatedObjects){
+                            if (objW.checkValid()){
+                                childCount++;
+                            }
+                        }
+                    }
+                    
+                    if (item.Required_Number_of_Children__c != null && item.Required_Number_of_Children__c > childCount) {
+                        response.Has_Child_Requirement__c = false;
+                        response.Child_Requirement_Fulfilled_On__c = null;
+                    }
+
                 }
             }
         }
@@ -524,7 +565,7 @@ public class ApplicationQuestionGroup {
                     qMap.put(qr.Question__c, new ApplicationQuestion(app, new Question__c(Active__c = true, Id = qr.Question__c), qr));
             else if (relatedObject)
                 for (ApplicationQuestion aq:questions)
-                	qMap.put(aq.question.Id, aq);
+                    qMap.put(aq.question.Id, aq);
             
             for (ApplicationQuestion aq:questions)
                 if (aq.question != null && dQuestions.containsKey(aq.question.Id))
@@ -541,7 +582,7 @@ public class ApplicationQuestionGroup {
         //if (newReferenceObjectType.toLowerCase().equals('account') && !UserInfo.getUserType().equals('Guest')) {
            //newReferenceObject = [SELECT Id, Name FROM Account LIMIT 1];
        // } else {
-        	//newReferenceObject = Schema.getGlobalDescribe().get(newReferenceObjectType).newSObject();
+            //newReferenceObject = Schema.getGlobalDescribe().get(newReferenceObjectType).newSObject();
        // }
         if(String.isNotBlank(newReferenceObjectSelectedWrapperName)){
             newReferenceObject.put('Name',newReferenceObjectSelectedWrapperName);
@@ -568,13 +609,13 @@ public class ApplicationQuestionGroup {
                         Object questionValue = aq.question.Hardcoded_Value__c;
                         
                         if (aq.question.RecordType.DeveloperName == 'Checkbox')
-                        	questionValue = Boolean.valueOf(aq.question.Hardcoded_Value__c);
+                            questionValue = Boolean.valueOf(aq.question.Hardcoded_Value__c);
                         else if (aq.question.RecordType.DeveloperName == 'Currency' || aq.question.RecordType.DeveloperName == 'Number' || aq.question.RecordType.DeveloperName == 'Percent')
-                        	questionValue = Decimal.valueOf(aq.question.Hardcoded_Value__c);
+                            questionValue = Decimal.valueOf(aq.question.Hardcoded_Value__c);
                         else if (aq.question.RecordType.DeveloperName == 'Date')
-                        	questionValue = Date.valueOf(aq.question.Hardcoded_Value__c);
+                            questionValue = Date.valueOf(aq.question.Hardcoded_Value__c);
                         else if (aq.question.RecordType.DeveloperName == 'Datetime')
-                        	questionValue = DateTime.valueOf(aq.question.Hardcoded_Value__c);
+                            questionValue = DateTime.valueOf(aq.question.Hardcoded_Value__c);
                         
                         newReferenceObject.put(aq.question.Related_Object_Field__c, questionValue);
                     }
@@ -637,7 +678,7 @@ public class ApplicationQuestionGroup {
                         response.Child_Requirement_Fulfilled_On__c = null;
                     } else if (item.Required_Number_of_Children__c == null || item.Required_Number_of_Children__c <= childCount) {
                         if (!response.Has_Child_Requirement__c || response.Child_Requirement_Fulfilled_On__c == null)
-                        	response.Child_Requirement_Fulfilled_On__c = System.NOW();
+                            response.Child_Requirement_Fulfilled_On__c = System.NOW();
                         response.Has_Child_Requirement__c = true;
                     }
                     
@@ -675,7 +716,7 @@ public class ApplicationQuestionGroup {
                                 try {
                                     
                                     if (q.fieldType.equals('Address') && (q.question.Contact_Field__c == 'MailingAddress' || q.question.Contact_Field__c == 'OtherAddress')) {
-                						
+                                        
                                         String prefix = q.question.Contact_Field__c.equals('MailingAddress') ? 'Mailing' : 'Other';
                                         con.put(prefix + 'Street', q.response.Street__c);
                                         con.put(prefix + 'City', q.response.City__c);
@@ -746,14 +787,22 @@ public class ApplicationQuestionGroup {
                     // Add admissions document if it exists - Todd Mitchell
                     if (this.admissionsDocument != null) {
                         response.Admissions_Document__c = admissionsDocument.Id;
-                        response.HasDocument__c = true;
-                        if (response.Document_Requirement_Fulfilled_On__c == null) {
-                            response.Document_Requirement_Fulfilled_On__c = System.NOW();
+                        if (admissionsDocument.Status__c == 'Received' || admissionsDocument.Status__c == 'Waived' || admissionsDocument.Status__c == 'Conditional') {
+                            response.HasDocument__c = true;
+                            if (response.Document_Requirement_Fulfilled_On__c == null) {
+                                response.Document_Requirement_Fulfilled_On__c = System.NOW();
+                            }
+                        }
+                        if (oldAttLink != null && oldAttLink.LinkedEntityId == null && oldAttId == null) {
+                            oldAttLink.LinkedEntityId = response.Id;
+                            insert oldAttLink;
                         }
                     }
                     if (att != null && att.Title != null && att.VersionData != null) {
                     
                         att.PathOnClient = att.Title;
+                        // Create link if it does not already exist
+
                         // Create new version of existing document - Todd Mitchell
                         if(oldAttLink != null && oldAttLink.ContentDocumentId != null){
                             att.ContentDocumentId = oldAttLink.ContentDocumentId;
@@ -770,7 +819,7 @@ public class ApplicationQuestionGroup {
 
                         // Add admissions doc - Todd Mitchelll
                         if (response.Admissions_Document__c == null && item.Admissions_Document_Type__c != null) {
-                            Admissions_Document__c admissionsDocument = new Admissions_Document__c(Contact__c = con.Id, Type__c = item.Admissions_Document_Type__c, Date_Received__c = Date.today());
+                            Admissions_Document__c admissionsDocument = new Admissions_Document__c(Contact__c = con.Id, Type__c = item.Admissions_Document_Type__c, Date_Received__c = Date.today(), Status__c = 'Received');
                             insert admissionsDocument;
                             ContentVersion conV = [Select Id, ContentDocumentId from ContentVersion WHERE Id = :att.Id];
                             ContentDocumentLink link = new ContentDocumentLink(ContentDocumentId = conV.ContentDocumentId, LinkedEntityId = admissionsDocument.Id, ShareType = 'V', Visibility = 'AllUsers');
@@ -791,11 +840,11 @@ public class ApplicationQuestionGroup {
                         if (response.Document_Requirement_Fulfilled_On__c == null)
                             response.Document_Requirement_Fulfilled_On__c = System.NOW();
                     }
-                    if (response.HasDocument__c == true && att.Title == null && String.isBlank(response.ValueTextEntry__c)){
-                        response.HasDocument__c = false;
-                        response.ValueTextEntry__c = null;
-                        response.Document_Requirement_Fulfilled_On__c = null;
-                    }
+                    //if (response.HasDocument__c == true && att.Title == null && String.isBlank(response.ValueTextEntry__c)){ Comment this out - Todd Mitchell
+                    //    response.HasDocument__c = false;
+                    //    response.ValueTextEntry__c = null;
+                    //    response.Document_Requirement_Fulfilled_On__c = null;
+                    //}
                     if (item.Application_Status_Field__c != null) {
                         app.put(item.Application_Status_Field__c, response.HasDocument__c);
                     }
@@ -805,18 +854,30 @@ public class ApplicationQuestionGroup {
             att.VersionData = att != null ? null : att.VersionData; // change to ternary opp - Luke
             att.Title  = att != null ? null : att.Title; // change to ternary opp - Luke
            // if (att != null) {
-            	//att.VersionData = null;
-            	//att.Title = null;
+                //att.VersionData = null;
+                //att.Title = null;
            // }
             throw e;
         }catch(Exception e){
             att.VersionData = att != null ? null : att.VersionData; // change to ternary opp - Luke
             att.Title  = att != null ? null : att.Title; // change to ternary opp - Luke
            // if (att != null) {
-            	//att.VersionData = null;
-            	//att.Title = null;
+                //att.VersionData = null;
+                //att.Title = null;
             //}
             throw e;
         }
     }
+
+    public PageReference sendReminder(){
+        System.debug('SENDREMINDER');
+        for (ApplicationQuestion q : questions) {
+            if(q.question != null && q.question.External_EmaiL_Field__c == true && response != null && String.isNotBlank(response.External_Email__c) && response.Id != null) {
+                response.Send_Reminder__c = !response.Send_Reminder__c;
+                //update new Requirement_Response__c(Id=response.Id, Send_Reminder__c = !response.Send_Reminder__c);
+            }
+        }
+        return null;
+    }
+
 }

@@ -1,3 +1,16 @@
+/**
+ * @File Name          : ApplicationRequirementTest.cls
+ * @Description        : 
+ * @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @Group              : 
+ * @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @Last Modified On   : 5/1/2019, 8:50:20 PM
+ * @Modification Log   : 
+ *==============================================================================
+ * Ver         Date                     Author      		      Modification
+ *==============================================================================
+ * 1.0    5/1/2019, 8:50:10 PM   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+**/
 @isTest
 public class ApplicationRequirementTest {
     @testSetup
@@ -229,6 +242,141 @@ public class ApplicationRequirementTest {
         ac.submit();
         // System.assertEquals(1,[Select count() from Enrollment_History__c]);
     }
+
+    public static TestMethod void testRelatedObjectExceptions(){
+        Application__c app = [Select Id from Application__c limit 1];
+        Contact student = [Select Id from Contact limit 1];
+        Requirement__c req = [Select Id from Requirement__c limit 1];
+
+        Map<String,Id> rtMap = new Map<String,Id>();
+        for(RecordType rt : [Select Id,DeveloperName from RecordType where sObjectType = 'Question__c']){
+            rtMap.put(rt.DeveloperName,rt.Id);
+        }
+
+        Map<String,Id> riMap = new Map<String,Id>();
+        for(Requirement_Item__c ri : [Select Id,RecordType.DeveloperName from Requirement_Item__c]){
+            riMap.put(ri.RecordType.DeveloperName,ri.Id);
+        }
+        Question__c q1 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Reference'),Related_Object_Field__c='Intended_Program__c',Required__c='Started',Lookup_Object__c='Program__c',Requirement_Item__c=riMap.get('Related_Object'));
+        Question__c q2 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Checkbox'),Related_Object_Field__c='User_Created__c',Hardcoded_Value__c='true',Requirement_Item__c=riMap.get('Related_Object'));
+        Question__c q3 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Text'),Related_Object_Field__c='Intended_Program__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'));
+        Question__c q4 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Checkbox'),Related_Object_Field__c='Hide_from_Application__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'), Hardcoded_Value__c='false'); // adding hard coded text field for testing coverage - Luke Vang
+        Question__c q5 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Number'),Related_Object_Field__c='CIP_Code__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'), Hardcoded_Value__c='12345'); // adding hard coded text field for testing coverage - Luke Vang
+
+        insert new List<Question__c>{q1,q2,q3,q4,q5};
+
+        Requirement_Response__c rrRO = new Requirement_Response__c(Application__c=app.Id,Requirement_Item__c=riMap.get('Related_Object'),Has_Child_Requirement__c=true);
+        insert new List<Requirement_Response__c>{rrRO};
+
+        PageReference pr = Page.ApplicationRequirement;
+        pr.getParameters().put('contactId', student.Id);
+        pr.getParameters().put('applicationId', app.Id);
+        pr.getParameters().put('requirementId', req.Id);
+        Test.setCurrentPage(pr);
+        ApplicationRequirement ac = new ApplicationRequirement();
+        ac.init();
+        System.assertEquals(ac.title,'Test Req');
+        for(ApplicationQuestionGroup agq : ac.section.groups){
+            if(agq.relatedObject == true){
+                agq.newRow();
+                Map<ApplicationQuestion, Boolean> showQuestions = agq.relatedObjects[0].showQuestions;
+                agq.selectedRelatedId = 'new0';
+                agq.enableEditMode();
+                agq.selectedRelatedId = 'new0';
+                agq.enableConfirmMode();
+                agq.selectedRelatedId = 'new0';
+                agq.enableViewMode();
+                agq.selectedRelatedId = 'new0';
+                agq.newRow();
+                agq.selectedRelatedId = 'new1';
+                agq.enableEditMode();
+                Map<String,ApplicationQuestionGroup.SObjectWrapper> relatedObjectsMap = agq.relatedObjectsMap;
+                ApplicationQuestionGroup.SObjectWrapper objWrapper = relatedObjectsMap.get('new1');
+                SObject obj = objWrapper.obj;
+                obj.put('Contact__c',[Select Id from Contact limit 1].Id);
+                agq.selectedRelatedId = 'new1';
+                agq.enableConfirmMode();
+                agq.selectedRelatedId = 'new1';
+                agq.enableEditMode();
+                agq.newReferenceObjectSelectedWrapperName = 'Test Program';
+                agq.createNewReferenceObject();
+                agq.newReferenceObjectSelectedWrapper = 'new1';
+                agq.addNewReferenceObject();
+                agq.selectedRelatedId = 'new1';
+                agq.enableViewMode();
+                agq.selectedRelatedId = 'new1';
+                agq.relatedUpload();
+            }
+        }
+    }
+    
+    public static TestMethod void testRelatedObjectDMLException(){
+        Application__c app = [Select Id from Application__c limit 1];
+        Contact student = [Select Id from Contact limit 1];
+        Requirement__c req = [Select Id from Requirement__c limit 1];
+
+        Map<String,Id> rtMap = new Map<String,Id>();
+        for(RecordType rt : [Select Id,DeveloperName from RecordType where sObjectType = 'Question__c']){
+            rtMap.put(rt.DeveloperName,rt.Id);
+        }
+
+        Map<String,Id> riMap = new Map<String,Id>();
+        for(Requirement_Item__c ri : [Select Id,RecordType.DeveloperName from Requirement_Item__c]){
+            riMap.put(ri.RecordType.DeveloperName,ri.Id);
+        }
+        Question__c q1 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Reference'),Related_Object_Field__c='Intended_Program__c',Required__c='Started',Lookup_Object__c='Program__c',Requirement_Item__c=riMap.get('Related_Object'));
+        Question__c q2 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Checkbox'),Related_Object_Field__c='User_Created__c',Hardcoded_Value__c='true',Requirement_Item__c=riMap.get('Related_Object'));
+        Question__c q3 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Text'),Related_Object_Field__c='Intended_Program__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'));
+        Question__c q4 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Checkbox'),Related_Object_Field__c='Hide_from_Application__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'), Hardcoded_Value__c='false'); // adding hard coded text field for testing coverage - Luke Vang
+        Question__c q5 = new Question__c(Active__c=true,RecordTypeId=rtMap.get('Number'),Related_Object_Field__c='CIP_Code__c',New_Reference_Field__c=true,Requirement_Item__c=riMap.get('Related_Object'), Hardcoded_Value__c='12345'); // adding hard coded text field for testing coverage - Luke Vang
+
+        insert new List<Question__c>{q1,q2,q3,q4,q5};
+
+        Requirement_Response__c rrRO = new Requirement_Response__c(Application__c=app.Id,Requirement_Item__c=riMap.get('Related_Object'),Has_Child_Requirement__c=true);
+        insert new List<Requirement_Response__c>{rrRO};
+
+        PageReference pr = Page.ApplicationRequirement;
+        pr.getParameters().put('contactId', student.Id);
+        pr.getParameters().put('applicationId', app.Id);
+        pr.getParameters().put('requirementId', req.Id);
+        Test.setCurrentPage(pr);
+        ApplicationRequirement ac = new ApplicationRequirement();
+        ac.init();
+        System.assertEquals(ac.title,'Test Req');
+        for(ApplicationQuestionGroup agq : ac.section.groups){
+            if(agq.relatedObject == true){
+                agq.newRow();
+                Map<ApplicationQuestion, Boolean> showQuestions = agq.relatedObjects[0].showQuestions;
+                agq.selectedRelatedId = 'new0';
+                agq.enableEditMode();
+                agq.selectedRelatedId = 'new0';
+                agq.enableConfirmMode();
+                agq.selectedRelatedId = 'new0';
+                agq.enableViewMode();
+                agq.selectedRelatedId = 'new0';
+                agq.newRow();
+                agq.selectedRelatedId = 'new1';
+                agq.enableEditMode();
+                Map<String,ApplicationQuestionGroup.SObjectWrapper> relatedObjectsMap = agq.relatedObjectsMap;
+                ApplicationQuestionGroup.SObjectWrapper objWrapper = relatedObjectsMap.get('new1');
+                SObject obj = objWrapper.obj;
+                obj.put('Contact__c',[Select Id from Contact limit 1].Id);
+                agq.selectedRelatedId = 'new1';
+                agq.enableConfirmMode();
+                agq.selectedRelatedId = 'new1';
+                agq.enableEditMode();
+                agq.newReferenceObjectSelectedWrapperName = 'Test Program';
+                agq.createNewReferenceObject();
+                agq.newReferenceObjectSelectedWrapper = 'new1';
+                agq.addNewReferenceObject();
+                agq.selectedRelatedId = 'new1';
+                agq.enableViewMode();
+                agq.selectedRelatedId = 'new1';
+                agq.relatedUpload();
+            }
+        }
+    }
+
     public static TestMethod void testMisc(){
         Application__c app = [Select Id from Application__c limit 1];
         Contact student = [Select Id from Contact limit 1];

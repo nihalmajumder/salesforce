@@ -6,6 +6,7 @@
     <apex:attribute name="hideFooter" description="Should the footer be hidden" type="Boolean" required="false" />
     <apex:attribute name="hideHelp" description="Should the help be hidden" type="Boolean" required="false" />
     <apex:attribute name="appControl" description="ApplicationSettings" type="Application_Control__c" required="true" />
+    <apex:attribute name="app" description="Application" type="Application__c" required="false" />
     <style>
         .glyphicon.spinning {
             animation: spin 1s infinite linear;
@@ -121,10 +122,10 @@ function getAsText(readFile, respId) {
                     <apex:outputPanel rendered="{!subtitle != null}" >
                         <h2 style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:24px;" >{!subtitle}</h2>
                     </apex:outputPanel>
-                    <apex:outputPanel rendered="{! !hideHelp && (appControl.Application_Start_Status__c == 'Started' || appControl.Application_Start_Status__c == 'Submitted')}" >
+                    <apex:outputPanel rendered="{! !hideHelp &&  (app != null) && (app.Application_Status__c == 'Started' || app.Application_Status__c == 'Submitted')}" >
                             <p class="help-block">
-                                <apex:outputText value="{!appControl.Started_Status_Help_Text__c}" escape="false" rendered="{!appControl.Application_Start_Status__c == 'Started'}"/>
-                                <apex:outputText value="{!appControl.Submitted_Status_Help_Text__c}" escape="false" rendered="{!appControl.Application_Start_Status__c == 'Submitted'}"/>
+                                <apex:outputText value="{!appControl.Started_Status_Help_Text__c}" escape="false" rendered="{!app.Application_Status__c == 'Started'}"/>
+                                <apex:outputText value="{!appControl.Submitted_Status_Help_Text__c}" escape="false" rendered="{!app.Application_Status__c == 'Submitted'}"/>
                             </p>
                     </apex:outputPanel>
                 </div>

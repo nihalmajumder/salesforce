@@ -113,8 +113,9 @@ public class ApplicationProgressBar  {
         }
         applicationId = Id.valueOf(ApexPages.currentPage().getParameters().get('applicationId'));
 
-        // Add Intended_Program_Code__c to query - Todd Mitchell
-        app = [SELECT Id, Intended_Program__r.Program_Name_on_Application__c, Intended_Program__r.Name, Intended_Term_of_Entry__r.Name, Intended_Term_of_Entry__r.Term_Start_Date__c, Intended_Program__c, Intended_Program_Code__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Residency__c, Application_Status__c, School_College__c, Application_Control__c FROM Application__c WHERE Id = :applicationId];
+        // Add Intended_Program_Code__c to query, cache - Todd Mitchell
+        //app = [SELECT Id, Intended_Program__r.Program_Name_on_Application__c, Intended_Program__r.Name, Intended_Term_of_Entry__r.Name, Intended_Term_of_Entry__r.Term_Start_Date__c, Intended_Program__c, Intended_Program_Code__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Residency__c, Application_Status__c, School_College__c, Application_Control__c FROM Application__c WHERE Id = :applicationId];
+        app = ApplicationQueryCache.getApplication(applicationId);
         appControl = ApplicationUtilities.getApplicationControls(app.Application_Control__c);
         
         if(String.isNotBlank(appControl.Allow_Cancel_From__c) && new Set<String>(appControl.Allow_Cancel_From__c.split(';')).contains(app.Application_Status__c)){

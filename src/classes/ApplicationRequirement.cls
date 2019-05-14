@@ -89,9 +89,10 @@ global class ApplicationRequirement {
         }
 				
         // Added Intended Term to query, put outside previous if statement - Todd Mitchell
-        // Add Intended_Program_Code__c to query - Todd Mitchell
+        // Add Intended_Program_Code__c to query, cache - Todd Mitchell
         if (String.isNotBlank(applicationId)) {
-            app = [SELECT Id, Intended_Program__c, Intended_Program_Code__c, Intended_Term_of_Entry__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Contact__c, School_College__c, Residency__c, Application_Status__c, Application_Control__c FROM Application__c WHERE Contact__c = :contactId AND Id = :applicationId];
+            //app = [SELECT Id, Intended_Program__c, Intended_Program_Code__c, Intended_Term_of_Entry__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Contact__c, School_College__c, Residency__c, Application_Status__c, Application_Control__c FROM Application__c WHERE Contact__c = :contactId AND Id = :applicationId];
+            app = ApplicationQueryCache.getApplication(applicationId, contactId);
             appControl = ApplicationUtilities.getApplicationControls(app.Application_Control__c);
         }
 
@@ -319,8 +320,13 @@ global class ApplicationRequirement {
             for (ApplicationQuestionGroup g:section.groups)
                 if (g.questionGroup == true && g.questions != null && g.isEditable)
                     for (ApplicationQuestion q : g.questions)
-                        if ((q.isEditable || UserInfo.getUserType() == 'Standard') && q.response != null)
+                        if ((q.isEditable || UserInfo.getUserType() == 'Standard') && q.response != null) {
+                            // Add Fix for non-existant requirement response
+                            if (q.response.Requirement_Response__c == null) {
+                                q.response.Requirement_Response__c = g.response.Id;
+                            }
                             qResponses.add(q.response);
+                        }
             
             upsert qResponses;
             

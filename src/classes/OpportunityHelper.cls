@@ -59,7 +59,7 @@ public class OpportunityHelper {
             }
           
             Database.DMLOptions dmo = new Database.DMLOptions();
-            dmo.assignmentRuleHeader.useDefaultRule = true;
+            dmo.assignmentRuleHeader.useDefaultRule = false;
             dmo.optAllOrNone = true;
             Database.insert(newCases, dmo);
             
@@ -81,6 +81,8 @@ public class OpportunityHelper {
             Origin = 'Admission Process',
             Subject = 'Provisional Acceptance',
             Description = 'Provisional Acceptance',
+            Program__c = opp.EDA_Program_Account_Id__c,
+            School__c = opp.School_College__c,
             OwnerId = SSR_ADVISING_QUEUE_ID
         );
         return c;
@@ -98,7 +100,9 @@ public class OpportunityHelper {
             Origin = 'Admission Process',
             Subject = 'Conditional Acceptance',
             Description = 'Conditional Acceptance',
-            OwnerId = SSR_ADVISING_QUEUE_ID
+            Program__c = opp.EDA_Program_Account_Id__c,
+            School__c = opp.School_College__c,
+            OwnerId = opp.OwnerId
         );
         return c;
     }
