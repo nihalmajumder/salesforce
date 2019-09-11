@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Current Org --></label>
+        <name>bofc__Current_Org__c</name>
+    </fields>
+    <fields>
+        <label><!-- Instance Name --></label>
+        <name>bofc__Instance_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Instance URL --></label>
+        <name>bofc__Instance_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsSandbox? --></label>
+        <name>bofc__IsSandbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- Token --></label>
+        <name>bofc__Token__c</name>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>bofc__Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- csId --></label>
+        <name>bofc__csId__c</name>
+    </fields>
+    <fields>
+        <label><!-- pwd --></label>
+        <name>bofc__pwd__c</name>
+    </fields>
+</CustomObjectTranslation>

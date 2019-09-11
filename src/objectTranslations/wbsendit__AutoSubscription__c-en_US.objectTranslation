@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Action --></label>
+        <name>wbsendit__Action__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation><!-- Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delete</masterLabel>
+            <translation><!-- Delete --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Criteria --></label>
+        <name>wbsendit__Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>wbsendit__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- When checked, the rule will not run. --></help>
+        <label><!-- Disabled --></label>
+        <name>wbsendit__Disabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Evaluation Time --></label>
+        <name>wbsendit__Evaluation_Time__c</name>
+        <picklistValues>
+            <masterLabel>Every time a record is created or edited</masterLabel>
+            <translation><!-- Every time a record is created or edited --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only when a record is created</masterLabel>
+            <translation><!-- Only when a record is created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only when a record is edited</masterLabel>
+            <translation><!-- Only when a record is edited --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Logic Filter --></label>
+        <name>wbsendit__Logic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object --></label>
+        <name>wbsendit__Object__c</name>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation><!-- Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Resubscribe --></label>
+        <name>wbsendit__Resubscribe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscriber List --></label>
+        <name>wbsendit__Subscriber_List_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscriber List --></label>
+        <name>wbsendit__Subscriber_List_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscriber List --></label>
+        <name>wbsendit__Subscriber_List__c</name>
+        <relationshipLabel><!-- Automatic Subscriptions --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Condition Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

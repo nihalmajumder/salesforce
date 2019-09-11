@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Case</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case: Post-Trad Sharing</label>
+        <sharedTo>
+            <group>Admissions_Post_Trad</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SSR - Student Success Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type</field>
+            <operation>equals</operation>
+            <value>Success Coaching,Schedule - Admissions</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_ITS_with_Admissions</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case: ITS with Admissions</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ITS - Create/Edit Program,ITS - General Request,ITS - Segment/Mailing List,ITS - Access</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_Marketing_Segment_Mailings</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>allow marketing to edit segment mailing requests</description>
+        <label>Case: Marketing Segment Mailings</label>
+        <sharedTo>
+            <group>Marketing</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ITS - Create/Edit Program,ITS - General Request,ITS - Segment/Mailing List,ITS - Access</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_Registrar_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case: Registrar Sharing</label>
+        <sharedTo>
+            <group>Registrar</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SSR - Academic Petition</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_SSR_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Shares all SSR cases within SSR</description>
+        <label>Case: SSR Sharing</label>
+        <sharedTo>
+            <group>Student_Success</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SSR - Student Success Case,SSR - Academic Petition,SSR - Readmission,SSR - Commencement</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_Seminary</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case: Seminary</label>
+        <sharedTo>
+            <role>Seminary</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seminary</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_Share_EMOps_and_ITS_cases</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Case: Share EMOps and ITS cases</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>EMOps - Opportunity Request,ITS - General Request,EMOps - Admission Document,ITS - Access,EMOps - Duplicate,ITS - Create/Edit Program,ITS - Segment/Mailing List</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_Share_with_Appeals_Guest</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case: Share with Appeals Guest</label>
+        <sharedTo>
+            <group>Appeals_Site_Guest_User</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SSR - Academic Petition</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Case_EMOps_cases</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share EMOps owned cases with EMOps</description>
+        <label>Case: EMOps cases</label>
+        <sharedTo>
+            <group>EMOps</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>EMOps</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Case_ITS_cases</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share all ITS owned cases with ITS</description>
+        <label>Case: ITS cases</label>
+        <sharedTo>
+            <group>ITS</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>ITS</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Case_ITS_share_with_all</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>temporary until we figure out case sharing</description>
+        <label>Case: ITS share with all</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <sharedFrom>
+            <group>ITS</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Case_Share_all_with_ITS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case: Share all with ITS</label>
+        <sharedTo>
+            <group>ITS</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

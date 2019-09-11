@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>SSR - Advising</name>
+    <queueMembers>
+        <roleAndSubordinatesInternal>
+            <roleAndSubordinateInternal>SSR_Experience_Manager</roleAndSubordinateInternal>
+            <roleAndSubordinateInternal>SSR_Student_Success_Advisor</roleAndSubordinateInternal>
+            <roleAndSubordinateInternal>Student_Success_Dean</roleAndSubordinateInternal>
+        </roleAndSubordinatesInternal>
+        <users>
+            <user>e-jameson+neworg@bethel.edu</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Field indicates if the College is Accredited or not --></help>
+        <label><!-- Accreditation --></label>
+        <name>Accreditation__c</name>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Accredited</masterLabel>
+            <translation><!-- Not Accredited --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional</masterLabel>
+            <translation><!-- Regional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Admission Application Description --></label>
+        <name>Admission_Application_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bin Dept Major --></label>
+        <name>Bin_Dept_Major__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bin Number --></label>
+        <name>Bin_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- CEEB Code --></label>
+        <name>CEEB_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campus Code --></label>
+        <name>Campus_Code__c</name>
+        <picklistValues>
+            <masterLabel>2PT</masterLabel>
+            <translation><!-- 2PT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation><!-- SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SP</masterLabel>
+            <translation><!-- SP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates specific tags on the account by looking at activities and opportunities. --></help>
+        <label><!-- Account Tags --></label>
+        <name>DaScoopComposer__Account_Tags__c</name>
+        <picklistValues>
+            <masterLabel>Churned Customer</masterLabel>
+            <translation><!-- Churned Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cur. Effort</masterLabel>
+            <translation><!-- Cur. Effort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current Customer</masterLabel>
+            <translation><!-- Current Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost Opportunity</masterLabel>
+            <translation><!-- Lost Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meeting Scheduled</masterLabel>
+            <translation><!-- Meeting Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meeting, no Opportunity</masterLabel>
+            <translation><!-- Meeting, no Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Opportunity</masterLabel>
+            <translation><!-- Open Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Past Effort</masterLabel>
+            <translation><!-- Past Effort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Untouched</masterLabel>
+            <translation><!-- Untouched --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- A helper field added by Groove --></help>
+        <label><!-- Alias --></label>
+        <name>DaScoopComposer__Alias_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- A helper field added by Groove --></help>
+        <label><!-- Alias --></label>
+        <name>DaScoopComposer__Alias_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- indicates, whether this is a churned customer based on your business specific signals --></help>
+        <label><!-- Churned Customer --></label>
+        <name>DaScoopComposer__Churned_Customer__c</name>
+    </fields>
+    <fields>
+        <help><!-- indicates the primary email domain of the account. This is evaluated by Groove periodically --></help>
+        <label><!-- Domain 1 --></label>
+        <name>DaScoopComposer__Domain_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- indicates the secondary email domain of the account (in case they have more than one). This is evaluated by Groove periodically --></help>
+        <label><!-- Domain 2 --></label>
+        <name>DaScoopComposer__Domain_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Controls whether Groove will automatically match leads to this account. --></help>
+        <label><!-- Don&apos;t Match Leads to this Account --></label>
+        <name>DaScoopComposer__Dont_Match_Leads_to_this_Account__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the status of CUSTOMER engagement such as email opens, phone conversations or meetings. The threshold between &quot;recent&quot; and &quot;past&quot; can be customized. --></help>
+        <label><!-- Engagement Status --></label>
+        <name>DaScoopComposer__Engagement_Status__c</name>
+        <picklistValues>
+            <masterLabel>No Engagement</masterLabel>
+            <translation><!-- No Engagement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Past Engagement</masterLabel>
+            <translation><!-- Past Engagement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recent Engagement</masterLabel>
+            <translation><!-- Recent Engagement --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Contains notes that are surfaced in Groove&apos;s sidebar by default. --></help>
+        <label><!-- Groove Notes --></label>
+        <name>DaScoopComposer__Groove_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- A helper field added by Groove --></help>
+        <label><!-- Hash --></label>
+        <name>DaScoopComposer__Hash_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- A helper field added by Groove --></help>
+        <label><!-- Hash --></label>
+        <name>DaScoopComposer__Hash_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- A helper field added by Groove --></help>
+        <label><!-- Hash --></label>
+        <name>DaScoopComposer__Hash_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the account status in the typical customer life cycle of an account. The status is automatically inferred by looking at activities, engagement signals and opportunities. --></help>
+        <label><!-- Inferred Status --></label>
+        <name>DaScoopComposer__Inferred_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Degree --></label>
+        <name>Degree__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+    </fields>
+    <fields>
+        <help><!-- Academic Program&apos;s Division. --></help>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <help><!-- Whether this Program has expired, either due to being no longer offered or because it was replaced with a new Program (such as with a new Code) --></help>
+        <label><!-- Expired Program --></label>
+        <name>Expired_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- FICE Code --></label>
+        <name>FICE_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level --></label>
+        <name>Level__c</name>
+        <picklistValues>
+            <masterLabel>CE</masterLabel>
+            <translation><!-- CE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DD</masterLabel>
+            <translation><!-- DD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DT</masterLabel>
+            <translation><!-- DT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DX</masterLabel>
+            <translation><!-- DX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EV</masterLabel>
+            <translation><!-- EV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GR</masterLabel>
+            <translation><!-- GR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS</masterLabel>
+            <translation><!-- GS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GX</masterLabel>
+            <translation><!-- GX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UG</masterLabel>
+            <translation><!-- UG --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Major --></label>
+        <name>Major__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Code --></label>
+        <name>Program_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Group --></label>
+        <name>Program_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitment Program --></label>
+        <name>Recruitment_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- School / College --></label>
+        <name>School_College__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Name --></label>
+        <name>Search_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sorted Bin Number --></label>
+        <name>Sorted_Bin_Number__c</name>
+    </fields>
+    <fields>
+        <help>La dirección actual con la que se cumplimentan los campos de facturación de la cuenta.</help>
+        <label><!-- Current Address --></label>
+        <name>hed__Current_Address__c</name>
+        <relationshipLabel><!-- Accounts (Current Address) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- _SYSTEM: One2OneContact --></label>
+        <name>hed__Primary_Contact__c</name>
+        <relationshipLabel><!-- Account --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Account Layout - Academic Program</layout>
+        <sections>
+            <label><!-- Academic Program Detail --></label>
+            <section>Academic Program Detail</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout - Educational Institution</layout>
+        <sections>
+            <label><!-- Educational Institution Detail --></label>
+            <section>Educational Institution Detail</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout - Master</layout>
+        <sections>
+            <label><!-- Academic Program Detail --></label>
+            <section>Academic Program Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Educational Institution --></label>
+            <section>Educational Institution</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>HEDA Household Layout</layout>
+        <sections>
+            <label>Dirección</label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label>Campos</label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>HEDA Organization Layout</layout>
+        <sections>
+            <label>Dirección</label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label>Campos</label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Academic Program Key Fields --></label>
+        <name>Academic_Program_Key_fields</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- An Academic Program offered at the University. --></description>
+        <label><!-- Academic Program --></label>
+        <name>Academic_Program</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- An administrative account. --></description>
+        <label><!-- Administrative --></label>
+        <name>Administrative</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A business organization. --></description>
+        <label><!-- Business Organization --></label>
+        <name>Business_Organization</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Represents a Church --></description>
+        <label><!-- Church --></label>
+        <name>Church</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- An educational institution. --></description>
+        <label><!-- Educational Institution --></label>
+        <name>Educational_Institution</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A Household containing one or more individuals. --></description>
+        <label><!-- Household Account --></label>
+        <name>HH_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A sports organization. --></description>
+        <label><!-- Sports Organization --></label>
+        <name>Sports_Organization</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A department in the university. --></description>
+        <label><!-- University Department --></label>
+        <name>University_Department</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A division in the university --></description>
+        <label><!-- University Division --></label>
+        <name>University_Division</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A program group in the university --></description>
+        <label><!-- University Program Group --></label>
+        <name>University_Program_Group</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+</CustomObjectTranslation>

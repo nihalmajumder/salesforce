@@ -1,0 +1,23 @@
+.THIS .ikon:hover { 
+    background: #f3f2f2;
+}
+
+
+@media only screen and (max-width: 1920px) {
+    .THIS.container-width{
+        max-height : 45rem !important;
+    }
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .THIS.container-width{
+        max-height : 27rem !important;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .THIS.container-width{
+        max-height : 22rem !important;
+    }
+}

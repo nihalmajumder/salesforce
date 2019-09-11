@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Allow Notifications For --></label>
+        <name>Mogli_SMS__Allow_Notifications_For__c</name>
+        <picklistValues>
+            <masterLabel>Any incoming SMS</masterLabel>
+            <translation><!-- Any incoming SMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do not show any SMS notifications</masterLabel>
+            <translation><!-- Do not show any SMS notifications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only incoming SMS from Contacts and Leads I own</masterLabel>
+            <translation><!-- Only incoming SMS from Contacts and Leads I own --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only incoming SMS from a Contact I own</masterLabel>
+            <translation><!-- Only incoming SMS from a Contact I own --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only incoming SMS from a Lead I own</masterLabel>
+            <translation><!-- Only incoming SMS from a Lead I own --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Allow tone for incoming notifications --></help>
+        <label><!-- Play Notification Sound --></label>
+        <name>Mogli_SMS__Play_Notification_Sound__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select/Deselects all the Gateways that are available. --></help>
+        <label><!-- Select All Gateways --></label>
+        <name>Mogli_SMS__Select_All_Gateways__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>Mogli_SMS__User__c</name>
+        <relationshipLabel><!-- Notification Settings --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Notification Settings Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

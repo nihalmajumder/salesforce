@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Reference</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>References</value>
+    </caseValues>
+    <fields>
+        <label><!-- Ability To Accomplish Goals --></label>
+        <name>Ability_To_Accomplish_Goals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ability To Lead --></label>
+        <name>Ability_To_Lead__c</name>
+        <picklistValues>
+            <masterLabel>Exceptional leader, inspires others along desirable lines of action</masterLabel>
+            <translation><!-- Exceptional leader, inspires others along desirable lines of action --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normally successful in directing and influencing others</masterLabel>
+            <translation><!-- Normally successful in directing and influencing others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor leader, incapable of directing others</masterLabel>
+            <translation><!-- Poor leader, incapable of directing others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usually follows the lead of others</masterLabel>
+            <translation><!-- Usually follows the lead of others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very successful in leading others</masterLabel>
+            <translation><!-- Very successful in leading others --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Academic Ability --></label>
+        <name>Academic_Ability__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Academic Competence --></label>
+        <name>Academic_Competence__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Academic Studies --></label>
+        <name>Academic_Studies__c</name>
+        <picklistValues>
+            <masterLabel>Average in academic studies</masterLabel>
+            <translation><!-- Average in academic studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does poorly on exams and assignments</masterLabel>
+            <translation><!-- Does poorly on exams and assignments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exceptionally strong in academic studies</masterLabel>
+            <translation><!-- Exceptionally strong in academic studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strong in academic studies</masterLabel>
+            <translation><!-- Strong in academic studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usually is a weak student in academic studies</masterLabel>
+            <translation><!-- Usually is a weak student in academic studies --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Additional Comments --></label>
+        <name>Additional_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant Email --></label>
+        <name>Applicant_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant Name --></label>
+        <name>Applicant_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Areas Of Growth --></label>
+        <name>Areas_Of_Growth__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Describe Benefit --></label>
+        <name>BUILD_Describe_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD How Do You Know? --></label>
+        <name>BUILD_How_Do_You_Know__c</name>
+        <picklistValues>
+            <masterLabel>Church</masterLabel>
+            <translation><!-- Church --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community</masterLabel>
+            <translation><!-- Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School</masterLabel>
+            <translation><!-- School --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BUILD How Long Description --></label>
+        <name>BUILD_How_Long_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business/Organization City --></label>
+        <name>Business_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business/Organization Name --></label>
+        <name>Business_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business/Organization State/Province --></label>
+        <name>Business_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Christian Faith And Commitment --></label>
+        <name>Christian_Faith_And_Commitment__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comfortable With Position --></label>
+        <name>Comfortable_With_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment On Abilities --></label>
+        <name>Comment_On_Abilities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment On Christian Commitment --></label>
+        <name>Comment_On_Christian_Commitment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment On Intercultural_Skills --></label>
+        <name>Comment_On_InterculturalSkills__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment On Interpersonal Skills --></label>
+        <name>Comment_On_Interpersonal_Skills__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment On Scholastic Skills --></label>
+        <name>Comment_On_Scholastic_Skills__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment On Strengths --></label>
+        <name>Comment_On_Strengths__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment On Weaknesses --></label>
+        <name>Comment_On_Weaknesses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment On Work --></label>
+        <name>Comment_On_Work__c</name>
+    </fields>
+    <fields>
+        <label><!-- Communication Skills --></label>
+        <name>Communication_Skills__c</name>
+        <picklistValues>
+            <masterLabel>Has exceptional skills in communication</masterLabel>
+            <translation><!-- Has exceptional skills in communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Has limited communication with others</masterLabel>
+            <translation><!-- Has limited communication with others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Has strong skills in communicating with others</masterLabel>
+            <translation><!-- Has strong skills in communicating with others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Responds when spoken to, but does not initiate communication</masterLabel>
+            <translation><!-- Responds when spoken to, but does not initiate communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usually able to communicate effectively with others</masterLabel>
+            <translation><!-- Usually able to communicate effectively with others --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Communication Skills (Verbal &amp; Written) --></label>
+        <name>Communication_Verbal_Written_Skills__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Conflict Management Skills --></label>
+        <name>Conflict_Management_Skills__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- References --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Creative Solutions --></label>
+        <name>Creative_Solutions__c</name>
+        <picklistValues>
+            <masterLabel>Consistently able to offer creative solutions</masterLabel>
+            <translation><!-- Consistently able to offer creative solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Is unable to offer creative solutions</masterLabel>
+            <translation><!-- Is unable to offer creative solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often able to offer creative solutions</masterLabel>
+            <translation><!-- Often able to offer creative solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rarely offers creative solutions</masterLabel>
+            <translation><!-- Rarely offers creative solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes is able to offer creative solutions</masterLabel>
+            <translation><!-- Sometimes is able to offer creative solutions --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Creativity --></label>
+        <name>Creativity__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date Received --></label>
+        <name>Date_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decision-Making Ability --></label>
+        <name>Decision_Making_Ability__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Decision Making --></label>
+        <name>Decision_Making__c</name>
+        <picklistValues>
+            <masterLabel>Generally has good decision-making and judgment skills</masterLabel>
+            <translation><!-- Generally has good decision-making and judgment skills --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Has exceptional decision-making and judgment skills</masterLabel>
+            <translation><!-- Has exceptional decision-making and judgment skills --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Has inconsistent decision-making and judgment skills</masterLabel>
+            <translation><!-- Has inconsistent decision-making and judgment skills --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Has poor decision-making and judgment skills</masterLabel>
+            <translation><!-- Has poor decision-making and judgment skills --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Makes good decisions and shows good judgment</masterLabel>
+            <translation><!-- Makes good decisions and shows good judgment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Demonstrate Faith --></label>
+        <name>Demonstrate_Faith__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fifteen Hours Commitment Comment --></label>
+        <name>Fifteen_Hours_Commitment_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fifteen Hours Commitment --></label>
+        <name>Fifteen_Hours_Commitment__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flexibility --></label>
+        <name>Flexibility__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Four Year Commitment --></label>
+        <name>Four_Year_Commitment__c</name>
+    </fields>
+    <fields>
+        <label><!-- How Long Have You Known Applicant? --></label>
+        <name>How_Long__c</name>
+        <picklistValues>
+            <masterLabel>1-2 years</masterLabel>
+            <translation><!-- 1-2 years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-5 years</masterLabel>
+            <translation><!-- 3-5 years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5+ years</masterLabel>
+            <translation><!-- 5+ years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt;1 year</masterLabel>
+            <translation><!-- &lt;1 year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How Responsible --></label>
+        <name>How_Responsible__c</name>
+        <picklistValues>
+            <masterLabel>Carries out routine activity on own responsibility</masterLabel>
+            <translation><!-- Carries out routine activity on own responsibility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exceptionally able to accomplish work without close supervision</masterLabel>
+            <translation><!-- Exceptionally able to accomplish work without close supervision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Irresponsible even under supervisions</masterLabel>
+            <translation><!-- Irresponsible even under supervisions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usually needs detailed instructions with regular checks of work</masterLabel>
+            <translation><!-- Usually needs detailed instructions with regular checks of work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>With constant supervision will do satisfactory work</masterLabel>
+            <translation><!-- With constant supervision will do satisfactory work --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How Well Do You Know Applicant? --></label>
+        <name>How_Well__c</name>
+        <picklistValues>
+            <masterLabel>Fairly well</masterLabel>
+            <translation><!-- Fairly well --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not well at all</masterLabel>
+            <translation><!-- Not well at all --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very well</masterLabel>
+            <translation><!-- Very well --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initiative And Perserverance --></label>
+        <name>Initiative_And_Perserverance__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Integrity --></label>
+        <name>Integrity__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Intensive Commitment Comment --></label>
+        <name>Intensive_Commitment_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intensive Commitment --></label>
+        <name>Intensive_Commitment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intercultural Competence --></label>
+        <name>Intercultural_Competence__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interpersonal Skills --></label>
+        <name>Interpersonal_Skills__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Seminary Next Step --></label>
+        <name>Is_Seminary_Next_Step__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leadership Comments --></label>
+        <name>Leadership_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leadership Potential --></label>
+        <name>Leadership_Potential__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Leadership Skills --></label>
+        <name>Leadership_Skills__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Leadership --></label>
+        <name>Leadership__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mentorship Comments --></label>
+        <name>Mentorship_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mentorship --></label>
+        <name>Mentorship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Org URL --></label>
+        <name>Old_Org_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oral Communication Skills --></label>
+        <name>Oral_Communication_Skills__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Personal Maturity --></label>
+        <name>Personal_Maturity__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plans Of Support --></label>
+        <name>Plans_Of_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Code --></label>
+        <name>PostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Id --></label>
+        <name>Previous_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- React To Criticism --></label>
+        <name>React_To_Criticism__c</name>
+        <picklistValues>
+            <masterLabel>Asks for criticisms and suggestions</masterLabel>
+            <translation><!-- Asks for criticisms and suggestions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follows suggestions willingly</masterLabel>
+            <translation><!-- Follows suggestions willingly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Listens to suggestions, but may act without considering them</masterLabel>
+            <translation><!-- Listens to suggestions, but may act without considering them --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resents suggestions</masterLabel>
+            <translation><!-- Resents suggestions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Takes criticism as a personal insult</masterLabel>
+            <translation><!-- Takes criticism as a personal insult --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Readiness For Ministry --></label>
+        <name>Readiness_For_Ministry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recommend? --></label>
+        <name>Recommend__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, with reservation</masterLabel>
+            <translation><!-- Yes, with reservation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, without reservation</masterLabel>
+            <translation><!-- Yes, without reservation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Relationship To Applicant --></label>
+        <name>Relationship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Research Projects --></label>
+        <name>Research_Projects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Responsibility --></label>
+        <name>Responsibility__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Self-Confidence --></label>
+        <name>Self_Confidence__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Signature Date --></label>
+        <name>Signature_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signature --></label>
+        <name>Signature__c</name>
+    </fields>
+    <fields>
+        <label><!-- State/Province --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strengths And Weaknesses --></label>
+        <name>Strengths_And_Weaknesses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Three Year Commitment Comment --></label>
+        <name>Three_Year_Commitment_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Three Year Commitment --></label>
+        <name>Three_Year_Commitment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title/Role --></label>
+        <name>Title_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Church</masterLabel>
+            <translation><!-- Church --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctor of Ministry</masterLabel>
+            <translation><!-- Doctor of Ministry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ministry</masterLabel>
+            <translation><!-- Ministry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursing Professional</masterLabel>
+            <translation><!-- Nursing Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pastoral</masterLabel>
+            <translation><!-- Pastoral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal</masterLabel>
+            <translation><!-- Personal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional</masterLabel>
+            <translation><!-- Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School</masterLabel>
+            <translation><!-- School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spiritual</masterLabel>
+            <translation><!-- Spiritual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supervisor</masterLabel>
+            <translation><!-- Supervisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vocational</masterLabel>
+            <translation><!-- Vocational --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Waive Rights? --></label>
+        <name>Waive_Rights__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workload Commitment Comment --></label>
+        <name>Workload_Commitment_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workload Commitment --></label>
+        <name>Workload_Commitment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Written Communication Skills --></label>
+        <name>Written_Communication_Skills__c</name>
+        <picklistValues>
+            <masterLabel>Above Average</masterLabel>
+            <translation><!-- Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below Average</masterLabel>
+            <translation><!-- Below Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Observed</masterLabel>
+            <translation><!-- Not Observed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Above Average</masterLabel>
+            <translation><!-- Significantly Above Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Below Average</masterLabel>
+            <translation><!-- Significantly Below Average --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Reference Layout - Master</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Doctor of Ministry Questions --></label>
+            <section>Doctor of Ministry Questions</section>
+        </sections>
+        <sections>
+            <label><!-- Form Questions --></label>
+            <section>Form Questions</section>
+        </sections>
+        <sections>
+            <label><!-- InMinistry Questions --></label>
+            <section>InMinistry Questions</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Conditional --></label>
+        <name>Conditional</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send Reminder Email --></label>
+        <name>Send_Reminder_Email</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Waive --></label>
+        <name>Waive</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- BUILD Church and School Reference type --></description>
+        <label><!-- BUILD --></label>
+        <name>BUILD</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Adult Graduate Spiritual Reference --></description>
+        <label><!-- CAPS Spiritual --></label>
+        <name>CAPS_Spiritual</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CAS --></label>
+        <name>CAS</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Seminary Doctor of Ministry Reference --></description>
+        <label><!-- Doctor of Ministry Context Form --></label>
+        <name>Doctor_of_Ministry_Context_Form</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Graduate Professional Reference --></description>
+        <label><!-- Grad General --></label>
+        <name>Grad_General</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Adult Graduate Professional and Supervisor Reference for Nursing and Graduate Professional and Supervsior Reference for Nursing --></description>
+        <label><!-- Grad Nursing --></label>
+        <name>Grad_Nursing</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Seminary Ministry Reference --></description>
+        <label><!-- InMinistry Context Form --></label>
+        <name>InMinistry_Context_Form</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- MA Transformational Leadership --></description>
+        <label><!-- MATL Ministry Form --></label>
+        <name>MATL_Ministry_Form</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PSEO --></label>
+        <name>PSEO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Seminary Pastoral, Personal, and Supervisor Reference --></description>
+        <label><!-- Seminary General --></label>
+        <name>Seminary_General</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Seminary Professional Reference --></description>
+        <label><!-- Seminary Marriage Family --></label>
+        <name>Seminary_Marriage_Family</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

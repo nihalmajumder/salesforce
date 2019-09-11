@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>wbsendit__Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Child Relationship --></label>
+        <name>wbsendit__Is_Child_Relationship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Field --></label>
+        <name>wbsendit__Is_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Names --></label>
+        <name>wbsendit__Object_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smart Email --></label>
+        <name>wbsendit__Smart_Email__c</name>
+        <relationshipLabel><!-- Smart Email Recipients --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>wbsendit__Type__c</name>
+        <picklistValues>
+            <masterLabel>BCC</masterLabel>
+            <translation><!-- BCC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC</masterLabel>
+            <translation><!-- CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To</masterLabel>
+            <translation><!-- To --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>wbsendit__Value__c</name>
+    </fields>
+</CustomObjectTranslation>

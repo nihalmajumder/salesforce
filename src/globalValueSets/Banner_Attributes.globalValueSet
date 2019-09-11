@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accepted to CAS Nursing Prog</fullName>
+        <default>false</default>
+        <label>Accepted to CAS Nursing Prog</label>
+    </customValue>
+    <customValue>
+        <fullName>Audit</fullName>
+        <default>false</default>
+        <label>Audit</label>
+    </customValue>
+    <customValue>
+        <fullName>Bringing in PSEO credits</fullName>
+        <default>false</default>
+        <label>Bringing in PSEO credits</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Student</fullName>
+        <default>false</default>
+        <label>BUILD Student</label>
+    </customValue>
+    <customValue>
+        <fullName>CAPS to Seminary Pathway</fullName>
+        <default>false</default>
+        <label>CAPS to Seminary Pathway</label>
+    </customValue>
+    <customValue>
+        <fullName>Child of an Employee</fullName>
+        <default>false</default>
+        <label>Child of an Employee</label>
+    </customValue>
+    <customValue>
+        <fullName>Child of a Pastor</fullName>
+        <default>false</default>
+        <label>Child of a Pastor</label>
+    </customValue>
+    <customValue>
+        <fullName>Combined Nursing BS/MS</fullName>
+        <default>false</default>
+        <label>Combined Nursing BS/MS</label>
+    </customValue>
+    <customValue>
+        <fullName>Converge School Church Ldrship</fullName>
+        <default>false</default>
+        <label>Converge School Church Ldrship</label>
+    </customValue>
+    <customValue>
+        <fullName>Daystar Student</fullName>
+        <default>false</default>
+        <label>Daystar Student</label>
+    </customValue>
+    <customValue>
+        <fullName>Distance Residential</fullName>
+        <default>false</default>
+        <label>Distance Residential</label>
+    </customValue>
+    <customValue>
+        <fullName>DMin Self Directed Program</fullName>
+        <default>false</default>
+        <label>DMin Self Directed Program</label>
+    </customValue>
+    <customValue>
+        <fullName>DNP Preceptors</fullName>
+        <default>false</default>
+        <label>DNP Preceptors</label>
+    </customValue>
+    <customValue>
+        <fullName>FEC Continuing Degree Student</fullName>
+        <default>false</default>
+        <label>FEC Continuing Degree Student</label>
+    </customValue>
+    <customValue>
+        <fullName>FEC Partnership Participant</fullName>
+        <default>false</default>
+        <label>FEC Partnership Participant</label>
+    </customValue>
+    <customValue>
+        <fullName>Foundations of Acad. Readiness</fullName>
+        <default>false</default>
+        <label>Foundations of Acad. Readiness</label>
+    </customValue>
+    <customValue>
+        <fullName>Honors Program Student</fullName>
+        <default>false</default>
+        <label>Honors Program Student</label>
+    </customValue>
+    <customValue>
+        <fullName>Interim Full-Time Tuition</fullName>
+        <default>false</default>
+        <label>Interim Full-Time Tuition</label>
+    </customValue>
+    <customValue>
+        <fullName>Interim Half-Time Tuition</fullName>
+        <default>false</default>
+        <label>Interim Half-Time Tuition</label>
+    </customValue>
+    <customValue>
+        <fullName>Kern Candidates</fullName>
+        <default>false</default>
+        <label>Kern Candidates</label>
+    </customValue>
+    <customValue>
+        <fullName>Kern Scholars</fullName>
+        <default>false</default>
+        <label>Kern Scholars</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry Scholars</fullName>
+        <default>false</default>
+        <label>Ministry Scholars</label>
+    </customValue>
+    <customValue>
+        <fullName>Minn Theol Consortium Student</fullName>
+        <default>false</default>
+        <label>Minn Theol Consortium Student</label>
+    </customValue>
+    <customValue>
+        <fullName>NE Cert in Ministry Eff 2007</fullName>
+        <default>false</default>
+        <label>NE Cert in Ministry Eff 2007</label>
+    </customValue>
+    <customValue>
+        <fullName>No BA degree</fullName>
+        <default>false</default>
+        <label>No BA degree</label>
+    </customValue>
+    <customValue>
+        <fullName>No MA degree</fullName>
+        <default>false</default>
+        <label>No MA degree</label>
+    </customValue>
+    <customValue>
+        <fullName>Off-Campus Study Trip</fullName>
+        <default>false</default>
+        <label>Off-Campus Study Trip</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner - Campus Crusade</fullName>
+        <default>false</default>
+        <label>Partner - Campus Crusade</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner - Young Life</fullName>
+        <default>false</default>
+        <label>Partner - Young Life</label>
+    </customValue>
+    <customValue>
+        <fullName>Qualif Acad Beh Strat Licnse</fullName>
+        <default>false</default>
+        <label>Qualif Acad Beh Strat Licnse</label>
+    </customValue>
+    <customValue>
+        <fullName>Qualifying Gen Teach License</fullName>
+        <default>false</default>
+        <label>Qualifying Gen Teach License</label>
+    </customValue>
+    <customValue>
+        <fullName>Qualifying Special Ed Lic GS</fullName>
+        <default>false</default>
+        <label>Qualifying Special Ed Lic GS</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminary Church Member Auditor</fullName>
+        <default>false</default>
+        <label>Seminary Church Member Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminary Lifetime Auditor</fullName>
+        <default>false</default>
+        <label>Seminary Lifetime Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminary Pastor/FTCW Auditor</fullName>
+        <default>false</default>
+        <label>Seminary Pastor/FTCW Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminary Regular Auditor</fullName>
+        <default>false</default>
+        <label>Seminary Regular Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminary Spouse Auditor</fullName>
+        <default>false</default>
+        <label>Seminary Spouse Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminary Sr Citizen Auditor</fullName>
+        <default>false</default>
+        <label>Seminary Sr Citizen Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminary Visiting Doctoral</fullName>
+        <default>false</default>
+        <label>Seminary Visiting Doctoral</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminary Visiting Masters</fullName>
+        <default>false</default>
+        <label>Seminary Visiting Masters</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Citizen CAS Audit</fullName>
+        <default>false</default>
+        <label>Senior Citizen CAS Audit</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Music Ensemble Partici</fullName>
+        <default>false</default>
+        <label>Special Music Ensemble Partici</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Student</fullName>
+        <default>false</default>
+        <label>Special Student</label>
+    </customValue>
+    <customValue>
+        <fullName>Standards of Eff Prac GS</fullName>
+        <default>false</default>
+        <label>Standards of Eff Prac GS</label>
+    </customValue>
+    <customValue>
+        <fullName>TC2 Teaching Partnership</fullName>
+        <default>false</default>
+        <label>TC2 Teaching Partnership</label>
+    </customValue>
+    <customValue>
+        <fullName>Teacher Licensure</fullName>
+        <default>false</default>
+        <label>Teacher Licensure</label>
+    </customValue>
+    <customValue>
+        <fullName>Transfer Level 7</fullName>
+        <default>false</default>
+        <label>Transfer Level 7</label>
+    </customValue>
+    <customValue>
+        <fullName>Transfer with Baccalaureate</fullName>
+        <default>false</default>
+        <label>Transfer with Baccalaureate</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown Program</fullName>
+        <default>false</default>
+        <label>Unknown Program</label>
+    </customValue>
+    <masterLabel>Banner Attributes</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

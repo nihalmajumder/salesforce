@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Requirement Response</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Requirement Responses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Admissions Document --></label>
+        <name>Admissions_Document__c</name>
+        <relationshipLabel><!-- Requirement Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Application --></label>
+        <name>Application__c</name>
+        <relationshipLabel><!-- Requirement Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Archive Payload --></label>
+        <name>Archive_Payload__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date/time that a related object requirement item was fulfilled. --></help>
+        <label><!-- Child Requirement Fulfilled On --></label>
+        <name>Child_Requirement_Fulfilled_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Requirement Fulfilled On --></label>
+        <name>Document_Requirement_Fulfilled_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Email --></label>
+        <name>External_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date/time this requirement item was completed. --></help>
+        <label><!-- Fulfilled On --></label>
+        <name>Fulfilled_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- HasDocument --></label>
+        <name>HasDocument__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Child Requirement --></label>
+        <name>Has_Child_Requirement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hashcode --></label>
+        <name>Hashcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incomplete Questions --></label>
+        <name>Incomplete_Questions__c</name>
+    </fields>
+    <fields>
+        <help><!-- The max date/time that a Question with IsRequired__c == true was fulfilled. --></help>
+        <label><!-- Question Group Requirement Fulfilled On --></label>
+        <name>Question_Group_Requirement_Fulfilled_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Access Rights --></label>
+        <name>Reference_Access_Rights__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference First Name --></label>
+        <name>Reference_First_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reference form that the recommender fills out --></help>
+        <label><!-- Reference Form URL --></label>
+        <name>Reference_Form_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Last Name --></label>
+        <name>Reference_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference --></label>
+        <name>Reference__c</name>
+        <relationshipLabel><!-- Requirement Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Requirement Item --></label>
+        <name>Requirement_Item__c</name>
+        <relationshipLabel><!-- Requirement Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Send Reference --></label>
+        <name>Send_Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Reminder --></label>
+        <name>Send_Reminder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>ValueTextEntry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewed --></label>
+        <name>Viewed__c</name>
+    </fields>
+    <layouts>
+        <layout>Requirement Response Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

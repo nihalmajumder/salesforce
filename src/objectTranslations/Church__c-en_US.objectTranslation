@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Church</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Church</value>
+    </caseValues>
+    <fields>
+        <label><!-- Church Name --></label>
+        <name>Church_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Church Account for this church record. --></help>
+        <label><!-- Church --></label>
+        <name>Church__c</name>
+        <relationshipLabel><!-- Church --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <help><!-- The person for this church record --></help>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Church --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The denomination of the church --></help>
+        <label><!-- Denomination --></label>
+        <name>Denomination__c</name>
+    </fields>
+    <fields>
+        <help><!-- The holding name for the church --></help>
+        <label><!-- Holding Name --></label>
+        <name>Holding_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Church Id --></label>
+        <name>Previous_Church_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required EASY field for a custom object --></help>
+        <label><!-- Related Object JSON --></label>
+        <name>Related_Object_JSON__c</name>
+    </fields>
+    <fields>
+        <label><!-- State/Province --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required EASY field --></help>
+        <label><!-- User Created --></label>
+        <name>User_Created__c</name>
+    </fields>
+    <layouts>
+        <layout>Church Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

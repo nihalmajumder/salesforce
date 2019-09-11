@@ -1,0 +1,138 @@
+<aura:component controller="AssignRulesEntryCriteriaNewController" description="New / Edit modal for assignemnt rule entries">
+    
+    <!-- events -->
+    <aura:registerEvent name="onSuccessRuleEntry" type="c:OnSuccessRuleEntryEvt"  />
+    <aura:registerEvent name="onLoadComplete" type="c:OnLoadCompleteEvt" />
+    
+    <!-- attributes -->
+    <aura:attribute name="entry" type="Object" description="empty object used to hold rule entry data"/>
+    <aura:attribute name="ruleId" type="String" description="Id of associated assignment rule" />
+    <aura:attribute name="criteria" type="Map[]" description="holds criteria based data" />
+    <aura:attribute name="criteriaToDeleteIds" type="List" description="a collection to hold ids to delete if field is any assign" />
+    <aura:attribute name="recordId" type="String" description="id of existing record" />
+    <aura:attribute name="sobjectType" type="String" description="sobject type used to retrieve field types"/>
+    <aura:attribute name="fields" type="List" description="fields displayed for criteria" />
+    <aura:attribute name="operators" type="Map" description="operators displayed for criteria" />
+    <aura:attribute name="label" type="String" description="label for new edit screen" />
+    <aura:attribute name="selectedFieldIndex" type="String" />
+    <aura:attribute name="assignee" type="Map" description="an object holding the assignee data"/>
+    <aura:attribute name="doneLoading" type="Boolean" default="false" description="flag needed to load lookup after assignee is set or not"/>
+    
+    <aura:attribute name="isAnyAssign" type="Boolean" default="false" />
+    
+    <aura:attribute name="sobjects" type="Object[]"
+                    default="[{name : 'User', api : 'User', icon : 'standard:user', selected : true, 'nameField' : 'Name', fieldsToFilterByInput : ['Name', 'Email'], fieldsToValues :  [ {'Field' : 'isActive', 'Value' : 'True', 'dataType' : 'boolean'}], fieldsToDisplay : ['Email', 'Username']},
+                             {name : 'Queue', api : 'Group', icon : 'standard:queue', selected : false, 'nameField' : 'Name', fieldsToFilterByInput : ['Name', 'Email'], fieldsToValues :  [ {'Field' : 'Type', 'Value' : 'Queue', 'dataType' : 'string'}], fieldsToDisplay : ['Email']}]" />
+    
+    <!-- handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="fieldSelectEvt" event="c:FieldSelectEvt" action="{!c.handleFieldSelectEvt}" />     
+    <aura:handler name="onSelectPickListEvt" event="c:OnSelectPickListEvt" action="{!c.handleOnSelectPicklitEvt}" />
+    <aura:handler name="lookupEvt" event="c:LookupEvt" action="{!c.handleLookupEvt}" />
+    
+    <div>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-new-entry" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" style="width:90%; max-width: 78rem;">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-new-entry" class="slds-text-heading_medium slds-hyphenate">{!v.label}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-new-entry">
+                    <div class="slds-grid slds-wrap">
+                        
+                        <div class="slds-col slds-size_6-of-12">
+                            <lightning:input aura:id="field" type="number" label="Order" value="{!v.entry.order}" required="true"/>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <lightning:input aura:id="filterLogic" label="Filter Logic" value="{!v.entry.filterLogic}" class="slds-p-left_medium" placeholder="ex: (1 AND 2) OR 3" disabled="{!v.isAnyAssign}" />
+                        </div>
+                        
+                        <div class="slds-col slds-size_12-of-12" style="margin-top: 25px;">
+                            <lightning:tabset variant="scoped">
+                                <lightning:tab label=" Criteria are met">
+                                    <div class="slds-grid slds-wrap">
+                                        <aura:iteration items="{!v.criteria}" var="cr" indexVar="index">
+                                            <!-- at least 1 needs to be filled in -->
+                                            <div class="slds-col slds-size_5-of-12">
+                                                <div class="slds-form-element">
+                                                    <label class="slds-form-element__label" for="text-input-id-1">{!'Field ' + add(index, 1)}
+                                                        <abbr class="{!index == 0 ? 'slds-required' : 'slds-hide'}" title="required">* </abbr>
+                                                        <lightning:helptext class="{!cr.dataType == 'ANYASSIGN' ? '' : 'slds-hide'}" 
+                                                                            content="Note: Record owner will be assigned to User associated with GEO Location or Field Value mapping"/>
+                                                    </label>
+                                                    <div class="slds-form-element__control"  data-index="{!index}">
+                                                        <input disabled="{!cr.disabled}" id="{!'fld-input-' + index}" aura:id="fieldInput" name="field" data-index="{!index}" readonly="true" placeholder="Select Field"
+                                                                class="slds-input field-input-readonly" type="text" value="{!cr.fieldLabel}" required="{!index == 0}" onclick="{!c.handleClick }" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-col slds-size_2-of-12">
+                                                <!-- use lightning select looks better and doe snot take the whole screen -->
+                                                <lightning:select disabled="{!cr.disabled}" aura:id="field" name="operator" label="Operator" required="{!not(empty(cr.field))}" value="{!cr.operator}" class="slds-p-left_medium" >
+                                                    <aura:iteration items="{!(cr.dataType == 'STRING' || 
+                                                                           cr.dataType == 'PHONE' || 
+                                                                           cr.dataType == 'PICKLIST' ||
+                                                                           cr.dataType == 'TEXTAREA' ||
+                                                                           cr.dataType == 'URL' ||
+                                                                           cr.dataType == 'EMAIL' ||
+                                                                           cr.dataType == 'COMBOBOX') ?  v.operators.STRINGS : 
+                                                                           cr.dataType == 'BOOLEAN' ? v.operators.BOOLEAN : 
+                                                                           cr.dataType == 'MULTIPICKLIST' ? v.operators.MULTIPICKLIST : 
+                                                                           cr.dataType == 'ANYASSIGN' ? v.operators.ANYASSIGN : v.operators.GENERAL}"
+                                                                    var="option">
+                                                        <option text="{!option.label}" value="{!option.value}" />
+                                                    </aura:iteration>
+                                                </lightning:select>
+                                            </div>
+                                            <div class="slds-col slds-size_5-of-12">
+                                                <!-- data type for selected field needs to be stored on entry object -->
+                                                <!-- need to add support for multi select picklist -->
+                                                <aura:if isTrue="{!cr.dataType == 'PICKLIST' || cr.dataType == 'BOOLEAN' || cr.dataType == 'MULTIPICKLIST'}">
+                                                    <div class="slds-p-left_medium">
+                                                        <c:PicklistCmp isRequired="{!not(empty(cr.field))}" id="{!cr.field + '.' + cr.sobjectType + '.' + index}" data="{!index}" field="{!cr.field}" sobjectType="{!cr.sobjectType}" selectedValues="{!cr.value}" multi="{!cr.dataType == 'MULTIPICKLIST' ?  true : false }"/>
+                                                    </div>
+                                                </aura:if>
+                                                <!-- date and date time don't see to work properly, unless defined in their own if statements -->
+                                                <aura:if isTrue="{!cr.dataType == 'DATE'}">
+                                                    <lightning:input disabled="{!cr.disabled}" type="date" aura:id="field" label="Value" class="slds-p-left_medium"  value="{!cr.value}" required="{!not(empty(cr.field))}"/>
+                                                </aura:if>
+                                                <!-- date and date time don't see to work properly, unless defined in their own if statements -->
+                                                <aura:if isTrue="{!cr.dataType == 'DATETIME'}">
+                                                    <lightning:input disabled="{!cr.disabled}" type="datetime" aura:id="field" label="Value" class="slds-p-left_medium"  value="{!cr.value}" required="{!not(empty(cr.field))}"/>
+                                                </aura:if>
+                                                <aura:if isTrue="{!cr.dataType != 'PICKLIST' &amp;&amp; cr.dataType != 'BOOLEAN' &amp;&amp; cr.dataType != 'MULTIPICKLIST' &amp;&amp; cr.dataType != 'DATETIME' &amp;&amp; cr.dataType != 'DATE'}">
+                                                    <lightning:input disabled="{!cr.disabled}" type="{!cr.dataType == 'EMAIL' ? 'email' : cr.dataType == 'PHONE' ? 'tel' : ( cr.dataType == 'INTEGER' || cr.dataType == 'DOUBLE' || cr.dataType == 'CURRENCY' || cr.dataType == 'PERCENT' ) ? 'number' : 'text'}" 
+                                                                     aura:id="field" label="Value" class="slds-p-left_medium"  value="{!cr.value}" required="{!not(empty(cr.field))}" />
+                                                </aura:if>
+                                                
+                                            </div>
+                                        </aura:iteration>
+                                    </div>
+                                    <lightning:button variant="base" label="Add Row" title="Add Row" onclick="{! c.handleAddRow }" disabled="{!v.criteria.length ge 25 || v.isAnyAssign }"/>
+                                    <lightning:button variant="base" label="Remove Row" title="Remove Row" onclick="{! c.handleRemoveRow }" disabled="{!v.criteria.length le 5}"/>
+                                </lightning:tab>
+                            </lightning:tabset>
+                        </div>
+                        <div class="slds-col slds-size_12-of-12" style="margin-top: 10px;">
+                            <lightning:input type="checkbox" label="Send Email" checked="{!v.entry.sendEmail}" />
+                        </div>
+                        <div class="slds-col slds-size_12-of-12" style="margin-top: 10px;">
+                            <div class="slds-form-element">
+                                <aura:if isTrue="{!v.doneLoading}">
+                                    
+                                    <c:LookupCmp aura:id="lookup" title="Assign To" sobjects="{!v.sobjects}" selectedRecord="{!v.assignee}" disabled="{!v.isAnyAssign}"/>
+                                </aura:if>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" type="button" onclick="{!c.handleCancel}">Cancel</button>
+                    <button class="slds-button slds-button_brand" type="button" onclick="{!c.handleSave}">Save</button>
+                </footer>
+            </div>
+            {!v.body}
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+</aura:component>

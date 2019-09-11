@@ -1,0 +1,5 @@
+<aura:component description="screen2 acts as a container for the rules entries components, it replaces screen 1">
+    <aura:attribute name="ruleId" type="String" description="assignment rule id" />
+    <aura:attribute name="sobjectType" type="String" description="sobject related to assignment rule" />
+    <c:AssignmentRulesRuleEntryCriteriaCmp selectedRuleId="{!v.ruleId}" sobjectType="{!v.sobjectType}"/>
+</aura:component>

@@ -1,0 +1,389 @@
+<messaging:emailTemplate subject="{!relatedTo.Application__r.Contact__r.Name}'s application to Bethel University" recipientType="Contact" relatedToType="Requirement_Response__c">
+<messaging:htmlEmailBody >
+
+<style type="text/css">.wrapper a:hover {
+        text-decoration: none !important;
+    }
+    .btn a:hover,
+    .footer__links a:hover {
+        opacity: 0.8;
+    }
+    .wrapper .footer__share-button:hover {
+        color: #ffffff !important;
+        opacity: 0.8;
+    }
+    a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
+    .column {
+        padding: 0;
+        text-align: left;
+        vertical-align: top;
+    }
+    .mso .font-avenir,
+    .mso .font-cabin,
+    .mso .font-open-sans,
+    .mso .font-ubuntu {
+        font-family: sans-serif !important;
+    }
+    .mso .font-bitter,
+    .mso .font-merriweather,
+    .mso .font-pt-serif {
+        font-family: Georgia, serif !important;
+    }
+    .mso .font-lato,
+    .mso .font-roboto {
+        font-family: Tahoma, sans-serif !important;
+    }
+    .mso .font-pt-sans {
+        font-family: "Trebuchet MS", sans-serif !important;
+    }
+    .mso .footer p {
+        margin: 0;
+    }
+    @media only screen and (max-width: 620px) {
+        .wrapper .size-18,
+        .wrapper .size-20 {
+            font-size: 17px !important;
+            line-height: 26px !important;
+        }
+        .wrapper .size-22 {
+            font-size: 18px !important;
+            line-height: 26px !important;
+        }
+        .wrapper .size-24 {
+            font-size: 20px !important;
+            line-height: 28px !important;
+        }
+        .wrapper .size-26 {
+            font-size: 22px !important;
+            line-height: 31px !important;
+        }
+        .wrapper .size-28 {
+            font-size: 24px !important;
+            line-height: 32px !important;
+        }
+        .wrapper .size-30 {
+            font-size: 26px !important;
+            line-height: 34px !important;
+        }
+        .wrapper .size-32 {
+            font-size: 28px !important;
+            line-height: 36px !important;
+        }
+        .wrapper .size-34,
+        .wrapper .size-36 {
+            font-size: 30px !important;
+            line-height: 38px !important;
+        }
+        .wrapper .size-40 {
+            font-size: 32px !important;
+            line-height: 40px !important;
+        }
+        .wrapper .size-44 {
+            font-size: 34px !important;
+            line-height: 43px !important;
+        }
+        .wrapper .size-48 {
+            font-size: 36px !important;
+            line-height: 43px !important;
+        }
+        .wrapper .size-56 {
+            font-size: 40px !important;
+            line-height: 47px !important;
+        }
+        .wrapper .size-64 {
+            font-size: 44px !important;
+            line-height: 50px !important;
+        }
+        .divider {
+            Margin-left: auto !important;
+            Margin-right: auto !important;
+        }
+        .btn a {
+            display: block !important;
+            font-size: 14px !important;
+            line-height: 24px !important;
+            padding: 12px 10px !important;
+            width: auto !important;
+        }
+        .btn--shadow a {
+            padding: 12px 10px 13px 10px !important;
+        }
+        .image img {
+            height: auto;
+            width: 100%;
+        }
+        .layout,
+        .column,
+        .preheader__webversion,
+        .header td {
+            width: 320px !important;
+        }
+        .footer,
+        .footer__left,
+        .footer__right,
+        .footer__inner {
+            width: 280px !important;
+        }
+        .preheader__snippet,
+        .layout__edges {
+            display: none !important;
+        }
+        .preheader__webversion {
+            text-align: center !important;
+        }
+        .header__logo {
+            Margin-left: 20px;
+            Margin-right: 20px;
+        }
+        .layout--full-width {
+            width: 100% !important;
+        }
+        .layout--full-width tbody,
+        .layout--full-width tr {
+            display: table;
+            Margin-left: auto;
+            Margin-right: auto;
+            width: 320px;
+        }
+        .column,
+        .layout__gutter,
+        .footer__left,
+        .footer__right {
+            display: block;
+            Float: left;
+        }
+        .footer__inner {
+            text-align: center;
+        }
+        .footer__links {
+            Float: none;
+            Margin-left: auto;
+            Margin-right: auto;
+        }
+        .footer__right p,
+        .footer__share-button {
+            display: inline-block;
+        }
+        .layout__gutter {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .layout--no-gutter.layout--has-border:not(.layout--full-width),
+        .layout--has-gutter.layout--has-border .column__background {
+            width: 322px !important;
+        }
+        .layout--has-gutter.layout--has-border {
+            left: -1px;
+            position: relative;
+        }
+    }
+    @media only screen and (max-width: 320px) {
+        .border {
+            display: none;
+        }
+        .layout--no-gutter.layout--has-border:not(.layout--full-width),
+        .layout--has-gutter.layout--has-border .column__background {
+            width: 320px !important;
+        }
+        .layout--has-gutter.layout--has-border {
+            left: 0 !important;
+        }
+    }
+</style>
+<style type="text/css">body,
+    .wrapper {
+        background-color: #fff
+    }
+    .wrapper h1 {
+        color: #555;
+        font-size: 26px;
+        line-height: 34px
+    }
+    .wrapper h1 {}
+    .wrapper h1 {
+        font-family: sans-serif
+    }
+    .wrapper h2 {
+        color: #555;
+        font-size: 20px;
+        line-height: 28px
+    }
+    .wrapper h2 {}
+    .wrapper h2 {
+        font-family: sans-serif
+    }
+    .wrapper h3 {
+        color: #555;
+        font-size: 16px;
+        line-height: 24px
+    }
+    .wrapper h3 {}
+    .wrapper h3 {
+        font-family: sans-serif
+    }
+    .wrapper a {
+        color: #0069aa
+    }
+    .wrapper a:hover {
+        color: #002a44 !important
+    }
+    @media only screen and (max-width: 620px) {
+        .wrapper h1 {}
+        .wrapper h1 {
+            font-size: 22px;
+            line-height: 31px
+        }
+        .wrapper h2 {}
+        .wrapper h2 {
+            font-size: 17px;
+            line-height: 26px
+        }
+        .wrapper h3 {}
+        .wrapper p {}
+    }
+    .column,
+    .column__background td {
+        color: #555;
+        font-size: 14px;
+        line-height: 21px
+    }
+    .column,
+    .column__background td {
+        font-family: Georgia, serif
+    }
+    .border {
+        background-color: #ccc
+    }
+    .layout--no-gutter.layout--has-border:not(.layout--full-width),
+    .layout--has-gutter.layout--has-border .column__background,
+    .layout--full-width.layout--has-border {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc
+    }
+    .wrapper blockquote {
+        border-left: 4px solid #ccc
+    }
+    .divider {
+        background-color: #ccc
+    }
+    .wrapper .btn a {
+        color: #fff
+    }
+    .wrapper .btn a {
+        font-family: Georgia, serif
+    }
+    .wrapper .btn a:hover {
+        color: #fff !important
+    }
+    .btn--flat a,
+    .btn--shadow a,
+    .btn--depth a {
+        background-color: #0069aa
+    }
+    .btn--ghost a {
+        border: 1px solid #0069aa
+    }
+    .preheader--inline,
+    .footer__left {
+        color: #555
+    }
+    .preheader--inline,
+    .footer__left {
+        font-family: Georgia, serif
+    }
+    .wrapper .preheader--inline a,
+    .wrapper .footer__left a {
+        color: #555
+    }
+    .wrapper .preheader--inline a:hover,
+    .wrapper .footer__left a:hover {
+        color: #555 !important
+    }
+    .header__logo {
+        color: #c3ced9
+    }
+    .header__logo {
+        font-family: Roboto, Tahoma, sans-serif
+    }
+    .mso .header__logo {
+        font-family: Tahoma, sans-serif !important
+    }
+    .wrapper .header__logo a {
+        color: #c3ced9
+    }
+    .wrapper .header__logo a:hover {
+        color: #859bb1 !important
+    }
+    .footer__share-button {
+        background-color: gray
+    }
+    .footer__share-button {
+        font-family: Georgia, serif
+    }
+    .layout__separator--inline {
+        font-size: 20px;
+        line-height: 20px;
+        mso-line-height-rule: exactly
+    }
+</style>
+
+<div class="wrapper" style="background-color: #fff;">
+
+
+<table align="center" class="header" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;">
+    <tbody>
+        <tr>
+            <td style="padding: 0;width: 560px;">
+            <div class="header__logo emb-logo-margin-box" style="font-size: 26px;line-height: 32px;Margin-top: 6px;Margin-bottom: 40px;color: #c3ced9;font-family: Roboto,Tahoma,sans-serif;">
+            <div align="center" class="logo-center" id="emb-email-header" style="font-size:0px !important;line-height:0 !important;"><img alt="" height="83" src="https://i2.createsend1.com/ti/r/5A/022/8F6/033334/8f6/images/university-horz-color.png" style="height: auto;width: 100%;border: 0;max-width: 260px;" width="260" /></div>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div style="font-size: 20px;line-height: 20px;mso-line-height-rule: exactly;">&nbsp;</div>
+<repeater> <layout label="announcements">
+<div class="repeater-item">
+<p>Hello {!relatedTo.Reference_First_Name__c},<br />
+<br />
+{!relatedTo.Application__r.Contact__r.FirstName} has applied to the {!relatedTo.Application__r.Intended_Program__r.Program_Name_on_Application__c} program at Bethel University and provided your name as a reference. We appreciate your willingness to assist us in this process. Use the information below to complete the online form.
+<br /><br />
+Please note, {!relatedTo.Application__r.Contact__r.FirstName} has {!IF(relatedTo.Reference_Access_Rights__c,'','not ')}waived the right to review your completed reference form. 
+<br /><br />
+Applicant’s name: {!relatedTo.Application__r.Contact__r.Name} <br />
+Complete reference form online using the link below: <br />
+<a href="{!$Setup.Application_Setting__c.Community_URL__c+"/apex/ApplicationReference?contactId="+relatedTo.Application__r.Contact__c+"&applicationId="+relatedTo.Application__c+"&requirementId="+relatedTo.Requirement_Item__r.Requirement__c+"&r="+relatedTo.Requirement_Item__r.Id+"&h="+relatedTo.Hashcode__c}">Reference link</a>
+<br /><br />
+If you have any questions, please let us know.<br />
+<br />
+Office of Admissions<br />
+Graduate School<br />
+Bethel University<br />
+651.635.8000<br />
+800.255.8706, ext. 8000<br />
+graduate-admissions@bethel.edu</p>
+</div>
+</layout> </repeater>
+
+<table align="center" class="footer" style="border-collapse: collapse;table-layout: fixed;Margin-right: auto;Margin-left: auto;border-spacing: 0;">
+    <tbody>
+        <tr>
+            <td class="footer__inner" style="padding: 0 20px 40px 20px;font-size: 12px;line-height: 19px;color: #999;">
+            <div class="footer__permission" style="Margin-top: 18px;color: #999;">This email is an automatic notification as part of the admissions application process at Bethel University. Bethel University | 3900 Bethel Drive | St. Paul, MN | 55112 | 651.638.6400</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<img alt="" border="0" height="1" src="https://createsend1.com/t/r-o-l-l/o.gif" style="visibility: hidden !important; display: block !important; height:1px !important; width:1px !important; border: 0 !important; margin: 0 !important; padding: 0 !important" width="1" />
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

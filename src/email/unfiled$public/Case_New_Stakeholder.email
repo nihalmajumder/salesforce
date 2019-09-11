@@ -1,0 +1,8 @@
+Hi {!User.FirstName}, 
+
+Case #{!Case.CaseNumber} has been submitted and you have been listed as the stakeholder. 
+
+You can track the status of the case here:
+https://bethel-university.lightning.force.com/{!Case.Id}
+
+Please reach out to us about this Case by using Chatter in the Case feed.

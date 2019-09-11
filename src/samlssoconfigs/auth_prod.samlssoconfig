@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>https://auth-prod.bethel.edu/idp</issuer>
+    <loginUrl>https://auth-prod.bethel.edu/cas/idp/profile/SAML2/Redirect/SSO</loginUrl>
+    <name>Bethel SSO - Employee</name>
+    <oauthTokenEndpoint>https://bethel-sandbox--full.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P17A0000004DIp</requestSigningCertId>
+    <salesforceLoginUrl>https://bethel-sandbox--full.my.salesforce.com</salesforceLoginUrl>
+    <samlEntityId>https://bethel-sandbox--full.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <singleLogoutBinding>PostBinding</singleLogoutBinding>
+    <singleLogoutUrl>https://auth-prod.bethel.edu/cas/idp/profile/SAML2/POST/SLO</singleLogoutUrl>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDMTCCAhmgAwIBAgIUIZwQ4U/YcTX/bMD1xW4qiS8YLvYwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUYXV0aC1wcm9kLmJldGhlbC5lZHUwHhcNMTgwOTA1MTQx
+MTUyWhcNMzgwOTA1MTQxMTUyWjAfMR0wGwYDVQQDDBRhdXRoLXByb2QuYmV0aGVs
+LmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJvqvc6sfqbQ0FU6
+L7IgMEnafIheJ+XlGhLf3In19GT6Ue1NCgnAPNLEvfIAc079b30A9N2qTa4qC1j3
+kMAodfTlDM1eQ/BmyMhzdqsykqhqDKXLVC+qBaBJzwl1OfUSQNmhCzVX2SxQLO3O
+GwRcU/Sg/k+ztjdyc8zPIwa9gbVCD7uti/OEs7Oz9rN5To7Uc2lqqVD/SkPdITTU
+bQz3Usp9c05Syzv1nvqAm5D1uDZNzkBgGH9YNf/ClgGxHcGG0C5c0M/3lqYBCHEh
+jbPFSoe+EfT65C7JphNHN0UJqomM/1bHXaJpK7UBreq26y3j4jJVpODBvAdLMvxX
+4n2xE4ECAwEAAaNlMGMwHQYDVR0OBBYEFKIsFoxmD34wVE/PD6OKnSO25LPzMEIG
+A1UdEQQ7MDmCFGF1dGgtcHJvZC5iZXRoZWwuZWR1hiFhdXRoLXByb2QuYmV0aGVs
+LmVkdS9pZHAvbWV0YWRhdGEwDQYJKoZIhvcNAQELBQADggEBAJbZsrUUlo/hEmlI
+xW3IToIevzblb6IbAoOl3/jEZ9rsAktVCzix/RnrE32bDIMjd4uN1EDERTA+1Esh
+8NVKG9E6Mh/re8oheTunG5PjpWjoSxBRj3WmrW0vUCEz2m3ntIIrH/CaxTHDFr/F
+84Bym9YSCBduMlHG2sFaZXE7pXf4BUafZnoTILstzWBVgvorZ7v2mFpoDqVyzO5e
+7yvfsIXZ6PbM1J+ELrSH+fR8R8Ti3eyCwKE3RcvgLJ6KRm6AbGz9NSL3VtT5K4Ke
+KE/RB4yEMS/WvyAur7iFsutzkdgppbNlzzhIyc+EKValVgxSN8SLJ0DKCnKQuHPc
+g22kVMg=</validationCert>
+</SamlSsoConfig>

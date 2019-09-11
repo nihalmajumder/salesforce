@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Education History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Education Histories</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accreditation --></label>
+        <name>Accreditation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Upload --></label>
+        <name>Allow_Upload__c</name>
+    </fields>
+    <fields>
+        <label><!-- Best School Name --></label>
+        <name>Best_School_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- CEEB Code --></label>
+        <name>CEEB_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- The person for this education history record --></help>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Education Histories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credits Earned --></label>
+        <name>Credits_Earned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Degree --></label>
+        <name>Degree__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Document Received --></label>
+        <name>Document_Date_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display to Applicant --></label>
+        <name>Document_Display_to_Applicant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Status Description --></label>
+        <name>Document_Status_Description__c</name>
+        <picklistValues>
+            <masterLabel>Not Yet Received</masterLabel>
+            <translation><!-- Not Yet Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Official</masterLabel>
+            <translation><!-- Official --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Official, not final</masterLabel>
+            <translation><!-- Official, not final --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unofficial, open envelope</masterLabel>
+            <translation><!-- Unofficial, open envelope --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unofficial, received by email</masterLabel>
+            <translation><!-- Unofficial, received by email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unofficial, score on transcript</masterLabel>
+            <translation><!-- Unofficial, score on transcript --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unofficial, see notes</masterLabel>
+            <translation><!-- Unofficial, see notes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Document Status --></label>
+        <name>Document_Status__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mandatory</masterLabel>
+            <translation><!-- Mandatory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Received</masterLabel>
+            <translation><!-- Not Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Educational Institution for this education history --></help>
+        <label><!-- Educational Institution --></label>
+        <name>Educational_Institution__c</name>
+        <relationshipLabel><!-- Education Histories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Electronic Transcript --></label>
+        <name>Electronic_Transcript__c</name>
+    </fields>
+    <fields>
+        <help><!-- The full name of the person on the transcription for this education record --></help>
+        <label><!-- Full Name On Transcript --></label>
+        <name>Full_Name_On_Transcript__c</name>
+    </fields>
+    <fields>
+        <label><!-- GPA Weighted --></label>
+        <name>GPA_Weighted__c</name>
+    </fields>
+    <fields>
+        <label><!-- GPA --></label>
+        <name>GPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Graduation Date --></label>
+        <name>Graduation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Graduation Year --></label>
+        <name>Graduation_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- High School Class Size --></label>
+        <name>High_School_Class_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- High School Percentile --></label>
+        <name>High_School_Percentile__c</name>
+    </fields>
+    <fields>
+        <label><!-- High School Rank --></label>
+        <name>High_School_Rank__c</name>
+    </fields>
+    <fields>
+        <help><!-- The holding name for the school --></help>
+        <label><!-- Holding Name --></label>
+        <name>Holding_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internal Comments --></label>
+        <name>Internal_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Major --></label>
+        <name>Major__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minnesota MARSS Number --></label>
+        <name>Minnesota_MARSS_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Org Link --></label>
+        <name>Old_Org_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal Comments --></label>
+        <name>Portal_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Id --></label>
+        <name>Previous_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary GPA Record --></label>
+        <name>Primary_GPA_Record__c</name>
+    </fields>
+    <fields>
+        <help><!-- Current Record Type. --></help>
+        <label><!-- Record Type Name --></label>
+        <name>Record_Type_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required EASY field for a custom object --></help>
+        <label><!-- Related Object JSON --></label>
+        <name>Related_Object_JSON__c</name>
+    </fields>
+    <fields>
+        <help><!-- CEEB code of related School, if it exists. --></help>
+        <label><!-- School CEEB --></label>
+        <name>School_CEEB__c</name>
+    </fields>
+    <fields>
+        <help><!-- City of related School, if it exists. --></help>
+        <label><!-- School City --></label>
+        <name>School_City__c</name>
+    </fields>
+    <fields>
+        <help><!-- Country of related School, if it exists. --></help>
+        <label><!-- School Country --></label>
+        <name>School_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>School_Not_Found_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>School_Not_Found_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Name --></label>
+        <name>School_Not_Found_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- State/Province --></label>
+        <name>School_Not_Found_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address --></label>
+        <name>School_Not_Found_Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>School_Not_Found_Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Not Found --></label>
+        <name>School_Not_Found__c</name>
+    </fields>
+    <fields>
+        <help><!-- State of related School, if it exists. --></help>
+        <label><!-- School State --></label>
+        <name>School_State__c</name>
+    </fields>
+    <fields>
+        <help><!-- Street address of related School, if it exists. --></help>
+        <label><!-- School Street Address --></label>
+        <name>School_Street_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- Zip code of related School, if it exists. --></help>
+        <label><!-- School Zip Code --></label>
+        <name>School_Zip_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- ScoreLink --></label>
+        <name>ScoreLink__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transcript Evaluation --></label>
+        <name>Transcript_Evaluation__c</name>
+    </fields>
+    <fields>
+        <help><!-- The type of education institution or school for this education history --></help>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Church</masterLabel>
+            <translation><!-- Church --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College</masterLabel>
+            <translation><!-- College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High School</masterLabel>
+            <translation><!-- High School --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Undergraduate Degree --></label>
+        <name>Undergraduate_Degree__c</name>
+    </fields>
+    <fields>
+        <help><!-- The unofficial GPA for this educational institute specified by the applicant. --></help>
+        <label><!-- Unofficial GPA --></label>
+        <name>Unofficial_GPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unofficial Received Date 1 --></label>
+        <name>Unofficial_Received_Date_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unofficial Received Date 2 --></label>
+        <name>Unofficial_Received_Date_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required EASY field --></help>
+        <label><!-- User Created --></label>
+        <name>User_Created__c</name>
+    </fields>
+    <layouts>
+        <layout>Education History Layout - College</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Document Status --></label>
+            <section>Document Status</section>
+        </sections>
+        <sections>
+            <label><!-- Education History Information --></label>
+            <section>Education History Information</section>
+        </sections>
+        <sections>
+            <label><!-- School Detail --></label>
+            <section>School Detail</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Education History Layout - High School</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Document Status --></label>
+            <section>Document Status</section>
+        </sections>
+        <sections>
+            <label><!-- Education History Information --></label>
+            <section>Education History Information</section>
+        </sections>
+        <sections>
+            <label><!-- School Detail --></label>
+            <section>School Detail</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Education History Layout - Master</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Document Status --></label>
+            <section>Document Status</section>
+        </sections>
+        <sections>
+            <label><!-- Education History Information --></label>
+            <section>Education History Information</section>
+        </sections>
+        <sections>
+            <label><!-- School Detail --></label>
+            <section>School Detail</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Represents a Church --></description>
+        <label><!-- Church --></label>
+        <name>Church</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- College --></label>
+        <name>College</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- High School --></label>
+        <name>High_School</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Inquired</fullName>
+        <default>false</default>
+        <label>Inquired</label>
+    </customValue>
+    <customValue>
+        <fullName>Pre-Applied</fullName>
+        <default>false</default>
+        <label>Pre-Applied</label>
+    </customValue>
+    <customValue>
+        <fullName>App Started</fullName>
+        <default>false</default>
+        <label>App Started</label>
+    </customValue>
+    <customValue>
+        <fullName>App Submitted</fullName>
+        <default>false</default>
+        <label>App Submitted</label>
+    </customValue>
+    <customValue>
+        <fullName>App Completed</fullName>
+        <default>false</default>
+        <label>App Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Wait Listed</fullName>
+        <default>false</default>
+        <label>Wait Listed</label>
+    </customValue>
+    <customValue>
+        <fullName>Accepted</fullName>
+        <default>false</default>
+        <label>Accepted</label>
+    </customValue>
+    <customValue>
+        <fullName>Fee Paid</fullName>
+        <default>false</default>
+        <label>Fee Paid</label>
+    </customValue>
+    <customValue>
+        <fullName>Fee Waived</fullName>
+        <default>false</default>
+        <label>Fee Waived</label>
+    </customValue>
+    <customValue>
+        <fullName>Registered</fullName>
+        <default>false</default>
+        <label>Registered</label>
+    </customValue>
+    <customValue>
+        <fullName>Enrolled</fullName>
+        <default>false</default>
+        <label>Enrolled</label>
+    </customValue>
+    <customValue>
+        <fullName>Inquired - File Closed</fullName>
+        <default>false</default>
+        <label>Inquired - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Pre-Applied - File Closed</fullName>
+        <default>false</default>
+        <label>Pre-Applied - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>App Started - File Closed</fullName>
+        <default>false</default>
+        <label>App Started - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>App Submitted - File Closed</fullName>
+        <default>false</default>
+        <label>App Submitted - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>App Completed - File Closed</fullName>
+        <default>false</default>
+        <label>App Completed - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Wait Listed - File Closed</fullName>
+        <default>false</default>
+        <label>Wait Listed - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Accepted - File Closed</fullName>
+        <default>false</default>
+        <label>Accepted - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Rejected - App Submitted - File Closed</fullName>
+        <default>false</default>
+        <label>Rejected - App Submitted - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Rejected - App Completed - File Closed</fullName>
+        <default>false</default>
+        <label>Rejected - App Completed - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Fee Paid - File Closed</fullName>
+        <default>false</default>
+        <label>Fee Paid - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Fee Waived - File Closed</fullName>
+        <default>false</default>
+        <label>Fee Waived - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Registered - File Closed</fullName>
+        <default>false</default>
+        <label>Registered - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Confirmed - File Closed</fullName>
+        <default>false</default>
+        <label>Confirmed - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown - File Closed</fullName>
+        <default>false</default>
+        <label>Unknown - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead - File Closed</fullName>
+        <default>false</default>
+        <label>Lead - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Rejected - App Started - File Closed</fullName>
+        <default>false</default>
+        <label>Rejected - App Started - File Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown - File Close</fullName>
+        <default>false</default>
+        <label>Unknown - File Close</label>
+    </customValue>
+    <customValue>
+        <fullName>Wait Listed - Wait Listed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Wait Listed - Wait Listed</label>
+    </customValue>
+    <description>The stage detail or substage of the Opportunity</description>
+    <masterLabel>Stage Details</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

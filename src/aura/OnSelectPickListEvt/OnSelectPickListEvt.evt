@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="event fired when selection is made from picklist">
+    <aura:attribute name="options" type="Object" />
+    <aura:attribute name="field" type="String" />
+    <aura:attribute name="data" type="Object" />
+</aura:event>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Cases$Owner</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Cases$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Contact.Cases.Activities$Subject</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Cases$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.SSR_Academic_Petition,Case.SSR_Commencement,Case.SSR_Readmission,Case.SSR_Student_Success_Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Cases$Type</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Academic Advising,Academic Concern,Academic Dishonesty,Appeal,Behavioral Concern,Commencement,Degree Change,Exception Request,Leadership Coaching,Orientation,Readmission,Retention,Schedule,Schedule - Admissions,Success Coaching,Support Referral,Withdrawal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Cases.Activities$Status</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Not Started,In Progress</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Cases$Status</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>New</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>Contact.Cases.Activities$ActivityDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Cases$Academic_Program_Division__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Open Tasks - Advising</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Cases_and_Tasks__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

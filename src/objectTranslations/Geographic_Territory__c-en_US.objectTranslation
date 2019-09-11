@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Geographic Territory</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Geographic Territories</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enter the city for the territory --></help>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the three digit FIPS county code --></help>
+        <label><!-- County Code --></label>
+        <name>County_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- This value is a combination of the State FIPS code and the County FIPS code. It is a 5 digit value that uniquely represents a county. --></help>
+        <label><!-- County ID --></label>
+        <name>County_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the county for the territory --></help>
+        <label><!-- County --></label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the postal code for the territory --></help>
+        <label><!-- Postal Code --></label>
+        <name>Postal_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the two digit FIPS state code --></help>
+        <label><!-- State Code --></label>
+        <name>State_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the state for the territory --></help>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <layouts>
+        <layout>Geographic Territory Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

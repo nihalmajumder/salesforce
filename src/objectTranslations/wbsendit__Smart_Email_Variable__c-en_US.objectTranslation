@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Compound Key --></label>
+        <name>wbsendit__Compound_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>wbsendit__Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Format --></label>
+        <name>wbsendit__Format__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Child Relationship --></label>
+        <name>wbsendit__Is_Child_Relationship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>wbsendit__Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Names --></label>
+        <name>wbsendit__Object_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smart Email --></label>
+        <name>wbsendit__Smart_Email__c</name>
+        <relationshipLabel><!-- Smart Email Variables --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

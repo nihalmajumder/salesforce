@@ -1,0 +1,352 @@
+<!--
+ - Created by phg49389 on 2019-03-21.
+ -->
+
+<apex:page id="AcademicPetitionView" showHeader="false" standardStylesheets="false"
+           sideBar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0"
+           standardController="Case">
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>Academic Petition Decision</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <style>
+                @font-face {
+                    font-family:'Salesforce Sans';
+                    src:url(/_slds/fonts/v2.3.0/SalesforceSans-Light.woff2) format('woff2'),
+                    url(/_slds/fonts/v2.3.0/SalesforceSans-Light.woff) format('woff');
+                    font-weight:300
+                }
+                @font-face {
+                    font-family:'Salesforce Sans';
+                    src:url(/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2) format('woff2'),
+                    url(/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff) format('woff');
+                    font-weight:400
+                }
+                @font-face {
+                    font-family:'Salesforce Sans';
+                    src:url(/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2) format('woff2'),
+                    url(/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff) format('woff');
+                    font-style:italic;
+                    font-weight:400
+                }
+                @font-face {
+                    font-family:'Salesforce Sans';
+                    src:url(/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2) format('woff2'),
+                    url(/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff) format('woff');
+                    font-weight:700
+                }
+                @font-face {
+                    font-family:'Salesforce Sans';
+                    src:url(/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2) format('woff2'),
+                    url(/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff) format('woff');
+                    font-style:italic;
+                    font-weight:700
+                }
+
+                body {
+                    font-family: "Salesforce Sans", Arial, sans-serif;
+                    flex-basis: auto;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    font-feature-settings: normal;
+                    font-kerning: auto;
+                    font-language-override: normal;
+                    font-feature-settings: normal;
+                    font-size-adjust: none;
+                    font-stretch: 100%;
+                    font-variant: normal;
+                    font-variant-alternates: normal;
+                    font-variant-caps: normal;
+                    font-variant-east-asian: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-numeric: normal;
+                    font-variant-position: normal;
+                }
+
+                h1 {
+                    color: rgb(19, 24, 138);
+                    font-size: 18px;
+                    text-align: center;
+                    display: block;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+
+                h2 {
+                    color: rgb(19, 24, 138);
+                    font-size: 18px;
+                    text-align: left;
+                    display: block;
+                    padding-top: 30px;
+                }
+
+                h3 {
+                    background-color: rgb(133, 187, 243);
+                    color: rgb(255, 255, 255);
+                    display: block;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    padding: 5px 10px;
+                }
+
+                h4, p {
+                    color: rgb(22, 50, 92);
+                    font-size: 14px;
+                    text-align: left;
+                    display: block;
+                }
+
+                h4 {
+                    margin-top: 40px;
+                }
+
+                hr {
+                    width: 98%;
+                    height: 0;
+                    margin-top: 32px;
+                    margin-bottom: 32px;
+                    border-color: rgb(216, 221, 230);
+                    border-left-style: none;
+                    border-right-style: none;
+                    border-top-style: none;
+                }
+
+                table, tbody, tr {
+                    width: 100%;
+                }
+
+                td.left {
+                    display: block;
+                    width: 33%;
+                    float: left;
+                }
+
+                td.right {
+                    display: block;
+                    width: 43%; /* 66% of 66% */
+                    float: left;
+                }
+
+                label {
+                    color: rgb(84, 105, 141);
+                    font-size: 12px;
+                    float: right;
+                    margin-top: 10px;
+                    margin-bottom: 4px;
+                    margin-right: 12px;
+                    font-weight: bold;
+                }
+
+                input, select, textarea {
+                    display: inline-block;
+                    color: rgb(22, 50, 92);
+                    font-size: 14px;
+                    border-radius: 4px;
+                    border-width: 1px;
+                    border-style: solid;
+                    min-height: 36px;
+                    padding-left: 12px;
+                    padding-right: 16px;
+                    width: 100%;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+
+                select, textarea {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                }
+
+                select {
+                    padding-left: 8px;
+                }
+
+                input[disabled=disabled], select[disabled=disabled], textarea[disabled=disabled] {
+                    background-color: rgb(224, 229, 238);
+                    border-color: rgb(168, 183, 199);
+                    cursor: not-allowed;
+                }
+
+                input:not([disabled]), select:not([disabled]), textarea:not([disabled]) {
+                    background-color: rgb(255, 255, 255);
+                    border-color: rgb(216, 221, 230); /* rgb(21, 137, 238); */
+                }
+
+                input[type=submit]:not([disabled]) {
+                    background-color: rgb(0, 112, 210);
+                    background-image: none;
+                    border-color: rgb(0, 112, 210);
+                    color: rgb(255, 255, 255);
+                    font-size: 14px;
+                    cursor: pointer;
+                    margin-top: 40px;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    vertical-align: middle;
+                    width: auto;
+                    position: relative;
+                    left: 40%;
+                    font-weight: normal;
+                }
+
+                input[type=submit]:not([disabled]):hover {
+                    background-color: rgb(0, 95, 178);
+                }
+
+                img {
+                    width: 10%;
+                    position: relative;
+                    float: left;
+                }
+
+                .div-centered {
+                    width: 80%;
+                    position: absolute;
+                    left: 10%;
+                    padding-bottom: 24px;
+                }
+            </style>
+        </head>
+        <body>
+            <img src="https://www.bethel.edu/marketing/images/logos/bethel-logo-vertical-color.png" alt="Bethel University Logo"/>
+            <div class="div-centered">
+                <h1>ACADEMIC PETITION</h1>
+
+                <apex:outputPanel layout="block" rendered="{!Case.Resolution__c != Null}">
+                    <!-- This outputPanel should only render when the decision has been made -->
+                    <h2>CASE INFORMATION</h2>
+                    <form id="caseInfo">
+                        <table>
+                            <tr>
+                                <td class="left">
+                                    <label for="petitionType">Petition Type</label>
+                                </td>
+                                <td class="right">
+                                    <input type="text" id="petitionType" value="{!Case.Petition_Type__c}" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="studentInfo">Student Name, Student ID #</label>
+                                </td>
+                                <td class="right">
+                                    <input type="text" id="studentInfo"
+                                           value="{!Case.Contact.FirstName} {!Case.Contact.LastName}, {!Case.Contact.Banner_Id__c}"
+                                           disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="program">Program (HEDA)</label>
+                                </td>
+                                <td class="right">
+                                    <select id="program" disabled="disabled">
+                                        <option selected="selected">{!Case.heda_program_formula__c}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="courseNumber">Course #</label>
+                                </td>
+                                <td class="right">
+                                    <input type="text" id="courseNumber" value="{!Case.Course_Number__c}" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="instructor">Instructor</label>
+                                </td>
+                                <td class="right">
+                                    <input type="text" id="instructor" value="{!Case.Instructor__c}" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="term">Term of registration</label>
+                                </td>
+                                <td class="right">
+                                    <input type="text" id="term" value="{!Case.Term__c}" disabled="disabled"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+
+                    <h2>DECISION</h2>
+                    <form id="decision">
+                        <table>
+                            <tr>
+                                <td class="left">
+                                    <label for="makerName">Decision Maker Name</label>
+                                </td>
+                                <td class="right">
+                                    <input type="text" id="makerName" value="{!Case.Decision_Maker_Name__c}" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="makerRole">Decision Maker Role</label>
+                                </td>
+                                <td class="right">
+                                    <select id="makerRole" disabled="disabled">
+                                        <option id="makerRoleOption" selected="selected">{!Case.Role__c}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="decision">Decision</label>
+                                </td>
+                                <td class="right">
+                                    <select id="decision" disabled="disabled">
+                                        <option id="decisionOption" selected="selected">{!Case.Resolution__c}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <!-- TODO: this field shouldn't always render -->
+                            <tr>
+                                <td class="left">
+                                    <label for="decisionRefund">Decision about refund</label>
+                                </td>
+                                <td class="right">
+                                    <select id="decisionRefund" disabled="disabled">
+                                        <option id="decisionRefundOption" selected="selected">{!Case.Decision_about_refund__c}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="comments">Comments</label>
+                                </td>
+                                <td class="right">
+                                    <textarea id="comments" disabled="disabled">{!Case.Comments__c}</textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </apex:outputPanel>
+
+                <apex:outputPanel layout="block" rendered="{!Case.Resolution__c == Null}">
+                    <!-- This outputPanel should only render when the decision has not yet been made -->
+                    <form id="caseInfo">
+                        <table>
+                            <tr>
+                                <td class="left">
+                                    <label for="caseNumber">Case Number</label>
+                                </td>
+                                <td class="right">
+                                    <input type="text" id="caseNumber" value="{!Case.CaseNumber}" disabled="disabled"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <p>Decision has not been submitted.</p>
+                </apex:outputPanel>
+            </div>
+        </body>
+    </html>
+</apex:page>

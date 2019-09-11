@@ -1,0 +1,3319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Education_History_Record_Page_Master</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Ed_History_Compact_Layout_EMOps_College</fullName>
+        <fields>Name</fields>
+        <fields>Best_School_Name__c</fields>
+        <fields>Unofficial_GPA__c</fields>
+        <fields>GPA__c</fields>
+        <label>Ed History Compact Layout - EMOps College</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Represents the education history for a person at an education institution</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Accreditation__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Educational_Institution__r.Accreditation__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Accreditation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Allow_Upload__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Allow Upload</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Best_School_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(ISBLANK( Educational_Institution__c )), Educational_Institution__r.Name ,  School_Not_Found_Name__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Best School Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CEEB_Code__c</fullName>
+        <description>CEEB Code from related Educational Institution</description>
+        <externalId>false</externalId>
+        <formula>Educational_Institution__r.CEEB_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CEEB Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>The person for this education history record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The person for this education history record</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Education Histories</relationshipLabel>
+        <relationshipName>Education_Histories</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Credits_Earned__c</fullName>
+        <externalId>false</externalId>
+        <label>Credits Earned</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Degree__c</fullName>
+        <externalId>false</externalId>
+        <label>Degree</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Degree_Types</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Document_Date_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Document Received</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Document_Display_to_Applicant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Display to Applicant</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Document_Status_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Status Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Official</fullName>
+                    <default>false</default>
+                    <label>Official</label>
+                </value>
+                <value>
+                    <fullName>Official, not final</fullName>
+                    <default>false</default>
+                    <label>Official, not final</label>
+                </value>
+                <value>
+                    <fullName>Unofficial, received by email</fullName>
+                    <default>false</default>
+                    <label>Unofficial, received by email</label>
+                </value>
+                <value>
+                    <fullName>Unofficial, open envelope</fullName>
+                    <default>false</default>
+                    <label>Unofficial, open envelope</label>
+                </value>
+                <value>
+                    <fullName>Unofficial, score on transcript</fullName>
+                    <default>false</default>
+                    <label>Unofficial, score on transcript</label>
+                </value>
+                <value>
+                    <fullName>Unofficial, see notes</fullName>
+                    <default>false</default>
+                    <label>Unofficial, see notes</label>
+                </value>
+                <value>
+                    <fullName>Not Yet Received</fullName>
+                    <default>false</default>
+                    <label>Not Yet Received</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Document_Status__c</fullName>
+        <defaultValue>&quot;Not Received&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Document Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Mandatory</fullName>
+                    <default>true</default>
+                    <label>Mandatory</label>
+                </value>
+                <value>
+                    <fullName>Received</fullName>
+                    <default>false</default>
+                    <label>Received</label>
+                </value>
+                <value>
+                    <fullName>Waived</fullName>
+                    <default>false</default>
+                    <label>Waived</label>
+                </value>
+                <value>
+                    <fullName>Conditional</fullName>
+                    <default>false</default>
+                    <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Not Received</fullName>
+                    <default>false</default>
+                    <label>Not Received</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Educational_Institution__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The Educational Institution for this education history. This should be a Educational Institution Account record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Educational Institution for this education history</inlineHelpText>
+        <label>Educational Institution</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Educational Institution</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Education Histories</relationshipLabel>
+        <relationshipName>Education_Histories</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Electronic_Transcript__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Electronic Transcript</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Full_Name_On_Transcript__c</fullName>
+        <description>The full name of the person on the transcription for this education record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The full name of the person on the transcription for this education record</inlineHelpText>
+        <label>Full Name On Transcript</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GPA_Weighted__c</fullName>
+        <externalId>false</externalId>
+        <label>GPA Weighted</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GPA__c</fullName>
+        <externalId>false</externalId>
+        <label>GPA</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Graduation_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Graduation Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Graduation_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Graduation Year</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Year_List</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>High_School_Class_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>High School Class Size</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>High_School_Percentile__c</fullName>
+        <externalId>false</externalId>
+        <formula>(1 - High_School_Rank__c/High_School_Class_Size__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>High School Percentile</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>High_School_Rank__c</fullName>
+        <externalId>false</externalId>
+        <label>High School Rank</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Holding_Name__c</fullName>
+        <description>The holding name for the school if an Education Institution Account is not found. Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The holding name for the school</inlineHelpText>
+        <label>Holding Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Internal_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Internal Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Major__c</fullName>
+        <externalId>false</externalId>
+        <label>Major</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Minnesota_MARSS_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Minnesota MARSS Number</label>
+        <length>13</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Org_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+NOT(ISBLANK(Previous_Id__c)), 
+&quot;https://bethel-university-old.my.salesforce.com/&quot;+ Previous_Id__c, 
+&quot;&quot; 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Old Org Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portal_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Portal Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Id__c</fullName>
+        <description>Specifies a previous id if any</description>
+        <externalId>true</externalId>
+        <label>Previous Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_GPA_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary GPA Record</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Record_Type_Name__c</fullName>
+        <description>Returns Record Type as text.</description>
+        <externalId>false</externalId>
+        <formula>RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Current Record Type.</inlineHelpText>
+        <label>Record Type Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Object_JSON__c</fullName>
+        <description>Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field for a custom object</inlineHelpText>
+        <label>Related Object JSON</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>School_CEEB__c</fullName>
+        <description>CEEB code of related School, if it exists.</description>
+        <externalId>false</externalId>
+        <formula>Educational_Institution__r.CEEB_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>CEEB code of related School, if it exists.</inlineHelpText>
+        <label>School CEEB</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_City__c</fullName>
+        <description>City of related School, if it exists.</description>
+        <externalId>false</externalId>
+        <formula>Educational_Institution__r.BillingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>City of related School, if it exists.</inlineHelpText>
+        <label>School City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Country__c</fullName>
+        <description>Country of related School, if it exists.</description>
+        <externalId>false</externalId>
+        <formula>Educational_Institution__r.BillingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Country of related School, if it exists.</inlineHelpText>
+        <label>School Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Not_Found_City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Not_Found_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Not_Found_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>School Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Not_Found_State__c</fullName>
+        <externalId>false</externalId>
+        <label>State/Province</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Not_Found_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street Address</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Not_Found_Zip__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Not_Found__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>School Not Found</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>School_State__c</fullName>
+        <description>State of related School, if it exists.</description>
+        <externalId>false</externalId>
+        <formula>Educational_Institution__r.BillingState</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>State of related School, if it exists.</inlineHelpText>
+        <label>School State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Street_Address__c</fullName>
+        <description>Street address of related School, if it exists.</description>
+        <externalId>false</externalId>
+        <formula>Educational_Institution__r.BillingStreet</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Street address of related School, if it exists.</inlineHelpText>
+        <label>School Street Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>School_Zip_Code__c</fullName>
+        <description>Zip code of related School, if it exists.</description>
+        <externalId>false</externalId>
+        <formula>Educational_Institution__r.BillingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Zip code of related School, if it exists.</inlineHelpText>
+        <label>School Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ScoreLink__c</fullName>
+        <externalId>false</externalId>
+        <label>ScoreLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Transcript_Evaluation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Transcript Evaluation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>The type of education institution or school for this education history</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The type of education institution or school for this education history</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>College</fullName>
+                    <default>false</default>
+                    <label>College</label>
+                </value>
+                <value>
+                    <fullName>High School</fullName>
+                    <default>false</default>
+                    <label>High School</label>
+                </value>
+                <value>
+                    <fullName>Church</fullName>
+                    <default>false</default>
+                    <label>Church</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Undergraduate_Degree__c</fullName>
+        <externalId>false</externalId>
+        <label>Undergraduate Degree</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Degree_Types</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unofficial_GPA__c</fullName>
+        <description>The unofficial GPA for this educational institute specified by the applicant.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The unofficial GPA for this educational institute specified by the applicant.</inlineHelpText>
+        <label>Unofficial GPA</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unofficial_Received_Date_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Unofficial Received Date 1</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Unofficial_Received_Date_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Unofficial Received Date 2</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>User_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Required EASY field for a custom object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required EASY field</inlineHelpText>
+        <label>User Created</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Education History</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Best_School_Name__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Type__c</columns>
+        <columns>Document_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Churches</fullName>
+        <columns>NAME</columns>
+        <columns>Best_School_Name__c</columns>
+        <columns>Type__c</columns>
+        <columns>Graduation_Year__c</columns>
+        <columns>Major__c</columns>
+        <columns>Document_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Church</value>
+        </filters>
+        <label>Churches</label>
+    </listViews>
+    <listViews>
+        <fullName>Colleges</fullName>
+        <columns>NAME</columns>
+        <columns>Best_School_Name__c</columns>
+        <columns>Type__c</columns>
+        <columns>Graduation_Year__c</columns>
+        <columns>Major__c</columns>
+        <columns>Document_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>College</value>
+        </filters>
+        <label>Colleges</label>
+    </listViews>
+    <listViews>
+        <fullName>High_Schools</fullName>
+        <columns>NAME</columns>
+        <columns>Best_School_Name__c</columns>
+        <columns>Type__c</columns>
+        <columns>Graduation_Year__c</columns>
+        <columns>Major__c</columns>
+        <columns>Document_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>High School</value>
+        </filters>
+        <label>High Schools</label>
+    </listViews>
+    <nameField>
+        <displayFormat>EH-{000000}</displayFormat>
+        <label>Education History Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Education Histories</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Church</fullName>
+        <active>true</active>
+        <description>Represents a Church</description>
+        <label>Church</label>
+        <picklistValues>
+            <picklist>Degree__c</picklist>
+            <values>
+                <fullName>Additional Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Applied Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Div %3C 1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Theo %3C 1952</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music Educ%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science in Nursing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bethel Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ChristWork%2FBibleMissTr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diploma</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Ministry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Philosophy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctorate-Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Business Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Divinity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master%27s</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Dr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Transfer Curriculum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree - Pace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 2 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 3 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 4 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree Terminated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree Seeking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prerequisite course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recommendation for Licensure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Undergrad</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Status_Description__c</picklist>
+            <values>
+                <fullName>Not Yet Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Official</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Official%2C not final</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C open envelope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C received by email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C score on transcript</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C see notes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Status__c</picklist>
+            <values>
+                <fullName>Conditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waived</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Graduation_Year__c</picklist>
+            <values>
+                <fullName>1984</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1985</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1986</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1987</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1988</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1989</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1990</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2023</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2024</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2025</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2026</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2027</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2028</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2029</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2031</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2032</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2033</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2034</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2035</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2036</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2037</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2038</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2039</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before 1984</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Church</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Undergraduate_Degree__c</picklist>
+            <values>
+                <fullName>Additional Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Applied Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Div %3C 1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Theo %3C 1952</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music Educ%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science in Nursing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bethel Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ChristWork%2FBibleMissTr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diploma</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Ministry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Philosophy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctorate-Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Business Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Divinity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master%27s</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Dr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Transfer Curriculum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree - Pace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 2 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 3 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 4 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree Terminated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree Seeking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prerequisite course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recommendation for Licensure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Undergrad</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>College</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>Ed_History_Compact_Layout_EMOps_College</compactLayoutAssignment>
+        <label>College</label>
+        <picklistValues>
+            <picklist>Degree__c</picklist>
+            <values>
+                <fullName>Additional Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Applied Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Div %3C 1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Theo %3C 1952</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music Educ%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science in Nursing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bethel Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ChristWork%2FBibleMissTr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diploma</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Ministry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Philosophy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctorate-Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Business Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Divinity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master%27s</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Dr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Transfer Curriculum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree - Pace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 2 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 3 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 4 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree Terminated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree Seeking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prerequisite course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recommendation for Licensure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Undergrad</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Status_Description__c</picklist>
+            <values>
+                <fullName>Not Yet Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Official</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Official%2C not final</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C open envelope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C received by email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C score on transcript</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C see notes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Status__c</picklist>
+            <values>
+                <fullName>Conditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waived</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Graduation_Year__c</picklist>
+            <values>
+                <fullName>1984</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1985</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1986</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1987</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1988</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1989</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1990</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2023</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2024</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2025</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2026</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2027</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2028</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2029</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2031</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2032</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2033</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2034</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2035</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2036</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2037</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2038</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2039</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before 1984</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>College</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Undergraduate_Degree__c</picklist>
+            <values>
+                <fullName>Additional Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anthropology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Applied Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Div %3C 1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Theo %3C 1952</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music Educ%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science in Nursing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bethel Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ChristWork%2FBibleMissTr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computer and Information Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diploma</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Ministry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Philosophy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctorate-Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education - Curriculum and Instruction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>English Language%2FLiterature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family and Consumer Sciences%2FHuman Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Languages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>History</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberal Arts%2FHumanities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Business Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Divinity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master%27s</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mathematics and Statistics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mathematics and Statistics%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Dr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Transfer Curriculum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree - Pace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 2 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 3 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 4 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree Terminated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree Seeking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other%3A Individualized</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Philosophy and Religious Studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physical Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Political Science and Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prerequisite course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recommendation for Licensure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sociology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Early Childhood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Elementary Ed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - English as a Second Language</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - English%2FLanguage Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Foreign Language</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Mathematics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Phy Ed%2FCoaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Psychology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Reading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Secondary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Social Studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Spanish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Special Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Technical Ed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Technology%2FIndustrial Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Undergrad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undergraduate Degree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>High_School</fullName>
+        <active>true</active>
+        <label>High School</label>
+        <picklistValues>
+            <picklist>Degree__c</picklist>
+            <values>
+                <fullName>Additional Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Applied Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Div %3C 1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Theo %3C 1952</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music Educ%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science in Nursing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bethel Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ChristWork%2FBibleMissTr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diploma</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Ministry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Philosophy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctorate-Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Business Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Divinity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master%27s</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Dr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Transfer Curriculum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree - Pace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 2 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 3 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 4 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree Terminated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree Seeking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prerequisite course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recommendation for Licensure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Undergrad</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Status_Description__c</picklist>
+            <values>
+                <fullName>Not Yet Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Official</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Official%2C not final</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C open envelope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C received by email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C score on transcript</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C see notes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Status__c</picklist>
+            <values>
+                <fullName>Conditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waived</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Graduation_Year__c</picklist>
+            <values>
+                <fullName>1984</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1985</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1986</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1987</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1988</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1989</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1990</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2023</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2024</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2025</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2026</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2027</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2028</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2029</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2031</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2032</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2033</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2034</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2035</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2036</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2037</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2038</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2039</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before 1984</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>High School</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Undergraduate_Degree__c</picklist>
+            <values>
+                <fullName>Additional Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anthropology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Applied Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associate of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Div %3C 1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor Theo %3C 1952</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Music Educ%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelor of Science in Nursing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bethel Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ChristWork%2FBibleMissTr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computer and Information Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diploma</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Ministry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Philosophy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctorate-Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education - Curriculum and Instruction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>English Language%2FLiterature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family and Consumer Sciences%2FHuman Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign Languages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>History</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberal Arts%2FHumanities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Business Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Divinity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Fine Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master of Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master%27s</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mathematics and Statistics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mathematics and Statistics%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Dr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Transfer Curriculum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree - Pace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 2 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 3 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree 4 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Degree Terminated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree Seeking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other%3A Individualized</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Philosophy and Religious Studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physical Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Political Science and Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prerequisite course work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recommendation for Licensure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sociology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Early Childhood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Elementary Ed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - English as a Second Language</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - English%2FLanguage Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Foreign Language</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Mathematics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Phy Ed%2FCoaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Psychology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Reading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Secondary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Social Studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Spanish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Special Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Technical Ed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tchr Ed - Technology%2FIndustrial Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undeclared - Undergrad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undergraduate Degree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Best_School_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Document_Status__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Best_School_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Document_Status__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Best_School_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Document_Status__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Best_School_Name__c</searchFilterFields>
+        <searchFilterFields>Contact__c</searchFilterFields>
+        <searchFilterFields>Document_Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>Best_School_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Document_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

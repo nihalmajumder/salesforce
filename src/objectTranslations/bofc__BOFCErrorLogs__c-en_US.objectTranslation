@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Child Relationship Name --></label>
+        <name>bofc__Child_Relationship_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decimal Places --></label>
+        <name>bofc__Decimal_Places__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Value --></label>
+        <name>bofc__Default_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Desc --></label>
+        <name>bofc__Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>bofc__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Format --></label>
+        <name>bofc__Display_Format__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>bofc__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Error Desc --></label>
+        <name>bofc__Field_Error_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Label --></label>
+        <name>bofc__Field_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>bofc__Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Status --></label>
+        <name>bofc__Field_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formula Details --></label>
+        <name>bofc__Formula_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- HelpText --></label>
+        <name>bofc__HelpText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Help Text --></label>
+        <name>bofc__Help_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length --></label>
+        <name>bofc__Length__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picklist Sorted --></label>
+        <name>bofc__Picklist_Sorted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picklist Val --></label>
+        <name>bofc__Picklist_Val__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picklist Values --></label>
+        <name>bofc__Picklist_Values__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related To (Parent Object) --></label>
+        <name>bofc__Related_To_Parent_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Required --></label>
+        <name>bofc__Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Number --></label>
+        <name>bofc__Starting_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Track Field History --></label>
+        <name>bofc__Track_Field_History__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>bofc__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique --></label>
+        <name>bofc__Unique__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visible Lines --></label>
+        <name>bofc__Visible_Lines__c</name>
+    </fields>
+</CustomObjectTranslation>

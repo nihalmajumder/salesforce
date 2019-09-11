@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Activity Date --></label>
+        <name>wbsendit__Activity_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity --></label>
+        <name>wbsendit__Activity__c</name>
+        <picklistValues>
+            <masterLabel>Bounced</masterLabel>
+            <translation><!-- Bounced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clicked</masterLabel>
+            <translation><!-- Clicked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opened</masterLabel>
+            <translation><!-- Opened --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsubscribed</masterLabel>
+            <translation><!-- Unsubscribed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bounce Reason --></label>
+        <name>wbsendit__Bounce_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Id --></label>
+        <name>wbsendit__Campaign_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity Report --></label>
+        <name>wbsendit__Campaign_Report__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>wbsendit__City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compound Key --></label>
+        <name>wbsendit__Compound_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>wbsendit__Contact__c</name>
+        <relationshipLabel><!-- Email Tracking History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Country Code --></label>
+        <name>wbsendit__Country_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country Name --></label>
+        <name>wbsendit__Country_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Address --></label>
+        <name>wbsendit__Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- IP Address --></label>
+        <name>wbsendit__IP_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>wbsendit__Lead__c</name>
+        <relationshipLabel><!-- Email Tracking History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>wbsendit__Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>wbsendit__Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL Clicked --></label>
+        <name>wbsendit__URL_Clicked__c</name>
+    </fields>
+    <layouts>
+        <layout>Campaign Activity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

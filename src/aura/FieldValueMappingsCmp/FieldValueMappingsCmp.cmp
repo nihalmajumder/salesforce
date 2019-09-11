@@ -1,0 +1,81 @@
+<aura:component controller="FieldValueMappingsController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="onSuccessCmpEvt" event="c:OnSuccessCmpEvt" action="{!c.handleOnSuccessCmpEvt}" />
+    <aura:attribute name="sobjectType" type="String" />
+    <aura:attribute name="sobjectLabel" type="String" />
+    <aura:attribute name="mappings" type="Map[]" />
+    
+    <div>
+        <section role="dialog" tabindex="-1" aria-labelledby="edit-modal" aria-modal="true" aria-describedby="edit-modal" class="slds-modal slds-fade-in-open" id="field-mapping-edit-section">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Field Maps ( {!v.sobjectLabel} )</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="edit-modal-value-mapping">
+                    <div class="slds-grid slds-wrap" style="max-height:475px; overflow-y:auto;">
+                        <table>
+                            <tr class="slds-border_bottom">
+                                <div>
+                                    <lightning:input
+                                                     aura:id="mapping-value-edit"
+                                                     name="enter-search"
+                                                     label="Search Map Name"
+                                                     type="search"
+                                                     class="slds-p-around_x-small"
+                                                     onkeyup="{! c.handleSearchValues }"
+                                                     onchange="{!c.handleSearchValues }"
+                                                     />
+                                </div>
+                            </tr>
+                            
+                            <aura:iteration items="{!v.mappings}" var="m">
+                                <tr class="slds-border_bottom">
+                                    <td>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_8-of-12">
+                                                <a href="#" data-recordname="{!m.name}" style="{!m.configured ? 'width:100%; text-decoration:none;' : 'width:100%; text-decoration:none;color: grey;'}">
+                                                    <div data-recordname="{!m.name}" style="font-size:1.4em" class="ikon slds-p-around_x-small">
+                                                        {!m.name}
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slds-col slds-size_4-of-12">
+                                                <div class="slds-button-group slds-p-around_x-small slds-float_right" role="group">
+                                                    <aura:if isTrue="{!m.configured}">
+                                                        <button data-recordname="{!m.name}" class="slds-button slds-button_neutral" onclick="{!c.handleEdit}">Edit</button>
+                                                        <aura:set attribute="else">
+                                                            <button data-recordname="{!m.name}" class="slds-button slds-button_neutral"
+                                                                    onclick="{!c.handleAdd}">Add</button>
+                                                        </aura:set>
+                                                    </aura:if>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </aura:iteration> 
+                            <aura:if isTrue="{!v.mappings.length == 0}">
+                                <tr class="slds-border_bottom">
+                                    <td>
+                                        <a href="#" style="width:100%; text-decoration:none;">
+                                            <div style="font-size:1.5em" class="ikon slds-p-around_x-small">
+                                                No results found
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </aura:if> 
+                        </table>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" type="button" onclick="{!c.handleCancel}">Close</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        {!v.body}
+    </div>
+    
+</aura:component>

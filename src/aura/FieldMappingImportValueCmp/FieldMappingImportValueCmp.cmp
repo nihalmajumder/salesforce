@@ -1,0 +1,70 @@
+<aura:component description="component used to allow the user to select a picklist to import for map values" controller="FieldValueMapImportController">
+    
+    <aura:attribute name="mapName" type="String" description="name of map"/>
+    <aura:attribute name="sobjectsMaster" type="Map[]" />
+    <aura:attribute name="selectedSObject" type="String" />
+    <aura:attribute name="sobjectsDisplayed" type="Map[]" />
+    <aura:attribute name="picklistFields" type="Map[]" description="map of available picklist fields" />
+    <aura:attribute name="selectedField" type="Map" description="the selected picklist field" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="onSuccessCmpEvt" type="c:OnSuccessCmpEvt"  />
+
+    <div>
+        <section role="dialog" tabindex="-1" aria-labelledby="edit-modal" aria-modal="true" aria-describedby="edit-modal" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Import Picklist Values</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" style="overflow:visible;">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_6-of-12 slds-p-around_medium">
+                            <div id="combobox-lookup-container" class="slds-combobox_container slds-combobox-addon_end">
+                                <div id="combobox-lookup-results" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                                    <div class="slds-combobox__form-element" role="none">
+                                        <lightning:input onkeyup="{!c.handleKeyUp}"
+                                               aura:id="enter-search-sobjects"
+                                               role="textbox"
+                                               onblur="{!c.handleCloseLookupList}"
+                                               onchange="{!c.handleClear}"
+                                               type="search"
+                                               placeholder="Search..."
+                                               label="Search for SObjects"/>
+                                    </div>
+                                    <div id="listbox" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+                                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                            <aura:iteration items="{!v.sobjectsDisplayed}" var="obj">
+                                                <!-- have to apply data field on all elements, as child elements are selected within parent, which makes it difficult to know which element is selected-->
+                                                <li data-recordapi="{!obj.apiName}" data-recordlabel="{!obj.label}" role="presentation" class="slds-listbox__item" onmousedown="{!c.handleResultClick}" >
+                                                    <div data-recordapi="{!obj.apiName}"  data-recordlabel="{!obj.label}" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                                                        <span data-recordapi="{!obj.apiName}" data-recordlabel="{!obj.label}" class="slds-media__body">
+                                                            <span data-recordapi="{!obj.apiName}"   data-recordlabel="{!obj.label}" class="slds-listbox__option-text slds-listbox__option-text_entity">{!obj.label}</span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </aura:iteration>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-p-around_medium">
+                            <lightning:select aura:id="ple-select" name="picklist fields" label="Available Picklists Fields" disabled="{!v.picklistFields.length == 0}" value="{!v.selectedField}">
+                                <option value="">choose one...</option>
+                                <aura:iteration items="{!v.picklistFields}" var="pl">
+                                    <option value="{!pl.api}">{!pl.label}</option>
+                                </aura:iteration>
+                            </lightning:select>
+                        </div>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" type="button" onclick="{!c.handleCancel}">Cancel</button>
+                    <button class="slds-button slds-button_brand" type="button" onclick="{!c.handleImport}" disabled="{!v.selectedField == null || v.selectedField.length == 0}">Import</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+
+</aura:component>

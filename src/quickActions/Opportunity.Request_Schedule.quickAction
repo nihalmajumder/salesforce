@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Assign_SSR_Advising__c</field>
+        <formula>true</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>ContactId</field>
+        <formula>Opportunity.Contact__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Description</field>
+        <formula>&quot;Enrollment Counselor, please provide the following required details:&quot; + BR() 
++ &quot;- Delivery method (Face-to-face; online; hybrid; location-specific): &quot; + BR()
++ &quot;- Starting Term and Block: &quot; + BR()
++ &quot;- Pace (Standard; Part-time; accelerated): &quot; + BR()
++ &quot;- Applying for Financial Aid (Yes; No; Unknown): &quot; + BR()
++ &quot;- Veteran (Yes; No):&quot; + BR()</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Origin</field>
+        <literalValue>Admission Process</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Program__c</field>
+        <formula>Opportunity.Academic_Program__r.Academic_Program__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Related_Opportunity__c</field>
+        <formula>Opportunity.Id</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Status</field>
+        <literalValue>New</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Subject</field>
+        <formula>&quot;Schedule Request - Admissions - &quot; + Opportunity.Contact__r.FirstName + &quot; &quot; + Opportunity.Contact__r.LastName</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Type</field>
+        <literalValue>Schedule - Admissions</literalValue>
+    </fieldOverrides>
+    <label>Request Schedule</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>ContactId</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Program__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Priority</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Subject</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Description</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Case</targetObject>
+    <targetParentField>Related_Opportunity__c</targetParentField>
+    <targetRecordType>Case.SSR_Student_Success_Case</targetRecordType>
+    <type>Create</type>
+</QuickAction>

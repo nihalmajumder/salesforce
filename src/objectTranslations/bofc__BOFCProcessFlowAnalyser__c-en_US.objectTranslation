@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Full Name --></label>
+        <name>bofc__Full_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last MDT --></label>
+        <name>bofc__Last_MDT__c</name>
+    </fields>
+    <fields>
+        <label><!-- OName --></label>
+        <name>bofc__OName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDesc --></label>
+        <name>bofc__PDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- PID --></label>
+        <name>bofc__PID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plabel --></label>
+        <name>bofc__Plabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Summary --></label>
+        <name>bofc__Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>bofc__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- VerActiveNo --></label>
+        <name>bofc__VerActiveNo__c</name>
+    </fields>
+</CustomObjectTranslation>

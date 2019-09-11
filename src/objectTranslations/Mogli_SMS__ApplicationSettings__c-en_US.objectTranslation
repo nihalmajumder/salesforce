@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active Form Instance Status --></label>
+        <name>Mogli_SMS__Active_Form_Instance_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Notifications For --></label>
+        <name>Mogli_SMS__Allow_Notifications_For__c</name>
+        <picklistValues>
+            <masterLabel>Any incoming SMS</masterLabel>
+            <translation><!-- Any incoming SMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only incoming SMS from a contact I own</masterLabel>
+            <translation><!-- Only incoming SMS from a contact I own --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only incoming SMS from a lead I own</masterLabel>
+            <translation><!-- Only incoming SMS from a lead I own --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only incoming SMS from contacts and leads I own</masterLabel>
+            <translation><!-- Only incoming SMS from contacts and leads I own --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Allows parallel processing of the queueable system within MogliSMS. Activate only when necessary. --></help>
+        <label><!-- Allow Parallel Queues --></label>
+        <name>Mogli_SMS__Allow_Parallel_Queues__c</name>
+    </fields>
+    <fields>
+        <label><!-- AttachmentTrigger --></label>
+        <name>Mogli_SMS__AttachmentTrigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Complete Form Instance Status --></label>
+        <name>Mogli_SMS__Complete_Form_Instance_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Merge Fields --></label>
+        <name>Mogli_SMS__ContactMergeFields__c</name>
+    </fields>
+    <fields>
+        <label><!-- ContactTrigger --></label>
+        <name>Mogli_SMS__ContactTrigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Anonymous Leads --></label>
+        <name>Mogli_SMS__Create_Anonymous_Leads__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debug --></label>
+        <name>Mogli_SMS__Debug__c</name>
+    </fields>
+    <fields>
+        <label><!-- DefaultGatewayMode --></label>
+        <name>Mogli_SMS__DefaultGatewayMode__c</name>
+        <picklistValues>
+            <masterLabel>Default Gateway</masterLabel>
+            <translation><!-- Default Gateway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User&apos;s Assigned Phone Number</masterLabel>
+            <translation><!-- User&apos;s Assigned Phone Number --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Default Gateway --></label>
+        <name>Mogli_SMS__DefaultGateway__c</name>
+        <relationshipLabel><!-- Application Settings --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Emergency shut-off for all MogliSMS queuables. Activate only when necessary. --></help>
+        <label><!-- Disable Queuables --></label>
+        <name>Mogli_SMS__Disable_Queuables__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of minutes a notification is visible for --></help>
+        <label><!-- Duration of Notifications (minutes) --></label>
+        <name>Mogli_SMS__Duration_of_Notifications__c</name>
+    </fields>
+    <fields>
+        <label><!-- FormTrigger --></label>
+        <name>Mogli_SMS__FormTrigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Merge Fields --></label>
+        <name>Mogli_SMS__LeadMergeFields__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeadTrigger --></label>
+        <name>Mogli_SMS__LeadTrigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of maximum notificaitons --></help>
+        <label><!-- Maximum Visible Notifications --></label>
+        <name>Mogli_SMS__Maximum_Visible_Notifications__c</name>
+    </fields>
+    <fields>
+        <help><!-- Allows notification tone to be heard --></help>
+        <label><!-- Notification Sound --></label>
+        <name>Mogli_SMS__Notification_Sound__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notify Me When --></label>
+        <name>Mogli_SMS__Notify_When__c</name>
+        <picklistValues>
+            <masterLabel>Always show SMS notifications, regardless of the app</masterLabel>
+            <translation><!-- Always show SMS notifications, regardless of the app --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only show SMS notifications when I’m in the Mogli app</masterLabel>
+            <translation><!-- Only show SMS notifications when I’m in the Mogli app --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Possible Answer Delimiter --></label>
+        <name>Mogli_SMS__PossibleAnswerDelimiter__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMSTrigger --></label>
+        <name>Mogli_SMS__SMSTrigger__c</name>
+    </fields>
+    <layouts>
+        <layout>Application Setting Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Triggers --></label>
+            <section>Triggers</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

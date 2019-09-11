@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Inscripció al programa</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Inscripcions al programa</value>
+    </caseValues>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Academic Standing --></label>
+        <name>Academic_Standing__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checked if this student has an Active record in Banner --></help>
+        <label><!-- Active Student --></label>
+        <name>Active_Student__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Admit Type --></label>
+        <name>Admit_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Audit Credits --></label>
+        <name>Audit_Credits__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Campus --></label>
+        <name>Campus__c</name>
+    </fields>
+    <fields>
+        <help><!-- from Banner --></help>
+        <label><!-- Catalog Term --></label>
+        <name>Catalog_Term__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Cohort --></label>
+        <name>Cohort__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Current Program --></label>
+        <name>Current_Program__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Currently Enrolled --></label>
+        <name>Currently_Enrolled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Expected Graduation Date --></label>
+        <name>Expected_Graduation_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Other Advisors --></label>
+        <name>Other_Advisors__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Previous Term GPA --></label>
+        <name>Previous_Term_GPA__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Primary Advisor --></label>
+        <name>Primary_Advisor__c</name>
+    </fields>
+    <fields>
+        <help><!-- from Banner; marks this as a student&apos;s primary Program --></help>
+        <label><!-- Primary Program --></label>
+        <name>Primary_Program__c</name>
+    </fields>
+    <fields>
+        <help><!-- from Banner, indicates Program Enrollment order if student has multiple --></help>
+        <label><!-- Program Priority --></label>
+        <name>Program_Priority__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Registered Credits --></label>
+        <name>Registered_Credits__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Risk Indicator --></label>
+        <name>Risk_Indicator__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Student Attributes --></label>
+        <name>Student_Attributes__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Transfer Credits --></label>
+        <name>Transfer_Credits__c</name>
+    </fields>
+    <fields>
+        <help>El programa al qual està inscrit l&apos;estudiant.</help>
+        <label><!-- Program --></label>
+        <name>hed__Account__c</name>
+        <relationshipLabel><!-- Program Enrollments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Admission Date --></label>
+        <name>hed__Admission_Date__c</name>
+    </fields>
+    <fields>
+        <help>La relació de compte i contacte amb la qual està relacionada aquesta informació acadèmica.</help>
+        <label><!-- Affiliation --></label>
+        <name>hed__Affiliation__c</name>
+        <relationshipLabel><!-- Program Enrollments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Application Submitted Date --></label>
+        <name>hed__Application_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class Standing --></label>
+        <name>hed__Class_Standing__c</name>
+        <picklistValues>
+            <masterLabel>Freshman</masterLabel>
+            <translation>Estudiant de primer any</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Junior</masterLabel>
+            <translation>Estudiant de penúltim any</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Senior</masterLabel>
+            <translation>Estudiant d&apos;últim any</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sophomore</masterLabel>
+            <translation>Estudiant de segon any</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>El contacte principal.</help>
+        <label><!-- Contact --></label>
+        <name>hed__Contact__c</name>
+        <relationshipLabel><!-- Program Enrollments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credits Attempted --></label>
+        <name>hed__Credits_Attempted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credits Earned --></label>
+        <name>hed__Credits_Earned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eligible to Enroll --></label>
+        <name>hed__Eligible_to_Enroll__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>hed__End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Status --></label>
+        <name>hed__Enrollment_Status__c</name>
+        <picklistValues>
+            <masterLabel>Full-time</masterLabel>
+            <translation>A temps complet</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half-time</masterLabel>
+            <translation>A mitja jornada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than half-time</masterLabel>
+            <translation>Menys de mitja jornada</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GPA --></label>
+        <name>hed__GPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class Year --></label>
+        <name>hed__Graduation_Year__c</name>
+    </fields>
+    <fields>
+        <help><!-- Click to select a Program Plan that a student should follow for this Program Enrollment. --></help>
+        <label><!-- Program Plan --></label>
+        <name>hed__Program_Plan__c</name>
+        <relationshipLabel><!-- Program Enrollments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>hed__Start_Date__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>ID d&apos;inscripció del programa</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

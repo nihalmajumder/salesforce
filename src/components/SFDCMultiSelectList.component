@@ -1,0 +1,66 @@
+<apex:component controller="SFDCMultiSelectListController">
+	<apex:attribute name="a_optionList" description="" type="SelectOption[]" required="true" assignTo="{!optionList}" />
+	<apex:attribute name="selectedValues" description="" type="String[]" required="true"/> 
+	<apex:attribute name="a_chosenOptions" description="" type="String" assignTo="{!chosenOptions}"/> 
+  	<apex:attribute name="required" description="Indicates if select list is required" type="Boolean" required="false" default="false" />
+  	<apex:attribute name="width" description="Width of the Multiselect" type="String" required="false" default="118" />
+  	<apex:attribute name="size" description="Width of the Multiselect" type="String" required="false" default="5"/>
+  	<apex:attribute name="prefixId" description="Enter anything that" type="string" required="true" />
+  	<apex:attribute name="blockSectionId" description="Enter anything that" type="string" required="true" />
+  	<apex:attribute name="componentId" description="Enter anything that" type="string" required="true" />
+  	
+	<apex:selectList styleClass="idwah_{!prefixId}"
+					 multiselect="true" 
+					 size="{!size}" 
+					 value="{!selectedValues}"  
+					 style="display:none;">
+    	<apex:selectOptions value="{!optionList}"/>
+    </apex:selectList>
+    <table cellspacing="0" cellpadding="0" border="0" class="multiSelectPicklistTable">
+    	<tbody>
+        	<tr>
+          		<td></td>
+          		<td height="5" colspan="100"></td>
+        	</tr>
+        	<tr class="multiSelectPicklistRow">
+          	<td>
+          		<span>
+            		<div class="requiredInput">
+              			<div class="requiredBlock">
+              			</div>
+              			<apex:selectList styleClass="idwa_{!prefixId}_unselected"  
+              							 size="{!size}"  
+              							 style="width: {!width}px" 
+              							 multiselect="true" 
+              							 ondblclick="MultiSelectPicklist.handleMSPSelect('{!componentId}');">
+                			<apex:selectOptions value="{!availableOptionList}"/>
+              			</apex:selectList>
+           			</div>
+          		</span>
+          	</td>
+          	<td class="multiSelectPicklistCell">
+          		<a href="javascript:MultiSelectPicklist.handleMSPSelect('{!componentId}');" title="Add">
+          			<img src="/s.gif" alt="Add" class="picklistArrowRight" id="{!componentId}_right_arrow" style="cursor:pointer;" title="Add" /></a>
+            		<br/>
+            		<br/>
+          		<a href="javascript:MultiSelectPicklist.handleMSPUnSelect('{!componentId}');" title="Remove">
+          			<img src="/s.gif" alt="Remove" class="picklistArrowLeft" id="{!componentId}_left_arrow" style="cursor:pointer;" title="Remove" /></a>
+          	</td>
+          	<td>
+            	<span>
+            		<apex:selectList styleClass="idwa_{!prefixId}_selected" 
+            						 size="{!size}"  
+            						 style="width: {!width}px" 
+            						 multiselect="true"  
+            						 ondblclick="MultiSelectPicklist.handleMSPUnSelect('{!componentId}');" >
+               			<apex:selectOptions value="{!chosenOptionList}"/>
+            		</apex:selectList>
+            	</span>
+          	</td>
+        	</tr>
+      	</tbody>
+      	<script>setupMultiSelectList('{!prefixId}','{!componentId}');</script>
+    </table>
+    <script>
+    </script>
+</apex:component>

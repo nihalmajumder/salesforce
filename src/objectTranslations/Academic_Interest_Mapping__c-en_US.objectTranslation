@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Academic Interest Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Academic Interest Mappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Academic Interest --></label>
+        <name>Academic_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Academic Interest Mappings --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Academic Interest Mapping - Master</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

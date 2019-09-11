@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- is the date/time on which the email was sent. --></help>
+        <label><!-- Date Sent --></label>
+        <name>DaScoopComposer__Date_Sent__c</name>
+    </fields>
+    <fields>
+        <help><!-- The message id of this email on the sending user&apos;s email service (according ti the rfc822 header field &quot;message-id&quot;). This field is used to create a link to the email message in the browser. --></help>
+        <label><!-- Email Message Id --></label>
+        <name>DaScoopComposer__Email_Message_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name of the Email Service from which this message was sent. --></help>
+        <label><!-- Email Service --></label>
+        <name>DaScoopComposer__Email_Service__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only the sending user can view emails with this link when logged into the sending email account. --></help>
+        <label><!-- Gmail Id --></label>
+        <name>DaScoopComposer__Gmail_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- is the email address of the recipient. If the email was sent to multiple recipients this field is blank. --></help>
+        <label><!-- Main Recipient Email --></label>
+        <name>DaScoopComposer__Main_Recipient_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- is the time stamp ID of the tracked message. --></help>
+        <label><!-- Message Id --></label>
+        <name>DaScoopComposer__Message_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- is the plain text version of the email body. This email has also be appended to the activity history of all the recipients (leads and contacts). --></help>
+        <label><!-- Message --></label>
+        <name>DaScoopComposer__Message__c</name>
+    </fields>
+    <fields>
+        <help><!-- indicates whether or not at least one reply to the tracked message was recorded --></help>
+        <label><!-- Reply Recorded --></label>
+        <name>DaScoopComposer__Reply_Recorded__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the user who sent the email. This user is identified by trying to match a user&apos;s email address with the the email sender&apos;s email address (which sometimes can lead to ambiguity). --></help>
+        <label><!-- Sender --></label>
+        <name>DaScoopComposer__Sender__c</name>
+        <relationshipLabel><!-- Tracked Messages --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- is the name of the folder of the template that was used sending this tracked message. If no template was used, this field is blank. --></help>
+        <label><!-- Template Folder --></label>
+        <name>DaScoopComposer__Template_Folder__c</name>
+    </fields>
+    <fields>
+        <help><!-- is the ID of the template that was used sending this tracked message. If no template was used, this field is blank. --></help>
+        <label><!-- Template Id --></label>
+        <name>DaScoopComposer__Template_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- points to the template that was used when this email was sent. If no template was used this field is blank. --></help>
+        <label><!-- Template Used --></label>
+        <name>DaScoopComposer__Template_Used__c</name>
+    </fields>
+    <fields>
+        <help><!-- is the name of the template that was used sending this tracked message. If no template was used, this field is blank. --></help>
+        <label><!-- Template --></label>
+        <name>DaScoopComposer__Template__c</name>
+    </fields>
+    <fields>
+        <help><!-- indicates how many times the tracked message has been opened in total by any of the recipients. --></help>
+        <label><!-- Times Opened --></label>
+        <name>DaScoopComposer__Times_Opened__c</name>
+    </fields>
+    <fields>
+        <help><!-- indicates the unique identifier of this tracked message record. --></help>
+        <label><!-- UID --></label>
+        <name>DaScoopComposer__uid__c</name>
+    </fields>
+    <layouts>
+        <layout>Tracked Message Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Message --></label>
+            <section>Message</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

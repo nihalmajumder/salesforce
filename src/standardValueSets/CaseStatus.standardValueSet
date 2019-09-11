@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>First Contact</fullName>
+        <default>false</default>
+        <label>First Contact</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Decision-maker review</fullName>
+        <default>false</default>
+        <label>Decision-maker review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending further information from student</fullName>
+        <default>false</default>
+        <label>Pending further information from student</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Student Success review</fullName>
+        <default>false</default>
+        <label>Student Success review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting on someone else</fullName>
+        <default>false</default>
+        <label>Waiting on someone else</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Plan Finalized</fullName>
+        <default>false</default>
+        <label>Plan Finalized</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending reply - Program Director</fullName>
+        <default>false</default>
+        <label>Pending reply - Program Director</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>No further action at this time</fullName>
+        <default>false</default>
+        <label>No further action at this time</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending information for next step (general)</fullName>
+        <default>false</default>
+        <label>Pending information for next step (general)</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow-up needed</fullName>
+        <default>false</default>
+        <label>Follow-up needed</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,1 @@
+<aura:event type="COMPONENT" description="generic component level on success event" />

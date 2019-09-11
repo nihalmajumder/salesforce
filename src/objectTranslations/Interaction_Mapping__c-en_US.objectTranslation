@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Interaction Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Interaction Mappings</value>
+    </caseValues>
+    <fields>
+        <help><!-- If checked, the Interaction Mapping is active --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used for checkboxes to prevent unmapped checkboxes from being written over to false. --></help>
+        <label><!-- Insert Null --></label>
+        <name>Insert_Null__c</name>
+    </fields>
+    <fields>
+        <help><!-- The source field on the Interaction object you would like to map. Ensure this is in API format and matches the existing field on Interaction. --></help>
+        <label><!-- Interaction Source Field API Name --></label>
+        <name>Interaction_Source_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the Interaction Sources that should ignore this import configuration. --></help>
+        <label><!-- Skip Mapping --></label>
+        <name>Skip_Mapping__c</name>
+        <picklistValues>
+            <masterLabel>Manual Entry</masterLabel>
+            <translation><!-- Manual Entry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase List</masterLabel>
+            <translation><!-- Purchase List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Information System</masterLabel>
+            <translation><!-- Student Information System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Webform</masterLabel>
+            <translation><!-- Webform --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The field on the Target Object you would like to map to. Ensure this is in API format and matches the existing field on the Target Object. --></help>
+        <label><!-- Target Field API Name --></label>
+        <name>Target_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the Target Object to map Interaction data to. --></help>
+        <label><!-- Target Object API Name --></label>
+        <name>Target_Object_API_Name__c</name>
+        <picklistValues>
+            <masterLabel>CampaignMember</masterLabel>
+            <translation><!-- CampaignMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation><!-- Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation><!-- Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>hed__Affiliation__c</masterLabel>
+            <translation><!-- hed__Affiliation__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The valid status for which to map the field. This only applies to Opportunity. --></help>
+        <label><!-- Valid Status --></label>
+        <name>Valid_Status__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Applied</masterLabel>
+            <translation><!-- Applied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed</masterLabel>
+            <translation><!-- Confirmed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrolled</masterLabel>
+            <translation><!-- Enrolled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File Closed</masterLabel>
+            <translation><!-- File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inquired</masterLabel>
+            <translation><!-- Inquired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wait Listed</masterLabel>
+            <translation><!-- Wait Listed --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Interaction Mapping - Master</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Interaction Mapping Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

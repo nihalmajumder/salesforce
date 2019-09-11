@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Assigned Gateway --></label>
+        <name>Mogli_SMS__Assigned_Gateway__c</name>
+        <relationshipLabel><!-- GatewayToUserJuncs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assigned User --></label>
+        <name>Mogli_SMS__Assigned_User__c</name>
+        <relationshipLabel><!-- GatewayToUserJuncs --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

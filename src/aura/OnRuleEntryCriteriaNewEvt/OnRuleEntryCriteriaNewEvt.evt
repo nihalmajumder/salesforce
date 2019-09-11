@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="event fired when click the new button on screen2.">
+    <aura:attribute name="label" type="String" description="label for card" />
+    <aura:attribute name="recordId" type="String" description="existing rule entry id, if there is one" />
+</aura:event>

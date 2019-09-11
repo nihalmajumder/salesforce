@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Preferred_Name_Calculated__c</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingStreet</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingCity</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingStateCode</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingPostalCode</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingCountryCode</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Contacts Created in the Last 7 Days</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_LASTWEEK</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,22 @@
+.THIS .slds-card {
+    position: inherit;
+}
+
+@media only screen and (max-width: 1920px) {
+    .THIS.container-width{
+        max-height : 50rem !important;
+    }
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .THIS.container-width{
+        max-height : 35rem !important;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .THIS.container-width{
+        max-height : 32rem !important;
+    }
+}

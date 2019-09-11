@@ -1,0 +1,666 @@
+<apex:page controller="SchemaExtractorController"
+           showHeader="false" 
+           sidebar="false"
+           standardStylesheets="false"
+           cache="true" 
+           contentType="application/vnd.ms-excel#{!schemaModel.filename}.xls">
+    {!schemaModel.xmlheader} 
+    <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+        xmlns:o="urn:schemas-microsoft-com:office:office"
+        xmlns:x="urn:schemas-microsoft-com:office:excel"
+        xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+        xmlns:html="http://www.w3.org/TR/REC-html40">
+        <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+            <Author>{!schemaModel.author}</Author>
+            <LastAuthor>{!schemaModel.author}</LastAuthor>
+            <Created>{!schemaModel.createdDate}</Created>
+            <LastSaved>{!schemaModel.createdDate}</LastSaved>
+            <Version>{!schemaModel.version}</Version>
+        </DocumentProperties>
+        <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+            <AllowPNG/>
+        </OfficeDocumentSettings>
+        <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+            <WindowHeight>15720</WindowHeight>
+            <WindowWidth>24800</WindowWidth>
+            <WindowTopX>-20</WindowTopX>
+            <WindowTopY>-20</WindowTopY>
+            <TabRatio>864</TabRatio>
+            <Date1904/>
+            <ProtectStructure>False</ProtectStructure>
+            <ProtectWindows>False</ProtectWindows>
+        </ExcelWorkbook>
+        <Styles>
+            <Style ss:ID="Default" ss:Name="Normal">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders/>
+                <Font ss:FontName="Verdana"/>
+                <Interior/>
+                <NumberFormat/>
+                <Protection/>
+            </Style>
+            <Style ss:ID="WelcomePagePanel">
+                <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+                <Borders/>
+                <Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="8.0" ss:Color="#000000"/>
+                <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="WelcomePageDate">
+                <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+                <Borders/>
+                <Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="8.0" ss:Color="#000000"/>
+                <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+                <NumberFormat ss:Format="mm/dd/yy"/>
+            </Style>
+            <Style ss:ID="SchemaDataColumn">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+            </Style>
+            <Style ss:ID="SchemaDataColumnCenter">
+                <Alignment ss:Vertical="Top" ss:Horizontal="Center" ss:WrapText="1"/>
+            </Style>
+            <Style ss:ID="SalesforceFieldsColumn">
+                <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="ExternalSourceFieldsColumn">
+                <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="FirstHeaderSpacing">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="IntegrationDirectionColumn">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+                </Borders>
+                <Interior ss:Color="#000000" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="DataColumnHeaderFullBorder">
+                <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#CC99FF" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="DataColumnHeaderMinusRightBorder">
+                <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#CC99FF" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="DataColumnHeaderMinusLeftBorder">
+                <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#CC99FF" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="DataColumnHeaderRightLeftBorder">
+                <Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#CC99FF" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="DataColumnIntegrationHeaderBorder">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#CC99FF" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="DataColumnNormal">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders/>
+            </Style>
+            <Style ss:ID="DataColumnIntegration">
+                <Alignment ss:Vertical="Top" ss:Horizontal="Center" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+                </Borders>
+            </Style>
+            <Style ss:ID="DataColumnBorderRight">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+            </Style>
+            <Style ss:ID="GreyColumnTitleHeader">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="GreyColumnSectionHeader">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="PurpleColumnSectionHeader">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#CC99FF" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="PurpleColumnSectionHeaderBox">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+                <Interior ss:Color="#CC99FF" ss:Pattern="Solid"/>
+            </Style>
+            <Style ss:ID="BlackBottomBorder">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+            </Style>
+            <Style ss:ID="BlackTopBorder">
+                <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+                <Borders>
+                    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                </Borders>
+            </Style>
+        </Styles>
+        <Worksheet ss:Name="Data Summary">
+            <Table ss:ExpandedColumnCount="6" x:FullColumns="1"
+                x:FullRows="1">
+                <Column ss:AutoFitWidth="0" ss:Width="15.0"/>
+                <Column ss:AutoFitWidth="0" ss:Width="152.0"/>
+                <Column ss:AutoFitWidth="0" ss:Width="151.0"/>
+                <Column ss:AutoFitWidth="0" ss:Width="150.0"/>
+                <Column ss:AutoFitWidth="0" ss:Width="680.0"/>
+                <Column ss:AutoFitWidth="0" ss:Width="384.0"/>
+                <Row>
+                    <Cell ss:StyleID="GreyColumnTitleHeader"/>
+                    <Cell ss:StyleID="GreyColumnTitleHeader">
+                        <Data ss:Type="String">Salesforce.com Name</Data>
+                    </Cell>
+                    <Cell ss:StyleID="GreyColumnTitleHeader">
+                        <Data ss:Type="String">Persist</Data>
+                    </Cell>
+                    <Cell ss:StyleID="GreyColumnTitleHeader">
+                        <Data ss:Type="String">Source</Data>
+                    </Cell>
+                    <Cell ss:StyleID="GreyColumnTitleHeader">
+                        <Data ss:Type="String">Notes</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell ss:StyleID="PurpleColumnSectionHeader"/>
+                    <Cell ss:MergeAcross="3" ss:StyleID="PurpleColumnSectionHeader">
+                        <Data ss:Type="String">Standard Objects</Data>
+                    </Cell>
+                </Row>
+                <apex:repeat value="{!schemaModel.standardObjects}" var="standardObject">
+                    <Row>
+                        <Cell ss:Index="2" ss:StyleID="SchemaDataColumn">
+                            <Data ss:Type="String">{!standardObject.name}</Data>
+                        </Cell>
+                        <Cell ss:StyleID="SchemaDataColumnCenter">
+                            <Data ss:Type="String"/>
+                        </Cell>
+                        <Cell ss:StyleID="SchemaDataColumn">
+                            <Data ss:Type="String"/>
+                        </Cell>
+                        <Cell ss:StyleID="SchemaDataColumn">
+                            <Data ss:Type="String">{!standardObject.description}</Data>
+                        </Cell>
+                    </Row>
+                </apex:repeat>
+                <Row>
+                    <Cell ss:StyleID="PurpleColumnSectionHeader"/>
+                    <Cell ss:MergeAcross="3" ss:StyleID="PurpleColumnSectionHeader">
+                        <Data ss:Type="String">Custom Objects</Data>
+                    </Cell>
+                </Row>
+                <apex:repeat value="{!schemaModel.customObjects}" var="customObject">
+                    <Row ss:Height="26.0">
+                        <Cell ss:Index="2" ss:StyleID="SchemaDataColumn">
+                            <Data ss:Type="String">{!customObject.name}</Data>
+                        </Cell>
+                        <Cell ss:StyleID="SchemaDataColumnCenter">
+                            <Data ss:Type="String"/>
+                        </Cell>
+                        <Cell ss:StyleID="SchemaDataColumn">
+                            <Data ss:Type="String"/>
+                        </Cell>
+                        <Cell ss:StyleID="SchemaDataColumn">
+                            <Data ss:Type="String">{!customObject.description}</Data>
+                        </Cell>
+                    </Row>
+                </apex:repeat>
+                <Row ss:StyleID="BlackTopBorder"/>
+                <Row/>
+                <Row/>
+                <Row/>
+                <Row>
+                    <Cell ss:MergeAcross="4" ss:StyleID="GreyColumnSectionHeader">
+                        <Data ss:Type="String">Column Definitions</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell ss:MergeAcross="1" ss:StyleID="PurpleColumnSectionHeaderBox">
+                        <Data ss:Type="String">Column Name</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="PurpleColumnSectionHeaderBox">
+                        <Data ss:Type="String">Description</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">A</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Label</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">The Salesforce.com label that is displayed in the page layout (UI)</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">B</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">API Name</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">The Salesforce.com API name that is used to identify the data field</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">C</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Field Type/Length</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">The Salesforce.com Field Type and length(if applicable)</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">D</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Integration</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">Arrow indicating direction of data flow uni-directional or bi-directional. Uni-directional fields will indicate read-only fields in Salesforce.com unless noted otherwise</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">E</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Source</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">The source of the data being integrated</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">F</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Service / DB</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">Indication where the data will be accessed (via Web Services or DB)</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">G</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Field Name</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">The name of the field represting the data to be integrated</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">H</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Type Length</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">The type of the data field and length(if applicable)</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">I</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Transformaton</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">Any transformtion rules that need to occur allow the format of data from the source system to be integration to the target system</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">J</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Validation</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">Any validation rules that need to occur in order for the data to be successfully between the systems involved</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">K</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Filter</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String">Filter rules that identify when the data applied to be integrated</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="String">L</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String">Notes</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="BlackBottomBorder">
+                        <Data ss:Type="String">Any additional information that supports the integration of the data elements</Data>
+                    </Cell>
+                </Row>
+                <Row/>
+                <Row>
+                    <Cell ss:MergeAcross="4" ss:StyleID="GreyColumnSectionHeader">
+                        <Data ss:Type="String">Open Issues:</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell ss:StyleID="PurpleColumnSectionHeaderBox"/>
+                    <Cell ss:StyleID="PurpleColumnSectionHeaderBox">
+                        <Data ss:Type="String">Object Name</Data>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="PurpleColumnSectionHeaderBox">
+                        <Data ss:Type="String">Issue / Question</Data>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="Number">1.0</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String"/>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String"/>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="Number">2.0</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String"/>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String"/>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="Number">3.0</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String"/>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String"/>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="Number">4.0</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String"/>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String"/>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="Number">5.0</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String"/>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String"/>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell>
+                        <Data ss:Type="Number">6.0</Data>
+                    </Cell>
+                    <Cell>
+                        <Data ss:Type="String"/>
+                    </Cell>
+                    <Cell ss:MergeAcross="2" ss:StyleID="SchemaDataColumn">
+                        <Data ss:Type="String"/>
+                    </Cell>
+                </Row>
+            </Table>
+            <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                <Print>
+                    <ValidPrinterInfo/>
+                    <HorizontalResolution>300</HorizontalResolution>
+                    <VerticalResolution>300</VerticalResolution>
+                </Print>
+                <ProtectObjects>False</ProtectObjects>
+                <ProtectScenarios>False</ProtectScenarios>
+            </WorksheetOptions>
+        </Worksheet>
+        <apex:repeat value="{!schemaModel.worksheet}" var="worksheet">
+            <Worksheet ss:Name="{!worksheet.name}">
+                <Names>
+                    <NamedRange ss:Name="_FilterDatabase"
+                        ss:RefersTo="={!worksheet.name}!R2C1:R{!worksheet.expandedRowCount}C13"
+                        ss:Hidden="1"/>
+                </Names>
+                <Table ss:ExpandedColumnCount="12"
+                    ss:ExpandedRowCount="{!worksheet.expandedRowCount}" x:FullColumns="1"
+                    x:FullRows="1" ss:StyleID="SchemaDataColumn">
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="213.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="222.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="206.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="76.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="79.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="105.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="175.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="103.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="247.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="151.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="249.0"/>
+                    <Column ss:StyleID="SchemaDataColumn" ss:AutoFitWidth="0" ss:Width="447.0"/>
+                    <Row>
+                        <Cell ss:MergeAcross="2" ss:StyleID="SalesforceFieldsColumn">
+                            <Data ss:Type="String">Salesforce Fields</Data>
+                        </Cell>
+                        <Cell ss:StyleID="IntegrationDirectionColumn"/>
+                        <Cell ss:MergeAcross="3" ss:StyleID="ExternalSourceFieldsColumn">
+                            <Data ss:Type="String">External Source Fields</Data>
+                        </Cell>
+                        <Cell ss:MergeAcross="3" ss:StyleID="FirstHeaderSpacing"/>
+                    </Row>
+                    <Row ss:AutoFitHeight="0">
+                        <Cell ss:StyleID="DataColumnHeaderFullBorder">
+                            <Data ss:Type="String">Field Label</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderFullBorder">
+                            <Data ss:Type="String">Field API Name</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderMinusRightBorder">
+                            <Data ss:Type="String">Field Type (Length/Reference)</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnIntegrationHeaderBorder">
+                            <Data ss:Type="String">Integration</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderMinusLeftBorder">
+                            <Data ss:Type="String">Source</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderMinusLeftBorder">
+                            <Data ss:Type="String">Service / DB</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderFullBorder">
+                            <Data ss:Type="String">Field Name</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderFullBorder">
+                            <Data ss:Type="String">Type (Length)</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderRightLeftBorder">
+                            <Data ss:Type="String">Transform</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderFullBorder">
+                            <Data ss:Type="String">Validation</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderFullBorder">
+                            <Data ss:Type="String">Filter</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                        <Cell ss:StyleID="DataColumnHeaderFullBorder">
+                            <Data ss:Type="String">Notes</Data>
+                            <NamedCell ss:Name="_FilterDatabase"/>
+                        </Cell>
+                    </Row>
+                    <apex:repeat value="{!worksheet.schemaFields}" var="field">
+                        <Row ss:Height="{!field.fieldRowHeight}">
+                            <Cell ss:StyleID="DataColumnNormal">
+                                <Data ss:Type="String">{!field.label}</Data>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnNormal">
+                                <Data ss:Type="String">{!field.apiName}</Data>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnNormal">
+                                <Data ss:Type="String">{!field.fieldType}</Data>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnIntegration">
+                                <Data ss:Type="String"/>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnNormal">
+                                <Data ss:Type="String"/>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnNormal">
+                                <Data ss:Type="String"/>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnNormal">
+                                <Data ss:Type="String"/>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnBorderRight">
+                                <Data ss:Type="String"/>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnBorderRight">
+                                <Data ss:Type="String"/>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnBorderRight">
+                                <Data ss:Type="String" xml:space="preserve">{!field.validation}</Data>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnBorderRight">
+                                <Data ss:Type="String" xml:space="preserve">{!field.picklistValues}</Data>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                            <Cell ss:StyleID="DataColumnBorderRight">
+                                <Data ss:Type="String"/>
+                                <NamedCell ss:Name="_FilterDatabase"/>
+                            </Cell>
+                        </Row>
+                    </apex:repeat>
+                </Table>
+                <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                    <Print>
+                        <ValidPrinterInfo/>
+                        <HorizontalResolution>300</HorizontalResolution>
+                        <VerticalResolution>300</VerticalResolution>
+                    </Print>
+                    <ProtectObjects>False</ProtectObjects>
+                    <ProtectScenarios>False</ProtectScenarios>
+                </WorksheetOptions>
+                <AutoFilter x:Range="R2C1:R{!worksheet.expandedRowCount}C12"
+                    xmlns="urn:schemas-microsoft-com:office:excel"> 
+                </AutoFilter>
+            </Worksheet>
+        </apex:repeat>
+      </Workbook>
+</apex:page>

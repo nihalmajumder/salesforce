@@ -1,0 +1,26 @@
+<aura:component description="this component displays a modal where the user can choose to delete their rule">
+    <aura:registerEvent name="onSuccessEvt" type="c:OnSuccessEvt"  />
+    <aura:attribute name="name" type="String" />
+    <div>
+        <section role="dialog" tabindex="-1" aria-labelledby="delete-rule-modal" aria-modal="true" aria-describedby="delete-rule-modal" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="delete-rule-modal" class="slds-text-heading_medium slds-hyphenate">Field Value Mappings ( {!v.name} ) - Delete</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="delete-rule-modal">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_12-of-12">
+                            <h3 style="text-align:center;">Are you sure you want to delete <b>"{!v.name}"</b>?</h3>
+                            <p style="text-align:center;">This mapping will be removed, along with any related child records.</p>
+                        </div>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" type="button" onclick="{!c.handleCancel}">Cancel</button>
+                    <button class="slds-button slds-button_destructive" type="button" onclick="{!c.handleDelete}">Delete</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+</aura:component>

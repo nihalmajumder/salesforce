@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Applications</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Application Preview Filters --></label>
+        <name>Application_Preview_Filters</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Admission Decision --></label>
+        <name>Admission_Decision__c</name>
+    </fields>
+    <fields>
+        <help><!-- The response from the applicant about the Affirmation of Faith --></help>
+        <label><!-- Agree To Affirmation Response --></label>
+        <name>Agree_To_Affirmation_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant agrees to the Affirmation of Faith --></help>
+        <label><!-- Agree To Affirmation --></label>
+        <name>Agree_To_Affirmation__c</name>
+    </fields>
+    <fields>
+        <help><!-- The response from the applicant about the Community Agreement --></help>
+        <label><!-- Agree To Community Agreement Response --></label>
+        <name>Agree_To_Community_Agreement_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant agrees with the Community Agreement --></help>
+        <label><!-- Agree To Community Agreement --></label>
+        <name>Agree_To_Community_Agreement__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicants response if they do not agree with the Covenant --></help>
+        <label><!-- Agree To Covenant Response --></label>
+        <name>Agree_To_Covenant_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant agrees to covenant --></help>
+        <label><!-- Agree To Covenant --></label>
+        <name>Agree_To_Covenant__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Anatomy Courses --></help>
+        <label><!-- Anatomy Prerequisite --></label>
+        <name>Anatomy_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The applicable licenses that the applicant possesses --></help>
+        <label><!-- Applicable Licenses --></label>
+        <name>Applicable_Licenses__c</name>
+        <picklistValues>
+            <masterLabel>CNA Certification as of 2009 NCLEX scheduled for 6/22/15</masterLabel>
+            <translation><!-- CNA Certification as of 2009 NCLEX scheduled for 6/22/15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elementary Education 1-6</masterLabel>
+            <translation><!-- Elementary Education 1-6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>K-12 Licensure</masterLabel>
+            <translation><!-- K-12 Licensure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No License</masterLabel>
+            <translation><!-- No License --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RN Licensure</masterLabel>
+            <translation><!-- RN Licensure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Register Nurse in Minnesota</masterLabel>
+            <translation><!-- Register Nurse in Minnesota --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Applicant Type --></label>
+        <name>Applicant_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application Control --></label>
+        <name>Application_Control__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Application Status --></label>
+        <name>Application_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Ability Follow Verbal Directions --></label>
+        <name>BUILD_Ability_Follow_Verbal_Directions__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Ability Follow Written Directions --></label>
+        <name>BUILD_Ability_Follow_Written_Directions__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Ability To Communicate --></label>
+        <name>BUILD_Ability_To_Communicate__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Ability To Schedule --></label>
+        <name>BUILD_Ability_To_Schedule__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Ability To Understand --></label>
+        <name>BUILD_Ability_To_Understand__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Addition --></label>
+        <name>BUILD_Addition__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Additional Considerations --></label>
+        <name>BUILD_Additional_Considerations__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Adjustment to New Situations --></label>
+        <name>BUILD_Adjustment_To_New_Situations__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Asks for Help --></label>
+        <name>BUILD_Asks_For_Help__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Career Pathway --></label>
+        <name>BUILD_Career_Pathway__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Computer Skills --></label>
+        <name>BUILD_Computer_Skills__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Copes With Stress --></label>
+        <name>BUILD_Copes_With_Stress__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Division --></label>
+        <name>BUILD_Division__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Does Anyone Have Guardianship? --></label>
+        <name>BUILD_Does_Anyone_Have_Guardianship__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Handling Money --></label>
+        <name>BUILD_Handling_Money__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Handling Personal Affairs --></label>
+        <name>BUILD_Handling_Personal_Affairs__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Independently Takes Medication --></label>
+        <name>BUILD_Independently_Takes_Medication__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Interpersonal Skills --></label>
+        <name>BUILD_Interpersonal_Skills__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Is Own Guardian? --></label>
+        <name>BUILD_Is_Own_Guardian__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Knows Personal Information --></label>
+        <name>BUILD_Knows_Personal_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Listening Comprehension --></label>
+        <name>BUILD_Listening_Comprehension__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Motiviation To Learn --></label>
+        <name>BUILD_Motiviation_To_Learn__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Multiplication --></label>
+        <name>BUILD_Multiplication__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Negotiating Campus --></label>
+        <name>BUILD_Negotiating_Campus__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Ordering and Purchasing --></label>
+        <name>BUILD_Ordering_And_Purchasing__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Reading --></label>
+        <name>BUILD_Reading__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Receives Support Services --></label>
+        <name>BUILD_Receives_Support_Services__c</name>
+        <picklistValues>
+            <masterLabel>Division of Developmental Disabilities</masterLabel>
+            <translation><!-- Division of Developmental Disabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Division of Vocational Rehabilitation</masterLabel>
+            <translation><!-- Division of Vocational Rehabilitation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Assistance</masterLabel>
+            <translation><!-- Medical Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Security Disability Insurance</masterLabel>
+            <translation><!-- Social Security Disability Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State Services for the Blind</masterLabel>
+            <translation><!-- State Services for the Blind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supplemental Security Income</masterLabel>
+            <translation><!-- Supplemental Security Income --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BUILD Subtraction --></label>
+        <name>BUILD_Subtraction__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Use of Judgment Skills --></label>
+        <name>BUILD_Use_Of_Judgment_Skills__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Using Cell Phone Email --></label>
+        <name>BUILD_Using_Cell_Phone_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- BUILD Writing --></label>
+        <name>BUILD_Writing__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Basic Counseling Skills Course --></help>
+        <label><!-- Basic Counseling Skills Course --></label>
+        <name>Basic_Counseling_Skills_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for 9 Additional credits in Behavioral Sciences --></help>
+        <label><!-- Behavioral Science 9 Additional credits --></label>
+        <name>Behavioral_Sciences_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Biology Course --></help>
+        <label><!-- Biology Prerequisite --></label>
+        <name>Biology_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Biomechanics --></help>
+        <label><!-- Biomechanics Prerequisite --></label>
+        <name>Biomechanics_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Chemistry Course --></help>
+        <label><!-- Chemistry Prerequisite --></label>
+        <name>Chemistry_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Citizenship --></label>
+        <name>Citizenship__c</name>
+        <picklistValues>
+            <masterLabel>Citizen</masterLabel>
+            <translation><!-- Citizen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Citizen or Permanent Resident</masterLabel>
+            <translation><!-- Not Citizen or Permanent Resident --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Permanent Resident Alien</masterLabel>
+            <translation><!-- Permanent Resident Alien --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applicants response to how many college credits will be transferring --></help>
+        <label><!-- College Credits Transferred --></label>
+        <name>College_Credits_Transferred__c</name>
+        <picklistValues>
+            <masterLabel>1-30 transfer credits</masterLabel>
+            <translation><!-- 1-30 transfer credits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More than 30 transfer credits</masterLabel>
+            <translation><!-- More than 30 transfer credits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No transfer credits</masterLabel>
+            <translation><!-- No transfer credits --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applicant comments about anything they would like to share regarding their application --></help>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant has already completed the requirements for a bachelors degree --></help>
+        <label><!-- Completed Requirements For Degree --></label>
+        <name>Completed_Requirements_For_Degree__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes: Bachelor of Arts</masterLabel>
+            <translation><!-- Yes: Bachelor of Arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes: Bachelor of Science</masterLabel>
+            <translation><!-- Yes: Bachelor of Science --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Cultural Heritage essay response --></help>
+        <label><!-- Cultural Heritage Response --></label>
+        <name>Cultural_Heritage_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Location --></label>
+        <name>Delivery_Location__c</name>
+        <picklistValues>
+            <masterLabel>San Diego</masterLabel>
+            <translation><!-- San Diego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SemPM</masterLabel>
+            <translation><!-- SemPM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Paul</masterLabel>
+            <translation><!-- St. Paul --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Delivery Type --></label>
+        <name>Delivery_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Developmental Studies Course --></help>
+        <label><!-- Developmental Studies Course --></label>
+        <name>Developmental_Studies_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Earned a BA or BS or higher degree from a regionally accredited or internationally recognized institution --></help>
+        <label><!-- Earned a BA or BS or higher degree --></label>
+        <name>Earned_Degree_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Educational Background --></label>
+        <name>Educational_Background__c</name>
+        <picklistValues>
+            <masterLabel>Adult Freshman</masterLabel>
+            <translation><!-- Adult Freshman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freshman</masterLabel>
+            <translation><!-- Freshman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate</masterLabel>
+            <translation><!-- Graduate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer</masterLabel>
+            <translation><!-- Transfer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s Emotional And Interpersonal Goals Response --></help>
+        <label><!-- Emotional And Interpersonal Goals Respon --></label>
+        <name>Emotional_And_Interpersonal_Goals_Respon__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s Emotional And Interpersonal Goals Response --></help>
+        <label><!-- Emotional Interpersonal Goals Response --></label>
+        <name>Emotional_Interpersonal_Goals_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- EssayCleaned --></label>
+        <name>EssayCleaned__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Exercise Physiology Course --></help>
+        <label><!-- Exercise Physiology Prerequisite --></label>
+        <name>Exercise_Physiology_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Specifies the denomination of a family member pastor --></help>
+        <label><!-- Family Pastor Denomination --></label>
+        <name>Family_Pastor_Denomination__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicants answer to the question: Have you accepted Jesus Christ as your personal Lord and Savior? --></help>
+        <label><!-- Follower Of Christ --></label>
+        <name>Follower_Of_Christ__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsure</masterLabel>
+            <translation><!-- Unsure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for GPA of 2.0 or higher on a 4.0 scale --></help>
+        <label><!-- GPA of 2.0 or higher on a 4.0 scale --></label>
+        <name>GPA_20_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite of GPA of 2.5 or higher on a 4.0 scale --></help>
+        <label><!-- GPA of 2.5 or higher on a 4.0 scale --></label>
+        <name>GPA_25_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite of GPA of 3.0 or higher on a 4.0 scale --></help>
+        <label><!-- GPA of 3.0 or higher on a 4.0 scale --></label>
+        <name>GPA_30_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant has ever been convicted of an offense involving inappropriate sexual conduct or violent behavior or found guilty of a professional or ethical violation --></help>
+        <label><!-- Has Been Convicted Of Offense --></label>
+        <name>Has_Been_Convicted_Of_Offense__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant has ever pled guilty, been adjudicated, or otherwise been convicted of a crime in any court --></help>
+        <label><!-- Has Been Convicted --></label>
+        <name>Has_Been_Convicted__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies that the application has the Board of Certification for Athletic Trainers Documentation document uploaded --></help>
+        <label><!-- Has Document - Cert for Athletic Trainer --></label>
+        <name>Has_Document_Athletic_Trainers__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies the application has a CPR for the Professional Rescuer (or current certification) document uploaded --></help>
+        <label><!-- Has Document - CPR --></label>
+        <name>Has_Document_CPR__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the application has an Education License document uploaded --></help>
+        <label><!-- Has Document - Education License --></label>
+        <name>Has_Document_Education_License__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the application has a Family of Origin Paper document uploaded --></help>
+        <label><!-- Has Document - Family of Origin Paper --></label>
+        <name>Has_Document_Family_Of_Origin_Paper__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies the application has a Health Insurance Verification document upload --></help>
+        <label><!-- Has Document - Health Insurance --></label>
+        <name>Has_Document_Health_Insurance__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the application has an Interview document upload --></help>
+        <label><!-- Has Document - Interview --></label>
+        <name>Has_Document_Interview__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies the application has a Ministry Experience document upload --></help>
+        <label><!-- Has Document - Ministry Experience --></label>
+        <name>Has_Document_Ministry_Experience__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the application has the PSEO 1st Semester MN State Form document uploaded --></help>
+        <label><!-- Has Document - PSEO 1st Semester --></label>
+        <name>Has_Document_PSEO_1st_Semester__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies the application has a PSEO HS Counselor Form document uploaded --></help>
+        <label><!-- Has Document - PSEO HS Counselor Form --></label>
+        <name>Has_Document_PSEO_HS_Counselor_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Document - Resume --></label>
+        <name>Has_Document_Resume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Document - Statement of Purpose --></label>
+        <name>Has_Document_Statement_Of_Purpose__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies the application has a Transfer Dean of Students Form document uploaded --></help>
+        <label><!-- Has Document - Transfer Dean of Students --></label>
+        <name>Has_Document_Transfer_Dean_of_Students__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies the application has a Valid U.S. RN License document upload --></help>
+        <label><!-- Has Document - Valid U.S. RN License --></label>
+        <name>Has_Document_Valid_US_RN_License__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if applicant has family that attended --></help>
+        <label><!-- Has Family Attended --></label>
+        <name>Has_Family_Attended__c</name>
+    </fields>
+    <fields>
+        <label><!-- Holding Name --></label>
+        <name>Holding_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intended Program Code --></label>
+        <name>Intended_Program_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intended Program --></label>
+        <name>Intended_Program__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Intended Term of Entry --></label>
+        <name>Intended_Term_of_Entry__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is Applying For PSEO --></label>
+        <name>Is_Applying_For_PSEO__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if applicant has a family member who is an employee --></help>
+        <label><!-- Is Family Employee --></label>
+        <name>Is_Family_Employee__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant has a family member who is a pastor or missionary --></help>
+        <label><!-- Is Family Pastor --></label>
+        <name>Is_Family_Pastor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Transfer Student --></label>
+        <name>Is_Transfer_Student__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Lifespan Course --></help>
+        <label><!-- Lifespan Prerequisite --></label>
+        <name>Lifespan_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Master&apos;s Degree Posted --></help>
+        <label><!-- Master&apos;s Degree Posted --></label>
+        <name>Masters_Degree_Posted_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Specifies if applicant is a member or employee of an official ministry partner church or organization --></help>
+        <label><!-- Member of Partner Church --></label>
+        <name>Member_of_Partner_Church__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Microbiology Course --></help>
+        <label><!-- Microbiology Prerequisite --></label>
+        <name>Microbiology_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s ministry involvement response --></help>
+        <label><!-- Ministry Involvement Response --></label>
+        <name>Ministry_Involvement_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name Of Family Employee --></label>
+        <name>Name_Of_Family_Employee__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Nutrition Course --></help>
+        <label><!-- Nutrition Prerequisite --></label>
+        <name>Nutrition_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s description of a conviction  involving inappropriate sexual conduct or violent behavior or found guilty of a professional or ethical violation --></help>
+        <label><!-- Offense Description --></label>
+        <name>Offense_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Other high school activities or experiences for the applicant --></help>
+        <label><!-- Other Activities --></label>
+        <name>Other_Activities__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies a list of other colleges for which the applicant is applying --></help>
+        <label><!-- Other Colleges --></label>
+        <name>Other_Colleges__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicants response to PSEO Approach --></help>
+        <label><!-- PSEO Approach --></label>
+        <name>PSEO_Approach__c</name>
+        <picklistValues>
+            <masterLabel>I want to attend Bethel for PSEO and beyond</masterLabel>
+            <translation><!-- I want to attend Bethel for PSEO and beyond --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I want to get ahead on college credits</masterLabel>
+            <translation><!-- I want to get ahead on college credits --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applicants response to PSEO Experience --></help>
+        <label><!-- PSEO Experience Response --></label>
+        <name>PSEO_Experience_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicants response to PSEO Live on campus --></help>
+        <label><!-- PSEO Live On Campus --></label>
+        <name>PSEO_Live_On_Campus__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsure</masterLabel>
+            <translation><!-- Unsure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applicants response to the number of PSEO courses --></help>
+        <label><!-- PSEO Number Of Courses --></label>
+        <name>PSEO_Number_Of_Courses__c</name>
+        <picklistValues>
+            <masterLabel>Full-time (Approximately 4-6 classes per semester)</masterLabel>
+            <translation><!-- Full-time (Approximately 4-6 classes per semester) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Part-time (Approximately 1-3 classes per semester)</masterLabel>
+            <translation><!-- Part-time (Approximately 1-3 classes per semester) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The partner church or organization in which the applicant is a member --></help>
+        <label><!-- Partner Church --></label>
+        <name>Partner_Church__c</name>
+    </fields>
+    <fields>
+        <help><!-- Personal Hardship essay response --></help>
+        <label><!-- Personal Hardship Response --></label>
+        <name>Personal_Hardship_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s personal story response --></help>
+        <label><!-- Personal Story Response --></label>
+        <name>Personal_Story_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Physiology Course --></help>
+        <label><!-- Physiology Prerequisite --></label>
+        <name>Physiology_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant plans ot apply for a music performance scholarship --></help>
+        <label><!-- Plan Music Scholarship --></label>
+        <name>Plan_Music_Scholarship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planning on NCAA sport at Bethel #2 --></label>
+        <name>Plan_Play_Sport_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planning on NCAA sport at Bethel #1 --></label>
+        <name>Plan_Play_Sport__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Application ID --></label>
+        <name>Previous_Application_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s professional goals response --></help>
+        <label><!-- Professional Goals Response --></label>
+        <name>Professional_Goals_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for 1 Year RN Clinical Experience --></help>
+        <label><!-- RN Clinical Experience (1 Year) --></label>
+        <name>RN_Clinical_Experience_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant read the Affirmation of Faith --></help>
+        <label><!-- Read Affirmation --></label>
+        <name>Read_Affirmation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies if the applicant read the Covenant --></help>
+        <label><!-- Read Covenant --></label>
+        <name>Read_Covenant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Object JSON --></label>
+        <name>Related_Object_JSON__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicants response to describe relationship with Christ --></help>
+        <label><!-- Relationship With Christ Response --></label>
+        <name>Relationship_With_Christ_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residency --></label>
+        <name>Residency__c</name>
+    </fields>
+    <fields>
+        <label><!-- School / College --></label>
+        <name>School_College__c</name>
+    </fields>
+    <fields>
+        <help><!-- The second program the applicant is considering --></help>
+        <label><!-- Secondary Program --></label>
+        <name>Secondary_Program__c</name>
+        <relationshipLabel><!-- Applications (Secondary Program) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s Bethel Seminary response --></help>
+        <label><!-- Seminary Response --></label>
+        <name>Seminary_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Service Community essay response --></help>
+        <label><!-- Service Community Response --></label>
+        <name>Service_Community_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s significant people response --></help>
+        <label><!-- Significant People Response --></label>
+        <name>Significant_People_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- The second NCAA sport the applicant is planning to play --></help>
+        <label><!-- Which NCAA sport #2 --></label>
+        <name>Sport_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- The NCAA sport the applicant is planning to play --></help>
+        <label><!-- Which NCAA sport #1 --></label>
+        <name>Sport__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Statistics Course --></help>
+        <label><!-- Statistics Prerequisite --></label>
+        <name>Statistics_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Statistics or Research Methods --></help>
+        <label><!-- Statistics or Research Methods --></label>
+        <name>Statistics_Research_Methods_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Student Type --></label>
+        <name>Student_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Unofficial ACT Score from the applicant --></help>
+        <label><!-- Unofficial ACT Score --></label>
+        <name>Unofficial_ACT_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Unofficial SAT Score from the applicant --></help>
+        <label><!-- Unofficial SAT Score --></label>
+        <name>Unofficial_SAT_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Created --></label>
+        <name>User_Created__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s volunteer experience response --></help>
+        <label><!-- Volunteer Experience Response --></label>
+        <name>Volunteer_Experience_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specifies when the applicant earned college credits --></help>
+        <label><!-- When College Credits Earned --></label>
+        <name>When_College_Credits_Earned__c</name>
+        <picklistValues>
+            <masterLabel>After High School graduation</masterLabel>
+            <translation><!-- After High School graduation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Both during and after High School</masterLabel>
+            <translation><!-- Both during and after High School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>During High School (PSEO, AP, CLEP, IB, other)</masterLabel>
+            <translation><!-- During High School (PSEO, AP, CLEP, IB, other) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Applicant&apos;s response to why they want to attend Bethel --></help>
+        <label><!-- Why Attend Response --></label>
+        <name>Why_Attend_Response__c</name>
+    </fields>
+    <layouts>
+        <layout>Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Application Layout - Master</layout>
+        <sections>
+            <label><!-- Additional Info --></label>
+            <section>Additional Info</section>
+        </sections>
+        <sections>
+            <label><!-- Affirmation of Faith --></label>
+            <section>Affirmation of Faith</section>
+        </sections>
+        <sections>
+            <label><!-- Application Type --></label>
+            <section>Application Type</section>
+        </sections>
+        <sections>
+            <label><!-- Community Agreement --></label>
+            <section>Community Agreement</section>
+        </sections>
+        <sections>
+            <label><!-- Covenant for Life Together --></label>
+            <section>Covenant for Life Together</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Document Status --></label>
+            <section>Document Status</section>
+        </sections>
+        <sections>
+            <label><!-- EASY Filter Fields --></label>
+            <section>EASY Filter Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Financial Aid Questionnaire --></label>
+            <section>Financial Aid Questionnaire</section>
+        </sections>
+        <sections>
+            <label><!-- Graduate --></label>
+            <section>Graduate</section>
+        </sections>
+        <sections>
+            <label><!-- Prerequisites --></label>
+            <section>Prerequisites</section>
+        </sections>
+        <sections>
+            <label><!-- Seminary --></label>
+            <section>Seminary</section>
+        </sections>
+        <sections>
+            <label><!-- Undergrad --></label>
+            <section>Undergrad</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Application All Fields --></label>
+        <name>ApplicationAllFields</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Key Fields - CAS --></label>
+        <name>CAS_Key_Fields</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Internal Requirements - CAPS --></label>
+        <name>Internal_Requirements_CAPS</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Internal Requirements - GS --></label>
+        <name>Internal_Requirements_GS</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Internal Requirements - Seminary --></label>
+        <name>Internal_Requirements_Seminary</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Key Fields - Post-Trad --></label>
+        <name>Key_Fields_Post_Trad</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- ACT scores cannot be greater then 36 --></errorMessage>
+        <name>ACT_Scoring</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- SAT scores cannot be greater than 1600 --></errorMessage>
+        <name>SAT_Scoring</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Admin_View --></label>
+        <name>Admin_View</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Review --></label>
+        <name>Review</name>
+    </webLinks>
+</CustomObjectTranslation>

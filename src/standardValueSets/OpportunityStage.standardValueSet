@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Inquired</fullName>
+        <default>false</default>
+        <description>A person who has inquired about a program or has shown interest</description>
+        <label>Inquired</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Applied</fullName>
+        <default>false</default>
+        <description>A person who has submitted an application.</description>
+        <label>Applied</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Wait Listed</fullName>
+        <default>false</default>
+        <description>A person who has submitted all required components of the admissions file and is waiting for a spot to be admitted to</description>
+        <label>Wait Listed</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Accepted</fullName>
+        <default>false</default>
+        <description>A person whose admissions file has been reviewed and accepted for admission.</description>
+        <label>Accepted</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Confirmed</fullName>
+        <default>false</default>
+        <description>A person who has been confirmed.</description>
+        <label>Confirmed</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>95</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Enrolled</fullName>
+        <default>false</default>
+        <description>A person who has enrolled for their start term.</description>
+        <label>Enrolled</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>File Closed</fullName>
+        <default>false</default>
+        <description>A person who is no longer going to enroll</description>
+        <label>File Closed</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+</StandardValueSet>

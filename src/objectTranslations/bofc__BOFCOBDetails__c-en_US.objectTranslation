@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Created By ID --></label>
+        <name>bofc__Created_By_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>bofc__Created_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>bofc__Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Desc --></label>
+        <name>bofc__Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By ID --></label>
+        <name>bofc__Last_Modified_By_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By --></label>
+        <name>bofc__Last_Modified_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>bofc__Last_Modified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ObjectID --></label>
+        <name>bofc__ObjectID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Only FLS --></label>
+        <name>bofc__Only_FLS__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProfileIDs for FLS --></label>
+        <name>bofc__ProfileIDs_for_FLS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show RT --></label>
+        <name>bofc__Show_RT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show SF --></label>
+        <name>bofc__Show_SF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show VR --></label>
+        <name>bofc__Show_VR__c</name>
+    </fields>
+    <fields>
+        <label><!-- allowInChatterGroups --></label>
+        <name>bofc__allowInChatterGroups__c</name>
+    </fields>
+    <fields>
+        <label><!-- deploymentStatus --></label>
+        <name>bofc__deploymentStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- description --></label>
+        <name>bofc__description__c</name>
+    </fields>
+    <fields>
+        <label><!-- enableActivities --></label>
+        <name>bofc__enableActivities__c</name>
+    </fields>
+    <fields>
+        <label><!-- enableBulkApi --></label>
+        <name>bofc__enableBulkApi__c</name>
+    </fields>
+    <fields>
+        <label><!-- enableFeeds --></label>
+        <name>bofc__enableFeeds__c</name>
+    </fields>
+    <fields>
+        <label><!-- enableHistory --></label>
+        <name>bofc__enableHistory__c</name>
+    </fields>
+    <fields>
+        <label><!-- enableReports --></label>
+        <name>bofc__enableReports__c</name>
+    </fields>
+    <fields>
+        <label><!-- enableSearch --></label>
+        <name>bofc__enableSearch__c</name>
+    </fields>
+    <fields>
+        <label><!-- enableSharing --></label>
+        <name>bofc__enableSharing__c</name>
+    </fields>
+    <fields>
+        <label><!-- enableStreamingApi --></label>
+        <name>bofc__enableStreamingApi__c</name>
+    </fields>
+    <fields>
+        <label><!-- label --></label>
+        <name>bofc__label__c</name>
+    </fields>
+    <fields>
+        <label><!-- pluralLabel --></label>
+        <name>bofc__pluralLabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- recordTypeTrackHistory --></label>
+        <name>bofc__recordTypeTrackHistory__c</name>
+    </fields>
+    <layouts>
+        <layout>BOFCOBDetails Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

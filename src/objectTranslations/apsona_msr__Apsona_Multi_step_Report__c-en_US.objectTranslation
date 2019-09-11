@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Content --></label>
+        <name>apsona_msr__Content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>apsona_msr__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Folder Name --></label>
+        <name>apsona_msr__Folder_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Type --></label>
+        <name>apsona_msr__Report_Type__c</name>
+    </fields>
+</CustomObjectTranslation>

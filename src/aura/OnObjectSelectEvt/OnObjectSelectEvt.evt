@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="This event is fired when an object is selected from the assignment rules object tab component">
+    <aura:attribute name="api" type="String"  description="api name of object seleted"/>
+    <aura:attribute name="label" type="String" description="label of object selected"/>
+</aura:event>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Gateway --></label>
+        <name>Mogli_SMS__Gateway__c</name>
+        <relationshipLabel><!-- NotificationGatewayPreference --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notification Settings --></label>
+        <name>Mogli_SMS__Notification_Settings__c</name>
+        <relationshipLabel><!-- NotificationGatewayPreference --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

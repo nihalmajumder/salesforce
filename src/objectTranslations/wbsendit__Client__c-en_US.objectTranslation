@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Campaign Monitor Client Id --></label>
+        <name>wbsendit__Client_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Name --></label>
+        <name>wbsendit__Client_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact Email --></label>
+        <name>wbsendit__Primary_Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact Name --></label>
+        <name>wbsendit__Primary_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Salesforce user who will own the records created by the primary Campaign Monitor for Salesforce sync. --></help>
+        <label><!-- Salesforce User --></label>
+        <name>wbsendit__Salesforce_User__c</name>
+        <relationshipLabel><!-- Campaign Monitor Clients --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Client Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

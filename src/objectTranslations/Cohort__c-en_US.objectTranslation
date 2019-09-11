@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cohort</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cohorts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campus Code --></label>
+        <name>Campus_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Capacity --></label>
+        <name>Capacity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class Day --></label>
+        <name>Class_Day__c</name>
+        <picklistValues>
+            <masterLabel>Friday</masterLabel>
+            <translation><!-- Friday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monday</masterLabel>
+            <translation><!-- Monday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online</masterLabel>
+            <translation><!-- Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saturday</masterLabel>
+            <translation><!-- Saturday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thursday</masterLabel>
+            <translation><!-- Thursday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tuesday</masterLabel>
+            <translation><!-- Tuesday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wednesday</masterLabel>
+            <translation><!-- Wednesday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Cohort Code --></label>
+        <name>Cohort_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cohort List Pulled --></label>
+        <name>Cohort_List_Pulled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Degree Level --></label>
+        <name>Degree_Level__c</name>
+        <picklistValues>
+            <masterLabel>AS</masterLabel>
+            <translation><!-- AS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA</masterLabel>
+            <translation><!-- BA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BS</masterLabel>
+            <translation><!-- BS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DR</masterLabel>
+            <translation><!-- DR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OT</masterLabel>
+            <translation><!-- OT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PB</masterLabel>
+            <translation><!-- PB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Format --></label>
+        <name>Format__c</name>
+        <picklistValues>
+            <masterLabel>100% Online</masterLabel>
+            <translation><!-- 100% Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30-49% Online</masterLabel>
+            <translation><!-- 30-49% Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50-79% Online</masterLabel>
+            <translation><!-- 50-79% Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80-99% Online</masterLabel>
+            <translation><!-- 80-99% Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt;30% Online</masterLabel>
+            <translation><!-- &lt;30% Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt;80% Online with Intensive</masterLabel>
+            <translation><!-- &gt;80% Online with Intensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Face-to-Face (2 yr)</masterLabel>
+            <translation><!-- Face-to-Face (2 yr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Face-to-Face (3 yr)</masterLabel>
+            <translation><!-- Face-to-Face (3 yr) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Face-to-Face Day</masterLabel>
+            <translation><!-- Face-to-Face Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Face-to-Face Evenings</masterLabel>
+            <translation><!-- Face-to-Face Evenings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hybrid</masterLabel>
+            <translation><!-- Hybrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online with Intensive</masterLabel>
+            <translation><!-- Online with Intensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online with Weekends</masterLabel>
+            <translation><!-- Online with Weekends --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Major code --></label>
+        <name>Major_code__c</name>
+        <picklistValues>
+            <masterLabel>ACCT</masterLabel>
+            <translation><!-- ACCT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATLG</masterLabel>
+            <translation><!-- ATLG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATRG</masterLabel>
+            <translation><!-- ATRG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA</masterLabel>
+            <translation><!-- BA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUAG</masterLabel>
+            <translation><!-- BUAG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BULA</masterLabel>
+            <translation><!-- BULA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUSP</masterLabel>
+            <translation><!-- BUSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CADC</masterLabel>
+            <translation><!-- CADC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAMH</masterLabel>
+            <translation><!-- CAMH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CASD</masterLabel>
+            <translation><!-- CASD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CENV</masterLabel>
+            <translation><!-- CENV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CGER</masterLabel>
+            <translation><!-- CGER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHMP</masterLabel>
+            <translation><!-- CHMP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHRM</masterLabel>
+            <translation><!-- CHRM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CIBE</masterLabel>
+            <translation><!-- CIBE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITL</masterLabel>
+            <translation><!-- CITL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLDC</masterLabel>
+            <translation><!-- CLDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLDR</masterLabel>
+            <translation><!-- CLDR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CNRE</masterLabel>
+            <translation><!-- CNRE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COMG</masterLabel>
+            <translation><!-- COMG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COPG</masterLabel>
+            <translation><!-- COPG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COSP</masterLabel>
+            <translation><!-- COSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COUG</masterLabel>
+            <translation><!-- COUG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPLT</masterLabel>
+            <translation><!-- CPLT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPST</masterLabel>
+            <translation><!-- CPST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CSTM</masterLabel>
+            <translation><!-- CSTM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EDAD</masterLabel>
+            <translation><!-- EDAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EDLD</masterLabel>
+            <translation><!-- EDLD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EDUG</masterLabel>
+            <translation><!-- EDUG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FINP</masterLabel>
+            <translation><!-- FINP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GERG</masterLabel>
+            <translation><!-- GERG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GESA</masterLabel>
+            <translation><!-- GESA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCLP</masterLabel>
+            <translation><!-- HCLP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUSE</masterLabel>
+            <translation><!-- HUSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUSP</masterLabel>
+            <translation><!-- HUSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIEG</masterLabel>
+            <translation><!-- LIEG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LKAD</masterLabel>
+            <translation><!-- LKAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAOL</masterLabel>
+            <translation><!-- MAOL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MASL</masterLabel>
+            <translation><!-- MASL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MIDW</masterLabel>
+            <translation><!-- MIDW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MISP</masterLabel>
+            <translation><!-- MISP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEDG</masterLabel>
+            <translation><!-- NEDG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NRSD</masterLabel>
+            <translation><!-- NRSD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NURG</masterLabel>
+            <translation><!-- NURG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NURP</masterLabel>
+            <translation><!-- NURP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORGL</masterLabel>
+            <translation><!-- ORGL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORLG</masterLabel>
+            <translation><!-- ORLG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORLP</masterLabel>
+            <translation><!-- ORLP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PASG</masterLabel>
+            <translation><!-- PASG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PSYP</masterLabel>
+            <translation><!-- PSYP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLDG</masterLabel>
+            <translation><!-- SLDG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPEG</masterLabel>
+            <translation><!-- SPEG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPEP</masterLabel>
+            <translation><!-- SPEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STME</masterLabel>
+            <translation><!-- STME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCKT</masterLabel>
+            <translation><!-- TCKT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TEAG</masterLabel>
+            <translation><!-- TEAG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TWBL</masterLabel>
+            <translation><!-- TWBL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Orientation Day --></label>
+        <name>Orientation_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Id --></label>
+        <name>Previous_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- School / College --></label>
+        <name>School_College__c</name>
+        <picklistValues>
+            <masterLabel>Adult Undergraduate</masterLabel>
+            <translation><!-- Adult Undergraduate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate</masterLabel>
+            <translation><!-- Graduate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Target Enrollment --></label>
+        <name>Target_Enrollment__c</name>
+    </fields>
+    <fields>
+        <help><!-- From Banner --></help>
+        <label><!-- Term --></label>
+        <name>Term__c</name>
+        <relationshipLabel><!-- Cohorts --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Cohort Layout - Master</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

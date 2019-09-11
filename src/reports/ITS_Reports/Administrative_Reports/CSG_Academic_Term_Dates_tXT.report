@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Academic_Term__c$Name</field>
+    </columns>
+    <columns>
+        <field>Academic_Term__c$Term_Code__c</field>
+    </columns>
+    <columns>
+        <field>Academic_Term__c$Activate_Application_Date__c</field>
+    </columns>
+    <columns>
+        <field>Academic_Term__c$End_Application_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Academic_Term__c$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>cas</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Academic_Term__c$School_College__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CSG Academic Term Dates</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Academic_Terms__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Academic_Term__c$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Academic_Term__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,37 @@
+<aura:component controller="ApplicationSelectionController">
+    <!-- handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <!-- attributes -->
+    <aura:attribute name="apps" type="List" />
+    <!-- events -->
+    <aura:registerEvent name="onAppSelectEvt" type="c:OnApplicationSelectionEvt" />
+    
+    <div>
+        <div class="slds-app-launcher__content slds-p-around_medium">
+            <div class="slds-section slds-is-open">
+                <div aria-hidden="false" class="slds-section__content" id="appsContent">
+                    <div class="slds-assistive-text" aria-live="assertive"></div>
+                    <ul class="slds-grid slds-grid_pull-padded slds-wrap">
+                        <aura:iteration items="{!v.apps}" var="app">
+                            <li class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-2" onclick="{!c.handleClick}" data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component_Name__c}" data-auraid="{!app.AuraId__c}">
+                                <div draggable="true" class="slds-app-launcher__tile slds-text-link_reset slds-is-draggable"  data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component_Name__c}" data-auraid="{!app.AuraId__c}">
+                                    <div class="slds-app-launcher__tile-figure" data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component_Name__c}" data-auraid="{!app.AuraId__c}">
+                                        <span class="slds-avatar slds-avatar_large" data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component__c}" data-auraid="{!app.AuraId__c}">
+                                            <abbr class="{!'slds-avatar__initials slds-icon-' + app.Icon_Name__c}" title="{!app.MasterLabel}" data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component_Name__c}" data-auraid="{!app.AuraId__c}">{!app.Avatar_Abr__c}</abbr>
+                                        </span>
+                                        <div class="slds-m-top_xxx-small" data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component__c}" data-auraid="{!app.AuraId__c}">  
+                                        </div>
+                                    </div>
+                                    <div class="slds-app-launcher__tile-body" data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component__c}" data-auraid="{!app.AuraId__c}">
+                                        <a href="javascript:void(0);" data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component_Name__c}" data-auraid="{!app.AuraId__c}">{!app.MasterLabel}</a>
+                                        <p data-applabel="{!app.MasterLabel}" data-cmpname="{!app.Component_Name__c}" data-auraid="{!app.AuraId__c}">{!app.Description__c}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </aura:iteration>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

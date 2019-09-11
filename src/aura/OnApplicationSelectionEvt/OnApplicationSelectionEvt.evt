@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Event template" >
+    <aura:attribute name="appName" type="String" description="name of application selected" />
+    <aura:attribute name="cmpName" type="String" description="name of component selected" />
+    <aura:attribute name="auraId" type="String" description="aura id of selected component" />
+</aura:event>

@@ -1,0 +1,78 @@
+<!--
+ - Created by phg49389 on 2019-04-01.
+ -->
+
+<!-- studentHolds -->
+<template>
+    <!-- The style tag has to be the first element of the template -->
+    <style>
+        .student-holds-table {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            background-color: white;
+            border-color: rgb(224, 227, 229);
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .student-holds-table-head {
+            background-color: rgb(242, 243, 243);
+            font-weight: 700;
+            font-size: 10.8px;
+        }
+
+        .student-holds-table-body {
+            font-size: 12px;
+        }
+
+        .student-holds-table-head-cells {
+            border-color: rgb(224, 227, 229);
+            border-width: 1px;
+            border-style: solid;
+            padding: 5px 2px 4px 5px;
+        }
+
+        .student-holds-table-body-row-border {
+            border-color: rgb(224, 227, 229);
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .student-holds-table-body-cells{
+            padding: 4px 2px 4px 5px;
+        }
+    </style>
+
+    <div style="display: none;">
+        <!-- This function has to be called first to populate the data -->
+        {fetchHolds}
+    </div>
+    <template if:true={hasHolds}>
+        <!-- This student has at least one hold -->
+        <table class="student-holds-table">
+            <thead class="student-holds-table-head">
+                <tr>
+                    <td class="student-holds-table-head-cells">Reason</td>
+                    <td class="student-holds-table-head-cells">From Date</td>
+                    <td class="student-holds-table-head-cells">To Date</td>
+                    <td class="student-holds-table-head-cells">Description</td>
+                </tr>
+            </thead>
+            <tbody class="student-holds-table-body">
+                <template for:each={studentHolds} for:item="hold">
+                    <tr key={hold.id} class="student-holds-table-body-row-border">
+                        <td class="student-holds-table-body-cells">{hold.hold_reason}</td>
+                        <td class="student-holds-table-body-cells">{hold.hold_start_date}</td>
+                        <td class="student-holds-table-body-cells">{hold.hold_end_date}</td>
+                        <td class="student-holds-table-body-cells">{hold.hold_desc}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </template>
+
+    <template if:false={hasHolds}>
+        <!-- No holds for this student -->
+        <p>No holds</p>
+    </template>
+</template>

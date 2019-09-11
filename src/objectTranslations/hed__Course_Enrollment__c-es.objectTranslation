@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Course Connection --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Course Connection --></value>
+    </caseValues>
+    <fields>
+        <help>El programa académico en el que el estudiante está inscrito.</help>
+        <label><!-- Contact&apos;s Academic Program --></label>
+        <name>hed__Account__c</name>
+        <relationshipLabel><!-- Course Connections --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Affiliation --></label>
+        <name>hed__Affiliation__c</name>
+        <relationshipLabel><!-- Course Connection --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El estudiante que realiza el curso</help>
+        <label><!-- Contact --></label>
+        <name>hed__Contact__c</name>
+        <relationshipLabel><!-- Course Connections --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La oferta del curso en la que el estudiante está inscrito. Es un curso ofrecido en un período específico.</help>
+        <label><!-- Course Offering ID --></label>
+        <name>hed__Course_Offering__c</name>
+        <relationshipLabel><!-- Course Connection --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credits Attempted --></label>
+        <name>hed__Credits_Attempted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credits Earned --></label>
+        <name>hed__Credits_Earned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grade --></label>
+        <name>hed__Grade__c</name>
+    </fields>
+    <fields>
+        <help>Representa una conexión principal a un curso.</help>
+        <label><!-- Primary --></label>
+        <name>hed__Primary__c</name>
+    </fields>
+    <fields>
+        <help>El programa en el que el estudiante está inscrito. Une a un estudiante con un programa académico.</help>
+        <label><!-- Program Enrollment ID --></label>
+        <name>hed__Program_Enrollment__c</name>
+        <relationshipLabel><!-- Course Connections --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Representa el estado de la conexión al curso.</help>
+        <label><!-- Status --></label>
+        <name>hed__Status__c</name>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation>Actual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Former</masterLabel>
+            <translation>Anterior</translation>
+        </picklistValues>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Course Connection ID --></nameFieldLabel>
+    <recordTypes>
+        <description><!-- A Faculty Course Connection --></description>
+        <label><!-- Faculty --></label>
+        <name>Faculty</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A Student Course Connection --></description>
+        <label><!-- Student --></label>
+        <name>Student</name>
+    </recordTypes>
+</CustomObjectTranslation>

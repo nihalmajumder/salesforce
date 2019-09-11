@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Compound Key --></label>
+        <name>wbsendit__Compound_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Consent To Track --></label>
+        <name>wbsendit__Consent_To_Track__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>wbsendit__Contact__c</name>
+        <relationshipLabel><!-- Subscriber List Memberships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date Subscribed --></label>
+        <name>wbsendit__Date_Subscribed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Email the user subscribed on. --></help>
+        <label><!-- Email --></label>
+        <name>wbsendit__Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- IP Address the subscriber was on when signing up. --></help>
+        <label><!-- IP Address --></label>
+        <name>wbsendit__IP_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- The source and Id of the CM Import. This will be populated if the record was added to CM via Salesforce. --></help>
+        <label><!-- Import Source --></label>
+        <name>wbsendit__Import_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Id --></label>
+        <name>wbsendit__Job_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>wbsendit__Lead__c</name>
+        <relationshipLabel><!-- Subscriber List Memberships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- List Id --></label>
+        <name>wbsendit__List_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preference --></label>
+        <name>wbsendit__Preference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reads Email With --></label>
+        <name>wbsendit__Reads_Email_With__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segment Codes --></label>
+        <name>wbsendit__Segment_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>wbsendit__State__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bounced</masterLabel>
+            <translation><!-- Bounced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deleted</masterLabel>
+            <translation><!-- Deleted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suppressed</masterLabel>
+            <translation><!-- Suppressed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unconfirmed</masterLabel>
+            <translation><!-- Unconfirmed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsubscribed</masterLabel>
+            <translation><!-- Unsubscribed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subscriber Id --></label>
+        <name>wbsendit__Subscriber_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscriber List --></label>
+        <name>wbsendit__Subscriber_List__c</name>
+        <relationshipLabel><!-- Subscriber List Members --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Subscription Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Add_Contact_to_Email_List --></label>
+        <name>wbsendit__Add_Contact_to_Email_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Lead_to_Email_List --></label>
+        <name>wbsendit__Add_Lead_to_Email_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Unsubscribe --></label>
+        <name>wbsendit__Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Unsubscribe_All --></label>
+        <name>wbsendit__Unsubscribe_All</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Contact_in_CM --></label>
+        <name>wbsendit__View_Contact_in_CM</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Lead_in_Campaign_Monitor --></label>
+        <name>wbsendit__View_Lead_in_Campaign_Monitor</name>
+    </webLinks>
+</CustomObjectTranslation>

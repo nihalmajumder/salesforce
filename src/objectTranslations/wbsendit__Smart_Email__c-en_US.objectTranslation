@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Create Tasks --></label>
+        <name>wbsendit__Create_Tasks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>wbsendit__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Logic --></label>
+        <name>wbsendit__Filter_Logic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filters --></label>
+        <name>wbsendit__Filters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Root Object --></label>
+        <name>wbsendit__Root_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smart Email --></label>
+        <name>wbsendit__Smart_Email__c</name>
+        <relationshipLabel><!-- Smart Email Mappings --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

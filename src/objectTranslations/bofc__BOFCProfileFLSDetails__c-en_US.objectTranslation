@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- BOFCOBDetails --></label>
+        <name>bofc__BOFCOBDetails__c</name>
+        <relationshipLabel><!-- BOFCProfileFLSDetails --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Permissions --></label>
+        <name>bofc__Permissions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile ID --></label>
+        <name>bofc__Profile_ID__c</name>
+    </fields>
+</CustomObjectTranslation>

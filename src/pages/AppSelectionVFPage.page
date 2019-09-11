@@ -1,0 +1,14 @@
+<apex:page lightningStyleSheets="true">
+<apex:slds />
+    <div class="slds-scope">
+        <div class="body">
+            <button onclick="openAppSelector()" >Launch App Selector</button>
+        </div>
+    </div>
+    <script>
+        //opens the application select page
+        function openAppSelector(){
+            window.location.href = '/c/ApplicationSelectApp.app#home';
+        }
+    </script>
+</apex:page>

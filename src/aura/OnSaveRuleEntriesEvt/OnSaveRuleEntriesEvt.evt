@@ -1,0 +1,1 @@
+<aura:event type="APPLICATION" description="Save event called when user wants to save new order of rule criteria entries" />

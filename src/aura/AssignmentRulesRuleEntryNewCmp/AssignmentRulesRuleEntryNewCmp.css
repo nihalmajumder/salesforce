@@ -1,0 +1,7 @@
+.THIS .field-input-readonly[readonly] {
+    padding-left: .75rem;
+    border-color: rgb(217, 219, 221);
+    background-color: rgb(255, 255, 255);
+    font-size: inherit;
+    font-weight: 400;
+}

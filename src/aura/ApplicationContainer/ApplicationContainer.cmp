@@ -1,0 +1,33 @@
+<aura:component controller="ApplicationSelectionController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="appName" type="String" default="Application Selection" />
+    <aura:attribute name="hash" type="String" description="hash defines the location of the user on the screens" default="#home"/>
+    <aura:attribute name="previousHash" type="String" description="holds hash of previous screen"/>
+    <aura:handler event="c:OnRuleSelectEvt" action="{!c.handleRuleSelect}" />
+    <aura:attribute name="appDetails" type="Map" description="holds info about application in object" />
+    
+    <aura:handler name="onAppSelectEvt" event="c:OnApplicationSelectionEvt" action="{!c.handleAppSelectEvt}" />
+
+    <div class="app-container">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="12" class="slds-col">
+                <div class="e-header">
+                    
+                    <button class="slds-button slds-m-left_medium" onclick="{!c.handleQuit}">Quit</button>&nbsp;&nbsp;<button disabled="{!v.hash == '#home'}" class="slds-button" onclick="{!c.handlePrevious}">Previous</button>
+                    
+                    <h1 class="slds-text-heading_large slds-text-align_center">
+                        <b>{!v.appName}</b>
+                    </h1>
+                    
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" class="slds-col">
+                <div class="e-content">
+                    <!-- replace body as new and old components get created and destroyed, to optmized performance-->
+                    <div aura:id="app-content">{!v.body}</div>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

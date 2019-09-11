@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contact Updated --></label>
+        <name>Contact_Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachments --></label>
+        <name>Mogli_SMS__Attachments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Group ID --></label>
+        <name>Mogli_SMS__Batch_Group_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Mogli_SMS__Campaign__c</name>
+        <relationshipLabel><!-- SMS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Mogli_SMS__Contact__c</name>
+        <relationshipLabel><!-- SMS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debug --></label>
+        <name>Mogli_SMS__Debug__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direction --></label>
+        <name>Mogli_SMS__Direction__c</name>
+        <picklistValues>
+            <masterLabel>Incoming</masterLabel>
+            <translation><!-- Incoming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outgoing</masterLabel>
+            <translation><!-- Outgoing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gateway --></label>
+        <name>Mogli_SMS__Gateway__c</name>
+        <relationshipLabel><!-- SMS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Mogli_SMS__Lead__c</name>
+        <relationshipLabel><!-- SMS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>Mogli_SMS__Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offline --></label>
+        <name>Mogli_SMS__Offline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Mogli_SMS__Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Delivery --></label>
+        <name>Mogli_SMS__Scheduled_Delivery__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Mogli_SMS__Status__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation><!-- Queued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received Successfully</masterLabel>
+            <translation><!-- Received Successfully --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sending</masterLabel>
+            <translation><!-- Sending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent Successfully</masterLabel>
+            <translation><!-- Sent Successfully --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- isBatchTransaction --></label>
+        <name>Mogli_SMS__isBatchTransaction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notification Sent To --></label>
+        <name>Notification_Sent_To__c</name>
+        <relationshipLabel><!-- SMS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous_Id --></label>
+        <name>Previous_Id__c</name>
+    </fields>
+    <layouts>
+        <layout>SMS Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mogli_SMS__Mass_Delete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- testSendButton --></label>
+        <name>Mogli_SMS__testSendButton</name>
+    </webLinks>
+</CustomObjectTranslation>

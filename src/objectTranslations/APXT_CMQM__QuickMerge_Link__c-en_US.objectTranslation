@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Enter a subject for the Task --></help>
+        <label><!-- Activity Subject --></label>
+        <name>APXT_CMQM__Activity_Subject__c</name>
+    </fields>
+    <fields>
+        <help><!-- With this enabled, Conga Merge will automatically log an activity (based on the Log Activity Options) when you click to download Letters/Documents. --></help>
+        <label><!-- Automatic Logging --></label>
+        <name>APXT_CMQM__Automatic_Logging__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable this field to bypass the Mass Merge wizard and proceed directly to the Download page --></help>
+        <label><!-- Bypass Wizard --></label>
+        <name>APXT_CMQM__Bypass_Wizard__c</name>
+    </fields>
+    <fields>
+        <help><!-- Paste a 15-character Campaign Id here to use its members as the data source --></help>
+        <label><!-- Campaign Id --></label>
+        <name>APXT_CMQM__Campaign_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable this field to set the default output type to PDF --></help>
+        <label><!-- Default to PDF? --></label>
+        <name>APXT_CMQM__Default_to_PDF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>APXT_CMQM__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter a 15-character id of the record containing the document template. --></help>
+        <label><!-- Template Id --></label>
+        <name>APXT_CMQM__Document_Template_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter a 15-character ID of the record containing the envelope template. --></help>
+        <label><!-- Envelope Template Id --></label>
+        <name>APXT_CMQM__Envelope_Template_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter a value to indicate the number of days in the future to schedule a follow-up task --></help>
+        <label><!-- Follow-up Interval --></label>
+        <name>APXT_CMQM__Follow_up_Interval__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable this field to force the output type to PDF --></help>
+        <label><!-- Force Output as PDF? --></label>
+        <name>APXT_CMQM__Force_Output_as_PDF__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter a 15-character ID of the record containing the label template. --></help>
+        <label><!-- Label Template Id --></label>
+        <name>APXT_CMQM__Label_Template_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Launch --></label>
+        <name>APXT_CMQM__Launch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link Type --></label>
+        <name>APXT_CMQM__Link_Type__c</name>
+        <picklistValues>
+            <masterLabel>Mass Merge</masterLabel>
+            <translation><!-- Mass Merge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PointMerge</masterLabel>
+            <translation><!-- PointMerge --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enable this field to store the merged body of the document in the Task record --></help>
+        <label><!-- Store Body Text? --></label>
+        <name>APXT_CMQM__LogWordBody__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter other PointMerge parameters, using static values. You MAY NOT use Salesforce fields such as &quot;{!Account.Name}&quot;. Use ampersands (&amp;) between parameters.
+For example:
+&amp;DefaultPDF=1&amp;DS4=1 --></help>
+        <label><!-- Other Parameters --></label>
+        <name>APXT_CMQM__Other_Parameters__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Query Record ID (plus optional parameters). In a Mass Merge operation, this Query would represent the Detail data. --></help>
+        <label><!-- Query Id 1 --></label>
+        <name>APXT_CMQM__Query_Id_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Query Record ID (plus optional parameters). In a Mass Merge operation, this Query would represent the Master data. --></help>
+        <label><!-- Query Id --></label>
+        <name>APXT_CMQM__Query_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter 15-character report ids separated by commas. You may use &quot;User.Id&quot; (no quotes) as a value to pass. NOTE: MassMerge supports the use of only one report id. --></help>
+        <label><!-- Report Id(s) --></label>
+        <name>APXT_CMQM__Report_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>APXT_CMQM__Title__c</name>
+    </fields>
+    <layouts>
+        <layout>MassMerge Layout</layout>
+        <sections>
+            <label><!-- Log Activity Settings --></label>
+            <section>Log Activity Settings</section>
+        </sections>
+        <sections>
+            <label><!-- MassMerge Settings --></label>
+            <section>MassMerge Settings</section>
+        </sections>
+        <sections>
+            <label><!-- Output Settings --></label>
+            <section>Output Settings</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PointMerge Layout</layout>
+        <sections>
+            <label><!-- PointMerge Settings --></label>
+            <section>PointMerge Settings</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- A MassMerge Link is used to produce a multiple documents, labels and/or envelopes --></description>
+        <label><!-- MassMerge --></label>
+        <name>APXT_CMQM__MassMerge</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A PointMerge Link is used to produce a single document, possibly using multiple sets of data --></description>
+        <label><!-- PointMerge --></label>
+        <name>APXT_CMQM__PointMerge</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- If you enter a Campaign Id, you must enter the 15-character Salesforce Id. --></errorMessage>
+        <name>APXT_CMQM__CampaignId_Length_15</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If you enter an Id, you must enter the 15-character Salesforce Id. --></errorMessage>
+        <name>APXT_CMQM__DocumentTemplateId_Length_15</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If you enter an Id, you must enter the 15-character Salesforce Id. --></errorMessage>
+        <name>APXT_CMQM__EnvTemplateId_Length_15</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If you enter an Id, you must enter the 15-character Salesforce Id. --></errorMessage>
+        <name>APXT_CMQM__LabelTemplateId_Length_15</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This field must begin with an ampersand (&amp;). --></errorMessage>
+        <name>APXT_CMQM__Must_begin_with_Ampersand</name>
+    </validationRules>
+</CustomObjectTranslation>

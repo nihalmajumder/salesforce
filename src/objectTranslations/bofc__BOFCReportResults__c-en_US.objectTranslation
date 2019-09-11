@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Check --></label>
+        <name>bofc__Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- OName --></label>
+        <name>bofc__OName__c</name>
+    </fields>
+    <fields>
+        <label><!-- RAPIName --></label>
+        <name>bofc__RAPIName__c</name>
+    </fields>
+    <fields>
+        <label><!-- RID --></label>
+        <name>bofc__RID__c</name>
+    </fields>
+    <fields>
+        <label><!-- RName --></label>
+        <name>bofc__RName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>bofc__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>bofc__Type__c</name>
+        <picklistValues>
+            <masterLabel>Report Column</masterLabel>
+            <translation><!-- Report Column --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

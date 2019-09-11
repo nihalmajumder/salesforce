@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- indicates whether this view is to be displayed in GMail or not. This is useful if you want to want to temporarily disable a snippet. --></help>
+        <label><!-- Active --></label>
+        <name>DaScoopComposer__Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field contains a description of this Groove View for documentation purposes (accessible to admins only). --></help>
+        <label><!-- Description --></label>
+        <name>DaScoopComposer__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- is a comma separated list of profile IDs that shall be excluded or included (depending on what you picked in the field &quot;Profile Specific Results&quot;). --></help>
+        <label><!-- Excluded/Included Profiles --></label>
+        <name>DaScoopComposer__Excluded_Included_Profiles__c</name>
+    </fields>
+    <fields>
+        <help><!-- indicates whether this view shall simply be displayed to all users or only if a user is assigned to a certain profile. You can specify a list of profiles that shall be excluded or included. --></help>
+        <label><!-- Profile Specific Results --></label>
+        <name>DaScoopComposer__Profile_Specific_Results__c</name>
+        <picklistValues>
+            <masterLabel>All profiles get to see this snippet</masterLabel>
+            <translation><!-- All profiles get to see this snippet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do not display this snippet to the profiles below.</masterLabel>
+            <translation><!-- Do not display this snippet to the profiles below. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only display this snippet to the profiles below.</masterLabel>
+            <translation><!-- Only display this snippet to the profiles below. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- contains the SOQL query to be executed for this view. The query must not contain aggregate functions. Also HAVING and GROUP BY are not allowed. --></help>
+        <label><!-- Query --></label>
+        <name>DaScoopComposer__Query__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a system field with no relevance for the user. --></help>
+        <label><!-- Sfdc_Base_Url --></label>
+        <name>DaScoopComposer__Sfdc_Base_Url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test your Groove Views --></label>
+        <name>DaScoopComposer__Test_the_Scoop_Composer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines in which order this view is displayed relative to other views (highest number first). Groove Views with no order set will be rendered after any which do have an order set. --></help>
+        <label><!-- Display Order --></label>
+        <name>DaScoopComposer__View_Order__c</name>
+    </fields>
+    <layouts>
+        <layout>DaScoop Snippet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Documentation --></label>
+            <section>Documentation</section>
+        </sections>
+        <sections>
+            <label><!-- Profile Specific Results (BETA) --></label>
+            <section>Profile Specific Results (BETA)</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

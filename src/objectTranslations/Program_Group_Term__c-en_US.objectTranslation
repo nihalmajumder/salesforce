@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Program Group Term</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Program Group Terms</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accepted Goal --></label>
+        <name>Accepted_Goal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accepted Yield Rate --></label>
+        <name>Accepted_Yield_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applied Goal --></label>
+        <name>Applied_Goal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applied Yield Rate --></label>
+        <name>Applied_Yield_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmed Goal --></label>
+        <name>Confirmed_Goal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmed Yield Rate --></label>
+        <name>Confirmed_Yield_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Goal Total --></label>
+        <name>Enrollment_Goal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fiscal Year --></label>
+        <name>Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inquired Goal --></label>
+        <name>Inquired_Goal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inquired Yield Rate --></label>
+        <name>Inquired_Yield_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Group --></label>
+        <name>Program_Group__c</name>
+        <relationshipLabel><!-- Program Group Terms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Term --></label>
+        <name>Term__c</name>
+        <relationshipLabel><!-- Program Group Terms --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Program Group Term Layout - Master</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Goal Tracking --></label>
+            <section>Goal Tracking</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Application Control</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Application Controls</value>
+    </caseValues>
+    <fields>
+        <help><!-- Checked if this Application Control is currently active for applications. --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Application status(es) that the &quot;Cancel&quot; button shows-up for. --></help>
+        <label><!-- Allow Cancel From --></label>
+        <name>Allow_Cancel_From__c</name>
+    </fields>
+    <fields>
+        <help><!-- Application status(es) that the &quot;Submit&quot; button shows-up for. --></help>
+        <label><!-- Allow Submit From --></label>
+        <name>Allow_Submit_From__c</name>
+    </fields>
+    <fields>
+        <help><!-- Application status(es) that the &quot;Withdraw&quot; button shows-up for. --></help>
+        <label><!-- Allow Withdraw From --></label>
+        <name>Allow_Withdraw_From__c</name>
+    </fields>
+    <fields>
+        <help><!-- Application status that new applications are set to. --></help>
+        <label><!-- Application Start Status --></label>
+        <name>Application_Start_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hex color code for the arrow buttons (e.g. &quot;FFFFFF&quot;) --></help>
+        <label><!-- Arrow Color --></label>
+        <name>Arrow_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hex color code for buttons (e.g. &quot;FFFFFF&quot;) --></help>
+        <label><!-- Button Color --></label>
+        <name>Button_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hex color code for the text that&apos;s displayed on the buttons (e.g. &quot;FFFFFF&quot;) --></help>
+        <label><!-- Button Text Color --></label>
+        <name>Button_Text_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Application status that the &quot;Cancel&quot; button sets an application to --></help>
+        <label><!-- Cancel Status --></label>
+        <name>Cancel_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checked if this is the default Application Control when no URL Parameter is specified --></help>
+        <label><!-- Default --></label>
+        <name>Default__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, the intended term and intended program fields won&apos;t be displayed when creating new applications --></help>
+        <label><!-- Hide Term/Program --></label>
+        <name>Hide_Term_Program__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hex color code for the lines in-between sections of the page  (e.g. &quot;FFFFFF&quot;) --></help>
+        <label><!-- Line Color --></label>
+        <name>Line_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hex color code for links  (e.g. &quot;FFFFFF&quot;) --></help>
+        <label><!-- Link Color --></label>
+        <name>Link_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Path to the logo within the static resource. This is used when the static resource is in a compressed format (e.g. .zip file). --></help>
+        <label><!-- Logo Static Resource Path --></label>
+        <name>Logo_Static_Resource_Path__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name of the static resource that holds the logo  (e.g. &quot;FFFFFF&quot;) --></help>
+        <label><!-- Logo Static Resource --></label>
+        <name>Logo_Static_Resource__c</name>
+    </fields>
+    <fields>
+        <help><!-- Application control for a specific school --></help>
+        <label><!-- School / College --></label>
+        <name>School_College__c</name>
+    </fields>
+    <fields>
+        <label><!-- Started Status Help Text --></label>
+        <name>Started_Status_Help_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Application status that the &quot;Submit&quot; button sets an application to --></help>
+        <label><!-- Submit Status --></label>
+        <name>Submit_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submitted Status Help Text --></label>
+        <name>Submitted_Status_Help_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hex color code for the text on the page  (e.g. &quot;FFFFFF&quot;) --></help>
+        <label><!-- Text Color --></label>
+        <name>Text_Color__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text to be included at the end of a link to reference this Application Control. Format is &quot;?at=[URL_PARAMETER]&quot; --></help>
+        <label><!-- URL Parameter --></label>
+        <name>URL_Parameter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Application status that the &quot;Withdraw&quot; button sets an application to --></help>
+        <label><!-- Withdraw Status --></label>
+        <name>Withdraw_Status__c</name>
+    </fields>
+    <layouts>
+        <layout>Application Control Layout</layout>
+        <sections>
+            <label><!-- Colors --></label>
+            <section>Colors</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Status Information --></label>
+            <section>Status Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Application Control Layout - Master</layout>
+        <sections>
+            <label><!-- Colors --></label>
+            <section>Colors</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Status Information --></label>
+            <section>Status Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <webLinks>
+        <label><!-- Related_Object_Review --></label>
+        <name>Related_Object_Review</name>
+    </webLinks>
+</CustomObjectTranslation>

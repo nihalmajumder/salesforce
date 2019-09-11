@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification email when a stakeholder is added to a Case</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Case: New Stakeholder</name>
+    <style>none</style>
+    <subject>You have a new case! Case #{!Case.CaseNumber} submitted to ITS</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

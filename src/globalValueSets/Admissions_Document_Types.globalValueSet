@@ -1,0 +1,1995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bank statement in U.S. Dollars (family or personal)</fullName>
+        <default>false</default>
+        <label>Bank statement in U.S. Dollars (family or personal)</label>
+    </customValue>
+    <customValue>
+        <fullName>Board of Certification for Athletic Trainers Documentation</fullName>
+        <default>false</default>
+        <label>Board of Certification for Athletic Trainers Documentation</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Application</fullName>
+        <default>false</default>
+        <label>BUILD Application</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Counseling Services Consent for treatment</fullName>
+        <default>false</default>
+        <label>BUILD Counseling Services Consent for treatment</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Evaluation Report</fullName>
+        <default>false</default>
+        <label>BUILD Evaluation Report</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Health Insurance Card</fullName>
+        <default>false</default>
+        <label>BUILD Health Insurance Card</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Health Services Consent for treatment</fullName>
+        <default>false</default>
+        <label>BUILD Health Services Consent for treatment</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD IEP</fullName>
+        <default>false</default>
+        <label>BUILD IEP</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Interview</fullName>
+        <default>false</default>
+        <label>BUILD Interview</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Medical History</fullName>
+        <default>false</default>
+        <label>BUILD Medical History</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Medical Release</fullName>
+        <default>false</default>
+        <label>BUILD Medical Release</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Physical/Special Olympics Form</fullName>
+        <default>false</default>
+        <label>BUILD Physical/Special Olympics Form</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Release of Information (Guardians)</fullName>
+        <default>false</default>
+        <label>BUILD Release of Information (Guardians)</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Release of Information for VRS</fullName>
+        <default>false</default>
+        <label>BUILD Release of Information for VRS</label>
+    </customValue>
+    <customValue>
+        <fullName>Certificate of Finance</fullName>
+        <default>false</default>
+        <label>Certificate of Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>CPR for the Professional Rescuer (or current certification)</fullName>
+        <default>false</default>
+        <label>CPR for the Professional Rescuer (or current certification)</label>
+    </customValue>
+    <customValue>
+        <fullName>Education License</fullName>
+        <default>false</default>
+        <label>Education License</label>
+    </customValue>
+    <customValue>
+        <fullName>Employment Verification</fullName>
+        <default>false</default>
+        <label>Employment Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Family of Origin Paper</fullName>
+        <default>false</default>
+        <label>Family of Origin Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Insurance Verification</fullName>
+        <default>false</default>
+        <label>Health Insurance Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>I-20 Form (certificate of eligibility for F-1 student status)</fullName>
+        <default>false</default>
+        <label>I-20 Form (certificate of eligibility for F-1 student status)</label>
+    </customValue>
+    <customValue>
+        <fullName>I-94</fullName>
+        <default>false</default>
+        <label>I-94</label>
+    </customValue>
+    <customValue>
+        <fullName>Immunization Form</fullName>
+        <default>false</default>
+        <label>Immunization Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Int&apos;l Student Transfer Release</fullName>
+        <default>false</default>
+        <label>Int&apos;l Student Transfer Release</label>
+    </customValue>
+    <customValue>
+        <fullName>Interview</fullName>
+        <default>false</default>
+        <label>Interview</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry Experience</fullName>
+        <default>false</default>
+        <label>Ministry Experience</label>
+    </customValue>
+    <customValue>
+        <fullName>PA Completion Plan</fullName>
+        <default>false</default>
+        <label>PA Completion Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>Passport</fullName>
+        <default>false</default>
+        <label>Passport</label>
+    </customValue>
+    <customValue>
+        <fullName>PSEO 1st Semester MN State Form</fullName>
+        <default>false</default>
+        <label>PSEO 1st Semester MN State Form</label>
+    </customValue>
+    <customValue>
+        <fullName>PSEO 2nd Semester MN State Form</fullName>
+        <default>false</default>
+        <label>PSEO 2nd Semester MN State Form</label>
+    </customValue>
+    <customValue>
+        <fullName>PSEO HS Counselor Form</fullName>
+        <default>false</default>
+        <label>PSEO HS Counselor Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Resume</fullName>
+        <default>false</default>
+        <label>Resume</label>
+    </customValue>
+    <customValue>
+        <fullName>Sponsor&apos;s Letter of Support</fullName>
+        <default>false</default>
+        <label>Sponsor&apos;s Letter of Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Statement of Purpose</fullName>
+        <default>false</default>
+        <label>Statement of Purpose</label>
+    </customValue>
+    <customValue>
+        <fullName>Transfer Dean of Students Form</fullName>
+        <default>false</default>
+        <label>Transfer Dean of Students Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Valid U.S. RN License</fullName>
+        <default>false</default>
+        <label>Valid U.S. RN License</label>
+    </customValue>
+    <customValue>
+        <fullName>Questionnaire</fullName>
+        <default>false</default>
+        <label>Questionnaire</label>
+    </customValue>
+    <customValue>
+        <fullName>Earned BA or BS degree from a regionally accredited or internationally recognized institution</fullName>
+        <default>false</default>
+        <label>Earned BA or BS degree from a regionally accredited or internationally recognized institution</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Guardianship</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Guardianship</label>
+    </customValue>
+    <customValue>
+        <fullName>1-134 Affidavit of Support Form (if US sponsored)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1-134 Affidavit of Support Form (if US sponsored)</label>
+    </customValue>
+    <customValue>
+        <fullName>15 Semester credits in social sciences</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>15 Semester credits in social sciences</label>
+    </customValue>
+    <customValue>
+        <fullName>1 Year RN Clinical Experience</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1 Year RN Clinical Experience</label>
+    </customValue>
+    <customValue>
+        <fullName>2.5 GPA or Higher</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2.5 GPA or Higher</label>
+    </customValue>
+    <customValue>
+        <fullName>3.25 GPA or higher</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3.25 GPA or higher</label>
+    </customValue>
+    <customValue>
+        <fullName>Accounting Instructions &amp; Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Accounting Instructions &amp; Form</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT or SAT official score</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ACT or SAT official score</label>
+    </customValue>
+    <customValue>
+        <fullName>Application is Verified</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Application is Verified</label>
+    </customValue>
+    <customValue>
+        <fullName>Basic Counseling Skills Course</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Basic Counseling Skills Course</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Church Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Church Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Community Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Community Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Media Release Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Media Release Form</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Physical Report</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Physical Report</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Reference Contact List</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Reference Contact List</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD School Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD School Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Student Questionnaire</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Student Questionnaire</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Transcript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Transcript</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Verification of Resources/Benefits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Verification of Resources/Benefits</label>
+    </customValue>
+    <customValue>
+        <fullName>CASPA Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CASPA Application</label>
+    </customValue>
+    <customValue>
+        <fullName>College Diploma</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>College Diploma</label>
+    </customValue>
+    <customValue>
+        <fullName>College Transcript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>College Transcript</label>
+    </customValue>
+    <customValue>
+        <fullName>CPR for the Professional Rescuer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CPR for the Professional Rescuer</label>
+    </customValue>
+    <customValue>
+        <fullName>Developmental Studies Course</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Developmental Studies Course</label>
+    </customValue>
+    <customValue>
+        <fullName>Educ License or Employment Verification</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Educ License or Employment Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>English Proficiency (TOEFL or approved equivalent)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>English Proficiency (TOEFL or approved equivalent)</label>
+    </customValue>
+    <customValue>
+        <fullName>Essay</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Essay</label>
+    </customValue>
+    <customValue>
+        <fullName>GMAT</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GMAT</label>
+    </customValue>
+    <customValue>
+        <fullName>Green Card</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Green Card</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare Experience (250 hours)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Healthcare Experience (250 hours)</label>
+    </customValue>
+    <customValue>
+        <fullName>High School Diploma</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>High School Diploma</label>
+    </customValue>
+    <customValue>
+        <fullName>High School Transcript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>High School Transcript</label>
+    </customValue>
+    <customValue>
+        <fullName>Housing Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Housing Application</label>
+    </customValue>
+    <customValue>
+        <fullName>HS Diploma/GED</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>HS Diploma/GED</label>
+    </customValue>
+    <customValue>
+        <fullName>I-539 Application to Extend.Change Non-Immigrant Status</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>I-539 Application to Extend.Change Non-Immigrant Status</label>
+    </customValue>
+    <customValue>
+        <fullName>I-901 Sevis Fee Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>I-901 Sevis Fee Form</label>
+    </customValue>
+    <customValue>
+        <fullName>I-94 Form (verification of legal admission to the US)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>I-94 Form (verification of legal admission to the US)</label>
+    </customValue>
+    <customValue>
+        <fullName>International Student Transfer Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>International Student Transfer Form</label>
+    </customValue>
+    <customValue>
+        <fullName>International Supplemental Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>International Supplemental Form</label>
+    </customValue>
+    <customValue>
+        <fullName>International transcript evaluation (NACES/WES)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>International transcript evaluation (NACES/WES)</label>
+    </customValue>
+    <customValue>
+        <fullName>Interview: Program Director</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Interview: Program Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Masters Degree Posted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Masters Degree Posted</label>
+    </customValue>
+    <customValue>
+        <fullName>MAT</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MAT</label>
+    </customValue>
+    <customValue>
+        <fullName>MAT or GRE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MAT or GRE</label>
+    </customValue>
+    <customValue>
+        <fullName>MBA/MASL Student Expectations Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MBA/MASL Student Expectations Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry Context Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ministry Context Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Minnesota Content Standards Grid</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Minnesota Content Standards Grid</label>
+    </customValue>
+    <customValue>
+        <fullName>MN RN License</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MN RN License</label>
+    </customValue>
+    <customValue>
+        <fullName>Official College Transcript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Official College Transcript</label>
+    </customValue>
+    <customValue>
+        <fullName>Official High School Transcript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Official High School Transcript</label>
+    </customValue>
+    <customValue>
+        <fullName>OPIc or equivalent exam score</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>OPIc or equivalent exam score</label>
+    </customValue>
+    <customValue>
+        <fullName>Original bank statement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Original bank statement</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Paper Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Profile</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Personal Profile</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Statement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Personal Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>Practicum Information Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Practicum Information Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Adult Developmental Psychology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Adult Developmental Psychology</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Anatomy, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Anatomy, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Anatomy and Physiology I</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Anatomy and Physiology I</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Anatomy and Physiology II</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Anatomy and Physiology II</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Biochemistry 3 credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Biochemistry 3 credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Chemistry: organic or biochemistry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Chemistry: organic or biochemistry</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Child Developmental Psychology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Child Developmental Psychology</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC614 EdResearch</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC614 EdResearch</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC624 Intro TheoriesTeachLearn</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC624 Intro TheoriesTeachLearn</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC630 General Teach Method 5-12</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC630 General Teach Method 5-12</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC661 Field Experience</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC661 Field Experience</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC663 UnderstandDiversity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC663 UnderstandDiversity</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC665 TeachContent</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC665 TeachContent</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC668 ClassTech</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC668 ClassTech</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Financial Accounting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Financial Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: General Chem</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: General Chem</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Into Psychology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Into Psychology</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Lifespan Development</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Lifespan Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Microbiology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Microbiology</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Nutrition</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Nutrition</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Organic Chem, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Organic Chem, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Physics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Physics</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Physiology, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Physiology, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psychology 3 credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psychology 3 credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 8 credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 8 credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 9 credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 9 credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Statistics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Statistics</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: 18 Additional credits in Behavioral Sciences</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: 18 Additional credits in Behavioral Sciences</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: 9 Additional credits in Behavioral Sciences</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: 9 Additional credits in Behavioral Sciences</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Anatomy (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Anatomy (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Biochemistry (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Biochemistry (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Developmental Studies Course</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Developmental Studies Course</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: EDUC614 Educational Research</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: EDUC614 Educational Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: EDUC624 Introduction to Theories and Practices of Teaching and Learning</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: EDUC624 Introduction to Theories and Practices of Teaching and Learning</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: EDUC630 General Teaching Methods of 5-12 Classrooms</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: EDUC630 General Teaching Methods of 5-12 Classrooms</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: EDUC661 Field Experience</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: EDUC661 Field Experience</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: EDUC663 Understanding Diversity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: EDUC663 Understanding Diversity</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: EDUC665 Teaching Content Area Literacy</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: EDUC665 Teaching Content Area Literacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: EDUC668 Classroom Technology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: EDUC668 Classroom Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Genetics (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Genetics (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Microbiology (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Microbiology (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Organic Chemistry (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Organic Chemistry (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Physics (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Physics (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Physiology (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Physiology (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Psychology (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Psychology (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Statistics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Statistics</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Statistics (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Statistics (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Statistics or Research Methods</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Statistics or Research Methods</label>
+    </customValue>
+    <customValue>
+        <fullName>Recommendation 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recommendation 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Recommendation 2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recommendation 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Recommendation 3</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recommendation 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Recommended: Ethics (3 credits)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recommended: Ethics (3 credits)</label>
+    </customValue>
+    <customValue>
+        <fullName>Recommended: Genetics (3 credits)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recommended: Genetics (3 credits)</label>
+    </customValue>
+    <customValue>
+        <fullName>Recommended: Pathophysiology (3 credits)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recommended: Pathophysiology (3 credits)</label>
+    </customValue>
+    <customValue>
+        <fullName>Recommended: Pharmacology (3 credits)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recommended: Pharmacology (3 credits)</label>
+    </customValue>
+    <customValue>
+        <fullName>RN License</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RN License</label>
+    </customValue>
+    <customValue>
+        <fullName>Site Supervisor Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Site Supervisor Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Sponsored Funds Documentation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sponsored Funds Documentation</label>
+    </customValue>
+    <customValue>
+        <fullName>Sponsor Letter of Support (if US sponsored)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sponsor Letter of Support (if US sponsored)</label>
+    </customValue>
+    <customValue>
+        <fullName>Statement of Intent</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Statement of Intent</label>
+    </customValue>
+    <customValue>
+        <fullName>Supplemental Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Supplemental Application</label>
+    </customValue>
+    <customValue>
+        <fullName>TestCollegeTranscript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TestCollegeTranscript</label>
+    </customValue>
+    <customValue>
+        <fullName>TOEFL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TOEFL</label>
+    </customValue>
+    <customValue>
+        <fullName>Transcript Evaluation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Transcript Evaluation</label>
+    </customValue>
+    <customValue>
+        <fullName>Tuition Deposit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tuition Deposit</label>
+    </customValue>
+    <customValue>
+        <fullName>Two Professional References</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Two Professional References</label>
+    </customValue>
+    <customValue>
+        <fullName>Visa</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Visa</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Transcript(s) Received</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Transcript(s) Received</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Nutrition (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Nutrition (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Daystarr Health Insurance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Daystarr Health Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Daystarr Data Sheet</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Daystarr Data Sheet</label>
+    </customValue>
+    <customValue>
+        <fullName>Daystarr DS-2019 Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Daystarr DS-2019 Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Daystarr Invitation Letter</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Daystarr Invitation Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Biology (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Biology (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Biomechanics (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Biomechanics (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Exercise Physiology (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Exercise Physiology (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Letter of Recommendation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Letter of Recommendation</label>
+    </customValue>
+    <customValue>
+        <fullName>GI Bill</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GI Bill</label>
+    </customValue>
+    <customValue>
+        <fullName>Test 1257694626423</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Test 1257694626423</label>
+    </customValue>
+    <customValue>
+        <fullName>Transcript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Transcript</label>
+    </customValue>
+    <customValue>
+        <fullName>SAT Report</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>SAT Report</label>
+    </customValue>
+    <customValue>
+        <fullName>Fin Aid Doc</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fin Aid Doc</label>
+    </customValue>
+    <customValue>
+        <fullName>Declaration of Finance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Declaration of Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Academic Committee Review</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Academic Committee Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Baccalaureate Degree</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Baccalaureate Degree</label>
+    </customValue>
+    <customValue>
+        <fullName>Miller Analogies Test (MAT)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Miller Analogies Test (MAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference: Professional</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reference: Professional</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference: Supervisor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reference: Supervisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Financial Accounting (2 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Financial Accounting (2 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Essay</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Family Essay</label>
+    </customValue>
+    <customValue>
+        <fullName>Bethel Application Forms</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bethel Application Forms</label>
+    </customValue>
+    <customValue>
+        <fullName>Current Bank Statement US Dollars (Personal and/or family)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Current Bank Statement US Dollars (Personal and/or family)</label>
+    </customValue>
+    <customValue>
+        <fullName>International Student Financial Aid Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>International Student Financial Aid Application</label>
+    </customValue>
+    <customValue>
+        <fullName>PSEO Notice of Student Registration</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PSEO Notice of Student Registration</label>
+    </customValue>
+    <customValue>
+        <fullName>PSEO Bethel Counselor Advising Forms</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PSEO Bethel Counselor Advising Forms</label>
+    </customValue>
+    <customValue>
+        <fullName>Master&apos;s Degree</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Master&apos;s Degree</label>
+    </customValue>
+    <customValue>
+        <fullName>Affidavit of Support Form I-134 (if US Sponsor)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Affidavit of Support Form I-134 (if US Sponsor)</label>
+    </customValue>
+    <customValue>
+        <fullName>Copy of I-20</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Copy of I-20</label>
+    </customValue>
+    <customValue>
+        <fullName>NACES</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NACES</label>
+    </customValue>
+    <customValue>
+        <fullName>Official TOEFL Report</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Official TOEFL Report</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Insurance Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Health Insurance Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Additional coursework in Psychology and/or Behavioral Sciences (9 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Additional coursework in Psychology and/or Behavioral Sciences (9 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Additional coursework in Psychology and/or Behavioral Sciences (8 credits)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Additional coursework in Psychology and/or Behavioral Sciences (8 credits)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Introduction to Psychology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Introduction to Psychology</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: Developmental Psychology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: Developmental Psychology</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer Document</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Computer Document</label>
+    </customValue>
+    <customValue>
+        <fullName>CAPS Statement of Purpose</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CAPS Statement of Purpose</label>
+    </customValue>
+    <customValue>
+        <fullName>Content Standards</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Content Standards</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare Experience Log (250 hours)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Healthcare Experience Log (250 hours)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pastor/Denomination Supv Ref</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pastor/Denomination Supv Ref</label>
+    </customValue>
+    <customValue>
+        <fullName>Supervisor/Mentor Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Supervisor/Mentor Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>Colleague/Friend Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Colleague/Friend Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>Application_ID__c in entity Application__c</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Application_ID__c in entity Application__c</label>
+    </customValue>
+    <customValue>
+        <fullName>MN Content Stds Grid</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MN Content Stds Grid</label>
+    </customValue>
+    <customValue>
+        <fullName>Miller Analogies Test or GRE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Miller Analogies Test or GRE</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference: Co-worker</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reference: Co-worker</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT or SAT Scores</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ACT or SAT Scores</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Essay</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Personal Essay</label>
+    </customValue>
+    <customValue>
+        <fullName>Leadership Scholarship App</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Leadership Scholarship App</label>
+    </customValue>
+    <customValue>
+        <fullName>Counselor Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Counselor Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>PA Questionnaire</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PA Questionnaire</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Biochemistry, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Biochemistry, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Microbiology, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Microbiology, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Physics, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Physics, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Statistics, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Statistics, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psychology, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psychology, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Rec: Ethics, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rec: Ethics, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Rec: Genetics, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rec: Genetics, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Pastor&apos;s Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pastor&apos;s Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>Rec: Pathophysiology, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rec: Pathophysiology, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Rec: Pharmacology, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rec: Pharmacology, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Insurance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Health Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Developmental Psych</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Developmental Psych</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Intro to Psychology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Intro to Psychology</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsyc 8 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsyc 8 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 9cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 9cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>High School Transcript - Final</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>High School Transcript - Final</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Personal Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>PSEO Counselor Advising Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PSEO Counselor Advising Form</label>
+    </customValue>
+    <customValue>
+        <fullName>H.S. Rank</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>H.S. Rank</label>
+    </customValue>
+    <customValue>
+        <fullName>Alternate Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Alternate Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference: MFT 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reference: MFT 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference: MFT 2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reference: MFT 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Updated High School Transcript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Updated High School Transcript</label>
+    </customValue>
+    <customValue>
+        <fullName>General Education Degree</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>General Education Degree</label>
+    </customValue>
+    <customValue>
+        <fullName>Church Leadership Reference</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Church Leadership Reference</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference: Pastoral/Spiritual</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reference: Pastoral/Spiritual</label>
+    </customValue>
+    <customValue>
+        <fullName>Updated College Transcripts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Updated College Transcripts</label>
+    </customValue>
+    <customValue>
+        <fullName>CPR Certification Verification</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CPR Certification Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Imm. Review by Health Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Imm. Review by Health Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Acad Research/Writing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Acad Research/Writing</label>
+    </customValue>
+    <customValue>
+        <fullName>Colleague/Professor/Supv Ref</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Colleague/Professor/Supv Ref</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank Statement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bank Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>Int&apos;l Student Cert. of Finance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Int&apos;l Student Cert. of Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Request for App Materials</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Request for App Materials</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-M.Div. Checklist</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non-M.Div. Checklist</label>
+    </customValue>
+    <customValue>
+        <fullName>EDUC621</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EDUC621</label>
+    </customValue>
+    <customValue>
+        <fullName>Updated ACT, SAT Score</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Updated ACT, SAT Score</label>
+    </customValue>
+    <customValue>
+        <fullName>GRE Verbal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GRE Verbal</label>
+    </customValue>
+    <customValue>
+        <fullName>100 Hours (MFT)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>100 Hours (MFT)</label>
+    </customValue>
+    <customValue>
+        <fullName>MFT Group Interview</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MFT Group Interview</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Science Credit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Social Science Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Readmit Letter</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Readmit Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Writing Sample or Essay (SOP)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Writing Sample or Essay (SOP)</label>
+    </customValue>
+    <customValue>
+        <fullName>High School Transcript-New GPA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>High School Transcript-New GPA</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Interpsnl-Fam-Grp Comm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Interpsnl-Fam-Grp Comm</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Media Comm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Media Comm</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Multicultural Comm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Multicultural Comm</label>
+    </customValue>
+    <customValue>
+        <fullName>College Transcript Unofficial</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>College Transcript Unofficial</label>
+    </customValue>
+    <customValue>
+        <fullName>GRE Quantitative</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GRE Quantitative</label>
+    </customValue>
+    <customValue>
+        <fullName>GRE Analytical</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GRE Analytical</label>
+    </customValue>
+    <customValue>
+        <fullName>Associate Degree in Nursing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Associate Degree in Nursing</label>
+    </customValue>
+    <customValue>
+        <fullName>Department Checks</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Department Checks</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Essay - Updated</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Personal Essay - Updated</label>
+    </customValue>
+    <customValue>
+        <fullName>Application Fee</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Application Fee</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: General Chem, 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: General Chem, 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Care Experience Log</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Health Care Experience Log</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Biology 4 credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Biology 4 credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Chemistry 12 credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Chemistry 12 credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Adult Dev Psych</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adult Dev Psych</label>
+    </customValue>
+    <customValue>
+        <fullName>GRE Analytical Writing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GRE Analytical Writing</label>
+    </customValue>
+    <customValue>
+        <fullName>Transcript Eval by NACES org.</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Transcript Eval by NACES org.</label>
+    </customValue>
+    <customValue>
+        <fullName>Visa Papers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Visa Papers</label>
+    </customValue>
+    <customValue>
+        <fullName>Unofficial College Transcript</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unofficial College Transcript</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC630</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC630</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC661</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC661</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC663</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC663</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC665</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC665</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC668</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC668</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC624</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC624</label>
+    </customValue>
+    <customValue>
+        <fullName>Kern Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Kern Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Kern Statement of Intent</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Kern Statement of Intent</label>
+    </customValue>
+    <customValue>
+        <fullName>Kern Nominator Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Kern Nominator Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Security Card</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Social Security Card</label>
+    </customValue>
+    <customValue>
+        <fullName>I-134 Affidavit of Support, US</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>I-134 Affidavit of Support, US</label>
+    </customValue>
+    <customValue>
+        <fullName>Int&apos;l Student I-94 Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Int&apos;l Student I-94 Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Educ License or Employment Ver</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Educ License or Employment Ver</label>
+    </customValue>
+    <customValue>
+        <fullName>Interview: Admissions</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Interview: Admissions</label>
+    </customValue>
+    <customValue>
+        <fullName>Kern Sponsor Agreement Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Kern Sponsor Agreement Form</label>
+    </customValue>
+    <customValue>
+        <fullName>MTLE: 5-12 Mathematics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MTLE: 5-12 Mathematics</label>
+    </customValue>
+    <customValue>
+        <fullName>Int&apos;l Supplemental Info Form</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Int&apos;l Supplemental Info Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: EDUC614</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: EDUC614</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psychology 2 2/3 crd</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psychology 2 2/3 crd</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare Exp Hours, 250 Min.</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Healthcare Exp Hours, 250 Min.</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Anatomy, 1CR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Anatomy, 1CR</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Anatomy-Physiology 1CR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Anatomy-Physiology 1CR</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: A&amp;P, 5CR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: A&amp;P, 5CR</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Chemistry, 4CR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Chemistry, 4CR</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Statistics, 2 Credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Statistics, 2 Credits</label>
+    </customValue>
+    <customValue>
+        <fullName>st field: Royall Senior Search Paper Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>st field: Royall Senior Search Paper Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Error fields: Checklist_Type__c</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Error fields: Checklist_Type__c</label>
+    </customValue>
+    <customValue>
+        <fullName>Int&apos;l Student Data Sheet</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Int&apos;l Student Data Sheet</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych6 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych6 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Why Now Letter</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Why Now Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Child Developmental Psychology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Child Developmental Psychology</label>
+    </customValue>
+    <customValue>
+        <fullName>Perm. Resident Verification</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Perm. Resident Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 5cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 5cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 1cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 1cr</label>
+    </customValue>
+    <customValue>
+        <fullName>st field: CAS: Incorrect App completed (CAPS)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>st field: CAS: Incorrect App completed (CAPS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Anatomy-Physiology 3cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Anatomy-Physiology 3cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 3cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 3cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Received PD Approval</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Received PD Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Anatomy-Physiology 2cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Anatomy-Physiology 2cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Chemistry, 2CR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Chemistry, 2CR</label>
+    </customValue>
+    <customValue>
+        <fullName>Application - CASPA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Application - CASPA</label>
+    </customValue>
+    <customValue>
+        <fullName>Prequisite: Anatomy 3 cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prequisite: Anatomy 3 cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 4cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 4cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 2cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 2cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Writing Sample</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Writing Sample</label>
+    </customValue>
+    <customValue>
+        <fullName>GRE Scores</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GRE Scores</label>
+    </customValue>
+    <customValue>
+        <fullName>MTLE Basic Skills</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MTLE Basic Skills</label>
+    </customValue>
+    <customValue>
+        <fullName>Prereq: Psych or BehvPsych 7cr</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prereq: Psych or BehvPsych 7cr</label>
+    </customValue>
+    <customValue>
+        <fullName>Application - Paper Express</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Application - Paper Express</label>
+    </customValue>
+    <customValue>
+        <fullName>GPA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GPA</label>
+    </customValue>
+    <customValue>
+        <fullName>Application - Online Express</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Application - Online Express</label>
+    </customValue>
+    <customValue>
+        <fullName>do not use</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>do not use</label>
+    </customValue>
+    <customValue>
+        <fullName>$200 Tuition Deposit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>$200 Tuition Deposit</label>
+    </customValue>
+    <customValue>
+        <fullName>Prerequisite: General Chemistry (3 credit minimum)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prerequisite: General Chemistry (3 credit minimum)</label>
+    </customValue>
+    <customValue>
+        <fullName>NACES or NACES equivalent</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NACES or NACES equivalent</label>
+    </customValue>
+    <customValue>
+        <fullName>CAS: Incorrect App completed (CAPS)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CAS: Incorrect App completed (CAPS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Royall Senior Search Paper Application</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Royall Senior Search Paper Application</label>
+    </customValue>
+    <masterLabel>Admissions Document Types</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

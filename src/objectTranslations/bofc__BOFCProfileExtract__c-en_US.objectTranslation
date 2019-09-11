@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ApexPermissions1 --></label>
+        <name>bofc__ApexPermissions1__c</name>
+    </fields>
+    <fields>
+        <label><!-- ApexPermissions2 --></label>
+        <name>bofc__ApexPermissions2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ApexPermissions --></label>
+        <name>bofc__ApexPermissions__c</name>
+    </fields>
+    <fields>
+        <label><!-- AppPermissions --></label>
+        <name>bofc__AppPermissions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Custom --></label>
+        <name>bofc__Is_Custom__c</name>
+    </fields>
+    <fields>
+        <label><!-- ObjectPermissions --></label>
+        <name>bofc__ObjectPermissions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile ID --></label>
+        <name>bofc__Profile_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecordTypeSettings --></label>
+        <name>bofc__RecordTypeSettings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unmanaged --></label>
+        <name>bofc__Unmanaged__c</name>
+    </fields>
+    <fields>
+        <label><!-- VisualPermissions --></label>
+        <name>bofc__VisualPermissions__c</name>
+    </fields>
+    <fields>
+        <label><!-- tabVisibilities --></label>
+        <name>bofc__tabVisibilities__c</name>
+    </fields>
+    <fields>
+        <label><!-- userPermissions --></label>
+        <name>bofc__userPermissions__c</name>
+    </fields>
+</CustomObjectTranslation>

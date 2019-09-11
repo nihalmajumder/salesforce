@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Clear blank values when updating Campaign Monitor. --></help>
+        <label><!-- Clear Values --></label>
+        <name>wbsendit__Clear_Values__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Title --></label>
+        <name>wbsendit__Import_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Type --></label>
+        <name>wbsendit__Import_Type__c</name>
+        <picklistValues>
+            <masterLabel>List View</masterLabel>
+            <translation><!-- List View --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report</masterLabel>
+            <translation><!-- Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOQL</masterLabel>
+            <translation><!-- SOQL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Job Id --></label>
+        <name>wbsendit__Job_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Run --></label>
+        <name>wbsendit__Last_Run__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mapping --></label>
+        <name>wbsendit__Mapping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Run --></label>
+        <name>wbsendit__Next_Run__c</name>
+    </fields>
+    <fields>
+        <label><!-- Param --></label>
+        <name>wbsendit__Param__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Time --></label>
+        <name>wbsendit__Preferred_Time__c</name>
+        <picklistValues>
+            <masterLabel>00:00</masterLabel>
+            <translation><!-- 00:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:00</masterLabel>
+            <translation><!-- 01:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00</masterLabel>
+            <translation><!-- 02:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00</masterLabel>
+            <translation><!-- 03:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00</masterLabel>
+            <translation><!-- 04:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00</masterLabel>
+            <translation><!-- 05:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00</masterLabel>
+            <translation><!-- 06:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00</masterLabel>
+            <translation><!-- 07:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00</masterLabel>
+            <translation><!-- 08:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00</masterLabel>
+            <translation><!-- 09:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00</masterLabel>
+            <translation><!-- 10:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00</masterLabel>
+            <translation><!-- 11:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00</masterLabel>
+            <translation><!-- 12:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13:00</masterLabel>
+            <translation><!-- 13:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14:00</masterLabel>
+            <translation><!-- 14:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15:00</masterLabel>
+            <translation><!-- 15:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16:00</masterLabel>
+            <translation><!-- 16:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17:00</masterLabel>
+            <translation><!-- 17:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18:00</masterLabel>
+            <translation><!-- 18:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19:00</masterLabel>
+            <translation><!-- 19:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20:00</masterLabel>
+            <translation><!-- 20:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21:00</masterLabel>
+            <translation><!-- 21:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22:00</masterLabel>
+            <translation><!-- 22:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23:00</masterLabel>
+            <translation><!-- 23:00 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Refresh Type --></label>
+        <name>wbsendit__Refresh_Type__c</name>
+        <picklistValues>
+            <masterLabel>Replace</masterLabel>
+            <translation><!-- Replace --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Results --></label>
+        <name>wbsendit__Results_Link__c</name>
+    </fields>
+    <fields>
+        <help><!-- Internal field. --></help>
+        <label><!-- Results JSON --></label>
+        <name>wbsendit__Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- Running As --></label>
+        <name>wbsendit__Run_As__c</name>
+        <relationshipLabel><!-- Subscriber Imports --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Run the import on the selected hours. --></help>
+        <label><!-- Run At --></label>
+        <name>wbsendit__Run_At__c</name>
+        <picklistValues>
+            <masterLabel>00:00</masterLabel>
+            <translation><!-- 00:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:00</masterLabel>
+            <translation><!-- 01:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00</masterLabel>
+            <translation><!-- 02:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00</masterLabel>
+            <translation><!-- 03:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00</masterLabel>
+            <translation><!-- 04:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00</masterLabel>
+            <translation><!-- 05:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00</masterLabel>
+            <translation><!-- 06:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00</masterLabel>
+            <translation><!-- 07:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00</masterLabel>
+            <translation><!-- 08:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00</masterLabel>
+            <translation><!-- 09:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00</masterLabel>
+            <translation><!-- 10:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00</masterLabel>
+            <translation><!-- 11:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00</masterLabel>
+            <translation><!-- 12:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13:00</masterLabel>
+            <translation><!-- 13:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14:00</masterLabel>
+            <translation><!-- 14:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15:00</masterLabel>
+            <translation><!-- 15:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16:00</masterLabel>
+            <translation><!-- 16:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17:00</masterLabel>
+            <translation><!-- 17:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18:00</masterLabel>
+            <translation><!-- 18:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19:00</masterLabel>
+            <translation><!-- 19:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20:00</masterLabel>
+            <translation><!-- 20:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21:00</masterLabel>
+            <translation><!-- 21:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22:00</masterLabel>
+            <translation><!-- 22:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23:00</masterLabel>
+            <translation><!-- 23:00 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SOQL --></label>
+        <name>wbsendit__SOQL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Type --></label>
+        <name>wbsendit__Schedule_Type__c</name>
+        <picklistValues>
+            <masterLabel>Once Off</masterLabel>
+            <translation><!-- Once Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Days --></label>
+        <name>wbsendit__Scheduled_Days__c</name>
+        <picklistValues>
+            <masterLabel>Fri</masterLabel>
+            <translation><!-- Fri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mon</masterLabel>
+            <translation><!-- Mon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sat</masterLabel>
+            <translation><!-- Sat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sun</masterLabel>
+            <translation><!-- Sun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thu</masterLabel>
+            <translation><!-- Thu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tue</masterLabel>
+            <translation><!-- Tue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wed</masterLabel>
+            <translation><!-- Wed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The code/number links the import/segment with the membership record. --></help>
+        <label><!-- Segment Code --></label>
+        <name>wbsendit__Segment_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segment Id --></label>
+        <name>wbsendit__Segment_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segment Name --></label>
+        <name>wbsendit__Segment_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Run --></label>
+        <name>wbsendit__Start_Run__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>wbsendit__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processing</masterLabel>
+            <translation><!-- Processing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation><!-- Queued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Running</masterLabel>
+            <translation><!-- Running --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Segmenting</masterLabel>
+            <translation><!-- Segmenting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Updating</masterLabel>
+            <translation><!-- Updating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting</masterLabel>
+            <translation><!-- Waiting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subscriber List --></label>
+        <name>wbsendit__Subscriber_List__c</name>
+        <relationshipLabel><!-- Subscriber Imports --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Subscriber Import Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Import Settings --></label>
+            <section>Import Settings</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

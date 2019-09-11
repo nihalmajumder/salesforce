@@ -1,0 +1,61 @@
+<aura:component description="displays available field value lookup records, sobjects only" controller="FieldValueController">
+    <!-- attributes -->
+    <aura:attribute name="sobjectsMaster" type="Map[]" />
+    <aura:attribute name="sobjectsDisplayed" type="Map[]" />
+    <aura:attribute name="mappingRecord" type="Object" />
+    <!-- handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="onSuccessCmpEvt" event="c:OnSuccessCmpEvt" action="{!c.handleOnSuccessCmpEvt}" />   
+    
+    <lightning:card title="Setup Field Mapping Values">
+        <aura:set attribute="actions">
+        </aura:set>
+        <div class="slds-border_top container-width" style="overflow-y: auto; max-height:800px;">
+            <table> 
+                <tr class="slds-border_bottom">
+                    <lightning:input
+                                     aura:id="sobject-search"
+                                     name="enter-search"
+                                     label="Search for sobjects"
+                                     type="search"
+                                     disabled="{!v.sobjectsMaster.length == 0}"
+                                     class="slds-p-around_x-small"
+                                     onchange="{!c.handleKeyUp }"
+                                     onkeyup="{! c.handleKeyUp }"
+                                     />
+                </tr>
+                <aura:iteration items="{!v.sobjectsDisplayed}" var="o">
+                    <tr class="slds-border_bottom">
+                        <td>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_12-of-12">
+                                    <a href="#" style="width:100%; text-decoration:none;" onclick="{!c.handleClick}">
+                                        <div data-apiname="{!o.apiName}" data-label="{!o.label}" style="font-size:1.4em" class="ikon slds-p-around_x-small">
+                                            {!o.label}
+                                            &nbsp;
+                                            <lightning:icon iconName="utility:setup" size="small" class="{!o.configured ? 'fill-blue' : 'fill-grey'}"/>
+                                        </div>
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                </aura:iteration>
+                <aura:if isTrue="{!v.sobjectsDisplayed.length == 0}">
+                    <tr class="slds-border_bottom">
+                        <td>
+                            <a href="#" style="width:100%; text-decoration:none;">
+                                <div style="font-size:1.4em" class="ikon slds-p-around_x-small slds-m-left_small">
+                                    No results found
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                </aura:if> 
+            </table>
+        </div>
+        {!v.body}
+    </lightning:card>
+</aura:component>

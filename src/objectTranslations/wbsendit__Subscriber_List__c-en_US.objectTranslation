@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Bounces This Month --></label>
+        <name>wbsendit__BouncesThisMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bounces This Week --></label>
+        <name>wbsendit__BouncesThisWeek__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bounces This Year --></label>
+        <name>wbsendit__BouncesThisYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bounces Today --></label>
+        <name>wbsendit__BouncesToday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bounces Yesterday --></label>
+        <name>wbsendit__BouncesYesterday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Monitor Client --></label>
+        <name>wbsendit__Campaign_Monitor_Client__c</name>
+        <relationshipLabel><!-- Subscriber Lists --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client ID --></label>
+        <name>wbsendit__Client_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Name --></label>
+        <name>wbsendit__Client_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmation Success Page --></label>
+        <name>wbsendit__Confirmation_Success_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Rule --></label>
+        <name>wbsendit__Create_Rule__c</name>
+        <picklistValues>
+            <masterLabel>Create Contact</masterLabel>
+            <translation><!-- Create Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Lead</masterLabel>
+            <translation><!-- Create Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Don&apos;t Create</masterLabel>
+            <translation><!-- Don&apos;t Create --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Deleted This Month --></label>
+        <name>wbsendit__DeletedThisMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted This Week --></label>
+        <name>wbsendit__DeletedThisWeek__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted This Year --></label>
+        <name>wbsendit__DeletedThisYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted Today --></label>
+        <name>wbsendit__DeletedToday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted Yesterday --></label>
+        <name>wbsendit__DeletedYesterday__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date and time this list was last synced with Campaign Monitor. --></help>
+        <label><!-- Last Synced --></label>
+        <name>wbsendit__Last_Synced__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Id --></label>
+        <name>wbsendit__List_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Name --></label>
+        <name>wbsendit__List_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- &quot;Single opt-in&quot; means new subscribers are added to this list as soon as they complete the subscribe form. &quot;Confirmed opt-in&quot; means a confirmation email will be sent with a link they must click to validate their address. --></help>
+        <label><!-- List Type --></label>
+        <name>wbsendit__List_Type__c</name>
+        <picklistValues>
+            <masterLabel>Confirmed opt-in (confirmation required)</masterLabel>
+            <translation><!-- Confirmed opt-in (confirmation required) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single opt-in (no confirmation required)</masterLabel>
+            <translation><!-- Single opt-in (no confirmation required) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Active Subscribers This Month --></label>
+        <name>wbsendit__NewActiveSubscribersThisMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Active Subscribers This Week --></label>
+        <name>wbsendit__NewActiveSubscribersThisWeek__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Active Subscribers This Year --></label>
+        <name>wbsendit__NewActiveSubscribersThisYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Active Subscribers Today --></label>
+        <name>wbsendit__NewActiveSubscribersToday__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Active Subscribers Yesterday --></label>
+        <name>wbsendit__NewActiveSubscribersYesterday__c</name>
+    </fields>
+    <fields>
+        <help><!-- Save space by preventing the individual subscriber membership records from syncing to Salesforce. --></help>
+        <label><!-- Prevent Member Sync --></label>
+        <name>wbsendit__Prevent_Member_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscriber List --></label>
+        <name>wbsendit__Subscriber_List__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the time the sync from CM to SF started for this list. --></help>
+        <label><!-- Subscriber Start Sync --></label>
+        <name>wbsendit__Subscriber_Start_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unsubscribe Page --></label>
+        <name>wbsendit__Unsubscribe_Page__c</name>
+    </fields>
+    <fields>
+        <help><!-- If unsubscribe setting is set to &quot;All Client Lists&quot;, when someone unsubscribes from this list they will also be unsubscribed from all the client&apos;s lists (recommended). If set to &quot;Only This List&quot;, when someone unsubscribes from this list. --></help>
+        <label><!-- Unsubscribe Setting --></label>
+        <name>wbsendit__Unsubscribe_Setting__c</name>
+        <picklistValues>
+            <masterLabel>All Client Lists</masterLabel>
+            <translation><!-- All Client Lists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only This List</masterLabel>
+            <translation><!-- Only This List --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unsubscribes This Month --></label>
+        <name>wbsendit__UnsubscribesThisMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unsubscribes This Week --></label>
+        <name>wbsendit__UnsubscribesThisWeek__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unsubscribes This Year --></label>
+        <name>wbsendit__UnsubscribesThisYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unsubscribes Today --></label>
+        <name>wbsendit__UnsubscribesToday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unsubscribes Yesterday --></label>
+        <name>wbsendit__UnsubscribesYesterday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Active Subscribers --></label>
+        <name>wbsendit__totalActiveSubscribers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Bounces --></label>
+        <name>wbsendit__totalBounces__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Deleted --></label>
+        <name>wbsendit__totalDeleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Unconfirmed --></label>
+        <name>wbsendit__totalUnconfirmed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Unsubscribes --></label>
+        <name>wbsendit__totalUnsubscribes__c</name>
+    </fields>
+    <layouts>
+        <layout>Subscriber List Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Statistics --></label>
+            <section>Statistics</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Field_Mappings --></label>
+        <name>wbsendit__Field_Mappings</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Import_Subscribers --></label>
+        <name>wbsendit__Import_Subscribers</name>
+    </webLinks>
+</CustomObjectTranslation>

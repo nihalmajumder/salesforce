@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Setting for the Account model. Should be &quot;One-to-one&quot; or &quot;Individual&quot;. Replaces the custom field Contact.SystemAccountProcessor__c --></help>
+        <label><!-- Account Processor --></label>
+        <name>hed__Account_Processor__c</name>
+    </fields>
+    <fields>
+        <help><!-- Record Types of those Accounts that should have multi-addresses enabled. --></help>
+        <label><!-- Multi-Address Accounts --></label>
+        <name>hed__Accounts_Addresses_Enabled__c</name>
+    </fields>
+    <fields>
+        <help><!-- Record Types of those Accounts that should be deleted if all its children Contacts have been deleted. --></help>
+        <label><!-- Accounts to Delete --></label>
+        <name>hed__Accounts_to_Delete__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the setting for admin account naming format --></help>
+        <label><!-- Admin Account Naming Format --></label>
+        <name>hed__Admin_Account_Naming_Format__c</name>
+    </fields>
+    <fields>
+        <help><!-- To store other naming setting for admin account --></help>
+        <label><!-- Admin Other Name Setting --></label>
+        <name>hed__Admin_Other_Name_Setting__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Account record type used for Administrative Accounts. This setting affects management of address records and the naming format of Administrative Accounts. --></help>
+        <label><!-- Administrative Account Record Type --></label>
+        <name>hed__Administrative_Account_Record_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- The namespace of the Gift Processing package. --></help>
+        <label><!-- GEM Namespace --></label>
+        <name>hed__Advancement_Namespace__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, an error results when users populate a primary field on Contact with an Account that has a record type mismatch to the record type defined in HEDA Settings. The Affiliation record is not created and primary fields on Contact are not corrected --></help>
+        <label><!-- Affiliation Record Type Enforced --></label>
+        <name>hed__Affiliation_Record_Type_Enforced__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether to set the End Date of the Affiliation created with a Program Enrollment. If enabled, set the End Date to the Program Enrollment&apos;s End Date. If disabled, don&apos;t specify the Affiliation&apos;s End Date. --></help>
+        <label><!-- Affil End Date Copy from Prog Enroll --></label>
+        <name>hed__Affl_ProgEnroll_Copy_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether to set the Start Date of the Affiliation created with a Program Enrollment. If enabled, set the Start Date to the Program Enrollment&apos;s Start Date. If disabled, don&apos;t specify the Affiliation&apos;s Start Date. --></help>
+        <label><!-- Affil Start Date Copy from Prog Enroll --></label>
+        <name>hed__Affl_ProgEnroll_Copy_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Status to change an Affilation to when the related Program Enrollment is deleted, if the option selected is to change its status instead of deleting it. --></help>
+        <label><!-- Affil Status When Delete Prog Enroll --></label>
+        <name>hed__Affl_ProgEnroll_Del_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines if an Affiliation will be automatically deleted when the related Program Enrollment is deleted. Otherwise the status will be changed to Former. --></help>
+        <label><!-- Affil Delete When Delete Prog Enroll --></label>
+        <name>hed__Affl_ProgEnroll_Del__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the related setting, Affil Set Role When Create Prog Enroll, is enabled, this setting specifies the value to set for the Role on the Affiliation created with a Program Enrollment. --></help>
+        <label><!-- Affil Role When Create Prog Enroll --></label>
+        <name>hed__Affl_ProgEnroll_Role_Map__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether to specify a Role for the Affiliation created with a Program Enrollment. If enabled, set the Affiliation&apos;s Role to the value specified in the related setting, Affil Role When Create Prog Enroll. If disabled, don&apos;t specify a Role. --></help>
+        <label><!-- Affil Set Role When Create Prog Enroll --></label>
+        <name>hed__Affl_ProgEnroll_Set_Role__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Status value set on the Affiliation created with a Program Enrollment. --></help>
+        <label><!-- Affil Status When Create Prog Enroll --></label>
+        <name>hed__Affl_ProgEnroll_Status_Map__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto-created Relationships are auto-deduplicated to prevent duplicate Relationship records from being created between two Contacts.  Check this box to disable this behavior &amp; allow multiple Relationships of the same Type to be created between two Contacts --></help>
+        <label><!-- Allow Auto-Created Duplicate Relations --></label>
+        <name>hed__Allow_AutoCreated_Duplicates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Async Error Check Last Run --></label>
+        <name>hed__Async_Error_Check_Last_Run__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, the system will provide automatic naming for Household Names, Informal and Formal Greetings. --></help>
+        <label><!-- Automatic Household Naming --></label>
+        <name>hed__Automatic_Household_Naming__c</name>
+    </fields>
+    <fields>
+        <help><!-- Address management support for Contacts. --></help>
+        <label><!-- Address management support for Contacts. --></label>
+        <name>hed__Contacts_Addresses_Enabled__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Fluency value automatically set on newly created Contact Language records when users set the Primary Language lookup field on a Contact. --></help>
+        <label><!-- Default Contact Language Fluency --></label>
+        <name>hed__Default_Contact_Language_Fluency__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, HEDA&apos;s error handling framework is disabled. --></help>
+        <label><!-- Disable Error Handling --></label>
+        <name>hed__Disable_Error_Handling__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select this box to disable the enforcement of the Preferred Email field for Contacts. --></help>
+        <label><!-- Disable Preferred Email Enforcement --></label>
+        <name>hed__Disable_Preferred_Email_Enforcement__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select this box to disable the enforcement of the Preferred Phone field for Contacts. --></help>
+        <label><!-- Disable Preferred Phone Enforcement --></label>
+        <name>hed__Disable_Preferred_Phone_Enforcement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Course Connections --></label>
+        <name>hed__Enable_Course_Connections__c</name>
+    </fields>
+    <fields>
+        <help><!-- Turn this on to enable debug statements in managed package code. --></help>
+        <label><!-- Enable Debug --></label>
+        <name>hed__Enable_Debug__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check this if you&apos;d like the system to post notifications for certain type of errors. --></help>
+        <label><!-- Error Notifications --></label>
+        <name>hed__Error_Notifications_On__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the type of user to send notifications to. --></help>
+        <label><!-- Error Notification Recipients --></label>
+        <name>hed__Error_Notifications_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Faculty Record Type --></label>
+        <name>hed__Faculty_RecType__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the setting for household account naming format --></help>
+        <label><!-- Household Account Naming Format --></label>
+        <name>hed__Household_Account_Naming_Format__c</name>
+    </fields>
+    <fields>
+        <help><!-- Account record type that supports Household Addresses behavior. --></help>
+        <label><!-- Household Addresses Acc Record Type --></label>
+        <name>hed__Household_Addresses_RecType__c</name>
+    </fields>
+    <fields>
+        <help><!-- To store other name setting for household account --></help>
+        <label><!-- Household Other Name Setting --></label>
+        <name>hed__Household_Other_Name_Setting__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select a desired Preferred Phone when the Batch Job runs. --></help>
+        <label><!-- Preferred Phone Selection --></label>
+        <name>hed__Preferred_Phone_Selection__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines method used to generate the reciprocal relationship.  Either List Setting which uses custom settings by gender, or Value Inversion, which inverts the type if appropriate (&quot;Parent-Child&quot; to &quot;Child-Parent&quot;) --></help>
+        <label><!-- Reciprocal Method --></label>
+        <name>hed__Reciprocal_Method__c</name>
+    </fields>
+    <fields>
+        <help><!-- Populating this value will allow the field to pre-populate when creating new Relationships from the Relationship Viewer (see description for more information) --></help>
+        <label><!-- Relationship Name Field Id --></label>
+        <name>hed__Relationship_Name_Field_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Populating this value will allow the field to pre-populate when creating new Relationships from the Relationship Viewer (see description for more information) --></help>
+        <label><!-- Relationship Name Id Field Id --></label>
+        <name>hed__Relationship_Name_Id_Field_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, changes to a single Contact or Account address field update the existing Address, rather than creating a new Address. --></help>
+        <label><!-- Simple Address Change Treated as Update --></label>
+        <name>hed__Simple_Address_Change_Treated_as_Update__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check this if you&apos;d like errors to be stored in the database. --></help>
+        <label><!-- Store Errors --></label>
+        <name>hed__Store_Errors_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Student Record Type --></label>
+        <name>hed__Student_RecType__c</name>
+    </fields>
+    <fields>
+        <help><!-- When selected, Plan Requirements can specify either a Program Plan or a parent Plan Requirement, but not both. If you specify both a Program Plan and a parent Plan Requirement, an error message will prevent you from saving until only one is selected. --></help>
+        <label><!-- Validate Program Plan for Nested PR --></label>
+        <name>hed__Validate_Program_Plan_for_Nested_PR__c</name>
+    </fields>
+</CustomObjectTranslation>

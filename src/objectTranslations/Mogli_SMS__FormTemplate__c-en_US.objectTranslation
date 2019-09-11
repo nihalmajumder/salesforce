@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- If this field matches the incoming SMS, this form will be initiated to the user --></help>
+        <label><!-- Query String --></label>
+        <name>Mogli_SMS__Query_String__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Mogli_SMS__Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retired</masterLabel>
+            <translation><!-- Retired --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TotalFirstQuestions --></label>
+        <name>Mogli_SMS__TotalFirstQuestions__c</name>
+    </fields>
+    <layouts>
+        <layout>Form Template Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Active Templates must have a first question --></errorMessage>
+        <name>Mogli_SMS__ActiveTemplatesMustHaveOneFirstQuestion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There cannot be more than one first question marked for this Form Template. --></errorMessage>
+        <name>Mogli_SMS__CannotHaveMoreThanOneFirstQuestion</name>
+    </validationRules>
+</CustomObjectTranslation>

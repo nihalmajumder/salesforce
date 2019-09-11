@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Context that generated the error, if known. --></help>
+        <label><!-- Context Type --></label>
+        <name>hed__Context_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date &amp; time the error occurred --></help>
+        <label><!-- Datetime --></label>
+        <name>hed__Datetime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether an email notification has been sent regarding this error. --></help>
+        <label><!-- Email Sent --></label>
+        <name>hed__Email_Sent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Type of error that occurred --></help>
+        <label><!-- Error Type --></label>
+        <name>hed__Error_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Full text of the error message --></help>
+        <label><!-- Full Message --></label>
+        <name>hed__Full_Message__c</name>
+    </fields>
+    <fields>
+        <help><!-- Type of object on which the error occurred, if known. --></help>
+        <label><!-- Object Type --></label>
+        <name>hed__Object_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the error has been posted in Chatter. --></help>
+        <label><!-- Posted in Chatter --></label>
+        <name>hed__Posted_in_Chatter__c</name>
+    </fields>
+    <fields>
+        <help><!-- A link to the record which caused the error, if available. --></help>
+        <label><!-- Record URL --></label>
+        <name>hed__Record_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stack trace for the thrown error, if available at runtime. --></help>
+        <label><!-- Stack Trace --></label>
+        <name>hed__Stack_Trace__c</name>
+    </fields>
+</CustomObjectTranslation>

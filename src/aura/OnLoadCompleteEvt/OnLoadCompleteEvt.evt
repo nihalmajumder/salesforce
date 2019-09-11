@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Fire this event to toggle loading for data. Event is captured in parent container component.">
+    <aura:attribute name="doneLoading" type="Boolean" default="false" />
+</aura:event>

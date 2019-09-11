@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone</fullName>
+        <default>false</default>
+        <label>Phone</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Administrative</fullName>
+        <default>false</default>
+        <label>Administrative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Admission Process</fullName>
+        <default>false</default>
+        <label>Admission Process</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email About Student</fullName>
+        <default>false</default>
+        <label>Email About Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email From Student</fullName>
+        <default>false</default>
+        <label>Email From Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email To Student</fullName>
+        <default>false</default>
+        <label>Email To Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Learning Analytics</fullName>
+        <default>false</default>
+        <label>Learning Analytics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting About Student</fullName>
+        <default>false</default>
+        <label>Meeting About Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting With Student</fullName>
+        <default>false</default>
+        <label>Meeting With Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Form</fullName>
+        <default>false</default>
+        <label>Online Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Orientation Process</fullName>
+        <default>false</default>
+        <label>Orientation Process</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Call About Student</fullName>
+        <default>false</default>
+        <label>Phone Call About Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Call From Student</fullName>
+        <default>false</default>
+        <label>Phone Call From Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Call To Student</fullName>
+        <default>false</default>
+        <label>Phone Call To Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registration Process</fullName>
+        <default>false</default>
+        <label>Registration Process</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retention Project</fullName>
+        <default>false</default>
+        <label>Retention Project</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail About Student</fullName>
+        <default>false</default>
+        <label>Voicemail About Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail From Student</fullName>
+        <default>false</default>
+        <label>Voicemail From Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail To Student</fullName>
+        <default>false</default>
+        <label>Voicemail To Student</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Assessment Course</fullName>
+        <default>false</default>
+        <label>Assessment Course</label>
+    </standardValue>
+</StandardValueSet>
