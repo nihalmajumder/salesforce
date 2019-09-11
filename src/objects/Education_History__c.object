@@ -358,6 +358,11 @@
                     <default>false</default>
                     <label>Not Received</label>
                 </value>
+                <value>
+                    <fullName>Purged</fullName>
+                    <default>false</default>
+                    <label>Purged</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -1856,6 +1861,10 @@ NOT(ISBLANK(Previous_Id__c)),
                 <default>false</default>
             </values>
             <values>
+                <fullName>Purged</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Received</fullName>
                 <default>false</default>
             </values>
@@ -2692,6 +2701,10 @@ NOT(ISBLANK(Previous_Id__c)),
             </values>
             <values>
                 <fullName>Not Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purged</fullName>
                 <default>false</default>
             </values>
             <values>

@@ -94,6 +94,10 @@
             <translation><!-- Not Received --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Purged</masterLabel>
+            <translation><!-- Purged --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Received</masterLabel>
             <translation><!-- Received --></translation>
         </picklistValues>
