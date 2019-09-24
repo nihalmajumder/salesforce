@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Relationship --></value>
+        <value>Relación</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Relationship --></value>
+        <value>Relaciones</value>
     </caseValues>
     <fields>
         <label><!-- End Date --></label>
@@ -191,7 +191,7 @@
             <translation>Esposa</translation>
         </picklistValues>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Feminine</gender>
     <layouts>
         <layout>HEDA Relationship Layout</layout>
         <sections>
@@ -206,7 +206,7 @@
             <section>Relationship Information</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Relationship Key --></nameFieldLabel>
+    <nameFieldLabel>Clave de relación</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Rather than change the Contacts in an existing Relationship, delete this Relationship and create a new one. --></errorMessage>
         <name>hed__Contact_Do_Not_Change</name>

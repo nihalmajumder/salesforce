@@ -73,9 +73,13 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Opportunity</tabs>
+    <tabs>Super_Hero_Alias__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>ITS_Admin_Console_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Super_Hero_Alias__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Case</tab>
         </mappings>

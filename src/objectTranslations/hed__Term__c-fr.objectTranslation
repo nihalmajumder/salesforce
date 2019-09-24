@@ -375,19 +375,19 @@
         <name>hed__Type__c</name>
         <picklistValues>
             <masterLabel>Part of Term</masterLabel>
-            <translation><!-- Part of Term --></translation>
+            <translation>Partie de la durée</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Quarter</masterLabel>
-            <translation><!-- Quarter --></translation>
+            <translation>Trimestre</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>School Year</masterLabel>
-            <translation><!-- School Year --></translation>
+            <translation>Année scolaire</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Semester</masterLabel>
-            <translation><!-- Semester --></translation>
+            <translation>Semestre</translation>
         </picklistValues>
     </fields>
     <gender>Feminine</gender>

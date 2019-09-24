@@ -20,6 +20,8 @@ public inherited sharing class ApplicationHelper {
     public final static String ADULT_MORE_TYPE = 'Adult Transfer: More than 30 Credits';
     public final static String UNDERGRADUATE_TRANSFER_TYPE = 'Undergraduate Transfer';
     public final static String DURING_HIGH_SCHOOL = 'During High School (PSEO, AP, CLEP, IB, other)';
+
+    public static Map<Id, Application__c> applicationCacheMap = new Map<Id, Application__c>();
     
     public static void updateFilters(List<Application__c> newList) {
         Set<Id> contactIds = new Set<Id>();
@@ -129,11 +131,22 @@ public inherited sharing class ApplicationHelper {
 
     public static void checkCompletion(List<Application__c> apps) {
         for (Application__c app : apps) {
-            if (app.Application_Status__c == 'Submitted') {
-                checkCompletion(app.Id);
+            if (app.Application_Status__c == 'Submitted' && !applicationCacheMap.containsKey(app.Id)) {
+                applicationCacheMap.put(app.Id, app);
+                if (System.isFuture()) {
+                    checkCompletion(app.Id);
+                }
+                else {
+                    checkCompletionFuture(app.Id);
+                }
                 break;
             }
         }
+    }
+
+    @future
+    public static void checkCompletionFuture(Id appId) {
+        checkCompletion(appId);
     }
 
 /*

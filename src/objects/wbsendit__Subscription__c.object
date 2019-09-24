@@ -446,7 +446,7 @@
         <openType>sidebar</openType>
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
-        <url>{!$Site.Prefix}/apex/{!$Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c}AddContactSubscriberToList?id={!Contact.Id}</url>
+        <url>{!$Site.Prefix}/apex/{!$Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c}AddContactSubscriberToList?id={!IF(ISBLANK(Contact.Id), Account.Id, Contact.Id)}</url>
     </webLinks>
     <webLinks>
         <fullName>wbsendit__Add_Lead_to_Email_List</fullName>

@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Term --></value>
+        <value>Plazo</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Term --></value>
+        <value>Plazos</value>
     </caseValues>
     <fields>
         <label><!-- Academic Year --></label>
@@ -375,22 +375,22 @@
         <name>hed__Type__c</name>
         <picklistValues>
             <masterLabel>Part of Term</masterLabel>
-            <translation><!-- Part of Term --></translation>
+            <translation>Parte de plazo</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Quarter</masterLabel>
-            <translation><!-- Quarter --></translation>
+            <translation>Trimestre</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>School Year</masterLabel>
-            <translation><!-- School Year --></translation>
+            <translation>Curso lectivo</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Semester</masterLabel>
-            <translation><!-- Semester --></translation>
+            <translation>Semestre</translation>
         </picklistValues>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Masculine</gender>
     <layouts>
         <layout>Term Layout - Master</layout>
         <sections>
@@ -402,5 +402,5 @@
             <section>Goals - PSEO</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Term Name --></nameFieldLabel>
+    <nameFieldLabel>Nombre de plazo</nameFieldLabel>
 </CustomObjectTranslation>

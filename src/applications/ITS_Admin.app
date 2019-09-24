@@ -89,6 +89,7 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Contact</tabs>
+    <tabs>Super_Hero_Alias__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Administrator_UtilityBar</utilityBar>
 </CustomApplication>

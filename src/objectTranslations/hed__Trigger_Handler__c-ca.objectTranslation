@@ -86,11 +86,11 @@
         <name>hed__User_Managed__c</name>
     </fields>
     <fields>
-        <help><!-- Semicolon separated list of Salesforce usernames that this trigger will NOT run for. Leave blank to run for all users. --></help>
+        <help>Llista dels noms d&apos;usuari de Salesforce, separats per punt i coma, per als quals aquest activador NO s&apos;executarà. Deixeu el camp en blanc per executar-lo per a tots els usuaris.</help>
         <label><!-- Usernames to Exclude --></label>
         <name>hed__Usernames_to_Exclude__c</name>
     </fields>
     <gender>Masculine</gender>
-    <nameFieldLabel>Nom del gestor de disparador</nameFieldLabel>
+    <nameFieldLabel>Nom del controlador d&apos;activació</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

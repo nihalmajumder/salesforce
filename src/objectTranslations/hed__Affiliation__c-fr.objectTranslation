@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Affiliation --></value>
+        <value>Affiliation</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Affiliations --></value>
+        <value>Affiliations</value>
     </caseValues>
     <fields>
         <label><!-- Organization --></label>
@@ -68,7 +68,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Prospect</masterLabel>
-            <translation><!-- Prospect --></translation>
+            <translation>Prospect</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Scholarship Recipient</masterLabel>
@@ -111,7 +111,7 @@
             <translation><!-- Transfer Out --></translation>
         </picklistValues>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Feminine</gender>
     <layouts>
         <layout>Affiliation Layout - Master</layout>
         <sections>
@@ -126,6 +126,6 @@
             <section>Affiliation Information</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Affiliation Key --></nameFieldLabel>
-    <startsWith><!-- Vowel --></startsWith>
+    <nameFieldLabel>Clé d&apos;affiliation</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

@@ -6,7 +6,7 @@
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>Gestionnaires de déclencheurs</value>
+        <value>Gestionnaires de déclencheur</value>
     </caseValues>
     <fields>
         <help>Indique que ce module est actif</help>
@@ -53,31 +53,31 @@
         <name>hed__Trigger_Action__c</name>
         <picklistValues>
             <masterLabel>AfterDelete</masterLabel>
-            <translation><!-- AfterDelete --></translation>
+            <translation>AfterDelete</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AfterInsert</masterLabel>
-            <translation><!-- AfterInsert --></translation>
+            <translation>AfterInsert</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AfterUndelete</masterLabel>
-            <translation><!-- AfterUndelete --></translation>
+            <translation>AfterUndelete</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>AfterUpdate</masterLabel>
-            <translation><!-- AfterUpdate --></translation>
+            <translation>AfterUpdate</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>BeforeDelete</masterLabel>
-            <translation><!-- BeforeDelete --></translation>
+            <translation>BeforeDelete</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>BeforeInsert</masterLabel>
-            <translation><!-- BeforeInsert --></translation>
+            <translation>BeforeInsert</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>BeforeUpdate</masterLabel>
-            <translation><!-- BeforeUpdate --></translation>
+            <translation>BeforeUpdate</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -86,7 +86,7 @@
         <name>hed__User_Managed__c</name>
     </fields>
     <fields>
-        <help><!-- Semicolon separated list of Salesforce usernames that this trigger will NOT run for. Leave blank to run for all users. --></help>
+        <help>Liste de noms d&apos;utilisateur Salesforce, séparés par un point virgule, pour lesquels ce déclencheur ne sera pas exécuté. Si vous souhaitez l&apos;exécuter pour tous les utilisateurs, laissez cette zone vide.</help>
         <label><!-- Usernames to Exclude --></label>
         <name>hed__Usernames_to_Exclude__c</name>
     </fields>

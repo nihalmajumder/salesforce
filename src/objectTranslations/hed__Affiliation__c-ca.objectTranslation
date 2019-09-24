@@ -126,6 +126,6 @@
             <section>Affiliation Information</section>
         </sections>
     </layouts>
-    <nameFieldLabel>Clau d&apos;afiliació</nameFieldLabel>
+    <nameFieldLabel>Clau d’afiliació</nameFieldLabel>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

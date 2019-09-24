@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Error --></value>
+        <value>Error</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Error --></value>
+        <value>Errores</value>
     </caseValues>
     <fields>
         <help>Contexto en el que se generó el error, si se conoce.</help>
@@ -53,6 +53,6 @@
         <label><!-- Stack Trace --></label>
         <name>hed__Stack_Trace__c</name>
     </fields>
-    <gender><!-- Feminine --></gender>
-    <nameFieldLabel><!-- Error Number --></nameFieldLabel>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Número de error</nameFieldLabel>
 </CustomObjectTranslation>

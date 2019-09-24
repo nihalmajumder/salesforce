@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Program Enrollment --></value>
+        <value>Inscripción del programa</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Program Enrollment --></value>
+        <value>Inscripciones del programa</value>
     </caseValues>
     <fields>
         <help><!-- From Banner --></help>
@@ -194,7 +194,7 @@
         <name>hed__Graduation_Year__c</name>
     </fields>
     <fields>
-        <help><!-- Click to select a Program Plan that a student should follow for this Program Enrollment. --></help>
+        <help>Haga clic para seleccionar un Plan de programa que un estudiante debería seguir para esta Inscripción de programa.</help>
         <label><!-- Program Plan --></label>
         <name>hed__Program_Plan__c</name>
         <relationshipLabel><!-- Program Enrollments --></relationshipLabel>
@@ -203,6 +203,6 @@
         <label><!-- Start Date --></label>
         <name>hed__Start_Date__c</name>
     </fields>
-    <gender><!-- Feminine --></gender>
-    <nameFieldLabel><!-- Program Enrollment ID --></nameFieldLabel>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Id. de inscripción del programa</nameFieldLabel>
 </CustomObjectTranslation>

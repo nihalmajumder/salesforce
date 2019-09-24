@@ -321,7 +321,7 @@ public class INT_InteractionProcessor {
             interactionIdToLead.put(interaction.Id, newLead);
             intMappingService.applyDataToSObject(interaction, newLead);
         }
-        leadConverts.addAll(insertLeads(interactionIdToLead.values()));
+        leadConverts.addAll(insertLeads(interactionIdToLead)); // Change method call - Todd Mitchell
 
         return leadConverts;
     }
@@ -331,23 +331,37 @@ public class INT_InteractionProcessor {
      * @param leads, a List of Lead objects to insert.
      * @return leadsToConvert, a List of Database.LeadConvert records to convert.
      */
-    private List<Database.LeadConvert> insertLeads(List<Lead> leadsToInsert) {
+    // Rewrite method - Todd Mitchell 
+    private List<Database.LeadConvert> insertLeads(Map<Id, Lead> interactionIdToLeadMap) {
+        List<Lead> leadsToInsert = new List<Lead>();
+        List<InteractionLeadWrapper> wrappers = new List<InteractionLeadWrapper>();
+        for (Id i : interactionIdToLeadMap.keySet()) {
+            Lead l = interactionIdToLeadMap.get(i);
+            InteractionLeadWrapper wrapper = new InteractionLeadWrapper();
+            wrapper.theId = i;
+            wrapper.theLead = l;
+            wrappers.add(wrapper);
+            leadsToInsert.add(l);
+        }
+
         Database.SaveResult[] srlist = Database.insert(leadsToInsert, false); // Insert Leads
         List<Database.LeadConvert> leadsToConvert = new List<Database.LeadConvert>();
-        Map<Id, Database.SaveResult> leadResultMap = new Map<Id, Database.SaveResult>();
 
-        for (Database.SaveResult sr : srlist) leadResultMap.put(sr.getId(), sr);
+        Integer i = 0;
+        for (Database.SaveResult sr : srlist) {
+            wrappers[i].result = sr;
+            i++;
+        }
 
-        for (Id intearctionId : interactionIdToLead.keySet()) {
-            if (leadResultMap.containsKey(interactionIdToLead.get(intearctionId).Id)) {
-                Database.SaveResult sr = leadResultMap.get(interactionIdToLead.get(intearctionId).Id);
-                Id leadId = interactionIdToLead.get(intearctionId).Id;
-                Interaction__c interaction = interactionMap.get(intearctionId);
-
+        for (InteractionLeadWrapper wrapper : wrappers) {
+            if (wrapper.result != null) {
+                Database.SaveResult sr = wrapper.result;
+                Interaction__c interaction = interactionMap.get(wrapper.theId);
                 if (sr.isSuccess()) { // Check if insert was a success
                     // On success, prepare to convert inserted lead.
+                    Id leadId = wrapper.theLead.Id;
                     leadIds.add(sr.getId());
-                    leadsToConvert.add(createLeadConvert(interactionMap.get(intearctionId), leadId, true));
+                    leadsToConvert.add(createLeadConvert(interaction, leadId, true));
                     interaction.Lead__c = leadId;
                     leadIdToInteractionMap.put(interaction.Lead__c, interaction);
 
@@ -386,6 +400,77 @@ public class INT_InteractionProcessor {
 
         return leadsToConvert;
     }
+
+    // New Class to help with method above
+    private class InteractionLeadWrapper {
+        private Id theId {get; set;}
+        private Lead theLead {get; set;}
+        private Database.SaveResult result {get; set;}
+    }
+
+    /**
+     * @description Inserts a collection of Leads. If there are failures, log issues to Interaction Audit Status.
+     * @param leads, a List of Lead objects to insert.
+     * @return leadsToConvert, a List of Database.LeadConvert records to convert.
+     */
+    /* Rewrite method above - Todd Mitchell
+    private List<Database.LeadConvert> insertLeads(List<Lead> leadsToInsert) {
+        Database.SaveResult[] srlist = Database.insert(leadsToInsert, false); // Insert Leads
+        List<Database.LeadConvert> leadsToConvert = new List<Database.LeadConvert>();
+        Map<Id, Database.SaveResult> leadResultMap = new Map<Id, Database.SaveResult>();
+
+        for (Database.SaveResult sr : srlist) leadResultMap.put(sr.getId(), sr);
+
+        for (Id intearctionId : interactionIdToLead.keySet()) {
+            if (leadResultMap.containsKey(interactionIdToLead.get(intearctionId).Id)) {
+                Database.SaveResult sr = leadResultMap.get(interactionIdToLead.get(intearctionId).Id);
+                Id leadId = interactionIdToLead.get(intearctionId).Id;
+                Interaction__c interaction = interactionMap.get(intearctionId);
+                if (sr.isSuccess()) { // Check if insert was a success
+                    // On success, prepare to convert inserted lead.
+                    leadIds.add(sr.getId());
+                    leadsToConvert.add(createLeadConvert(interactionMap.get(intearctionId), leadId, true));
+                    interaction.Lead__c = leadId;
+                    leadIdToInteractionMap.put(interaction.Lead__c, interaction);
+
+                    if (interaction.Lead_Only__c == false) {
+                        leadsToDelete.add(new Lead(Id = leadId)); // Newly created leads will be deleted
+                    }
+                } else { 
+    */
+                    /**
+                     * If there are errors, loop through them and either log the error on the Interaction.
+                     * or see if there's a duplicate and use that instead.
+                     */
+    /* 
+                    for (Database.Error error : sr.getErrors()) {
+                        if (error.getStatusCode() == StatusCode.DUPLICATES_DETECTED) {
+                            Database.DuplicateError dupErrorError = (Database.DuplicateError) error;
+
+                            for (Datacloud.MatchResult matchResult : dupErrorError.getDuplicateResult().getMatchResults()) {
+                                for (Datacloud.MatchRecord match : matchResult.getMatchRecords()) {
+                                    // Grab matched record to use instead of the new one.
+                                    leadIds.add(match.getRecord().Id);
+                                    interaction.Lead__c = match.getRecord().Id;
+                                    leadIdToInteractionMap.put(interaction.Lead__c, interaction);
+
+                                    if (interaction.Lead_Only__c == false) {
+                                        leadsToConvert.add(createLeadConvert(interaction, match.getRecord().Id, true));
+                                    }
+                                }
+                            }
+                        } else { // Catch-all for all other errors
+                            interaction.Audit_Reason__c += ' Reason: Error during Lead insert - ' + error.getMessage() + '.';
+                            System.debug('Error during Lead insert - ' + error.getMessage() + '.');
+                        }
+                    }
+                }
+            }
+        }
+
+        return leadsToConvert;
+    } 
+    */
 
     /**
      * @description Creates a Database.LeadConvert Object from supplied Interaction record.

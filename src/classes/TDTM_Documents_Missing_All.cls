@@ -7,6 +7,8 @@
 
 global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
 
+
+
     global override void onBeforeUpdate(List<SObject> newList, List<SObject> oldList, Map<Id, SObject> newMap, Map<Id, SObject> oldMap, hed.TDTM_Runnable.DmlWrapper wrapper) {
 
         List<Opportunity> opps = (List<Opportunity>)newList;

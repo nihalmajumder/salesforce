@@ -5,6 +5,10 @@
         <name>wbsendit__Compound_Key__c</name>
     </fields>
     <fields>
+        <label><!-- Compound --></label>
+        <name>wbsendit__Compound__c</name>
+    </fields>
+    <fields>
         <label><!-- Field Name --></label>
         <name>wbsendit__Field_Name__c</name>
     </fields>

@@ -2,62 +2,62 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Program Plan --></value>
+        <value>Plan du programme</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Program Plans --></value>
+        <value>Plans de programme</value>
     </caseValues>
     <fields>
-        <help><!-- Click to search for an Account (often an Academic Program) to associate with the Program Plan. --></help>
+        <help>Cliquez pour rechercher un compte (souvent un programme académique) à associer au plan du programme.</help>
         <label><!-- Account --></label>
         <name>hed__Account__c</name>
         <relationshipLabel><!-- Program Plans --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Describe the Program Plan. --></help>
+        <help>Décrit le plan du programme.</help>
         <label><!-- Description --></label>
         <name>hed__Description__c</name>
     </fields>
     <fields>
-        <help><!-- The end date for the Program Plan. --></help>
+        <help>La date de fin du plan du programme.</help>
         <label><!-- End Date --></label>
         <name>hed__End_Date__c</name>
     </fields>
     <fields>
-        <help><!-- Checkbox to designate this Plan as the one to assign to a student when creating a Program Enrollment --></help>
+        <help>Case à cocher indiquant que ce plan doit être attribué à l&apos;étudiant lors de la création d&apos;une inscription au programme.</help>
         <label><!-- Is Primary --></label>
         <name>hed__Is_Primary__c</name>
     </fields>
     <fields>
-        <help><!-- The date the Program Plan went into effect. --></help>
+        <help>La date à laquelle le plan du programme prend effet.</help>
         <label><!-- Start Date --></label>
         <name>hed__Start_Date__c</name>
     </fields>
     <fields>
-        <help><!-- The status of the program plan. --></help>
+        <help>Le statut du plan du programme.</help>
         <label><!-- Status --></label>
         <name>hed__Status__c</name>
         <picklistValues>
             <masterLabel>Archived</masterLabel>
-            <translation><!-- Archived --></translation>
+            <translation>Archivé</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Current</masterLabel>
-            <translation><!-- Current --></translation>
+            <translation>En cours</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Specify the total number of credits a student must complete to satisfy this program plan. --></help>
+        <help>Spécifiez le nombre total de crédits qu&apos;un étudiant doit obtenir pour satisfaire ce plan de programme.</help>
         <label><!-- Total Required Credits --></label>
         <name>hed__Total_Required_Credits__c</name>
     </fields>
     <fields>
-        <help><!-- The version of the Program Plan. For example, “Spring 2019.” --></help>
+        <help>La version du plan du programme, par exemple, « Spring 2019 ».</help>
         <label><!-- Version --></label>
         <name>hed__Version__c</name>
     </fields>
-    <gender><!-- Feminine --></gender>
-    <nameFieldLabel><!-- Program Plan Name --></nameFieldLabel>
-    <startsWith><!-- Consonant --></startsWith>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom du plan du programme</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

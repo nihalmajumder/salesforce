@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Relation --></value>
+        <value>Relation</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Relations --></value>
+        <value>Relations</value>
     </caseValues>
     <fields>
         <label><!-- End Date --></label>
@@ -104,7 +104,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Cousin</masterLabel>
-            <translation><!-- Cousin --></translation>
+            <translation>Cousin</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Coworker</masterLabel>
@@ -168,7 +168,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Parent</masterLabel>
-            <translation><!-- Parent --></translation>
+            <translation>Parent</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Partner</masterLabel>
@@ -191,7 +191,7 @@
             <translation>Épouse</translation>
         </picklistValues>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Feminine</gender>
     <layouts>
         <layout>HEDA Relationship Layout</layout>
         <sections>
@@ -206,8 +206,8 @@
             <section>Relationship Information</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Relationship Key --></nameFieldLabel>
-    <startsWith><!-- Consonant --></startsWith>
+    <nameFieldLabel>Clé de relation</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
     <validationRules>
         <errorMessage><!-- Rather than change the Contacts in an existing Relationship, delete this Relationship and create a new one. --></errorMessage>
         <name>hed__Contact_Do_Not_Change</name>

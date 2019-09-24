@@ -194,7 +194,7 @@
         <name>hed__Graduation_Year__c</name>
     </fields>
     <fields>
-        <help><!-- Click to select a Program Plan that a student should follow for this Program Enrollment. --></help>
+        <help>Feu clic per seleccionar un pla del programa que hauria de seguir un estudiant per a aquesta inscripció al programa.</help>
         <label><!-- Program Plan --></label>
         <name>hed__Program_Plan__c</name>
         <relationshipLabel><!-- Program Enrollments --></relationshipLabel>

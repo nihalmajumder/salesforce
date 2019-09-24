@@ -375,19 +375,19 @@
         <name>hed__Type__c</name>
         <picklistValues>
             <masterLabel>Part of Term</masterLabel>
-            <translation><!-- Part of Term --></translation>
+            <translation>Part del període</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Quarter</masterLabel>
-            <translation><!-- Quarter --></translation>
+            <translation>Trimestre</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>School Year</masterLabel>
-            <translation><!-- School Year --></translation>
+            <translation>Any acadèmic</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Semester</masterLabel>
-            <translation><!-- Semester --></translation>
+            <translation>Semestre</translation>
         </picklistValues>
     </fields>
     <gender>Masculine</gender>
@@ -402,6 +402,6 @@
             <section>Goals - PSEO</section>
         </sections>
     </layouts>
-    <nameFieldLabel>Nom del termini</nameFieldLabel>
+    <nameFieldLabel>Nom del període</nameFieldLabel>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

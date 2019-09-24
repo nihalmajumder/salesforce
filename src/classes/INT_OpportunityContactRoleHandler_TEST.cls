@@ -4,13 +4,9 @@
 * Description: Unit tests for INT_OpportunityContactRoleHandler.cls
 ******************************************/
 
-// ejc84332: We decided we don't really need OpportunityContactRole's, so we are just skipping this.
-// TDTM triggers are run via TDTM_Opportunity.
 
 @isTest
 private class INT_OpportunityContactRoleHandler_TEST {
-
-    /*
 
     @testSetup static void setUp() {
         hed__Trigger_Handler__c oppHandler = new hed__Trigger_Handler__c(
@@ -57,7 +53,4 @@ private class INT_OpportunityContactRoleHandler_TEST {
         System.assertEquals('Opportunity Contact', assertRoles[0].Role, 'Role should be \'Opportunity Contact\'.');
         System.assertEquals(anOpportunity.Id, assertRoles[0].OpportunityId, 'Role should be tied to the test Opportunity.');
     }
-
-
-     */
 }

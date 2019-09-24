@@ -57,7 +57,14 @@ global class TDTM_Documents_Missing_AD extends TDTMVirtualTriggerHandler {
 
 
         }
-        process_list(process_list);
+        if(process_list.size() > 0){
+            if (System.isBatch() || System.isFuture()) {
+                process_list(process_list);
+            }else{
+                process_list_future(process_list);
+            }
+        }
+
     }
 
     private String get_status_by_type(SObject s){
@@ -74,8 +81,16 @@ global class TDTM_Documents_Missing_AD extends TDTMVirtualTriggerHandler {
 
     }
 
-    @future
     private static void process_list(List<Id> contact_ids){
+        List<Opportunity> opportunities = [SELECT Id, Stage_Detail__c FROM Opportunity
+        WHERE StageName in ('Applied', 'Accepted', 'Confirmed') AND Lock_Documents_Missing__c = False AND Contact__c IN :contact_ids];
+        // This wlll cause TDTM_Documents_Missing_All to run which will update the Documents Missing field.
+        update opportunities;
+    }
+
+
+    @future
+    private static void process_list_future(List<Id> contact_ids){
 
         List<Opportunity> opportunities = [SELECT Id, Stage_Detail__c FROM Opportunity
         WHERE StageName in ('Applied', 'Accepted', 'Confirmed') AND Lock_Documents_Missing__c = False AND Contact__c IN :contact_ids];

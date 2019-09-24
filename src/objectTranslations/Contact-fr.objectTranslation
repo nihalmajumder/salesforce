@@ -453,7 +453,7 @@
         <name>hed__AlternateEmail__c</name>
     </fields>
     <fields>
-        <help><!-- The full name that the Contact prefers to use instead of a legal or official name. --></help>
+        <help>Le nom complet que le contact préfère utiliser au lieu d’un nom légal ou officiel.</help>
         <label><!-- Chosen Full Name --></label>
         <name>hed__Chosen_Full_Name__c</name>
     </fields>
@@ -462,7 +462,7 @@
         <name>hed__Citizenship__c</name>
         <picklistValues>
             <masterLabel>Afghanistan</masterLabel>
-            <translation><!-- Afghanistan --></translation>
+            <translation>Afghanistan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Albania</masterLabel>
@@ -482,11 +482,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Angola</masterLabel>
-            <translation><!-- Angola --></translation>
+            <translation>Angola</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Anguilla</masterLabel>
-            <translation><!-- Anguilla --></translation>
+            <translation>Anguilla</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Antarctica</masterLabel>
@@ -506,7 +506,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Aruba</masterLabel>
-            <translation><!-- Aruba --></translation>
+            <translation>Aruba</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Australia</masterLabel>
@@ -530,7 +530,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Bangladesh</masterLabel>
-            <translation><!-- Bangladesh --></translation>
+            <translation>Bangladesh</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Barbados</masterLabel>
@@ -546,7 +546,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Belize</masterLabel>
-            <translation><!-- Belize --></translation>
+            <translation>Belize</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Benin</masterLabel>
@@ -574,7 +574,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Botswana</masterLabel>
-            <translation><!-- Botswana --></translation>
+            <translation>Botswana</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Bouvet Island</masterLabel>
@@ -602,7 +602,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Burkina Faso</masterLabel>
-            <translation><!-- Burkina Faso --></translation>
+            <translation>Burkina Faso</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Burma</masterLabel>
@@ -610,7 +610,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Burundi</masterLabel>
-            <translation><!-- Burundi --></translation>
+            <translation>Burundi</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Byelorussian SSR</masterLabel>
@@ -682,7 +682,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Costa Rica</masterLabel>
-            <translation><!-- Costa Rica --></translation>
+            <translation>Costa Rica</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Croatia</masterLabel>
@@ -690,11 +690,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Cuba</masterLabel>
-            <translation><!-- Cuba --></translation>
+            <translation>Cuba</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Curaçao</masterLabel>
-            <translation><!-- Curaçao --></translation>
+            <translation>Curaçao</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Cyprus</masterLabel>
@@ -710,11 +710,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Côte d&apos;Ivoire</masterLabel>
-            <translation><!-- Côte d&apos;Ivoire --></translation>
+            <translation>Côte d&apos;Ivoire</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dahomey</masterLabel>
-            <translation><!-- Dahomey --></translation>
+            <translation>Dahomey</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Denmark</masterLabel>
@@ -722,7 +722,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Djibouti</masterLabel>
-            <translation><!-- Djibouti --></translation>
+            <translation>Djibouti</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dominica</masterLabel>
@@ -786,7 +786,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>France</masterLabel>
-            <translation><!-- France --></translation>
+            <translation>France</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>France, Metropolitan</masterLabel>
@@ -814,7 +814,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Gabon</masterLabel>
-            <translation><!-- Gabon --></translation>
+            <translation>Gabon</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gambia (the)</masterLabel>
@@ -834,11 +834,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Ghana</masterLabel>
-            <translation><!-- Ghana --></translation>
+            <translation>Ghana</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gibraltar</masterLabel>
-            <translation><!-- Gibraltar --></translation>
+            <translation>Gibraltar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gilbert and Ellice Islands</masterLabel>
@@ -858,15 +858,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Guadeloupe</masterLabel>
-            <translation><!-- Guadeloupe --></translation>
+            <translation>Guadeloupe</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guam</masterLabel>
-            <translation><!-- Guam --></translation>
+            <translation>Guam</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guatemala</masterLabel>
-            <translation><!-- Guatemala --></translation>
+            <translation>Guatemala</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guernsey</masterLabel>
@@ -898,11 +898,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Honduras</masterLabel>
-            <translation><!-- Honduras --></translation>
+            <translation>Honduras</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hong Kong</masterLabel>
-            <translation><!-- Hong Kong --></translation>
+            <translation>Hong Kong</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hungary</masterLabel>
@@ -926,7 +926,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Iraq</masterLabel>
-            <translation><!-- Iraq --></translation>
+            <translation>Iraq</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Ireland</masterLabel>
@@ -954,7 +954,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Jersey</masterLabel>
-            <translation><!-- Jersey --></translation>
+            <translation>Jersey</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Johnston Island</masterLabel>
@@ -966,15 +966,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Kazakhstan</masterLabel>
-            <translation><!-- Kazakhstan --></translation>
+            <translation>Kazakhstan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Kenya</masterLabel>
-            <translation><!-- Kenya --></translation>
+            <translation>Kenya</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Kiribati</masterLabel>
-            <translation><!-- Kiribati --></translation>
+            <translation>Kiribati</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Korea (the Democratic People&apos;s Republic of)</masterLabel>
@@ -1006,7 +1006,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Lesotho</masterLabel>
-            <translation><!-- Lesotho --></translation>
+            <translation>Lesotho</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Liberia</masterLabel>
@@ -1018,7 +1018,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Liechtenstein</masterLabel>
-            <translation><!-- Liechtenstein --></translation>
+            <translation>Liechtenstein</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Lithuania</masterLabel>
@@ -1026,11 +1026,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Luxembourg</masterLabel>
-            <translation><!-- Luxembourg --></translation>
+            <translation>Luxembourg</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Macao</masterLabel>
-            <translation><!-- Macao --></translation>
+            <translation>Macao</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Macedonia (the former Yugoslav Republic of)</masterLabel>
@@ -1038,11 +1038,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Madagascar</masterLabel>
-            <translation><!-- Madagascar --></translation>
+            <translation>Madagascar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malawi</masterLabel>
-            <translation><!-- Malawi --></translation>
+            <translation>Malawi</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malaysia</masterLabel>
@@ -1050,7 +1050,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mali</masterLabel>
-            <translation><!-- Mali --></translation>
+            <translation>Mali</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malta</masterLabel>
@@ -1062,7 +1062,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Martinique</masterLabel>
-            <translation><!-- Martinique --></translation>
+            <translation>Martinique</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mauritania</masterLabel>
@@ -1074,7 +1074,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mayotte</masterLabel>
-            <translation><!-- Mayotte --></translation>
+            <translation>Mayotte</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mexico</masterLabel>
@@ -1094,7 +1094,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Monaco</masterLabel>
-            <translation><!-- Monaco --></translation>
+            <translation>Monaco</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mongolia</masterLabel>
@@ -1106,7 +1106,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Montserrat</masterLabel>
-            <translation><!-- Montserrat --></translation>
+            <translation>Montserrat</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Morocco</masterLabel>
@@ -1114,7 +1114,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mozambique</masterLabel>
-            <translation><!-- Mozambique --></translation>
+            <translation>Mozambique</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Myanmar</masterLabel>
@@ -1126,7 +1126,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Nauru</masterLabel>
-            <translation><!-- Nauru --></translation>
+            <translation>Nauru</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Nepal</masterLabel>
@@ -1158,7 +1158,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Nicaragua</masterLabel>
-            <translation><!-- Nicaragua --></translation>
+            <translation>Nicaragua</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Niger (the)</masterLabel>
@@ -1186,7 +1186,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Oman</masterLabel>
-            <translation><!-- Oman --></translation>
+            <translation>Oman</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Pacific Islands (Trust Territory)</masterLabel>
@@ -1194,11 +1194,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Pakistan</masterLabel>
-            <translation><!-- Pakistan --></translation>
+            <translation>Pakistan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Palau</masterLabel>
-            <translation><!-- Palau --></translation>
+            <translation>Palau</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Palestine, State of</masterLabel>
@@ -1206,7 +1206,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Panama</masterLabel>
-            <translation><!-- Panama --></translation>
+            <translation>Panama</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Panama Canal Zone</masterLabel>
@@ -1218,7 +1218,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Paraguay</masterLabel>
-            <translation><!-- Paraguay --></translation>
+            <translation>Paraguay</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Peru</masterLabel>
@@ -1230,7 +1230,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Pitcairn</masterLabel>
-            <translation><!-- Pitcairn --></translation>
+            <translation>Pitcairn</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Poland</masterLabel>
@@ -1238,7 +1238,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Portugal</masterLabel>
-            <translation><!-- Portugal --></translation>
+            <translation>Portugal</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Puerto Rico</masterLabel>
@@ -1246,7 +1246,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Qatar</masterLabel>
-            <translation><!-- Qatar --></translation>
+            <translation>Qatar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Romania</masterLabel>
@@ -1258,11 +1258,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Rwanda</masterLabel>
-            <translation><!-- Rwanda --></translation>
+            <translation>Rwanda</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Réunion</masterLabel>
-            <translation><!-- Réunion --></translation>
+            <translation>Réunion</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Saint Barthélemy</masterLabel>
@@ -1294,7 +1294,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Samoa</masterLabel>
-            <translation><!-- Samoa --></translation>
+            <translation>Samoa</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>San Marino</masterLabel>
@@ -1322,15 +1322,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Seychelles</masterLabel>
-            <translation><!-- Seychelles --></translation>
+            <translation>Seychelles</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sierra Leone</masterLabel>
-            <translation><!-- Sierra Leone --></translation>
+            <translation>Sierra Leone</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sikkim</masterLabel>
-            <translation><!-- Sikkim --></translation>
+            <translation>Sikkim</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Singapore</masterLabel>
@@ -1378,7 +1378,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Sri Lanka</masterLabel>
-            <translation><!-- Sri Lanka --></translation>
+            <translation>Sri Lanka</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sudan (the)</masterLabel>
@@ -1394,7 +1394,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Swaziland</masterLabel>
-            <translation><!-- Swaziland --></translation>
+            <translation>Swaziland</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sweden</masterLabel>
@@ -1426,19 +1426,19 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Timor-Leste</masterLabel>
-            <translation><!-- Timor-Leste --></translation>
+            <translation>Timor-Leste</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Togo</masterLabel>
-            <translation><!-- Togo --></translation>
+            <translation>Togo</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tokelau</masterLabel>
-            <translation><!-- Tokelau --></translation>
+            <translation>Tokelau</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tonga</masterLabel>
-            <translation><!-- Tonga --></translation>
+            <translation>Tonga</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Trinidad and Tobago</masterLabel>
@@ -1462,7 +1462,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Tuvalu</masterLabel>
-            <translation><!-- Tuvalu --></translation>
+            <translation>Tuvalu</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>USSR</masterLabel>
@@ -1474,7 +1474,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Ukraine</masterLabel>
-            <translation><!-- Ukraine --></translation>
+            <translation>Ukraine</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>United Arab Emirates (the)</masterLabel>
@@ -1502,7 +1502,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Uruguay</masterLabel>
-            <translation><!-- Uruguay --></translation>
+            <translation>Uruguay</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Uzbekistan</masterLabel>
@@ -1510,7 +1510,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Vanuatu</masterLabel>
-            <translation><!-- Vanuatu --></translation>
+            <translation>Vanuatu</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Venezuela (Bolivarian Republic of)</masterLabel>
@@ -1566,7 +1566,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Zimbabwe</masterLabel>
-            <translation><!-- Zimbabwe --></translation>
+            <translation>Zimbabwe</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Åland Islands</masterLabel>
@@ -1578,7 +1578,7 @@
         <name>hed__Country_of_Origin__c</name>
         <picklistValues>
             <masterLabel>Afghanistan</masterLabel>
-            <translation><!-- Afghanistan --></translation>
+            <translation>Afghanistan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Albania</masterLabel>
@@ -1598,11 +1598,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Angola</masterLabel>
-            <translation><!-- Angola --></translation>
+            <translation>Angola</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Anguilla</masterLabel>
-            <translation><!-- Anguilla --></translation>
+            <translation>Anguilla</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Antarctica</masterLabel>
@@ -1622,7 +1622,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Aruba</masterLabel>
-            <translation><!-- Aruba --></translation>
+            <translation>Aruba</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Australia</masterLabel>
@@ -1646,7 +1646,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Bangladesh</masterLabel>
-            <translation><!-- Bangladesh --></translation>
+            <translation>Bangladesh</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Barbados</masterLabel>
@@ -1662,7 +1662,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Belize</masterLabel>
-            <translation><!-- Belize --></translation>
+            <translation>Belize</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Benin</masterLabel>
@@ -1690,7 +1690,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Botswana</masterLabel>
-            <translation><!-- Botswana --></translation>
+            <translation>Botswana</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Bouvet Island</masterLabel>
@@ -1718,7 +1718,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Burkina Faso</masterLabel>
-            <translation><!-- Burkina Faso --></translation>
+            <translation>Burkina Faso</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Burma</masterLabel>
@@ -1726,7 +1726,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Burundi</masterLabel>
-            <translation><!-- Burundi --></translation>
+            <translation>Burundi</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Byelorussian SSR</masterLabel>
@@ -1798,7 +1798,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Costa Rica</masterLabel>
-            <translation><!-- Costa Rica --></translation>
+            <translation>Costa Rica</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Croatia</masterLabel>
@@ -1806,11 +1806,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Cuba</masterLabel>
-            <translation><!-- Cuba --></translation>
+            <translation>Cuba</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Curaçao</masterLabel>
-            <translation><!-- Curaçao --></translation>
+            <translation>Curaçao</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Cyprus</masterLabel>
@@ -1826,11 +1826,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Côte d&apos;Ivoire</masterLabel>
-            <translation><!-- Côte d&apos;Ivoire --></translation>
+            <translation>Côte d&apos;Ivoire</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dahomey</masterLabel>
-            <translation><!-- Dahomey --></translation>
+            <translation>Dahomey</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Denmark</masterLabel>
@@ -1838,7 +1838,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Djibouti</masterLabel>
-            <translation><!-- Djibouti --></translation>
+            <translation>Djibouti</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dominica</masterLabel>
@@ -1902,7 +1902,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>France</masterLabel>
-            <translation><!-- France --></translation>
+            <translation>France</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>France, Metropolitan</masterLabel>
@@ -1930,7 +1930,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Gabon</masterLabel>
-            <translation><!-- Gabon --></translation>
+            <translation>Gabon</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gambia (the)</masterLabel>
@@ -1950,11 +1950,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Ghana</masterLabel>
-            <translation><!-- Ghana --></translation>
+            <translation>Ghana</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gibraltar</masterLabel>
-            <translation><!-- Gibraltar --></translation>
+            <translation>Gibraltar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gilbert and Ellice Islands</masterLabel>
@@ -1974,15 +1974,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Guadeloupe</masterLabel>
-            <translation><!-- Guadeloupe --></translation>
+            <translation>Guadeloupe</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guam</masterLabel>
-            <translation><!-- Guam --></translation>
+            <translation>Guam</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guatemala</masterLabel>
-            <translation><!-- Guatemala --></translation>
+            <translation>Guatemala</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guernsey</masterLabel>
@@ -2014,11 +2014,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Honduras</masterLabel>
-            <translation><!-- Honduras --></translation>
+            <translation>Honduras</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hong Kong</masterLabel>
-            <translation><!-- Hong Kong --></translation>
+            <translation>Hong Kong</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hungary</masterLabel>
@@ -2042,7 +2042,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Iraq</masterLabel>
-            <translation><!-- Iraq --></translation>
+            <translation>Iraq</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Ireland</masterLabel>
@@ -2070,7 +2070,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Jersey</masterLabel>
-            <translation><!-- Jersey --></translation>
+            <translation>Jersey</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Johnston Island</masterLabel>
@@ -2082,15 +2082,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Kazakhstan</masterLabel>
-            <translation><!-- Kazakhstan --></translation>
+            <translation>Kazakhstan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Kenya</masterLabel>
-            <translation><!-- Kenya --></translation>
+            <translation>Kenya</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Kiribati</masterLabel>
-            <translation><!-- Kiribati --></translation>
+            <translation>Kiribati</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Korea (the Democratic People&apos;s Republic of)</masterLabel>
@@ -2122,7 +2122,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Lesotho</masterLabel>
-            <translation><!-- Lesotho --></translation>
+            <translation>Lesotho</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Liberia</masterLabel>
@@ -2134,7 +2134,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Liechtenstein</masterLabel>
-            <translation><!-- Liechtenstein --></translation>
+            <translation>Liechtenstein</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Lithuania</masterLabel>
@@ -2142,11 +2142,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Luxembourg</masterLabel>
-            <translation><!-- Luxembourg --></translation>
+            <translation>Luxembourg</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Macao</masterLabel>
-            <translation><!-- Macao --></translation>
+            <translation>Macao</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Macedonia (the former Yugoslav Republic of)</masterLabel>
@@ -2154,11 +2154,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Madagascar</masterLabel>
-            <translation><!-- Madagascar --></translation>
+            <translation>Madagascar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malawi</masterLabel>
-            <translation><!-- Malawi --></translation>
+            <translation>Malawi</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malaysia</masterLabel>
@@ -2166,7 +2166,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mali</masterLabel>
-            <translation><!-- Mali --></translation>
+            <translation>Mali</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malta</masterLabel>
@@ -2178,7 +2178,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Martinique</masterLabel>
-            <translation><!-- Martinique --></translation>
+            <translation>Martinique</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mauritania</masterLabel>
@@ -2190,7 +2190,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mayotte</masterLabel>
-            <translation><!-- Mayotte --></translation>
+            <translation>Mayotte</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mexico</masterLabel>
@@ -2210,7 +2210,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Monaco</masterLabel>
-            <translation><!-- Monaco --></translation>
+            <translation>Monaco</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mongolia</masterLabel>
@@ -2222,7 +2222,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Montserrat</masterLabel>
-            <translation><!-- Montserrat --></translation>
+            <translation>Montserrat</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Morocco</masterLabel>
@@ -2230,7 +2230,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mozambique</masterLabel>
-            <translation><!-- Mozambique --></translation>
+            <translation>Mozambique</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Myanmar</masterLabel>
@@ -2242,7 +2242,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Nauru</masterLabel>
-            <translation><!-- Nauru --></translation>
+            <translation>Nauru</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Nepal</masterLabel>
@@ -2274,7 +2274,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Nicaragua</masterLabel>
-            <translation><!-- Nicaragua --></translation>
+            <translation>Nicaragua</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Niger (the)</masterLabel>
@@ -2302,7 +2302,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Oman</masterLabel>
-            <translation><!-- Oman --></translation>
+            <translation>Oman</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Pacific Islands (Trust Territory)</masterLabel>
@@ -2310,11 +2310,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Pakistan</masterLabel>
-            <translation><!-- Pakistan --></translation>
+            <translation>Pakistan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Palau</masterLabel>
-            <translation><!-- Palau --></translation>
+            <translation>Palau</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Palestine, State of</masterLabel>
@@ -2322,7 +2322,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Panama</masterLabel>
-            <translation><!-- Panama --></translation>
+            <translation>Panama</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Panama Canal Zone</masterLabel>
@@ -2334,7 +2334,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Paraguay</masterLabel>
-            <translation><!-- Paraguay --></translation>
+            <translation>Paraguay</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Peru</masterLabel>
@@ -2346,7 +2346,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Pitcairn</masterLabel>
-            <translation><!-- Pitcairn --></translation>
+            <translation>Pitcairn</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Poland</masterLabel>
@@ -2354,7 +2354,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Portugal</masterLabel>
-            <translation><!-- Portugal --></translation>
+            <translation>Portugal</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Puerto Rico</masterLabel>
@@ -2362,7 +2362,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Qatar</masterLabel>
-            <translation><!-- Qatar --></translation>
+            <translation>Qatar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Romania</masterLabel>
@@ -2374,11 +2374,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Rwanda</masterLabel>
-            <translation><!-- Rwanda --></translation>
+            <translation>Rwanda</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Réunion</masterLabel>
-            <translation><!-- Réunion --></translation>
+            <translation>Réunion</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Saint Barthélemy</masterLabel>
@@ -2410,7 +2410,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Samoa</masterLabel>
-            <translation><!-- Samoa --></translation>
+            <translation>Samoa</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>San Marino</masterLabel>
@@ -2438,15 +2438,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Seychelles</masterLabel>
-            <translation><!-- Seychelles --></translation>
+            <translation>Seychelles</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sierra Leone</masterLabel>
-            <translation><!-- Sierra Leone --></translation>
+            <translation>Sierra Leone</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sikkim</masterLabel>
-            <translation><!-- Sikkim --></translation>
+            <translation>Sikkim</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Singapore</masterLabel>
@@ -2494,7 +2494,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Sri Lanka</masterLabel>
-            <translation><!-- Sri Lanka --></translation>
+            <translation>Sri Lanka</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sudan (the)</masterLabel>
@@ -2510,7 +2510,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Swaziland</masterLabel>
-            <translation><!-- Swaziland --></translation>
+            <translation>Swaziland</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sweden</masterLabel>
@@ -2542,19 +2542,19 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Timor-Leste</masterLabel>
-            <translation><!-- Timor-Leste --></translation>
+            <translation>Timor-Leste</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Togo</masterLabel>
-            <translation><!-- Togo --></translation>
+            <translation>Togo</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tokelau</masterLabel>
-            <translation><!-- Tokelau --></translation>
+            <translation>Tokelau</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tonga</masterLabel>
-            <translation><!-- Tonga --></translation>
+            <translation>Tonga</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Trinidad and Tobago</masterLabel>
@@ -2578,7 +2578,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Tuvalu</masterLabel>
-            <translation><!-- Tuvalu --></translation>
+            <translation>Tuvalu</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>USSR</masterLabel>
@@ -2590,7 +2590,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Ukraine</masterLabel>
-            <translation><!-- Ukraine --></translation>
+            <translation>Ukraine</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>United Arab Emirates (the)</masterLabel>
@@ -2618,7 +2618,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Uruguay</masterLabel>
-            <translation><!-- Uruguay --></translation>
+            <translation>Uruguay</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Uzbekistan</masterLabel>
@@ -2626,7 +2626,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Vanuatu</masterLabel>
-            <translation><!-- Vanuatu --></translation>
+            <translation>Vanuatu</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Venezuela (Bolivarian Republic of)</masterLabel>
@@ -2682,7 +2682,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Zimbabwe</masterLabel>
-            <translation><!-- Zimbabwe --></translation>
+            <translation>Zimbabwe</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Åland Islands</masterLabel>
@@ -2711,7 +2711,7 @@
         <name>hed__Dual_Citizenship__c</name>
         <picklistValues>
             <masterLabel>Afghanistan</masterLabel>
-            <translation><!-- Afghanistan --></translation>
+            <translation>Afghanistan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Albania</masterLabel>
@@ -2731,11 +2731,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Angola</masterLabel>
-            <translation><!-- Angola --></translation>
+            <translation>Angola</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Anguilla</masterLabel>
-            <translation><!-- Anguilla --></translation>
+            <translation>Anguilla</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Antarctica</masterLabel>
@@ -2755,7 +2755,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Aruba</masterLabel>
-            <translation><!-- Aruba --></translation>
+            <translation>Aruba</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Australia</masterLabel>
@@ -2779,7 +2779,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Bangladesh</masterLabel>
-            <translation><!-- Bangladesh --></translation>
+            <translation>Bangladesh</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Barbados</masterLabel>
@@ -2795,7 +2795,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Belize</masterLabel>
-            <translation><!-- Belize --></translation>
+            <translation>Belize</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Benin</masterLabel>
@@ -2823,7 +2823,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Botswana</masterLabel>
-            <translation><!-- Botswana --></translation>
+            <translation>Botswana</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Bouvet Island</masterLabel>
@@ -2851,7 +2851,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Burkina Faso</masterLabel>
-            <translation><!-- Burkina Faso --></translation>
+            <translation>Burkina Faso</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Burma</masterLabel>
@@ -2859,7 +2859,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Burundi</masterLabel>
-            <translation><!-- Burundi --></translation>
+            <translation>Burundi</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Byelorussian SSR</masterLabel>
@@ -2879,7 +2879,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Canada</masterLabel>
-            <translation><!-- Canada --></translation>
+            <translation>Canada</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Canton and Enderbury Islands</masterLabel>
@@ -2935,7 +2935,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Costa Rica</masterLabel>
-            <translation><!-- Costa Rica --></translation>
+            <translation>Costa Rica</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Croatia</masterLabel>
@@ -2943,11 +2943,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Cuba</masterLabel>
-            <translation><!-- Cuba --></translation>
+            <translation>Cuba</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Curaçao</masterLabel>
-            <translation><!-- Curaçao --></translation>
+            <translation>Curaçao</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Cyprus</masterLabel>
@@ -2963,11 +2963,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Côte d&apos;Ivoire</masterLabel>
-            <translation><!-- Côte d&apos;Ivoire --></translation>
+            <translation>Côte d&apos;Ivoire</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dahomey</masterLabel>
-            <translation><!-- Dahomey --></translation>
+            <translation>Dahomey</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Denmark</masterLabel>
@@ -2975,7 +2975,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Djibouti</masterLabel>
-            <translation><!-- Djibouti --></translation>
+            <translation>Djibouti</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dominica</masterLabel>
@@ -3039,7 +3039,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>France</masterLabel>
-            <translation><!-- France --></translation>
+            <translation>France</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>France, Metropolitan</masterLabel>
@@ -3067,7 +3067,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Gabon</masterLabel>
-            <translation><!-- Gabon --></translation>
+            <translation>Gabon</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gambia (the)</masterLabel>
@@ -3087,11 +3087,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Ghana</masterLabel>
-            <translation><!-- Ghana --></translation>
+            <translation>Ghana</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gibraltar</masterLabel>
-            <translation><!-- Gibraltar --></translation>
+            <translation>Gibraltar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gilbert and Ellice Islands</masterLabel>
@@ -3111,15 +3111,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Guadeloupe</masterLabel>
-            <translation><!-- Guadeloupe --></translation>
+            <translation>Guadeloupe</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guam</masterLabel>
-            <translation><!-- Guam --></translation>
+            <translation>Guam</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guatemala</masterLabel>
-            <translation><!-- Guatemala --></translation>
+            <translation>Guatemala</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Guernsey</masterLabel>
@@ -3151,11 +3151,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Honduras</masterLabel>
-            <translation><!-- Honduras --></translation>
+            <translation>Honduras</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hong Kong</masterLabel>
-            <translation><!-- Hong Kong --></translation>
+            <translation>Hong Kong</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hungary</masterLabel>
@@ -3179,7 +3179,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Iraq</masterLabel>
-            <translation><!-- Iraq --></translation>
+            <translation>Iraq</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Ireland</masterLabel>
@@ -3207,7 +3207,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Jersey</masterLabel>
-            <translation><!-- Jersey --></translation>
+            <translation>Jersey</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Johnston Island</masterLabel>
@@ -3219,15 +3219,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Kazakhstan</masterLabel>
-            <translation><!-- Kazakhstan --></translation>
+            <translation>Kazakhstan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Kenya</masterLabel>
-            <translation><!-- Kenya --></translation>
+            <translation>Kenya</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Kiribati</masterLabel>
-            <translation><!-- Kiribati --></translation>
+            <translation>Kiribati</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Korea (the Democratic People&apos;s Republic of)</masterLabel>
@@ -3259,7 +3259,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Lesotho</masterLabel>
-            <translation><!-- Lesotho --></translation>
+            <translation>Lesotho</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Liberia</masterLabel>
@@ -3271,7 +3271,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Liechtenstein</masterLabel>
-            <translation><!-- Liechtenstein --></translation>
+            <translation>Liechtenstein</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Lithuania</masterLabel>
@@ -3279,11 +3279,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Luxembourg</masterLabel>
-            <translation><!-- Luxembourg --></translation>
+            <translation>Luxembourg</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Macao</masterLabel>
-            <translation><!-- Macao --></translation>
+            <translation>Macao</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Macedonia (the former Yugoslav Republic of)</masterLabel>
@@ -3291,11 +3291,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Madagascar</masterLabel>
-            <translation><!-- Madagascar --></translation>
+            <translation>Madagascar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malawi</masterLabel>
-            <translation><!-- Malawi --></translation>
+            <translation>Malawi</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malaysia</masterLabel>
@@ -3303,7 +3303,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mali</masterLabel>
-            <translation><!-- Mali --></translation>
+            <translation>Mali</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Malta</masterLabel>
@@ -3315,7 +3315,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Martinique</masterLabel>
-            <translation><!-- Martinique --></translation>
+            <translation>Martinique</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mauritania</masterLabel>
@@ -3327,7 +3327,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mayotte</masterLabel>
-            <translation><!-- Mayotte --></translation>
+            <translation>Mayotte</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mexico</masterLabel>
@@ -3347,7 +3347,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Monaco</masterLabel>
-            <translation><!-- Monaco --></translation>
+            <translation>Monaco</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Mongolia</masterLabel>
@@ -3359,7 +3359,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Montserrat</masterLabel>
-            <translation><!-- Montserrat --></translation>
+            <translation>Montserrat</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Morocco</masterLabel>
@@ -3367,7 +3367,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mozambique</masterLabel>
-            <translation><!-- Mozambique --></translation>
+            <translation>Mozambique</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Myanmar</masterLabel>
@@ -3379,7 +3379,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Nauru</masterLabel>
-            <translation><!-- Nauru --></translation>
+            <translation>Nauru</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Nepal</masterLabel>
@@ -3411,7 +3411,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Nicaragua</masterLabel>
-            <translation><!-- Nicaragua --></translation>
+            <translation>Nicaragua</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Niger (the)</masterLabel>
@@ -3439,7 +3439,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Oman</masterLabel>
-            <translation><!-- Oman --></translation>
+            <translation>Oman</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Pacific Islands (Trust Territory)</masterLabel>
@@ -3447,11 +3447,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Pakistan</masterLabel>
-            <translation><!-- Pakistan --></translation>
+            <translation>Pakistan</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Palau</masterLabel>
-            <translation><!-- Palau --></translation>
+            <translation>Palau</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Palestine, State of</masterLabel>
@@ -3459,7 +3459,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Panama</masterLabel>
-            <translation><!-- Panama --></translation>
+            <translation>Panama</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Panama Canal Zone</masterLabel>
@@ -3471,7 +3471,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Paraguay</masterLabel>
-            <translation><!-- Paraguay --></translation>
+            <translation>Paraguay</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Peru</masterLabel>
@@ -3483,7 +3483,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Pitcairn</masterLabel>
-            <translation><!-- Pitcairn --></translation>
+            <translation>Pitcairn</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Poland</masterLabel>
@@ -3491,7 +3491,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Portugal</masterLabel>
-            <translation><!-- Portugal --></translation>
+            <translation>Portugal</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Puerto Rico</masterLabel>
@@ -3499,7 +3499,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Qatar</masterLabel>
-            <translation><!-- Qatar --></translation>
+            <translation>Qatar</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Romania</masterLabel>
@@ -3511,11 +3511,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Rwanda</masterLabel>
-            <translation><!-- Rwanda --></translation>
+            <translation>Rwanda</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Réunion</masterLabel>
-            <translation><!-- Réunion --></translation>
+            <translation>Réunion</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Saint Barthélemy</masterLabel>
@@ -3547,7 +3547,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Samoa</masterLabel>
-            <translation><!-- Samoa --></translation>
+            <translation>Samoa</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>San Marino</masterLabel>
@@ -3575,15 +3575,15 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Seychelles</masterLabel>
-            <translation><!-- Seychelles --></translation>
+            <translation>Seychelles</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sierra Leone</masterLabel>
-            <translation><!-- Sierra Leone --></translation>
+            <translation>Sierra Leone</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sikkim</masterLabel>
-            <translation><!-- Sikkim --></translation>
+            <translation>Sikkim</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Singapore</masterLabel>
@@ -3631,7 +3631,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Sri Lanka</masterLabel>
-            <translation><!-- Sri Lanka --></translation>
+            <translation>Sri Lanka</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sudan (the)</masterLabel>
@@ -3647,7 +3647,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Swaziland</masterLabel>
-            <translation><!-- Swaziland --></translation>
+            <translation>Swaziland</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sweden</masterLabel>
@@ -3679,19 +3679,19 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Timor-Leste</masterLabel>
-            <translation><!-- Timor-Leste --></translation>
+            <translation>Timor-Leste</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Togo</masterLabel>
-            <translation><!-- Togo --></translation>
+            <translation>Togo</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tokelau</masterLabel>
-            <translation><!-- Tokelau --></translation>
+            <translation>Tokelau</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tonga</masterLabel>
-            <translation><!-- Tonga --></translation>
+            <translation>Tonga</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Trinidad and Tobago</masterLabel>
@@ -3715,7 +3715,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Tuvalu</masterLabel>
-            <translation><!-- Tuvalu --></translation>
+            <translation>Tuvalu</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>USSR</masterLabel>
@@ -3727,7 +3727,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Ukraine</masterLabel>
-            <translation><!-- Ukraine --></translation>
+            <translation>Ukraine</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>United Arab Emirates (the)</masterLabel>
@@ -3755,7 +3755,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Uruguay</masterLabel>
-            <translation><!-- Uruguay --></translation>
+            <translation>Uruguay</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Uzbekistan</masterLabel>
@@ -3763,7 +3763,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Vanuatu</masterLabel>
-            <translation><!-- Vanuatu --></translation>
+            <translation>Vanuatu</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Venezuela (Bolivarian Republic of)</masterLabel>
@@ -3819,7 +3819,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Zimbabwe</masterLabel>
-            <translation><!-- Zimbabwe --></translation>
+            <translation>Zimbabwe</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Åland Islands</masterLabel>
@@ -3895,15 +3895,15 @@
         <name>hed__Naming_Exclusions__c</name>
         <picklistValues>
             <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
-            <translation><!-- Household__c.Formal_Greeting__c --></translation>
+            <translation>Household__c.Formal_Greeting__c</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
-            <translation><!-- Household__c.Informal_Greeting__c --></translation>
+            <translation>Household__c.Informal_Greeting__c</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Household__c.Name</masterLabel>
-            <translation><!-- Household__c.Name --></translation>
+            <translation>Household__c.Name</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -3916,7 +3916,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Mobile</masterLabel>
-            <translation><!-- Mobile --></translation>
+            <translation>Mobile</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
@@ -3971,7 +3971,7 @@
         <relationshipLabel><!-- Contacts (Primary Household) --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- The language the Contact prefers to use. --></help>
+        <help>La langue que le contact préfère utiliser.</help>
         <label><!-- Primary Language --></label>
         <name>hed__Primary_Language__c</name>
         <relationshipLabel><!-- Contacts --></relationshipLabel>

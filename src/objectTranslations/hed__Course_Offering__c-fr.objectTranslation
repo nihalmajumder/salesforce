@@ -22,7 +22,7 @@
         <name>hed__End_Date__c</name>
     </fields>
     <fields>
-        <help><!-- The Facility associated with the Course Offering. --></help>
+        <help>L&apos;établissement associé à cette offre de cours.</help>
         <label><!-- Facility --></label>
         <name>hed__Facility__c</name>
         <relationshipLabel><!-- Course Offerings --></relationshipLabel>

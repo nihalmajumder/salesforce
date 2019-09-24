@@ -54,6 +54,6 @@
         <name>hed__Stack_Trace__c</name>
     </fields>
     <gender>Masculine</gender>
-    <nameFieldLabel>Nombre d&apos;error</nameFieldLabel>
+    <nameFieldLabel>Número d&apos;error</nameFieldLabel>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

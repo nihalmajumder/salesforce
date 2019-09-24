@@ -261,6 +261,7 @@
     </fields>
     <fields>
         <fullName>wbsendit__Create_Rule__c</fullName>
+        <defaultValue>&quot;ACTION_DO_NOTHING&quot;</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Create Rule</label>

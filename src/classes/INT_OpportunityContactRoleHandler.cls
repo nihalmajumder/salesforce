@@ -80,14 +80,15 @@ public class INT_OpportunityContactRoleHandler {
             roleIds.add(aRole.Id);
         }
 
+        // ejc84332 (9-19-19) -- add check for isBatch or isFuture
         if (roleIds.size() > 0) {
-            if (System.isBatch()) {
+            if (System.isBatch() || System.isFuture()) {
                 updateRoles(roleIds);
             } else {
                 updateRolesFuture(roleIds);
             }
-        }
 
+        }
         // Delete the roles
         delete rolesToDelete;
     }
