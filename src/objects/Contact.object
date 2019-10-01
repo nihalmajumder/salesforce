@@ -1175,6 +1175,21 @@ FALSE
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Is_Legacy__c</fullName>
+        <description>Specifies if anyone in the person&apos;s family (parents or siblings) attended Bethel (including undergrad, adult undergrad, graduate, or seminary)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if anyone in the person&apos;s family (parents or siblings) attended Bethel (including undergrad, adult undergrad, graduate, or seminary)</inlineHelpText>
+        <label>Is Legacy</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Is_Veteran__c</fullName>
         <description>Specifies if the person is a Veteran or is eligible for military benefits</description>
         <externalId>false</externalId>

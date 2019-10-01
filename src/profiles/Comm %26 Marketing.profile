@@ -448,6 +448,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CampaignRFIFormController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CampaignRFIFormControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ChangePasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -885,6 +893,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Test_TDTM_Term_Program_Lookup</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>UpdateReferenceController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1420,6 +1432,11 @@
         <editable>false</editable>
         <field>Academic_Interest_Mapping__c.Program__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Academic_Interest_Mapping__c.School_College__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -3258,11 +3275,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Campaign.Term_Text__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Campaign.Type</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4505,6 +4517,11 @@
         <editable>false</editable>
         <field>Contact.Is_International__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Is_Legacy__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -12003,6 +12020,61 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>hed__Behavior_Involvement__c.hed__Case__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Involvement__c.hed__Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Involvement__c.hed__Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Involvement__c.hed__Role__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Response__c.hed__Behavior_Involvement__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Response__c.hed__Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Response__c.hed__Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Response__c.hed__End_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Response__c.hed__Start_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Response__c.hed__Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Behavior_Response__c.hed__Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>hed__Contact_Language__c.hed__Fluency__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -13923,6 +13995,10 @@
         <recordType>Campaign.Event_Campaign_Record</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Campaign-Campaign Layout - Events and Conferences</layout>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Campaign-Campaign Layout - Visit</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -14464,6 +14540,9 @@
         <layout>Solution-Solution Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Super_Hero_Alias__c-Super Hero Alias Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>System_Exception_Log__c-System Exception Log Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -14611,6 +14690,12 @@
     <layoutAssignments>
         <layout>hed__Attribute__c-hed__EDA Credential Layout</layout>
         <recordType>hed__Attribute__c.hed__Student_Characteristic</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>hed__Behavior_Involvement__c-hed__EDA Behavior Involvement Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>hed__Behavior_Response__c-hed__EDA Behavior Response Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>hed__Contact_Language__c-hed__HEDA Contact Language Layout</layout>
@@ -15090,6 +15175,14 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>BandwidthExceeded</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>CampaignRFIForm</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>CampaignRFIHomepage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -15946,6 +16039,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Super_Hero_Alias__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Support</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -15983,6 +16080,14 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>hed__Attribute__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>hed__Behavior_Involvement__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>hed__Behavior_Response__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>

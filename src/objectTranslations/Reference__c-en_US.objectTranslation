@@ -1089,6 +1089,10 @@
         <name>Send_Reminder_Email</name>
     </quickActions>
     <quickActions>
+        <label><!-- Update Reference --></label>
+        <name>Update_Reference</name>
+    </quickActions>
+    <quickActions>
         <label><!-- Waive --></label>
         <name>Waive</name>
     </quickActions>

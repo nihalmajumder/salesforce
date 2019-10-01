@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Term Grade --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Term Grade --></value>
+    </caseValues>
+    <fields>
+        <help>La classe en què l&apos;alumne ha rebut aquesta qualificació.</help>
+        <label><!-- Course Connection --></label>
+        <name>hed__Course_Connection__c</name>
+        <relationshipLabel><!-- Term Grades --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El nombre de crèdits intentats per a aquest curs i període de qualificació.</help>
+        <label><!-- Credits Attempted --></label>
+        <name>hed__Credits_Attempted__c</name>
+    </fields>
+    <fields>
+        <help>El nombre de crèdits guanyats per a aquest curs i període de qualificació.</help>
+        <label><!-- Credits Earned --></label>
+        <name>hed__Credits_Earned__c</name>
+    </fields>
+    <fields>
+        <help>La qualificació amb lletres que ha obtingut l’estudiant per aquest curs. Per exemple, &quot;A +&quot; o qualsevol altre valor de text.</help>
+        <label><!-- Letter Grade --></label>
+        <name>hed__Letter_Grade__c</name>
+    </fields>
+    <fields>
+        <help>La qualificació numèrica que obtingut l’estudiant per a aquest curs, que es pot basar en qualsevol nombre no percentual.</help>
+        <label><!-- Numerical Grade --></label>
+        <name>hed__Numerical_Grade__c</name>
+    </fields>
+    <fields>
+        <help>La qualificació en percentatge que ha obtingut l’estudiant per aquest curs.</help>
+        <label><!-- Percent Grade --></label>
+        <name>hed__Percent_Grade__c</name>
+    </fields>
+    <fields>
+        <help>El resultat del rendiment de l’estudiant durant aquest període de qualificació.</help>
+        <label><!-- Result --></label>
+        <name>hed__Result__c</name>
+        <picklistValues>
+            <masterLabel>Audit</masterLabel>
+            <translation>Auditoria</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropped</masterLabel>
+            <translation>Abandonat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fail</masterLabel>
+            <translation>Suspès</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass</masterLabel>
+            <translation>Aprovat</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>El tipus de període de qualificació en què es registra aquesta qualificació.</help>
+        <label><!-- Term Grade Type --></label>
+        <name>hed__Term_Grade_Type__c</name>
+        <picklistValues>
+            <masterLabel>Exam Grade</masterLabel>
+            <translation>Qualificació d&apos;examen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final Grade</masterLabel>
+            <translation>Qualificació final</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grading Period</masterLabel>
+            <translation>Període de qualificació</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mid-Term Grade</masterLabel>
+            <translation>Qualificació de mig període</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>El període de qualificació en què es registra aquesta qualificació.</help>
+        <label><!-- Term --></label>
+        <name>hed__Term__c</name>
+        <relationshipLabel><!-- Term Grades --></relationshipLabel>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <layouts>
+        <layout>HEDA Term Grade Layout</layout>
+        <sections>
+            <label>Enllaços personalitzats</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Term Grade Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

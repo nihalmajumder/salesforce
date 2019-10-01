@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Exigence du plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Exigences du plan</value>
+    </caseValues>
+    <fields>
+        <help>Spécifiez une catégorie pour l&apos;Exigence du plan.</help>
+        <label><!-- Category --></label>
+        <name>hed__Category__c</name>
+        <picklistValues>
+            <masterLabel>Optional</masterLabel>
+            <translation>Facultatif</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Required</masterLabel>
+            <translation>Obligatoire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Cliquez pour rechercher un cours.</help>
+        <label><!-- Course --></label>
+        <name>hed__Course__c</name>
+        <relationshipLabel><!-- Plan Requirements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Spécifiez le nombre de crédits qu&apos;un étudiant reçoit lorsqu&apos;il satisfait à cette exigence.</help>
+        <label><!-- Credits --></label>
+        <name>hed__Credits__c</name>
+    </fields>
+    <fields>
+        <help>Description de l&apos;exigence du plan.</help>
+        <label><!-- Description --></label>
+        <name>hed__Description__c</name>
+    </fields>
+    <fields>
+        <help>Cliquez pour rechercher une exigence de plan.</help>
+        <label><!-- Parent Plan Requirement --></label>
+        <name>hed__Plan_Requirement__c</name>
+        <relationshipLabel><!-- Plan Requirements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Cliquez pour rechercher un plan de programme.</help>
+        <label><!-- Program Plan --></label>
+        <name>hed__Program_Plan__c</name>
+        <relationshipLabel><!-- Plan Requirements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La progression des cours</help>
+        <label><!-- Sequence --></label>
+        <name>hed__Sequence__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de l&apos;exigence du plan</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

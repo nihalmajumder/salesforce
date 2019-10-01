@@ -1,0 +1,272 @@
+<!--
+ - Created by ejc84332 on 2019-07-30.
+ -->
+
+<apex:page id="CampaignRFIForm" showHeader="false" lightningStylesheets="true"
+           sideBar="false" docType="html-5.0" standardController="Interaction__c" extensions="CampaignRFIFormController">
+    <apex:slds />
+    <apex:pageMessages ></apex:pageMessages>
+
+    <style>
+        @font-face {
+            font-family: 'Salesforce Sans';
+            src: url(/_slds/fonts/v2.3.0/SalesforceSans-Light.woff2) format('woff2'),
+            url(/_slds/fonts/v2.3.0/SalesforceSans-Light.woff) format('woff');
+            font-weight: 300
+        }
+
+        @font-face {
+            font-family: 'Salesforce Sans';
+            src: url(/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2) format('woff2'),
+            url(/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff) format('woff');
+            font-weight: 400
+        }
+
+        @font-face {
+            font-family: 'Salesforce Sans';
+            src: url(/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2) format('woff2'),
+            url(/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff) format('woff');
+            font-style: italic;
+            font-weight: 400
+        }
+
+        @font-face {
+            font-family: 'Salesforce Sans';
+            src: url(/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2) format('woff2'),
+            url(/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff) format('woff');
+            font-weight: 700
+        }
+
+        @font-face {
+            font-family: 'Salesforce Sans';
+            src: url(/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2) format('woff2'),
+            url(/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff) format('woff');
+            font-style: italic;
+            font-weight: 700
+        }
+
+        body {
+            font-family: "Salesforce Sans", Arial, sans-serif;
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+            font-feature-settings: normal;
+            font-kerning: auto;
+            font-language-override: normal;
+            font-feature-settings: normal;
+            font-size-adjust: none;
+            font-stretch: 100%;
+            font-variant: normal;
+            font-variant-alternates: normal;
+            font-variant-caps: normal;
+            font-variant-east-asian: normal;
+            font-variant-ligatures: normal;
+            font-variant-numeric: normal;
+            font-variant-position: normal;
+        }
+
+        h1 {
+            color: rgb(19, 24, 138);
+            font-size: 18px;
+            text-align: center;
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        h2 {
+            color: rgb(19, 24, 138);
+            font-size: 18px;
+            text-align: left;
+            display: block;
+            padding-top: 30px;
+        }
+
+        h3 {
+            background-color: rgb(133, 187, 243);
+            color: rgb(255, 255, 255);
+            display: block;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 400;
+            padding: 5px 10px;
+        }
+
+        h4, p {
+            color: rgb(22, 50, 92);
+            font-size: 14px;
+            text-align: left;
+            display: block;
+        }
+
+        h4 {
+            margin-top: 40px;
+        }
+
+        hr {
+            width: 98%;
+            height: 0;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            border-color: rgb(216, 221, 230);
+            border-left-style: none;
+            border-right-style: none;
+            border-top-style: none;
+        }
+
+        table, tbody, tr {
+            width: 100%;
+        }
+
+        td.left {
+            display: block;
+            width: 33%;
+            float: left;
+        }
+
+        td.right {
+            display: block;
+            width: 43%; /* 66% of 66% */
+            float: left;
+        }
+
+        label {
+            color: rgb(84, 105, 141);
+            font-size: 12px;
+            float: right;
+            margin-top: 10px;
+            margin-bottom: 4px;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            display: inline-block;
+            color: rgb(22, 50, 92);
+            font-size: 14px;
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            min-height: 36px;
+            padding-left: 12px;
+            padding-right: 16px;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        select, textarea {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        select {
+            padding-left: 8px;
+        }
+
+        input[disabled=disabled], select[disabled=disabled], textarea[disabled=disabled] {
+            background-color: rgb(224, 229, 238);
+            border-color: rgb(168, 183, 199);
+            cursor: not-allowed;
+        }
+
+        input:not([disabled]), select:not([disabled]), textarea:not([disabled]) {
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(216, 221, 230); /* rgb(21, 137, 238); */
+        }
+
+        input[type=submit]:not([disabled]) {
+            background-color: rgb(0, 112, 210);
+            background-image: none;
+            border-color: rgb(0, 112, 210);
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 40px;
+            padding-left: 16px;
+            padding-right: 16px;
+            vertical-align: middle;
+            width: auto;
+            position: relative;
+            left: 40%;
+            font-weight: normal;
+        }
+
+        input[type=submit]:not([disabled]):hover {
+            background-color: rgb(0, 95, 178);
+        }
+
+        img {
+            width: 10%;
+            position: relative;
+            float: left;
+        }
+
+        .div-centered {
+            width: 80%;
+            position: absolute;
+            left: 10%;
+            padding-bottom: 24px;
+        }
+    </style>
+
+    <apex:form id="RFI">
+
+        <apex:pageBlock id="formblock">
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{! interaction.First_Name__c }" required="false"/>
+                <apex:inputField value="{! interaction.Last_Name__c }" required="false"/>
+                <apex:inputField value="{! interaction.Email__c }" required="false"/>
+                <apex:inputField value="{! interaction.Mailing_Street__c }"/>
+                <apex:inputField value="{! interaction.Mailing_Street_2__c }"/>
+                <apex:inputField value="{! interaction.Mailing_City__c }"/>
+                <apex:inputField value="{! interaction.Mailing_Country__c }"/>
+                <apex:inputField value="{! interaction.Mailing_State__c }" />
+                <apex:inputField value="{! interaction.Mailing_Postal_Code__c}"/>
+                <apex:inputField value="{! interaction.Academic_Program__c}"/>
+
+                <apex:pageblockSectionItem rendered="{!campaign_school !='CAS'}">
+                    <apex:outputLabel >School</apex:outputLabel>
+                    <apex:selectList size="1" value="{!school}">
+                        <apex:selectOptions value="{!schools}"/>
+                        <apex:actionSupport event="onchange" reRender="RFI"/>
+                    </apex:selectList>
+                </apex:pageblockSectionItem>
+
+                <apex:pageblockSectionItem id="programblock" rendered="{!campaign_school !='CAS'}">
+                    <apex:outputLabel >Program of Interest</apex:outputLabel>
+                    <apex:selectList size="1" value="{!program}">
+                        <apex:selectOptions value="{!programs}"/>
+                        <!--                        <apex:actionSupport event="onchange" reRender="a"/>-->
+                    </apex:selectList>
+                </apex:pageblockSectionItem>
+
+                <apex:pageblockSectionItem rendered="{!campaign_school=='CAS'}">
+                    <apex:outputLabel >High School Graduation Year</apex:outputLabel>
+                    <apex:selectList size="1" value="{!grad_year}">
+                        <apex:selectOptions value="{!grad_years}"/>
+<!--                        <apex:actionSupport event="onchange" reRender="a"/>-->
+                    </apex:selectList>
+                </apex:pageblockSectionItem>
+
+                <apex:inputField value="{!interaction.Preferred_Phone__c}"/>
+                <apex:inputField value="{!interaction.Mobile_Phone__c}"/>
+                <apex:inputField value="{!interaction.Home_Phone__c}"/>
+                <apex:inputField value="{!interaction.Work_Phone__c}"/>
+
+
+<!--                <apex:inputField value="{!interaction.School_College__c}" rendered="{!NOT(campaign_school=='CAS')}"/>-->
+
+                <apex:inputField value="{!interaction.RFI_Notes__c}" label="Questions or Comments"/>
+
+                <apex:commandButton action="{!save}" value="Submit" id="submitbutton"/>
+
+
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+
+    </apex:form>
+
+</apex:page>

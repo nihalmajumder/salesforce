@@ -17,6 +17,10 @@
         <name>Program__c</name>
         <relationshipLabel><!-- Academic Interest Mappings --></relationshipLabel>
     </fields>
+    <fields>
+        <label><!-- School / College --></label>
+        <name>School_College__c</name>
+    </fields>
     <layouts>
         <layout>Academic Interest Mapping - Master</layout>
         <sections>

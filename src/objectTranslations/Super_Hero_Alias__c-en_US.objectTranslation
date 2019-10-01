@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Super Hero Alias</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Super Hero Alias</value>
+    </caseValues>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Birthday --></label>
+        <name>Birthday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secret Identity --></label>
+        <name>Secret_Identity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super Hero Name --></label>
+        <name>Super_Hero_Name__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

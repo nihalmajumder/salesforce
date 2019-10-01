@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Plan Requirement --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Plan Requirement --></value>
+    </caseValues>
+    <fields>
+        <help>Especifiqueu una categoria per al requisit del pla.</help>
+        <label><!-- Category --></label>
+        <name>hed__Category__c</name>
+        <picklistValues>
+            <masterLabel>Optional</masterLabel>
+            <translation>Opcional</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Required</masterLabel>
+            <translation>Obligatori</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Feu clic per cercar un curs.</help>
+        <label><!-- Course --></label>
+        <name>hed__Course__c</name>
+        <relationshipLabel><!-- Plan Requirements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Especifiqueu el nombre de crèdits que rep un estudiant quan compleix aquest requisit.</help>
+        <label><!-- Credits --></label>
+        <name>hed__Credits__c</name>
+    </fields>
+    <fields>
+        <help>Descriu el requisit del pla.</help>
+        <label><!-- Description --></label>
+        <name>hed__Description__c</name>
+    </fields>
+    <fields>
+        <help>Feu clic per cercar un requisit del pla.</help>
+        <label><!-- Parent Plan Requirement --></label>
+        <name>hed__Plan_Requirement__c</name>
+        <relationshipLabel><!-- Plan Requirements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Feu clic per cercar un pla del programa.</help>
+        <label><!-- Program Plan --></label>
+        <name>hed__Program_Plan__c</name>
+        <relationshipLabel><!-- Plan Requirements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La progressió dels cursos</help>
+        <label><!-- Sequence --></label>
+        <name>hed__Sequence__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Plan Requirement Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

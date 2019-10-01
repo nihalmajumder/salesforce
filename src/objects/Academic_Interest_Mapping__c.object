@@ -200,6 +200,18 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>School_College__c</fullName>
+        <externalId>false</externalId>
+        <label>School / College</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>School_College</valueSetName>
+        </valueSet>
+    </fields>
     <label>Academic Interest Mapping</label>
     <listViews>
         <fullName>All</fullName>

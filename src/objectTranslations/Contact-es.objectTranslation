@@ -224,6 +224,11 @@
         <name>Is_International__c</name>
     </fields>
     <fields>
+        <help><!-- Specifies if anyone in the person&apos;s family (parents or siblings) attended Bethel (including undergrad, adult undergrad, graduate, or seminary) --></help>
+        <label><!-- Is Legacy --></label>
+        <name>Is_Legacy__c</name>
+    </fields>
+    <fields>
         <help><!-- Specifies if the person is a Veteran or is eligible for military benefits --></help>
         <label><!-- Is Veteran --></label>
         <name>Is_Veteran__c</name>

@@ -1383,18 +1383,6 @@ VALUE( MID( TEXT( Start_Time__c ), 0, 2 ) ) &lt; 12,
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Term_Text__c</fullName>
-        <description>e.g. &quot;Fall 2019&quot;, &quot;Spring 2020&quot;, or &quot;Summer 2020&quot;</description>
-        <externalId>false</externalId>
-        <inlineHelpText>e.g. &quot;Fall 2019&quot;, &quot;Spring 2020&quot;, or &quot;Summer 2020&quot;</inlineHelpText>
-        <label>Term Text</label>
-        <length>20</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Type</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
