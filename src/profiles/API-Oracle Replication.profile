@@ -1431,6 +1431,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Academic_Interest_Mapping__c.Mapping_Key__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Academic_Interest_Mapping__c.Program__c</field>
         <readable>false</readable>
     </fieldPermissions>

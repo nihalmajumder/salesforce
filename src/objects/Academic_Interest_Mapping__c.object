@@ -175,6 +175,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Mapping_Key__c</fullName>
+        <externalId>false</externalId>
+        <formula>LOWER(Academic_Interest__c  + &apos;---&apos; +  Text(School_College__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mapping Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Program__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -185,11 +196,6 @@
                 <field>Program__c.RecordTypeId</field>
                 <operation>equals</operation>
                 <value>Academic Program</value>
-            </filterItems>
-            <filterItems>
-                <field>Program__c.School_College__c</field>
-                <operation>equals</operation>
-                <value>Undergraduate</value>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>

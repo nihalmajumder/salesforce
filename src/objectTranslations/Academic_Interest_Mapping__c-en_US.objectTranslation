@@ -13,6 +13,10 @@
         <name>Academic_Interest__c</name>
     </fields>
     <fields>
+        <label><!-- Mapping Key --></label>
+        <name>Mapping_Key__c</name>
+    </fields>
+    <fields>
         <label><!-- Program --></label>
         <name>Program__c</name>
         <relationshipLabel><!-- Academic Interest Mappings --></relationshipLabel>
