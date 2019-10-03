@@ -4,7 +4,7 @@
 
 <apex:page id="AcademicPetitionDecisionForm" showHeader="false" standardStylesheets="false"
            sideBar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0"
-           controller="AcademicPetitionDecisionForm">
+           controller="AcademicPetitionDecisionForm">AcademicPetitionDecisionForm
     <html lang="en">
         <head>
             <meta charset="utf-8"/>

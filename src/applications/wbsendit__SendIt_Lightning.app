@@ -15,6 +15,7 @@
     <tabs>standard-home</tabs>
     <tabs>wbsendit__Sendit</tabs>
     <tabs>wbsendit__Campaign_Monitor_Campaign__c</tabs>
+    <tabs>wbsendit__Journey__c</tabs>
     <tabs>wbsendit__Subscriber_List__c</tabs>
     <tabs>wbsendit__Smart_Email_Template__c</tabs>
     <uiType>Lightning</uiType>

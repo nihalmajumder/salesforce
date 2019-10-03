@@ -13,6 +13,7 @@
     <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
     <contentSniffingProtection>true</contentSniffingProtection>
     <cspUpgradeInsecureRequests>true</cspUpgradeInsecureRequests>
+    <enableAuraRequests>true</enableAuraRequests>
     <fileNotFoundPage>FileNotFound</fileNotFoundPage>
     <genericErrorPage>Exception</genericErrorPage>
     <inMaintenancePage>InMaintenance</inMaintenancePage>
@@ -22,9 +23,9 @@
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
-    <siteAdmin>josh-saterdalen+neworg@bethel.edu</siteAdmin>
+    <siteAdmin>josh-saterdalen@bethel.edu</siteAdmin>
     <siteTemplate>Mogli_SMS__SiteTemplate</siteTemplate>
     <siteType>Visualforce</siteType>
-    <subdomain>bethelsandbox</subdomain>
+    <subdomain>bethelu</subdomain>
     <urlPathPrefix>SMS</urlPathPrefix>
 </CustomSite>

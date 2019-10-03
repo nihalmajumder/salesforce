@@ -14,6 +14,5 @@
     <navType>Standard</navType>
     <tabs>wbsendit__General_Options</tabs>
     <tabs>wbsendit__Email_Templates</tabs>
-    <tabs>wbsendit__Campaign_Monitor_Campaign__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

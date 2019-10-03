@@ -11918,6 +11918,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>wbsendit__Campaign_Activity__c.wbsendit__Bounce_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>wbsendit__Campaign_Activity__c.wbsendit__Campaign_Id__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -11954,6 +11959,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>wbsendit__Campaign_Activity__c.wbsendit__Email_Address__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Campaign_Activity__c.wbsendit__Email_Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14070,6 +14080,24 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>wbsendit__Custom_Field__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>wbsendit__Journey_Email__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>wbsendit__Journey__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>

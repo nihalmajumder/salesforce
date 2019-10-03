@@ -216,6 +216,30 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>wbsendit__Bounce_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Bounce Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hard</fullName>
+                    <default>false</default>
+                    <label>Hard</label>
+                </value>
+                <value>
+                    <fullName>Soft</fullName>
+                    <default>false</default>
+                    <label>Soft</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>wbsendit__Campaign_Id__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -230,13 +254,16 @@
         <fullName>wbsendit__Campaign_Report__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>CASE( wbsendit__Activity__c , 
-&quot;Sent&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=1&quot;,  TEXT(wbsendit__Activity__c) , &quot;_self&quot;), 
-&quot;Clicked&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=2&quot;, TEXT(wbsendit__Activity__c), &quot;_self&quot;), 
-&quot;Opened&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=3&quot;, TEXT(wbsendit__Activity__c), &quot;_self&quot;), 
-&quot;Unsubscribed&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=4&quot;, TEXT(wbsendit__Activity__c) , &quot;_self&quot;), 
-&quot;Bounced&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=5&quot;, TEXT(wbsendit__Activity__c) , &quot;_self&quot;), 
-HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=1&quot;, TEXT(wbsendit__Activity__c), &quot;_self&quot;)
+        <formula>If(TEXT(wbsendit__Email_Type__c) != &apos;Journey&apos;,
+    CASE( wbsendit__Activity__c , 
+    &quot;Sent&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=1&quot;,  TEXT(wbsendit__Activity__c) , &quot;_self&quot;), 
+    &quot;Clicked&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=2&quot;, TEXT(wbsendit__Activity__c), &quot;_self&quot;), 
+    &quot;Opened&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=3&quot;, TEXT(wbsendit__Activity__c), &quot;_self&quot;), 
+    &quot;Unsubscribed&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=4&quot;, TEXT(wbsendit__Activity__c) , &quot;_self&quot;), 
+    &quot;Bounced&quot;, HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=5&quot;, TEXT(wbsendit__Activity__c) , &quot;_self&quot;), 
+    HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?campaignId=&quot; +  wbsendit__Campaign_Id__c + &quot;&amp;reportId=1&quot;, TEXT(wbsendit__Activity__c), &quot;_self&quot;)
+    ),
+    HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Namespace__c + &quot;SendItReports?email=&quot; +  wbsendit__Email_Address__c + &quot;&amp;reportId=6&quot;, TEXT(wbsendit__Activity__c), &quot;_self&quot;)
 )</formula>
         <label>Activity Report</label>
         <required>false</required>
@@ -309,6 +336,31 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <trackTrending>false</trackTrending>
         <type>Email</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>wbsendit__Email_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The email may have been sent as part of a Campaign or Journey.</inlineHelpText>
+        <label>Email Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Campaign</fullName>
+                    <default>false</default>
+                    <label>Campaign</label>
+                </value>
+                <value>
+                    <fullName>Journey</fullName>
+                    <default>false</default>
+                    <label>Journey</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>wbsendit__IP_Address__c</fullName>

@@ -13,6 +13,7 @@
     <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
     <contentSniffingProtection>true</contentSniffingProtection>
     <cspUpgradeInsecureRequests>true</cspUpgradeInsecureRequests>
+    <enableAuraRequests>true</enableAuraRequests>
     <fileNotFoundPage>FileNotFound</fileNotFoundPage>
     <genericErrorPage>Exception</genericErrorPage>
     <inMaintenancePage>InMaintenance</inMaintenancePage>
@@ -22,7 +23,13 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>ApplicationRegistration</selfRegPage>
-    <siteAdmin>josh-saterdalen+neworg@bethel.edu</siteAdmin>
+    <siteAdmin>josh-saterdalen@bethel.edu</siteAdmin>
+    <siteRedirectMappings>
+        <action>Permanent</action>
+        <isActive>true</isActive>
+        <source>/admissions/s/</source>
+        <target>https://bethel-univ.force.com/admissions/apex/ApplicationPortal</target>
+    </siteRedirectMappings>
     <siteType>ChatterNetwork</siteType>
     <subdomain>bethel-univ</subdomain>
     <urlPathPrefix>admissions</urlPathPrefix>

@@ -13046,6 +13046,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>wbsendit__Campaign_Activity__c.wbsendit__Bounce_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>wbsendit__Campaign_Activity__c.wbsendit__Campaign_Id__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -13082,6 +13087,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>wbsendit__Campaign_Activity__c.wbsendit__Email_Address__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Campaign_Activity__c.wbsendit__Email_Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

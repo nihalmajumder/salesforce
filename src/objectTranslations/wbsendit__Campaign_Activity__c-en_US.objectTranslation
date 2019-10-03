@@ -33,6 +33,18 @@
         <name>wbsendit__Bounce_Reason__c</name>
     </fields>
     <fields>
+        <label><!-- Bounce Type --></label>
+        <name>wbsendit__Bounce_Type__c</name>
+        <picklistValues>
+            <masterLabel>Hard</masterLabel>
+            <translation><!-- Hard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soft</masterLabel>
+            <translation><!-- Soft --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Campaign Id --></label>
         <name>wbsendit__Campaign_Id__c</name>
     </fields>
@@ -64,6 +76,19 @@
     <fields>
         <label><!-- Email Address --></label>
         <name>wbsendit__Email_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- The email may have been sent as part of a Campaign or Journey. --></help>
+        <label><!-- Email Type --></label>
+        <name>wbsendit__Email_Type__c</name>
+        <picklistValues>
+            <masterLabel>Campaign</masterLabel>
+            <translation><!-- Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Journey</masterLabel>
+            <translation><!-- Journey --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- IP Address --></label>

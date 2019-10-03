@@ -914,11 +914,12 @@ if( text(Status) = &quot;Closed&quot;,
         <fullName>Comments__c</fullName>
         <externalId>false</externalId>
         <label>Comments</label>
-        <required>false</required>
+        <length>4000</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>TextArea</type>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
     </fields>
     <fields>
         <fullName>ContactEmail</fullName>
@@ -2971,30 +2972,7 @@ Petition_Type__c,
         <fullName>approval_details__c</fullName>
         <description>Combines all the Approval and Denial fields into one text field.</description>
         <externalId>false</externalId>
-        <formula>if(
-				text(Approval_Description__c) &lt;&gt; &quot;&quot;, 
-				text(Approval_Description__c) &amp; if(grace_grant_amount__c &lt;&gt; &quot;&quot;, &quot; in the amount of:&quot; &amp; grace_grant_amount__c, &quot;&quot;), 
-				&quot;&quot;
-) 
-
-&amp;
-if(
-				approval_old_grade__c &lt;&gt; &quot;&quot;, 
-				&quot;Change grade from &quot; &amp; approval_old_grade__c &amp; &quot; to &quot; &amp; approval_new_grade__c &amp; &quot;, because: &quot; &amp; Comments__c, 
-				&quot;&quot;
-) 
-
-&amp;
-if(approval_academic_year__c &lt;&gt; &quot;&quot;, 
-				&quot;Student may complete requirements listed in the catalog for academic year: &quot; &amp; approval_academic_year__c, 
-				&quot;&quot;
-) 
-&amp;
-
-if(isblank(approval_extension_date__c) = FALSE, 
-			&quot;Approve extension until: &quot; &amp; text(approval_extension_date__c), 
-			&quot;&quot;
-)</formula>
+        <formula>&quot;test&quot;</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Approval</label>
         <required>false</required>
