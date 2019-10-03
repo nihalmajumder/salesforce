@@ -45,7 +45,7 @@ global class TDTM_Opportunity_Stage_Back extends TDTMVirtualTriggerHandler {
                             update_apps.add(app);
                         }
                     }
-                    when 'Applied:App Completed' {
+                    when 'Applied:App Completed', 'Accepted:Accepted', 'Confirmed:Fee Paid', 'Confirmed:Fee Waived', 'Confirmed:Registered', 'Enrolled:Enrolled' {
                         if (app.Application_Status__c != 'Completed') {
                             app.Application_Status__c = 'Completed';
                             update_apps.add(app);
