@@ -154,4 +154,30 @@ public class InteractionHelper {
         return opp;
     }
 
+    public static void updateInteractionsForContact(Set<Id> contactIds) {
+        Map<String, Contact> contactMap = new Map<String, Contact>();
+        for (Contact c : [SELECT Id, FirstName, LastName, Email FROM Contact WHERE Id IN :contactIds]) {
+            contactMap.put(c.Email, c);
+        }
+System.debug('*************');
+System.debug(contactMap);
+        List<Interaction__c> updateList = new List<Interaction__c>();
+        for (Interaction__c i : [SELECT Id, First_Name__c, Last_Name__c, Email__c, Contact__c FROM Interaction__c WHERE Email__c IN :contactMap.keySet() AND Contact__c = null AND Interaction_Status__c = 'Imported']) {
+            Contact c = contactMap.get(i.Email__c);
+System.debug(c);
+            if (c != null && c.LastName == i.Last_Name__c && c.FirstName == i.First_Name__c) {
+                i.Contact__c = c.Id;
+                updateList.add(i);
+            }
+        }
+        if (!updateList.isEmpty()) {
+            update updateList;
+        }
+    }
+
+    @future
+    public static void updateInteractionsForContactFuture(Set<Id> contactIds) {
+        updateInteractionsForContact(contactIds);
+    }
+
 }

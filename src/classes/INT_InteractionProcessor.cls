@@ -539,12 +539,17 @@ public class INT_InteractionProcessor {
         }
         Map<String, Opportunity> oppMap = OpportunityHelper.getOpportunitiesForKeys(oppKeys);
 
+        // Add support for updating Contact on Interactions - Todd Mitchell
+        Set<Id> contactIds = new Set<Id>();
+
         for (Database.LeadConvertResult lcr : leadConvertResults) {
             Interaction__c interaction = (leadIdToInteractionMap.containsKey(lcr.getLeadId())) ? leadIdToInteractionMap.get(lcr.getLeadId()) : null;
 
             if (lcr.isSuccess()) {
                 // Add Contact Id to set to be updated from its Interaction record.
                 interaction.Contact__c = lcr.getContactId();
+                // Add support for updating Contact on Interactions - Todd Mitchell
+                contactIds.add(lcr.getContactId());
 
                 // Create new Opportunity for upsert if Opportunity Key is populated.
                 if (!String.isEmpty(interaction.Opportunity_Key__c)) {
@@ -623,6 +628,11 @@ public class INT_InteractionProcessor {
                     }
                 }
             }
+        }
+
+        // Add support for updating Contact on Interactions - Todd Mitchell
+        if (!System.isFuture()) {
+            InteractionHelper.updateInteractionsForContactFuture(contactIds);
         }
 
         return leadsToReconvert;

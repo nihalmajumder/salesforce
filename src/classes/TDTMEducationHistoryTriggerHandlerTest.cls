@@ -7,7 +7,7 @@ public class TDTMEducationHistoryTriggerHandlerTest {
         handler.Name = 'TDTMEducationHistoryTriggerHandler';
         handler.hed__Class__c = 'TDTMEducationHistoryTriggerHandler';
         handler.hed__Object__c = 'Education_History__c';
-        handler.hed__Trigger_Action__c = 'AfterUpdate';
+        handler.hed__Trigger_Action__c = 'AfterInsert;AfterUpdate';
         handler.hed__Active__c = true;
         handler.hed__Load_Order__c = 1;
 
@@ -67,7 +67,21 @@ public class TDTMEducationHistoryTriggerHandlerTest {
 
            app = [SELECT Id, Application_Status__c FROM Application__c];
            System.assertEquals('Completed', app.Application_Status__c);
+    }
 
+    static testMethod void onAfterInsertTest() {
+
+           Application__c app = [SELECT Id, Application_Status__c FROM Application__c];
+           app.Application_Status__c = 'Submitted';
+           update app;
+
+           test.startTest();
+           Education_History__c history = new Education_History__c(RecordTypeId = Schema.SObjectType.Education_History__c.getRecordTypeInfosByName().get('High School').getRecordTypeId(), Contact__c = getContact().Id, Document_Status__c = 'Received');
+           insert history;
+           test.stopTest();
+
+           app = [SELECT Id, Application_Status__c FROM Application__c];
+           System.assertEquals('Completed', app.Application_Status__c);
     }
 
 }

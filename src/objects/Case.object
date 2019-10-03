@@ -986,6 +986,26 @@ TEXT(YEAR(DATEVALUE(CreatedDate)))</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Deadline_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Deadline Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Deadline</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>Deciding_Party__c</fullName>
         <description>The type of person or committee that the Case was reviewed by.</description>
         <externalId>false</externalId>
@@ -2237,6 +2257,21 @@ Petition_Type__c,
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Queue_Rank__c</fullName>
+        <description>used for ranking Cases based on priority. Determined between the Admissions, Marketing, and EMOps departments.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>1-10; Case priority amongst Admissions, EMOps, and Marketing.</inlineHelpText>
+        <label>Queue Rank</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Reason</fullName>

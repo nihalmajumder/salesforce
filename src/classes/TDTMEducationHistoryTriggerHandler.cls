@@ -22,4 +22,26 @@ global class TDTMEducationHistoryTriggerHandler extends TDTMVirtualTriggerHandle
             System.debug(e.getMessage());
         }
     }
+
+    global override void onAfterInsert(List<SObject> newList, Map<Id, SObject> newMap, hed.TDTM_Runnable.DmlWrapper wrapper) {
+        try {
+            Set<Id> contactIds = new Set<Id>();
+            for (SObject o : newList) {
+                Education_History__c history = (Education_History__c) o;
+                if (history.Document_Status__c != null && history.Document_Status__c != 'Mandatory' && history.Document_Status__c != 'Not Received' && history.Contact__c != null) {
+                    contactIds.add(history.Contact__c);
+                }
+            }
+            if (!contactIds.isEmpty()) {
+
+                List<Application__c> apps = ApplicationHelper.getApplicationsForContacts(contactIds);
+                if (!apps.isEmpty()) {
+                    ApplicationHelper.checkCompletion(apps);
+                }
+            }
+        }
+        catch (Exception e) {
+            System.debug(e.getMessage());
+        }
+    }
 }

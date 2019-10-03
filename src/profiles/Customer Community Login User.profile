@@ -3575,6 +3575,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.Deadline_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Deadline__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.Deciding_Party__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -3856,6 +3866,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.Programs_to_Include__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Queue_Rank__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
