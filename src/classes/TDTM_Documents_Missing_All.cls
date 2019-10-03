@@ -26,6 +26,11 @@ global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
             }
         }
 
+        // exit if there are no Opps that fit the Stage criteria.
+        if(process_opps.size() == 0){
+            return;
+        }
+
         List<Test_Score__c> test_scores = [Select Id, Document_Status__c, Test_Type__c, Contact__c from Test_Score__c
                                             where Document_Status__c in ('Conditional', 'Provisional') and Contact__c in :contact_ids];
 
