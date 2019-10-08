@@ -35,15 +35,19 @@ public with sharing class CampaignRFIFormController {
 
 //        Program__c[] programs = [select Id, Name from Program__c where School_College__c = :school and Active__c=true];
 
-        Intended_Program_Term__c[] itps =  [select Id, Intended_Program__r.Name, Intended_Program__c,
-                Academic_Term__r.Term_Description__c from Intended_Program_Term__c
-                where School_College__c=:school and Intended_Program__r.Active__c=true
-                order by Intended_Program__r.Name asc];
-
         List<SelectOption> stOptions = new List<SelectOption>();
-        for(Intended_Program_Term__c ipt : itps){
-            stOptions.add(new SelectOption(ipt.Intended_Program__c, ipt.Intended_Program__r.Name));
+
+        if(school == null){
+            stOptions.add(new SelectOption('None','--None--'));
+        }else{
+            Program__c[] programs =  [select Id, Name from Program__c where School_College__c='Graduate' and Active__c=true order by Name asc];
+
+
+            for(Program__c program : programs){
+                stOptions.add(new SelectOption(program.Id, program.Name));
+            }
         }
+
         return stOptions;
     }
 
