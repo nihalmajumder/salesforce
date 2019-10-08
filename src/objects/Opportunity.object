@@ -3395,7 +3395,12 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <filters>
             <field>OPPORTUNITY.STAGE_NAME</field>
             <operation>notEqual</operation>
-            <value>Enrolled,File Closed</value>
+            <value>File Closed</value>
+        </filters>
+        <filters>
+            <field>Status_Text__c</field>
+            <operation>contains</operation>
+            <value>Enrolled</value>
         </filters>
         <label>Open Undergraduate Opportunities</label>
         <sharedTo>

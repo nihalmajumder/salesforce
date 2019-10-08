@@ -2,7 +2,7 @@
  * Created by ejc84332 on 2019-02-19.
  */
 
-global class TDTM_Create_Case_Tasks {
+global class TDTM_Create_Case_Tasks extends TDTMVirtualTriggerHandler {
 
     global override void onAfterInsert(List<SObject> newList, Map<Id, SObject> newMap, hed.TDTM_Runnable.DmlWrapper wrapper) {
 

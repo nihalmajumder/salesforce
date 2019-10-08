@@ -1993,6 +1993,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Non-US-Resident</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Resident</fullName>
                 <default>false</default>
             </values>
@@ -3236,6 +3240,10 @@
             <picklist>Residency__c</picklist>
             <values>
                 <fullName>Non-Resident</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-US-Resident</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4493,6 +4501,10 @@
             <picklist>Residency__c</picklist>
             <values>
                 <fullName>Non-Resident</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-US-Resident</fullName>
                 <default>false</default>
             </values>
             <values>

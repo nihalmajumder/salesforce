@@ -10,6 +10,11 @@
         <default>false</default>
         <label>Non-Resident</label>
     </customValue>
+    <customValue>
+        <fullName>Non-US-Resident</fullName>
+        <default>false</default>
+        <label>Non-US-Resident</label>
+    </customValue>
     <description>Residency types for admissions applications.</description>
     <masterLabel>Residency Types</masterLabel>
     <sorted>false</sorted>

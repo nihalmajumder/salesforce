@@ -724,6 +724,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTM_Calculate_Queue_Rank</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTM_Create_Case_Tasks</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -861,6 +865,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Test_TDTM_Calculate_Closed_Stage_Detail</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Test_TDTM_Calculate_Queue_Rank</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -4539,9 +4547,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Contact.Is_Legacy__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -14329,14 +14337,14 @@
         <layout>Mogli_SMS__SMS__c-Mogli_SMS__SMS Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Opportunity-Opportunity Layout - Master</layout>
+        <layout>Opportunity-Opportunity Layout - Admin</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Opportunity-Opportunity Layout - Master</layout>
+        <layout>Opportunity-Opportunity Layout - Admin</layout>
         <recordType>Opportunity.Applicant_Opportunity</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Opportunity-Opportunity Layout - Master</layout>
+        <layout>Opportunity-Opportunity Layout - Admin</layout>
         <recordType>Opportunity.Inquiry_Opportunity</recordType>
     </layoutAssignments>
     <layoutAssignments>

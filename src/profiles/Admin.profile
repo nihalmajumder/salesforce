@@ -724,6 +724,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTM_Calculate_Queue_Rank</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTM_Create_Case_Tasks</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -861,6 +865,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Test_TDTM_Calculate_Closed_Stage_Detail</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Test_TDTM_Calculate_Queue_Rank</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -13061,7 +13069,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>wbsendit__Campaign_Activity__c.wbsendit__Bounce_Type__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -13106,7 +13114,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>wbsendit__Campaign_Activity__c.wbsendit__Email_Type__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -14329,14 +14337,14 @@
         <layout>Mogli_SMS__SMS__c-Mogli_SMS__SMS Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Opportunity-Opportunity Layout - Master</layout>
+        <layout>Opportunity-Opportunity Layout - Admin</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Opportunity-Opportunity Layout - Master</layout>
+        <layout>Opportunity-Opportunity Layout - Admin</layout>
         <recordType>Opportunity.Applicant_Opportunity</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Opportunity-Opportunity Layout - Master</layout>
+        <layout>Opportunity-Opportunity Layout - Admin</layout>
         <recordType>Opportunity.Inquiry_Opportunity</recordType>
     </layoutAssignments>
     <layoutAssignments>

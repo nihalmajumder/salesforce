@@ -33,6 +33,7 @@ public inherited sharing class ApplicationHelper {
             Contact c = contactMap.get(app.Contact__c);
             updateApplicantType(app);
             updateResidency(app, c);
+            app.Citizenship__c = c.Citizenship__c;
         }
     }
     
@@ -84,12 +85,17 @@ public inherited sharing class ApplicationHelper {
     
   
     public static void updateResidency(Application__c app, Contact c) {
-        if (c.MailingStateCode != null && app != null && c != null) {
+        if (app != null && c != null) {
             if (c.MailingStateCode == 'MN') {
                 app.Residency__c = 'Resident';
             }
             else {
-                app.Residency__c = 'Non-Resident';
+                if (c.MailingCountryCode == 'US') {
+                    app.Residency__c = 'Non-Resident';
+                }
+                else {
+                    app.Residency__c = 'Non-US-Resident';
+                }
             }
         }
     }

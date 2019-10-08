@@ -724,6 +724,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTM_Calculate_Queue_Rank</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTM_Create_Case_Tasks</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -861,6 +865,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Test_TDTM_Calculate_Closed_Stage_Detail</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Test_TDTM_Calculate_Queue_Rank</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -4539,9 +4547,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Contact.Is_Legacy__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

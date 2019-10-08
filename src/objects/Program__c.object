@@ -1038,6 +1038,10 @@ One Application Per Term Per Program (Only one application for the selected term
                 <default>false</default>
             </values>
             <values>
+                <fullName>Non-US-Resident</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Resident</fullName>
                 <default>false</default>
             </values>
@@ -1369,6 +1373,10 @@ One Application Per Term Per Program (Only one application for the selected term
             <picklist>Residency__c</picklist>
             <values>
                 <fullName>Non-Resident</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-US-Resident</fullName>
                 <default>false</default>
             </values>
             <values>

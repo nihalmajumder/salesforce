@@ -297,6 +297,7 @@
         <fields>Subject</fields>
         <fields>CaseNumber</fields>
         <fields>RecordTypeId</fields>
+        <fields>Queue_Rank__c</fields>
         <fields>Priority</fields>
         <fields>Status</fields>
         <fields>OwnerId</fields>
@@ -3421,6 +3422,26 @@ Petition_Type__c,
         <sharedTo>
             <group>ITS</group>
         </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Queue_Rank</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>Queue_Rank__c</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Deadline__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_General_Request</value>
+        </filters>
+        <filters>
+            <field>Queue_Rank__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Queue Rank</label>
     </listViews>
     <listViews>
         <fullName>SSR_Advising_Case</fullName>

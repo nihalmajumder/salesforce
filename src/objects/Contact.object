@@ -6746,7 +6746,7 @@ NOT(ISBLANK(Previous_Contact_ID__c)),
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
         <fullName>Social_Security_Validation</fullName>
-        <active>true</active>
+        <active>false</active>
         <errorConditionFormula>NOT(
 OR(
 ISBLANK(hed__Social_Security_Number__c),

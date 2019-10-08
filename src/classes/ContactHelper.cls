@@ -26,7 +26,10 @@ public with sharing class ContactHelper {
                 LastName,
                 Email,
                 MailingState,
-                MailingStateCode
+                MailingStateCode,
+                MailingCountry,
+                MailingCountryCode,
+                Citizenship__c
             FROM 
                 Contact
             WHERE
