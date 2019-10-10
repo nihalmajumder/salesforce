@@ -21,6 +21,7 @@ public with sharing class CampaignRFIFormController {
                                         Interaction_Source__c='Webform',
                                         Campaign__c=campaign_id,
                                         Campaign_Member_Status__c='Responded',
+                                        Preferred_Phone__c='Mobile',
                                         Lead_Source__c=rfi_campaign.Source_Type__c,
                                         Source_Detail__c=rfi_campaign.Source_Detail__c
         );
@@ -40,7 +41,7 @@ public with sharing class CampaignRFIFormController {
         if(school == null){
             stOptions.add(new SelectOption('None','--None--'));
         }else{
-            Program__c[] programs =  [select Id, Name from Program__c where School_College__c='Graduate' and Active__c=true order by Name asc];
+            Program__c[] programs =  [select Id, Name from Program__c where School_College__c=:school and Active__c=true order by Name asc];
 
 
             for(Program__c program : programs){
@@ -48,15 +49,6 @@ public with sharing class CampaignRFIFormController {
             }
         }
 
-        return stOptions;
-    }
-
-    public List<SelectOption> getSchools() {
-        List<SelectOption> stOptions = new List<SelectOption>();
-        stOptions.add(new SelectOption('None','--None--'));
-        stOptions.add(new SelectOption('Graduate','Graduate'));
-        stOptions.add(new SelectOption('Adult Undergraduate','Adult Undergraduate'));
-        stOptions.add(new SelectOption('Seminary','Seminary'));
         return stOptions;
     }
 
@@ -70,6 +62,18 @@ public with sharing class CampaignRFIFormController {
         }
 
         return stOptions;
+    }
+
+    public List<SelectOption> getSchoolOptions() {
+
+        List<SelectOption> options = new List<SelectOption>();
+
+        options.add(new SelectOption('Graduate', 'Graduate School - for professionals interested in a masters or doctoral degree.'));
+        options.add(new SelectOption('Seminary', 'Seminary - for those who are interested in ministry or theological study.'));
+        options.add(new SelectOption('Adult Undergraduate', 'Adult Undergraduate - for working adults interested in completing their undergrad degree.'));
+
+        return options;
+
     }
 
 
