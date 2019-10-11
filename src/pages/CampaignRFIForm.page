@@ -262,9 +262,6 @@
 
                 <apex:inputField value="{!interaction.Other_Phone__c}" rendered="{!interaction.Preferred_Phone__c=='Other'}"/>
 
-
-<!--                <apex:inputField value="{!interaction.School_College__c}" rendered="{!NOT(campaign_school=='CAS')}"/>-->
-
                 <apex:inputField value="{!interaction.RFI_Notes__c}" label="Questions or Comments"/>
 
                 <apex:commandButton action="{!save}" value="Submit" id="submitbutton"/>

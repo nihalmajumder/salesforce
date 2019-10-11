@@ -3193,6 +3193,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Campaign.RFI_Attributes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Campaign.RFI_Version__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6427,6 +6432,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Interaction__c.Is_Legacy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Interaction__c.Is_Primary__c</field>
         <readable>true</readable>
@@ -6544,6 +6554,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Interaction__c.Opportunity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Interaction__c.Other_Phone__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13294,6 +13309,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>wbsendit__Client__c.wbsendit__Salesforce_User__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Client__c.wbsendit__Total_Emails_Suppressed__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

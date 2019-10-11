@@ -213,6 +213,19 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>wbsendit__Total_Emails_Suppressed__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of emails that have been suppressed for this Campaign Monitor Client.</inlineHelpText>
+        <label>Total Emails Suppressed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
     <label>Campaign Monitor Client</label>
     <listViews>
         <fullName>wbsendit__All</fullName>

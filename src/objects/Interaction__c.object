@@ -1008,6 +1008,19 @@ TEXT(Academic_Program__r.Career__c))</formula>
         <unique>true</unique>
     </fields>
     <fields>
+        <fullName>Is_Legacy__c</fullName>
+        <externalId>false</externalId>
+        <label>Is Legacy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Choose_Yes_No</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Is_Primary__c</fullName>
         <description>Checked if the Source Number on this Interaction matches the value in the Primary Source Number field on its Opportunity.</description>
         <externalId>false</externalId>
@@ -6228,6 +6241,15 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
     </fields>
     <fields>
         <fullName>Preferred_First_Name__c</fullName>

@@ -401,6 +401,10 @@
         <name>Interaction_Upsert_Key__c</name>
     </fields>
     <fields>
+        <label><!-- Is Legacy --></label>
+        <name>Is_Legacy__c</name>
+    </fields>
+    <fields>
         <label><!-- Is Primary Source --></label>
         <name>Is_Primary__c</name>
     </fields>
@@ -3229,6 +3233,10 @@
         <label><!-- Opportunity --></label>
         <name>Opportunity__c</name>
         <relationshipLabel><!-- Interactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Phone --></label>
+        <name>Other_Phone__c</name>
     </fields>
     <fields>
         <label><!-- Preferred First Name --></label>
