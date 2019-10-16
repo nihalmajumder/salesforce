@@ -189,21 +189,6 @@
     </fields>
     <label>Geographic Territory Assignment</label>
     <listViews>
-        <fullName>All</fullName>
-        <columns>OBJECT_ID</columns>
-        <columns>NAME</columns>
-        <columns>User__c</columns>
-        <columns>Geographic_Territory__c</columns>
-        <columns>SObject_Type__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Geographic_Territory__c</field>
-            <operation>contains</operation>
-            <value>Dakota</value>
-        </filters>
-        <label>All</label>
-    </listViews>
-    <listViews>
         <fullName>All1</fullName>
         <columns>NAME</columns>
         <columns>Geographic_Territory__c</columns>

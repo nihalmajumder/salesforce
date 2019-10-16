@@ -4,7 +4,7 @@
     <category>admin</category>
     <deployed>true</deployed>
     <description>Interactions</description>
-    <label>Interactions</label>
+    <label>Interactions (Bethel)</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>

@@ -7,7 +7,7 @@
     <logoUrl>https://bethel-production.my.salesforce.com/environmenthub/images/connected_app_logo.png</logoUrl>
     <oauthConfig>
         <callbackUrl>https://bethel-production.my.salesforce.com/environmenthub/soma-callback.apexp</callbackUrl>
-        <consumerKey>3MVG9JamK_x9K2XKK99OwezxYd6eYUWpK11l9xYDr2npx392E_44SWzdy5f3wI_pOexpmcdkEOLIzs4QTeEt9</consumerKey>
+        <consumerKey>3MVG9zJJ_hX_0bb8yUWurIZ11JxChEiYojXr.7uz9acwccNZalFAqYHYaEaAhbZ6HRtRZzCoyvfclPgn1foqd</consumerKey>
         <isAdminApproved>false</isAdminApproved>
         <scopes>Basic</scopes>
         <scopes>Api</scopes>

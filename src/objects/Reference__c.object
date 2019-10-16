@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Reference_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Reference_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -136,11 +143,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -1869,7 +1871,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <externalId>false</externalId>
         <label>Signature Date</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
@@ -1879,7 +1881,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <label>Signature</label>
         <length>255</length>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>

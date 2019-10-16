@@ -15,7 +15,7 @@ public with sharing class CampaignRFIFormController {
     public CampaignRFIFormController(ApexPages.StandardController controller) {
 
         String campaign_id = ApexPages.currentPage().getParameters().get('CampaignId');
-        rfi_campaign = [SELECT Id, RFI_Version__c, Source_Type__c, Source_Detail__c, School__c FROM Campaign WHERE Id=:campaign_id];
+        rfi_campaign = [SELECT Id, RFI_Version__c, Source_Type__c, Source_Detail__c, School__c, RFI_Attributes__c FROM Campaign WHERE Id=:campaign_id];
         campaign_school = rfi_campaign.School__c;
         interaction = new Interaction__c(Mailing_Country__c='United States',
                                         Interaction_Source__c='Webform',
@@ -25,7 +25,16 @@ public with sharing class CampaignRFIFormController {
                                         Lead_Source__c=rfi_campaign.Source_Type__c,
                                         Source_Detail__c=rfi_campaign.Source_Detail__c
         );
+        if(rfi_campaign.RFI_Attributes__c != null) {
 
+            if (rfi_campaign.RFI_Attributes__c.contains('Legacy')) {
+                interaction.Is_Legacy__c = 'Yes';
+            }
+
+            if (rfi_campaign.RFI_Attributes__c.contains('Military / Veteran')) {
+                // interaction.Is_Legacy__c = 'Yes';
+            }
+        }
     }
 
     public List<SelectOption> getPrograms() {

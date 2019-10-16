@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
+        <fullName>ACT or SAT official score</fullName>
+        <default>false</default>
+        <label>ACT or SAT official score</label>
+    </customValue>
+    <customValue>
         <fullName>Bank statement in U.S. Dollars (family or personal)</fullName>
         <default>false</default>
         <label>Bank statement in U.S. Dollars (family or personal)</label>
@@ -61,6 +66,11 @@
         <label>BUILD Physical/Special Olympics Form</label>
     </customValue>
     <customValue>
+        <fullName>BUILD Physical Report</fullName>
+        <default>false</default>
+        <label>BUILD Physical Report</label>
+    </customValue>
+    <customValue>
         <fullName>BUILD Release of Information (Guardians)</fullName>
         <default>false</default>
         <label>BUILD Release of Information (Guardians)</label>
@@ -81,6 +91,11 @@
         <label>CPR for the Professional Rescuer (or current certification)</label>
     </customValue>
     <customValue>
+        <fullName>Earned BA or BS degree from a regionally accredited or internationally recognized institution</fullName>
+        <default>false</default>
+        <label>Earned BA or BS degree from a regionally accredited or internationally recognized institution</label>
+    </customValue>
+    <customValue>
         <fullName>Education License</fullName>
         <default>false</default>
         <label>Education License</label>
@@ -94,6 +109,11 @@
         <fullName>Family of Origin Paper</fullName>
         <default>false</default>
         <label>Family of Origin Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>Green Card</fullName>
+        <default>false</default>
+        <label>Green Card</label>
     </customValue>
     <customValue>
         <fullName>Health Insurance Verification</fullName>
@@ -131,6 +151,11 @@
         <label>Ministry Experience</label>
     </customValue>
     <customValue>
+        <fullName>Minnesota Content Standards Grid</fullName>
+        <default>false</default>
+        <label>Minnesota Content Standards Grid</label>
+    </customValue>
+    <customValue>
         <fullName>PA Completion Plan</fullName>
         <default>false</default>
         <label>PA Completion Plan</label>
@@ -139,6 +164,11 @@
         <fullName>Passport</fullName>
         <default>false</default>
         <label>Passport</label>
+    </customValue>
+    <customValue>
+        <fullName>Post-Bacc Essay</fullName>
+        <default>false</default>
+        <label>Post-Bacc Essay</label>
     </customValue>
     <customValue>
         <fullName>PSEO 1st Semester MN State Form</fullName>
@@ -156,6 +186,11 @@
         <label>PSEO HS Counselor Form</label>
     </customValue>
     <customValue>
+        <fullName>Questionnaire</fullName>
+        <default>false</default>
+        <label>Questionnaire</label>
+    </customValue>
+    <customValue>
         <fullName>Resume</fullName>
         <default>false</default>
         <label>Resume</label>
@@ -171,6 +206,11 @@
         <label>Statement of Purpose</label>
     </customValue>
     <customValue>
+        <fullName>Transcript Evaluation</fullName>
+        <default>false</default>
+        <label>Transcript Evaluation</label>
+    </customValue>
+    <customValue>
         <fullName>Transfer Dean of Students Form</fullName>
         <default>false</default>
         <label>Transfer Dean of Students Form</label>
@@ -179,22 +219,6 @@
         <fullName>Valid U.S. RN License</fullName>
         <default>false</default>
         <label>Valid U.S. RN License</label>
-    </customValue>
-    <customValue>
-        <fullName>Questionnaire</fullName>
-        <default>false</default>
-        <label>Questionnaire</label>
-    </customValue>
-    <customValue>
-        <fullName>Earned BA or BS degree from a regionally accredited or internationally recognized institution</fullName>
-        <default>false</default>
-        <label>Earned BA or BS degree from a regionally accredited or internationally recognized institution</label>
-    </customValue>
-    <customValue>
-        <fullName>BUILD Guardianship</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>BUILD Guardianship</label>
     </customValue>
     <customValue>
         <fullName>1-134 Affidavit of Support Form (if US sponsored)</fullName>
@@ -233,12 +257,6 @@
         <label>Accounting Instructions &amp; Form</label>
     </customValue>
     <customValue>
-        <fullName>ACT or SAT official score</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>ACT or SAT official score</label>
-    </customValue>
-    <customValue>
         <fullName>Application is Verified</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -267,12 +285,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>BUILD Media Release Form</label>
-    </customValue>
-    <customValue>
-        <fullName>BUILD Physical Report</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>BUILD Physical Report</label>
     </customValue>
     <customValue>
         <fullName>BUILD Reference Contact List</fullName>
@@ -357,12 +369,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>GMAT</label>
-    </customValue>
-    <customValue>
-        <fullName>Green Card</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Green Card</label>
     </customValue>
     <customValue>
         <fullName>Healthcare Experience (250 hours)</fullName>
@@ -465,12 +471,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Ministry Context Form</label>
-    </customValue>
-    <customValue>
-        <fullName>Minnesota Content Standards Grid</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Minnesota Content Standards Grid</label>
     </customValue>
     <customValue>
         <fullName>MN RN License</fullName>
@@ -903,12 +903,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>TOEFL</label>
-    </customValue>
-    <customValue>
-        <fullName>Transcript Evaluation</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Transcript Evaluation</label>
     </customValue>
     <customValue>
         <fullName>Tuition Deposit</fullName>
@@ -1989,6 +1983,12 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Royall Senior Search Paper Application</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILD Guardianship</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUILD Guardianship</label>
     </customValue>
     <masterLabel>Admissions Document Types</masterLabel>
     <sorted>true</sorted>

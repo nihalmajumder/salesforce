@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Requirement_Response_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Requirement_Response_Record_Page</content>
         <formFactor>Large</formFactor>
@@ -138,11 +145,6 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
@@ -150,7 +152,7 @@
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
@@ -167,8 +169,22 @@
         <relationshipLabel>Requirement Responses</relationshipLabel>
         <relationshipName>Requirement_Responses</relationshipName>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Application_Status__c</fullName>
+        <description>Pull in the Application Status so the &quot;Send Reminder Email&quot; flow can filter by status.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Application__r.Application_Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Application Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Application__c</fullName>
@@ -180,6 +196,7 @@
         <relationshipName>Requirement_Responses</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
@@ -189,6 +206,7 @@
         <externalId>false</externalId>
         <label>Archive Payload</label>
         <length>131072</length>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
@@ -200,6 +218,7 @@
         <inlineHelpText>The date/time that a related object requirement item was fulfilled.</inlineHelpText>
         <label>Child Requirement Fulfilled On</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -208,6 +227,7 @@
         <externalId>false</externalId>
         <label>Document Requirement Fulfilled On</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -216,6 +236,7 @@
         <externalId>false</externalId>
         <label>External Email</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Email</type>
         <unique>false</unique>
@@ -233,6 +254,7 @@ null)</formula>
         <inlineHelpText>The date/time this requirement item was completed.</inlineHelpText>
         <label>Fulfilled On</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -241,6 +263,7 @@ null)</formula>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>HasDocument</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -249,6 +272,7 @@ null)</formula>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Has Child Requirement</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -258,6 +282,7 @@ null)</formula>
         <label>Hashcode</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -273,6 +298,7 @@ null)</formula>
         </summaryFilterItems>
         <summaryForeignKey>Question_Response__c.Requirement_Response__c</summaryForeignKey>
         <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
     </fields>
@@ -290,6 +316,7 @@ null)</formula>
         </summaryFilterItems>
         <summaryForeignKey>Question_Response__c.Requirement_Response__c</summaryForeignKey>
         <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
     </fields>
@@ -299,6 +326,7 @@ null)</formula>
         <description>Answer to the reference access rights question</description>
         <externalId>false</externalId>
         <label>Reference Access Rights</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -309,6 +337,7 @@ null)</formula>
         <label>Reference First Name</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -322,6 +351,7 @@ null)</formula>
         <inlineHelpText>Reference form that the recommender fills out</inlineHelpText>
         <label>Reference Form URL</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -333,6 +363,7 @@ null)</formula>
         <label>Reference Last Name</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -347,6 +378,7 @@ null)</formula>
         <relationshipLabel>Requirement Responses</relationshipLabel>
         <relationshipName>Requirement_Responses</relationshipName>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -360,6 +392,7 @@ null)</formula>
         <relationshipLabel>Requirement Responses</relationshipLabel>
         <relationshipName>Requirement_Responses</relationshipName>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -368,6 +401,7 @@ null)</formula>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Send Reference</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -376,6 +410,7 @@ null)</formula>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Send Reminder</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -384,6 +419,7 @@ null)</formula>
         <externalId>false</externalId>
         <label>Value</label>
         <length>131072</length>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Html</type>
         <visibleLines>25</visibleLines>
@@ -394,6 +430,7 @@ null)</formula>
         <description>Indicates whether the applicant has viewed the requirement and related questions yet. Enables application architect to prevent submission until all requirements have been viewed.</description>
         <externalId>false</externalId>
         <label>Viewed</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -406,6 +443,7 @@ null)</formula>
     <nameField>
         <displayFormat>RR-{0000000}</displayFormat>
         <label>Requirement Response Number</label>
+        <trackHistory>true</trackHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Requirement Responses</pluralLabel>

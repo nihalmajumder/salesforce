@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Admissions_Document_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Admissions_Document_Record_Page</content>
         <formFactor>Large</formFactor>
@@ -136,11 +143,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -177,18 +179,6 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Attachment__c</fullName>
-        <externalId>false</externalId>
-        <formula>HYPERLINK(&quot;/servlet/servlet.FileDownload?file=0693F000000N13pQAC&quot;, &quot;File&quot;)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Attachment</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Checklist_Type__c</fullName>
@@ -426,6 +416,11 @@ NOT(ISBLANK(Previous_Id__c)),
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Purged</fullName>
+                    <default>false</default>
+                    <label>Purged</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

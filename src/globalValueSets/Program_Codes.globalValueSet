@@ -591,6 +591,11 @@
         <label>2-BS-B-MGMT</label>
     </customValue>
     <customValue>
+        <fullName>2-BS-B-SCLA</fullName>
+        <default>false</default>
+        <label>2-BS-B-SCLA</label>
+    </customValue>
+    <customValue>
         <fullName>2-BS-FINP</fullName>
         <default>false</default>
         <label>2-BS-FINP</label>

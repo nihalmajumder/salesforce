@@ -20,8 +20,8 @@
     <assignments>
         <name>Set_Related_Contact_Id_Variable</name>
         <label>Set Related Contact Id Variable</label>
-        <locationX>263</locationX>
-        <locationY>401</locationY>
+        <locationX>268</locationX>
+        <locationY>395</locationY>
         <assignmentItems>
             <assignToReference>RelatedContactId</assignToReference>
             <operator>Assign</operator>
@@ -30,14 +30,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Create_Relationship</targetReference>
+            <targetReference>Is_Address_Different_Than_Contact</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Set_RelatedContactID_from_Interaction</name>
         <label>Set RelatedContactID from Interaction</label>
-        <locationX>834</locationX>
-        <locationY>956</locationY>
+        <locationX>826</locationX>
+        <locationY>910</locationY>
         <assignmentItems>
             <assignToReference>RelatedContactId</assignToReference>
             <operator>Assign</operator>
@@ -49,6 +49,35 @@
             <targetReference>Put_RelatedContactID_in_Family_Member</targetReference>
         </connector>
     </assignments>
+    <decisions>
+        <name>Are_First_and_Last_Name_populated</name>
+        <label>Are First and Last Name populated</label>
+        <locationX>289</locationX>
+        <locationY>55</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesFirstLastNamePopulated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>FamilyMemberRecord.First_Name__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>FamilyMemberRecord.Last_Name__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Email_Empty</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Interaction_Was_Created_with_Contact</name>
         <label>Interaction Was Created with Contact</label>
@@ -106,8 +135,8 @@
     <decisions>
         <name>Is_Email_Empty</name>
         <label>Is Email Empty</label>
-        <locationX>427</locationX>
-        <locationY>126</locationY>
+        <locationX>453</locationX>
+        <locationY>132</locationY>
         <defaultConnector>
             <targetReference>Is_Address_Different_Than_Contact</targetReference>
         </defaultConnector>
@@ -132,8 +161,8 @@
         <description>Is the Related Contact field on the new Family Member record null?</description>
         <name>Related_Contact_is_Null</name>
         <label>Related Contact is Null</label>
-        <locationX>261</locationX>
-        <locationY>204</locationY>
+        <locationX>179</locationX>
+        <locationY>198</locationY>
         <defaultConnector>
             <targetReference>Set_Related_Contact_Id_Variable</targetReference>
         </defaultConnector>
@@ -149,7 +178,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Is_Email_Empty</targetReference>
+                <targetReference>Are_First_and_Last_Name_populated</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -182,6 +211,12 @@
             <field>Age__c</field>
             <value>
                 <elementReference>FamilyMemberRecord.Age__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Contact__c</field>
+            <value>
+                <elementReference>RelatedContactId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -257,6 +292,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>RFI_Notes__c</field>
+            <value>
+                <elementReference>FamilyMemberRecord.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Salutation__c</field>
             <value>
                 <elementReference>FamilyMemberRecord.Salutation__c</elementReference>
@@ -283,6 +324,12 @@
             <field>Age__c</field>
             <value>
                 <elementReference>FamilyMemberRecord.Age__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Contact__c</field>
+            <value>
+                <elementReference>RelatedContactId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -358,6 +405,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>RFI_Notes__c</field>
+            <value>
+                <elementReference>FamilyMemberRecord.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Salutation__c</field>
             <value>
                 <elementReference>FamilyMemberRecord.Salutation__c</elementReference>
@@ -374,8 +427,8 @@
     <recordCreates>
         <name>Create_Relationship</name>
         <label>Create Relationship</label>
-        <locationX>262</locationX>
-        <locationY>957</locationY>
+        <locationX>287</locationX>
+        <locationY>816</locationY>
         <inputAssignments>
             <field>hed__Contact__c</field>
             <value>
@@ -461,6 +514,7 @@
         <queriedFields>High_School_Graduation_Year__c</queriedFields>
         <queriedFields>Occupation__c</queriedFields>
         <queriedFields>Contact__c</queriedFields>
+        <queriedFields>Name</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>Get_New_Interaction</name>
@@ -487,8 +541,8 @@
     <recordUpdates>
         <name>Put_RelatedContactID_in_Family_Member</name>
         <label>Put RelatedContactID in Family Member</label>
-        <locationX>583</locationX>
-        <locationY>957</locationY>
+        <locationX>560</locationX>
+        <locationY>817</locationY>
         <connector>
             <targetReference>Create_Relationship</targetReference>
         </connector>

@@ -256,7 +256,7 @@
         <relationshipLabel><!-- Contacts --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- This is the gateway formatted phone number --></help>
+        <help><!-- This is auto-generated based on the Mobile field. --></help>
         <label><!-- Mogli Number --></label>
         <name>Mogli_SMS__Mogli_Number__c</name>
     </fields>

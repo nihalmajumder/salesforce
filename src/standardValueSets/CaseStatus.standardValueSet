@@ -91,4 +91,28 @@
         <label>Follow-up needed</label>
         <closed>false</closed>
     </standardValue>
+    <standardValue>
+        <fullName>Pending approval</fullName>
+        <default>false</default>
+        <label>Pending approval</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved to commence</fullName>
+        <default>false</default>
+        <label>Approved to commence</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Not approved to commence</fullName>
+        <default>false</default>
+        <label>Not approved to commence</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting Response</fullName>
+        <default>false</default>
+        <label>Awaiting Response</label>
+        <closed>false</closed>
+    </standardValue>
 </StandardValueSet>

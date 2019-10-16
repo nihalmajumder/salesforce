@@ -184,6 +184,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Case_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Case_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -192,11 +199,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <businessProcesses>
@@ -226,6 +228,10 @@
     <businessProcesses>
         <fullName>ITS</fullName>
         <isActive>true</isActive>
+        <values>
+            <fullName>Awaiting Response</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Closed</fullName>
             <default>false</default>
@@ -271,6 +277,30 @@
             <default>false</default>
         </values>
     </businessProcesses>
+    <businessProcesses>
+        <fullName>SSR - Commencement</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Approved to commence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Not approved to commence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending approval</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Case_Compact_Layout_EMOps</fullName>
@@ -297,7 +327,6 @@
         <fields>Subject</fields>
         <fields>CaseNumber</fields>
         <fields>RecordTypeId</fields>
-        <fields>Queue_Rank__c</fields>
         <fields>Priority</fields>
         <fields>Status</fields>
         <fields>OwnerId</fields>
@@ -499,18 +528,6 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>Admission_Status__c</fullName>
-        <externalId>false</externalId>
-        <formula>Related_Opportunity__r.Status_Text__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Admission Status</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Application_Request_Type__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Please select the application request type.</inlineHelpText>
@@ -576,8 +593,7 @@
         <externalId>false</externalId>
         <formula>TEXT(  Related_Opportunity__r.School_College__c  )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>Please enter the application type.</inlineHelpText>
-        <label>Application Type</label>
+        <label>School/College</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -915,12 +931,11 @@ if( text(Status) = &quot;Closed&quot;,
         <fullName>Comments__c</fullName>
         <externalId>false</externalId>
         <label>Comments</label>
-        <length>4000</length>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>8</visibleLines>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>ContactEmail</fullName>
@@ -999,6 +1014,7 @@ TEXT(YEAR(DATEVALUE(CreatedDate)))</formula>
     <fields>
         <fullName>Deadline__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>A hard deadline that would prevent a project from moving forward.</inlineHelpText>
         <label>Deadline</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -1262,6 +1278,10 @@ Petition_Type__c,
                 <valueName>The courses are not available and suitable replacements cannot be identified</valueName>
             </valueSettings>
             <valueSettings>
+                <controllingFieldValue>Exception - Extension of time on credit expiration</controllingFieldValue>
+                <valueName>Student was granted a prior extension and did not complete the class</valueName>
+            </valueSettings>
+            <valueSettings>
                 <controllingFieldValue>Exception - Extension of time to complete degree</controllingFieldValue>
                 <valueName>Student was granted a prior extension and did not complete the degree requirements</valueName>
             </valueSettings>
@@ -1292,6 +1312,10 @@ Petition_Type__c,
             <valueSettings>
                 <controllingFieldValue>Exception - Required course or independent study substitution</controllingFieldValue>
                 <valueName>Substitute course did not include important content provided in course that we provide</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Exception - Required course or independent study substitution</controllingFieldValue>
+                <valueName>Student did not provide enough information about the course to justify a favorable decision</valueName>
             </valueSettings>
         </valueSet>
     </fields>
@@ -1706,9 +1730,62 @@ Petition_Type__c,
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>New_Admission_Status__c</fullName>
+        <fullName>New_Application_Program_Name__c</fullName>
         <externalId>false</externalId>
-        <label>New Admission Status</label>
+        <inlineHelpText>Please enter the new application program name.</inlineHelpText>
+        <label>New Application Program Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Program_Code_in_Banner__c</fullName>
+        <description>Please enter the new program code in banner.</description>
+        <externalId>false</externalId>
+        <label>New Program Code in Banner</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>New Program to be added to the Opportunity and Application</description>
+        <externalId>false</externalId>
+        <inlineHelpText>New Program for the Opportunity and Application</inlineHelpText>
+        <label>New Program</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Program is not active.</errorMessage>
+            <filterItems>
+                <field>Program__c.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Cases (New Program)</relationshipLabel>
+        <relationshipName>CasesNewProgram</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>New_Stage_Detail__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>New stage detail for this Opportunity.</inlineHelpText>
+        <label>New Stage Detail</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -1856,58 +1933,6 @@ Petition_Type__c,
         </valueSet>
     </fields>
     <fields>
-        <fullName>New_Application_Program_Name__c</fullName>
-        <externalId>false</externalId>
-        <inlineHelpText>Please enter the new application program name.</inlineHelpText>
-        <label>New Application Program Name</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>New_Program_Code_in_Banner__c</fullName>
-        <description>Please enter the new program code in banner.</description>
-        <externalId>false</externalId>
-        <label>New Program Code in Banner</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>New_Program__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <description>New Program to be added to the Opportunity and Application</description>
-        <externalId>false</externalId>
-        <inlineHelpText>New Program for the Opportunity and Application</inlineHelpText>
-        <label>New Program</label>
-        <lookupFilter>
-            <active>true</active>
-            <errorMessage>Program is not active.</errorMessage>
-            <filterItems>
-                <field>Program__c.Active__c</field>
-                <operation>equals</operation>
-                <value>True</value>
-            </filterItems>
-            <isOptional>false</isOptional>
-        </lookupFilter>
-        <referenceTo>Program__c</referenceTo>
-        <relationshipLabel>Cases (New Program)</relationshipLabel>
-        <relationshipName>CasesNewProgram</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>New_Term__c</fullName>
         <description>Term new program should start to be used</description>
         <externalId>false</externalId>
@@ -1920,6 +1945,74 @@ Petition_Type__c,
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Term_for_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field is a lookup to the Academic Term so requests can list the Term that they are requesting an Opportunity move to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Term to move Opportunity to</inlineHelpText>
+        <label>New Term</label>
+        <referenceTo>Academic_Term__c</referenceTo>
+        <relationshipLabel>Cases (Opps)</relationshipLabel>
+        <relationshipName>OppCases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>New_User_Attributes__c</fullName>
+        <externalId>false</externalId>
+        <label>New User Attributes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Replacing another user</fullName>
+                    <default>false</default>
+                    <label>Replacing another user</label>
+                </value>
+                <value>
+                    <fullName>Record transfers needed</fullName>
+                    <default>false</default>
+                    <label>Record transfers needed</label>
+                </value>
+                <value>
+                    <fullName>Opportunity assignments</fullName>
+                    <default>false</default>
+                    <label>Opportunity Assignments</label>
+                </value>
+                <value>
+                    <fullName>Texting access</fullName>
+                    <default>false</default>
+                    <label>Texting access</label>
+                </value>
+                <value>
+                    <fullName>Groove license</fullName>
+                    <default>false</default>
+                    <label>Groove license</label>
+                </value>
+                <value>
+                    <fullName>Conga license</fullName>
+                    <default>false</default>
+                    <label>Conga license</label>
+                </value>
+                <value>
+                    <fullName>Campaign access</fullName>
+                    <default>false</default>
+                    <label>Campaign access</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>7</visibleLines>
     </fields>
     <fields>
         <fullName>New_User_Name__c</fullName>
@@ -1982,6 +2075,18 @@ Petition_Type__c,
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Override_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When checked, prevents Salesforce from sending automated Case emails to Stakeholders.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prevent automated emails to Stakeholders.</inlineHelpText>
+        <label>Override Email</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -2092,6 +2197,17 @@ Petition_Type__c,
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone_Number_for_Texting__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What number should we assign this user in Mogli?</inlineHelpText>
+        <label>Phone Number for Texting</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
     </fields>
     <fields>
         <fullName>Phonetic_Pronunciation__c</fullName>
@@ -2282,6 +2398,18 @@ Petition_Type__c,
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Record_Transfer_Report__c</fullName>
+        <description>holds a URL for record change requests</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please link to a report with the records that should be moved to this user. Please include the 15-digit ID column in the report for the Opportunities/Cases/Tasks that should be transferred.</inlineHelpText>
+        <label>Record Transfer Report</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
         <fullName>Registrar_Summary__c</fullName>
         <description>Populated by the Registrar to give context to the Case</description>
         <externalId>false</externalId>
@@ -2323,6 +2451,20 @@ Petition_Type__c,
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Related_Program__c</fullName>
+        <description>Formula field that grabs the Program from the related opportunity</description>
+        <externalId>false</externalId>
+        <formula>Related_Opportunity__r.Academic_Program__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Current Program</inlineHelpText>
+        <label>Program</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Remaining_Requirements_Detail__c</fullName>
         <externalId>false</externalId>
         <label>Remaining Requirements Detail</label>
@@ -2344,6 +2486,49 @@ Petition_Type__c,
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Replacement_User_Attributes_del__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What should the new user take from the user they are replacing?</inlineHelpText>
+        <label>Replacement User Attributes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Mogli Number</fullName>
+                    <default>false</default>
+                    <label>Mogli Number</label>
+                </value>
+                <value>
+                    <fullName>Counselor Assignments</fullName>
+                    <default>false</default>
+                    <label>Counselor Assignments</label>
+                </value>
+                <value>
+                    <fullName>Groups</fullName>
+                    <default>false</default>
+                    <label>Groups</label>
+                </value>
+                <value>
+                    <fullName>Permissions</fullName>
+                    <default>false</default>
+                    <label>Permissions</label>
+                </value>
+                <value>
+                    <fullName>Licenses</fullName>
+                    <default>false</default>
+                    <label>Licenses</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>6</visibleLines>
     </fields>
     <fields>
         <fullName>Request_for_Information_Program__c</fullName>
@@ -2686,6 +2871,18 @@ Petition_Type__c,
         <visibleLines>4</visibleLines>
     </fields>
     <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>Related_Opportunity__r.Status_Text__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Status</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
@@ -2938,6 +3135,40 @@ Petition_Type__c,
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>User_Replacing__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Who is this new user replacing?</inlineHelpText>
+        <label>User Replacing</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>User must be a current employee.</errorMessage>
+            <filterItems>
+                <field>User.UserType</field>
+                <operation>equals</operation>
+                <value>Standard</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>notContain</operation>
+                <value>Community</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>notContain</operation>
+                <value>Guest</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CaseReplacement</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Zip_Code_Region__c</fullName>
         <externalId>false</externalId>
         <label>Zip Code Region</label>
@@ -3008,7 +3239,30 @@ Petition_Type__c,
         <fullName>approval_details__c</fullName>
         <description>Combines all the Approval and Denial fields into one text field.</description>
         <externalId>false</externalId>
-        <formula>&quot;test&quot;</formula>
+        <formula>if(
+				text(Approval_Description__c) &lt;&gt; &quot;&quot;, 
+				text(Approval_Description__c) &amp; if(grace_grant_amount__c &lt;&gt; &quot;&quot;, &quot; in the amount of:&quot; &amp; grace_grant_amount__c, &quot;&quot;), 
+				&quot;&quot;
+) 
+
+&amp;
+if(
+				approval_old_grade__c &lt;&gt; &quot;&quot;, 
+				&quot;Change grade from &quot; &amp; approval_old_grade__c &amp; &quot; to &quot; &amp; approval_new_grade__c &amp; &quot;, because: &quot; &amp; Comments__c, 
+				&quot;&quot;
+) 
+
+&amp;
+if(approval_academic_year__c &lt;&gt; &quot;&quot;, 
+				&quot;Student may complete requirements listed in the catalog for academic year: &quot; &amp; approval_academic_year__c, 
+				&quot;&quot;
+) 
+&amp;
+
+if(isblank(approval_extension_date__c) = FALSE, 
+			&quot;Approve extension until: &quot; &amp; text(approval_extension_date__c), 
+			&quot;&quot;
+)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Approval</label>
         <required>false</required>
@@ -3192,18 +3446,6 @@ Petition_Type__c,
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>heda_program_formula__c</fullName>
-        <externalId>false</externalId>
-        <formula>Related_Application__r.Intended_Program__r.Name</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Intended Program</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>update_old_code__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Check if opportunities with old program need to be updated to the New program beginning with the start term of program.</description>
@@ -3215,6 +3457,35 @@ Petition_Type__c,
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
+    <listViews>
+        <fullName>Admissions_EMOps_and_Marketing</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Queue_Rank__c</columns>
+        <columns>CASES.TYPE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>Department__c</columns>
+        <columns>Requested_Due_Date__c</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_General_Request</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>contains</operation>
+            <value>Marketing,Admissions,EMO,ITS</value>
+        </filters>
+        <label>Admissions, EMOps, and Marketing</label>
+    </listViews>
     <listViews>
         <fullName>AllOpenCases</fullName>
         <columns>CASES.CASE_NUMBER</columns>
@@ -3234,14 +3505,52 @@ Petition_Type__c,
         <label>All Open Cases</label>
     </listViews>
     <listViews>
-        <fullName>Closed_This_Week</fullName>
+        <fullName>Closed_Cases_from_Marketing</fullName>
         <columns>CASES.CASE_NUMBER</columns>
-        <columns>NAME</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>CASES.RECORDTYPE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Comm &amp; Marketing</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_New_User,Case.ITS_Create_Edit_Program,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List</value>
+        </filters>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>greaterThan</operation>
+            <value>5/13/2019 12:00 AM</value>
+        </filters>
+        <label>Closed Cases from Marketing</label>
+        <sharedTo>
+            <group>ITS</group>
+            <group>Marketing</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Closed_This_Week</fullName>
+        <booleanFilter>2 AND 3 AND (4 OR 1)</booleanFilter>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Submitted_By__c</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.CLOSED_DATE</columns>
         <columns>OWNER_NAME</columns>
-        <filterScope>Mine</filterScope>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>equals</operation>
@@ -3249,26 +3558,41 @@ Petition_Type__c,
         </filters>
         <filters>
             <field>CASES.CLOSED_DATE</field>
-            <operation>equals</operation>
-            <value>THIS_WEEK</value>
+            <operation>greaterOrEqual</operation>
+            <value>LAST_N_WEEKS:2</value>
         </filters>
-        <label>Closed This Week</label>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_Create_Edit_Program,Case.ITS_General_Request,Case.ITS_New_User,Case.ITS_Segment_Mailing_List</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </filters>
+        <label>ITS Requests Closed Last 2 Weeks</label>
     </listViews>
     <listViews>
         <fullName>EMOps_Requests_Case</fullName>
         <columns>CASES.CASE_NUMBER</columns>
-        <columns>NAME</columns>
+        <columns>CASES.RECORDTYPE</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
         <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Queue</filterScope>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
         <label>EMOps - Requests</label>
         <queue>EMOps_Requests</queue>
         <sharedTo>
             <group>EMOps</group>
-            <role>ITS_Analyst</role>
+            <group>ITS</group>
         </sharedTo>
     </listViews>
     <listViews>
@@ -3281,6 +3605,11 @@ Petition_Type__c,
         <columns>CASES.PRIORITY</columns>
         <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
         <filterScope>Queue</filterScope>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
         <label>ITS - Data Team</label>
         <queue>ITS_Data_Team</queue>
         <sharedTo>
@@ -3307,13 +3636,18 @@ Petition_Type__c,
         <fullName>ITS_Requests_Case</fullName>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>Submitted_By__c</columns>
-        <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
+        <columns>Queue_Rank__c</columns>
         <columns>CASES.PRIORITY</columns>
         <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
-        <columns>OWNER_NAME</columns>
+        <columns>CASES.RECORDTYPE</columns>
         <filterScope>Queue</filterScope>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
         <label>ITS - Requests</label>
         <queue>ITS_Requests</queue>
         <sharedTo>
@@ -3325,11 +3659,18 @@ Petition_Type__c,
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
+        <columns>Queue_Rank__c</columns>
+        <columns>Requested_Due_Date__c</columns>
         <columns>CASES.RECORDTYPE</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
         <columns>OWNER_NAME</columns>
         <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
         <label>My Cases</label>
     </listViews>
     <listViews>
@@ -3354,11 +3695,11 @@ Petition_Type__c,
         <columns>CASES.CASE_NUMBER</columns>
         <columns>Submitted_By__c</columns>
         <columns>NAME</columns>
-        <columns>CASES.RECORDTYPE</columns>
         <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>Requested_Due_Date__c</columns>
         <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
-        <columns>OWNER_NAME</columns>
         <filterScope>Mine</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
@@ -3400,8 +3741,8 @@ Petition_Type__c,
     <listViews>
         <fullName>Open_ITS_Cases</fullName>
         <columns>CASES.CASE_NUMBER</columns>
-        <columns>NAME</columns>
         <columns>Submitted_By__c</columns>
+        <columns>NAME</columns>
         <columns>CASES.RECORDTYPE</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.PRIORITY</columns>
@@ -3416,7 +3757,7 @@ Petition_Type__c,
         <filters>
             <field>CASES.RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Case.ITS_Access,Case.ITS_General_Request</value>
+            <value>Case.ITS_New_User,Case.ITS_General_Request</value>
         </filters>
         <label>Open ITS Cases</label>
         <sharedTo>
@@ -3424,13 +3765,242 @@ Petition_Type__c,
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>Queue_Rank</fullName>
+        <fullName>Open_ITS_Cases_from_CAS</fullName>
         <columns>CASES.CASE_NUMBER</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>CASES.RECORDTYPE</columns>
         <columns>CASES.SUBJECT</columns>
-        <columns>Queue_Rank__c</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
-        <columns>Deadline__c</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>CAS Admissions</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_New_User,Case.ITS_Create_Edit_Program,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List</value>
+        </filters>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>greaterThan</operation>
+            <value>5/13/2019 12:00 AM</value>
+        </filters>
+        <label>Open ITS Cases from CAS</label>
+        <sharedTo>
+            <group>Admissions_CAS</group>
+            <group>ITS</group>
+            <group>Marketing</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Open_ITS_Cases_from_EMOps</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>CASES.RECORDTYPE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>EMOps</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_New_User,Case.ITS_Create_Edit_Program,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List</value>
+        </filters>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>greaterThan</operation>
+            <value>5/13/2019 12:00 AM</value>
+        </filters>
+        <label>Open ITS Cases from EMOps</label>
+        <sharedTo>
+            <group>EMOps</group>
+            <group>ITS</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Open_ITS_Cases_from_Marketing</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>CASES.RECORDTYPE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>Requested_Due_Date__c</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Comm &amp; Marketing</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_New_User,Case.ITS_Create_Edit_Program,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List</value>
+        </filters>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>greaterThan</operation>
+            <value>5/13/2019 12:00 AM</value>
+        </filters>
+        <label>Open ITS Cases from Marketing</label>
+        <sharedTo>
+            <group>ITS</group>
+            <group>Marketing</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Open_ITS_Cases_from_Post_Trad</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>CASES.RECORDTYPE</columns>
+        <columns>CASES.TYPE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Post-Trad Admissions</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_New_User,Case.ITS_Create_Edit_Program,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List</value>
+        </filters>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>greaterThan</operation>
+            <value>5/13/2019 12:00 AM</value>
+        </filters>
+        <label>Open ITS Cases from Post-Trad</label>
+        <sharedTo>
+            <group>Admissions_Post_Trad</group>
+            <group>ITS</group>
+            <group>Marketing</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Open_ITS_Cases_from_Registrar</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>CASES.RECORDTYPE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Registrar</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_New_User,Case.ITS_Create_Edit_Program,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List</value>
+        </filters>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>greaterThan</operation>
+            <value>5/13/2019 12:00 AM</value>
+        </filters>
+        <label>Open ITS Cases from Registrar</label>
+        <sharedTo>
+            <group>ITS</group>
+            <group>Registrar</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Open_ITS_Cases_from_Student_Success</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>CASES.RECORDTYPE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Student Success</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ITS_New_User,Case.ITS_Create_Edit_Program,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List</value>
+        </filters>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>greaterThan</operation>
+            <value>5/13/2019 12:00 AM</value>
+        </filters>
+        <label>Open ITS Cases from Student Success</label>
+        <sharedTo>
+            <group>ITS</group>
+            <group>Student_Success</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Queue_Rank</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Queue_Rank__c</columns>
+        <columns>CASES.TYPE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Submitted_By__c</columns>
+        <columns>Department__c</columns>
+        <columns>Requested_Due_Date__c</columns>
+        <columns>OWNER_NAME</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.RECORDTYPE</field>
@@ -3438,10 +4008,27 @@ Petition_Type__c,
             <value>Case.ITS_General_Request</value>
         </filters>
         <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operation>contains</operation>
+            <value>Marketing,Admissions,EMO,ITS</value>
+        </filters>
+        <filters>
             <field>Queue_Rank__c</field>
             <operation>notEqual</operation>
         </filters>
         <label>Queue Rank</label>
+        <sharedTo>
+            <group>Admissions_CAS</group>
+            <group>Admissions_Post_Trad</group>
+            <group>EMOps</group>
+            <group>ITS</group>
+            <group>Marketing</group>
+        </sharedTo>
     </listViews>
     <listViews>
         <fullName>SSR_Advising_Case</fullName>
@@ -3805,7 +4392,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -3828,6 +4415,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -3954,6 +4572,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4318,7 +4955,7 @@ Petition_Type__c,
     </recordTypes>
     <recordTypes>
         <fullName>EMOps_Duplicate</fullName>
-        <active>true</active>
+        <active>false</active>
         <businessProcess>EMOps</businessProcess>
         <compactLayoutAssignment>Case_Compact_Layout_EMOps</compactLayoutAssignment>
         <label>EMOps - Duplicate</label>
@@ -4493,11 +5130,19 @@ Petition_Type__c,
                 <default>false</default>
             </values>
             <values>
+                <fullName>Student did not provide enough information about the course to justify a favorable decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Student not yet qualified to be in class</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Student participated in the class fully and no drop or withdrawal is justified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student was granted a prior extension and did not complete the class</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4608,7 +5253,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -4631,6 +5276,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4833,6 +5509,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5555,7 +6250,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -5578,6 +6273,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5704,6 +6430,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -6067,689 +6812,6 @@ Petition_Type__c,
         </picklistValues>
     </recordTypes>
     <recordTypes>
-        <fullName>ITS_Access</fullName>
-        <active>true</active>
-        <businessProcess>ITS</businessProcess>
-        <compactLayoutAssignment>Compact_Case_Layout_ITS</compactLayoutAssignment>
-        <label>ITS - Access</label>
-        <picklistValues>
-            <picklist>Action__c</picklist>
-            <values>
-                <fullName>Add</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Remove</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Update</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Application_Request_Type__c</picklist>
-            <values>
-                <fullName>Application Owner change</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Catalog%2FSchool Change</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Create Ed History</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Late Add</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Program Change</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Student Type Change</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Term Change</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transcript Eval</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Approval_Description__c</picklist>
-            <values>
-                <fullName>Issue grace grant for full tuition</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Issue grace grant for partial tuition</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No refund</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>BSSD_Transition_Plan__c</picklist>
-            <values>
-                <fullName>Active - No Response</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Complete at Bethel</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive - No Response</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive - Not Returning</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transfer</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Undecided</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Withdrawal</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Ceremony_Date__c</picklist>
-            <values>
-                <fullName>Fall 2019</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fall 2020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spring 2020</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Ceremony_Participation__c</picklist>
-            <values>
-                <fullName>I plan to commence in person%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>I will commence in absentia%2E I understand this means my name will be listed in the program but I will not be present at commencement</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Decision__c</picklist>
-            <values>
-                <fullName>Approve</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Deny</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Decision_about_refund__c</picklist>
-            <values>
-                <fullName>Issue grace grant for full tuition</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Issue grace grant for partial tuition</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No refund</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Denial_Description__c</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Document_Type__c</picklist>
-            <values>
-                <fullName>International Document</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Interview Notes</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Personal Statement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Professional License</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>References</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Resume</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Statement of Purpose</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Test Score</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transcript</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Groups_to_Include__c</picklist>
-            <values>
-                <fullName>BUILD</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Campaign Members</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>None</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>PSEO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Previous PSEO %28Q%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Readmits</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Specials</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transfer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
-            <values>
-                <fullName>Accepted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Completed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Started</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Submitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Confirmed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inquired</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Origin</picklist>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Petition_Type__c</picklist>
-            <values>
-                <fullName>Appeal - Academic Dismissal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Complete degree requirements from prior catalog year</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Extension of time on credit expiration</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Extension of time to complete degree</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Grade Change</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Late Add</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Late drop with refund request</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Late drop without refund request</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Other academic policy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Withdrawal past deadline with refund request</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exception - Withdrawal past deadline without refund request</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Prior_Academic_Dismissal__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Prior_Academic_Probation__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Priority</picklist>
-            <values>
-                <fullName>Critical</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>High</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Low</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Medium</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Reason</picklist>
-            <values>
-                <fullName>Complex functionality</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing problem</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Instructions not clear</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New problem</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>User didn%27t attend training</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Resolution__c</picklist>
-            <values>
-                <fullName>Approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Cancelled</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Denied</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Resolved</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Role__c</picklist>
-            <values>
-                <fullName>Committee Chair</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Dean</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Program Director</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>School__c</picklist>
-            <values>
-                <fullName>Adult Undergraduate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Graduate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Seminary</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Undergraduate</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Stage_Details_to_Include__c</picklist>
-            <values>
-                <fullName>Accepted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Accepted - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Completed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Completed - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Started</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Started - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Submitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>App Submitted - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Confirmed - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Enrolled</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee Paid</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee Paid - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee Waived</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fee Waived - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inquired</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inquired - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Lead - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pre-Applied</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pre-Applied - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Registered</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Registered - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Rejected - App Completed - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Rejected - App Started - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Rejected - App Submitted - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unknown - File Close</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unknown - File Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wait Listed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wait Listed - File Closed</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Terms_to_include__c</picklist>
-            <values>
-                <fullName>CAS - Fall %28Seniors%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAS - Interim%2FSpring</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAS - Juniors</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CAS - Sophomores</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other - List in Comments</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Change Permissions</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New User</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Zip_Code_Region__c</picklist>
-            <values>
-                <fullName>100 mile radius</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>150 mile radius</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>50 mile radius</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>All</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Only MN Zips</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>grade_change_factors__c</picklist>
-            <values>
-                <fullName>Late withdrawal allowed - grade changed to %E2%80%9CW%E2%80%9D</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Late work accepted by professor</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>hed__Category__c</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>School Code of Conduct</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>School Violation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>State Offense</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>hed__Location__c</picklist>
-            <values>
-                <fullName>Off Campus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>On Campus</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
         <fullName>ITS_Create_Edit_Program</fullName>
         <active>true</active>
         <businessProcess>ITS</businessProcess>
@@ -6926,11 +6988,19 @@ Petition_Type__c,
                 <default>false</default>
             </values>
             <values>
+                <fullName>Student did not provide enough information about the course to justify a favorable decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Student not yet qualified to be in class</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Student participated in the class fully and no drop or withdrawal is justified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student was granted a prior extension and did not complete the class</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7041,7 +7111,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -7064,6 +7134,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -7270,33 +7371,32 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Resolution__c</picklist>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
             <values>
-                <fullName>Academic Dismissal</fullName>
+                <fullName>Counselor Assignments</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resolution__c</picklist>
             <values>
                 <fullName>Approved</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Approved to commence</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Approved with modification</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Changed Care Area</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Changed Cohort</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Changed Major</fullName>
+                <fullName>Cancelled</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7304,63 +7404,7 @@ Petition_Type__c,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Enrollment Dropped - All</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Enrollment Dropped - Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>No further action taken at this time</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Not approved to commence</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Readmitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Referred to another department</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Repeating Course</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Resolved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Schedule Change</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Schedule Sent</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Student is Participating in Course Now</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transferred</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unresolved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Withdrawal from Bethel</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Withdrawal from Course</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -7988,7 +8032,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -8011,6 +8055,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8141,6 +8216,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8346,6 +8440,10 @@ Petition_Type__c,
                 <default>false</default>
             </values>
             <values>
+                <fullName>Change Permissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Conga</fullName>
                 <default>false</default>
             </values>
@@ -8367,6 +8465,743 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Zip_Code_Region__c</picklist>
+            <values>
+                <fullName>100 mile radius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>150 mile radius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50 mile radius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>All</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Only MN Zips</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>grade_change_factors__c</picklist>
+            <values>
+                <fullName>Late withdrawal allowed - grade changed to %E2%80%9CW%E2%80%9D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late work accepted by professor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>hed__Category__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Code of Conduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Violation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Offense</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>hed__Location__c</picklist>
+            <values>
+                <fullName>Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ITS_New_User</fullName>
+        <active>true</active>
+        <businessProcess>ITS</businessProcess>
+        <compactLayoutAssignment>Compact_Case_Layout_ITS</compactLayoutAssignment>
+        <label>ITS - New User</label>
+        <picklistValues>
+            <picklist>Action__c</picklist>
+            <values>
+                <fullName>Add</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Remove</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Application_Request_Type__c</picklist>
+            <values>
+                <fullName>Application Owner change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Catalog%2FSchool Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Ed History</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Add</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Type Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript Eval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Approval_Description__c</picklist>
+            <values>
+                <fullName>Issue grace grant for full tuition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue grace grant for partial tuition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No refund</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BSSD_Transition_Plan__c</picklist>
+            <values>
+                <fullName>Active - No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete at Bethel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive - No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive - Not Returning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ceremony_Date__c</picklist>
+            <values>
+                <fullName>Fall 2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall 2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spring 2020</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ceremony_Participation__c</picklist>
+            <values>
+                <fullName>I plan to commence in person%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I will commence in absentia%2E I understand this means my name will be listed in the program but I will not be present at commencement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Decision__c</picklist>
+            <values>
+                <fullName>Approve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deny</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Decision_about_refund__c</picklist>
+            <values>
+                <fullName>Issue grace grant for full tuition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue grace grant for partial tuition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No refund</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Denial_Description__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Type__c</picklist>
+            <values>
+                <fullName>International Document</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interview Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>References</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resume</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Statement of Purpose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Score</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Groups_to_Include__c</picklist>
+            <values>
+                <fullName>BUILD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Members</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous PSEO %28Q%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Readmits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_Stage_Detail__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Petition_Type__c</picklist>
+            <values>
+                <fullName>Appeal - Academic Dismissal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Complete degree requirements from prior catalog year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Extension of time on credit expiration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Extension of time to complete degree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Grade Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Late Add</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Late drop with refund request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Late drop without refund request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Other academic policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Required course or independent study substitution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Withdrawal past deadline with refund request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prior_Academic_Dismissal__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prior_Academic_Probation__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licenses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resolution__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Role__c</picklist>
+            <values>
+                <fullName>Committee Chair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dean</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Director</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>School__c</picklist>
+            <values>
+                <fullName>Adult Undergraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undergraduate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage_Details_to_Include__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accepted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Completed - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Started - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Submitted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Paid - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Waived - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquired - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Applied - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registered - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected - App Completed - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected - App Started - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected - App Submitted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown - File Close</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait Listed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait Listed - File Closed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Terms_to_include__c</picklist>
+            <values>
+                <fullName>CAS - Fall %28Seniors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAS - Interim%2FSpring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAS - Juniors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAS - Sophomores</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other - List in Comments</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Change Permissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New User</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8691,7 +9526,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -8798,6 +9633,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Wait Listed - FIle Closed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8928,6 +9794,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -9391,7 +10276,7 @@ Petition_Type__c,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Student did not provide evidence or report circumstances sufficient to justify an exception to the policy</fullName>
+                <fullName>Student did not provide enough information about the course to justify a favorable decision</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9400,6 +10285,10 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Student participated in the class fully and no drop or withdrawal is justified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student was granted a prior extension and did not complete the class</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9510,7 +10399,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -9533,6 +10422,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -9663,6 +10583,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -10024,7 +10963,7 @@ Petition_Type__c,
     <recordTypes>
         <fullName>SSR_Commencement</fullName>
         <active>true</active>
-        <businessProcess>SSR</businessProcess>
+        <businessProcess>SSR - Commencement</businessProcess>
         <compactLayoutAssignment>Case_Compact_Layout_SSR</compactLayoutAssignment>
         <label>SSR - Commencement</label>
         <picklistValues>
@@ -10269,7 +11208,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -10292,6 +11231,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -10418,6 +11388,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -11020,7 +12009,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -11043,6 +12032,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -11169,6 +12189,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -11771,7 +12810,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -11794,6 +12833,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -11996,6 +13066,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -12641,7 +13730,7 @@ Petition_Type__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>New_Admission_Status__c</picklist>
+            <picklist>New_Stage_Detail__c</picklist>
             <values>
                 <fullName>Accepted</fullName>
                 <default>false</default>
@@ -12664,6 +13753,37 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -12834,6 +13954,25 @@ Petition_Type__c,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -13213,8 +14352,8 @@ Petition_Type__c,
         </picklistValues>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.TYPE</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.RECORDTYPE</customTabListAdditionalFields>
@@ -13235,35 +14374,49 @@ Petition_Type__c,
         <searchFilterFields>CASES.STATUS</searchFilterFields>
         <searchFilterFields>CASES.TYPE</searchFilterFields>
         <searchFilterFields>CASES.RECORDTYPE</searchFilterFields>
-        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Submitted_By__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Submitted_By__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.TYPE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.RECORDTYPE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
     <validationRules>
-        <fullName>ITS_Access_New_User_Required_Fields</fullName>
+        <fullName>Phone_Number_Required</fullName>
         <active>true</active>
-        <description>New User requests must contain all needed fields</description>
-        <errorConditionFormula>TEXT(Type) = &quot;New User&quot; &amp;&amp; ( 
-New_User_Name__c  = null ||
-Employee_Email__c = null ||
-Title__c  = null || 
-BCA_Username__c = null
-)</errorConditionFormula>
-        <errorMessage>Please fill in all fields under New User Info for a New User request.</errorMessage>
+        <description>requires a phone number if User Attribute includes texting access</description>
+        <errorConditionFormula>INCLUDES( New_User_Attributes__c, &quot;Texting access&quot; ) &amp;&amp; 
+ISBLANK( Phone_Number_for_Texting__c )</errorConditionFormula>
+        <errorDisplayField>Phone_Number_for_Texting__c</errorDisplayField>
+        <errorMessage>Please include the phone number to use for texting.</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>ITS_Access_Permission_Required_Fields</fullName>
+        <fullName>Queue_Rank_Limit</fullName>
         <active>true</active>
-        <description>require Description when requesting permission changes</description>
-        <errorConditionFormula>TEXT(Type)=&quot;Change Permissions&quot; &amp;&amp;
- Description = null</errorConditionFormula>
-        <errorDisplayField>Description</errorDisplayField>
-        <errorMessage>Please describe the required permission changes.</errorMessage>
+        <description>Queue Rank must be between 1 and 10.</description>
+        <errorConditionFormula>Queue_Rank__c &gt; 10 || Queue_Rank__c &lt; 1</errorConditionFormula>
+        <errorDisplayField>Queue_Rank__c</errorDisplayField>
+        <errorMessage>Rank must be between 1 and 10.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Replacement_User_Info_required</fullName>
+        <active>true</active>
+        <description>requires replacement user section when replacing another user</description>
+        <errorConditionFormula>INCLUDES( New_User_Attributes__c, &quot;Replacing another user&quot;) &amp;&amp; 
+ISBLANK( User_Replacing__c )</errorConditionFormula>
+        <errorDisplayField>User_Replacing__c</errorDisplayField>
+        <errorMessage>Must include the user being replaced.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Report_URL_required</fullName>
+        <active>true</active>
+        <description>requires the record transfer url field if user attributes includes Record transfers needed</description>
+        <errorConditionFormula>INCLUDES( New_User_Attributes__c, &quot;Record transfers needed&quot;) &amp;&amp; 
+ISBLANK( Record_Transfer_Report__c )</errorConditionFormula>
+        <errorDisplayField>Record_Transfer_Report__c</errorDisplayField>
+        <errorMessage>Please include a link to the report of records to transfer.</errorMessage>
     </validationRules>
     <webLinks>
         <fullName>APXTConga4__Conga_Composer_OAuth</fullName>

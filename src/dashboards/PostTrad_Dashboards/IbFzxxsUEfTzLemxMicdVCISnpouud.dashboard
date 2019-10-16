@@ -18,55 +18,55 @@
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
                 </chartSummary>
-                <componentType>Column</componentType>
+                <componentType>Bar</componentType>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>Opportunity$Academic_Program__c.Academic_Program__c.Parent.Parent.Name</groupingColumn>
-                <groupingSortProperties/>
-                <header>Division Tasks Due Today</header>
+                <groupingColumn>Opportunity$Academic_Program__c</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>CAPS/Sem/GS Likely Report</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>PostTrad_Admissions/CSG_Dashboard_Reports/Division_Tasks_Due_Today_t9q</report>
+                <report>PostTrad_Admissions/CSG_Leadership/CAPS_Sem_GS_Likely_Report</report>
                 <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
-                <sortBy>RowValueDescending</sortBy>
+                <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
-            <rowSpan>10</rowSpan>
+            <rowSpan>17</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
             <columnIndex>4</columnIndex>
             <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <axisBinding>y</axisBinding>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>Column</componentType>
-                <decimalPrecision>-1</decimalPrecision>
+                <componentType>Bar</componentType>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>Opportunity$Academic_Program__c.Academic_Program__c.Parent.Parent.Name</groupingColumn>
                 <groupingSortProperties/>
-                <header>Likely Opportunities by Division</header>
-                <legendPosition>Bottom</legendPosition>
-                <report>PostTrad_Admissions/CSG_Dashboard_Reports/Likely_Opportunities_by_Division_7qv</report>
+                <header>CSG_Team Due and Overdue Tasks</header>
+                <report>PostTrad_Admissions/CSG_Leadership/CSG_Team_Due_and_Overdue_Tasks</report>
                 <showPercentage>false</showPercentage>
-                <showValues>true</showValues>
-                <sortBy>RowValueDescending</sortBy>
-                <useReportChart>false</useReportChart>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>false</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <useReportChart>true</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
-            <rowSpan>10</rowSpan>
+            <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
@@ -78,109 +78,66 @@
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
                 </chartSummary>
-                <componentType>Column</componentType>
+                <componentType>BarStacked</componentType>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>Opportunity.Activities$Owner</groupingColumn>
-                <groupingSortProperties/>
-                <header>EC Activity This Week</header>
-                <legendPosition>Bottom</legendPosition>
-                <report>PostTrad_Admissions/CSG_Dashboard_Reports/EC_Activity_This_Week_xX1</report>
+                <groupingColumn>Opportunity$Academic_Program__c</groupingColumn>
+                <groupingColumn>Opportunity$Stage_Detail__c</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                    <groupingSorts>
+                        <groupingLevel>g2</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>CSG_GS Status by Program w/ Likely FY20</header>
+                <legendPosition>Right</legendPosition>
+                <report>PostTrad_Admissions/CSG_Dashboard_Reports/CSG_GS_Status_by_Program_w_Likely_FY20</report>
                 <showPercentage>false</showPercentage>
-                <showValues>true</showValues>
-                <sortBy>RowValueDescending</sortBy>
+                <showValues>false</showValues>
+                <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
-            <rowSpan>10</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>0</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <componentType>FlexTable</componentType>
-                <flexComponentProperties>
-                    <decimalPrecision>-1</decimalPrecision>
-                    <flexTableColumn>
-                        <reportColumn>Opportunity.Name</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>Opportunity.Academic_Program__c.Name</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>Activity.Subject</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>Activity.ActivityDate</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableSortInfo>
-                        <sortColumn>Opportunity.Name</sortColumn>
-                        <sortOrder>1</sortOrder>
-                    </flexTableSortInfo>
-                    <hideChatterPhotos>true</hideChatterPhotos>
-                </flexComponentProperties>
-                <groupingSortProperties/>
-                <header>My Open Tasks</header>
-                <report>PostTrad_Admissions/CSG_Dashboard_Reports/Open_Tasks_for_User_mGK</report>
-            </dashboardComponent>
-            <rowIndex>10</rowIndex>
-            <rowSpan>10</rowSpan>
+            <rowSpan>17</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
             <columnIndex>4</columnIndex>
             <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <axisBinding>y</axisBinding>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>Donut</componentType>
-                <decimalPrecision>-1</decimalPrecision>
+                <componentType>Bar</componentType>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>Opportunity$Academic_Program__c.Academic_Program__c.Parent.Parent.Name</groupingColumn>
                 <groupingSortProperties/>
-                <header>No Contact By Division - 42 Days</header>
-                <legendPosition>Right</legendPosition>
-                <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>PostTrad_Admissions/CSG_Dashboard_Reports/No_Contact_By_Division_42_Days_jY8</report>
+                <header>CSG_EC Activity Report</header>
+                <report>PostTrad_Admissions/CSG_Leadership/CSG_EC_Activity_Report1</report>
                 <showPercentage>false</showPercentage>
-                <showTotal>true</showTotal>
-                <showValues>true</showValues>
-                <sortBy>RowValueDescending</sortBy>
-                <useReportChart>false</useReportChart>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>false</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <useReportChart>true</useReportChart>
             </dashboardComponent>
-            <rowIndex>10</rowIndex>
-            <rowSpan>10</rowSpan>
+            <rowIndex>8</rowIndex>
+            <rowSpan>9</rowSpan>
         </dashboardGridComponents>
         <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>k-gunderson@bethel.edu</runningUser>
+    <runningUser>del46744@bethel.edu</runningUser>
     <textColor>#000000</textColor>
     <title>Post-Trad Leads Dashboard</title>
     <titleColor>#000000</titleColor>

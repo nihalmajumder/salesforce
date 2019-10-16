@@ -125,6 +125,18 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup for Contact. Workflow copies Name lookup into this one, if the lookup is a Contact.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Activities (Contact)</relationshipLabel>
+        <relationshipName>Activities_Contact</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Created__c</fullName>
         <externalId>false</externalId>
         <formula>CreatedDate</formula>
@@ -275,6 +287,62 @@ NOT(ISBLANK(Previous_Activity_Id__c)),
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( Opportunity__c )), 
+ Opportunity__r.Owner.Full_Name__c , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Owner</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Program__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( Opportunity__c )), 
+ Opportunity__r.Academic_Program__r.Program_Name_on_Application__c  , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Program</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( Opportunity__c )), 
+ TEXT(Opportunity__r.StageName) +&quot; : &quot;+TEXT(Opportunity__r.Stage_Detail__c) , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Stage</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Term__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( Opportunity__c )), 
+ Opportunity__r.Academic_Term__r.Name , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Term</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>duplicates Related To field if it looks up an Opportunity</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Activities (Opp)</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Origin__c</fullName>

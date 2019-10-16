@@ -112,7 +112,7 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Task_Compact_Layout</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Task_Compact_Layout</fullName>
         <fields>Subject</fields>
@@ -121,6 +121,13 @@
         <fields>Type</fields>
         <fields>Outcome__c</fields>
         <label>Task Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Task_Compact_STARS</fullName>
+        <fields>Subject</fields>
+        <fields>WhoId</fields>
+        <fields>STARS_Outcome__c</fields>
+        <label>Task Compact - STARS</label>
     </compactLayouts>
     <enableFeeds>false</enableFeeds>
     <fields>
@@ -407,4 +414,23 @@
     </listViews>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Limit_Task_Owners_to_Users</fullName>
+        <active>true</active>
+        <description>helps prevent tasks from being assigned to community users</description>
+        <errorConditionFormula>TEXT(Owner:User.UserType) != &quot;Standard&quot;</errorConditionFormula>
+        <errorDisplayField>OwnerId</errorDisplayField>
+        <errorMessage>Assigned user is not an employee account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>STARS_Call_Outcomes</fullName>
+        <active>true</active>
+        <description>STARS callers cannot close their tasks without an Outcome.</description>
+        <errorConditionFormula>$Profile.Name = &quot;Admissions - STARS&quot; &amp;&amp; 
+ISCHANGED( Status ) &amp;&amp;
+ISBLANK( TEXT(STARS_Outcome__c) ) &amp;&amp;
+ISBLANK(TEXT(Outcome__c)) &amp;&amp;
+LEFT(Subject, 5) = &apos;STARS&apos;</errorConditionFormula>
+        <errorMessage>Please use the Outcome button and select a STARS Outcome.</errorMessage>
+    </validationRules>
 </CustomObject>

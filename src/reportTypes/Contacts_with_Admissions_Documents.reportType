@@ -8,7 +8,7 @@
         <outerJoin>true</outerJoin>
         <relationship>Admissions_Documents__r</relationship>
     </join>
-    <label>Contacts with Admissions Documents</label>
+    <label>Contacts with Admissions Documents (Bethel)</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>

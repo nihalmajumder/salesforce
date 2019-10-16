@@ -13,19 +13,31 @@
         <field>Contact$LastName</field>
     </columns>
     <columns>
-        <field>Contact$MailingAddress</field>
-    </columns>
-    <columns>
         <field>Contact$MailingCity</field>
     </columns>
     <columns>
         <field>Contact$MailingStateCode</field>
     </columns>
     <columns>
-        <field>Contact$MailingPostalCode</field>
+        <field>Contact.Opportunities__r$StageName</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Id</field>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$Secondary_Email__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Owner</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Term__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Name</field>
     </columns>
     <format>Tabular</format>
     <name>Event RSVPs: Junior Preview Day 2019</name>
@@ -34,7 +46,7 @@
         <value>1</value>
     </params>
     <reportType>Contacts_with_Opportunities__c</reportType>
-    <scope>user</scope>
+    <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>

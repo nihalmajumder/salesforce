@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>CAMPAIGN_NAME</field>
-    </columns>
-    <columns>
-        <field>FIRST_NAME</field>
-    </columns>
-    <columns>
-        <field>LAST_NAME</field>
-    </columns>
-    <columns>
-        <field>PHONE1</field>
-    </columns>
-    <columns>
-        <field>PHONE3</field>
-    </columns>
-    <columns>
         <field>EMAIL</field>
-    </columns>
-    <columns>
-        <field>CAMPAIGN_OWNER</field>
     </columns>
     <filter>
         <criteriaItems>
@@ -32,7 +14,7 @@
             <column>CAMPAIGN_NAME</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>6/25</value>
+            <value>7/23</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

@@ -95,10 +95,6 @@
             <translation>Tía</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Brother</masterLabel>
-            <translation><!-- Brother --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Child</masterLabel>
             <translation>Hijo/a</translation>
         </picklistValues>
@@ -173,10 +169,6 @@
         <picklistValues>
             <masterLabel>Partner</masterLabel>
             <translation>Pareja</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Sister</masterLabel>
-            <translation><!-- Sister --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Son</masterLabel>

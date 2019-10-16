@@ -142,6 +142,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Campaign_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Campaign_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -150,11 +157,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>Campaign_Compact_Layout_Master</compactLayoutAssignment>
@@ -177,7 +179,7 @@
         <fields>Start_Time__c</fields>
         <label>Campaign Compact Layout - Master</label>
     </compactLayouts>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
     <fields>
         <fullName>Academic_Interest__c</fullName>
@@ -185,12 +187,14 @@
         <label>Academic Interest</label>
         <length>100</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>ActualCost</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -204,6 +208,7 @@
         <externalId>false</externalId>
         <label>Athletic Recruit</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>MultiselectPicklist</type>
         <valueSet>
@@ -323,6 +328,7 @@
         <referenceTo>User</referenceTo>
         <relationshipName>Appointments</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -334,16 +340,19 @@
         <label>Bethel Representative</label>
         <length>50</length>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>BudgetedCost</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CampaignMemberRecordTypeId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -356,6 +365,7 @@
         <label>Campaign Key</label>
         <length>30</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>true</unique>
@@ -367,6 +377,7 @@
         <inlineHelpText>Date confirmation call was made</inlineHelpText>
         <label>Confirmation Call</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Date</type>
     </fields>
@@ -375,6 +386,7 @@
         <externalId>false</externalId>
         <label>Confirmation Email</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Date</type>
     </fields>
@@ -387,6 +399,7 @@
         <relationshipLabel>Campaigns</relationshipLabel>
         <relationshipName>Campaigns</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -405,10 +418,12 @@
     </fields>
     <fields>
         <fullName>Description</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>EndDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
@@ -450,6 +465,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>End Time</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Time</type>
     </fields>
@@ -459,6 +475,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <label>End Time (old)</label>
         <length>100</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -481,6 +498,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <referenceTo>User</referenceTo>
         <relationshipName>Campaigns</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -492,6 +510,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <label>Event Time (Temporary)</label>
         <length>50</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -502,15 +521,18 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>Event URL</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Url</type>
     </fields>
     <fields>
         <fullName>ExpectedResponse</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>ExpectedRevenue</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -519,6 +541,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <label>Extracurricular Interests</label>
         <length>160</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -531,6 +554,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <precision>2</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -573,6 +597,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
     </fields>
     <fields>
         <fullName>IsActive</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
@@ -583,6 +608,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <label>Location</label>
         <length>255</length>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -594,6 +620,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <inlineHelpText>Whether the student is staying for lunch.</inlineHelpText>
         <label>Lunch</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -603,11 +630,13 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <description>tracks whether Start Time has been pushed back 5 hours after the May 10 migration</description>
         <externalId>false</externalId>
         <label>Migration Time Fixed</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Name</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -618,6 +647,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <label>Name of Class</label>
         <length>100</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -642,6 +672,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
     </fields>
     <fields>
         <fullName>NumberSent</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -649,16 +680,19 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>Overnight Date</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Date</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -668,6 +702,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>Parent Email</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Email</type>
         <unique>false</unique>
@@ -690,6 +725,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <label>Previous Campaign Id</label>
         <length>18</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>true</unique>
@@ -699,6 +735,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>RFI Attributes</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>MultiselectPicklist</type>
         <valueSet>
@@ -729,6 +766,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>RFI Version</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -758,6 +796,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>RSVP Date</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Date</type>
     </fields>
@@ -766,6 +805,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Receiving BU Bucks</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -776,6 +816,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <inlineHelpText>Representative&apos;s department. This will auto-fill if Bethel Contact is updated.</inlineHelpText>
         <label>Representative Department</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -820,11 +861,6 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
                     <fullName>Communication Studies</fullName>
                     <default>false</default>
                     <label>Communication Studies</label>
-                </value>
-                <value>
-                    <fullName>Disability Resources and Services</fullName>
-                    <default>false</default>
-                    <label>Disability Resources and Services</label>
                 </value>
                 <value>
                     <fullName>Education</fullName>
@@ -872,6 +908,11 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
                     <label>Nursing</label>
                 </value>
                 <value>
+                    <fullName>Disability Resources and Services</fullName>
+                    <default>false</default>
+                    <label>Office of Accessibility Resources and Services (OARS)</label>
+                </value>
+                <value>
                     <fullName>Philosophy</fullName>
                     <default>false</default>
                     <label>Philosophy</label>
@@ -916,6 +957,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <inlineHelpText>If Representative is a coach, what sport do they coach?</inlineHelpText>
         <label>Representative Sport</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -1020,6 +1062,7 @@ VALUE( MID( TEXT( End_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>Representative Type</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -1274,6 +1317,7 @@ text(Type)
         <externalId>false</externalId>
         <label>School</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -1297,6 +1341,7 @@ text(Type)
         <externalId>false</externalId>
         <label>Source Detail</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -2085,6 +2130,7 @@ text(Type)
         <externalId>false</externalId>
         <label>Source Type</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -2176,6 +2222,7 @@ text(Type)
     </fields>
     <fields>
         <fullName>StartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
@@ -2217,6 +2264,7 @@ VALUE( MID( TEXT( Start_Time__c ), 0, 2 ) ) &lt; 12,
         <externalId>false</externalId>
         <label>Start Time</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Time</type>
     </fields>
@@ -2226,19 +2274,21 @@ VALUE( MID( TEXT( Start_Time__c ), 0, 2 ) ) &lt; 12,
         <label>Start Time (old)</label>
         <length>100</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Tell_Me_More_URL__c</fullName>
         <externalId>false</externalId>
-        <formula>&quot;https://full-bethelu.cs92.force.com/campaignrfi/CampaignRFIForm?CampaignId=&quot;+Id</formula>
+        <formula>&quot;https://full-bethel-univ.cs16.force.com/admissions/CampaignRFIForm?CampaignId=&quot;+Id</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Tell Me More URL</label>
         <required>false</required>
@@ -2248,6 +2298,7 @@ VALUE( MID( TEXT( Start_Time__c ), 0, 2 ) ) &lt; 12,
     </fields>
     <fields>
         <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
@@ -2281,6 +2332,7 @@ VALUE( MID( TEXT( Start_Time__c ), 0, 2 ) ) &lt; 12,
         <relationshipLabel>Appointments</relationshipLabel>
         <relationshipName>Appointments</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -2291,6 +2343,7 @@ VALUE( MID( TEXT( Start_Time__c ), 0, 2 ) ) &lt; 12,
         <label>Campaign Monitor Id</label>
         <length>255</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -2317,6 +2370,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <inlineHelpText>Text version of the email sent.</inlineHelpText>
         <label>Email Text Version</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Url</type>
     </fields>
@@ -2328,6 +2382,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <inlineHelpText>Web version of the email campaign.</inlineHelpText>
         <label>Email Web Version</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Url</type>
     </fields>
@@ -2341,6 +2396,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2355,6 +2411,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2369,6 +2426,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2383,6 +2441,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2397,6 +2456,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2411,6 +2471,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2425,6 +2486,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2439,6 +2501,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2453,6 +2516,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2467,6 +2531,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -2479,6 +2544,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <inlineHelpText>World view of the email campaign tracking.</inlineHelpText>
         <label>World View Email Tracking</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Url</type>
     </fields>
@@ -2543,6 +2609,35 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
             <value>Campaign.Visit</value>
         </filters>
         <label>All Visits</label>
+    </listViews>
+    <listViews>
+        <fullName>CAS_Events</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>6/1/2019 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>School__c</field>
+            <operation>equals</operation>
+            <value>CAS</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Campaign.Event_Campaign_Record</value>
+        </filters>
+        <label>CAS Events</label>
+        <sharedTo>
+            <role>Admissions_CAS</role>
+            <role>Admissions_CAS_Manager</role>
+        </sharedTo>
     </listViews>
     <listViews>
         <fullName>Events</fullName>
@@ -2673,6 +2768,7 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         </filters>
         <label>Tomorrow&apos;s Visits</label>
     </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
         <fullName>Appointment</fullName>
@@ -3051,22 +3147,474 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <picklistValues>
             <picklist>Source_Detail__c</picklist>
             <values>
+                <fullName>ACT - Purchased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACT - Self submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ActSix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admitted Student Overnight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>All State Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boys Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boys Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CBSS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CCCU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT - Purchased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT - Self submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cappex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chegg%2FZinch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Christian Connector</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Raptor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College in the Schools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Converge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cru</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daystar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dual Enroll</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Aid Estimator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front Rush</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls State</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Volleyball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guatemala Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOBY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High School Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Journalism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lifefest Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Living the Questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MISP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MNACC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MPSEOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Private College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved by request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved without contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Music Scholarship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NACCAP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRCCUA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRCCUA Legacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National College Fair</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PC%26U%2FCarnegie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PLAN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSEO Info Session</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PTK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preview Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quick Admit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - Non-Responder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - TAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Royal Nation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Royall Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sibling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siblings Weekend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sonshine</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>State Fair</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switching Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer Visit Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Younglife</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Youth for Christ</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>Source_Type__c</picklist>
+            <values>
+                <fullName>Application Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Create</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Submit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Camps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chat</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>Conferences %26 Fairs</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Event %26 Visits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>List %26 Vendor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -3493,22 +4041,474 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <picklistValues>
             <picklist>Source_Detail__c</picklist>
             <values>
+                <fullName>ACT - Purchased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACT - Self submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ActSix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admitted Student Overnight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>All State Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boys Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boys Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CBSS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CCCU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT - Purchased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT - Self submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cappex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chegg%2FZinch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Christian Connector</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Raptor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College in the Schools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Converge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cru</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daystar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dual Enroll</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Aid Estimator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front Rush</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls State</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Volleyball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guatemala Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOBY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High School Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Journalism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lifefest Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Living the Questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MISP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MNACC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MPSEOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Private College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved by request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved without contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Music Scholarship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NACCAP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRCCUA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRCCUA Legacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National College Fair</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PC%26U%2FCarnegie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PLAN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSEO Info Session</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PTK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preview Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quick Admit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - Non-Responder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - TAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Royal Nation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Royall Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sibling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siblings Weekend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sonshine</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>State Fair</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switching Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer Visit Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Younglife</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Youth for Christ</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>Source_Type__c</picklist>
+            <values>
+                <fullName>Application Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Create</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Submit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Camps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chat</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>Conferences %26 Fairs</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Event %26 Visits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>List %26 Vendor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -3895,22 +4895,474 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <picklistValues>
             <picklist>Source_Detail__c</picklist>
             <values>
+                <fullName>ACT - Purchased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACT - Self submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ActSix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admitted Student Overnight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>All State Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boys Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boys Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CBSS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CCCU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT - Purchased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT - Self submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cappex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chegg%2FZinch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Christian Connector</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Raptor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College in the Schools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Converge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cru</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daystar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dual Enroll</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Aid Estimator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front Rush</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls State</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Volleyball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guatemala Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOBY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High School Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Journalism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lifefest Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Living the Questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MISP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MNACC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MPSEOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Private College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved by request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved without contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Music Scholarship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NACCAP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRCCUA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRCCUA Legacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National College Fair</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PC%26U%2FCarnegie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PLAN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSEO Info Session</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PTK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preview Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quick Admit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - Non-Responder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - TAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Royal Nation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Royall Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sibling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siblings Weekend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sonshine</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>State Fair</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switching Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer Visit Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Younglife</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Youth for Christ</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>Source_Type__c</picklist>
+            <values>
+                <fullName>Application Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Create</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Submit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Camps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chat</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>Conferences %26 Fairs</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Event %26 Visits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>List %26 Vendor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5205,22 +6657,474 @@ HYPERLINK(&quot;/apex/&quot; + $Setup.wbsendit__senditsettings__c.wbsendit__Name
         <picklistValues>
             <picklist>Source_Detail__c</picklist>
             <values>
+                <fullName>ACT - Purchased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACT - Self submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ActSix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admitted Student Overnight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>All State Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boys Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boys Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Academy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CBSS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CCCU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT - Purchased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT - Self submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cappex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chegg%2FZinch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Christian Connector</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Raptor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College in the Schools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Converge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cru</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daystar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dual Enroll</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Aid Estimator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Front Rush</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls State</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Girls Volleyball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guatemala Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOBY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High School Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Journalism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lifefest Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Living the Questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MISP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MNACC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MPSEOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Private College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved by request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved without contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Music Scholarship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NACAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NACCAP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NATA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRCCUA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRCCUA Legacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National College Fair</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PC%26U%2FCarnegie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PLAN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSEO Info Session</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PTK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preview Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quick Admit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - Non-Responder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RNL - TAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Royal Nation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Royall Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMEP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sibling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siblings Weekend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sonshine</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>State Fair</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switching Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer Visit Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Younglife</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Youth for Christ</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>Source_Type__c</picklist>
+            <values>
+                <fullName>Application Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Create</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Submit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Camps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chat</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>Conferences %26 Fairs</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Event %26 Visits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>List %26 Vendor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

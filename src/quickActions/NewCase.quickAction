@@ -52,7 +52,6 @@
         </quickActionLayoutColumns>
         <quickActionLayoutColumns/>
     </quickActionLayout>
-    <successMessage>Created ITS Case.</successMessage>
     <targetObject>Case</targetObject>
     <targetRecordType>Case.ITS_General_Request</targetRecordType>
     <type>Create</type>

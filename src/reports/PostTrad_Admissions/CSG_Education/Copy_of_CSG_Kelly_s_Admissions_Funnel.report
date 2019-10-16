@@ -51,7 +51,7 @@
         <field>Opportunity$Academic_Program__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Copy of CSG_Kelly&apos;s Admissions Funnel</name>
+    <name>Kelly&apos;s Admissions Funnel</name>
     <params>
         <name>co</name>
         <value>1</value>

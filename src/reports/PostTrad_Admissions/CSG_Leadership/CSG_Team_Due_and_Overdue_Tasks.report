@@ -72,7 +72,7 @@
         <value>1</value>
     </params>
     <reportType>Opportunities_with_Activities__c</reportType>
-    <roleHierarchyFilter>Post_Trad_Lead</roleHierarchyFilter>
+    <roleHierarchyFilter>Admissions_Post_Trad</roleHierarchyFilter>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>

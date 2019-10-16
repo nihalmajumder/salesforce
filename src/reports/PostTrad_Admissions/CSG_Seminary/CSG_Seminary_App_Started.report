@@ -39,7 +39,7 @@
             <column>Opportunity.Stage_Detail__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>App Submitted,App Completed,Accepted,Fee Paid,Fee Waived</value>
+            <value>App Started,App Submitted,App Completed,Accepted,Fee Paid,Fee Waived</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
@@ -84,7 +84,7 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>Opportunity.Date_App_Started__c</sortColumn>
+    <sortColumn>Opportunity.Date_App_Submitted__c</sortColumn>
     <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>

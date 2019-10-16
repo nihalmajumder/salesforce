@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>Contact$Name</field>
+        <field>Contact.Opportunities__r$Name</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Name</field>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Opportunities__r$Likely_to_Enroll__c</field>
     </columns>
     <columns>
         <field>Contact.Opportunities__r$StageName</field>
@@ -12,16 +13,12 @@
     <columns>
         <field>Contact.Opportunities__r$Stage_Detail__c</field>
     </columns>
-    <columns>
-        <aggregateTypes>Sum</aggregateTypes>
-        <field>Contact.Opportunities__r$Likely_to_Enroll__c</field>
-    </columns>
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Owner</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Christine Holman</value>
+            <value>Christine Holman,Kristin Marvin</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
@@ -33,7 +30,7 @@
             <column>Contact.Opportunities__r$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>2018,2019,2020</value>
+            <value>2019,2020</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>
@@ -41,14 +38,15 @@
             <operator>contains</operator>
             <value>RN</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Test</value>
+        </criteriaItems>
         <language>en_US</language>
     </filter>
     <format>Summary</format>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Contact.Opportunities__r$Academic_Program__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Contact.Opportunities__r$Academic_Term__c</field>

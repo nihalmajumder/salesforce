@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <assignments>
+        <name>Update_Send_Reference</name>
+        <label>Update Send Reference</label>
+        <locationX>451</locationX>
+        <locationY>75</locationY>
+        <assignmentItems>
+            <assignToReference>RequirementResponses.Send_Reference__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>RequirementResponses.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RequirementResponseID</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Requirements</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Update_Send_Reminder</name>
         <label>Update Send Reminder: True</label>
-        <locationX>586</locationX>
-        <locationY>110</locationY>
+        <locationX>556</locationX>
+        <locationY>146</locationY>
         <assignmentItems>
             <assignToReference>RequirementResponses.Send_Reminder__c</assignToReference>
             <operator>Assign</operator>
@@ -26,8 +49,8 @@
     <assignments>
         <name>Update_Send_Reminder_False</name>
         <label>Update Send Reminder: False</label>
-        <locationX>599</locationX>
-        <locationY>410</locationY>
+        <locationX>821</locationX>
+        <locationY>301</locationY>
         <assignmentItems>
             <assignToReference>RequirementResponses.Send_Reminder__c</assignToReference>
             <operator>Assign</operator>
@@ -51,10 +74,60 @@
         <dataType>String</dataType>
     </constants>
     <decisions>
+        <name>Is_RequirementResponseID_Null</name>
+        <label>Is RequirementResponseID Null</label>
+        <locationX>301</locationX>
+        <locationY>375</locationY>
+        <defaultConnector>
+            <targetReference>Send_Reference_Checked</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_rrid</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>RequirementResponseID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Could_not_send</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Send_Reference_Checked</name>
+        <label>Send Reference Checked</label>
+        <locationX>268</locationX>
+        <locationY>174</locationY>
+        <defaultConnector>
+            <targetReference>Update_Send_Reference</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>SendReferenceValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Reminder_is_True</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Send_Reminder_is_True</name>
         <label>Send Reminder is True</label>
-        <locationX>381</locationX>
-        <locationY>264</locationY>
+        <locationX>548</locationX>
+        <locationY>338</locationY>
         <defaultConnector>
             <targetReference>Could_not_send</targetReference>
         </defaultConnector>
@@ -108,15 +181,29 @@
     <recordLookups>
         <name>Get_Requirement_Response</name>
         <label>Get Requirement Response</label>
-        <locationX>233</locationX>
-        <locationY>204</locationY>
+        <locationX>123</locationX>
+        <locationY>235</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Send_Reminder_is_True</targetReference>
+            <targetReference>Is_RequirementResponseID_Null</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Could_not_send</targetReference>
         </faultConnector>
+        <filters>
+            <field>Application_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Submitted</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Application_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
         <filters>
             <field>External_Email__c</field>
             <operator>NotEqualTo</operator>
@@ -131,13 +218,6 @@
                 <elementReference>recordId</elementReference>
             </value>
         </filters>
-        <filters>
-            <field>Send_Reference__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
         <object>Requirement_Response__c</object>
         <outputAssignments>
             <assignToReference>external_email_value</assignToReference>
@@ -148,6 +228,10 @@
             <field>Id</field>
         </outputAssignments>
         <outputAssignments>
+            <assignToReference>SendReferenceValue</assignToReference>
+            <field>Send_Reference__c</field>
+        </outputAssignments>
+        <outputAssignments>
             <assignToReference>current_send_reminder_value</assignToReference>
             <field>Send_Reminder__c</field>
         </outputAssignments>
@@ -155,8 +239,8 @@
     <recordUpdates>
         <name>Update_Requirements</name>
         <label>Update Requirements</label>
-        <locationX>767</locationX>
-        <locationY>247</locationY>
+        <locationX>1051</locationX>
+        <locationY>76</locationY>
         <connector>
             <targetReference>Reminder_Sent_Message</targetReference>
         </connector>
@@ -165,8 +249,8 @@
     <screens>
         <name>Could_not_send</name>
         <label>Could not send</label>
-        <locationX>289</locationX>
-        <locationY>502</locationY>
+        <locationX>307</locationX>
+        <locationY>837</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -182,8 +266,8 @@
     <screens>
         <name>Reminder_Sent_Message</name>
         <label>Reminder Sent Message</label>
-        <locationX>938</locationX>
-        <locationY>247</locationY>
+        <locationX>1172</locationX>
+        <locationY>248</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -201,7 +285,7 @@
     <status>Active</status>
     <textTemplates>
         <name>could_not_send_text_content</name>
-        <text>Could not send reminder email</text>
+        <text>Could not send reminder email. Application not at Submitted?</text>
     </textTemplates>
     <variables>
         <name>current_send_reminder_value</name>
@@ -245,5 +329,12 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Requirement_Response__c</objectType>
+    </variables>
+    <variables>
+        <name>SendReferenceValue</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>

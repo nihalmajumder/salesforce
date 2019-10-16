@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Education_History_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Education_History_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -138,13 +145,8 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Ed_History_Compact_Layout_EMOps_College</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Ed_History_Compact_Layout_EMOps_College</fullName>
         <fields>Name</fields>
@@ -152,6 +154,14 @@
         <fields>Unofficial_GPA__c</fields>
         <fields>GPA__c</fields>
         <label>Ed History Compact Layout - EMOps College</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Ed_History_Compact_Layout_EMOps_HS</fullName>
+        <fields>Name</fields>
+        <fields>Best_School_Name__c</fields>
+        <fields>Unofficial_GPA__c</fields>
+        <fields>GPA__c</fields>
+        <label>Ed History Compact Layout - EMOps HS</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Represents the education history for a person at an education institution</description>
@@ -322,7 +332,6 @@
     </fields>
     <fields>
         <fullName>Document_Status__c</fullName>
-        <defaultValue>&quot;Not Received&quot;</defaultValue>
         <externalId>false</externalId>
         <label>Document Status</label>
         <required>false</required>
@@ -362,6 +371,11 @@
                     <fullName>Purged</fullName>
                     <default>false</default>
                     <label>Purged</label>
+                </value>
+                <value>
+                    <fullName>Not Required</fullName>
+                    <default>false</default>
+                    <label>Not Required</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -536,7 +550,7 @@
         <label>Minnesota MARSS Number</label>
         <length>13</length>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -788,7 +802,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Transcript Evaluation</label>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -871,7 +885,7 @@ NOT(ISBLANK(Previous_Id__c)),
     </fields>
     <fields>
         <fullName>User_Created__c</fullName>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <description>Required EASY field for a custom object</description>
         <externalId>false</externalId>
         <inlineHelpText>Required EASY field</inlineHelpText>
@@ -1854,10 +1868,14 @@ NOT(ISBLANK(Previous_Id__c)),
             </values>
             <values>
                 <fullName>Mandatory</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
             <values>
                 <fullName>Not Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Required</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2470,6 +2488,7 @@ NOT(ISBLANK(Previous_Id__c)),
     <recordTypes>
         <fullName>High_School</fullName>
         <active>true</active>
+        <compactLayoutAssignment>Ed_History_Compact_Layout_EMOps_HS</compactLayoutAssignment>
         <label>High School</label>
         <picklistValues>
             <picklist>Degree__c</picklist>
@@ -2697,10 +2716,14 @@ NOT(ISBLANK(Previous_Id__c)),
             </values>
             <values>
                 <fullName>Mandatory</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
             <values>
                 <fullName>Not Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Required</fullName>
                 <default>false</default>
             </values>
             <values>

@@ -16,7 +16,7 @@ public class AcademicPetitionDecisionForm {
                         Inputs_perspective__c, Registrar_Summary__c, Decision_Maker_Name__c, Role__c, Decision__c,
                         Approval_Description__c, grace_grant_amount__c, approval_old_grade__c, approval_new_grade__c,
                         grade_change_factors__c, approval_academic_year__c, approval_extension_date__c,
-                        approval_course_substitution__c, Denial_Description__c, Decision_Submitted__c,
+                        approval_course_substitution__c, Denial_Description__c, Comments__c, Decision_Submitted__c,
                         Supporting_Documentation__c, Supporting_Documentation2__c, Supporting_Documentation3__c,
                         Supporting_Documentation4__c, Supporting_Documentation5__c
                 FROM Case WHERE Id = :caseId
@@ -296,11 +296,11 @@ public class AcademicPetitionDecisionForm {
     }
     public String comments{
         get{
-            return '';
+            return editCase.Comments__c;
         }
-//        set{
-//            editCase.Comments__c = '';
-//        }
+        set{
+            editCase.Comments__c = value;
+        }
     }
 
     /*

@@ -6,19 +6,17 @@
     <columns>
         <field>START_DATE</field>
     </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>NUM_CONTACTS</field>
+    </columns>
     <description>List of upcoming info post-trad sessions.</description>
     <filter>
         <criteriaItems>
             <column>Campaign.School__c</column>
             <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>Post Trad</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>START_DATE</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>greaterOrEqual</operator>
-            <value>TODAY</value>
+            <operator>contains</operator>
+            <value>7/23</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

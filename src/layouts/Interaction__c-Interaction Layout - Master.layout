@@ -51,11 +51,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Other_Phone__c</field>
+                <field>Is_Legacy__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Is_Legacy__c</field>
+                <field>Is_Veteran__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -149,6 +149,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Preferred_Phone__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Mobile_Phone__c</field>
             </layoutItems>
             <layoutItems>
@@ -158,6 +162,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Work_Phone__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Other_Phone__c</field>
             </layoutItems>
             <layoutItems>
                 <emptySpace>true</emptySpace>

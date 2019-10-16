@@ -7,6 +7,10 @@
                 <value>false</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>hideChatterActions</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>numVisibleActions</name>
                 <value>6</value>
             </componentInstanceProperties>
@@ -212,6 +216,10 @@
                 <name>pageName</name>
                 <value>ApplicationAdminOpportunityChecklist</value>
             </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showLabel</name>
+                <value>true</value>
+            </componentInstanceProperties>
             <componentName>flexipage:visualforcePage</componentName>
         </componentInstances>
         <name>Facet-bf1bdfe1-0fb9-4f53-acf1-fd3622c84da5</name>
@@ -338,6 +346,35 @@
                 <value>NONE</value>
             </componentInstanceProperties>
             <componentName>force:relatedListSingleContainer</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.School_College__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Undergraduate</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Opportunity.Contact__c</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>CampaignMembers</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.School_College__c}</leftValue>
+                    <operator>NE</operator>
+                    <rightValue>Undergraduate</rightValue>
+                </criteria>
+            </visibilityRule>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>

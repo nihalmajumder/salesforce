@@ -3,6 +3,18 @@
     <columns>
         <field>Opportunity$StageName</field>
     </columns>
+    <columns>
+        <field>Opportunity$Date_Inquired__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Date_Accepted__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Date_Confirmed__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Date_Enrolled__c</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Opportunity$StageName</column>
@@ -20,13 +32,19 @@
             <column>Opportunity$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Fall 2019</value>
+            <value>Fall 2018</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Opportunity$Likely_to_Enroll__c</column>
+            <column>Opportunity$Academic_Program__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Auditor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Stage_Detail__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>1</value>
+            <value>Enrolled</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -36,18 +54,13 @@
         <field>Opportunity$School_College__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$Academic_Program__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <name>CSG_Likely Count Fall 2019</name>
+    <name>CSG_Enrolled Fall 2018</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
     <reportType>Opportunities__c</reportType>
-    <roleHierarchyFilter>Admissions_Post_Trad</roleHierarchyFilter>
+    <roleHierarchyFilter>System_Admin</roleHierarchyFilter>
     <scope>organization</scope>
     <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>

@@ -15,6 +15,12 @@
     <columns>
         <field>Contact.Opportunities__r$School_College__c</field>
     </columns>
+    <columns>
+        <field>Contact.Opportunities__r$StageName</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Owner</column>
@@ -23,16 +29,16 @@
             <value>Kristin Marvin</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Contact.Opportunities__r$Opportunity_Term_Code__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>greaterOrEqual</operator>
-            <value>202000</value>
-        </criteriaItems>
-        <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>File Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Opportunity_Term_Code__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>201972</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

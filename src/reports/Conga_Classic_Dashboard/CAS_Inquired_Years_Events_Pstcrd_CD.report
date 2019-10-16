@@ -45,7 +45,7 @@
             <column>Contact.Opportunities__r$Days_Since_Communication_Inquiry_Date__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
-            <value>10</value>
+            <value>7</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Admission_Type__c</column>

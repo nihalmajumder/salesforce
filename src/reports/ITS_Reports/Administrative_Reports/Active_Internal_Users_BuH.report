@@ -66,10 +66,6 @@
         <field>User$Profile.UserLicense</field>
     </columns>
     <columns>
-        <aggregateTypes>Sum</aggregateTypes>
-        <field>User*User$Reactivate__c</field>
-    </columns>
-    <columns>
         <field>User$Name</field>
     </columns>
     <filter>

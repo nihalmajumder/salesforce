@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Test_Score_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Test_Score_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -136,11 +143,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -463,6 +465,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Purged</fullName>
+                    <default>false</default>
+                    <label>Purged</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -525,9 +532,9 @@
         <fullName>IELTS_Listening_Score__c</fullName>
         <externalId>false</externalId>
         <label>IELTS Listening Score</label>
-        <precision>3</precision>
+        <precision>4</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>1</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -537,9 +544,9 @@
         <fullName>IELTS_Overall_Band_Score__c</fullName>
         <externalId>false</externalId>
         <label>IELTS Overall Band Score</label>
-        <precision>3</precision>
+        <precision>4</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>1</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -549,9 +556,9 @@
         <fullName>IELTS_Reading_Score__c</fullName>
         <externalId>false</externalId>
         <label>IELTS Reading Score</label>
-        <precision>3</precision>
+        <precision>4</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>1</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -561,9 +568,9 @@
         <fullName>IELTS_Speaking_Score__c</fullName>
         <externalId>false</externalId>
         <label>IELTS Speaking Score</label>
-        <precision>3</precision>
+        <precision>4</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>1</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -573,9 +580,9 @@
         <fullName>IELTS_Writing_Score__c</fullName>
         <externalId>false</externalId>
         <label>IELTS Writing Score</label>
-        <precision>3</precision>
+        <precision>4</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>1</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -1061,8 +1068,9 @@
     </fields>
     <fields>
         <fullName>Unofficial_Received_Date_2__c</fullName>
-        <description>Unofficial Received Date</description>
+        <description>no longer used</description>
         <externalId>false</externalId>
+        <inlineHelpText>no longer used</inlineHelpText>
         <label>Unofficial Received Date 2</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -1113,6 +1121,10 @@
             </values>
             <values>
                 <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purged</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1182,6 +1194,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Purged</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Received</fullName>
                 <default>false</default>
             </values>
@@ -1241,6 +1257,10 @@
             </values>
             <values>
                 <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purged</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1305,6 +1325,10 @@
             </values>
             <values>
                 <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purged</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1374,6 +1398,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Purged</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Received</fullName>
                 <default>false</default>
             </values>
@@ -1435,6 +1463,10 @@
             </values>
             <values>
                 <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purged</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1509,6 +1541,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Purged</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Received</fullName>
                 <default>false</default>
             </values>
@@ -1570,6 +1606,10 @@
             </values>
             <values>
                 <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purged</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1639,6 +1679,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Purged</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Received</fullName>
                 <default>false</default>
             </values>
@@ -1700,6 +1744,10 @@
             </values>
             <values>
                 <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purged</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1771,6 +1819,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Purged</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Received</fullName>
                 <default>false</default>
             </values>
@@ -1825,6 +1877,10 @@
         <label>Test for Credit</label>
         <picklistValues>
             <picklist>Document_Status__c</picklist>
+            <values>
+                <fullName>Purged</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>Received</fullName>
                 <default>true</default>

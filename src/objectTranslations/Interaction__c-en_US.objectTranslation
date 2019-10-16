@@ -343,6 +343,10 @@
         <label><!-- Interaction Source --></label>
         <name>Interaction_Source__c</name>
         <picklistValues>
+            <masterLabel>Account Register</masterLabel>
+            <translation><!-- Account Register --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Application</masterLabel>
             <translation><!-- Application --></translation>
         </picklistValues>
@@ -357,6 +361,10 @@
         <picklistValues>
             <masterLabel>Application Submit</masterLabel>
             <translation><!-- Application Submit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Member Create</masterLabel>
+            <translation><!-- Family Member Create --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Manual Entry</masterLabel>
@@ -407,6 +415,10 @@
     <fields>
         <label><!-- Is Primary Source --></label>
         <name>Is_Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Veteran --></label>
+        <name>Is_Veteran__c</name>
     </fields>
     <fields>
         <label><!-- Last Name --></label>
@@ -476,6 +488,10 @@
         <picklistValues>
             <masterLabel>Registrar</masterLabel>
             <translation><!-- Registrar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Text</masterLabel>
+            <translation><!-- Text --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Transcripts</masterLabel>
@@ -3695,6 +3711,10 @@
             <translation><!-- Parent --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Petersons</masterLabel>
+            <translation><!-- Petersons --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Phone</masterLabel>
             <translation><!-- Phone --></translation>
         </picklistValues>
@@ -3765,6 +3785,10 @@
         <picklistValues>
             <masterLabel>Switching Terms</masterLabel>
             <translation><!-- Switching Terms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Text</masterLabel>
+            <translation><!-- Text --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Transfer Visit Day</masterLabel>

@@ -54,11 +54,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAPSGS_Bond_Postcard_CD_aih</report>
+            <report>Conga_Classic_Dashboard/CAPS_Accepted_Letter_CD_cdW</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAPS/GS Bond Postcard</title>
+            <title>CAPS Acceptance Letter</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -89,25 +89,6 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
-            <header>ON HOLD - NO LONGER SENDING</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAPS_Inquired_Apply_Mailer_CD_6jO</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>CAPS Inquired Apply Mailer</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Funnel</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
             <report>Conga_Classic_Dashboard/GS_Counseling_Program_Director_Ltr_CD</report>
             <showPercentage>false</showPercentage>
@@ -126,12 +107,13 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
+            <header>Sent by Others</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/GS_DNP_Program_Director_Letter_CD</report>
+            <report>Conga_Classic_Dashboard/CAPSGS_Bond_Postcard_CD_aih</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>GS DNP Program Director Letter</title>
+            <title>CAPS/GS Bond Postcard</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
@@ -153,25 +135,6 @@
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>GS Rejected Letter</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Funnel</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <groupingSortProperties/>
-            <header>ON HOLD - NO LONGER SENDING</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/GS_Inquired_Apply_Mailer_CD</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>GS Inquired Apply Mailer</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -208,6 +171,43 @@
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>CAPS Waitlist Letter</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Funnel</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <header>ON HOLD - NO LONGER SENDING</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Conga_Classic_Dashboard/GS_Inquired_Apply_Mailer_CD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>GS Inquired Apply Mailer</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Funnel</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <legendPosition>Bottom</legendPosition>
+            <report>Conga_Classic_Dashboard/GS_DNP_Program_Director_Letter_CD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>GS DNP Program Director Letter</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -260,25 +260,6 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
-            <header>ON HOLD - NO LONGER SENDING</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/GS_Accepted_Fin_Aid_Postcard_CD</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>GS Accepted Fin Aid Postcard</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Funnel</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
             <report>Conga_Classic_Dashboard/GS_PA_Program_Director_Letter_CD</report>
             <showPercentage>false</showPercentage>
@@ -298,11 +279,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAPS_Accepted_Letter_CD_cdW</report>
+            <report>Conga_Classic_Dashboard/CAPS_SpecialAudit_Accepted_Letter_CD_gH4</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAPS Acceptance Letter</title>
+            <title>CAPS Special Acceptance Letter</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -315,12 +296,32 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
+            <header>ON HOLD - NO LONGER SENDING</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAPS_SpecialAudit_Accepted_Letter_CD_gH4</report>
+            <report>Conga_Classic_Dashboard/GS_Accepted_Fin_Aid_Postcard_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAPS Special Acceptance Letter</title>
+            <title>GS Accepted Fin Aid Postcard</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Funnel</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <header>ON HOLD - NO LONGER SENDING</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Conga_Classic_Dashboard/CAPS_Inquired_Apply_Mailer_CD_6jO</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>CAPS Inquired Apply Mailer</title>
             <useReportChart>false</useReportChart>
         </components>
     </rightSection>

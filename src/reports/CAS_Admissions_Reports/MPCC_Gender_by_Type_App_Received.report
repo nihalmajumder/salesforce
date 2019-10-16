@@ -71,7 +71,7 @@
         <field>Contact$hed__Gender__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>MPCC Gender by Type - App Received</name>
+    <name>MPCC -- App Received</name>
     <params>
         <name>co</name>
         <value>1</value>

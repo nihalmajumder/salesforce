@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>FULL_NAME</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
     <columns>
         <field>ROLLUP_DESCRIPTION</field>
-    </columns>
-    <columns>
-        <field>FULL_NAME</field>
     </columns>
     <columns>
         <field>OPPORTUNITY_NAME</field>
@@ -13,13 +34,7 @@
         <field>STAGE_NAME</field>
     </columns>
     <columns>
-        <field>FISCAL_QUARTER</field>
-    </columns>
-    <columns>
         <field>AGE</field>
-    </columns>
-    <columns>
-        <field>CLOSE_DATE</field>
     </columns>
     <columns>
         <field>CREATED_DATE</field>
@@ -29,15 +44,26 @@
             <column>FULL_NAME</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Garrett,Burgraff,Ulrikson</value>
+            <value>Garrett,Burgraff,Ulrikson,Blaede,Sebey,Clint</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>File Closed</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
-    <format>Tabular</format>
-    <name>B/L Card Writing</name>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Sem. + B/L Card Writing</name>
     <params>
         <name>open</name>
-        <value>all</value>
+        <value>open</value>
     </params>
     <params>
         <name>probability</name>
@@ -53,7 +79,7 @@
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
-        <dateColumn>Opportunity.Communication_Inquiry_Date__c</dateColumn>
+        <dateColumn>CREATED_DATE</dateColumn>
         <interval>INTERVAL_THISWEEK</interval>
     </timeFrameFilter>
 </Report>

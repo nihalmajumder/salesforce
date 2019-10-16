@@ -4,7 +4,7 @@
 
 <apex:page id="AcademicPetitionDecisionForm" showHeader="false" standardStylesheets="false"
            sideBar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0"
-           controller="AcademicPetitionDecisionForm">AcademicPetitionDecisionForm
+           controller="AcademicPetitionDecisionForm">
     <html lang="en">
         <head>
             <meta charset="utf-8"/>
@@ -536,17 +536,28 @@
 
                         <h4>Registrar Summary:</h4>
                         <p>
-                                    {!registrarSummary}
-                                </p>
+                            {!registrarSummary}
+                        </p>
                     </div>
                     <hr/>
                     <div>
                         <h2>SUPPORTING DOCUMENTATION</h2>
+                        <p rendered="{!supportingDocumentation}">
+                            <a href="{!supportingDocumentation}">{!supportingDocumentation}</a>
+                        </p>
+                        <p rendered="{!supportingDocumentation2}">
+                            <a href="{!supportingDocumentation2}">{!supportingDocumentation2}</a>
+                        </p>
+                        <p rendered="{!supportingDocumentation3}">
+                            <a href="{!supportingDocumentation3}">{!supportingDocumentation3}</a>
+                        </p>
+                        <p rendered="{!supportingDocumentation4}">
+                            <a href="{!supportingDocumentation4}">{!supportingDocumentation4}</a>
+                        </p>
+                        <p rendered="{!supportingDocumentation5}">
+                            <a href="{!supportingDocumentation5}">{!supportingDocumentation5}</a>
+                        </p>
 
-                        <h4>Registrar Summary:</h4>
-                        <p>
-                                    {!registrarSummary}
-                                </p>
                     </div>
                     <hr/>
                     <div>
@@ -740,7 +751,8 @@
 
                             <!-- We want this div to be hidden unless Denial Reason is set to "Other" or for an
                                  edge case when Petition_Type == "Exception - Grade Change" -->
-                            <!--<div id="additionalComments" style="display: none;">-->
+                            <!--<div id="additional
+                            " style="display: none;">-->
                             <div id="additionalComments">
                                 <table>
                                     <!-- Old field: Other_Notes2  -->
@@ -750,6 +762,7 @@
                                         </td>
                                         <td class="right">
                                             <apex:inputTextarea id="comments" value="{!comments}"/>
+                                            <div style="font-size: 12px;"><i> 255 character limit. Error will occur on submit if over limit. </i></div>
                                         </td>
                                     </tr>
                                 </table>
@@ -804,7 +817,6 @@
                                     activate("additionalComments");
                                 }
                                 else {
-                                    debugger;
                                     deactivate("additionalComments");
                                 }
                             });

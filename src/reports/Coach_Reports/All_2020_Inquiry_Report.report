@@ -41,17 +41,20 @@
         <field>Contact$Phone</field>
     </columns>
     <columns>
+        <field>Contact.Opportunities__r$Name</field>
+    </columns>
+    <columns>
         <field>Contact.Opportunities__r$Inquiry_Date__c</field>
     </columns>
     <columns>
         <field>Contact.Opportunities__r$Date_Inquired__c</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Name</field>
-    </columns>
-    <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>Contact.Opportunities__r$Current_Stage_Age__c</field>
+    </columns>
+    <columns>
+        <field>Contact$LeadSource</field>
     </columns>
     <filter>
         <criteriaItems>

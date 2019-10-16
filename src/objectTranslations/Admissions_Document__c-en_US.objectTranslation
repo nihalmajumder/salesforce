@@ -18,10 +18,6 @@
         <relationshipLabel><!-- Admissions Documents --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Attachment --></label>
-        <name>Attachment__c</name>
-    </fields>
-    <fields>
         <label><!-- Checklist Type --></label>
         <name>Checklist_Type__c</name>
         <picklistValues>
@@ -137,6 +133,10 @@
         <picklistValues>
             <masterLabel>Mandatory</masterLabel>
             <translation><!-- Mandatory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purged</masterLabel>
+            <translation><!-- Purged --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Received</masterLabel>

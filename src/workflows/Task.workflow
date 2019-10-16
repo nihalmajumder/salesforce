@@ -21,6 +21,11 @@
             <operation>equals</operation>
             <value>Completed</value>
         </criteriaItems>
+        <criteriaItems>
+            <field>User.Email</field>
+            <operation>notEqual</operation>
+            <value>josh-saterdalen@bethel.edu</value>
+        </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>

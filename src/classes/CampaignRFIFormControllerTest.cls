@@ -9,7 +9,7 @@ public with sharing class CampaignRFIFormControllerTest {
 
     static testMethod void testController(){
 
-        Campaign rfi_campaign = new Campaign(RecordTypeId = recTypeId, Name='RFI Campaign Name', RFI_Version__c='Post-Trad', Source_Type__c='Event & Visits', Source_Detail__c='Other', School__c='CAS');
+        Campaign rfi_campaign = new Campaign(RecordTypeId = recTypeId, Name='RFI Campaign Name', RFI_Version__c='Post-Trad', Source_Type__c='Event & Visits', Source_Detail__c='Other', School__c='CAS', RFI_Attributes__c='Legacy');
 
         insert rfi_campaign;
         //create the controller to pass into apex class
@@ -18,8 +18,8 @@ public with sharing class CampaignRFIFormControllerTest {
         ApexPages.StandardController sc = new ApexPages.StandardController(rfi_campaign);
         CampaignRFIFormController controller = new CampaignRFIFormController(sc);
 
-        // not sure if this is the right thing to do, but call all the functions.
-        controller.getSchools();
+        // not sure if this is the right thing to do, but call all the functions.CampaignRFIFormControllerTest
+        controller.getSchoolOptions();
         controller.getGrad_years();
         controller.getPrograms();
 

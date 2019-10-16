@@ -10,6 +10,9 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Contact.Financial_Aid__r$EFC_9_Month__c</field>
     </columns>
+    <columns>
+        <field>Contact.Financial_Aid__r$Package_Date__c</field>
+    </columns>
     <crossFilters>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
@@ -23,6 +26,12 @@
             <operator>notEqual</operator>
             <value>File Closed</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Student_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>New,New Student Previous PSEO,Transfer</value>
+        </criteriaItems>
         <operation>with</operation>
         <primaryTableColumn>Contact$Id</primaryTableColumn>
         <relatedTable>OCR-Opportunity</relatedTable>
@@ -34,6 +43,12 @@
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Financial_Aid__r$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>2019-20</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -48,6 +63,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.Financial_Aid__r$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$Birthdate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

@@ -37,9 +37,6 @@
         <field>Opportunity.Current_Stage_Age__c</field>
     </columns>
     <columns>
-        <field>Opportunity.Admissions_Confidence__c</field>
-    </columns>
-    <columns>
         <field>CON.ADDRESS2_CITY</field>
     </columns>
     <columns>
@@ -68,16 +65,22 @@
             <value>File Closed</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Opportunity.Stage_Detail__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>notContain</operator>
-            <value>inquired,pre-applied,closed</value>
-        </criteriaItems>
-        <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Fall 2019 - CAS</value>
+            <value>Fall 2020 - CAS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Stage_Detail__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Inquired,Pre-Applied</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Inquired,Applied,Accepted,Confirmed</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -97,7 +100,7 @@
         <field>Opportunity.Stage_Detail__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Funnel Status</name>
+    <name>Funnel Report</name>
     <params>
         <name>open</name>
         <value>all</value>
@@ -115,6 +118,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>false</showGrandTotal>
     <showSubTotals>false</showSubTotals>
+    <sortColumn>Opportunity.Current_Stage_Age__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CREATED_DATE</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

@@ -18,6 +18,10 @@
     <columns>
         <field>Opportunity$Stage_Detail__c</field>
     </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity$Likely_to_Enroll__c</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Opportunity.Activities$Status</column>
@@ -37,7 +41,7 @@
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Opportunity.Activities$Owner</field>
-        <sortOrder>Asc</sortOrder>
+        <sortOrder>Desc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -55,6 +59,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>Opportunity.Activities$Subject</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Opportunity.Activities$ActivityDate</dateColumn>
         <interval>INTERVAL_LAST120</interval>

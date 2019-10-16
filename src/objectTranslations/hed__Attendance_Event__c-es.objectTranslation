@@ -25,14 +25,6 @@
             <masterLabel>Class Tardy</masterLabel>
             <translation>Retraso de clase</translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>Day Absence</masterLabel>
-            <translation>Ausencia de día</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Day Tardy</masterLabel>
-            <translation>Retraso de día</translation>
-        </picklistValues>
     </fields>
     <fields>
         <help>El estudiante que está retrasado o ausente.</help>

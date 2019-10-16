@@ -56,6 +56,51 @@
             <field>User__c</field>
             <table>Geographic_Territory_Assignment__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.Postal_Code__c</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.Name</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.Id</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.State__c</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.State_Code__c</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.County__c</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.City__c</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.County_Code__c</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Geographic_Territory__c.County_ID__c</field>
+            <table>Geographic_Territory_Assignment__c</table>
+        </columns>
         <masterLabel>Geographic Territory Assignments</masterLabel>
     </sections>
 </ReportType>

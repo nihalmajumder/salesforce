@@ -19,19 +19,22 @@
         <field>Contact$LastName</field>
     </columns>
     <columns>
+        <field>Contact$Preferred_First_Name__c</field>
+    </columns>
+    <columns>
         <field>Contact$FirstName</field>
     </columns>
     <columns>
-        <field>Contact.Education_Histories__r$School_Not_Found_Name__c</field>
+        <field>Contact.Education_Histories__r$Best_School_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Education_Histories__r$School_CEEB__c</field>
     </columns>
     <columns>
         <field>Contact.Education_Histories__r$Document_Status_Description__c</field>
     </columns>
     <columns>
         <field>Contact$Email</field>
-    </columns>
-    <columns>
-        <field>Contact.Education_Histories__r$School_CEEB__c</field>
     </columns>
     <crossFilters>
         <criteriaItems>
@@ -101,8 +104,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>Contact.Education_Histories__r$Document_Date_Received__c</sortColumn>
-    <sortOrder>Desc</sortOrder>
+    <sortColumn>Contact$LastName</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

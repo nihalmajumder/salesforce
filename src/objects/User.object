@@ -198,6 +198,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>User_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>User_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -330,6 +337,16 @@ WARNING: This will expose some of your emails to the Unresolved Items Agent.</in
         <required>false</required>
         <scale>0</scale>
         <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>FirstName +&quot; &quot;+ LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full Name</label>
+        <required>false</required>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>

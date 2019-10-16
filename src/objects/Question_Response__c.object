@@ -147,7 +147,7 @@
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>false</enableSearch>
@@ -161,6 +161,7 @@
         <label>City</label>
         <length>40</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -172,6 +173,7 @@
         <label>Country</label>
         <length>80</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -182,6 +184,7 @@
         <formula>IsPopulated__c == true || IsShown__c == false || IsRequired__c == false</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>IsComplete</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -190,6 +193,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>IsPopulated</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -198,6 +202,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>IsRequired</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -206,6 +211,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>IsShown</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -216,6 +222,7 @@
         <inlineHelpText>The date/time that IsPopulated was set to true</inlineHelpText>
         <label>PopulatedOn</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -226,6 +233,7 @@
         <label>Postal Code</label>
         <length>20</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -238,6 +246,7 @@
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Question Label</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -252,6 +261,7 @@
         <relationshipLabel>Question Responses</relationshipLabel>
         <relationshipName>Question_Responses</relationshipName>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -265,6 +275,7 @@
         <relationshipName>Question_Responses</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
@@ -276,6 +287,7 @@
         <label>State</label>
         <length>80</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -286,6 +298,7 @@
         <externalId>false</externalId>
         <label>Street</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
     </fields>
@@ -295,6 +308,7 @@
         <description>Checkbox value.</description>
         <externalId>false</externalId>
         <label>Value Checkbox</label>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -306,6 +320,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>4</scale>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
@@ -315,6 +330,7 @@
         <externalId>false</externalId>
         <label>Value Date/Time</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -324,6 +340,7 @@
         <externalId>false</externalId>
         <label>Value Date</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
@@ -333,6 +350,7 @@
         <externalId>false</externalId>
         <label>Value Email</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Email</type>
         <unique>false</unique>
@@ -343,6 +361,7 @@
         <externalId>false</externalId>
         <label>Value Long Text Area</label>
         <length>32768</length>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>10</visibleLines>
@@ -355,6 +374,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>4</scale>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
@@ -367,6 +387,7 @@
         <precision>8</precision>
         <required>false</required>
         <scale>4</scale>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Percent</type>
     </fields>
@@ -376,6 +397,7 @@
         <externalId>false</externalId>
         <label>Value Phone</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Phone</type>
     </fields>
@@ -385,6 +407,7 @@
         <externalId>false</externalId>
         <label>Value Text Area</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
     </fields>
@@ -397,6 +420,7 @@
         <maskChar>X</maskChar>
         <maskType>all</maskType>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>EncryptedText</type>
     </fields>
@@ -407,6 +431,7 @@
         <label>Value Text</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -417,6 +442,7 @@
         <externalId>false</externalId>
         <label>Value URL</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
@@ -424,6 +450,7 @@
     <nameField>
         <displayFormat>QR-{0000000}</displayFormat>
         <label>Question Response Number</label>
+        <trackHistory>true</trackHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Question Responses</pluralLabel>

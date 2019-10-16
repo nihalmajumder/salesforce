@@ -293,7 +293,7 @@
     </fields>
     <fields>
         <fullName>User_Created__c</fullName>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <description>Required EASY field for a custom object</description>
         <externalId>false</externalId>
         <inlineHelpText>Required EASY field</inlineHelpText>

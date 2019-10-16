@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldUpdates>
+        <fullName>Lead_Set_owner_to_Webmaster</fullName>
+        <field>OwnerId</field>
+        <lookupValue>webmaster+neworg@bethel.edu</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Lead: Set owner to Webmaster</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Mogli_SMS__UpdateMogliNumber</fullName>
         <description>Update Mogli Number based on value in Mobile field (and remove all non-numerical values)</description>
         <field>Mogli_SMS__Mogli_Number__c</field>
@@ -59,6 +69,21 @@ SUBSTITUTE(MobilePhone, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot
         <description>This WF rule can be activated if you want to notify Groove that a new lead was created. That way Groove can e.g. instantly import the lead to a Groove Flow that has auto import enabled (and meets the auto-import rules of that Flow).</description>
         <formula>ISNEW()</formula>
         <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead%3A Change owner if created by Applicant</fullName>
+        <actions>
+            <name>Lead_Set_owner_to_Webmaster</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>equals</operation>
+            <value>Applicant Community Login User</value>
+        </criteriaItems>
+        <description>Used to update the Owner when Applicants create Accounts via Interactions. This happens during the &quot;Family Member&quot; automation flow.</description>
+        <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
         <fullName>Mogli_SMS__WITH PLUS - onCreateEditWhenMobileNotNull</fullName>

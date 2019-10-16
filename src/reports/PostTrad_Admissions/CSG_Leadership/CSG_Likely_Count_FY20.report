@@ -28,12 +28,18 @@
             <operator>equals</operator>
             <value>1</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Academic_Program__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Auditor</value>
+        </criteriaItems>
         <language>en_US</language>
     </filter>
     <format>Matrix</format>
     <groupingsAcross>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$Academic_Term__c</field>
+        <field>Opportunity$Term_Description__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsAcross>
     <groupingsDown>
@@ -52,7 +58,7 @@
         <value>1</value>
     </params>
     <reportType>Opportunities__c</reportType>
-    <roleHierarchyFilter>Admissions_Post_Trad</roleHierarchyFilter>
+    <roleHierarchyFilter>System_Admin</roleHierarchyFilter>
     <scope>organization</scope>
     <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>

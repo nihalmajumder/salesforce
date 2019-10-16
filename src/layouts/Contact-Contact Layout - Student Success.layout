@@ -511,6 +511,7 @@
         <fields>NAME</fields>
         <fields>Type__c</fields>
         <fields>Last_Name__c</fields>
+        <fields>Signature__c</fields>
         <fields>Signature_Date__c</fields>
         <fields>Date_Received__c</fields>
         <relatedList>Reference__c.Contact__c</relatedList>

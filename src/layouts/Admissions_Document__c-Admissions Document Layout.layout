@@ -37,10 +37,6 @@
                 <behavior>Readonly</behavior>
                 <field>Old_Org_Link__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Attachment__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

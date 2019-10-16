@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Geographic_Territory_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Geographic_Territory_Record_Page</content>
         <formFactor>Large</formFactor>
@@ -136,11 +143,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -254,22 +256,6 @@
     </fields>
     <label>Geographic Territory</label>
     <listViews>
-        <fullName>All</fullName>
-        <columns>NAME</columns>
-        <columns>City__c</columns>
-        <columns>Postal_Code__c</columns>
-        <columns>County__c</columns>
-        <columns>State__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>State__c</field>
-            <operation>equals</operation>
-            <value>MN,Minnesota</value>
-        </filters>
-        <label>All</label>
-        <language>en_US</language>
-    </listViews>
-    <listViews>
         <fullName>All1</fullName>
         <columns>NAME</columns>
         <columns>State__c</columns>
@@ -283,11 +269,6 @@
             <operation>startsWith</operation>
             <value>MN</value>
         </filters>
-        <label>All</label>
-    </listViews>
-    <listViews>
-        <fullName>All2</fullName>
-        <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>

@@ -10,8 +10,8 @@
         </sharedTo>
         <criteriaItems>
             <field>School_College__c</field>
-            <operation>equals</operation>
-            <value>Undergraduate</value>
+            <operation>notEqual</operation>
+            <value>Adult Undergraduate,Graduate,Seminary</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
@@ -24,8 +24,8 @@
         </sharedTo>
         <criteriaItems>
             <field>School_College__c</field>
-            <operation>equals</operation>
-            <value>Adult Undergraduate,Graduate,Seminary</value>
+            <operation>notEqual</operation>
+            <value>Undergraduate</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingOwnerRules>
@@ -34,6 +34,18 @@
         <label>Opp: Marketing Sharing</label>
         <sharedTo>
             <group>Marketing</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Opp_Registrar_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow registrar users to edit all opportunities</description>
+        <label>Opp: Registrar RW</label>
+        <sharedTo>
+            <group>Registrar</group>
         </sharedTo>
         <sharedFrom>
             <allInternalUsers></allInternalUsers>

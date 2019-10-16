@@ -43,7 +43,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Admission_Status__c</field>
+            <field>Stage__c</field>
             <table>Case</table>
         </columns>
         <columns>
@@ -393,7 +393,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>heda_program_formula__c</field>
+            <field>Related_Program__c</field>
             <table>Case</table>
         </columns>
         <columns>
@@ -428,7 +428,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>New_Admission_Status__c</field>
+            <field>New_Stage_Detail__c</field>
             <table>Case</table>
         </columns>
         <columns>

@@ -28,7 +28,7 @@
         <criteriaItems>
             <field>RecordTypeId</field>
             <operation>equals</operation>
-            <value>ITS - Create/Edit Program,ITS - General Request,ITS - Segment/Mailing List,ITS - Access</value>
+            <value>ITS - New User,ITS - Create/Edit Program,ITS - General Request,ITS - Segment/Mailing List</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
@@ -42,7 +42,7 @@
         <criteriaItems>
             <field>RecordTypeId</field>
             <operation>equals</operation>
-            <value>ITS - Create/Edit Program,ITS - General Request,ITS - Segment/Mailing List,ITS - Access</value>
+            <value>ITS - New User,ITS - Create/Edit Program,ITS - General Request,ITS - Segment/Mailing List</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
@@ -95,7 +95,7 @@
         <criteriaItems>
             <field>RecordTypeId</field>
             <operation>equals</operation>
-            <value>EMOps - Opportunity Request,ITS - General Request,EMOps - Admission Document,ITS - Access,EMOps - Duplicate,ITS - Create/Edit Program,ITS - Segment/Mailing List</value>
+            <value>EMOps - Opportunity Request,ITS - New User,ITS - Create/Edit Program,ITS - General Request,EMOps - Admission Document,ITS - Segment/Mailing List</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>

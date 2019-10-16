@@ -59,7 +59,7 @@
             <column>RECORDTYPE</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>Case.ITS_Access,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List,Case.Seminary</value>
+            <value>Case.ITS_New_User,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List,Case.Seminary</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

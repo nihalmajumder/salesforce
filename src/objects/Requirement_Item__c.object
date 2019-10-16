@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Requirement_Item_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Requirement_Item_Record_Page</content>
         <formFactor>Large</formFactor>
@@ -136,11 +143,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -834,10 +836,6 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Earned BA or BS degree from a regionally accredited or internationally recognized institution</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Education License</fullName>
                 <default>false</default>
             </values>
@@ -890,7 +888,7 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Questionnaire</fullName>
+                <fullName>Post-Bacc Essay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1586,6 +1584,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>2-BS-B-SCLA</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>2-BS-FINP</fullName>
                 <default>false</default>
             </values>
@@ -1595,6 +1597,10 @@
             </values>
             <values>
                 <fullName>2-BS-NURP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BSN-NURP</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2096,10 +2102,6 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Earned BA or BS degree from a regionally accredited or internationally recognized institution</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Education License</fullName>
                 <default>false</default>
             </values>
@@ -2152,7 +2154,7 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Questionnaire</fullName>
+                <fullName>Post-Bacc Essay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2832,6 +2834,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>2-BS-B-SCLA</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>2-BS-FINP</fullName>
                 <default>false</default>
             </values>
@@ -2841,6 +2847,10 @@
             </values>
             <values>
                 <fullName>2-BS-NURP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BSN-NURP</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -3345,10 +3355,6 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Earned BA or BS degree from a regionally accredited or internationally recognized institution</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Education License</fullName>
                 <default>false</default>
             </values>
@@ -3401,7 +3407,7 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Questionnaire</fullName>
+                <fullName>Post-Bacc Essay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4085,6 +4091,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>2-BS-B-SCLA</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>2-BS-FINP</fullName>
                 <default>false</default>
             </values>
@@ -4094,6 +4104,10 @@
             </values>
             <values>
                 <fullName>2-BS-NURP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-BSN-NURP</fullName>
                 <default>false</default>
             </values>
             <values>

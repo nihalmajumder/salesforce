@@ -41,6 +41,12 @@
     <columns>
         <field>Opportunity.Date_Confirmed__c</field>
     </columns>
+    <columns>
+        <field>CON.ADDRESS2_CITY</field>
+    </columns>
+    <columns>
+        <field>CON.ADDRESS2_STATE_CODE</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>STAGE_NAME</column>

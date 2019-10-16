@@ -27,6 +27,10 @@
                 <behavior>Edit</behavior>
                 <field>Mogli_SMS__Phone_Number__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Flow_Complete__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>Contact.Education_Histories__r$Name</field>
-    </columns>
-    <columns>
         <field>Contact.Education_Histories__r$Document_Date_Received__c</field>
     </columns>
     <columns>
@@ -25,6 +22,9 @@
         <field>Contact.Education_Histories__r$School_Not_Found_Name__c</field>
     </columns>
     <columns>
+        <field>Contact.Education_Histories__r$Name</field>
+    </columns>
+    <columns>
         <field>Contact.Education_Histories__r$Document_Status_Description__c</field>
     </columns>
     <columns>
@@ -32,6 +32,9 @@
     </columns>
     <columns>
         <field>Contact.Education_Histories__r$School_CEEB__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Education_Histories__r$Educational_Institution__c</field>
     </columns>
     <crossFilters>
         <criteriaItems>
@@ -68,7 +71,7 @@
             <column>Contact.Education_Histories__r$Document_Status__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Received,Waived,Conditional</value>
+            <value>Received</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Document_Status_Description__c</column>
@@ -83,10 +86,10 @@
             <value>0</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Contact.Education_Histories__r$Document_Date_Received__c</column>
+            <column>Contact.Education_Histories__r$School_Not_Found_Name__c</column>
             <isUnlocked>true</isUnlocked>
-            <operator>greaterThan</operator>
-            <value>4/25/2016</value>
+            <operator>notContain</operator>
+            <value>Advanced Placement</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -101,8 +104,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>Contact.Education_Histories__r$Document_Date_Received__c</sortColumn>
-    <sortOrder>Desc</sortOrder>
+    <sortColumn>Contact$LastName</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

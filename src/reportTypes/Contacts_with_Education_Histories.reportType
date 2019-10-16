@@ -8,7 +8,7 @@
         <outerJoin>false</outerJoin>
         <relationship>Education_Histories__r</relationship>
     </join>
-    <label>Contacts with Education Histories</label>
+    <label>Contacts with Education Histories (Bethel)</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>

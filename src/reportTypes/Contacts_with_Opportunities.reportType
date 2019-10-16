@@ -302,6 +302,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Is_Legacy__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Is_Veteran__c</field>
             <table>Contact</table>
         </columns>
@@ -363,6 +368,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>MailingStateCode</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Mailing_State_Code__c</field>
             <table>Contact</table>
         </columns>
         <columns>

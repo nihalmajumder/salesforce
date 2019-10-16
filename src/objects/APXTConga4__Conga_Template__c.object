@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Conga_Template_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Conga_Template_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -136,11 +143,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -299,7 +301,7 @@ Stage__c=In Progress</inlineHelpText>
     </fields>
     <label>Conga Template</label>
     <listViews>
-        <fullName>APXTConga4__All</fullName>
+        <fullName>All1</fullName>
         <columns>NAME</columns>
         <columns>APXTConga4__Name__c</columns>
         <columns>APXTConga4__Description__c</columns>
@@ -309,6 +311,24 @@ Stage__c=In Progress</inlineHelpText>
         <columns>UPDATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Post_Trad_Templates</fullName>
+        <columns>NAME</columns>
+        <columns>APXTConga4__Name__c</columns>
+        <columns>APXTConga4__Description__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>APXTConga4__Template_Group__c</columns>
+        <columns>APXTConga4__Template_Type__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APXTConga4__Template_Group__c</field>
+            <operation>equals</operation>
+            <value>Seminary,CAPS/GS</value>
+        </filters>
+        <label>Post-Trad Templates</label>
     </listViews>
     <listViews>
         <fullName>Visit_Templates</fullName>

@@ -122,15 +122,6 @@
             <componentName>flexipage:richText</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>studentholds</componentName>
-            <visibilityRule>
-                <criteria>
-                    <leftValue>{!Record.UDCID__c}</leftValue>
-                    <operator>NE</operator>
-                </criteria>
-            </visibilityRule>
-        </componentInstances>
-        <componentInstances>
             <componentInstanceProperties>
                 <name>decorate</name>
                 <value>false</value>

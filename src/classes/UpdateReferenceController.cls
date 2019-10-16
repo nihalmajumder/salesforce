@@ -12,12 +12,6 @@ public with sharing class UpdateReferenceController {
         Requirement_Response__c[] requirement_responses = [Select Id, Requirement_Item__r.Name from Requirement_Response__c where Reference__c = :referenceId
                                                 and Requirement_Item__r.Name like '%Reference'];
 
-//        Question_Response__c[] question_responses = [Select Id, Question_Label__c, ValueText__c, ValueEmail__c from Question_Response__c where Requirement_Response__c in :requirement_responses];
-//
-//        Question_Response__c[] update_question_responses = new List<Question_Response__c>();
-
-
-
         // this SHOULD only be a list of one
         for (Requirement_Response__c response : requirement_responses){
 
@@ -31,30 +25,6 @@ public with sharing class UpdateReferenceController {
             }
 
         }
-
-//        for(Question_Response__c response : question_responses){
-//            switch on response.ValueText__c{
-//                when 'Fist Name' {
-//                    response.ValueText__c = firstName;
-//                    update_question_responses.add(response);
-//                }
-//                when 'Last Name' {
-//                    response.ValueText__c = lastName;
-//                    update_question_responses.add(response);
-//                }
-//                when 'Email' {
-//                    response.ValueEmail__c = emailAddress;
-//                    update_question_responses.add(response);
-//                }
-//                when 'Relationship to Applicant'{
-//                    response.ValueText__c = relationshipToApplicant;
-//                    update_question_responses.add(response);
-//                }
-//            }
-//            if(update_question_responses.size() > 0){
-//                update update_question_responses;
-//            }
-//        }
 
         return referenceId;
     }

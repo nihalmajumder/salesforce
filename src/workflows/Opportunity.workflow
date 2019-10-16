@@ -78,6 +78,14 @@ IF(PRIORVALUE(Admission_Integration_Code__c) = &quot;FP&quot;,&quot;FP&quot;,
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Opportunity_Clear_Date_File_Closed</fullName>
+        <field>Date_File_Closed__c</field>
+        <name>Opportunity: Clear Date File Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Opportunity_Clear_Withdrawal_Detail</fullName>
         <field>Withdrawal_Detail__c</field>
         <name>Opportunity: Clear Withdrawal Detail</name>
@@ -466,6 +474,10 @@ IF(PRIORVALUE(Admission_Integration_Code__c) = &quot;FP&quot;,&quot;FP&quot;,
     <rules>
         <fullName>Opportunity%3A Remove Withdrawal Reason at positive status</fullName>
         <actions>
+            <name>Opportunity_Clear_Date_File_Closed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
             <name>Opportunity_Clear_Withdrawal_Detail</name>
             <type>FieldUpdate</type>
         </actions>
@@ -474,6 +486,7 @@ IF(PRIORVALUE(Admission_Integration_Code__c) = &quot;FP&quot;,&quot;FP&quot;,
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
         <criteriaItems>
             <field>Opportunity.StageName</field>
             <operation>equals</operation>
@@ -481,6 +494,10 @@ IF(PRIORVALUE(Admission_Integration_Code__c) = &quot;FP&quot;,&quot;FP&quot;,
         </criteriaItems>
         <criteriaItems>
             <field>Opportunity.Withdrawal_Reason__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Date_File_Closed__c</field>
             <operation>notEqual</operation>
         </criteriaItems>
         <description>Remove text from Withdrawal Reason if the Opportunity moves from File Closed back to Open.</description>

@@ -27,7 +27,6 @@
         <value>1</value>
     </params>
     <reportType>Opportunities_with_Activities__c</reportType>
-    <roleHierarchyFilter>System_Admin</roleHierarchyFilter>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>

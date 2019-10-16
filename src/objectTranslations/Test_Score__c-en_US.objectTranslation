@@ -96,6 +96,10 @@
             <translation><!-- Mandatory --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Purged</masterLabel>
+            <translation><!-- Purged --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Received</masterLabel>
             <translation><!-- Received --></translation>
         </picklistValues>
@@ -326,6 +330,7 @@
         <name>Unofficial_Received_Date_1__c</name>
     </fields>
     <fields>
+        <help><!-- no longer used --></help>
         <label><!-- Unofficial Received Date 2 --></label>
         <name>Unofficial_Received_Date_2__c</name>
     </fields>

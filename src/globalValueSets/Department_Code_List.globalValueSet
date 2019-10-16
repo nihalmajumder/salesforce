@@ -260,6 +260,11 @@
         <default>false</default>
         <label>NRPB</label>
     </customValue>
+    <customValue>
+        <fullName>PHE</fullName>
+        <default>false</default>
+        <label>PHE</label>
+    </customValue>
     <description>The list of Department Codes</description>
     <masterLabel>Department Code List</masterLabel>
     <sorted>true</sorted>

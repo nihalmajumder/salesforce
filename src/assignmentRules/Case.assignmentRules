@@ -47,7 +47,7 @@
             <criteriaItems>
                 <field>Case.RecordTypeId</field>
                 <operation>equals</operation>
-                <value>ITS - Access,ITS - General Request</value>
+                <value>ITS - New User,ITS - General Request</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>

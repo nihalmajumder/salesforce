@@ -10,7 +10,7 @@
         </recipients>
         <senderAddress>salesforce@bethel.edu</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
-        <template>unfiled$public/Case_Closed</template>
+        <template>Case_Email_Templates/Case_Closed</template>
     </alerts>
     <alerts>
         <fullName>Case_New_Stakeholder</fullName>
@@ -22,7 +22,7 @@
         </recipients>
         <senderAddress>salesforce@bethel.edu</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
-        <template>unfiled$public/Case_New_Stakeholder</template>
+        <template>Case_Email_Templates/Case_New_Stakeholder</template>
     </alerts>
     <alerts>
         <fullName>Case_Ownership_Change</fullName>
@@ -32,7 +32,7 @@
             <type>owner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Case_Ownership_Changed</template>
+        <template>Case_Email_Templates/Case_Ownership_Changed</template>
     </alerts>
     <fieldUpdates>
         <fullName>Case_Change_Owner_to_Advising_Queue</fullName>

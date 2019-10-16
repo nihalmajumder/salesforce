@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Cohort_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Cohort_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -138,11 +145,6 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>Cohort_Compact_Layout_Master</compactLayoutAssignment>
     <compactLayouts>
@@ -151,6 +153,7 @@
         <fields>Term__c</fields>
         <fields>Format__c</fields>
         <fields>Degree_Level__c</fields>
+        <fields>Cohort_List_Pulled__c</fields>
         <fields>Campus_Code__c</fields>
         <fields>Major_code__c</fields>
         <label>Cohort Compact Layout - Master</label>
@@ -821,11 +824,12 @@
         <columns>Format__c</columns>
         <columns>Term__c</columns>
         <columns>Start_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>Term__c</field>
-            <operation>contains</operation>
-            <value>summer</value>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>6/1/2019 12:00 AM</value>
         </filters>
         <label>All</label>
     </listViews>

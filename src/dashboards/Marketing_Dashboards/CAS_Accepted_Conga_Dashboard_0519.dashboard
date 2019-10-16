@@ -71,12 +71,13 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
+            <header>Send Starting August 1</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_PSEO_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Waitlist_Ending_Letter_BUILD_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS PSEO Acceptance Folder</title>
+            <title>CAS BUILD Waitlist Ending Letter</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -90,30 +91,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Waitlist_Letter_PSEO_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_BUILD_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS PSEO Waitlist Letter</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Funnel</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <groupingSortProperties/>
-            <header>ON HOLD - Send June 1 - July 14</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_WW_Parent_Mailer_CD</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>CAS WW Parent Mailer</title>
+            <title>CAS BUILD Acceptance Box</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
@@ -148,24 +130,6 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Fee_Paid_FW_Enroll_Chklst_PstcrdCD</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>CAS FP/FW Enroll Chklst Pstcrd</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Funnel</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <groupingSortProperties/>
-            <legendPosition>Bottom</legendPosition>
             <report>Conga_Classic_Dashboard/CAS_Honors_Invite_Letter_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
@@ -184,11 +148,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_BUILD_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Waitlist_Letter_PSEO_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS BUILD Acceptance Box</title>
+            <title>CAS PSEO Waitlist Letter</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -201,13 +165,31 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
-            <header>Send after July 31</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Waitlist_Ending_Letter_PSEO_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_PSEO_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS PSEO Waitlist Ending Letter</title>
+            <title>CAS PSEO Acceptance Folder</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Funnel</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <header>On Hold Until March 2020</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Conga_Classic_Dashboard/CAS_Fee_Paid_FW_Housing_Pstcrd_CD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>CAS FP/FW Housing Postcard</title>
             <useReportChart>false</useReportChart>
         </components>
     </middleSection>
@@ -242,48 +224,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Fee_Paid_FW_Housing_Pstcrd_CD</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>CAS FP/FW Housing Postcard</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Funnel</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <groupingSortProperties/>
-            <legendPosition>Bottom</legendPosition>
             <report>Conga_Classic_Dashboard/CAS_Rejected_Letter_BUILD_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>CAS BUILD Rejected Letter</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Funnel</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <groupingSortProperties/>
-            <header>Send after July 31</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Waitlist_Ending_Letter_BUILD_CD</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>CAS BUILD Waitlist Ending Letter</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -302,6 +247,44 @@
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>CAS Academic Dept Postcard</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Funnel</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <header>Send Starting August 1</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Conga_Classic_Dashboard/CAS_Waitlist_Ending_Letter_PSEO_CD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>CAS PSEO Waitlist Ending Letter</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Funnel</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <header>On Hold Until March 2020</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Conga_Classic_Dashboard/CAS_Fee_Paid_FW_Enroll_Chklst_PstcrdCD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>CAS FP/FW Enroll Chklst Pstcrd</title>
             <useReportChart>false</useReportChart>
         </components>
     </rightSection>

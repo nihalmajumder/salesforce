@@ -128,6 +128,13 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <content>Application_Record_Page_Master</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Application_Record_Page_Master</content>
         <formFactor>Large</formFactor>
@@ -136,11 +143,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -300,6 +302,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -934,6 +941,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -965,6 +977,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -998,6 +1015,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -1029,6 +1051,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1062,6 +1089,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1315,6 +1347,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -1346,6 +1383,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1451,6 +1493,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -1532,6 +1579,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -1564,6 +1616,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -1595,6 +1652,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1944,6 +2006,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -1975,6 +2042,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2024,6 +2096,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2083,6 +2160,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2297,6 +2379,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -2398,6 +2485,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2603,6 +2695,11 @@
                     <default>false</default>
                     <label>Conditional</label>
                 </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -2634,6 +2731,11 @@
                     <fullName>Conditional</fullName>
                     <default>false</default>
                     <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2783,6 +2885,15 @@
         <errorConditionFormula>VALUE(Unofficial_ACT_Score__c) &gt; 36</errorConditionFormula>
         <errorDisplayField>Unofficial_ACT_Score__c</errorDisplayField>
         <errorMessage>ACT scores cannot be greater then 36</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Program_Required</fullName>
+        <active>true</active>
+        <description>Cannot move to Complete without a Program</description>
+        <errorConditionFormula>Intended_Program__c = null &amp;&amp;
+ ISCHANGED(Application_Status__c) &amp;&amp;
+TEXT(Application_Status__c) = &quot;Complete&quot;</errorConditionFormula>
+        <errorMessage>Application cannot be completed without a program.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>SAT_Scoring</fullName>

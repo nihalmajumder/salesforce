@@ -38,7 +38,7 @@
             <column>Opportunity$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>summer 2019</value>
+            <value>fall 2019</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -64,6 +64,7 @@
         <value>1</value>
     </params>
     <reportType>Opportunities__c</reportType>
+    <roleHierarchyFilter>System_Admin</roleHierarchyFilter>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>

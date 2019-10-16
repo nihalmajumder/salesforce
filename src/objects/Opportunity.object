@@ -738,6 +738,21 @@ Help Text</description>
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Arts_Humanities_Scholarship__c</fullName>
+        <description>Used to track the status of Arts and Humanities Scholarship Applications</description>
+        <externalId>false</externalId>
+        <label>Arts/Humanities Scholarship</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Applicant_Scholarship</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Attributes__c</fullName>
         <description>Loaded from Banner</description>
         <externalId>false</externalId>
@@ -1292,6 +1307,26 @@ TEXT(School_College__c) = &apos;Undergraduate&apos;,
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Conga_Program_Text__c</fullName>
+        <description>Used for Conga Acceptance Letters. prints string of programs, whether 1, 2, or 3 programs are listed on an Opportunity.</description>
+        <externalId>false</externalId>
+        <formula>Academic_Program__r.Name + 
+ IF( Academic_Program_2__c = null, 
+&quot; program&quot;, 
+  IF( Academic_Program_3__c = null,
+    &quot; and &quot; + Academic_Program_2__r.Name + &quot; programs&quot;,
+    &quot;, &quot; + Academic_Program_2__r.Name + &quot;, and &quot; + Academic_Program_3__r.Name + &quot; programs&quot;
+  )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Conga Program Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Conga_Rejection_Letter_Sent__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1547,7 +1582,7 @@ TEXT(School_College__c) = &apos;Undergraduate&apos;,
         <label>Date App Started</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -1889,6 +1924,39 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
         </valueSet>
     </fields>
     <fields>
+        <fullName>Initiatives__c</fullName>
+        <description>Used to track various initiatives that we are currently offering. Active values will likely fluctuate over time.</description>
+        <externalId>false</externalId>
+        <label>Initiatives</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>$150 Discount</fullName>
+                    <default>false</default>
+                    <label>$150 Discount</label>
+                </value>
+                <value>
+                    <fullName>Free Laptop</fullName>
+                    <default>false</default>
+                    <label>Free Laptop</label>
+                </value>
+                <value>
+                    <fullName>Letter from Cabinet</fullName>
+                    <default>false</default>
+                    <label>Letter from Cabinet</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
         <fullName>Inquiry_Date__c</fullName>
         <description>A date stamp (set by the Opportunity: Set Inquiry Date workflow rule) to capture when an Opportunity is created.</description>
         <externalId>false</externalId>
@@ -1959,7 +2027,7 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
         <externalId>false</externalId>
         <label>Likely to Enroll</label>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -2005,6 +2073,48 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Music_Scholarship__c</fullName>
+        <description>Used to track Music Scholarship Applications</description>
+        <externalId>false</externalId>
+        <label>Music Scholarship</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Applied</fullName>
+                    <default>false</default>
+                    <label>Applied</label>
+                </value>
+                <value>
+                    <fullName>Denied</fullName>
+                    <default>false</default>
+                    <label>Denied</label>
+                </value>
+                <value>
+                    <fullName>Awarded</fullName>
+                    <default>false</default>
+                    <label>Awarded</label>
+                </value>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <label>Accepted</label>
+                </value>
+                <value>
+                    <fullName>Declined</fullName>
+                    <default>false</default>
+                    <label>Declined</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Name</fullName>
@@ -2090,6 +2200,21 @@ NOT(ISBLANK(Previous_Application_ID__c)),
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Physics_Engineering_Scholarship__c</fullName>
+        <description>Used to track the status of Physics and Engineering Scholarship Applications</description>
+        <externalId>false</externalId>
+        <label>Physics/Engineering Scholarship</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Applicant_Scholarship</valueSetName>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Preferred_Delivery_Format__c</fullName>
@@ -2400,6 +2525,19 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Red_Flags__c</fullName>
+        <description>Used by CAS Admissions to take notes on red flags that Student Life should be aware of.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Red flags for Student Life to be aware of about this student.</inlineHelpText>
+        <label>Red Flags</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>Registration_Credits__c</fullName>
         <description>Banner Data</description>
         <externalId>false</externalId>
@@ -2442,7 +2580,7 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <label>School / College</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -2619,7 +2757,7 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <label>Stage Modified Date</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
@@ -2810,6 +2948,7 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
+            <restricted>true</restricted>
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
@@ -3247,6 +3386,12 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
                     <default>false</default>
                     <label>App not complete</label>
                 </value>
+                <value>
+                    <fullName>JH - Junior&apos;s  Hockey</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>JH - Junior&apos;s  Hockey</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -3259,6 +3404,11 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <columns>OPPORTUNITY.STAGE_NAME</columns>
         <columns>OPPORTUNITY.CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>Academic_Program__c</field>
+            <operation>equals</operation>
+            <value>Auditor</value>
+        </filters>
         <label>All Opportunities</label>
     </listViews>
     <listViews>
@@ -3394,12 +3544,7 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         </filters>
         <filters>
             <field>OPPORTUNITY.STAGE_NAME</field>
-            <operation>notEqual</operation>
-            <value>File Closed</value>
-        </filters>
-        <filters>
-            <field>Status_Text__c</field>
-            <operation>contains</operation>
+            <operation>equals</operation>
             <value>Enrolled</value>
         </filters>
         <label>Open Undergraduate Opportunities</label>
@@ -3486,7 +3631,7 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>Regular</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
             <values>
                 <fullName>Special</fullName>
@@ -3520,6 +3665,29 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Arts_Humanities_Scholarship__c</picklist>
+            <values>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finalist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recipient</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -3822,6 +3990,21 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Initiatives__c</picklist>
+            <values>
+                <fullName>%24150 Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Free Laptop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter from Cabinet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>LeadSource</picklist>
             <values>
                 <fullName>Advertisement</fullName>
@@ -3944,6 +4127,52 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>St%2E Paul</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Music_Scholarship__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awarded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Physics_Engineering_Scholarship__c</picklist>
+            <values>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finalist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recipient</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4565,7 +4794,7 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>Regular</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
             <values>
                 <fullName>Special</fullName>
@@ -4599,6 +4828,29 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Arts_Humanities_Scholarship__c</picklist>
+            <values>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finalist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recipient</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4901,6 +5153,21 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Initiatives__c</picklist>
+            <values>
+                <fullName>%24150 Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Free Laptop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter from Cabinet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>LeadSource</picklist>
             <values>
                 <fullName>Advertisement</fullName>
@@ -4959,6 +5226,52 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>St%2E Paul</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Music_Scholarship__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awarded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Physics_Engineering_Scholarship__c</picklist>
+            <values>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finalist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recipient</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5571,6 +5884,18 @@ The second line makes sure that it is moving to Confirmed. Otherwise it&apos;s s
    )
 )</errorConditionFormula>
         <errorMessage>Stage cannot be changed to &quot;Confirmed&quot; unless it is already at Accepted</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Counselor_Edit_at_Inquired</fullName>
+        <active>true</active>
+        <description>Counselors can only edit this field while the opportunity is at an Inquired:Inquired status.</description>
+        <errorConditionFormula>($Profile.Name = &quot;Admissions - Post-Trad&quot; || $Profile.Name = &quot;Admissions - CAS&quot;) 
+&amp;&amp; 
+    (TEXT(Stage_Detail__c) &lt;&gt; &quot;Inquired&quot; &amp;&amp; TEXT(Stage_Detail__c) &lt;&gt; &quot;Pre-Applied&quot;
+    ) &amp;&amp;  
+    (ISCHANGED(Academic_Program__c) || ISCHANGED(Academic_Term__c) || ISCHANGED( School_College__c )
+    )</errorConditionFormula>
+        <errorMessage>Program, Term, and School can only be changed by Counselors when the applicant is Inquired.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Counselor_Rank_Value</fullName>

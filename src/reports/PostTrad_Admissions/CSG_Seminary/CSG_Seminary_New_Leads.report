@@ -23,7 +23,7 @@
             <column>Opportunity$Date_Inquired__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
-            <value>5/12/2019 12:00 AM</value>
+            <value>8/1/2019 12:00 AM</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$School_College__c</column>
@@ -48,12 +48,12 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$Academic_Program__c</field>
+        <field>Opportunity$Academic_Term__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$Academic_Term__c</field>
+        <field>Opportunity$Academic_Program__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>CSG_Seminary - New Leads</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <actionOnInsert>Block</actionOnInsert>
-    <actionOnUpdate>Block</actionOnUpdate>
+    <actionOnUpdate>Allow</actionOnUpdate>
     <alertText>Use one of these records?</alertText>
     <description>This rule is leveraged by the Interaction Process. Action on Create and Edit must be set to Block.</description>
     <duplicateRuleFilter xsi:nil="true"/>
@@ -12,6 +12,7 @@
     </duplicateRuleMatchRules>
     <isActive>true</isActive>
     <masterLabel>Interaction Contact Duplicate Rule</masterLabel>
+    <operationsOnUpdate>Alert</operationsOnUpdate>
     <securityOption>BypassSharingRules</securityOption>
     <sortOrder>3</sortOrder>
 </DuplicateRule>

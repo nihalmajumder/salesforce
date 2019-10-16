@@ -24,6 +24,7 @@
     </alerts>
     <alerts>
         <fullName>Recommender_Email_Alert_For_CAPS</fullName>
+        <ccEmails>salesforce+reference@bethel.edu</ccEmails>
         <description>Recommender Email Alert For CAPS</description>
         <protected>false</protected>
         <recipients>
@@ -36,6 +37,7 @@
     </alerts>
     <alerts>
         <fullName>Recommender_Email_Alert_For_CAPS_GS</fullName>
+        <ccEmails>salesforce+reference@bethel.edu</ccEmails>
         <description>Recommender Email Alert For CAPS/GS</description>
         <protected>false</protected>
         <recipients>
@@ -60,6 +62,7 @@
     </alerts>
     <alerts>
         <fullName>Recommender_Email_Alert_For_GS</fullName>
+        <ccEmails>salesforce+reference@bethel.edu</ccEmails>
         <description>Recommender Email Alert For GS</description>
         <protected>false</protected>
         <recipients>
@@ -72,6 +75,7 @@
     </alerts>
     <alerts>
         <fullName>Recommender_Email_Alert_For_Seminary</fullName>
+        <ccEmails>salesforce+reference@bethel.edu</ccEmails>
         <description>Recommender Email Alert For Seminary</description>
         <protected>false</protected>
         <recipients>
@@ -84,6 +88,7 @@
     </alerts>
     <alerts>
         <fullName>Recommender_Email_Alert_For_Seminary_Ministry</fullName>
+        <ccEmails>salesforce+reference@bethel.edu</ccEmails>
         <description>Recommender Email Alert For Seminary Ministry Context</description>
         <protected>false</protected>
         <recipients>
@@ -96,6 +101,7 @@
     </alerts>
     <alerts>
         <fullName>Recommender_Email_Alert_For_Seminary_Vocational</fullName>
+        <ccEmails>salesforce+reference@bethel.edu</ccEmails>
         <description>Recommender Email Alert For Seminary Vocational Context</description>
         <protected>false</protected>
         <recipients>

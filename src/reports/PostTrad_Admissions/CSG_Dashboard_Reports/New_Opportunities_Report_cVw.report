@@ -17,16 +17,16 @@
             <value>1</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Opportunity$Opportunity_Term_Code__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>greaterThan</operator>
-            <value>201900</value>
-        </criteriaItems>
-        <criteriaItems>
             <column>Opportunity$School_College__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Adult Undergraduate,Graduate,Seminary</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Academic_Term__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Summer 2019,Fall 2019,Spring 2020</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -34,6 +34,11 @@
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Opportunity$Academic_Program__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$Term_Description__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Likely Opportunities by Program</name>

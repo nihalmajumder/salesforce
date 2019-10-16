@@ -14,6 +14,10 @@
         <relationshipLabel><!-- Requirement Responses --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Application Status --></label>
+        <name>Application_Status__c</name>
+    </fields>
+    <fields>
         <label><!-- Application --></label>
         <name>Application__c</name>
         <relationshipLabel><!-- Requirement Responses --></relationshipLabel>

@@ -40,7 +40,7 @@
             <column>Opportunity.Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Fall 2019 - CAS</value>
+            <value>Fall 2020 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Date_Confirmed__c</column>

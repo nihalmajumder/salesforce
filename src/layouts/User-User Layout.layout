@@ -37,6 +37,10 @@
                 <behavior>Edit</behavior>
                 <field>Last_Login_Custom__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Full_Name__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

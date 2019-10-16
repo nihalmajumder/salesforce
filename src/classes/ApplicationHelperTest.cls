@@ -209,7 +209,7 @@ public class ApplicationHelperTest {
 	static testMethod void testUpdateResidency(){
 		for(Application__c app : [SELECT Id, School_College__c, Is_Transfer_Student__c, Applicant_Type__c,
             Is_Applying_For_PSEO__c, College_Credits_Transferred__c,
-            Student_Type__c, Residency__c, Contact__c, Contact__r.MailingStateCode FROM Application__c]){
+            Student_Type__c, Residency__c, Contact__c, Contact__r.MailingStateCode, Contact__r.MailingCountryCode FROM Application__c]){
 			ApplicationHelper.updateResidency(app, app.Contact__r);
 
 			 if(app.Contact__r.MailingStateCode == 'MN'){

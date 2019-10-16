@@ -56,7 +56,7 @@
             <column>Opportunity.Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>2019,2020,2021,2022,2023</value>
+            <value>2020,2021,2022,2023</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>

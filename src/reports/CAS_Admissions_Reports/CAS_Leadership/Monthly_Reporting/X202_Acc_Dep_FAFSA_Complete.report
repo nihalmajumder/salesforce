@@ -23,6 +23,12 @@
             <operator>equals</operator>
             <value>Accepted,Confirmed,Enrolled</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Student_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>New,New Student Previous PSEO,Transfer</value>
+        </criteriaItems>
         <operation>with</operation>
         <primaryTableColumn>Contact$Id</primaryTableColumn>
         <relatedTable>OCR-Opportunity</relatedTable>
@@ -34,6 +40,12 @@
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Financial_Aid__r$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>2019-20</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

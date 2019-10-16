@@ -74,6 +74,9 @@
         <field>User$LastLoginDate</field>
     </columns>
     <columns>
+        <field>User$CreatedDate</field>
+    </columns>
+    <columns>
         <field>User$FederationIdentifier</field>
     </columns>
     <columns>
