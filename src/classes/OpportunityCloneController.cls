@@ -16,12 +16,16 @@ public with sharing class OpportunityCloneController {
                     newOpp.Application__c = null;
                     newOpp.StageName = 'File Closed';
                     newOpp.Withdrawal_Reason__c = 'ST - Switching Terms';
-                    Set<String> details = new Set<String>{'Inquired', 'Pre-Applied', 'App Started', 'App Submitted', 'App Completed', 'Wait Listed', 'Accepted', 'Fee Paid', 'Fee Waived', 'Registered'};
-                    if (details.contains(newOpp.Stage_Detail__c)) {
-                        newOpp.Stage_Detail__c = newOpp.Stage_Detail__c + ' - File Closed';
-                    }
-                    else {
-                        newOpp.Stage_Detail__c = 'Unknown - File Closed';
+
+                    // if it is already File Closed, no need to calculate a new Stage Detail.
+                    if(!newOpp.Stage_Detail__c.contains('File Closed')){
+                        Set<String> details = new Set<String>{'Inquired', 'Pre-Applied', 'App Started', 'App Submitted', 'App Completed', 'Wait Listed', 'Accepted', 'Fee Paid', 'Fee Waived', 'Registered'};
+                        if (details.contains(newOpp.Stage_Detail__c)) {
+                            newOpp.Stage_Detail__c = newOpp.Stage_Detail__c + ' - File Closed';
+                        }
+                        else {
+                            newOpp.Stage_Detail__c = 'Unknown - File Closed';
+                        }
                     }
                 }
 

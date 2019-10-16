@@ -25,6 +25,9 @@ public class OpportunityCloneControllerTest {
         Academic_Term__c at2 = new Academic_Term__c(Name = 'test 2', Activate_Application_Date__c = Date.TODAY().addDays(3), End_Application_Date__c = Date.TODAY().addDays(7));
         insert at2;
 
+        Academic_Term__c at3 = new Academic_Term__c(Name = 'test 3', Activate_Application_Date__c = Date.TODAY().addDays(12), End_Application_Date__c = Date.TODAY().addDays(24));
+        insert at3;
+
         Program__c p1 = new Program__c(Name = 'test1', Number_of_Applications_Limit__c = 'One Application', Applicant_Type__c = Program__c.Applicant_Type__c.getDescribe().getPicklistValues()[0].getValue());
         insert p1;
 
@@ -51,10 +54,22 @@ public class OpportunityCloneControllerTest {
             Contact__c = app.Contact__c, StageName = 'Applied', Stage_Detail__c = 'App Submitted', CloseDate = Date.today());
         insert opp;
 
+        Application__c app2 = new Application__c(
+                Contact__c=student.Id,
+                School_College__c = 'Graduate',
+                Application_Status__c=Application__c.Application_Status__c.getDescribe().getPicklistValues()[0].getValue(),
+                Intended_Program__c =  p1.Id,
+                Intended_Term_of_Entry__c = at3.Id);
+        insert app2;
+
+        Opportunity opp2 = new Opportunity(Name='Test Opp Two', Application__c = app2.Id, Academic_Program__c = p1.Id, Academic_Term__c = at3.Id, School_College__c = 'Graduate',
+                Contact__c = app.Contact__c, StageName = 'File Closed', Stage_Detail__c = 'App Submitted - File Closed', CloseDate = Date.today());
+        insert opp2;
+
     }
 
     static testMethod void cloneOpportunityTest() {
-        Opportunity opp = [SELECT Id FROM Opportunity];
+        Opportunity opp = [SELECT Id FROM Opportunity where Name='Test Opp'];
 
         Opportunity newOpp = null;
 
@@ -68,10 +83,33 @@ public class OpportunityCloneControllerTest {
         System.assertEquals('ST - Switching Terms', newOpp.Withdrawal_Reason__c);
         System.assertEquals('App Submitted - File Closed', newOpp.Stage_Detail__c);
         System.assert(newOpp.Opportunity_Key__c.endsWith('.Cloned'));
+
+    }
+
+    static testMethod void cloneClosedOpportunityTest() {
+        Opportunity opp = [SELECT Id FROM Opportunity where Name='Test Opp Two'];
+
+        Opportunity newOpp = null;
+
+        opp.StageName = 'File Closed';
+        opp.Stage_Detail__c = 'App Submitted - File Closed';
+        update opp;
+
+        Test.startTest();
+        newOpp = OpportunityCloneController.cloneOpportunity(opp.Id);
+        Test.stopTest();
+
+        System.assert(newOpp != null);
+        System.assertEquals(null, newOpp.Application__c);
+        System.assertEquals('File Closed', newOpp.StageName);
+        System.assertEquals('ST - Switching Terms', newOpp.Withdrawal_Reason__c);
+        System.assertEquals('App Submitted - File Closed', newOpp.Stage_Detail__c);
+        System.assert(newOpp.Opportunity_Key__c.endsWith('.Cloned'));
+
     }
 
     static testMethod void updateApplicationTest() {
-        Opportunity opp = [SELECT Id, Name, Academic_Term__c, Application__c, Application__r.Intended_Term_of_Entry__c FROM Opportunity];
+        Opportunity opp = [SELECT Id, Name, Academic_Term__c, Application__c, Application__r.Intended_Term_of_Entry__c FROM Opportunity where Name='Test Opp'];
         Academic_Term__c at = [SELECT Id FROM Academic_Term__c WHERE Name = 'test 2'];
         opp.Academic_Term__c = at.Id;
         update opp;
@@ -80,7 +118,7 @@ public class OpportunityCloneControllerTest {
         OpportunityCloneController.updateApplication(opp.Id);
         Test.stopTest();
 
-        Opportunity oppUpdate = [SELECT Id, Name, Academic_Term__c, Application__c, Application__r.Intended_Term_of_Entry__c FROM Opportunity];
+        Opportunity oppUpdate = [SELECT Id, Name, Academic_Term__c, Application__c, Application__r.Intended_Term_of_Entry__c FROM Opportunity where Id=:opp.Id];
         System.assertEquals(at.Id, oppUpdate.Academic_Term__c);
         System.assertEquals(oppUpdate.Academic_Term__c, oppUpdate.Application__r.Intended_Term_of_Entry__c);
     }
