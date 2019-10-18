@@ -379,6 +379,28 @@
         <componentInstances>
             <componentInstanceProperties>
                 <name>parentFieldApiName</name>
+                <value>Opportunity.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>OpportunityContactRoles</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>GRID</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!$User.Department}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>ITS</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
                 <value>Opportunity.Contact__c</value>
             </componentInstanceProperties>
             <componentInstanceProperties>

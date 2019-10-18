@@ -2410,6 +2410,39 @@ Petition_Type__c,
         <type>Url</type>
     </fields>
     <fields>
+        <fullName>Regalia_Order__c</fullName>
+        <description>Use to track regalia orders for commencement. Case 00051043</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Regalia orders status</inlineHelpText>
+        <label>Regalia Order</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not uploaded</fullName>
+                    <default>false</default>
+                    <label>Not uploaded</label>
+                </value>
+                <value>
+                    <fullName>Not applicable</fullName>
+                    <default>false</default>
+                    <label>Not applicable</label>
+                </value>
+                <value>
+                    <fullName>Uploaded</fullName>
+                    <default>false</default>
+                    <label>Uploaded</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Registrar_Summary__c</fullName>
         <description>Populated by the Registrar to give context to the Case</description>
         <externalId>false</externalId>
@@ -4576,6 +4609,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Replacement_User_Attributes_del__c</picklist>
             <values>
                 <fullName>Counselor Assignments</fullName>
@@ -5513,6 +5561,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Replacement_User_Attributes_del__c</picklist>
             <values>
                 <fullName>Counselor Assignments</fullName>
@@ -6430,6 +6493,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -7371,6 +7449,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Replacement_User_Attributes_del__c</picklist>
             <values>
                 <fullName>Counselor Assignments</fullName>
@@ -8220,6 +8313,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Replacement_User_Attributes_del__c</picklist>
             <values>
                 <fullName>Counselor Assignments</fullName>
@@ -8973,6 +9081,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -9798,6 +9921,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Replacement_User_Attributes_del__c</picklist>
             <values>
                 <fullName>Counselor Assignments</fullName>
@@ -10583,6 +10721,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -11392,6 +11545,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Replacement_User_Attributes_del__c</picklist>
             <values>
                 <fullName>Counselor Assignments</fullName>
@@ -12189,6 +12357,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -13066,6 +13249,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -13954,6 +14152,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

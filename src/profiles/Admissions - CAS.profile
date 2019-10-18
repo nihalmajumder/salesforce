@@ -2394,7 +2394,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Application__c.Has_Been_Convicted_Of_Offense__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -3867,7 +3867,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Case.ParentId</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3960,6 +3960,11 @@
         <editable>true</editable>
         <field>Case.Record_Transfer_Report__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Regalia_Order__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -12733,7 +12738,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>hed__Term_Grade__c.hed__Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>hed__Term_Grade__c.hed__Course_Connection__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Term_Grade__c.hed__Course_Offering__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

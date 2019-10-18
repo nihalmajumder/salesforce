@@ -378,10 +378,10 @@ public class ApplicationQuestionGroup {
                     reference = ReferenceHelper.getReference(app.Id, item.Internal_Requirement_Item__c);
                 } else {
                     reference = ReferenceHelper.getReference(app.Id, item.Id);
-                    reference = reference == null  ? ReferenceHelper.findReference(con.Id, item.Reference_Type__c, item.School_College__c, item.Name, app.Id) : reference; //using ternary op - luke
-                    //if (reference == null) {
-                       // reference = ReferenceHelper.createReference(con.Id, item.Reference_Type__c);
-                    //}
+                    //reference = reference == null  ? ReferenceHelper.findReference(con.Id, item.Reference_Type__c, item.School_College__c, item.Name, app.Id) : reference; //using ternary op - luke
+                    if (reference == null) {
+                       reference = ReferenceHelper.createReference(con.Id, item.Reference_Type__c, item.School_College__c);
+                    }
                 }
             }
 
@@ -835,6 +835,12 @@ public class ApplicationQuestionGroup {
                             ContentVersion conV = [Select Id, ContentDocumentId from ContentVersion WHERE Id = :att.Id];
                             ContentDocumentLink link = new ContentDocumentLink(ContentDocumentId = conV.ContentDocumentId, LinkedEntityId = response.Admissions_Document__c, ShareType = 'V', Visibility = 'AllUsers');
                             insert link;
+
+                            if (this.admissionsDocument != null && this.admissionsDocument.Date_Received__c == null) {
+                                this.admissionsDocument.Date_Received__c = Date.today();
+                                this.admissionsDocument.Status__c = 'Received';
+                                update this.admissionsDocument;
+                            }
                         }
 
                         // Don't delete old documents, make new versions - Todd Mitchell

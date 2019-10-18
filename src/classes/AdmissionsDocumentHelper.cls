@@ -12,6 +12,7 @@ public inherited sharing class AdmissionsDocumentHelper {
                 Type__c, 
                 Contact__c,
                 Status__c, 
+                Date_Received__c,
                 (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) 
             FROM 
                 Admissions_Document__c 
@@ -45,6 +46,7 @@ public inherited sharing class AdmissionsDocumentHelper {
                 Type__c, 
                 Contact__c,
                 Status__c, 
+                Date_Received__c,
                 (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) 
             FROM 
                 Admissions_Document__c 

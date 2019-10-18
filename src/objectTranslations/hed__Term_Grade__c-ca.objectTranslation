@@ -9,9 +9,21 @@
         <value><!-- Term Grade --></value>
     </caseValues>
     <fields>
+        <help><!-- The student for whom the grade is being recorded. When left blank, Contact autopopulates from the valid Course Connection on save. --></help>
+        <label><!-- Contact --></label>
+        <name>hed__Contact__c</name>
+        <relationshipLabel><!-- Term Grades --></relationshipLabel>
+    </fields>
+    <fields>
         <help>La classe en què l&apos;alumne ha rebut aquesta qualificació.</help>
         <label><!-- Course Connection --></label>
         <name>hed__Course_Connection__c</name>
+        <relationshipLabel><!-- Term Grades --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The Course Offering associated with the grade being recorded. When left blank, Course Offering autopopulates from the valid Course Connection on save. --></help>
+        <label><!-- Course Offering --></label>
+        <name>hed__Course_Offering__c</name>
         <relationshipLabel><!-- Term Grades --></relationshipLabel>
     </fields>
     <fields>

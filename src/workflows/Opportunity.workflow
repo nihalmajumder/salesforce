@@ -608,12 +608,12 @@ IF(PRIORVALUE(Admission_Integration_Code__c) = &quot;FP&quot;,&quot;FP&quot;,
         </actions>
         <active>true</active>
         <formula>AND(
-	ISPICKVAL(Application__r.Is_Applying_For_PSEO__c, &apos;Yes&apos;),
-    AND(
-        NOT(ISPICKVAL(Application__r.When_College_Credits_Earned__c, &quot;During High School (PSEO, AP, CLEP, IB, other)&quot;)),
-        NOT(ISPICKVAL(Application__r.When_College_Credits_Earned__c, &quot;&quot;))
-    ),
-	NOT(ISPICKVAL(Student_Type__c, &quot;New Student Previous PSEO&quot;))
+ISPICKVAL(Application__r.Is_Applying_For_PSEO__c, &apos;Yes&apos;),
+OR(
+ISPICKVAL(Application__r.When_College_Credits_Earned__c, &quot;During High School (PSEO, AP, CLEP, IB, other)&quot;),
+ISPICKVAL(Application__r.When_College_Credits_Earned__c, &quot;&quot;)
+),
+NOT(ISPICKVAL(Student_Type__c, &quot;New Student Previous PSEO&quot;))
 )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>

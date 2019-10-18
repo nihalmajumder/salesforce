@@ -399,7 +399,7 @@ NOT(ISBLANK(Previous_Id__c)),
                 <sorted>false</sorted>
                 <value>
                     <fullName>Mandatory</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>Mandatory</label>
                 </value>
                 <value>

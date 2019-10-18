@@ -190,6 +190,10 @@
     <label>Field Map Value</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Field_Map__c</columns>
+        <columns>SObject_Type__c</columns>
+        <columns>User__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

@@ -48,7 +48,7 @@
     <fields>
         <label><!-- Time Block --></label>
         <name>hed__Time_Block__c</name>
-        <relationshipLabel><!-- Time Blocks --></relationshipLabel>
+        <relationshipLabel><!-- Course Offerings --></relationshipLabel>
     </fields>
     <nameFieldLabel>Course Offering ID</nameFieldLabel>
     <startsWith>Consonant</startsWith>

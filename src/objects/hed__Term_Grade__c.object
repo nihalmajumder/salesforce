@@ -156,14 +156,44 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
+        <fullName>hed__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The student for whom the grade is being recorded. When left blank, Contact autopopulates from the valid Course Connection on save.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The student for whom the grade is being recorded. When left blank, Contact autopopulates from the valid Course Connection on save.</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Term Grades</relationshipLabel>
+        <relationshipName>Term_Grades</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>hed__Course_Connection__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>The class in which the student received this grade.</description>
+        <description>The class in which the student received this grade. The Contact and Course Offering on Term Grade must match the Contact and Course Offering on the Course Connection record.</description>
         <externalId>false</externalId>
         <inlineHelpText>The class in which the student received this grade.</inlineHelpText>
         <label>Course Connection</label>
         <referenceTo>hed__Course_Enrollment__c</referenceTo>
+        <relationshipLabel>Term Grades</relationshipLabel>
+        <relationshipName>Term_Grades</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>hed__Course_Offering__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Course Offering associated with the grade being recorded. When left blank, Course Offering autopopulates from the valid Course Connection on save.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Course Offering associated with the grade being recorded. When left blank, Course Offering autopopulates from the valid Course Connection on save.</inlineHelpText>
+        <label>Course Offering</label>
+        <referenceTo>hed__Course_Offering__c</referenceTo>
         <relationshipLabel>Term Grades</relationshipLabel>
         <relationshipName>Term_Grades</relationshipName>
         <required>false</required>

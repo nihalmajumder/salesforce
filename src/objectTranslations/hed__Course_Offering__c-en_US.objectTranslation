@@ -40,6 +40,6 @@
     <fields>
         <label><!-- Time Block --></label>
         <name>hed__Time_Block__c</name>
-        <relationshipLabel><!-- Time Blocks --></relationshipLabel>
+        <relationshipLabel><!-- Course Offerings --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

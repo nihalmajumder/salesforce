@@ -48,7 +48,7 @@
     <fields>
         <label><!-- Time Block --></label>
         <name>hed__Time_Block__c</name>
-        <relationshipLabel><!-- Time Blocks --></relationshipLabel>
+        <relationshipLabel><!-- Course Offerings --></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Id. de Oferta de curso</nameFieldLabel>

@@ -3964,6 +3964,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.Regalia_Order__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.Registrar_Summary__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -12734,7 +12739,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>hed__Term_Grade__c.hed__Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>hed__Term_Grade__c.hed__Course_Connection__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Term_Grade__c.hed__Course_Offering__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
