@@ -116,7 +116,7 @@ public class ApplicationChecklist {
                     completedRequirement.put(rr.Requirement_Item__r.Requirement__c, true);
                 
                 // only check viewed for community users - Todd Mitchell
-                if (!rr.Viewed__c && rr.Requirement_Item__r.Viewing_Requirement_Formula__c && !UserInfo.getUserType().equals('Standard')) {
+                if (!rr.Viewed__c && rr.Requirement_Item__r.Viewing_Requirement_Formula__c && (!UserInfo.getUserType().equals('Standard') || app.Application_Status__c == 'Started')) {
                     completedRequirement.put(rr.Requirement_Item__r.Requirement__c, false);
                     viewedRequirement.put(rr.Requirement_Item__r.Requirement__c, false);
                     itemCompleted = false;                    

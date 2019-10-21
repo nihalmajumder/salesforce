@@ -12739,7 +12739,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>hed__Term_Grade__c.hed__Contact__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -12749,7 +12749,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>hed__Term_Grade__c.hed__Course_Offering__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
