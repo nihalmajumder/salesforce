@@ -2195,6 +2195,11 @@ Petition_Type__c,
                     <default>false</default>
                     <label>Exception - Residency requirement</label>
                 </value>
+                <value>
+                    <fullName>Appeal - Exception Decision</fullName>
+                    <default>false</default>
+                    <label>Appeal - Exception Decision</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -10613,6 +10618,10 @@ if(isblank(approval_extension_date__c) = FALSE,
             <picklist>Petition_Type__c</picklist>
             <values>
                 <fullName>Appeal - Academic Dismissal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appeal - Exception Decision</fullName>
                 <default>false</default>
             </values>
             <values>

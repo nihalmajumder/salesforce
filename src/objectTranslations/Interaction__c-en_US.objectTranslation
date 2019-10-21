@@ -417,7 +417,7 @@
         <name>Is_Primary__c</name>
     </fields>
     <fields>
-        <label><!-- Is Veteran --></label>
+        <label><!-- Is Military / Military Benefits --></label>
         <name>Is_Veteran__c</name>
     </fields>
     <fields>

@@ -1052,7 +1052,7 @@ FALSE
         <fullName>Is_Veteran__c</fullName>
         <description>Maps to &quot;Is_Veteran__c&quot; on Contact</description>
         <externalId>false</externalId>
-        <label>Is Veteran</label>
+        <label>Is Military / Military Benefits</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>

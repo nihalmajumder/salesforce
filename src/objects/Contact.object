@@ -1196,7 +1196,7 @@ FALSE
         <description>Specifies if the person is a Veteran or is eligible for military benefits</description>
         <externalId>false</externalId>
         <inlineHelpText>Specifies if the person is a Veteran or is eligible for military benefits</inlineHelpText>
-        <label>Is Veteran</label>
+        <label>Is Is Military / Military Benefits</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>

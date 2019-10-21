@@ -230,7 +230,7 @@
     </fields>
     <fields>
         <help><!-- Specifies if the person is a Veteran or is eligible for military benefits --></help>
-        <label><!-- Is Veteran --></label>
+        <label><!-- Is Is Military / Military Benefits --></label>
         <name>Is_Veteran__c</name>
     </fields>
     <fields>
