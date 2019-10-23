@@ -728,6 +728,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTM_Contact_User_Details</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTM_Create_Case_Tasks</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -4843,6 +4847,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.User_Details__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.Username__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -7997,7 +8006,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.Conga_DNP_Program_Director_Letter_Sent__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8022,12 +8031,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.Conga_GS_Counseling_PD_Letter_Sent__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.Conga_GS_PA_Program_Director_Letter_Sent__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8067,7 +8076,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.Conga_Program_Director_Letter_Sent__c</field>
         <readable>true</readable>
     </fieldPermissions>

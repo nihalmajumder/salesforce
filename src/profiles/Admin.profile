@@ -728,6 +728,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTM_Contact_User_Details</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTM_Create_Case_Tasks</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -4839,6 +4843,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Undergraduate_Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.User_Details__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -1704,6 +1704,19 @@ NOT(ISBLANK(Previous_Contact_ID__c)),
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>User_Details__c</fullName>
+        <description>Populated by TDTM_Contact_User_Details</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Username info for this Contact</inlineHelpText>
+        <label>User Details</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Username__c</fullName>
         <externalId>false</externalId>
         <label>Username</label>

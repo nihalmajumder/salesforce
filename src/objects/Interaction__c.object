@@ -7654,12 +7654,7 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
         <columns>Opportunity_Name__c</columns>
         <columns>Lead__c</columns>
         <columns>CREATED_DATE</columns>
-        <filterScope>Mine</filterScope>
-        <filters>
-            <field>Interaction_Source__c</field>
-            <operation>equals</operation>
-            <value>Purchase List</value>
-        </filters>
+        <filterScope>Everything</filterScope>
         <label>All Interactions</label>
     </listViews>
     <listViews>

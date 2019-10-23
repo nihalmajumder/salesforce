@@ -995,6 +995,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Initiatives__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Inquiry_Date__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>

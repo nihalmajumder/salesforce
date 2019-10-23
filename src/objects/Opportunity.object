@@ -1943,6 +1943,11 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
                     <label>$150 Discount</label>
                 </value>
                 <value>
+                    <fullName>CAS to CAPS</fullName>
+                    <default>false</default>
+                    <label>CAS to CAPS</label>
+                </value>
+                <value>
                     <fullName>Free Laptop</fullName>
                     <default>false</default>
                     <label>Free Laptop</label>
@@ -3996,6 +4001,10 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
                 <default>false</default>
             </values>
             <values>
+                <fullName>CAS to CAPS</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Free Laptop</fullName>
                 <default>false</default>
             </values>
@@ -5156,6 +5165,10 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             <picklist>Initiatives__c</picklist>
             <values>
                 <fullName>%24150 Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAS to CAPS</fullName>
                 <default>false</default>
             </values>
             <values>

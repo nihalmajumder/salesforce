@@ -360,6 +360,11 @@
         <name>Undergraduate_Role__c</name>
     </fields>
     <fields>
+        <help><!-- Username info for this Contact --></help>
+        <label><!-- User Details --></label>
+        <name>User_Details__c</name>
+    </fields>
+    <fields>
         <label><!-- Username --></label>
         <name>Username__c</name>
     </fields>
