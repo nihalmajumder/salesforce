@@ -14,7 +14,7 @@ global class TDTM_Contact_User_Details extends TDTMVirtualTriggerHandler {
             contact_ids.add(s.Id);
         }
 
-        User[] user_details = [select Id, Username, Email, ContactId from User where ContactId in :contact_ids];
+        User[] user_details = [select Id, Username, Email, ContactId from User where ContactId in :contact_ids and IsActive=True];
 
         Map<Id, User> contact_user_map = new Map<Id, User>();
         for(User u : user_details){
