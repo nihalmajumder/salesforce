@@ -23,7 +23,8 @@ public with sharing class CampaignRFIFormController {
                                         Campaign_Member_Status__c='Responded',
                                         Preferred_Phone__c='Mobile',
                                         Lead_Source__c=rfi_campaign.Source_Type__c,
-                                        Source_Detail__c=rfi_campaign.Source_Detail__c
+                                        Source_Detail__c=rfi_campaign.Source_Detail__c,
+                                        Interaction_Status__c='Imported' // set to imported at first, so we can change to new and process in a @future method
         );
         if(rfi_campaign.RFI_Attributes__c != null) {
 
@@ -85,6 +86,16 @@ public with sharing class CampaignRFIFormController {
 
     }
 
+    @Future
+    private static void update_interaction(Id int_id){
+        Interaction__c i = [Select Id, Interaction_Status__c from Interaction__c where Id=:int_id];
+        if(i.Interaction_Status__c != 'New'){
+            i.Interaction_Status__c='New';
+            update i;
+        }
+
+    }
+
 
     public PageReference save(){
 
@@ -101,6 +112,9 @@ public with sharing class CampaignRFIFormController {
 
             insert interaction;
             // just for testing, redirect to the interaction
+
+            update_interaction(interaction.Id);
+
             PageReference home = new PageReference('https://bethel-university--partial.lightning.force.com/'+interaction.Id);
             home.setRedirect(true);
             return home;
