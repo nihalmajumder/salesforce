@@ -10,7 +10,10 @@
                             <apex:outputPanel rendered="{!r.display}" >
                                 <div class="row" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:bold;font-size:20px;margin-bottom:7px" >
                                     <div class="col-xs-12" >
-                                        <a target="_self" href="{!$Site.BaseUrl}/apex/ApplicationRequirement?requirementId={!r.req.Id}&applicationId={!app.Id}&contactId={!contactId}" style="color:#{!appControl.Link_Color__c};" >{!IF(r.req.Label__c != null && r.req.Label__c != '', r.req.Label__c, r.req.Name)}</a>
+                                        <a target="_self" href="{!$Site.BaseUrl}/apex/ApplicationRequirement?requirementId={!r.req.Id}&applicationId={!app.Id}&contactId={!contactId}"
+                                           style="color:#{!appControl.Link_Color__c}; text-decoration: underline;" >{!IF(r.req.Label__c != null && r.req.Label__c != '',r.req.Label__c,r.req.Name)}
+                                        </a>
+                                        <span class="oi oi-arrow-right" style="color:#{!appControl.Link_Color__c};"></span>
                                     </div>
                                 </div>
                                 <apex:repeat value="{!r.reqItems}" var="ri" >

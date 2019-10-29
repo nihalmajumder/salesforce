@@ -35,7 +35,7 @@
                         <apex:selectOptions value="{!programs}"/>
                         <!--                        <apex:actionSupport event="onchange" reRender="a"/>-->
                     </apex:selectList>
-                </apex:pageblockSectionItem>
+                </apex:pageblockSectionItem>ApplicationChecklist
 
                 <apex:pageblockSectionItem rendered="{!campaign_school=='CAS'}">
                     <apex:outputLabel >High School Graduation Year</apex:outputLabel>
@@ -64,6 +64,16 @@
 
             </apex:pageBlockSection>
         </apex:pageBlock>
+
+
+        <apex:outputPanel id="tstpopup">
+            <apex:outputPanel styleClass="modalBackground" layout="block" rendered="{!show_popup}"/>
+            <apex:outputPanel styleClass="confirmModal" layout="block" rendered="{!show_popup}">
+                <h3>Thanks {!interaction.First_Name__c}!</h3>
+                Bethel Admissions will contact you soon.<br/>
+                <apex:commandButton value="Close" action="{!reloadPage}" rerender="RFI"/>
+            </apex:outputPanel>
+        </apex:outputPanel>
 
 
     </apex:form>

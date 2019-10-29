@@ -11,12 +11,16 @@ public with sharing class CampaignRFIFormController {
     public String grad_year {get; set;}
     public String program {get; set;}
     public String school {get; set;}
+    public Boolean show_popup {get; set;}
+    public String current_page {get; set;}
 
     public CampaignRFIFormController(ApexPages.StandardController controller) {
 
         String campaign_id = ApexPages.currentPage().getParameters().get('CampaignId');
         rfi_campaign = [SELECT Id, RFI_Version__c, Source_Type__c, Source_Detail__c, School__c, RFI_Attributes__c FROM Campaign WHERE Id=:campaign_id];
         campaign_school = rfi_campaign.School__c;
+        show_popup = false;
+        current_page = ApexPages.currentPage().getUrl();
         interaction = new Interaction__c(Mailing_Country__c='United States',
                                         Interaction_Source__c='Webform',
                                         Campaign__c=campaign_id,
@@ -86,6 +90,15 @@ public with sharing class CampaignRFIFormController {
 
     }
 
+    public PageReference reloadPage(){
+        PageReference page = new PageReference('/admissions/CampaignRFIForm?CampaignId='+rfi_campaign.Id);
+
+        page.setRedirect(true);
+        return page;
+
+
+    }
+
     @Future
     private static void update_interaction(Id int_id){
         Interaction__c i = [Select Id, Interaction_Status__c from Interaction__c where Id=:int_id];
@@ -96,34 +109,36 @@ public with sharing class CampaignRFIFormController {
 
     }
 
-
-    public PageReference save(){
+    public void save(){
 
         try{
 
-            if(rfi_campaign.School__c=='CAS'){
-                interaction.School_College__c = 'Undergraduate';
-                interaction.High_School_Graduation_Year__c = grad_year;
-            }else{
-                interaction.Academic_Program__c = program;
-                interaction.School_College__c = school;
-            }
+//            if(rfi_campaign.School__c=='CAS'){
+//                interaction.School_College__c = 'Undergraduate';
+//                interaction.High_School_Graduation_Year__c = grad_year;
+//            }else{
+//                interaction.Academic_Program__c = program;
+//                interaction.School_College__c = school;
+//            }
 
 
-            insert interaction;
+//            insert interaction;
             // just for testing, redirect to the interaction
 
-            update_interaction(interaction.Id);
+//            update_interaction(interaction.Id);
+//
+//            PageReference home = new PageReference('https://bethel-university--partial.lightning.force.com/'+interaction.Id);
+//            home.setRedirect(true);
+//            return home;
+            show_popup = true;
 
-            PageReference home = new PageReference('https://bethel-university--partial.lightning.force.com/'+interaction.Id);
-            home.setRedirect(true);
-            return home;
+
         }
 
         catch (Exception ex) {
             ApexPages.addMessages(ex);
             system.debug(ex);
-            return null;
+//            return null;
         }
     }
 
