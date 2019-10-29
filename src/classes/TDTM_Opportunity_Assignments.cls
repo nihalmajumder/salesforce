@@ -30,6 +30,7 @@ global class TDTM_Opportunity_Assignments extends TDTMVirtualTriggerHandler {
                     new_opp.Academic_Term__c != old_opp.Academic_Term__c ||
                     new_opp.Student_Type__c != old_opp.Student_Type__c ||
                     new_opp.Is_International__c != old_opp.Is_International__c ||
+                    new_opp.NCAA_Interest__c != old_opp.NCAA_Interest__c ||
                     (new_opp.Process_Assignments__c != old_opp.Process_Assignments__c && new_opp.Process_Assignments__c == true);
 
             if(fields_changed && new_opp.Override_Ownership__c == False){
