@@ -6,7 +6,6 @@
         <apex:stylesheet value="{!URLFOR($Resource.bootstrap, '/css/bootstrap.css')}" />
         <apex:stylesheet value="{!URLFOR($Resource.jqueryui, '/jquery-ui-1.12.1.custom/jquery-ui.min.css')}" />
         <apex:includescript value="{!URLFOR($Resource.ckeditor, 'ckeditor/ckeditor.js')}" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <style>
             .btn-lightning {
