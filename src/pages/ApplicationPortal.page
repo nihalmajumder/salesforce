@@ -15,7 +15,6 @@
     <c:ApplicationBody title="Application Portal" appControl="{!appControl}">
         <apex:form id="theForm" >
             <apex:pageMessages />
-            
             <div class="row desktop_view" >
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
                     <div class="row" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;margin-bottom:.5em;" >
@@ -37,12 +36,14 @@
                         <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')} portal-text" >
                            <span class="portal-header">Status</span>
                         </div>
+                    <hr/>
+                    <hr/>
                     </div>
                     <apex:repeat value="{!apps}" var="a" >
                         <div class="row" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >
                             <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
                             <div class="{!if(appControl.Hide_Term_Program__c,'col-xs-6','col-xs-2')} portal-text" >
-                                <a target="_self" href="{!$Site.BaseUrl}/apex/ApplicationChecklist?applicationId={!a.Id}&contactId={!contactId}" style="color:#{!appControl.Link_Color__c}" >{!a.Name}</a>
+                                <a target="_self" class="btn" href="{!$Site.BaseUrl}/apex/ApplicationChecklist?applicationId={!a.Id}&contactId={!contactId}"  style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" >{!IF(CONTAINS('Started;Submitted', a.Application_Status__c), 'Edit', 'View')}</a>
                             </div>
                             <apex:outputPanel rendered="{!!appControl.Hide_Term_Program__c}" >
                                 <!-- added class portal-text to reduce font size for smaller mobile screens - Luke Vang -->
@@ -58,20 +59,16 @@
                                 {!a.Application_Status__c}
                             </div>
                         </div>
+                        <hr/>
+
                     </apex:repeat>
                 </div>
             </div>
-            
+
             <!-- mobile view - Luke Vang-->
             <div class="row mobile_view" >
                 <apex:repeat value="{!apps}" var="a" >
                     <div class="row" style="padding: 20px; font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >
-                        <div class="col-xs-12" >
-                            <span class="portal-header">Application:</span>
-                            <span>
-                                <a target="_self" href="{!$Site.BaseUrl}/apex/ApplicationChecklist?applicationId={!a.Id}&contactId={!contactId}" style="color:#{!appControl.Link_Color__c}" >{!a.Name}</a>
-                            </span>
-                        </div>
                         <div class="col-lg-12 col-xs-12" >
                             <span class="portal-header">Program:</span>
                             <span>
@@ -92,7 +89,13 @@
                                 {!a.Application_Status__c}
                             </span>
                         </div>
+                        <div class="col-xs-12" >
+                            <span>
+                                    <a target="_self" class="btn" href="{!$Site.BaseUrl}/apex/ApplicationChecklist?applicationId={!a.Id}&contactId={!contactId}"  style="color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c};" >{!IF(CONTAINS('Started;Submitted', a.Application_Status__c), 'Edit', 'View')}</a>
+                            </span>
+                        </div>
                     </div>
+                    <hr/>
                 </apex:repeat>
             </div>
             <!-- end mobile view -->

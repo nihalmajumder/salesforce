@@ -3,6 +3,16 @@
     <c:ApplicationBody title="Application Checklist" subtitle="{!IF(appControl.Hide_Term_Program__c, '', IF(ISBLANK(app.Intended_Program__r.Program_Name_on_Application__c), app.Intended_Program__r.Name, app.Intended_Program__r.Program_Name_on_Application__c) + ' - ' + app.Intended_Term_of_Entry__r.Name)}" appControl="{!appControl}" app="{!app}">
         <apex:form id="theForm" >
             <apex:pageMessages />
+            <apex:outputPanel rendered="{!warningMessage != null}">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="alert alert-warning" role="alert">
+                            <apex:outputText value="{!warningMessage}" />
+                        </div>
+                    </div>
+                </div>
+            </apex:outputPanel>
+
             <div class="row" >
                 <div class="col-sm-8 col-sm-offset-2">
                     <apex:repeat value="{!reqs}" var="r" >
@@ -11,9 +21,8 @@
                                 <div class="row" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:bold;font-size:20px;margin-bottom:7px" >
                                     <div class="col-xs-12" >
                                         <a target="_self" href="{!$Site.BaseUrl}/apex/ApplicationRequirement?requirementId={!r.req.Id}&applicationId={!app.Id}&contactId={!contactId}"
-                                           style="color:#{!appControl.Link_Color__c}; text-decoration: underline;" >{!IF(r.req.Label__c != null && r.req.Label__c != '',r.req.Label__c,r.req.Name)}
-                                        </a>
-                                        <span class="oi oi-arrow-right" style="color:#{!appControl.Link_Color__c};"></span>
+                                           style="color:#{!appControl.Link_Color__c}; text-decoration: underline;" >{!IF(r.req.Label__c != null && r.req.Label__c != '',r.req.Label__c,r.req.Name)}<span class="{!IF(CONTAINS('Started;Submitted', app.Application_Status__c), 'glyphicon glyphicon-arrow-right', '')}" style="color:gray; font-size:12px; margin-left: .5em;"></span></a>
+
                                     </div>
                                 </div>
                                 <apex:repeat value="{!r.reqItems}" var="ri" >

@@ -308,4 +308,46 @@ public class ApplicationHelperTest {
 
         System.assert(message != null);
     }
+
+    static testMethod void getMessageForClosedApplicationGraduateTest() {
+        Application__c app = [SELECT Id, School_College__c, Intended_Program__c, Intended_Term_of_Entry__c FROM Application__c WHERE School_College__c = 'Graduate' LIMIT 1];
+
+        test.startTest();
+        String cancelledMessage = ApplicationHelper.getMessageForClosedApplication(app);
+        test.stopTest();
+
+        System.assert(cancelledMessage != null);
+    }
+
+    static testMethod void getMessageForClosedApplicationSeminaryTest() {
+        Application__c app = [SELECT Id, School_College__c, Intended_Program__c, Intended_Term_of_Entry__c FROM Application__c WHERE School_College__c = 'Seminary' LIMIT 1];
+
+        test.startTest();
+        String cancelledMessage = ApplicationHelper.getMessageForClosedApplication(app);
+        test.stopTest();
+
+        System.assert(cancelledMessage != null);
+    }
+
+    static testMethod void getMessageForClosedApplicationCAPSTest() {
+        Application__c app = [SELECT Id, School_College__c, Intended_Program__c, Intended_Term_of_Entry__c FROM Application__c WHERE School_College__c = 'Adult Undergraduate' LIMIT 1];
+
+        test.startTest();
+        String cancelledMessage = ApplicationHelper.getMessageForClosedApplication(app);
+        test.stopTest();
+
+        System.assert(cancelledMessage != null);
+    }
+
+    static testMethod void getMessageForClosedApplicationCASTest() {
+        Application__c app = [SELECT Id, School_College__c, Intended_Program__c, Intended_Term_of_Entry__c FROM Application__c WHERE School_College__c = 'Undergraduate' LIMIT 1];
+
+        test.startTest();
+        String cancelledMessage = ApplicationHelper.getMessageForClosedApplication(app);
+        test.stopTest();
+
+        System.assert(cancelledMessage != null);
+    }
+
+
 }

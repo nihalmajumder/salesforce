@@ -204,4 +204,29 @@ public inherited sharing class ApplicationHelper {
         return message;
     }
 
+    public static String getMessageForClosedApplication(Application__c currentApp) {
+        String message = 'This application is closed. If you would like it opened, please contact Admissions.';
+        if (currentApp.School_College__c == 'Undergraduate') {
+            message = Label.Closed_Application_Warning_CAS;
+        }
+        else if (currentApp.School_College__c == 'Graduate') {
+            message = Label.Closed_Application_Warning_GS;
+        }
+        else if (currentApp.School_College__c == 'Seminary') {
+            message = Label.Closed_Application_Warning_SEM;
+        }
+        else if (currentApp.School_College__c == 'Adult Undergraduate') {
+            message = Label.Closed_Application_Warning_CAPS;
+        }
+        List<Opportunity> opps = OpportunityHelper.getOpportunitiesWithCouselorForApplication(currentApp.Id);
+        if (!opps.isEmpty()) {
+            String profileName = opps[0].Owner.Profile.Name;
+            if (profileName != null && profileName.startsWith('Admissions')) {
+                String substring = String.format(Label.Duplicate_Application_For_Term_Error_Couselor_Substring, new List<String>{opps[0].Owner.Name, opps[0].Owner.Email});
+                message = String.format(message, new List<String>{substring});
+            }
+        }
+        return message;
+    }
+
 }

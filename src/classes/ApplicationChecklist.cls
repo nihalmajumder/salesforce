@@ -17,6 +17,7 @@ public class ApplicationChecklist {
     public Boolean allowWithdraw{get;set;}
     public List<Requirement_Item__c> riList {get;set;}
     public Decimal progress {get;set;}
+    public String warningMessage {get;set;}
 
     public Application_Control__c appControl {
         get {
@@ -65,7 +66,7 @@ public class ApplicationChecklist {
                 return;
             }
         }
-        
+
         if (contactId == null) { // Add check in case set in a different way - Todd Mitchell
             contactId = ApplicationQueryCache.getContactId(UserInfo.getUserId()); // Add cache of query - Todd Mitchell
             //contactId = [SELECT Id, ContactId FROM User WHERE Id = :UserInfo.getUserId()].ContactId;
@@ -80,7 +81,15 @@ public class ApplicationChecklist {
         //app = [SELECT Id, Intended_Program__r.Name, Intended_Program__r.Program_Name_on_Application__c, Intended_Term_of_Entry__r.Name, Intended_Program__c, Intended_Program_Code__c, Applicant_Type__c, Citizenship__c, Delivery_Type__c, Student_Type__c, Application_Status__c, School_College__c, Residency__c, Application_Control__c FROM Application__c WHERE Id = :applicationId];
         app = ApplicationQueryCache.getApplication(applicationId);
         appControl = ApplicationUtilities.getApplicationControls(app.Application_Control__c);
-        
+
+        // ejc84332: get message if app is Cancelled
+        if(app.Application_Status__c == 'Cancelled'){
+            warningMessage = ApplicationHelper.getMessageForClosedApplication(app);
+        }else{
+            warningMessage = null;
+        }
+
+
         allowCancel = String.isNotBlank(appControl.Allow_Cancel_From__c) && new Set<String>(appControl.Allow_Cancel_From__c.split(';')).contains(app.Application_Status__c);
         allowWithdraw = String.isNotBlank(appControl.Allow_Withdraw_From__c) && new Set<String>(appControl.Allow_Withdraw_From__c.split(';')).contains(app.Application_Status__c);
         
