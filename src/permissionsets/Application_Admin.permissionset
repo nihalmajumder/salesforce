@@ -3796,6 +3796,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.Portal_Login_Details__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.Preferred_First_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -3877,11 +3882,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.Undergraduate_Role__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Contact.User_Details__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5746,6 +5746,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Interaction__c.NCAA_Interest__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Interaction__c.Opportunity_Close_Date__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -7232,6 +7237,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Music_Scholarship__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.NCAA_Interest__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

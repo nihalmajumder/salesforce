@@ -265,7 +265,7 @@
     <relatedLists>
         <fields>MEMBER_TYPE</fields>
         <fields>FULL_NAME</fields>
-        <fields>STATUS</fields>
+        <fields>Registration_Status__c</fields>
         <fields>EMAIL</fields>
         <fields>PHONE</fields>
         <fields>STREET</fields>

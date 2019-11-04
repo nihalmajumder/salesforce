@@ -1012,7 +1012,7 @@ Bin_Number__c
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>_SYSTEM: One2OneContact</label>
+        <label>Primary Contact</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Account</relationshipLabel>
         <relationshipName>Organizations</relationshipName>

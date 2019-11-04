@@ -267,7 +267,7 @@
         <relationshipLabel><!-- Accounts (Current Address) --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- _SYSTEM: One2OneContact --></label>
+        <label><!-- Primary Contact --></label>
         <name>hed__Primary_Contact__c</name>
         <relationshipLabel><!-- Account --></relationshipLabel>
     </fields>

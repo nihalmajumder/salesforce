@@ -42,15 +42,6 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>ITS_Requests</assignedTo>
-            <assignedToType>Queue</assignedToType>
-            <criteriaItems>
-                <field>Case.RecordTypeId</field>
-                <operation>equals</operation>
-                <value>ITS - New User,ITS - General Request</value>
-            </criteriaItems>
-        </ruleEntry>
-        <ruleEntry>
             <assignedTo>ITS_Data_Team</assignedTo>
             <assignedToType>Queue</assignedToType>
             <booleanFilter>1 OR 2</booleanFilter>
@@ -63,6 +54,16 @@
                 <field>Case.Type</field>
                 <operation>equals</operation>
                 <value>Duplicate</value>
+            </criteriaItems>
+            <template>Case_Email_Templates/Case_Ownership_Changed</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>ITS_Requests</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>ITS - New User,ITS - General Request</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>

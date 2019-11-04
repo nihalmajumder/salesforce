@@ -6066,6 +6066,21 @@ TEXT(Lead_Source__c) ==  &quot;Website&quot;</formula>
         <type>Phone</type>
     </fields>
     <fields>
+        <fullName>NCAA_Interest__c</fullName>
+        <description>Tracks athletics interest and is used for territory assignments for CAS.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCAA sport interest. Used for counselor territory assignments.</inlineHelpText>
+        <label>NCAA Interest</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Sports</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Opportunity_Close_Date__c</fullName>
         <description>Set to the Start Date of the Term. If Term Start Date is blank, set to today&apos;s date.</description>
         <externalId>false</externalId>
@@ -7688,6 +7703,23 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
             <value>New</value>
         </filters>
         <label>Interaction Status: New</label>
+    </listViews>
+    <listViews>
+        <fullName>Today_s_Interactions</fullName>
+        <columns>NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Email__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Lead_Source__c</columns>
+        <columns>Source_Detail__c</columns>
+        <columns>Interaction_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today&apos;s Interactions</label>
     </listViews>
     <nameField>
         <displayFormat>{YYYY}{MM}{DD}-{0000000}</displayFormat>

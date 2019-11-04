@@ -8,8 +8,6 @@ public class BethelTestDataFactory {
         return [SELECT Id FROM Profile WHERE Name = 'Standard User' LIMIT 1];
     }
 
-
-
     public static User createTestUser(Id profID, String fName, String lName) {
         String orgId = userInfo.getOrganizationId();
         String dateString = String.valueof(Datetime.now()).replace(' ','').replace(':','').replace('-','');

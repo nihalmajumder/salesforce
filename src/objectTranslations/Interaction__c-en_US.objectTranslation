@@ -3196,6 +3196,11 @@
         <name>Mobile_Phone__c</name>
     </fields>
     <fields>
+        <help><!-- NCAA sport interest. Used for counselor territory assignments. --></help>
+        <label><!-- NCAA Interest --></label>
+        <name>NCAA_Interest__c</name>
+    </fields>
+    <fields>
         <label><!-- Opportunity Close Date --></label>
         <name>Opportunity_Close_Date__c</name>
     </fields>
@@ -3855,37 +3860,6 @@
         <label><!-- Zapier Information --></label>
         <name>Zapier_Information__c</name>
     </fields>
-    <layouts>
-        <layout>Interaction Layout</layout>
-        <sections>
-            <label><!-- Academic Interest Information --></label>
-            <section>Academic Interest Information</section>
-        </sections>
-        <sections>
-            <label><!-- Affiliation Information --></label>
-            <section>Affiliation Information</section>
-        </sections>
-        <sections>
-            <label><!-- Campaign Information --></label>
-            <section>Campaign Information</section>
-        </sections>
-        <sections>
-            <label><!-- Contact Information --></label>
-            <section>Contact Information</section>
-        </sections>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label><!-- Mailing Information --></label>
-            <section>Mailing Information</section>
-        </sections>
-        <sections>
-            <label><!-- Source Information --></label>
-            <section>Source Information</section>
-        </sections>
-    </layouts>
     <layouts>
         <layout>Interaction Layout - Master</layout>
         <sections>

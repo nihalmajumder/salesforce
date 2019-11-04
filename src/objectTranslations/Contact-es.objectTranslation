@@ -293,6 +293,11 @@
         <name>Pled_Guilty__c</name>
     </fields>
     <fields>
+        <help><!-- Username info for this Contact --></help>
+        <label><!-- Portal Login Details --></label>
+        <name>Portal_Login_Details__c</name>
+    </fields>
+    <fields>
         <help><!-- The Preferred First Name of the person --></help>
         <label><!-- Preferred First Name --></label>
         <name>Preferred_First_Name__c</name>
@@ -358,11 +363,6 @@
     <fields>
         <label><!-- Has Undergraduate Role --></label>
         <name>Undergraduate_Role__c</name>
-    </fields>
-    <fields>
-        <help><!-- Username info for this Contact --></help>
-        <label><!-- User Details --></label>
-        <name>User_Details__c</name>
     </fields>
     <fields>
         <label><!-- Username --></label>

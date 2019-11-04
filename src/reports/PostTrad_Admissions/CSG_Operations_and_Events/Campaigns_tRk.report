@@ -23,7 +23,7 @@
             <column>RECORDTYPE</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Campaign.Event_Campaign_Record,Campaign.Default_Campaign_Record</value>
+            <value>Campaign.Event_Campaign_Record,0125A000000vIoc</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

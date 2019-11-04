@@ -60,6 +60,10 @@
                 <behavior>Readonly</behavior>
                 <field>Account_ID__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Portal_Login_Details__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

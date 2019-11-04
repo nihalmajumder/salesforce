@@ -62,7 +62,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>User_Details__c</field>
+                <field>Portal_Login_Details__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

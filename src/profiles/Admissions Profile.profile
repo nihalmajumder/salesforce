@@ -732,6 +732,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTM_Contact_User_DetailsTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTM_Create_Case_Tasks</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -777,6 +781,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TDTM_Test_Score_Handler</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TDTM_User_Contact_Handler</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TDTM_User_Contact_HandlerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -4762,6 +4774,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.Portal_Login_Details__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.Preferred_First_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -4843,11 +4860,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.Undergraduate_Role__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Contact.User_Details__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6717,6 +6729,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Interaction__c.NCAA_Interest__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Interaction__c.Opportunity_Close_Date__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -8363,6 +8380,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Music_Scholarship__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.NCAA_Interest__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14133,10 +14155,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Campaign-Campaign Layout - Visit</layout>
-        <recordType>Campaign.Default_Campaign_Record</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Campaign-Campaign Layout - Visit</layout>
         <recordType>Campaign.Event_Campaign_Record</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -15141,11 +15159,6 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Campaign.Appointment</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Campaign.Default_Campaign_Record</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>

@@ -1932,6 +1932,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Application__c.Chemistry_Prerequisite__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Application__c.Citizenship__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
@@ -2177,6 +2182,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Application__c.Lifespan_Prerequisite__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Application__c.Masters_Degree_Posted_Prerequisite__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
@@ -2187,12 +2197,22 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Application__c.Microbiology_Prerequisite__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Application__c.Ministry_Involvement_Response__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Application__c.Name_Of_Family_Employee__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Application__c.Nutrition_Prerequisite__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
         <columns>

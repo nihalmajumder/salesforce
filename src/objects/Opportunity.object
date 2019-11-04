@@ -2122,6 +2122,22 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
         </valueSet>
     </fields>
     <fields>
+        <fullName>NCAA_Interest__c</fullName>
+        <description>Used for territory assignments and tracking students being recruited for specific sports.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The NCAA sport this applicant is interested in playing.</inlineHelpText>
+        <label>NCAA Interest</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Sports</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
@@ -4163,6 +4179,53 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>NCAA_Interest__c</picklist>
+            <values>
+                <fullName>Baseball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Football</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Golf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hockey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Softball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tennis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Track and Field</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volleyball</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Physics_Engineering_Scholarship__c</picklist>
             <values>
                 <fullName>Applied</fullName>
@@ -5266,6 +5329,53 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>NCAA_Interest__c</picklist>
+            <values>
+                <fullName>Baseball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basketball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Football</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Golf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hockey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Soccer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Softball</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tennis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Track and Field</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volleyball</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Physics_Engineering_Scholarship__c</picklist>
             <values>
                 <fullName>Applied</fullName>
@@ -5862,6 +5972,15 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <searchResultsAdditionalFields>CORE.USERS.FULL_NAME</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>Academic_Program_must_be_active</fullName>
+        <active>true</active>
+        <description>limits Academic Program lookup to active Programs</description>
+        <errorConditionFormula>Academic_Program__r.Active__c = false &amp;&amp;
+	ISCHANGED(Academic_Program__c)</errorConditionFormula>
+        <errorDisplayField>Academic_Program__c</errorDisplayField>
+        <errorMessage>Selected program is not active.</errorMessage>
+    </validationRules>
     <validationRules>
         <fullName>Accepted_must_come_from_App_Completed</fullName>
         <active>true</active>
