@@ -17,8 +17,8 @@
                 <apex:inputField value="{! interaction.Mailing_Street__c }"/>
                 <apex:inputField value="{! interaction.Mailing_Street_2__c }"/>
                 <apex:inputField value="{! interaction.Mailing_City__c }"/>
-                <apex:inputField value="{! interaction.Mailing_Country__c }"/>
                 <apex:inputField value="{! interaction.Mailing_State__c }" />
+                <apex:inputField value="{! interaction.Mailing_Country__c }"/>
                 <apex:inputField value="{! interaction.Mailing_Postal_Code__c}"/>
 
                 <apex:pageblockSectionItem rendered="{!campaign_school !='CAS'}">
@@ -35,7 +35,7 @@
                         <apex:selectOptions value="{!programs}"/>
                         <!--                        <apex:actionSupport event="onchange" reRender="a"/>-->
                     </apex:selectList>
-                </apex:pageblockSectionItem>ApplicationChecklist
+                </apex:pageblockSectionItem>
 
                 <apex:pageblockSectionItem rendered="{!campaign_school=='CAS'}">
                     <apex:outputLabel >High School Graduation Year</apex:outputLabel>
@@ -71,11 +71,8 @@
             <apex:outputPanel styleClass="confirmModal" layout="block" rendered="{!show_popup}">
                 <h3>Thanks {!interaction.First_Name__c}!</h3>
                 Bethel Admissions will contact you soon.<br/>
-                <apex:commandButton value="Close" action="{!reloadPage}" rerender="RFI"/>
+                <apex:commandButton value="Close" action="{!reloadPage}" rerender="RFI" status="spinnerStatus"/>
             </apex:outputPanel>
         </apex:outputPanel>
-
-
     </apex:form>
-
 </apex:page>

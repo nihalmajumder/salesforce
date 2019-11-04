@@ -113,23 +113,18 @@ public with sharing class CampaignRFIFormController {
 
         try{
 
-//            if(rfi_campaign.School__c=='CAS'){
-//                interaction.School_College__c = 'Undergraduate';
-//                interaction.High_School_Graduation_Year__c = grad_year;
-//            }else{
-//                interaction.Academic_Program__c = program;
-//                interaction.School_College__c = school;
-//            }
+            if(rfi_campaign.School__c=='CAS'){
+                interaction.School_College__c = 'Undergraduate';
+                interaction.High_School_Graduation_Year__c = grad_year;
+            }else{
+                interaction.Academic_Program__c = program;
+                interaction.School_College__c = school;
+            }
 
+            insert interaction;
 
-//            insert interaction;
-            // just for testing, redirect to the interaction
+            update_interaction(interaction.Id);
 
-//            update_interaction(interaction.Id);
-//
-//            PageReference home = new PageReference('https://bethel-university--partial.lightning.force.com/'+interaction.Id);
-//            home.setRedirect(true);
-//            return home;
             show_popup = true;
 
 
