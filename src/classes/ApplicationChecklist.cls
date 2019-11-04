@@ -214,11 +214,28 @@ public class ApplicationChecklist {
 
         // Requirement Responses
         Map<Id, List<Requirement_Response__c>> rrMap = new Map<Id, List<Requirement_Response__c>>();
+        Map<Id, Requirement_Response__c> validResponseMap = new Map<Id, Requirement_Response__c>(); // Add map and list of duplicates to detect duplicates - Todd Mitchell
+        List<Requirement_Response__c> duplicateList = new List<Requirement_Response__c>(); // Add map and list of duplicates to detect duplicates - Todd Mitchell
         for (Requirement_Response__c rr:[SELECT Id, Requirement_Item__r.Requirement__c, Requirement_Item__c, ValueTextEntry__c, Incomplete_Questions__c, Question_Group_Requirement_Fulfilled_On__c, HasDocument__c, Document_Requirement_Fulfilled_On__c, Has_Child_Requirement__c, Child_Requirement_Fulfilled_On__c, Application__c, Application__r.Contact__c, External_Email__c, Hashcode__c, Send_Reminder__c, Reference_Access_Rights__c, Reference_First_Name__c, Reference_Last_Name__c, Admissions_Document__c, Reference__c, (SELECT Id, IsPopulated__c, PopulatedOn__c, Question__c, Question__r.Required__c, ValueText__c, ValueCheckbox__c, ValuePhone__c, ValueEmail__c, ValueCurrency__c, ValueDate__c, ValueDateTime__c, ValueNumber__c, ValuePercent__c, ValueTextArea__c, ValueTextEncrypted__c, ValueLongTextArea__c, ValueURL__c, Street__c, City__c, State__c, Country__c, PostalCode__c,Requirement_Response__c FROM Question_Responses__r), (SELECT Id, LinkedEntityId, ContentDocumentId, ContentDocument.Title FROM ContentDocumentLinks) FROM Requirement_Response__c WHERE Requirement_Item__r.Requirement__c in :requirementIds AND Application__c = :applicationId]){
             
+            // Duplicate check - Todd Mitchell
+            if (validResponseMap.containsKey(rr.Requirement_Item__c)) {
+                Requirement_Response__c dupRR = validResponseMap.get(rr.Requirement_Item__c);
+                duplicateList.add(dupRR);
+            }
+            validResponseMap.put(rr.Requirement_Item__c, rr);
+        }
+
+        // Move code after duplicate check - Todd Mitchell
+        for (Requirement_Response__c rr : validResponseMap.values()) {
             if (!rrMap.containsKey(rr.Requirement_Item__r.Requirement__c))
                 rrMap.put(rr.Requirement_Item__r.Requirement__c, new List<Requirement_Response__c>());
             rrMap.get(rr.Requirement_Item__r.Requirement__c).add(rr);
+        }
+
+        System.debug(duplicateList);
+        if (!duplicateList.isEmpty()) {
+            delete duplicateList;
         }
 
         //Question Dependencies
