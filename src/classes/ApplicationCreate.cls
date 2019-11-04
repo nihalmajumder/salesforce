@@ -288,10 +288,10 @@ public class ApplicationCreate {
             
             // Check to make sure selections are valid for number of applications limit
             if (String.isNotBlank(ip.Number_of_Applications_Limit__c)) {
-                for (Application__c a:[SELECT Id, Intended_Program__c, Intended_Term_of_Entry__c FROM Application__c WHERE Contact__c = :app.Contact__c]) {
+                for (Application__c a:[SELECT Id, Intended_Program__c, Intended_Term_of_Entry__c, School_College__c FROM Application__c WHERE Contact__c = :app.Contact__c]) {  // Add school to query - Todd Mitchell
                     if (ip.Number_of_Applications_Limit__c.equals('One Application'))
                         return 'You already have an application. Only one application is allowed.';
-                    else if ((ip.Number_of_Applications_Limit__c.equals('One Application Per Term') || ip.Number_of_Applications_Limit__c.equals('One Application Per Term Per Program')) && app.Intended_Term_of_Entry__c == a.Intended_Term_of_Entry__c)
+                    else if ((ip.Number_of_Applications_Limit__c.equals('One Application Per Term') || ip.Number_of_Applications_Limit__c.equals('One Application Per Term Per Program')) && app.Intended_Term_of_Entry__c == a.Intended_Term_of_Entry__c && app.School_College__c == a.School_College__c) // Add check for school - Todd Mitchell
                         return ApplicationHelper.getMessageForDuplicateApplicationForTerm(app, a);
                     else if (ip.Number_of_Applications_Limit__c.equals('One Application Per Program') && app.Intended_Program__c == a.Intended_Program__c)
                         return 'You already have an application for this program. Only one application per program is allowed.';
