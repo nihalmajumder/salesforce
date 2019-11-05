@@ -40,10 +40,15 @@ global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
         List<Education_History__c> ed_histories = [Select Id, Document_Status__c, Best_School_Name__c, Contact__c from Education_History__c
                                                     where Document_Status__c in ('Conditional', 'Provisional') and Contact__c in :contact_ids];
 
-        List<Question_Response__c> internal = [ SELECT Id, Question_Label__c, ValueText__c, IsComplete__c, Requirement_Response__r.Application__c from Question_Response__c
-                                                    where IsShown__c = TRUE and ValueText__c in ('Conditional', 'Provisional') and Requirement_Response__c in (
-                                                        SELECT Id from Requirement_Response__c where Application__c in :app_ids and Requirement_Item__r.Name like '%Prerequisites%')
-                                             ];
+        List<Question_Response__c> internal = [
+                SELECT Id, Question__r.Name, Question_Label__c, ValueText__c, IsComplete__c, Requirement_Response__r.Application__c
+                from Question_Response__c
+                where IsShown__c = TRUE
+                and ValueText__c in ('Conditional', 'Provisional')
+                and Requirement_Response__c in (SELECT Id from Requirement_Response__c where Requirement_Item__r.Name like '%Prerequisites%')
+                and (NOT Question__r.Name LIKE '%GPA%')
+                AND (NOT Question__r.Name LIKE '%Degree%')
+         ];
 
 //        List<Reference__c> refs = [ SELECT Id, Type__c from Reference__c where Signature__c = 'Conditional' or Signature__c = 'conditional' and Req];
 
