@@ -32,13 +32,13 @@ global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
         }
 
         List<Test_Score__c> test_scores = [Select Id, Document_Status__c, Test_Type__c, Contact__c from Test_Score__c
-                                            where Document_Status__c in ('Conditional', 'Provisional', 'Mandatory') and Contact__c in :contact_ids];
+                                            where Document_Status__c in ('Conditional', 'Provisional', 'Mandatory', '') and Contact__c in :contact_ids];
 
         List<Admissions_Document__c> admissions_documents = [Select Id, Status__c, Type__c, Contact__c from Admissions_Document__c
-                                                                 where Status__c in ('Conditional', 'Provisional', 'Mandatory') and Contact__c in :contact_ids];
+                                                                 where Status__c in ('Conditional', 'Provisional', 'Mandatory', '') and Contact__c in :contact_ids];
 
         List<Education_History__c> ed_histories = [Select Id, Document_Status__c, Best_School_Name__c, Contact__c from Education_History__c
-                                                    where Document_Status__c in ('Conditional', 'Provisional', 'Mandatory') and Contact__c in :contact_ids];
+                                                    where Document_Status__c in ('Conditional', 'Provisional', 'Mandatory', '') and Contact__c in :contact_ids];
 
         List<Question_Response__c> internal = [
                 SELECT Id, Question__r.Name, Question_Label__c, ValueText__c, IsComplete__c, Requirement_Response__r.Application__c
