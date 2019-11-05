@@ -19,7 +19,13 @@ global class TDTM_Task_Set_Last_Activity_Fields extends TDTMVirtualTriggerHandle
             }
         }
 
-        update update_contacts;
+        // de-dupe list
+        Set<Contact> contact_set = new Set<Contact>();
+        List<Contact> result = new List<Contact>();
+        contact_set.addAll(update_contacts);
+        result.addAll(contact_set);
+
+        update result;
     }
 
     global override void onAfterUpdate(List<SObject> newList, List<SObject> oldList, Map<Id, SObject> newMap, Map<Id, SObject> oldMap, hed.TDTM_Runnable.DmlWrapper wrapper) {
@@ -38,6 +44,12 @@ global class TDTM_Task_Set_Last_Activity_Fields extends TDTMVirtualTriggerHandle
             }
         }
 
-        update update_contacts;
+        // de-dupe list
+        Set<Contact> contact_set = new Set<Contact>();
+        List<Contact> result = new List<Contact>();
+        contact_set.addAll(update_contacts);
+        result.addAll(contact_set);
+
+        update result;
     }
 }
