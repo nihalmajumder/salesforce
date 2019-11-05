@@ -98,6 +98,9 @@ public class OpportunityHelperTest {
         Test_Score__c ts = new Test_Score__c(Test_Type__c='ACT', Contact__c=student.Id);
         insert ts;
 
+        Admissions_Document__c ad = new Admissions_Document__c(Contact__c=student.Id);
+        insert ad;
+
     }
 
     static testMethod void testCreateCaseOnConfirmedPROVISIONALTYPE(){
@@ -231,6 +234,29 @@ public class OpportunityHelperTest {
 
         delete ts;
     }
+
+    static testMethod void updateAdmissionsDocument(){
+
+        Admissions_Document__c ad = [Select Id, Contact__c from Admissions_Document__c];
+
+        Test.startTest();
+        Admissions_Document__c ad_conditional = new Admissions_Document__c(Contact__c=ad.Contact__c);
+        insert ad_conditional;
+
+        System.debug('-------------------------------------');
+        System.debug(ad);
+        System.debug(ad.Contact__c);
+        List<Opportunity> opportunities = [SELECT Id, Documents_Missing__c, StageName, Stage_Detail__c, Contact__c FROM Opportunity WHERE StageName = 'Applied' AND Contact__c = :ad.Contact__c];
+        System.debug(opportunities);
+        System.debug('-------------------------------------');
+
+        ad.Status__c = 'Conditional';
+
+        update ad;
+
+        delete ad;
+    }
+
 
     static testMethod  void updateApplicationRequirements(){
         Application__c app = [Select Id, GPA_30_Prerequisite__c from Application__c];
