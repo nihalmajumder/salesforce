@@ -32,13 +32,13 @@ global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
         }
 
         List<Test_Score__c> test_scores = [Select Id, Document_Status__c, Test_Type__c, Contact__c from Test_Score__c
-                                            where Document_Status__c in ('Conditional', 'Provisional') and Contact__c in :contact_ids];
+                                            where Document_Status__c in ('Conditional', 'Provisional', 'Mandatory') and Contact__c in :contact_ids];
 
         List<Admissions_Document__c> admissions_documents = [Select Id, Status__c, Type__c, Contact__c from Admissions_Document__c
-                                                                 where Status__c in ('Conditional', 'Provisional') and Contact__c in :contact_ids];
+                                                                 where Status__c in ('Conditional', 'Provisional', 'Mandatory') and Contact__c in :contact_ids];
 
         List<Education_History__c> ed_histories = [Select Id, Document_Status__c, Best_School_Name__c, Contact__c from Education_History__c
-                                                    where Document_Status__c in ('Conditional', 'Provisional') and Contact__c in :contact_ids];
+                                                    where Document_Status__c in ('Conditional', 'Provisional', 'Mandatory') and Contact__c in :contact_ids];
 
         List<Question_Response__c> internal = [
                 SELECT Id, Question__r.Name, Question_Label__c, ValueText__c, IsComplete__c, Requirement_Response__r.Application__c
@@ -59,37 +59,63 @@ global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
 
         for( Opportunity o : process_opps){
 
+            Boolean csg_opp = o.School_College__c != 'Undergraduate';
+            Boolean undergrad_opp = !csg_opp;
+
             List<String> lines = new List<String>();
 
             for (Test_Score__c ts : test_scores){
                 if(ts.Contact__c == o.Contact__c){
-                    lines.add('- ' + ts.Test_Type__c + ' test score');
+
+                    Boolean cond_or_prov = ts.Document_Status__c == 'Conditional' || ts.Document_Status__c == 'Provisional';
+                    if(undergrad_opp){
+                        lines.add('- ' + ts.Test_Type__c + ' test score');
+                    }else if(csg_opp && cond_or_prov){
+                        lines.add('- ' + ts.Test_Type__c + ' test score');
+                    }
                 }
             }
 
             for (Admissions_Document__c ad : admissions_documents){
                 if(ad.Contact__c == o.Contact__c){
-                    lines.add('- ' + ad.Type__c);
+
+                    Boolean cond_or_prov = ad.Status__c == 'Conditional' || ad.Status__c == 'Provisional';
+                    if(undergrad_opp && (o.Student_Type__c == 'PSEO' || o.Is_International__c)){
+                        lines.add('- ' + ad.Type__c);
+                    }else if(csg_opp && cond_or_prov){
+                        lines.add('- ' + ad.Type__c);
+                    }
                 }
             }
 
             for (Education_History__c eh : ed_histories){
                 if(eh.Contact__c == o.Contact__c){
-                    lines.add('- Transcript: ' + eh.Best_School_Name__c);
+
+                    Boolean cond_or_prov = eh.Document_Status__c == 'Conditional' || eh.Document_Status__c == 'Provisional';
+                    if(undergrad_opp){
+                        lines.add('- Transcript: ' + eh.Best_School_Name__c);
+                    }else if(csg_opp && cond_or_prov){
+                        lines.add('- Transcript: ' + eh.Best_School_Name__c);
+                    }
                 }
             }
 
-            for (Requirement_Response__c rr : rrs){
-                if(rr.Application__c == o.Application__c){
-                    lines.add('- ' + rr.Requirement_Item__r.Label__c);
+            // only CSG gets references and internal requirements
+            if(csg_opp){
+                for (Requirement_Response__c rr : rrs){
+                    if(rr.Application__c == o.Application__c){
+                        lines.add('- ' + rr.Requirement_Item__r.Label__c);
+                    }
+                }
+                for (Question_Response__c i : internal){
+                    if( i.Requirement_Response__r.Application__c == o.Application__c ){
+                        lines.add('- Prerequisite: ' + i.Question_Label__c);
+                    }
                 }
             }
 
-            for (Question_Response__c i : internal){
-                if( i.Requirement_Response__r.Application__c == o.Application__c ){
-                    lines.add('- Prerequisite: ' + i.Question_Label__c);
-                }
-            }
+
+
 
             lines.sort();
             String new_documents_missng = String.join(lines, '\n');
