@@ -3,10 +3,33 @@ public with sharing class ContactHelper {
         Contact c = null;
         List<Contact> contacts = [
             Select 
-                Id, 
+                Id, Name, 
                 FirstName, 
+                MiddleName,
                 LastName,
-                Email
+                Email,
+                MailingStreet,
+                MailingCity,
+                MailingState,
+                MailingStateCode,
+                MailingCountry,
+                MailingCountryCode,
+                MailingPostalCode,
+                HomePhone,
+                MobilePhone,
+                hed__Gender__c,
+                hed__Race__c,
+                hed__Social_Security_Number__c,
+                hed__WorkPhone__c,
+                Alien_Registration_Number__c,
+                Alien_Registration_Number_Date__c,
+                Banner_Id__c,
+                Citizenship__c,
+                Conviction_Description__c,
+                Is_Hispanic__c,
+                Is_Veteran__c,
+                Pled_Guilty__c,
+                Visa_Type_Code__c
             FROM 
                 Contact
             WHERE
@@ -36,5 +59,47 @@ public with sharing class ContactHelper {
                 Id IN :theIds
         ]);
         return contacts;
+    }
+
+    public static Contact getContactFromBethelId(String theId) {
+        Contact c = null;
+        List<Contact> contacts = [
+            SELECT 
+                Id, Name, 
+                FirstName, 
+                MiddleName,
+                LastName,
+                Email,
+                MailingStreet,
+                MailingCity,
+                MailingState,
+                MailingStateCode,
+                MailingCountry,
+                MailingCountryCode,
+                MailingPostalCode,
+                HomePhone,
+                MobilePhone,
+                hed__Gender__c,
+                hed__Race__c,
+                hed__Social_Security_Number__c,
+                hed__WorkPhone__c,
+                Alien_Registration_Number__c,
+                Alien_Registration_Number_Date__c,
+                Banner_Id__c,
+                Citizenship__c,
+                Conviction_Description__c,
+                Is_Hispanic__c,
+                Is_Veteran__c,
+                Pled_Guilty__c,
+                Visa_Type_Code__c
+            FROM 
+                Contact
+            WHERE
+                Banner_Id__c = :theId
+        ];
+        if (contacts != null && !contacts.isEmpty()) {
+            c = contacts[0];
+        }
+        return c;
     }
 }
