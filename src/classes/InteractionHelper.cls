@@ -17,8 +17,7 @@ public class InteractionHelper {
             Academic_Program__c = app.Intended_Program__c,
             Academic_Term__c = app.Intended_Term_of_Entry__c,
             Application__c = app.Id,
-            Interaction_Source__c = 'Application',
-            Lead_Source__c = 'Application Create',
+            Interaction_Source__c = 'Application Create',
             Opportunity_Stage__c = 'Inquired',
             Opportunity_Stage_Detail__c = 'App Started'
         );
@@ -39,8 +38,7 @@ public class InteractionHelper {
             Academic_Program__c = app.Intended_Program__c,
             Academic_Term__c = app.Intended_Term_of_Entry__c,
             Application__c = app.Id,
-            Interaction_Source__c = 'Application',
-            Lead_Source__c = 'Application Submit',
+            Interaction_Source__c = 'Application Submit',
             Opportunity_Stage__c = 'Applied',
             Opportunity_Stage_Detail__c = 'App Submitted'
         );
@@ -62,8 +60,7 @@ public class InteractionHelper {
             Academic_Program__c = app.Intended_Program__c,
             Academic_Term__c = app.Intended_Term_of_Entry__c,
             Application__c = app.Id,
-            Interaction_Source__c = 'Application',
-            Lead_Source__c = 'Application Change',
+            Interaction_Source__c = 'Application Change',
             Opportunity_Stage__c = 'Inquired',
             Opportunity_Stage_Detail__c = 'App Started'
         );
@@ -90,8 +87,7 @@ public class InteractionHelper {
                     Academic_Program__c = app.Intended_Program__c,
                     Academic_Term__c = app.Intended_Term_of_Entry__c,
                     Application__c = app.Id,
-                    Interaction_Source__c = 'Application',
-                    Lead_Source__c = 'Application Change'
+                    Interaction_Source__c = 'Application Change'
                 );
                 interactions.add(i);
             }
@@ -159,12 +155,9 @@ public class InteractionHelper {
         for (Contact c : [SELECT Id, FirstName, LastName, Email FROM Contact WHERE Id IN :contactIds]) {
             contactMap.put(c.Email, c);
         }
-System.debug('*************');
-System.debug(contactMap);
         List<Interaction__c> updateList = new List<Interaction__c>();
         for (Interaction__c i : [SELECT Id, First_Name__c, Last_Name__c, Email__c, Contact__c FROM Interaction__c WHERE Email__c IN :contactMap.keySet() AND Contact__c = null AND Interaction_Status__c = 'Imported']) {
             Contact c = contactMap.get(i.Email__c);
-System.debug(c);
             if (c != null && c.LastName == i.Last_Name__c && c.FirstName == i.First_Name__c) {
                 i.Contact__c = c.Id;
                 updateList.add(i);
@@ -178,6 +171,34 @@ System.debug(c);
     @future
     public static void updateInteractionsForContactFuture(Set<Id> contactIds) {
         updateInteractionsForContact(contactIds);
+    }
+
+    public static Interaction__c createInteraction(String firstName, String lastName, String email, String source) {
+        Interaction__c interaction = new Interaction__c(
+            First_Name__c = firstName, 
+            Last_Name__c = lastName, 
+            Email__c = email, 
+            Interaction_Source__c = source
+        );
+        insert interaction;
+        return interaction;
+    }
+
+    public static Interaction__c getInteraction(Id theId) {
+        Interaction__c i = null;
+        List<Interaction__c> interactions = [
+            Select 
+                Id, Name, Contact__c
+            FROM 
+                Interaction__c
+            WHERE
+                Id = :theId
+        ];
+        if (interactions != null && !interactions.isEmpty()) {
+            i = interactions[0];
+        }
+        return i;
+
     }
 
 }
