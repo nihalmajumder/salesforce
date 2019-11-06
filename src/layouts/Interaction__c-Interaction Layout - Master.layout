@@ -51,6 +51,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Banner_PIDM__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Is_Legacy__c</field>
             </layoutItems>
             <layoutItems>

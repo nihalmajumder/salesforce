@@ -192,6 +192,10 @@
         <name>Banner_ID__c</name>
     </fields>
     <fields>
+        <label><!-- Banner PIDM --></label>
+        <name>Banner_PIDM__c</name>
+    </fields>
+    <fields>
         <label><!-- Birthdate --></label>
         <name>Birthdate__c</name>
     </fields>
@@ -373,6 +377,10 @@
         <picklistValues>
             <masterLabel>Purchase List</masterLabel>
             <translation><!-- Purchase List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Re-enrollment</masterLabel>
+            <translation><!-- Re-enrollment --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Register</masterLabel>

@@ -580,6 +580,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Banner_PIDM__c</fullName>
+        <externalId>false</externalId>
+        <label>Banner PIDM</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Birthdate__c</fullName>
         <externalId>false</externalId>
         <label>Birthdate</label>
@@ -972,6 +983,11 @@ TEXT(Academic_Program__r.Career__c))</formula>
                     <fullName>Account Register</fullName>
                     <default>false</default>
                     <label>Account Register</label>
+                </value>
+                <value>
+                    <fullName>Re-enrollment</fullName>
+                    <default>false</default>
+                    <label>Re-enrollment</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

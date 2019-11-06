@@ -924,6 +924,17 @@ if( text(Status) = &quot;Closed&quot;,
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Collection_Holds__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Answer to question &quot;Do you have a business office or collections hold? &quot; for re-enrollment</description>
+        <externalId>false</externalId>
+        <label>Collection Holds</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Comments</fullName>
         <trackTrending>false</trackTrending>
     </fields>
@@ -1551,6 +1562,17 @@ Petition_Type__c,
             </valueSetDefinition>
         </valueSet>
         <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Has_Information_Changed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Answer to question &quot;Has any information changed in sections I, II or III since you last attended?&quot; for re-enrollment</description>
+        <externalId>false</externalId>
+        <label>Has Information Changed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Hometown__c</fullName>
@@ -3205,6 +3227,41 @@ Petition_Type__c,
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Why_Left_Essay__c</fullName>
+        <description>Essay on &quot;Please provide a brief description of the reason you left the program&quot; for re-enrollment</description>
+        <externalId>false</externalId>
+        <label>Why Left Essay</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Why_Returning_Essay__c</fullName>
+        <description>Essay on &quot;Please provide a brief description of the reason you left the program&quot; for re-enrollment</description>
+        <externalId>false</externalId>
+        <label>Why Returning Essay</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Will_Apply_For_Financial_Aid__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Answer to &quot;Will you apply for financial aid?&quot; for Re-Enrollment</description>
+        <externalId>false</externalId>
+        <label>Will Apply For Financial Aid</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Zip_Code_Region__c</fullName>

@@ -768,6 +768,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTM_Reference_Trigger_Handler</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TDTM_Reference_Trigger_HandlerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTM_Soucre_Primary_Handler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -3623,6 +3631,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Collection_Holds__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Comments__c</field>
         <readable>true</readable>
@@ -3746,6 +3759,11 @@
         <editable>true</editable>
         <field>Case.Groups_to_Include__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Has_Information_Changed__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -4201,6 +4219,21 @@
         <editable>true</editable>
         <field>Case.User_Replacing__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Why_Left_Essay__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Why_Returning_Essay__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Will_Apply_For_Financial_Aid__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -6515,6 +6548,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Interaction__c.Banner_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Interaction__c.Banner_PIDM__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
