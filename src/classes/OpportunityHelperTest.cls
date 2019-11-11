@@ -101,6 +101,9 @@ public class OpportunityHelperTest {
         Admissions_Document__c ad = new Admissions_Document__c(Contact__c=student.Id);
         insert ad;
 
+        Education_History__c eh = new Education_History__c(Contact__c=student.Id);
+        insert eh;
+
     }
 
     static testMethod void testCreateCaseOnConfirmedPROVISIONALTYPE(){
@@ -255,6 +258,21 @@ public class OpportunityHelperTest {
         update ad;
 
         delete ad;
+    }
+
+    static testMethod void updateEdHistory(){
+        Education_History__c eh = [select Id, Contact__c from Education_History__c];
+        Test.startTest();
+        Education_History__c eh_conditional = new Education_History__c(Contact__c=eh.Contact__c);
+        insert eh_conditional;
+        List<Opportunity> opportunities = [SELECT Id, Documents_Missing__c, StageName, Stage_Detail__c, Contact__c FROM Opportunity WHERE StageName = 'Applied' AND Contact__c = :eh.Contact__c];
+
+        eh.Document_Status__c = 'Conditional';
+
+        update eh;
+
+        delete eh;
+
     }
 
 

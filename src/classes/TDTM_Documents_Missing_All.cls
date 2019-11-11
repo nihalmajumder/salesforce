@@ -31,50 +31,50 @@ global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
             return;
         }
 
-        List<Test_Score__c> test_scores = [Select Id, Document_Status__c, Test_Type__c, Contact__c from Test_Score__c
+        List<Test_Score__c> test_scores = [select Id, Document_Status__c, Test_Type__c, Contact__c from Test_Score__c
                                             where Document_Status__c in ('Conditional', 'Provisional', 'Mandatory', '') and Contact__c in :contact_ids];
 
-        List<Admissions_Document__c> admissions_documents = [Select Id, Status__c, Type__c, Contact__c from Admissions_Document__c
+
+        List<Requirement_Response__c> cas_test_scores = [select Id, Name, Fulfilled_On__c, Requirement_Item__r.Label__c, Application__c
+                                                        from Requirement_Response__c
+                                                        where Requirement_Item__r.Name like '%ACT OR SAT%'
+                                                        and Application__r.School_College__c = 'Undergraduate'
+                                                        and Fulfilled_On__c = null
+                                                        and Application__c in :app_ids
+
+        ];
+
+        List<Admissions_Document__c> admissions_documents = [select Id, Status__c, Type__c, Contact__c from Admissions_Document__c
                                                                  where Status__c in ('Conditional', 'Provisional', 'Mandatory', '') and Contact__c in :contact_ids];
 
-        List<Education_History__c> ed_histories = [Select Id, Document_Status__c, Best_School_Name__c, Contact__c from Education_History__c
+        List<Education_History__c> ed_histories = [select Id, Document_Status__c, Best_School_Name__c, Contact__c from Education_History__c
                                                     where Document_Status__c in ('Conditional', 'Provisional', 'Mandatory', '') and Contact__c in :contact_ids];
 
         List<Question_Response__c> internal = [
-                SELECT Id, Question__r.Name, Question_Label__c, ValueText__c, IsComplete__c, Requirement_Response__r.Application__c
+                select Id, Question__r.Name, Question_Label__c, ValueText__c, IsComplete__c, Requirement_Response__r.Application__c
                 from Question_Response__c
                 where IsShown__c = TRUE
                 and ValueText__c in ('Conditional', 'Provisional')
-                and Requirement_Response__c in (SELECT Id from Requirement_Response__c where Requirement_Item__r.Name like '%Prerequisites%')
-                and (NOT Question__r.Name LIKE '%GPA%')
-                AND (NOT Question__r.Name LIKE '%Degree%')
+                and Requirement_Response__c in (select Id from Requirement_Response__c where Requirement_Item__r.Name like '%Prerequisites%')
+                and (not Question__r.Name like '%GPA%')
+                and (not Question__r.Name like '%Degree%')
          ];
 
 //        List<Reference__c> refs = [ SELECT Id, Type__c from Reference__c where Signature__c = 'Conditional' or Signature__c = 'conditional' and Req];
 
 
         // GET APP IDS AND FILTER BY THAT?
-        List<Requirement_Response__c> rrs = [Select Id, Application__c, Requirement_Item__r.Label__c from Requirement_Response__c where Reference__r.Signature__c in ('Conditional', 'conditional', 'Provisional', 'provisional')
+        List<Requirement_Response__c> rrs = [select Id, Application__c, Requirement_Item__r.Label__c from Requirement_Response__c where Reference__r.Signature__c in ('Conditional', 'conditional', 'Provisional', 'provisional')
             and Requirement_Item__r.Name like '%Reference' and Application__c in :app_ids ];
 
+
+        // todo, break this out into two functions, CSG and CAS?
         for( Opportunity o : process_opps){
 
             Boolean csg_opp = o.School_College__c != 'Undergraduate';
             Boolean undergrad_opp = !csg_opp;
 
             List<String> lines = new List<String>();
-
-            for (Test_Score__c ts : test_scores){
-                if(ts.Contact__c == o.Contact__c){
-
-                    Boolean cond_or_prov = ts.Document_Status__c == 'Conditional' || ts.Document_Status__c == 'Provisional';
-                    if(undergrad_opp){
-                        lines.add('- ' + ts.Test_Type__c + ' test score');
-                    }else if(csg_opp && cond_or_prov){
-                        lines.add('- ' + ts.Test_Type__c + ' test score');
-                    }
-                }
-            }
 
             for (Admissions_Document__c ad : admissions_documents){
                 if(ad.Contact__c == o.Contact__c){
@@ -100,8 +100,24 @@ global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
                 }
             }
 
+            // CAS Uses requirement responses for test scores
+            if(undergrad_opp){
+                for (Requirement_Response__c rr : cas_test_scores){
+                    if(rr.Application__c == o.Application__c){
+                        lines.add('- ' + rr.Requirement_Item__r.Label__c);
+                    }
+                }
+            }
+
             // only CSG gets references and internal requirements
+            // only CSG Opps use Test_Score_Object
             if(csg_opp){
+                for (Test_Score__c ts : test_scores){
+                    Boolean cond_or_prov = ts.Document_Status__c == 'Conditional' || ts.Document_Status__c == 'Provisional';
+                    if(ts.Contact__c == o.Contact__c && cond_or_prov){
+                        lines.add('- ' + ts.Test_Type__c + ' test score');
+                    }
+                }
                 for (Requirement_Response__c rr : rrs){
                     if(rr.Application__c == o.Application__c){
                         lines.add('- ' + rr.Requirement_Item__r.Label__c);
