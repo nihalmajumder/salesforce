@@ -119,15 +119,25 @@
         <apex:outputPanel id="confirm">
         <apex:outputPanel rendered="{!showSuccess}">
             <div class="row" >
-                                <div role="listbox">
-                                    <div class="item active" >
-                                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
-                                            <h1 style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:600;font-size:36px;margin-bottom:20px;margin-top:30px;" >Thank you for your submission.</h1>
-                                        </div>
-                                    </div>
-                                </div>
+                <div role="listbox">
+                    <div class="item active" >
+                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
+                            <h1 style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:600;font-size:36px;margin-bottom:20px;margin-top:30px;" >Thank you for your submission.</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </apex:outputPanel>
         </apex:outputPanel>
     </c:ApplicationBody>
+    <script type="text/javascript">
+
+        var json = {
+            'contact_id':  '{!con}',
+            'event' : '{!title}',
+            'status': '{!app.Application_Status__c}'
+        };
+        dataLayer.push(json);
+
+    </script>
 </apex:page>

@@ -63,5 +63,14 @@
             </div>
         </apex:form>
     </c:ApplicationBody>
+    <script type="text/javascript">
 
+        var json = {
+            'contact_id':  '{!contactId}',
+            'event' : 'Application Checklist',
+            'status': '{!app.Application_Status__c}'
+        };
+        dataLayer.push(json);
+
+    </script>
 </apex:page>
