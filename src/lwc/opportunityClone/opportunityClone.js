@@ -9,6 +9,15 @@ export default class OpportunityClone extends NavigationMixin(LightningElement) 
    @track clonedOpportunity;
    errorMessage;
 
+    get today(){
+        var d = new Date();
+        return d.toISOString();
+    }
+
+    get true_boolean(){
+        return true;
+    }
+
    handleSubmit(event) {
       console.log('handleSubmit');
       console.log(JSON.stringify(event.detail.fields));
