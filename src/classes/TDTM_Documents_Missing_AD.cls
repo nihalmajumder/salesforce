@@ -78,7 +78,6 @@ global class TDTM_Documents_Missing_AD extends TDTMVirtualTriggerHandler {
         }else{
             return '';
         }
-
     }
 
     private static void process_list(List<Id> contact_ids){

@@ -48,6 +48,15 @@ public class OpportunityHelperTest {
 
         insert handler;
 
+        handler = new hed__Trigger_Handler__c();
+        handler.Name = 'TDTM_Checklist_Item_Received_Alert';
+        handler.hed__Class__c = 'TDTM_Checklist_Item_Received_Alert';
+        handler.hed__Object__c = 'Test_Score__c';
+        handler.hed__Trigger_Action__c = 'AfterInsert;AfterUpdate';
+        handler.hed__Active__c = true;
+        handler.hed__Load_Order__c = 3;
+
+        insert handler;
 
         //create application data
          Application_Control__c appControl = new Application_Control__c(
@@ -233,6 +242,9 @@ public class OpportunityHelperTest {
 
         ts.Document_Status__c = 'Conditional';
 
+        update ts;
+
+        ts.Document_Status__c = 'Received';
         update ts;
 
         delete ts;
