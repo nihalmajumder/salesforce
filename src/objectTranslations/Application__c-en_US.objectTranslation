@@ -1100,6 +1100,14 @@
         <name>Student_Type__c</name>
     </fields>
     <fields>
+        <label><!-- Third-Party App ID --></label>
+        <name>Third_Party_App_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Third-Party App Type --></label>
+        <name>Third_Party_App_Type__c</name>
+    </fields>
+    <fields>
         <help><!-- Unofficial ACT Score from the applicant --></help>
         <label><!-- Unofficial ACT Score --></label>
         <name>Unofficial_ACT_Score__c</name>

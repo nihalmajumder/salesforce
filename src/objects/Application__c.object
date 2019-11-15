@@ -2756,6 +2756,35 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Third_Party_App_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>unique identifier of the imported Third-Pary application that generated an Application record.</description>
+        <externalId>false</externalId>
+        <label>Third-Party App ID</label>
+        <length>75</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Third_Party_App_Type__c</fullName>
+        <description>Tracks non-Bethel application portal submitted applications.</description>
+        <externalId>false</externalId>
+        <label>Third-Party App Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Third_Party_App_Types</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Unofficial_ACT_Score__c</fullName>
         <description>Unofficial ACT Score from the applicant</description>
         <externalId>false</externalId>

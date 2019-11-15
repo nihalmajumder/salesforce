@@ -169,7 +169,7 @@
         <fullName>hed__Account__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>The Academic Program the student is enrolled in.</description>
+        <description>The Academic Program that the Contact is associated with.</description>
         <externalId>false</externalId>
         <inlineHelpText>The Academic Program the student is enrolled in.</inlineHelpText>
         <label>Contact&apos;s Academic Program</label>
@@ -184,6 +184,7 @@
         <fullName>hed__Affiliation__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>The Academic Program associated with this Course Connection. Represents a Contact-Account Affiliation.</description>
         <externalId>false</externalId>
         <label>Affiliation</label>
         <referenceTo>hed__Affiliation__c</referenceTo>
@@ -197,7 +198,7 @@
         <fullName>hed__Contact__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>The student taking the course.</description>
+        <description>The Contact connected to the Course Offering, for example a student or faculty member.</description>
         <externalId>false</externalId>
         <inlineHelpText>The student taking the course.</inlineHelpText>
         <label>Contact</label>
@@ -212,7 +213,7 @@
         <fullName>hed__Course_Offering__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>The Course Offering the student is enrolled in. It&apos;s a Course offered at a specific Term.</description>
+        <description>Course Offering that the Contact is connected to. Identifies a specific occurence of a Course, for a specific Term.</description>
         <externalId>false</externalId>
         <inlineHelpText>The Course Offering the student is enrolled in. It&apos;s a Course offered at a specific Term.</inlineHelpText>
         <label>Course Offering ID</label>

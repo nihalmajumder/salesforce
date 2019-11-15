@@ -918,6 +918,17 @@ TEXT(Academic_Program__r.Career__c))</formula>
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>Interaction_Mogli_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Interaction Mogli Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Interaction_Source__c</fullName>
         <description>The method by which the data is being added as an Interaction. Set to &quot;Manual Entry&quot; for hand entry, otherwise it represents the integration source (Webform, Purchase List, etc.) Also used in the Skip Mapping functionality on Interaction Mappings.</description>
         <externalId>false</externalId>
@@ -7643,6 +7654,32 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Third_Party_App_ID__c</fullName>
+        <description>unique identifier of the imported Third-Pary application that generated an Application record.</description>
+        <externalId>false</externalId>
+        <label>Third-Party App ID</label>
+        <length>75</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Third_Party_App_Type__c</fullName>
+        <description>Tracks non-Bethel application portal submitted applications.</description>
+        <externalId>false</externalId>
+        <label>Third-Party App Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Third_Party_App_Types</valueSetName>
+        </valueSet>
     </fields>
     <fields>
         <fullName>University_Email__c</fullName>

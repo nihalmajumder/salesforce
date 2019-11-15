@@ -439,7 +439,7 @@ Help Text</description>
         <description>Used in loading ActSix Inqs and Apps</description>
         <externalId>false</externalId>
         <label>ActSix Application Id</label>
-        <length>15</length>
+        <length>37</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -2781,6 +2781,34 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Stage_Value__c</fullName>
+        <description>Calculates a numerical value to more easily compare status</description>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(Stage_Detail__c),
+&apos;Inquired&apos;, 10,
+&apos;Pre-Applied&apos;, 15,
+&apos;App Started&apos;, 20,
+&apos;App Submitted&apos;, 25,
+&apos;App Completed&apos;, 30,
+&apos;Wait Listed&apos;, 35,
+&apos;Accepted&apos;, 40,
+&apos;Fee Paid&apos;, 45,
+&apos;Fee Waived&apos;, 45,
+&apos;Registered&apos;, 50,
+&apos;Enrolled&apos;, 55,
+-1
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stage Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Status_Text__c</fullName>

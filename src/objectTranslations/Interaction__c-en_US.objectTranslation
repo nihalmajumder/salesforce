@@ -344,6 +344,10 @@
         <name>Intended_Activities__c</name>
     </fields>
     <fields>
+        <label><!-- Interaction Mogli Number --></label>
+        <name>Interaction_Mogli_Number__c</name>
+    </fields>
+    <fields>
         <label><!-- Interaction Source --></label>
         <name>Interaction_Source__c</name>
         <picklistValues>
@@ -3855,6 +3859,14 @@
     <fields>
         <label><!-- Term Search Text --></label>
         <name>Term_Search_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Third-Party App ID --></label>
+        <name>Third_Party_App_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Third-Party App Type --></label>
+        <name>Third_Party_App_Type__c</name>
     </fields>
     <fields>
         <label><!-- University Email --></label>

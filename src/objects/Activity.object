@@ -114,6 +114,14 @@
     </actionOverrides>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>Checklist_Item_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked by TDTM_Checklist_Item_Received_Alert.cls. This checkbox is used to find these tasks even if they are renamed, so they can be automatically deleted after 3-4 weeks.</description>
+        <externalId>false</externalId>
+        <label>Checklist Item Notification</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Completion_Status__c</fullName>
         <description>Used in SSR Reports and Dashboards</description>
         <externalId>false</externalId>

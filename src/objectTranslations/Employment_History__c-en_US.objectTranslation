@@ -15,6 +15,10 @@
         <relationshipLabel><!-- Employment Histories --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Employer Address --></label>
+        <name>Employer_Address__c</name>
+    </fields>
+    <fields>
         <label><!-- Employer City --></label>
         <name>Employer_City__c</name>
     </fields>
@@ -50,6 +54,10 @@
         <help><!-- Required EASY field --></help>
         <label><!-- Related Object JSON --></label>
         <name>Related_Object_JSON__c</name>
+    </fields>
+    <fields>
+        <label><!-- Responsibilities --></label>
+        <name>Responsibilities__c</name>
     </fields>
     <fields>
         <help><!-- Required EASY field --></help>

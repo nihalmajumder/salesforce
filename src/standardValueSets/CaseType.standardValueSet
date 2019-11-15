@@ -17,6 +17,11 @@
         <label>Academic Dishonesty</label>
     </standardValue>
     <standardValue>
+        <fullName>ActSix</fullName>
+        <default>false</default>
+        <label>ActSix</label>
+    </standardValue>
+    <standardValue>
         <fullName>Appeal</fullName>
         <default>false</default>
         <label>Appeal</label>
@@ -25,6 +30,11 @@
         <fullName>Application Issue</fullName>
         <default>false</default>
         <label>Application Issue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ApplicationU</fullName>
+        <default>false</default>
+        <label>ApplicationU</label>
     </standardValue>
     <standardValue>
         <fullName>Beacon Import</fullName>
@@ -40,6 +50,11 @@
         <fullName>BSSD Transition</fullName>
         <default>false</default>
         <label>BSSD Transition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CASPA</fullName>
+        <default>false</default>
+        <label>CASPA</label>
     </standardValue>
     <standardValue>
         <fullName>Change Permissions</fullName>

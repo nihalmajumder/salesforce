@@ -171,6 +171,16 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>Employer_Address__c</fullName>
+        <description>Employer Address information for re-enrollment</description>
+        <externalId>false</externalId>
+        <label>Employer Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>Employer_City__c</fullName>
         <description>The Employer City</description>
         <externalId>false</externalId>
@@ -266,6 +276,17 @@
         <inlineHelpText>Required EASY field</inlineHelpText>
         <label>Related Object JSON</label>
         <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Responsibilities__c</fullName>
+        <description>Your title/primary responsibilities question for re-enrollment</description>
+        <externalId>false</externalId>
+        <label>Responsibilities</label>
+        <length>32768</length>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>

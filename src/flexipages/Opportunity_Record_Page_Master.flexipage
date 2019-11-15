@@ -42,9 +42,52 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>richTextValue</name>
-                <value>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;CASPA Application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;This application was created from the CASPA program etc etc. &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;There is &lt;/span&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;no checklist&lt;/b&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; and there is nothing for the student to submit to us. Once the student&apos;s CASPA app is complete this Opportunity will be considered Complete. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Please refer to the Application Tab and the File below to view this application.&lt;/b&gt;&lt;/p&gt;</value>
+                <value>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;ActSix Application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;This application was imported from the ActSix application process. Therefore, this student &lt;/i&gt;&lt;b&gt;&lt;i&gt;does not&lt;/i&gt;&lt;/b&gt;&lt;i&gt; have access to the normal application portal at apply.bethel.edu. &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;There is &lt;/span&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;no checklist&lt;/b&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; and there are no requirements to track down for the student in Salesforce. Once the student&apos;s ActSix application is submitted this Opportunity will move to App Submitted. When the process is complete they will move to App Completed. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Please refer to the attached PDF under Files below to view the application responses.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt;Reach out to &lt;/span&gt;&lt;a href=&quot;mailto:enrollment-data@bethel.edu&quot; target=&quot;_blank&quot; style=&quot;color: rgb(79, 0, 0);&quot;&gt;enrollment-data@bethel.edu&lt;/a&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt; with any questions.&lt;/span&gt;&lt;/p&gt;</value>
             </componentInstanceProperties>
             <componentName>flexipage:richText</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.Application__r.Third_Party_App_Type__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>ActSix</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;ApplicationU&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;This application was imported from the ApplicationU application process. Therefore, this student &lt;/i&gt;&lt;b&gt;&lt;i&gt;does not&lt;/i&gt;&lt;/b&gt;&lt;i&gt; have access to the normal application portal at apply.bethel.edu. &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;While this student did not submit their application via the website, please handle this Opportunity as normal. The checklist, requirements tab, and application tab will function as normal.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Their original application is attached as a PDF in the Files section below.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt;Reach out to &lt;/span&gt;&lt;a href=&quot;mailto:enrollment-data@bethel.edu&quot; target=&quot;_blank&quot; style=&quot;color: rgb(79, 0, 0);&quot;&gt;enrollment-data@bethel.edu&lt;/a&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt; with any questions.&lt;/span&gt;&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.Application__r.Third_Party_App_Type__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>ApplicationU</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;CASPA Application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;This application was imported from the CASPA application process. Therefore, this student &lt;/i&gt;&lt;b&gt;&lt;i&gt;does not&lt;/i&gt;&lt;/b&gt;&lt;i&gt; have access to the normal application portal at apply.bethel.edu. &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;There is &lt;/span&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;no checklist&lt;/b&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; and there are no requirements to track down for the student in Salesforce. Once the student&apos;s CASPA process is complete this Opportunity will move to App Completed. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Please refer to the attached PDF under &quot;Files&quot; below to view the application responses.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(79, 0, 0); font-size: 14px;&quot;&gt;Reach out to &lt;/span&gt;&lt;a href=&quot;mailto:enrollment-data@bethel.edu&quot; target=&quot;_blank&quot; style=&quot;color: rgb(79, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;enrollment-data@bethel.edu&lt;/a&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt; with any questions.&lt;/span&gt;&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.Application__r.Third_Party_App_Type__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>CASPA</rightValue>
+                </criteria>
+            </visibilityRule>
         </componentInstances>
         <name>Facet-3bd2ce58-6394-4886-b1e2-408df848b163</name>
         <type>Facet</type>
@@ -281,6 +324,42 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
+                <name>decorate</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;ActSix Application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;This application was imported from the ActSix application process. Therefore, this student &lt;/i&gt;&lt;b&gt;&lt;i&gt;does not&lt;/i&gt;&lt;/b&gt;&lt;i&gt; have access to the normal application portal at apply.bethel.edu. &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;There is &lt;/span&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;no checklist &lt;/b&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;for this student.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt;Reach out to &lt;/span&gt;&lt;a href=&quot;mailto:enrollment-data@bethel.edu&quot; target=&quot;_blank&quot; style=&quot;color: rgb(79, 0, 0);&quot;&gt;enrollment-data@bethel.edu&lt;/a&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt; with any questions.&lt;/span&gt;&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.Application__r.Third_Party_App_Type__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>ActSix</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;CASPA Application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;This application was imported from the CASPA application process. Therefore, this student &lt;/i&gt;&lt;b&gt;&lt;i&gt;does not&lt;/i&gt;&lt;/b&gt;&lt;i&gt; have access to the normal application portal at apply.bethel.edu. &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;There is &lt;/span&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;no checklist &lt;/b&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;for this student.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt;Reach out to &lt;/span&gt;&lt;a href=&quot;mailto:enrollment-data@bethel.edu&quot; target=&quot;_blank&quot; style=&quot;color: rgb(79, 0, 0);&quot;&gt;enrollment-data@bethel.edu&lt;/a&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt; with any questions.&lt;/span&gt;&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.Application__r.Third_Party_App_Type__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>CASPA</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
                 <name>height</name>
                 <value>1500</value>
             </componentInstanceProperties>
@@ -297,6 +376,19 @@
                 <value>true</value>
             </componentInstanceProperties>
             <componentName>flexipage:visualforcePage</componentName>
+            <visibilityRule>
+                <booleanFilter>1 AND 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!Record.Application__r.Third_Party_App_Type__c}</leftValue>
+                    <operator>NE</operator>
+                    <rightValue>ActSix</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!Record.Application__r.Third_Party_App_Type__c}</leftValue>
+                    <operator>NE</operator>
+                    <rightValue>CASPA</rightValue>
+                </criteria>
+            </visibilityRule>
         </componentInstances>
         <name>Facet-bf1bdfe1-0fb9-4f53-acf1-fd3622c84da5</name>
         <type>Facet</type>
@@ -740,6 +832,12 @@
                 <value>accordionSection1</value>
             </componentInstanceProperties>
             <componentName>flexipage:accordion</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.Application__r.Third_Party_App_ID__c}</leftValue>
+                    <operator>NE</operator>
+                </criteria>
+            </visibilityRule>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>

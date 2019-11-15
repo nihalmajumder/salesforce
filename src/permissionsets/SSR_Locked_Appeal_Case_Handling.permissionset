@@ -1743,6 +1743,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Application__c.Third_Party_App_ID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Application__c.Third_Party_App_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Application__c.Unofficial_ACT_Score__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -4763,6 +4773,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Employment_History__c.Employer_Address__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Employment_History__c.Employer_City__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -4803,7 +4818,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Employment_History__c.Responsibilities__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Employment_History__c.User_Created__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.Checklist_Item_Notification__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5658,6 +5683,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Interaction__c.Interaction_Mogli_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Interaction__c.Interaction_Source__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -5914,6 +5944,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Interaction__c.Term_Search_Text__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Interaction__c.Third_Party_App_ID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Interaction__c.Third_Party_App_Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7439,6 +7479,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Stage_Modified_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Stage_Value__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9514,6 +9559,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Task.ActivityDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.Checklist_Item_Notification__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -153,6 +153,7 @@
         <fields>hed__Contact__c</fields>
         <fields>hed__Account__c</fields>
         <fields>Cohort__c</fields>
+        <fields>hed__GPA__c</fields>
         <label>Program Enrollment Compact - Master</label>
     </compactLayouts>
     <compactLayouts>
