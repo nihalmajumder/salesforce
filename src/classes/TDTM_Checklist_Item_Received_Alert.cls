@@ -67,46 +67,12 @@ global class TDTM_Checklist_Item_Received_Alert extends TDTMVirtualTriggerHandle
             String subject = get_description_by_type(o);
             for(Opportunity opp : contact_opp_map.get(cid)){
 
-                create_tasks.add(new Task(WhatId=opp.Id, WhoId=opp.Contact__c, OwnerId=opp.OwnerId, Subject=subject, Type='Other', Checklist_Item_Notification__c=true, ActivityDate=add_business_days(date.today(), 1)));
+                create_tasks.add(new Task(WhatId=opp.Id, WhoId=opp.Contact__c, OwnerId=opp.OwnerId, Subject=subject, Type='Other', Checklist_Item_Notification__c=true, ActivityDate=date.today()));
             }
         }
 
         insert create_tasks;
 
-    }
-
-    private static Boolean is_weekend_day(Date dateParam){
-        Boolean result     = false;
-        System.debug('dateParam = '+dateParam);
-        //Recover the day of the week
-        Date startOfWeek   = dateParam.toStartOfWeek();
-        System.debug('startOfWeek = '+startOfWeek);
-        Integer dayOfWeek  = dateParam.day() - startOfWeek.day();
-        System.debug('dayOfWeek = '+dayOfWeek);
-        result = dayOfWeek == 0 || dayOfWeek == 6 ? true : false;
-        System.debug('result = '+result);
-        return result;
-    }
-
-    private static Date add_business_days(Date StartDate, Integer BusinessDaysToAdd ){
-        //Add or decrease in BusinessDaysToAdd days
-        Date finalDate = StartDate;
-        System.debug('finaldate = '+finalDate);
-        Integer direction = BusinessDaysToAdd < 0 ? -1 : 1;
-        System.debug('direction = '+direction);
-        while(BusinessDaysToAdd != 0)
-        {
-            finalDate = finalDate.addDays(direction);
-            System.debug('BusinessDaysToAdd = '+BusinessDaysToAdd);
-            System.debug('finaldate = '+finalDate);
-            if (!is_weekend_day(finalDate))
-            {
-                BusinessDaysToAdd -= direction;
-
-            }
-        }
-
-        return finalDate;
     }
 
     private String get_description_by_type(SObject s){
