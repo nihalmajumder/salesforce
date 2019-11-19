@@ -367,6 +367,9 @@ public class ApplicationChecklist {
                     pr.getParameters().put(s,ApexPages.currentPage().getParameters().get(s));
                 }
 
+                // Added a URL parameter to be able to indicate to stop buying adds for this Contact - ej.
+                pr.getParameters().put('application-submitted', 'true');
+
                 // Added to create interaction when app is submitted - Todd Mitchell
                 InteractionHelper.createInteractionForSubmittedApplication(app.Id);
                 // Added to update send reference flag on responses when submitted to fire reference email - Luke Vang
