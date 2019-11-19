@@ -18,11 +18,12 @@ global class TDTM_Documents_Missing_All extends TDTMVirtualTriggerHandler {
         List<Opportunity> process_opps = new List<Opportunity>();
 
         for( Opportunity o : opps){
-            if( (o.StageName == 'Applied'|| o.StageName == 'Accepted' || o.StageName == 'Confirmed' ) && o.Lock_Documents_Missing__c == False){
+            if((o.StageName == 'Applied'|| o.StageName == 'Accepted' || o.StageName == 'Confirmed' )
+                    && o.Lock_Documents_Missing__c == False
+                    && o.Academic_Program_Code__c != '1-CRT-BAS'){
                 contact_ids.add(o.Contact__c);
                 app_ids.add(o.Application__c);
                 process_opps.add(o);
-
             }
         }
 
