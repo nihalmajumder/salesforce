@@ -18,7 +18,7 @@ global class TDTM_Checklist_Item_Received_Alert extends TDTMVirtualTriggerHandle
         SObject[] so = new List<SObject>();
         for(SObject o : newList){
             String status = get_status_by_type(o);
-            if(status=='Received'){
+            if((status=='Received' || status=='Conditional') || o.getSObjectType() == Admissions_Document__c.SObjectType && status == 'Conditional'){
                 cids.add((Id) o.get('Contact__c'));
                 so.add(o);
             }
@@ -34,7 +34,7 @@ global class TDTM_Checklist_Item_Received_Alert extends TDTMVirtualTriggerHandle
         for(SObject o : newList){
             String status = get_status_by_type(o);
             String old_status = get_status_by_type(oldMap.get(o.Id));
-            if(status=='Received' && old_status !='Received'){
+            if((status=='Received' && old_status !='Received') || (o.getSObjectType() == Admissions_Document__c.SObjectType && status == 'Conditional' && old_status != 'Conditional')){
                 cids.add((Id) o.get('Contact__c'));
                 so.add(o);
             }
@@ -77,7 +77,12 @@ global class TDTM_Checklist_Item_Received_Alert extends TDTMVirtualTriggerHandle
 
     private String get_description_by_type(SObject s){
         if(s.getSObjectType() == Admissions_Document__c.SObjectType) {
-            return 'New Admissions Document Received: ' + (String) s.get('Type__c');
+            String ad_status = get_status_by_type(s);
+            if(ad_status == 'Conditional'){
+                return 'New Conditional Admissions Document: ' + (String) s.get('Type__c');
+            }else{
+                return 'New Admissions Document Received: ' + (String) s.get('Type__c');
+            }
         }else if(s.getSObjectType() == Education_History__c.SObjectType) {
             return 'New Education History Received: ' + (String) s.get('Best_School_Name__c');
         }else if(s.getSObjectType() == Reference__c.SObjectType){

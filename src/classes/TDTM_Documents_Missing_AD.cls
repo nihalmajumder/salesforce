@@ -16,22 +16,34 @@ global class TDTM_Documents_Missing_AD extends TDTMVirtualTriggerHandler {
             // don't process submitted. Hitting too many SOQL errors because the checklist also runs. It will
 
             String status = get_status_by_type(s);
-            if(status == 'Conditional' || status == 'Provisional'){
+            if(status == 'Conditional' || status == 'Provisional' || status == 'Received' || status == 'Mandatory'){
                 process_list.add((Id) s.get('Contact__c'));
             }
         }
-        process_list(process_list);
+        if(process_list.size() > 0){
+            if (System.isBatch() || System.isFuture()) {
+                process_list(process_list);
+            }else{
+                process_list_future(process_list);
+            }
+        }
     }
 
     global override void onAfterDelete(List<SObject> oldList, Map<Id, SObject> oldMap, hed.TDTM_Runnable.DmlWrapper wrapper) {
         List<Id> process_list = new List<Id>();
         for( SObject s : oldList) {
             String status = get_status_by_type(s);
-            if(status == 'Conditional' || status == 'Provisional'){
+            if(status == 'Conditional' || status == 'Provisional' || status == 'Received' || status == 'Mandatory'){
                 process_list.add((Id) s.get('Contact__c'));
             }
         }
-        process_list(process_list);
+        if(process_list.size() > 0){
+            if (System.isBatch() || System.isFuture()) {
+                process_list(process_list);
+            }else{
+                process_list_future(process_list);
+            }
+        }
     }
 
     global override void onAfterUpdate(List<SObject> newList, List<SObject> oldList, Map<Id, SObject> newMap, Map<Id, SObject> oldMap, hed.TDTM_Runnable.DmlWrapper wrapper) {
@@ -42,20 +54,13 @@ global class TDTM_Documents_Missing_AD extends TDTMVirtualTriggerHandler {
             String old_status = get_status_by_type(oldMap.get(s.Id));
 
 
-            Boolean conditional_or_provisional = new_status == 'Conditional' || new_status == 'Provisional';
-            Boolean old_not_conditional_or_provisional = old_status != 'Conditional' && old_status != 'Provisional';
-            Boolean old_was_conditional_or_provisional = old_status == 'Conditional' || old_status == 'Provisional';
+            // did status change?
+            // ej: used to do a bunch of compliated logic to find exact change. Most of the time we need to recalculate anyway when it changes,
+            // so I simplified. If this is running too often check GitHub history for what it was and then add in "Mandatory" status as well.
 
-            // did it move TO conditional or provisional
-            if(conditional_or_provisional && old_not_conditional_or_provisional){
+            if(new_status != old_status){
                 process_list.add((Id) s.get('Contact__c'));
             }
-            // did it move AWAY from conditional or provisional
-            else if(!conditional_or_provisional && old_was_conditional_or_provisional){
-                process_list.add((Id) s.get('Contact__c'));
-            }
-
-
         }
         if(process_list.size() > 0){
             if (System.isBatch() || System.isFuture()) {
