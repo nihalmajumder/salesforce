@@ -23,7 +23,7 @@ public with sharing class CampaignRFIFormControllerTest {
         controller.getGrad_years();
         controller.getPrograms();
 
-        PageReference ref = controller.save();
+        controller.save();
 
         //after save the page should be redirected to a new landing page.
 //        System.debug(ref.getUrl());

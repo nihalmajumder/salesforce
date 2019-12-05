@@ -5,10 +5,13 @@
 <apex:page id="CampaignRFIForm" showHeader="false" lightningStylesheets="true"
            sideBar="false" docType="html-5.0" standardController="Interaction__c" extensions="CampaignRFIFormController">
     <apex:slds />
+
     <apex:pageMessages ></apex:pageMessages>
     <apex:stylesheet value="https://cdn1.bethel.edu/salesforce/form.css"/>
     <apex:form id="RFI">
-
+        <div class="form-header">
+            <img alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png" />
+        </div>
         <apex:pageBlock id="formblock">
             <apex:pageBlockSection columns="1">
                 <apex:inputField value="{! interaction.First_Name__c }" required="false"/>
@@ -21,27 +24,28 @@
                 <apex:inputField value="{! interaction.Mailing_Country__c }"/>
                 <apex:inputField value="{! interaction.Mailing_Postal_Code__c}"/>
 
-                <apex:pageblockSectionItem rendered="{!campaign_school !='CAS'}">
-                    <apex:outputLabel >School Radio</apex:outputLabel>
-                    <apex:SelectRadio value="{!school}" id="school-radio" layout="pageDirection">
-                        <apex:selectOptions value="{!schoolOptions}"/>
-                        <apex:actionSupport event="onchange" reRender="RFI"/>
-                    </apex:SelectRadio>
-                </apex:pageblockSectionItem>
+<!--                <apex:actionRegion>-->
+                    <apex:pageblockSectionItem rendered="{!campaign_school !='CAS'}">
+                        <apex:outputLabel >School Radio</apex:outputLabel>
+                        <apex:SelectRadio value="{!school}" id="school-radio" layout="pageDirection">
+                            <apex:selectOptions value="{!schoolOptions}"/>
+                            <apex:actionSupport event="onchange" reRender="RFI"/>
+                        </apex:SelectRadio>
+                    </apex:pageblockSectionItem>
 
-                <apex:pageblockSectionItem id="programblock" rendered="{!campaign_school !='CAS'}">
-                    <apex:outputLabel >Program of Interest</apex:outputLabel>
-                    <apex:selectList size="1" value="{!program}">
-                        <apex:selectOptions value="{!programs}"/>
-                        <!--                        <apex:actionSupport event="onchange" reRender="a"/>-->
-                    </apex:selectList>
-                </apex:pageblockSectionItem>
+
+                    <apex:pageblockSectionItem id="programblock" rendered="{!campaign_school !='CAS'}">
+                        <apex:outputLabel >Program of Interest</apex:outputLabel>
+                        <apex:selectList size="1" value="{!program}">
+                            <apex:selectOptions value="{!programs}"/>
+                        </apex:selectList>
+                    </apex:pageblockSectionItem>
+<!--                </apex:actionRegion>-->
 
                 <apex:pageblockSectionItem rendered="{!campaign_school=='CAS'}">
                     <apex:outputLabel >High School Graduation Year</apex:outputLabel>
                     <apex:selectList size="1" value="{!grad_year}">
                         <apex:selectOptions value="{!grad_years}"/>
-<!--                        <apex:actionSupport event="onchange" reRender="a"/>-->
                     </apex:selectList>
                 </apex:pageblockSectionItem>
 
