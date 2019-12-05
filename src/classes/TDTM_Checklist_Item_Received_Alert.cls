@@ -18,7 +18,7 @@ global class TDTM_Checklist_Item_Received_Alert extends TDTMVirtualTriggerHandle
         SObject[] so = new List<SObject>();
         for(SObject o : newList){
             String status = get_status_by_type(o);
-            if((status=='Received' || status=='Conditional') || o.getSObjectType() == Admissions_Document__c.SObjectType && status == 'Conditional'){
+            if(status=='Received' || status =='Conditional'){
                 cids.add((Id) o.get('Contact__c'));
                 so.add(o);
             }
@@ -34,7 +34,7 @@ global class TDTM_Checklist_Item_Received_Alert extends TDTMVirtualTriggerHandle
         for(SObject o : newList){
             String status = get_status_by_type(o);
             String old_status = get_status_by_type(oldMap.get(o.Id));
-            if((status=='Received' && old_status !='Received') || (o.getSObjectType() == Admissions_Document__c.SObjectType && status == 'Conditional' && old_status != 'Conditional')){
+            if((status=='Received' && old_status !='Received' || status == 'Conditional' && old_status != 'Conditional')){
                 cids.add((Id) o.get('Contact__c'));
                 so.add(o);
             }
@@ -65,9 +65,12 @@ global class TDTM_Checklist_Item_Received_Alert extends TDTMVirtualTriggerHandle
         for(SObject o : so){
             Id cid = (Id)o.get('Contact__c');
             String subject = get_description_by_type(o);
-            for(Opportunity opp : contact_opp_map.get(cid)){
 
-                create_tasks.add(new Task(WhatId=opp.Id, WhoId=opp.Contact__c, OwnerId=opp.OwnerId, Subject=subject, Type='Other', Checklist_Item_Notification__c=true, ActivityDate=date.today()));
+            if(contact_opp_map.containsKey(cid)){
+                for(Opportunity opp : contact_opp_map.get(cid)){
+                    String description = Url.getOrgDomainUrl().toExternalForm() + '/' + o.Id;
+                    create_tasks.add(new Task(WhatId=opp.Id, WhoId=opp.Contact__c, OwnerId=opp.OwnerId, Subject=subject, Description=description, Type='Other', Checklist_Item_Notification__c=true, ActivityDate=Date.today()));
+                }
             }
         }
 
@@ -76,21 +79,33 @@ global class TDTM_Checklist_Item_Received_Alert extends TDTMVirtualTriggerHandle
     }
 
     private String get_description_by_type(SObject s){
-        if(s.getSObjectType() == Admissions_Document__c.SObjectType) {
-            String ad_status = get_status_by_type(s);
-            if(ad_status == 'Conditional'){
+        String ad_status = get_status_by_type(s);
+        Boolean conditional = ad_status == 'Conditional' || ad_status == 'conditional';
+
+        if(conditional){
+            if(s.getSObjectType() == Admissions_Document__c.SObjectType) {
                 return 'New Conditional Admissions Document: ' + (String) s.get('Type__c');
+            }else if(s.getSObjectType() == Education_History__c.SObjectType) {
+                return 'New Conditional Education History: ' + (String) s.get('Best_School_Name__c');
+            }else if(s.getSObjectType() == Reference__c.SObjectType){
+                return 'New Conditional Reference: ' + (String) s.get('Type__c');
+            }else if(s.getSObjectType() == Test_Score__c.SObjectType){
+                return 'New Conditional Test Score: ' + (String) s.get('Test_Type__c');
             }else{
-                return 'New Admissions Document Received: ' + (String) s.get('Type__c');
+                return '';
             }
-        }else if(s.getSObjectType() == Education_History__c.SObjectType) {
-            return 'New Education History Received: ' + (String) s.get('Best_School_Name__c');
-        }else if(s.getSObjectType() == Reference__c.SObjectType){
-            return 'New Reference Received: ' + (String) s.get('Type__c');
-        }else if(s.getSObjectType() == Test_Score__c.SObjectType){
-            return 'New Test Score Received: ' + (String) s.get('Test_Type__c');
         }else{
-            return '';
+            if(s.getSObjectType() == Admissions_Document__c.SObjectType) {
+                return 'New Admissions Document Received: ' + (String) s.get('Type__c');
+            }else if(s.getSObjectType() == Education_History__c.SObjectType) {
+                return 'New Education History Received: ' + (String) s.get('Best_School_Name__c');
+            }else if(s.getSObjectType() == Reference__c.SObjectType){
+                return 'New Reference Received: ' + (String) s.get('Type__c');
+            }else if(s.getSObjectType() == Test_Score__c.SObjectType){
+                return 'New Test Score Received: ' + (String) s.get('Test_Type__c');
+            }else{
+                return '';
+            }
         }
     }
 
