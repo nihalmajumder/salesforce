@@ -165,6 +165,7 @@ public class OpportunityHelper {
                 Academic_Program__c,
                 Opportunity_Key__c,
                 Stage_Detail__c,
+                Stage_Value__c,
                 AccountId
             FROM 
                 Opportunity
@@ -177,6 +178,26 @@ public class OpportunityHelper {
             }
         }
         return oppMap;
+    }
+
+    public static List<Opportunity> getInquiredOpportunitiesForContact(Set<Id> contactIds) {
+        List<Opportunity> opps = [
+            SELECT 
+                Id,
+                CloseDate,
+                StageName,
+                Academic_Program__c,
+                Contact__c,
+                Opportunity_Key__c,
+                Stage_Detail__c,
+                Stage_Value__c,
+                AccountId
+            FROM 
+                Opportunity
+            WHERE 
+                Contact__c IN :contactIds AND StageName = 'Inquired' AND Stage_Detail__c = 'Inquired' 
+        ];
+        return opps;
     }
 
 }

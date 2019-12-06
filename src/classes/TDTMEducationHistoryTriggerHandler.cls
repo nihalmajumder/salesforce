@@ -11,6 +11,13 @@ global class TDTMEducationHistoryTriggerHandler extends TDTMVirtualTriggerHandle
                 }
             }
             if (!contactIds.isEmpty()) {
+                List<Opportunity> opps = OpportunityHelper.getInquiredOpportunitiesForContact(contactIds);
+                if (!opps.isEmpty()) {
+                    for (Opportunity o : opps) {
+                        o.Stage_Detail__c = 'Pre-Applied';
+                    }
+                    update opps;
+                }
 
                 List<Application__c> apps = ApplicationHelper.getApplicationsForContacts(contactIds);
                 if (!apps.isEmpty()) {
@@ -34,6 +41,14 @@ global class TDTMEducationHistoryTriggerHandler extends TDTMVirtualTriggerHandle
             }
             if (!contactIds.isEmpty()) {
 
+                List<Opportunity> opps = OpportunityHelper.getInquiredOpportunitiesForContact(contactIds);
+                if (!opps.isEmpty()) {
+                    for (Opportunity o : opps) {
+                        o.Stage_Detail__c = 'Pre-Applied';
+                    }
+                    update opps;
+                }
+                
                 List<Application__c> apps = ApplicationHelper.getApplicationsForContacts(contactIds);
                 if (!apps.isEmpty()) {
                     ApplicationHelper.checkCompletion(apps);

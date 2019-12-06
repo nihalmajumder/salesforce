@@ -70,4 +70,41 @@ public class TDTMAdmissionsDocumentTriggerHandlerTest {
 
     }
 
+    static testMethod void onAfterInsertTest() {
+        Contact c = [Select Id FROM Contact];
+
+        Opportunity opp = new Opportunity(Name='Test Opp', Contact__c = c.Id, StageName = 'Inquired', Stage_Detail__c = 'Inquired', CloseDate = Date.today());
+        insert opp;
+
+        Test.startTest();
+        Admissions_Document__c doc = new Admissions_Document__c(Contact__c = c.Id, Status__c = 'Received');
+        insert doc;
+        Test.stopTest();
+
+        Opportunity upOpp = [SELECT Id, StageName, Stage_Detail__c FROM Opportunity WHERE Id = :opp.Id];
+        System.assertEquals('Inquired', upOpp.StageName);
+        System.assertEquals('Pre-Applied', upOpp.Stage_Detail__c);
+
+    }
+
+    static testMethod void onAfterUpdateOpporunityTest() {
+        Contact c = [Select Id FROM Contact];
+
+        Opportunity opp = new Opportunity(Name='Test Opp', Contact__c = c.Id, StageName = 'Inquired', Stage_Detail__c = 'Inquired', CloseDate = Date.today());
+        insert opp;
+
+        Admissions_Document__c doc = new Admissions_Document__c(Contact__c = c.Id);
+        insert doc;
+
+        Test.startTest();
+        doc.Status__c = 'Received';
+        update doc;
+        Test.stopTest();
+
+        Opportunity upOpp = [SELECT Id, StageName, Stage_Detail__c FROM Opportunity WHERE Id = :opp.Id];
+        System.assertEquals('Inquired', upOpp.StageName);
+        System.assertEquals('Pre-Applied', upOpp.Stage_Detail__c);
+
+    }
+
 }

@@ -84,4 +84,41 @@ public class TDTMEducationHistoryTriggerHandlerTest {
            System.assertEquals('Completed', app.Application_Status__c);
     }
 
+    static testMethod void onAfterInsertOpportunityTest() {
+        Contact c = [Select Id FROM Contact];
+
+        Opportunity opp = new Opportunity(Name='Test Opp', Contact__c = c.Id, StageName = 'Inquired', Stage_Detail__c = 'Inquired', CloseDate = Date.today());
+        insert opp;
+
+        Test.startTest();
+        Education_History__c history = new Education_History__c(RecordTypeId = Schema.SObjectType.Education_History__c.getRecordTypeInfosByName().get('High School').getRecordTypeId(), Contact__c = c.Id, Document_Status__c = 'Received');
+        insert history;
+        Test.stopTest();
+
+        Opportunity upOpp = [SELECT Id, StageName, Stage_Detail__c FROM Opportunity WHERE Id = :opp.Id];
+        System.assertEquals('Inquired', upOpp.StageName);
+        System.assertEquals('Pre-Applied', upOpp.Stage_Detail__c);
+
+    }
+
+    static testMethod void onAfterUpdateOpporunityTest() {
+        Contact c = [Select Id FROM Contact];
+
+        Opportunity opp = new Opportunity(Name='Test Opp', Contact__c = c.Id, StageName = 'Inquired', Stage_Detail__c = 'Inquired', CloseDate = Date.today());
+        insert opp;
+
+        Education_History__c history = new Education_History__c(RecordTypeId = Schema.SObjectType.Education_History__c.getRecordTypeInfosByName().get('High School').getRecordTypeId(), Contact__c = c.Id);
+        insert history;
+
+        Test.startTest();
+        history.Document_Status__c = 'Received';
+        update history;
+        Test.stopTest();
+
+        Opportunity upOpp = [SELECT Id, StageName, Stage_Detail__c FROM Opportunity WHERE Id = :opp.Id];
+        System.assertEquals('Inquired', upOpp.StageName);
+        System.assertEquals('Pre-Applied', upOpp.Stage_Detail__c);
+
+    }
+
 }
