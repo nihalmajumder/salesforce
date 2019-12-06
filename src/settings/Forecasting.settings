@@ -489,6 +489,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -627,6 +643,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -995,6 +1015,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -1030,6 +1054,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -1517,6 +1542,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -1655,6 +1696,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -2024,6 +2069,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -2059,6 +2108,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -2542,6 +2592,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -2680,6 +2746,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -3048,6 +3118,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -3083,6 +3157,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -3566,6 +3641,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -3704,6 +3795,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -4072,6 +4167,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -4107,6 +4206,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -4594,6 +4694,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -4732,6 +4848,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -5101,6 +5221,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -5136,6 +5260,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -5619,6 +5744,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -5757,6 +5898,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -6125,6 +6270,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -6160,6 +6309,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -6647,6 +6797,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -6785,6 +6951,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -7154,6 +7324,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -7189,6 +7363,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -7672,6 +7847,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -7810,6 +8001,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -8178,6 +8373,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -8213,6 +8412,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -8700,6 +8900,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -8838,6 +9054,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -9207,6 +9427,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -9242,6 +9466,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -9725,6 +9950,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -9863,6 +10104,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -10231,6 +10476,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -10266,6 +10515,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -10753,6 +11003,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -10891,6 +11157,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -11260,6 +11530,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -11295,6 +11569,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -11778,6 +12053,22 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdJ</field>
+            <label>Conga Legacy Notecard #1 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdT</field>
+            <label>Conga Legacy Notecard #2 Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBcu</field>
+            <label>Conga Legacy Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005jBdY</field>
+            <label>Conga Military Postcard Sent</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5W</field>
             <label>Conga Program Director Letter Sent</label>
         </opportunityListFieldsLabelMappings>
@@ -11916,6 +12207,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G60</field>
             <label>Days Since Inquired Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Nf0000005j6ZW</field>
+            <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0GPT</field>
@@ -12284,6 +12579,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
+            <field>00Nf0000005jBdJ</field>
+            <field>00Nf0000005jBdT</field>
+            <field>00Nf0000005jBcu</field>
+            <field>00Nf0000005jBdY</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -12319,6 +12618,7 @@
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
+            <field>00Nf0000005j6ZW</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>

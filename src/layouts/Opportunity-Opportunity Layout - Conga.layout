@@ -43,6 +43,10 @@
                 <behavior>Readonly</behavior>
                 <field>Old_Org_Link__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Deferred_Acceptance__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -524,6 +528,25 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Conga_Welcome_Week_Parent_Mailer_Sent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <emptySpace>true</emptySpace>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Conga_Legacy_Postcard_Sent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Conga_Legacy_Notecard_1_Sent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Conga_Legacy_Notecard_2_Sent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Conga_Military_Postcard_Sent__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

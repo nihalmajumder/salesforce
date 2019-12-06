@@ -6689,6 +6689,11 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
                     <label>Application</label>
                 </value>
                 <value>
+                    <fullName>ApplicationU</fullName>
+                    <default>false</default>
+                    <label>ApplicationU</label>
+                </value>
+                <value>
                     <fullName>Board Member</fullName>
                     <default>false</default>
                     <label>Board Member</label>
@@ -7354,6 +7359,10 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>List &amp; Vendor</controllingFieldValue>
+                <valueName>ApplicationU</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>List &amp; Vendor</controllingFieldValue>
                 <valueName>Cappex</valueName>
             </valueSettings>
             <valueSettings>
@@ -7583,6 +7592,33 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
         <description>Updated by an Apex class Source_PrimaryHandler. Used to calculate primary source.</description>
         <externalId>false</externalId>
         <label>Source Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(Opportunity_Stage_Detail__c),
+&apos;Inquired&apos;, 10,
+&apos;Pre-Applied&apos;, 15,
+&apos;App Started&apos;, 20,
+&apos;App Submitted&apos;, 25,
+&apos;App Completed&apos;, 30,
+&apos;Wait Listed&apos;, 35,
+&apos;Accepted&apos;, 40,
+&apos;Fee Paid&apos;, 45,
+&apos;Fee Waived&apos;, 45,
+&apos;Registered&apos;, 50,
+&apos;Enrolled&apos;, 55,
+-1
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stage Value</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>

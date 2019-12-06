@@ -2,8 +2,8 @@
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Convert a Lead to a Contact or check Lead Only to update the Lead only.</description>
     <fieldOverrides>
-        <field>Affiliated_Account__c</field>
-        <formula>Lead.Affiliated_Account__c</formula>
+        <field>Admit_Type__c</field>
+        <formula>TEXT( Lead.Admit_Type__c )</formula>
     </fieldOverrides>
     <fieldOverrides>
         <field>Birthdate__c</field>
@@ -18,12 +18,12 @@
         <formula>Lead.FirstName</formula>
     </fieldOverrides>
     <fieldOverrides>
-        <field>Home_Phone__c</field>
-        <formula>Lead.Phone</formula>
-    </fieldOverrides>
-    <fieldOverrides>
         <field>Last_Name__c</field>
         <formula>Lead.LastName</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Lead_Source__c</field>
+        <literalValue>List &amp; Vendor</literalValue>
     </fieldOverrides>
     <fieldOverrides>
         <field>Mailing_City__c</field>
@@ -42,12 +42,12 @@
         <formula>Lead.MobilePhone</formula>
     </fieldOverrides>
     <fieldOverrides>
-        <field>Primary_Affiliation__c</field>
-        <formula>Lead.Primary_Affiliation__c</formula>
+        <field>School_College__c</field>
+        <literalValue>Undergraduate</literalValue>
     </fieldOverrides>
     <fieldOverrides>
-        <field>Recruitment_Program__c</field>
-        <formula>Lead.Recruitment_Program__c</formula>
+        <field>Source_Detail__c</field>
+        <literalValue>CBSS</literalValue>
     </fieldOverrides>
     <optionsCreateFeedItem>true</optionsCreateFeedItem>
     <quickActionLayout>
@@ -59,22 +59,17 @@
                 <uiBehavior>Required</uiBehavior>
             </quickActionLayoutItems>
             <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Preferred_First_Name__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
                 <emptySpace>true</emptySpace>
                 <uiBehavior>Edit</uiBehavior>
             </quickActionLayoutItems>
             <quickActionLayoutItems>
                 <emptySpace>false</emptySpace>
                 <field>Birthdate__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Race__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Home_Phone__c</field>
                 <uiBehavior>Edit</uiBehavior>
             </quickActionLayoutItems>
             <quickActionLayoutItems>
@@ -94,38 +89,13 @@
             </quickActionLayoutItems>
             <quickActionLayoutItems>
                 <emptySpace>false</emptySpace>
-                <field>Lead_Source__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
                 <field>Academic_Program__c</field>
                 <uiBehavior>Edit</uiBehavior>
             </quickActionLayoutItems>
             <quickActionLayoutItems>
                 <emptySpace>false</emptySpace>
                 <field>Academic_Term__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Opportunity_Stage__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Campaign__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Affiliated_Account__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Affiliation_Status__c</field>
-                <uiBehavior>Edit</uiBehavior>
+                <uiBehavior>Required</uiBehavior>
             </quickActionLayoutItems>
         </quickActionLayoutColumns>
         <quickActionLayoutColumns>
@@ -142,11 +112,6 @@
             <quickActionLayoutItems>
                 <emptySpace>false</emptySpace>
                 <field>Gender__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Ethnicity__c</field>
                 <uiBehavior>Edit</uiBehavior>
             </quickActionLayoutItems>
             <quickActionLayoutItems>
@@ -170,31 +135,12 @@
             </quickActionLayoutItems>
             <quickActionLayoutItems>
                 <emptySpace>false</emptySpace>
+                <field>School_College__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
                 <field>Admit_Type__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Recruitment_Program__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>true</emptySpace>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Campaign_Member_Status__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Affiliation_Role__c</field>
-                <uiBehavior>Edit</uiBehavior>
-            </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Primary_Affiliation__c</field>
                 <uiBehavior>Edit</uiBehavior>
             </quickActionLayoutItems>
         </quickActionLayoutColumns>

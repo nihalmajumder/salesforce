@@ -221,6 +221,11 @@
         <label>Valid U.S. RN License</label>
     </customValue>
     <customValue>
+        <fullName>BUILD Guardianship or Power of Attorney</fullName>
+        <default>false</default>
+        <label>BUILD Guardianship or Power of Attorney</label>
+    </customValue>
+    <customValue>
         <fullName>1-134 Affidavit of Support Form (if US sponsored)</fullName>
         <default>false</default>
         <isActive>false</isActive>

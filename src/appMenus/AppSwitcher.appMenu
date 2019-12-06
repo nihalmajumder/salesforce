@@ -320,4 +320,8 @@
         <name>STARS_Callers</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>standard__Insights</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>

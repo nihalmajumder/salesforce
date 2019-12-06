@@ -1287,6 +1287,50 @@ TEXT(School_College__c) = &apos;Undergraduate&apos;,
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Conga_Legacy_Notecard_1_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to track Marketing mailers</description>
+        <externalId>false</externalId>
+        <label>Conga Legacy Notecard #1 Sent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Conga_Legacy_Notecard_2_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for tracking Marketing mailers.</description>
+        <externalId>false</externalId>
+        <label>Conga Legacy Notecard #2 Sent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Conga_Legacy_Postcard_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for tracking Marketing mailings</description>
+        <externalId>false</externalId>
+        <label>Conga Legacy Postcard Sent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Conga_Military_Postcard_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for tracking Marketing mailers.</description>
+        <externalId>false</externalId>
+        <label>Conga Military Postcard Sent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Conga_PSEO_Apply_Mailer_Sent__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1714,6 +1758,18 @@ TEXT(School_College__c) = &apos;Undergraduate&apos;,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Deferred_Acceptance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Tracks Opportunities that were cloned forward from a previously Accepted Opportunity. Originally created to track Acceptance letters in Conga for deferred acceptance students.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity was cloned from a previously Accepted Opportunity.</inlineHelpText>
+        <label>Deferred Acceptance</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Delivery_Location__c</fullName>
         <externalId>false</externalId>
         <label>Delivery Location</label>
@@ -1956,6 +2012,11 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
                     <fullName>Letter from Cabinet</fullName>
                     <default>false</default>
                     <label>Letter from Cabinet</label>
+                </value>
+                <value>
+                    <fullName>PA to PBN</fullName>
+                    <default>false</default>
+                    <label>PA to PBN</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -3454,9 +3515,9 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <columns>OPPORTUNITY.CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>Academic_Program__c</field>
+            <field>Stage_Detail__c</field>
             <operation>equals</operation>
-            <value>Auditor</value>
+            <value>Inquired</value>
         </filters>
         <label>All Opportunities</label>
     </listViews>
@@ -4054,6 +4115,10 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>Letter from Cabinet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PA to PBN</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5268,6 +5333,10 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>Letter from Cabinet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PA to PBN</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

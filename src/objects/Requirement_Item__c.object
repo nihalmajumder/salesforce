@@ -792,6 +792,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>BUILD Guardianship or Power of Attorney</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>BUILD Health Insurance Card</fullName>
                 <default>false</default>
             </values>
@@ -2058,6 +2062,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>BUILD Guardianship or Power of Attorney</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>BUILD Health Insurance Card</fullName>
                 <default>false</default>
             </values>
@@ -3308,6 +3316,10 @@
             </values>
             <values>
                 <fullName>BUILD Evaluation Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BUILD Guardianship or Power of Attorney</fullName>
                 <default>false</default>
             </values>
             <values>

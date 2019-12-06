@@ -55,6 +55,10 @@
                 <behavior>Edit</behavior>
                 <field>Lock_Documents_Missing__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Deferred_Acceptance__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -562,6 +566,25 @@
                 <behavior>Edit</behavior>
                 <field>Conga_DNP_Program_Director_Letter_Sent__c</field>
             </layoutItems>
+            <layoutItems>
+                <emptySpace>true</emptySpace>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Conga_Legacy_Postcard_Sent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Conga_Legacy_Notecard_1_Sent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Conga_Legacy_Notecard_2_Sent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Conga_Military_Postcard_Sent__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -757,14 +780,14 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>Enrollment_Checklist</actionName>
+            <actionName>Application_Review</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>6</sortOrder>
+            <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Transcript_Evaluation</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>7</sortOrder>
+            <actionName>Opportunity.Close</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>5</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Opportunity.Accept</actionName>
@@ -787,14 +810,19 @@
             <sortOrder>3</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Application_Review</actionName>
+            <actionName>Registered_Courses</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>4</sortOrder>
+            <sortOrder>16</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Opportunity.Close</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>5</sortOrder>
+            <actionName>Enrollment_Checklist</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Transcript_Evaluation</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>7</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>FA_Comments</actionName>
@@ -835,11 +863,6 @@
             <actionName>Opportunity.Clone_Opportunity</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>15</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Registered_Courses</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>16</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Opportunity.Request_Schedule</actionName>

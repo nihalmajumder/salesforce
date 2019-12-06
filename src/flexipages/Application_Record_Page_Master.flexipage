@@ -63,6 +63,30 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
+                <name>decorate</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;Third-Party Application&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;This application was imported from the ActSix or CASPA application process. &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;i style=&quot;font-size: 14px;&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/i&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;There is &lt;/span&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;no checklist &lt;/b&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;for this student.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt;Reach out to &lt;/span&gt;&lt;a href=&quot;mailto:enrollment-data@bethel.edu&quot; target=&quot;_blank&quot; style=&quot;color: rgb(79, 0, 0);&quot;&gt;enrollment-data@bethel.edu&lt;/a&gt;&lt;span style=&quot;color: rgb(79, 0, 0);&quot;&gt; with any questions.&lt;/span&gt;&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!Record.Third_Party_App_Type__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>ActSix</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!Record.Third_Party_App_Type__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>CASPA</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
                 <name>height</name>
                 <value>1500</value>
             </componentInstanceProperties>
@@ -79,6 +103,19 @@
                 <value>true</value>
             </componentInstanceProperties>
             <componentName>flexipage:visualforcePage</componentName>
+            <visibilityRule>
+                <booleanFilter>1 AND 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!Record.Third_Party_App_Type__c}</leftValue>
+                    <operator>NE</operator>
+                    <rightValue>ActSix</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!Record.Third_Party_App_Type__c}</leftValue>
+                    <operator>NE</operator>
+                    <rightValue>CASPA</rightValue>
+                </criteria>
+            </visibilityRule>
         </componentInstances>
         <name>Facet-569ce3ef-1293-4c49-a17c-05f95c016f74</name>
         <type>Facet</type>

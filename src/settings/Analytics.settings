@@ -8,14 +8,14 @@
     <canExploreDataConversationally>false</canExploreDataConversationally>
     <canShareAppsWithCommunities>false</canShareAppsWithCommunities>
     <canSubscribeDashboardWidgets>false</canSubscribeDashboardWidgets>
-    <canViewThumbnailAssets>false</canViewThumbnailAssets>
+    <canViewThumbnailAssets>true</canViewThumbnailAssets>
     <enableAnalyticsSubtotals>false</enableAnalyticsSubtotals>
     <enableAutoCompleteCombo>true</enableAutoCompleteCombo>
     <enableDashboardComponentSnapshot>false</enableDashboardComponentSnapshot>
     <enableDashboardFlexiTable>true</enableDashboardFlexiTable>
     <enableEmailReportsToPortalUsers>false</enableEmailReportsToPortalUsers>
     <enableFloatingReportHeaders>true</enableFloatingReportHeaders>
-    <enableInsights>false</enableInsights>
+    <enableInsights>true</enableInsights>
     <enableLightningReportBuilder>false</enableLightningReportBuilder>
     <enableLotusNotesImages>false</enableLotusNotesImages>
     <enableMassEnableReportBuilder>true</enableMassEnableReportBuilder>
@@ -26,7 +26,8 @@
     <enableReportUniqueRowCountPref>false</enableReportUniqueRowCountPref>
     <enableSFXJoinedReportsEnable>false</enableSFXJoinedReportsEnable>
     <enableUseOldChartsLookAndFeel>false</enableUseOldChartsLookAndFeel>
-    <enableWaveReplication>false</enableWaveReplication>
+    <enableWaveReplication>true</enableWaveReplication>
     <enableWaveSharingInheritance>false</enableWaveSharingInheritance>
     <enableWaveTemplate>false</enableWaveTemplate>
+    <enableWaveTrendedDatasetCleanup>true</enableWaveTrendedDatasetCleanup>
 </AnalyticsSettings>

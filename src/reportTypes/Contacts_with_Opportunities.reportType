@@ -780,6 +780,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Arts_Humanities_Scholarship__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Attributes__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
@@ -950,6 +955,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Deferred_Acceptance__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Delivery_Location__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
@@ -1045,6 +1055,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Music_Scholarship__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
             <table>Contact.Opportunities__r</table>
         </columns>
@@ -1071,6 +1086,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Opportunity_Term_Code__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Physics_Engineering_Scholarship__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
         <columns>
@@ -1449,6 +1469,26 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Conga_Inquired_Sophomore_FA_Card_Sent__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Conga_Legacy_Notecard_1_Sent__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Conga_Legacy_Postcard_Sent__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Conga_Legacy_Notecard_2_Sent__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Conga_Military_Postcard_Sent__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
         <columns>

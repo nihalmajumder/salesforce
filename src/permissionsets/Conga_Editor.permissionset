@@ -3901,6 +3901,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.Sent_Handwrytten_Card__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.Sync_to_Banner__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -5941,6 +5946,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Interaction__c.Stage_Value__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Interaction__c.Student_Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -7021,6 +7031,26 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Conga_Legacy_Notecard_1_Sent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Conga_Legacy_Notecard_2_Sent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Conga_Legacy_Postcard_Sent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Conga_Military_Postcard_Sent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Conga_PSEO_Apply_Mailer_Sent__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -7197,6 +7227,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Days_Since_Inquired_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Deferred_Acceptance__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

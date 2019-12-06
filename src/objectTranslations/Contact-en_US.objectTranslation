@@ -349,6 +349,10 @@
         <name>Seminary_Role__c</name>
     </fields>
     <fields>
+        <label><!-- Sent Handwrytten Card --></label>
+        <name>Sent_Handwrytten_Card__c</name>
+    </fields>
+    <fields>
         <label><!-- Sync Contact to Banner --></label>
         <name>Sync_to_Banner__c</name>
     </fields>
@@ -373,28 +377,12 @@
         <label><!-- Visa Type Code --></label>
         <name>Visa_Type_Code__c</name>
         <picklistValues>
-            <masterLabel>AS - Aslyum granted</masterLabel>
-            <translation><!-- AS - Aslyum granted --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>AS - Asylum granted</masterLabel>
             <translation><!-- AS - Asylum granted --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>B-2</masterLabel>
-            <translation><!-- B-2 --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>B2 - Tourist</masterLabel>
             <translation><!-- B2 - Tourist --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>F-1 Student</masterLabel>
-            <translation><!-- F-1 Student --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>F-2</masterLabel>
-            <translation><!-- F-2 --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>F1 - Student</masterLabel>
@@ -409,40 +397,12 @@
             <translation><!-- H4 - Spouse of employee --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>I-94 Refugee</masterLabel>
-            <translation><!-- I-94 Refugee --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>J1 - Exchange scholar</masterLabel>
             <translation><!-- J1 - Exchange scholar --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>J2 - Dependent of exchange scholar</masterLabel>
             <translation><!-- J2 - Dependent of exchange scholar --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>R-2</masterLabel>
-            <translation><!-- R-2 --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Refugee</masterLabel>
-            <translation><!-- Refugee --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>TP - Temporary protection status</masterLabel>
-            <translation><!-- TP - Temporary protection status --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>UNKNOWN</masterLabel>
-            <translation><!-- UNKNOWN --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Undocumented</masterLabel>
-            <translation><!-- Undocumented --></translation>
         </picklistValues>
     </fields>
     <fields>

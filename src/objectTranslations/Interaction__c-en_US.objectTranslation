@@ -3440,6 +3440,10 @@
             <translation><!-- Application --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>ApplicationU</masterLabel>
+            <translation><!-- ApplicationU --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Board Member</masterLabel>
             <translation><!-- Board Member --></translation>
         </picklistValues>
@@ -3827,6 +3831,10 @@
     <fields>
         <label><!-- Source Number --></label>
         <name>Source_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage Value --></label>
+        <name>Stage_Value__c</name>
     </fields>
     <fields>
         <label><!-- Student Type --></label>
