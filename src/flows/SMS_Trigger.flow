@@ -148,9 +148,6 @@ https://bethel-university.my.salesforce.com/{!myVariable_current.Mogli_SMS__Cont
         <locationY>400</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
-        <connector>
-            <targetReference>myRule_4_A4</targetReference>
-        </connector>
         <inputParameters>
             <name>text</name>
             <value>
@@ -173,42 +170,6 @@ https://bethel-university.my.salesforce.com/{!myVariable_current.Mogli_SMS__Cont
             </value>
         </inputParameters>
     </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>emailAlertSelection</name>
-            <value>
-                <stringValue>SMS_Mogli_Notification</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_4_A4</name>
-        <label>Email Owner</label>
-        <locationX>400</locationX>
-        <locationY>500</locationY>
-        <actionName>Mogli_SMS__SMS__c.SMS_Mogli_Notification</actionName>
-        <actionType>emailAlert</actionType>
-        <inputParameters>
-            <name>SObjectRowId</name>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <assignments>
-        <name>myVariable_waitStartTimeAssignment</name>
-        <label>myVariable_waitStartTimeAssignment</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>isChangedDecision2_myRule_1_Mogli_SMS_Lead_c</targetReference>
-        </connector>
-    </assignments>
     <decisions>
         <name>isChangedDecision2_myRule_1_Mogli_SMS_Lead_c</name>
         <label>isChangedDecision2_myRule_1_Mogli_SMS_Lead_c</label>
@@ -402,6 +363,43 @@ https://bethel-university.my.salesforce.com/{!myVariable_current.Mogli_SMS__Cont
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideReferenceTo</name>
+                    <value>
+                        <stringValue>User</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Mogli_SMS__Gateway__r.User__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>myRule_1_A1</targetReference>
             </connector>
@@ -497,6 +495,43 @@ https://bethel-university.my.salesforce.com/{!myVariable_current.Mogli_SMS__Cont
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideReferenceTo</name>
+                    <value>
+                        <stringValue>User</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Mogli_SMS__Gateway__r.User__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>myRule_4_A1</targetReference>
             </connector>
@@ -504,7 +539,7 @@ https://bethel-university.my.salesforce.com/{!myVariable_current.Mogli_SMS__Cont
         </rules>
     </decisions>
     <description>SMS record trigger on creation and edit.</description>
-    <interviewLabel>SMS_Trigger-4_InterviewLabel</interviewLabel>
+    <interviewLabel>SMS_Trigger-6_InterviewLabel</interviewLabel>
     <label>SMS: Trigger</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -697,8 +732,8 @@ https://bethel-university.my.salesforce.com/{!myVariable_current.Mogli_SMS__Cont
         </inputAssignments>
         <object>Mogli_SMS__SMS__c</object>
     </recordUpdates>
-    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
-    <status>Obsolete</status>
+    <startElementReference>isChangedDecision2_myRule_1_Mogli_SMS_Lead_c</startElementReference>
+    <status>Active</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>
@@ -714,15 +749,5 @@ https://bethel-university.my.salesforce.com/{!myVariable_current.Mogli_SMS__Cont
         <isInput>true</isInput>
         <isOutput>false</isOutput>
         <objectType>Mogli_SMS__SMS__c</objectType>
-    </variables>
-    <variables>
-        <name>myVariable_waitStartTimeVariable</name>
-        <dataType>DateTime</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <elementReference>$Flow.CurrentDateTime</elementReference>
-        </value>
     </variables>
 </Flow>
