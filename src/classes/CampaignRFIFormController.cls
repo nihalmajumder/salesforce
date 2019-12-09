@@ -8,6 +8,7 @@ public with sharing class CampaignRFIFormController {
     public Interaction__c interaction {get; set;}
     public Campaign rfi_campaign {get; set;}
     public String campaign_school {get; set;}
+    public String campaign_name {get; set;}
     public String grad_year {get; set;}
     public String program {get; set;}
     public String school {get; set;}
@@ -17,8 +18,9 @@ public with sharing class CampaignRFIFormController {
     public CampaignRFIFormController(ApexPages.StandardController controller) {
 
         String campaign_id = ApexPages.currentPage().getParameters().get('CampaignId');
-        rfi_campaign = [SELECT Id, RFI_Version__c, Source_Type__c, Source_Detail__c, School__c, RFI_Attributes__c FROM Campaign WHERE Id=:campaign_id];
+        rfi_campaign = [SELECT Id, Name, RFI_Version__c, Source_Type__c, Source_Detail__c, School__c, RFI_Attributes__c FROM Campaign WHERE Id=:campaign_id];
         campaign_school = rfi_campaign.School__c;
+        campaign_name = rfi_campaign.Name;
         show_popup = false;
         current_page = ApexPages.currentPage().getUrl();
         interaction = new Interaction__c(Mailing_Country__c='United States',

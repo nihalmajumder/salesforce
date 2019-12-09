@@ -12,8 +12,11 @@
         <div class="form-header">
             <img alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png" />
         </div>
+        <h1 class="form-title">{!campaign_name}</h1>
         <apex:pageBlock id="formblock">
+
             <apex:pageBlockSection columns="1">
+
                 <apex:inputField value="{! interaction.First_Name__c }" required="false"/>
                 <apex:inputField value="{! interaction.Last_Name__c }" required="false"/>
                 <apex:inputField value="{! interaction.Email__c }" required="false"/>
