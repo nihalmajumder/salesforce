@@ -39,7 +39,7 @@ public with sharing class CampaignRFIFormController {
             }
 
             if (rfi_campaign.RFI_Attributes__c.contains('Military / Veteran')) {
-                // interaction.Is_Legacy__c = 'Yes';
+                 interaction.Is_Veteran__c = 'Yes';
             }
         }
     }

@@ -9,7 +9,10 @@ public with sharing class CampaignRFIFormControllerTest {
 
     static testMethod void testController(){
 
-        Campaign rfi_campaign = new Campaign(RecordTypeId = recTypeId, Name='RFI Campaign Name', RFI_Version__c='Post-Trad', Source_Type__c='Event & Visits', Source_Detail__c='Other', School__c='CAS', RFI_Attributes__c='Legacy');
+        Campaign rfi_campaign = new Campaign(RecordTypeId = recTypeId, Name='RFI Campaign Name',
+                RFI_Version__c='Post-Trad', Source_Type__c='Event & Visits',
+                Source_Detail__c='Other', School__c='CAS',
+                RFI_Attributes__c='Legacy;Military / Veteran');
 
         insert rfi_campaign;
         //create the controller to pass into apex class
