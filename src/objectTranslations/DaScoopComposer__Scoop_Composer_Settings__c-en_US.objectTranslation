@@ -37,7 +37,7 @@
     </fields>
     <fields>
         <help><!-- Controls whether users can update Salesforce records from the side bar in Groove for Gmail --></help>
-        <label><!-- Allow Inline Editing --></label>
+        <label><!-- [DEPRECATED]Allow Inline Editing --></label>
         <name>DaScoopComposer__Allow_Inline_Editing__c</name>
     </fields>
     <fields>

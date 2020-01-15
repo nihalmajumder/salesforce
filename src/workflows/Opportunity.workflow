@@ -929,7 +929,7 @@ NOT(ISPICKVAL(Student_Type__c, &quot;New Student Previous PSEO&quot;))
         <criteriaItems>
             <field>Opportunity.Stage_Detail__c</field>
             <operation>equals</operation>
-            <value>Inquired</value>
+            <value>Inquired,Pre-Applied</value>
         </criteriaItems>
         <criteriaItems>
             <field>Opportunity.Term_Start_Date_255__c</field>

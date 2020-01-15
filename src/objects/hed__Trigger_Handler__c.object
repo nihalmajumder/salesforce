@@ -337,6 +337,8 @@
         <columns>hed__Object__c</columns>
         <columns>hed__Load_Order__c</columns>
         <columns>hed__Usernames_to_Exclude__c</columns>
+        <columns>hed__Filter_Field__c</columns>
+        <columns>hed__Filter_Value__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>hed__Owned_by_Namespace__c</field>

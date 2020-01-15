@@ -179,7 +179,6 @@
     <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>ACT_Test_Results__c</fullName>
-        <defaultValue>&quot;none&quot;</defaultValue>
         <description>Data from ACT. Should be loaded from the &quot;ACT Summary&quot; of the ACT Parser Excel document.</description>
         <externalId>false</externalId>
         <label>ACT Test Results</label>
@@ -798,6 +797,16 @@ TEXT(Academic_Program__r.Career__c))</formula>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Early_Banner_ID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Pushed to Contact and used by Banner to track Contacts who need to have a Banner ID generated earlier than normal (usually at the Applied Stage on Opportunity).</description>
+        <externalId>false</externalId>
+        <label>Early Banner ID</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Email__c</fullName>

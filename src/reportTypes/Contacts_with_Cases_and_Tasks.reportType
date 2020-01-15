@@ -829,6 +829,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Academic_Program_Code__c</field>
+            <table>Contact.Cases</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account</field>
             <table>Contact.Cases</table>
         </columns>

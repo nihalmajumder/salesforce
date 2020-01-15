@@ -785,6 +785,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTM_Opportunity_File_Closed_Automation2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTM_Opportunity_Program_Term_Validate</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3131,9 +3135,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Campaign.Event_URL__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -3547,6 +3551,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.Academic_Program_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.Academic_Program_Division__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3694,6 +3703,11 @@
         <editable>false</editable>
         <field>Case.Created_Date_Formatted__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.DaScoopComposer__Origin__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -4638,6 +4652,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.DoNotCall</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Early_Banner_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5662,6 +5681,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Education_History__c.Needs_Transcript_Evaluation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Education_History__c.Old_Org_Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5758,6 +5782,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Education_History__c.ScoreLink__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Education_History__c.Transcript_Evaluation_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6682,6 +6711,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Interaction__c.Early_Banner_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Interaction__c.Ethnicity__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6708,7 +6742,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Interaction__c.Interaction_Mogli_Number__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

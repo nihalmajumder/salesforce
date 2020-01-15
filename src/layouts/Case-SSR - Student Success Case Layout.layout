@@ -50,6 +50,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
+                <field>Academic_Program_Code__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>Academic_Program_Division__c</field>
             </layoutItems>
             <layoutItems>

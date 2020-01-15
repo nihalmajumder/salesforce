@@ -2018,6 +2018,16 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
                     <default>false</default>
                     <label>PA to PBN</label>
                 </value>
+                <value>
+                    <fullName>Student Connect</fullName>
+                    <default>false</default>
+                    <label>Student Connect</label>
+                </value>
+                <value>
+                    <fullName>XMS $150</fullName>
+                    <default>false</default>
+                    <label>XMS $150</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
         <visibleLines>5</visibleLines>
@@ -4121,6 +4131,14 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
                 <fullName>PA to PBN</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Student Connect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XMS %24150</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>LeadSource</picklist>
@@ -5337,6 +5355,14 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>PA to PBN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Connect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XMS %24150</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

@@ -13,6 +13,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Academic_Program_Code__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Academic_Program_Division__c</field>
             <table>Case</table>
         </columns>

@@ -665,7 +665,7 @@
         <relationshipLabel>Requirement Items</relationshipLabel>
         <relationshipName>Requirement_Items</relationshipName>
         <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
@@ -833,6 +833,10 @@
             </values>
             <values>
                 <fullName>Board of Certification for Athletic Trainers Documentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPR for the Professional Rescuer %28or current certification%29</fullName>
                 <default>false</default>
             </values>
             <values>

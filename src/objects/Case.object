@@ -301,6 +301,39 @@
             <default>false</default>
         </values>
     </businessProcesses>
+    <businessProcesses>
+        <fullName>SSR - Readmission</fullName>
+        <description>Process for Readmission</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evaluation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reactive and Register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review</fullName>
+            <default>true</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Case_Compact_Layout_EMOps</fullName>
@@ -353,6 +386,11 @@
         </availableFields>
         <availableFields>
             <field>Origin</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>DaScoopComposer__Origin__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -427,6 +465,11 @@
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
+        <displayedFields>
+            <field>ContactEmail</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <label>New Case</label>
     </fieldSets>
     <fields>
@@ -441,6 +484,18 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Academic_Program_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Program__r.Program_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Academic Program Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Academic_Program_Division__c</fullName>
@@ -1013,6 +1068,18 @@ TEXT(YEAR(DATEVALUE(CreatedDate)))</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>DaScoopComposer__Origin__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Origin</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Deadline_Description__c</fullName>
         <externalId>false</externalId>
         <label>Deadline Description</label>
@@ -1259,7 +1326,7 @@ Petition_Type__c,
                 <controllingFieldValue>Exception - Late drop without refund request</controllingFieldValue>
                 <controllingFieldValue>Exception - Late drop with refund request</controllingFieldValue>
                 <controllingFieldValue>Exception - Other academic policy</controllingFieldValue>
-                <controllingFieldValue>Exception - Required course or independent study substitution</controllingFieldValue>
+                <controllingFieldValue>Exception - Required course or Directed Study substitution</controllingFieldValue>
                 <valueName>Other</valueName>
             </valueSettings>
             <valueSettings>
@@ -1313,19 +1380,19 @@ Petition_Type__c,
                 <valueName>Student not yet qualified to be in class</valueName>
             </valueSettings>
             <valueSettings>
-                <controllingFieldValue>Exception - Required course or independent study substitution</controllingFieldValue>
+                <controllingFieldValue>Exception - Required course or Directed Study substitution</controllingFieldValue>
                 <valueName>Substitute course has different objectives than the course in our catalog</valueName>
             </valueSettings>
             <valueSettings>
-                <controllingFieldValue>Exception - Required course or independent study substitution</controllingFieldValue>
+                <controllingFieldValue>Exception - Required course or Directed Study substitution</controllingFieldValue>
                 <valueName>Substitute course was at a lower level than course in our catalog</valueName>
             </valueSettings>
             <valueSettings>
-                <controllingFieldValue>Exception - Required course or independent study substitution</controllingFieldValue>
+                <controllingFieldValue>Exception - Required course or Directed Study substitution</controllingFieldValue>
                 <valueName>Substitute course did not include important content provided in course that we provide</valueName>
             </valueSettings>
             <valueSettings>
-                <controllingFieldValue>Exception - Required course or independent study substitution</controllingFieldValue>
+                <controllingFieldValue>Exception - Required course or Directed Study substitution</controllingFieldValue>
                 <valueName>Student did not provide enough information about the course to justify a favorable decision</valueName>
             </valueSettings>
         </valueSet>
@@ -2198,9 +2265,9 @@ Petition_Type__c,
                     <label>Exception - Other academic policy</label>
                 </value>
                 <value>
-                    <fullName>Exception - Required course or independent study substitution</fullName>
+                    <fullName>Exception - Required course or Directed Study substitution</fullName>
                     <default>false</default>
-                    <label>Exception - Required course or independent study substitution</label>
+                    <label>Exception - Required course or Directed Study substitution</label>
                 </value>
                 <value>
                     <fullName>Exception - Withdrawal past deadline without refund request</fullName>
@@ -2517,7 +2584,7 @@ Petition_Type__c,
         <formula>Related_Opportunity__r.Academic_Program__r.Name</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Current Program</inlineHelpText>
-        <label>Program</label>
+        <label>Related Program</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -4598,7 +4665,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5550,7 +5617,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -6486,7 +6553,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7438,7 +7505,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -8298,7 +8365,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9070,7 +9137,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9906,7 +9973,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -10658,7 +10725,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -11466,7 +11533,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -12290,7 +12357,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -12750,7 +12817,7 @@ if(isblank(approval_extension_date__c) = FALSE,
     <recordTypes>
         <fullName>SSR_Readmission</fullName>
         <active>true</active>
-        <businessProcess>SSR</businessProcess>
+        <businessProcess>SSR - Readmission</businessProcess>
         <compactLayoutAssignment>Case_Compact_Layout_SSR</compactLayoutAssignment>
         <label>SSR - Readmission</label>
         <picklistValues>
@@ -13106,7 +13173,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -13998,7 +14065,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -14901,7 +14968,7 @@ if(isblank(approval_extension_date__c) = FALSE,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Exception - Required course or independent study substitution</fullName>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
                 <default>false</default>
             </values>
             <values>

@@ -122,7 +122,7 @@ global class TDTM_Create_Case_Tasks extends TDTMVirtualTriggerHandler {
                     }
                 }
             }
-        }
+       }
 
         update process_cases;
 

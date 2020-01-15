@@ -976,6 +976,16 @@ SUBSTITUTE(SUBSTITUTE(FirstName, &quot; &quot;, &quot;+&quot;), &quot;&amp;&quot
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>Early_Banner_ID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Filled by Interactions and used by Banner to track Contacts who need to have a Banner ID generated earlier than normal (usually at the Applied Stage on Opportunity).</description>
+        <externalId>false</externalId>
+        <label>Early Banner ID</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Email</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>

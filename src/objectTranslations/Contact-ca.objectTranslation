@@ -171,6 +171,10 @@
         <name>Denomination_Description__c</name>
     </fields>
     <fields>
+        <label><!-- Early Banner ID --></label>
+        <name>Early_Banner_ID__c</name>
+    </fields>
+    <fields>
         <label><!-- Five Digit Postal Code --></label>
         <name>Five_Digit_Postal_Code__c</name>
     </fields>

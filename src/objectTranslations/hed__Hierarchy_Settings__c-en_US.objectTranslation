@@ -163,6 +163,42 @@
         <name>hed__Preferred_Phone_Selection__c</name>
     </fields>
     <fields>
+        <label><!-- Prevent Account Deletion --></label>
+        <name>hed__Prevent_Account_Deletion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Behavior Involvement Deletion --></label>
+        <name>hed__Prevent_Behavior_Involvement_Deletion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Case Deletion --></label>
+        <name>hed__Prevent_Case_Deletion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Contact Deletion --></label>
+        <name>hed__Prevent_Contact_Deletion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Course Connection Deletion --></label>
+        <name>hed__Prevent_Course_Connection_Deletion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Course Offering Deletion --></label>
+        <name>hed__Prevent_Course_Offering_Deletion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Plan Requirement Deletion --></label>
+        <name>hed__Prevent_Plan_Requirement_Deletion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Program Plan Deletion --></label>
+        <name>hed__Prevent_Program_Plan_Deletion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Term Deletion --></label>
+        <name>hed__Prevent_Term_Deletion__c</name>
+    </fields>
+    <fields>
         <help><!-- Determines method used to generate the reciprocal relationship.  Either List Setting which uses custom settings by gender, or Value Inversion, which inverts the type if appropriate (&quot;Parent-Child&quot; to &quot;Child-Parent&quot;) --></help>
         <label><!-- Reciprocal Method --></label>
         <name>hed__Reciprocal_Method__c</name>

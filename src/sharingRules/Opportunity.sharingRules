@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
-    <sharingCriteriaRules>
-        <fullName>Opp_Admissions_CAS</fullName>
+    <sharingOwnerRules>
+        <fullName>Opp_Admissions_CAS2</fullName>
         <accessLevel>Edit</accessLevel>
-        <description>Shares Opportunities within CAS Admissions.</description>
-        <label>Opp: Admissions CAS</label>
+        <description>Shares All Opportunities within CAS Admissions.</description>
+        <label>Opp: Admissions CAS2</label>
         <sharedTo>
             <roleAndSubordinatesInternal>Admissions_CAS</roleAndSubordinatesInternal>
         </sharedTo>
-        <criteriaItems>
-            <field>School_College__c</field>
-            <operation>notEqual</operation>
-            <value>Adult Undergraduate,Graduate,Seminary</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
-    <sharingCriteriaRules>
-        <fullName>Opp_Admissions_Post_Trad</fullName>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Opp_Admissions_Post_Trad2</fullName>
         <accessLevel>Edit</accessLevel>
-        <description>Read/write access for Post-Trad Opportunities within the Post-Trad role.</description>
-        <label>Opp: Admissions Post-Trad</label>
+        <description>Read/write access for All Opportunities within the Post-Trad role.</description>
+        <label>Opp: Admissions Post-Trad2</label>
         <sharedTo>
             <roleAndSubordinatesInternal>Admissions_Post_Trad</roleAndSubordinatesInternal>
         </sharedTo>
-        <criteriaItems>
-            <field>School_College__c</field>
-            <operation>notEqual</operation>
-            <value>Undergraduate</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
     <sharingOwnerRules>
         <fullName>Opp_Marketing_Sharing</fullName>
         <accessLevel>Edit</accessLevel>

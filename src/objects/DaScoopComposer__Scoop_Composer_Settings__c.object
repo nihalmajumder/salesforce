@@ -86,7 +86,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Controls whether users can update Salesforce records from the side bar in Groove for Gmail</inlineHelpText>
-        <label>Allow Inline Editing</label>
+        <label>[DEPRECATED]Allow Inline Editing</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -442,6 +442,7 @@ Blank (default) = Allow any attachments (5mb max size)
         <externalId>false</externalId>
         <inlineHelpText>Enable if you want to use Groove Dialer&apos;s reverse number lookup functionality</inlineHelpText>
         <label>Reverse Number Lookup</label>
+        <securityClassification>Public</securityClassification>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>

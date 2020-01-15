@@ -42,6 +42,10 @@
                 <field>Program__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Academic_Program_Code__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Cohort__c</field>
             </layoutItems>

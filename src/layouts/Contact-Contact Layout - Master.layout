@@ -127,16 +127,12 @@
                 <emptySpace>true</emptySpace>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Mogli_SMS__Mogli_Number__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Mogli_SMS__Default_Gateway__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Mogli_SMS__Avatar_URL__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -509,6 +505,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Banner_Roles__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Early_Banner_ID__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

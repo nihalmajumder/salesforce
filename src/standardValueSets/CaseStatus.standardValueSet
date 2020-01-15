@@ -14,12 +14,6 @@
         <closed>false</closed>
     </standardValue>
     <standardValue>
-        <fullName>Closed</fullName>
-        <default>false</default>
-        <label>Closed</label>
-        <closed>true</closed>
-    </standardValue>
-    <standardValue>
         <fullName>New</fullName>
         <default>true</default>
         <label>New</label>
@@ -114,5 +108,41 @@
         <default>false</default>
         <label>Awaiting Response</label>
         <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Review</fullName>
+        <default>false</default>
+        <label>Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Evaluation</fullName>
+        <default>false</default>
+        <label>Evaluation</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approval</fullName>
+        <default>false</default>
+        <label>Approval</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reactive and Register</fullName>
+        <default>false</default>
+        <label>Reactive and Register</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Confirm</fullName>
+        <default>false</default>
+        <label>Confirm</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
     </standardValue>
 </StandardValueSet>

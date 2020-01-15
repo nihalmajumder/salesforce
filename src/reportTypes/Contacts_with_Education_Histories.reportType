@@ -975,6 +975,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Needs_Transcript_Evaluation__c</field>
+            <table>Contact.Education_Histories__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Portal_Comments__c</field>
             <table>Contact.Education_Histories__r</table>
         </columns>
@@ -1076,6 +1081,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Unofficial_Received_Date_2__c</field>
+            <table>Contact.Education_Histories__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Transcript_Evaluation_Date__c</field>
             <table>Contact.Education_Histories__r</table>
         </columns>
         <masterLabel>Education Histories</masterLabel>
