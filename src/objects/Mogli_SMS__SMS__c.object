@@ -164,6 +164,18 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Event_Log__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Event Log</label>
+        <referenceTo>Event_Log__c</referenceTo>
+        <relationshipLabel>SMS</relationshipLabel>
+        <relationshipName>SMS</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Mogli_SMS__Attachments__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>

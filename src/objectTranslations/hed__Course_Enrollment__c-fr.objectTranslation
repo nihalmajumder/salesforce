@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value>Connexion au cours</value>
+        <value>Inscription à un module</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>Connexions au cours</value>
+        <value>Inscriptions à des modules</value>
     </caseValues>
     <fields>
         <help>Le programme académique auquel l&apos;étudiant est inscrit.</help>
@@ -68,7 +68,7 @@
         </picklistValues>
     </fields>
     <gender>Feminine</gender>
-    <nameFieldLabel>ID de connexion au cours</nameFieldLabel>
+    <nameFieldLabel>ID d&apos;inscriptions aux modules</nameFieldLabel>
     <recordTypes>
         <description><!-- A Faculty Course Connection --></description>
         <label><!-- Faculty --></label>

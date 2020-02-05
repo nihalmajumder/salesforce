@@ -1628,6 +1628,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>2-CRT-CPLT</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>2-CRT-UG-AD</fullName>
                 <default>false</default>
             </values>
@@ -2879,6 +2883,10 @@
             </values>
             <values>
                 <fullName>2-CRT-CLDR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4140,6 +4148,10 @@
             </values>
             <values>
                 <fullName>2-CRT-CLDR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-CRT-CPLT</fullName>
                 <default>false</default>
             </values>
             <values>

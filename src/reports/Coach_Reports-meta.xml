@@ -36,11 +36,6 @@
         <sharedToType>User</sharedToType>
     </folderShares>
     <folderShares>
-        <accessLevel>EditAllContents</accessLevel>
-        <sharedTo>craig-henkel@bethel.edu</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
-    <folderShares>
         <accessLevel>View</accessLevel>
         <sharedTo>drew-fernelius@bethel.edu</sharedTo>
         <sharedToType>User</sharedToType>
@@ -84,6 +79,16 @@
         <accessLevel>EditAllContents</accessLevel>
         <sharedTo>Admissions_CAS</sharedTo>
         <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>Faculty</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>ITS</sharedTo>
+        <sharedToType>Group</sharedToType>
     </folderShares>
     <name>Coach Reports</name>
 </ReportFolder>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Evento de asistencia</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Eventos de asistencia</value>
+    </caseValues>
+    <fields>
+        <help>Para eventos retrasados, la hora a la que llegó el estudiante.</help>
+        <label><!-- Arrival Time --></label>
+        <name>hed__Arrival_Time__c</name>
+    </fields>
+    <fields>
+        <help>El tipo de retraso o ausencia.</help>
+        <label><!-- Attendance Type --></label>
+        <name>hed__Attendance_Type__c</name>
+        <picklistValues>
+            <masterLabel>Class Absence</masterLabel>
+            <translation>Ausencia de clase</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Class Tardy</masterLabel>
+            <translation>Retraso de clase</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>El estudiante que está retrasado o ausente.</help>
+        <label><!-- Contact --></label>
+        <name>hed__Contact__c</name>
+        <relationshipLabel><!-- Attendance Events --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La clase y el periodo en el que el estudiante tuvo retraso o estuvo ausente.</help>
+        <label><!-- Course Connection --></label>
+        <name>hed__Course_Connection__c</name>
+        <relationshipLabel><!-- Attendance Events --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El nombre del curso en el que el estudiante tuvo retraso o estuvo ausente.</help>
+        <label><!-- Course Name --></label>
+        <name>hed__Course_Name__c</name>
+    </fields>
+    <fields>
+        <help>La fecha en la que se produjo el retraso o la ausencia.</help>
+        <label><!-- Date --></label>
+        <name>hed__Date__c</name>
+    </fields>
+    <fields>
+        <help>Para ausencias justificadas, la hora en que termina la ausencia.</help>
+        <label><!-- End Time --></label>
+        <name>hed__End_Time__c</name>
+    </fields>
+    <fields>
+        <help>Una descripción del motivo por el que el estudiante tuvo retraso o estuvo ausente.</help>
+        <label><!-- Reason Description --></label>
+        <name>hed__Reason_Description__c</name>
+    </fields>
+    <fields>
+        <help>El motivo por el que el estudiante tuvo retraso o estuvo ausente.</help>
+        <label><!-- Reason --></label>
+        <name>hed__Reason__c</name>
+        <picklistValues>
+            <masterLabel>Family</masterLabel>
+            <translation>Familiar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical</masterLabel>
+            <translation>Médico</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Religious</masterLabel>
+            <translation>Religioso</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Para ausencias justificadas, la hora en que comienza la ausencia.</help>
+        <label><!-- Start Time --></label>
+        <name>hed__Start_Time__c</name>
+    </fields>
+    <fields>
+        <help>Indica un retraso o ausencia no justificados.</help>
+        <label><!-- Unexcused --></label>
+        <name>hed__Unexcused__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>EDA Attendance Event Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de evento de asistencia</nameFieldLabel>
+</CustomObjectTranslation>

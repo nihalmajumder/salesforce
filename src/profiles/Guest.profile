@@ -131,6 +131,16 @@
         <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>STARS_Callers</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>STARS_Console</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>Seminary</application>
         <default>false</default>
         <visible>false</visible>
@@ -541,6 +551,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Flow_BulkSMS</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Flow_BulkSMSTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ForgotPasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -641,6 +659,22 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ReAdmissionController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReAdmissionControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReAdmissionHelper</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ReAdmissionHelperTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ReferenceHelper</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -713,11 +747,27 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TDTMCaseTriggerHandler</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TDTMCaseTriggerHandlerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TDTMEducationHistoryTriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>TDTMEducationHistoryTriggerHandlerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TDTMOpportunityPreAppTriggerHandlerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TDTMOpportunityPreAppliedTriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -786,6 +836,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TDTM_Opportunity_File_Closed_Automation2</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TDTM_Opportunity_File_Closed_Automations</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -3402,6 +3456,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Campaign.Tell_Me_More_URL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Campaign.Text_Message__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6071,6 +6130,31 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Event_Log__c.Campaign__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Gateway__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Message__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Report_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Extracurricular_Activity__c.Activity__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -7812,6 +7896,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Mogli_SMS__SMS__c.Contact_Updated__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__SMS__c.Event_Log__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12246,6 +12335,51 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>hed__Application__c.hed__Applicant_Decision_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Application__c.hed__Applicant__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Application__c.hed__Application_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Application__c.hed__Application_Decision_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Application__c.hed__Application_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Application__c.hed__Application_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Application__c.hed__Applying_To__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Application__c.hed__Preparer__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Application__c.hed__Term__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>hed__Attendance_Event__c.hed__Arrival_Time__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -13241,6 +13375,56 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>hed__Test_Score__c.hed__Percentile__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test_Score__c.hed__Score__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test_Score__c.hed__Subject_Area__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test_Score__c.hed__Test_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test_Score__c.hed__Test__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test__c.hed__Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test__c.hed__Date_Received__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test__c.hed__Source__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test__c.hed__Test_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Test__c.hed__Test_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>hed__Time_Block__c.hed__Educational_Institution__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -13637,6 +13821,96 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>wbsendit__Custom_Field__c.wbsendit__Sync_Direction__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Bounced__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Clicked__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Last_Bounced_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Last_Click_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Last_Open_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Last_Sent_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Last_Unsubscribe_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Opened__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Sent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Unique_Opened__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey_Email__c.wbsendit__Unsubscribed__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey__c.wbsendit__Clicked__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey__c.wbsendit__List_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey__c.wbsendit__Opened__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey__c.wbsendit__Sent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey__c.wbsendit__Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey__c.wbsendit__Subscriber_List__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Journey__c.wbsendit__Trigger_Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14169,13 +14443,65 @@
         <field>wbsendit__Subscription__c.wbsendit__Subscriber_List__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Suppression__c.wbsendit__Campaign_Monitor_Client__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Suppression__c.wbsendit__Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Suppression__c.wbsendit__Date_Suppressed__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Suppression__c.wbsendit__Email__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Suppression__c.wbsendit__Job_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Suppression__c.wbsendit__Lead__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Suppression__c.wbsendit__Reason__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>wbsendit__Suppression__c.wbsendit__State__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Application_Trigger_Assignments_when_Fields_Change</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Bethel_Query_String</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Call_Interaction_Inquiry_Form_by_Mogli</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Case_Trigger</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Contact_Set_Preferred_Phone</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14192,6 +14518,14 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Family_Member_Create_Relationship_Record</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Interaction_Creation_from_Mogli</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Interaction_Mogli_Number_to_Associated_Contact</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14220,6 +14554,14 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>SMS_Trigger</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Screen_Clean_Test_Applicants</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Task_STARS_Close_Opportunity</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14405,6 +14747,10 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Campaign-Campaign Layout - Visit</layout>
+        <recordType>Campaign.Texting_Campaign</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Campaign-Campaign Layout - Visit</layout>
         <recordType>Campaign.Visit</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -14510,6 +14856,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>DaScoopComposer__Tracked_Message__c-DaScoopComposer__Tracked Message Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>DuplicateRecordItem-Duplicate Record Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>DuplicateRecordSet-Duplicate Record Set Layout</layout>
@@ -15033,6 +15382,9 @@
         <layout>hed__Affiliation__c-hed__HEDA Affiliation Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>hed__Application__c-hed__EDA Application Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>hed__Attendance_Event__c-hed__EDA Attendance Event Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -15103,6 +15455,12 @@
         <layout>hed__Term__c-hed__HEDA Term Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>hed__Test_Score__c-hed__EDA Test Score Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>hed__Test__c-hed__EDA Test Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>hed__Time_Block__c-hed__EDA Time Block Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -15122,6 +15480,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>wbsendit__Custom_Field__c-wbsendit__Custom Field Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>wbsendit__Journey_Email__c-wbsendit__Journey Email Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>wbsendit__Journey__c-wbsendit__Journey Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>wbsendit__Queue_Item__c-wbsendit__Queue Item Layout</layout>
@@ -15146,6 +15510,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>wbsendit__Subscription__c-wbsendit__Subscription Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>wbsendit__Suppression__c-wbsendit__Suppression List Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>wbsendit__sendITConstant__mdt-wbsendit__sendITConstant Layout</layout>
@@ -15319,6 +15686,10 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>Readmission</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>RelatedDocumentUpload</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -15442,6 +15813,11 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Campaign.Events_and_Conferences</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Campaign.Texting_Campaign</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -15899,6 +16275,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Admin_Tools</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Admissions_Document__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
@@ -16139,6 +16519,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>hed__Application__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>hed__Attendance_Event__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
@@ -16212,6 +16596,14 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>hed__Term__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>hed__Test_Score__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>hed__Test__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -16404,6 +16796,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>wbsendit__General_Options</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>wbsendit__Journey__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>

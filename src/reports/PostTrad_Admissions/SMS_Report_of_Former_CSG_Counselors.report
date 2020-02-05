@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Mogli_SMS__SMS__c.Mogli_SMS__Direction__c</field>
+    </columns>
+    <columns>
+        <field>Mogli_SMS__SMS__c.Notification_Sent_To__c</field>
+    </columns>
+    <columns>
+        <field>Mogli_SMS__SMS__c.Mogli_SMS__Message__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <description>This report was created to track incoming messages to phone numbers not current being used in Mogli. Numbers can be added or removed in filters. A date range is also included.</description>
+    <filter>
+        <criteriaItems>
+            <column>Mogli_SMS__SMS__c.Mogli_SMS__Gateway__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>6516358051,6516358098,6516358062,6516358080</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Mogli_SMS__SMS__c.Mogli_SMS__Direction__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Incoming</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>10/11/2019 12:00 AM</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Mogli_SMS__SMS__c.Mogli_SMS__Gateway__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SMS Report of Former CSG Counselors</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Mogli_SMS__SMS__c@Mogli_SMS__SMS__c.Mogli_SMS__Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Mogli_SMS__SMS__c.Mogli_SMS__Scheduled_Delivery__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

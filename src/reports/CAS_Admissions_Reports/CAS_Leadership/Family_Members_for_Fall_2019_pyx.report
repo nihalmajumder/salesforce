@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Families__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Families__r$First_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Families__r$Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Families__r$Type__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Families__r$Email__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Stage_Detail__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>App Started,App Submitted,App Completed,Accepted,Fee Paid,Fee Waived,Registered</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Academic_Term__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>fall 2019 - cas</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>Opportunity</relatedTable>
+        <relatedTableJoinColumn>Contact__c</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Family Members with email address of Fall 2019 - CAS applicants who are at a Stage Detail between App Started and Registered.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Families__r$Email__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Family Members for Fall 2019</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Family_Members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -324,4 +324,16 @@
         <name>standard__Insights</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>Profile2PermSet__Profiles_to_Permission_Sets</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Bulk_Messaging</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Recruiting</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>

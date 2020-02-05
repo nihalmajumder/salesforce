@@ -4201,6 +4201,10 @@
         <name>Contact_Key_Fields_Opp_CSG</name>
     </quickActions>
     <quickActions>
+        <label><!-- Contact Key Fields - STARS --></label>
+        <name>Contact_Key_Fields_STARS</name>
+    </quickActions>
+    <quickActions>
         <label><!-- Formation Case --></label>
         <name>Formation_Case</name>
     </quickActions>

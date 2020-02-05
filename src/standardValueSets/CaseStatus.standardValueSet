@@ -128,9 +128,9 @@
         <closed>false</closed>
     </standardValue>
     <standardValue>
-        <fullName>Reactive and Register</fullName>
+        <fullName>Reactivate and Register</fullName>
         <default>false</default>
-        <label>Reactive and Register</label>
+        <label>Reactivate and Register</label>
         <closed>false</closed>
     </standardValue>
     <standardValue>

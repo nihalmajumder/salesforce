@@ -12,7 +12,17 @@
     </folderShares>
     <folderShares>
         <accessLevel>Manage</accessLevel>
+        <sharedTo>kristin-wyss@bethel.edu</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
         <sharedTo>Admissions_Post_Trad</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>Marketing_Executive</sharedTo>
         <sharedToType>Role</sharedToType>
     </folderShares>
     <folderShares>

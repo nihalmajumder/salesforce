@@ -5,7 +5,7 @@
     <encodingKey>ISO-8859-1</encodingKey>
     <name>Case: New Stakeholder</name>
     <style>none</style>
-    <subject>You have a new case! Case #{!Case.CaseNumber} submitted to ITS</subject>
+    <subject>You have a new case! Case #{!Case.CaseNumber} - &quot;{!Case.Subject}&quot; submitted to ITS</subject>
     <type>text</type>
     <uiType>Aloha</uiType>
 </EmailTemplate>

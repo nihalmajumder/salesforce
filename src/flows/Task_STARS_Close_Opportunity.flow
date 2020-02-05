@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Task: STARS Close Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Task: STARS Close Opportunity</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Close_Opportunity</name>
+        <label>Close Opportunity</label>
+        <locationX>290</locationX>
+        <locationY>81</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>OppId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Inquired</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>File Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Withdrawal_Reason__c</field>
+            <value>
+                <stringValue>SC - STAR contact:not interested</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <startElementReference>Close_Opportunity</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>Id of the Opportunity passed by the Process Builder. Should be the Opp related to the Task that triggered this automation.</description>
+        <name>OppId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

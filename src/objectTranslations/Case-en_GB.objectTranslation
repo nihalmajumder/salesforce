@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- New Case --></label>
+        <name>DaScoopComposer__Groove_Default</name>
+    </fieldSets>
+    <fields>
+        <help><!-- Brief summary of relevant features of the student’s academic performance: credits attempted and earned, G.P.A., failed courses, etc. Synthesis of what the committee needs to know to evaluate the case --></help>
+        <label><!-- Academic History --></label>
+        <name>Academic_History__c</name>
+    </fields>
+    <fields>
+        <label><!-- Academic Program Code --></label>
+        <name>Academic_Program_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Academic Program Division --></label>
+        <name>Academic_Program_Division__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the action you&apos;d like to take. --></help>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation><!-- Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remove</masterLabel>
+            <translation><!-- Remove --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Add this to the application? --></help>
+        <label><!-- Add to Application? --></label>
+        <name>Add_to_Application__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Major Name --></label>
+        <name>Additional_Major_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Major? --></label>
+        <name>Additional_Major__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the application request type. --></help>
+        <label><!-- Application Request Type --></label>
+        <name>Application_Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Application Owner change</masterLabel>
+            <translation><!-- Application Owner change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catalog/School Change</masterLabel>
+            <translation><!-- Catalog/School Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Ed History</masterLabel>
+            <translation><!-- Create Ed History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Late Add</masterLabel>
+            <translation><!-- Late Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program Change</masterLabel>
+            <translation><!-- Program Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Type Change</masterLabel>
+            <translation><!-- Student Type Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Term Change</masterLabel>
+            <translation><!-- Term Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transcript Eval</masterLabel>
+            <translation><!-- Transcript Eval --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- School/College --></label>
+        <name>Application_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Description --></label>
+        <name>Approval_Description__c</name>
+        <picklistValues>
+            <masterLabel>Issue grace grant for full tuition</masterLabel>
+            <translation><!-- Issue grace grant for full tuition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Issue grace grant for partial tuition</masterLabel>
+            <translation><!-- Issue grace grant for partial tuition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No refund</masterLabel>
+            <translation><!-- No refund --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Assign: SSR Advising --></label>
+        <name>Assign_SSR_Advising__c</name>
+    </fields>
+    <fields>
+        <help><!-- What&apos;s the new user&apos;s Bethel username? --></help>
+        <label><!-- BCA Username --></label>
+        <name>BCA_Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- BSSD Transition Plan --></label>
+        <name>BSSD_Transition_Plan__c</name>
+        <picklistValues>
+            <masterLabel>Active - No Response</masterLabel>
+            <translation><!-- Active - No Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete at Bethel</masterLabel>
+            <translation><!-- Complete at Bethel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive - No Response</masterLabel>
+            <translation><!-- Inactive - No Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive - Not Returning</masterLabel>
+            <translation><!-- Inactive - Not Returning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer</masterLabel>
+            <translation><!-- Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undecided</masterLabel>
+            <translation><!-- Undecided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawal</masterLabel>
+            <translation><!-- Withdrawal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- list of campaign IDs to exclude --></help>
+        <label><!-- Campaigns to Exclude --></label>
+        <name>Campaigns_to_Exclude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Age - Business Days --></label>
+        <name>Case_Age_Business_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Age - Business Hours --></label>
+        <name>Case_Age_Business_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ceremony Date --></label>
+        <name>Ceremony_Date__c</name>
+        <picklistValues>
+            <masterLabel>Fall 2019</masterLabel>
+            <translation><!-- Fall 2019 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fall 2020</masterLabel>
+            <translation><!-- Fall 2020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring 2020</masterLabel>
+            <translation><!-- Spring 2020 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ceremony Participation --></label>
+        <name>Ceremony_Participation__c</name>
+        <picklistValues>
+            <masterLabel>In absentia</masterLabel>
+            <translation><!-- In absentia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In person</masterLabel>
+            <translation><!-- In person --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the checklist items --></help>
+        <label><!-- Checklist Items --></label>
+        <name>Checklist_Items__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the code replacement --></help>
+        <label><!-- Code Replacement --></label>
+        <name>Code_Replacement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cohort --></label>
+        <name>Cohort__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Collection Holds --></label>
+        <name>Collection_Holds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the counselor. --></help>
+        <label><!-- Counselor --></label>
+        <name>Counselor__c</name>
+        <relationshipLabel><!-- Cases (Counselor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Course Number --></label>
+        <name>Course_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date Formatted --></label>
+        <name>Created_Date_Formatted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Origin --></label>
+        <name>DaScoopComposer__Origin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deadline Description --></label>
+        <name>Deadline_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- A hard deadline that would prevent a project from moving forward. --></help>
+        <label><!-- Deadline --></label>
+        <name>Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deciding Party --></label>
+        <name>Deciding_Party__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decision Maker Name --></label>
+        <name>Decision_Maker_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decision Maker URL --></label>
+        <name>Decision_Maker_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decision Submitted --></label>
+        <name>Decision_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decision --></label>
+        <name>Decision__c</name>
+        <picklistValues>
+            <masterLabel>Approve</masterLabel>
+            <translation><!-- Approve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deny</masterLabel>
+            <translation><!-- Deny --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Reasons for approving a Late Drop/Withdrawal Petition Type --></help>
+        <label><!-- Decision about refund --></label>
+        <name>Decision_about_refund__c</name>
+        <picklistValues>
+            <masterLabel>Issue grace grant for full tuition</masterLabel>
+            <translation><!-- Issue grace grant for full tuition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Issue grace grant for partial tuition</masterLabel>
+            <translation><!-- Issue grace grant for partial tuition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No refund</masterLabel>
+            <translation><!-- No refund --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Details on why an appeal was denied. --></help>
+        <label><!-- Denial Description --></label>
+        <name>Denial_Description__c</name>
+        <picklistValues>
+            <masterLabel>No room in class</masterLabel>
+            <translation><!-- No room in class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other sections available</masterLabel>
+            <translation><!-- Other sections available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pace of class too intense to allow reasonable time to get work done</masterLabel>
+            <translation><!-- Pace of class too intense to allow reasonable time to get work done --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student did not provide enough information about the course to justify a favorable decision</masterLabel>
+            <translation><!-- Student did not provide enough information about the course to justify a favorable decision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student did not provide evidence or report circumstances sufficient to justify an exception to the policy</masterLabel>
+            <translation><!-- Student did not provide evidence or report circumstances sufficient to justify an exception to the policy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student not yet qualified to be in class</masterLabel>
+            <translation><!-- Student not yet qualified to be in class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student participated in the class fully and no drop or withdrawal is justified</masterLabel>
+            <translation><!-- Student participated in the class fully and no drop or withdrawal is justified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student was granted a prior extension and did not complete the class</masterLabel>
+            <translation><!-- Student was granted a prior extension and did not complete the class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student was granted a prior extension and did not complete the degree requirements</masterLabel>
+            <translation><!-- Student was granted a prior extension and did not complete the degree requirements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Substitute course did not include important content provided in course that we provide</masterLabel>
+            <translation><!-- Substitute course did not include important content provided in course that we provide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Substitute course has different objectives than the course in our catalog</masterLabel>
+            <translation><!-- Substitute course has different objectives than the course in our catalog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Substitute course was at a lower level than course in our catalog</masterLabel>
+            <translation><!-- Substitute course was at a lower level than course in our catalog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The changes to the curriculum are significant enough that the student would not be well served by completing old requirements</masterLabel>
+            <translation><!-- The changes to the curriculum are significant enough that the student would not be well served by completing old requirements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The courses are not available and suitable replacements cannot be identified</masterLabel>
+            <translation><!-- The courses are not available and suitable replacements cannot be identified --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the rank number of this case. --></help>
+        <label><!-- Department Rank --></label>
+        <name>Department_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- Details of circumstances --></label>
+        <name>Details_of_circumstances__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dissertation Title (GS) --></label>
+        <name>Dissertation_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Type --></label>
+        <name>Document_Type__c</name>
+        <picklistValues>
+            <masterLabel>International Document</masterLabel>
+            <translation><!-- International Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interview Notes</masterLabel>
+            <translation><!-- Interview Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Statement</masterLabel>
+            <translation><!-- Personal Statement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional License</masterLabel>
+            <translation><!-- Professional License --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>References</masterLabel>
+            <translation><!-- References --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resume</masterLabel>
+            <translation><!-- Resume --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Statement of Purpose</masterLabel>
+            <translation><!-- Statement of Purpose --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Score</masterLabel>
+            <translation><!-- Test Score --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transcript</masterLabel>
+            <translation><!-- Transcript --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Emphasis/Concentration (MDiv) --></label>
+        <name>Emphasis_Concentration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee Email --></label>
+        <name>Employee_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Are multiple people are affected by this issue? --></help>
+        <label><!-- Affecting Multiple People --></label>
+        <name>Escalate_Affecting_Multiple__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the form changes. --></help>
+        <label><!-- Form Changes --></label>
+        <name>Form_Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Groups to Include --></label>
+        <name>Groups_to_Include__c</name>
+        <picklistValues>
+            <masterLabel>BUILD</masterLabel>
+            <translation><!-- BUILD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign Members</masterLabel>
+            <translation><!-- Campaign Members --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PSEO</masterLabel>
+            <translation><!-- PSEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous PSEO (Q)</masterLabel>
+            <translation><!-- Previous PSEO (Q) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Readmits</masterLabel>
+            <translation><!-- Readmits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specials</masterLabel>
+            <translation><!-- Specials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer</masterLabel>
+            <translation><!-- Transfer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Has Information Changed --></label>
+        <name>Has_Information_Changed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hometown (Seminary) --></label>
+        <name>Hometown__c</name>
+    </fields>
+    <fields>
+        <label><!-- I am appealing the following: --></label>
+        <name>I_am_appealing_the_following__c</name>
+    </fields>
+    <fields>
+        <label><!-- I am requesting the following --></label>
+        <name>I_am_requesting_the_following__c</name>
+    </fields>
+    <fields>
+        <label><!-- If yes, how many terms? --></label>
+        <name>If_yes_how_many_terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include International Students --></label>
+        <name>Include_International_Students__c</name>
+    </fields>
+    <fields>
+        <label><!-- Input from party --></label>
+        <name>Input_from_party__c</name>
+    </fields>
+    <fields>
+        <help><!-- Briefly summarize feedback received from input providers listed above --></help>
+        <label><!-- Input Provider&apos;s Perspective --></label>
+        <name>Inputs_perspective__c</name>
+    </fields>
+    <fields>
+        <label><!-- Instructor --></label>
+        <name>Instructor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language (Seminary) --></label>
+        <name>Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Letter Sent to Student --></label>
+        <name>Letter_Sent_to_Student__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Date --></label>
+        <name>List_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Asked for Seminary Commencement Applications --></help>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the new application program name. --></help>
+        <label><!-- New Application Program Name --></label>
+        <name>New_Application_Program_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Program Code in Banner --></label>
+        <name>New_Program_Code_in_Banner__c</name>
+    </fields>
+    <fields>
+        <help><!-- New Program for the Opportunity and Application --></help>
+        <label><!-- New Program --></label>
+        <lookupFilter>
+            <errorMessage><!-- Program is not active. --></errorMessage>
+        </lookupFilter>
+        <name>New_Program__c</name>
+        <relationshipLabel><!-- Cases (New Program) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- New stage detail for this Opportunity. --></help>
+        <label><!-- New Stage Detail --></label>
+        <name>New_Stage_Detail__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accepted - File Closed</masterLabel>
+            <translation><!-- Accepted - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>App Completed</masterLabel>
+            <translation><!-- App Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>App Completed - File Closed</masterLabel>
+            <translation><!-- App Completed - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>App Started</masterLabel>
+            <translation><!-- App Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>App Started - File Closed</masterLabel>
+            <translation><!-- App Started - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>App Submitted</masterLabel>
+            <translation><!-- App Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>App Submitted - File Closed</masterLabel>
+            <translation><!-- App Submitted - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed</masterLabel>
+            <translation><!-- Confirmed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed - Ready to Enroll</masterLabel>
+            <translation><!-- Confirmed - Ready to Enroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrolled</masterLabel>
+            <translation><!-- Enrolled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fee Paid</masterLabel>
+            <translation><!-- Fee Paid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fee Paid - File Closed</masterLabel>
+            <translation><!-- Fee Paid - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fee Waived</masterLabel>
+            <translation><!-- Fee Waived --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fee Waived - File Closed</masterLabel>
+            <translation><!-- Fee Waived - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inquired</masterLabel>
+            <translation><!-- Inquired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inquired - File Closed</masterLabel>
+            <translation><!-- Inquired - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead - File Closed</masterLabel>
+            <translation><!-- Lead - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Applied</masterLabel>
+            <translation><!-- Pre-Applied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Applied - File Closed</masterLabel>
+            <translation><!-- Pre-Applied - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registered</masterLabel>
+            <translation><!-- Registered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registered - File Closed</masterLabel>
+            <translation><!-- Registered - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected - App Completed - File Closed</masterLabel>
+            <translation><!-- Rejected - App Completed - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected - App Submitted - File Closed</masterLabel>
+            <translation><!-- Rejected - App Submitted - File Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wait Listed</masterLabel>
+            <translation><!-- Wait Listed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wait Listed - FIle Closed</masterLabel>
+            <translation><!-- Wait Listed - FIle Closed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Term new program should start to be used --></help>
+        <label><!-- New Term --></label>
+        <name>New_Term__c</name>
+    </fields>
+    <fields>
+        <help><!-- Term to move Opportunity to --></help>
+        <label><!-- New Term --></label>
+        <name>New_Term_for_Opportunity__c</name>
+        <relationshipLabel><!-- Cases (Opps) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- New User Attributes --></label>
+        <name>New_User_Attributes__c</name>
+        <picklistValues>
+            <masterLabel>Campaign access</masterLabel>
+            <translation><!-- Campaign access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conga license</masterLabel>
+            <translation><!-- Conga license --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Groove license</masterLabel>
+            <translation><!-- Groove license --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity Assignments</masterLabel>
+            <translation><!-- Opportunity Assignments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record transfers needed</masterLabel>
+            <translation><!-- Record transfers needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Replacing another user</masterLabel>
+            <translation><!-- Replacing another user --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texting access</masterLabel>
+            <translation><!-- Texting access --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the name of the new user. --></help>
+        <label><!-- New User Name --></label>
+        <name>New_User_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Org Link --></label>
+        <name>Old_Org_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Degrees (Seminary/EdD) --></label>
+        <name>Other_Degrees__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comments field from Formbuilder --></help>
+        <label><!-- Other Notes --></label>
+        <name>Other_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prevent automated emails to Stakeholders. --></help>
+        <label><!-- Override Email --></label>
+        <name>Override_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Program the student selected on the Academic Petition wufoo form. --></help>
+        <label><!-- Petition Program --></label>
+        <name>Petition_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Petition Type --></label>
+        <name>Petition_Type__c</name>
+        <picklistValues>
+            <masterLabel>Appeal - Academic Dismissal</masterLabel>
+            <translation><!-- Appeal - Academic Dismissal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appeal - Exception Decision</masterLabel>
+            <translation><!-- Appeal - Exception Decision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Complete degree requirements from prior catalog year</masterLabel>
+            <translation><!-- Exception - Complete degree requirements from prior catalog year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Extension of time on credit expiration</masterLabel>
+            <translation><!-- Exception - Extension of time on credit expiration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Extension of time to complete degree</masterLabel>
+            <translation><!-- Exception - Extension of time to complete degree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Grade Change</masterLabel>
+            <translation><!-- Exception - Grade Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Late Add</masterLabel>
+            <translation><!-- Exception - Late Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Late drop with refund request</masterLabel>
+            <translation><!-- Exception - Late drop with refund request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Late drop without refund request</masterLabel>
+            <translation><!-- Exception - Late drop without refund request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Other academic policy</masterLabel>
+            <translation><!-- Exception - Other academic policy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Required course or Directed Study substitution</masterLabel>
+            <translation><!-- Exception - Required course or Directed Study substitution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Residency requirement</masterLabel>
+            <translation><!-- Exception - Residency requirement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Withdrawal past deadline with refund request</masterLabel>
+            <translation><!-- Exception - Withdrawal past deadline with refund request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception - Withdrawal past deadline without refund request</masterLabel>
+            <translation><!-- Exception - Withdrawal past deadline without refund request --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What number should we assign this user in Mogli? --></help>
+        <label><!-- Phone Number for Texting --></label>
+        <name>Phone_Number_for_Texting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phonetic Pronunciation --></label>
+        <name>Phonetic_Pronunciation__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is population by the migration process. Should not be need after the migration. --></help>
+        <label><!-- Previous Case Number --></label>
+        <name>Previous_Case_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Id --></label>
+        <name>Previous_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Academic Dismissal? --></label>
+        <name>Prior_Academic_Dismissal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Academic Probation? --></label>
+        <name>Prior_Academic_Probation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Being Replaced --></label>
+        <name>Program_Being_Replaced__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Code Being Replaced --></label>
+        <name>Program_Code_Being_Replaced__c</name>
+    </fields>
+    <fields>
+        <help><!-- Program Group this Program belongs to --></help>
+        <label><!-- Program Group Name --></label>
+        <name>Program_Group_Name_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Populated if Program is filled in. --></help>
+        <label><!-- Program Group Name --></label>
+        <name>Program_Group_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Cases (Program) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Codes to Include --></label>
+        <name>Programs_to_Include__c</name>
+    </fields>
+    <fields>
+        <help><!-- 1-10; Case priority amongst Admissions, EMOps, and Marketing. --></help>
+        <label><!-- Queue Rank --></label>
+        <name>Queue_Rank__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please link to a report with the records that should be moved to this user. Please include the 15-digit ID column in the report for the Opportunities/Cases/Tasks that should be transferred. --></help>
+        <label><!-- Record Transfer Report --></label>
+        <name>Record_Transfer_Report__c</name>
+    </fields>
+    <fields>
+        <help><!-- Regalia orders status --></help>
+        <label><!-- Regalia Order --></label>
+        <name>Regalia_Order__c</name>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not uploaded</masterLabel>
+            <translation><!-- Not uploaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uploaded</masterLabel>
+            <translation><!-- Uploaded --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Registrar Summary --></label>
+        <name>Registrar_Summary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the related application. --></help>
+        <label><!-- Related Application --></label>
+        <name>Related_Application__c</name>
+        <relationshipLabel><!-- Cases (Related Application) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Opportunity --></label>
+        <name>Related_Opportunity__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Current Program --></help>
+        <label><!-- Related Program --></label>
+        <name>Related_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Requirements Detail --></label>
+        <name>Remaining_Requirements_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Requirements --></label>
+        <name>Remaining_Requirements__c</name>
+    </fields>
+    <fields>
+        <help><!-- What should the new user take from the user they are replacing? --></help>
+        <label><!-- Replacement User Attributes --></label>
+        <name>Replacement_User_Attributes_del__c</name>
+        <picklistValues>
+            <masterLabel>Counselor Assignments</masterLabel>
+            <translation><!-- Counselor Assignments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Groups</masterLabel>
+            <translation><!-- Groups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Licenses</masterLabel>
+            <translation><!-- Licenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mogli Number</masterLabel>
+            <translation><!-- Mogli Number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Permissions</masterLabel>
+            <translation><!-- Permissions --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Request for Information - Program --></label>
+        <name>Request_for_Information_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request for Information --></label>
+        <name>Request_for_Information__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the date you&apos;d like this case completed by. Must be 3-5 business days in the future. --></help>
+        <label><!-- Requested Due Date --></label>
+        <name>Requested_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution Description --></label>
+        <name>Resolution_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution --></label>
+        <name>Resolution__c</name>
+        <picklistValues>
+            <masterLabel>Academic Dismissal</masterLabel>
+            <translation><!-- Academic Dismissal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved to commence</masterLabel>
+            <translation><!-- Approved to commence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved with modification</masterLabel>
+            <translation><!-- Approved with modification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Changed Care Area</masterLabel>
+            <translation><!-- Changed Care Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Changed Cohort</masterLabel>
+            <translation><!-- Changed Cohort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Changed Major</masterLabel>
+            <translation><!-- Changed Major --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Dropped - All</masterLabel>
+            <translation><!-- Enrollment Dropped - All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Dropped - Course</masterLabel>
+            <translation><!-- Enrollment Dropped - Course --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No further action taken at this time</masterLabel>
+            <translation><!-- No further action taken at this time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not approved to commence</masterLabel>
+            <translation><!-- Not approved to commence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Readmitted</masterLabel>
+            <translation><!-- Readmitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referred to another department</masterLabel>
+            <translation><!-- Referred to another department --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repeating Course</masterLabel>
+            <translation><!-- Repeating Course --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolved</masterLabel>
+            <translation><!-- Resolved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schedule Change</masterLabel>
+            <translation><!-- Schedule Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schedule Sent</masterLabel>
+            <translation><!-- Schedule Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student is Participating in Course Now</masterLabel>
+            <translation><!-- Student is Participating in Course Now --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transferred</masterLabel>
+            <translation><!-- Transferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresolved</masterLabel>
+            <translation><!-- Unresolved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawal from Bethel</masterLabel>
+            <translation><!-- Withdrawal from Bethel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawal from Course</masterLabel>
+            <translation><!-- Withdrawal from Course --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Decision Maker&apos;s Role at Bethel --></help>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+        <picklistValues>
+            <masterLabel>Committee Chair</masterLabel>
+            <translation><!-- Committee Chair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dean</masterLabel>
+            <translation><!-- Dean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program Director</masterLabel>
+            <translation><!-- Program Director --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 1. Date of determination. 
+2. Verified last date of participation. 
+3. Briefly summarize petition and provide any information related to decision time frame, consequences, options available to the student, etc. --></help>
+        <label><!-- SSA Summary --></label>
+        <name>SSA_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- SSR Tasks Created --></label>
+        <name>SSR_Tasks_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sample User --></label>
+        <name>Sample_User__c</name>
+        <relationshipLabel><!-- Cases (Sample User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- School --></label>
+        <name>School__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the second application. --></help>
+        <label><!-- Second Application --></label>
+        <name>Second_Application__c</name>
+        <relationshipLabel><!-- Cases (Second Application) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please select the second contact. --></help>
+        <label><!-- Second Contact --></label>
+        <name>Second_Contact__c</name>
+        <relationshipLabel><!-- Cases (Second Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Send Date --></label>
+        <name>Send_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage Details to Include --></label>
+        <name>Stage_Details_to_Include__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL for Student View of Appeals Case --></help>
+        <label><!-- Student Notification URL --></label>
+        <name>Student_Notification_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stakeholder --></label>
+        <name>Submitted_By__c</name>
+        <relationshipLabel><!-- Cases (Stakeholder) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Supporting Documentation2 --></label>
+        <name>Supporting_Documentation2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supporting Documentation3 --></label>
+        <name>Supporting_Documentation3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supporting Documentation4 --></label>
+        <name>Supporting_Documentation4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supporting Documentation5 --></label>
+        <name>Supporting_Documentation5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supporting Documentation --></label>
+        <name>Supporting_Documentation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the term. --></help>
+        <label><!-- Term --></label>
+        <name>Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term of registration --></label>
+        <name>Term_of_registration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Terms Application should be turned on for this new program --></help>
+        <label><!-- Terms Available --></label>
+        <name>Terms_Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Terms to include --></label>
+        <name>Terms_to_include__c</name>
+        <picklistValues>
+            <masterLabel>Adult - Current &amp; Future</masterLabel>
+            <translation><!-- Adult - Current &amp; Future --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAS - Fall (Seniors)</masterLabel>
+            <translation><!-- CAS - Fall (Seniors) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAS - Interim/Spring</masterLabel>
+            <translation><!-- CAS - Interim/Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAS - Juniors</masterLabel>
+            <translation><!-- CAS - Juniors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAS - Sophomores</masterLabel>
+            <translation><!-- CAS - Sophomores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other - List in Comments</masterLabel>
+            <translation><!-- Other - List in Comments --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Thesis Title --></label>
+        <name>Thesis_Title__c</name>
+    </fields>
+    <fields>
+        <help><!-- Job Title or Role at Bethel --></help>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Update Student Program --></label>
+        <name>Update_Student_Program__c</name>
+    </fields>
+    <fields>
+        <help><!-- Who is this new user replacing? --></help>
+        <label><!-- User Replacing --></label>
+        <lookupFilter>
+            <errorMessage><!-- User must be a current employee. --></errorMessage>
+        </lookupFilter>
+        <name>User_Replacing__c</name>
+        <relationshipLabel><!-- Cases (User Replacing) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Why Left Essay --></label>
+        <name>Why_Left_Essay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Why Returning Essay --></label>
+        <name>Why_Returning_Essay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will Apply For Financial Aid --></label>
+        <name>Will_Apply_For_Financial_Aid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code Region --></label>
+        <name>Zip_Code_Region__c</name>
+        <picklistValues>
+            <masterLabel>100 mile radius</masterLabel>
+            <translation><!-- 100 mile radius --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150 mile radius</masterLabel>
+            <translation><!-- 150 mile radius --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50 mile radius</masterLabel>
+            <translation><!-- 50 mile radius --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only MN Zips</masterLabel>
+            <translation><!-- Only MN Zips --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Student may complete requirements listed in the catalog for academic year: --></help>
+        <label><!-- Approval - Academic Year --></label>
+        <name>approval_academic_year__c</name>
+    </fields>
+    <fields>
+        <help><!-- Approve substitution of requested course for course requirement (list) --></help>
+        <label><!-- Approval - Course Substitution --></label>
+        <name>approval_course_substitution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval --></label>
+        <name>approval_details__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date an appealed extension is approved until --></help>
+        <label><!-- Approval - Extension Date --></label>
+        <name>approval_extension_date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change grade to --></help>
+        <label><!-- Approval - New Grade --></label>
+        <name>approval_new_grade__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change grade from --></help>
+        <label><!-- Approval - Old Grade --></label>
+        <name>approval_old_grade__c</name>
+    </fields>
+    <fields>
+        <help><!-- Issue grace grant for partial tuition in the amount of --></help>
+        <label><!-- Approval - Grace Grant Amount --></label>
+        <name>grace_grant_amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Factors justifying a grade change --></help>
+        <label><!-- Approval - Grade Change Factors --></label>
+        <name>grade_change_factors__c</name>
+        <picklistValues>
+            <masterLabel>Late withdrawal allowed - grade changed to “W”</masterLabel>
+            <translation><!-- Late withdrawal allowed - grade changed to “W” --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Late work accepted by professor</masterLabel>
+            <translation><!-- Late work accepted by professor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>The type of Case being tracked.</help>
+        <label><!-- Category --></label>
+        <name>hed__Category__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Other</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Code of Conduct</masterLabel>
+            <translation>School Code of Conduct</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Violation</masterLabel>
+            <translation>School Violation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State Offense</masterLabel>
+            <translation>State Offense</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>The location where the Case took place.</help>
+        <label><!-- Location --></label>
+        <name>hed__Location__c</name>
+        <picklistValues>
+            <masterLabel>Off Campus</masterLabel>
+            <translation>Off Campus</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Campus</masterLabel>
+            <translation>On Campus</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Other</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>The date and time when the behaviour event that triggered the Case occurred.</help>
+        <label><!-- Occurrence Date --></label>
+        <name>hed__Occurrence_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check if opportunities with old program need to be updated to the New program beginning with the start term of program --></help>
+        <label><!-- Update Old Code --></label>
+        <name>update_old_code__c</name>
+    </fields>
+    <layouts>
+        <layout>EDA Incident Layout</layout>
+        <sections>
+            <label>Custom Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Fields</label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EMOps - Admission Document</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Document Info --></label>
+            <section>Document Info</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EMOps - Duplicate</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Detail --></label>
+            <section>Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EMOps - Opportunity Request</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Info --></label>
+            <section>Opportunity Info</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ITS - Create/Edit Program</layout>
+        <sections>
+            <label><!-- Case Information --></label>
+            <section>Case Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Program Info --></label>
+            <section>Program Info</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ITS - New User Layout</layout>
+        <sections>
+            <label><!-- Attributes --></label>
+            <section>Attributes</section>
+        </sections>
+        <sections>
+            <label><!-- New User Info --></label>
+            <section>New User Info</section>
+        </sections>
+        <sections>
+            <label><!-- Replacement Info --></label>
+            <section>Replacement Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ITS - Segment/Mailing List</layout>
+        <sections>
+            <label><!-- Segments &amp; Mailing Lists --></label>
+            <section>Segments &amp; Mailing Lists</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SSR - Academic Petition Case Layout</layout>
+        <sections>
+            <label><!-- Additional Documentation --></label>
+            <section>Additional Documentation</section>
+        </sections>
+        <sections>
+            <label><!-- Advisor-Provided Context --></label>
+            <section>Advisor-Provided Context</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Decision Detail --></label>
+            <section>Decision Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Decision Information --></label>
+            <section>Decision Information</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Form Information --></label>
+            <section>Form Information</section>
+        </sections>
+        <sections>
+            <label><!-- Registrar-Provided Context --></label>
+            <section>Registrar-Provided Context</section>
+        </sections>
+        <sections>
+            <label><!-- Student-Submitted Information --></label>
+            <section>Student-Submitted Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SSR - Academic Petition Close Layout</layout>
+        <layoutType>CaseClose</layoutType>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SSR - Commencement Case Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Form Information --></label>
+            <section>Form Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SSR - Readmission</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SSR - Student Success Case Layout</layout>
+        <sections>
+            <label><!-- BSSD Transition --></label>
+            <section>BSSD Transition</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Close Case --></label>
+        <name>Close_Case_ITS</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Close Case --></label>
+        <name>Close_Case_SSR</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Detail - Resolution --></label>
+        <name>Detail_Resolution</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Log Interaction --></label>
+        <name>Log_Interaction</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>New_Task_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Retention --></label>
+        <name>Retention_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- TestCase --></label>
+        <name>TestCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Test Button --></label>
+        <name>Test_Button</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- EMOps - Admission Document --></label>
+        <name>EMOps_Admission_Document</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EMOps - Duplicate --></label>
+        <name>EMOps_Duplicate</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EMOps - Opportunity Request --></label>
+        <name>EMOps_Opportunity_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ITS - Create/Edit Program --></label>
+        <name>ITS_Create_Edit_Program</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ITS - General Request --></label>
+        <name>ITS_General_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ITS - New User --></label>
+        <name>ITS_New_User</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ITS - Segment/Mailing List --></label>
+        <name>ITS_Segment_Mailing_List</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used for processing of third-party application imports. --></description>
+        <label><!-- ITS - Third-Party App --></label>
+        <name>ITS_Third_Party_App</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SSR - Academic Petition --></label>
+        <name>SSR_Academic_Petition</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SSR - Commencement --></label>
+        <name>SSR_Commencement</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SSR - Re-enrollment --></label>
+        <name>SSR_Readmission</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SSR - Student Success Case --></label>
+        <name>SSR_Student_Success_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Seminary --></label>
+        <name>Seminary</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please include the phone number to use for texting. --></errorMessage>
+        <name>Phone_Number_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Rank must be between 1 and 10. --></errorMessage>
+        <name>Queue_Rank_Limit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Must include the user being replaced. --></errorMessage>
+        <name>Replacement_User_Info_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please include a link to the report of records to transfer. --></errorMessage>
+        <name>Report_URL_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please allow us at least 3 days to address this request, unless Critical. --></errorMessage>
+        <name>Requested_Due_Date_Minimum</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Review --></label>
+        <name>Review</name>
+    </webLinks>
+</CustomObjectTranslation>

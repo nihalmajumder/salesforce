@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Campaign Monitor Client --></label>
+        <name>wbsendit__Campaign_Monitor_Client__c</name>
+        <relationshipLabel><!-- Suppression List --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Internal field. --></help>
+        <label><!-- Compound Key --></label>
+        <name>wbsendit__Compound_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>wbsendit__Contact__c</name>
+        <relationshipLabel><!-- Suppression List --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date Suppressed --></label>
+        <name>wbsendit__Date_Suppressed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>wbsendit__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Id --></label>
+        <name>wbsendit__Job_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>wbsendit__Lead__c</name>
+        <relationshipLabel><!-- Suppression List --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The reason why the email is on the suppression list. --></help>
+        <label><!-- Reason --></label>
+        <name>wbsendit__Reason__c</name>
+        <picklistValues>
+            <masterLabel>Bounced</masterLabel>
+            <translation><!-- Bounced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suppressed</masterLabel>
+            <translation><!-- Suppressed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsubscribed</masterLabel>
+            <translation><!-- Unsubscribed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>wbsendit__State__c</name>
+        <picklistValues>
+            <masterLabel>Suppressed</masterLabel>
+            <translation><!-- Suppressed --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Suppression List Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

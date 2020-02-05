@@ -326,7 +326,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Reactive and Register</fullName>
+            <fullName>Reactivate and Register</fullName>
             <default>false</default>
         </values>
         <values>
@@ -469,6 +469,16 @@
             <field>ContactEmail</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ClosedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
         </displayedFields>
         <label>New Case</label>
     </fieldSets>
@@ -12819,7 +12829,7 @@ if(isblank(approval_extension_date__c) = FALSE,
         <active>true</active>
         <businessProcess>SSR - Readmission</businessProcess>
         <compactLayoutAssignment>Case_Compact_Layout_SSR</compactLayoutAssignment>
-        <label>SSR - Readmission</label>
+        <label>SSR - Re-enrollment</label>
         <picklistValues>
             <picklist>Action__c</picklist>
             <values>
@@ -15515,6 +15525,16 @@ ISBLANK( User_Replacing__c )</errorConditionFormula>
 ISBLANK( Record_Transfer_Report__c )</errorConditionFormula>
         <errorDisplayField>Record_Transfer_Report__c</errorDisplayField>
         <errorMessage>Please include a link to the report of records to transfer.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Requested_Due_Date_Minimum</fullName>
+        <active>true</active>
+        <description>Requires Requested Due Date to be at least 3 days in the future.</description>
+        <errorConditionFormula>( ISNEW() || ISCHANGED(Requested_Due_Date__c) )
+&amp;&amp; Requested_Due_Date__c &lt; ( TODAY() + 3 )
+&amp;&amp; TEXT(Priority) &lt;&gt; &apos;Critical&apos;</errorConditionFormula>
+        <errorDisplayField>Requested_Due_Date__c</errorDisplayField>
+        <errorMessage>Please allow us at least 3 days to address this request, unless Critical.</errorMessage>
     </validationRules>
     <webLinks>
         <fullName>APXTConga4__Conga_Composer_OAuth</fullName>

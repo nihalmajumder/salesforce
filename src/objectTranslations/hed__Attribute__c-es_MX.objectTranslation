@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Atributo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Atributos</value>
+    </caseValues>
+    <fields>
+        <help>La agencia que proporcionó o certificó la credencial.</help>
+        <label><!-- Agency --></label>
+        <name>hed__Agency__c</name>
+        <relationshipLabel><!-- Attributes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El tipo de credencial o atributo.</help>
+        <label><!-- Attribute Type --></label>
+        <name>hed__Attribute_Type__c</name>
+        <picklistValues>
+            <masterLabel>Accommodation</masterLabel>
+            <translation>Alojamiento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Certification</masterLabel>
+            <translation>Certificación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Endorsement</masterLabel>
+            <translation>Aprobación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Consideration</masterLabel>
+            <translation>Consideración familiar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Student</masterLabel>
+            <translation>Estudiante internacional</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Licensure</masterLabel>
+            <translation>Licencia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>El contacto al que está asignado el atributo.</help>
+        <label><!-- Contact --></label>
+        <name>hed__Contact__c</name>
+        <relationshipLabel><!-- Attributes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Una descripción de la credencial o atributo.</help>
+        <label><!-- Description --></label>
+        <name>hed__Description__c</name>
+    </fields>
+    <fields>
+        <help>La fecha cuando la credencial o atributo caduca o requiere renovación.</help>
+        <label><!-- End Date --></label>
+        <name>hed__End_Date__c</name>
+    </fields>
+    <fields>
+        <help>Indica si el atributo caducó. Se marca automáticamente cuando la fecha de finalización del atributo es anterior a la fecha actual.</help>
+        <label><!-- Expired --></label>
+        <name>hed__Expired__c</name>
+    </fields>
+    <fields>
+        <help>La fecha de emisión de la credencial o atributo</help>
+        <label><!-- Start Date --></label>
+        <name>hed__Start_Date__c</name>
+    </fields>
+    <fields>
+        <help>El área temática o de contenido para la que es una credencial.</help>
+        <label><!-- Subject Area --></label>
+        <name>hed__Subject_Area__c</name>
+        <picklistValues>
+            <masterLabel>Biology</masterLabel>
+            <translation>Biología</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Career and Technical Education</masterLabel>
+            <translation>Carrera y educación técnica</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Economics</masterLabel>
+            <translation>Economía</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English Language Arts</masterLabel>
+            <translation>Lengua y literatura inglesas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fine and Performing Arts</masterLabel>
+            <translation>Bellas artes y artes escénicas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foreign Language</masterLabel>
+            <translation>Idioma extranjero</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>History</masterLabel>
+            <translation>Historia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life and Physical Sciences</masterLabel>
+            <translation>Ciencias de la vida y físicas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mathematics</masterLabel>
+            <translation>Matemáticas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physical, Health, and Safety Education</masterLabel>
+            <translation>Educación física, de salud y seguridad</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physics</masterLabel>
+            <translation>Física</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychology</masterLabel>
+            <translation>Psicología</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Science</masterLabel>
+            <translation>Ciencia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Studies</masterLabel>
+            <translation>Estudios sociales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sociology</masterLabel>
+            <translation>Sociología</translation>
+        </picklistValues>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>EDA Credential Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EDA Student Characteristic Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de atributo</nameFieldLabel>
+    <recordTypes>
+        <description><!-- Allows educational institutions to track licenses, certifications, or endorsements earned by staff or students. --></description>
+        <label><!-- Credential --></label>
+        <name>hed__Credential</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Allows educational institutions to track important student characteristics that might affect students&apos; education. --></description>
+        <label><!-- Student Characteristic --></label>
+        <name>hed__Student_Characteristic</name>
+    </recordTypes>
+</CustomObjectTranslation>

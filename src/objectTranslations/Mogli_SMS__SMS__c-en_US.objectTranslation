@@ -5,6 +5,11 @@
         <name>Contact_Updated__c</name>
     </fields>
     <fields>
+        <label><!-- Event Log --></label>
+        <name>Event_Log__c</name>
+        <relationshipLabel><!-- SMS --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Attachments --></label>
         <name>Mogli_SMS__Attachments__c</name>
     </fields>

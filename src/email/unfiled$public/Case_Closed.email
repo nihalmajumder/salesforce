@@ -1,6 +1,6 @@
-Hi {!User.FirstName}, 
+Hi {!Case.Submitted_By__c}, 
 
-Case #{!Case.CaseNumber} has been {!Case.Resolution__c} and closed. 
+Case #{!Case.CaseNumber} - "{!Case.Subject}" has been {!Case.Resolution__c} and closed. 
 
 Resolution description:
 "{!Case.Resolution_Description__c}"

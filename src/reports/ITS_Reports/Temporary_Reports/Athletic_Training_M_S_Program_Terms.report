@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Program__c.Intended_Program_Periods__r$Name</field>
+    </columns>
+    <columns>
+        <field>Program__c.Intended_Program_Periods__r$Activate_Application_Date__c</field>
+    </columns>
+    <columns>
+        <field>Program__c.Intended_Program_Periods__r$End_Application_Date__c</field>
+    </columns>
+    <columns>
+        <field>Program__c.Intended_Program_Periods__r$Id</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Program__c$Academic_Program__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Athletic Training (M.S.)</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Athletic Training (M.S.) Program Terms</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Programs_with_or_without_Intended_Program_Terms__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Program__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

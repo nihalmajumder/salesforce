@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Behavior Involvement --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Behavior Involvement --></value>
+    </caseValues>
+    <fields>
+        <help>El caso que representa el evento del que se está informando.</help>
+        <label><!-- Case --></label>
+        <name>hed__Case__c</name>
+        <relationshipLabel><!-- Behavior Involvements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El contacto estudiantil o del profesorado que estuvo involucrado directamente en el evento.</help>
+        <label><!-- Contact --></label>
+        <name>hed__Contact__c</name>
+        <relationshipLabel><!-- Behavior Involvements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Una descripción de la implicación de una persona en un evento del comportamiento.</help>
+        <label><!-- Description --></label>
+        <name>hed__Description__c</name>
+    </fields>
+    <fields>
+        <help>La función que jugó esta persona en el evento.</help>
+        <label><!-- Role --></label>
+        <name>hed__Role__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perpetrator</masterLabel>
+            <translation>Autor material</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporter</masterLabel>
+            <translation>Denunciante</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Victim</masterLabel>
+            <translation>Víctima</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Witness</masterLabel>
+            <translation>Testigo</translation>
+        </picklistValues>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <layouts>
+        <layout>EDA Behavior Involvement Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Behavior Involvement Name --></nameFieldLabel>
+</CustomObjectTranslation>

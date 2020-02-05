@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Instalación</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Instalaciones</value>
+    </caseValues>
+    <fields>
+        <help>La organización responsable de la instalación.</help>
+        <label><!-- Account --></label>
+        <name>hed__Account__c</name>
+        <relationshipLabel><!-- Facilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El número máximo de ocupantes que puede albergar la instalación.</help>
+        <label><!-- Capacity --></label>
+        <name>hed__Capacity__c</name>
+    </fields>
+    <fields>
+        <help>Una descripción de esta instalación.</help>
+        <label><!-- Description --></label>
+        <name>hed__Description__c</name>
+    </fields>
+    <fields>
+        <help>El tipo de instalación.</help>
+        <label><!-- Facility Type --></label>
+        <name>hed__Facility_Type__c</name>
+        <picklistValues>
+            <masterLabel>Building</masterLabel>
+            <translation>Edificio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cafeteria/Food Hall</masterLabel>
+            <translation>Cafetería/Comedor</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Classroom</masterLabel>
+            <translation>Aula</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer Lab</masterLabel>
+            <translation>Laboratorio informático</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gymnasium</masterLabel>
+            <translation>Gimnasio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Center</masterLabel>
+            <translation>Centro sanitario</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laboratory</masterLabel>
+            <translation>Laboratorio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lecture Hall</masterLabel>
+            <translation>Sala de lectura</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Library</masterLabel>
+            <translation>Biblioteca</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Si la instalación es parte de una más grande, especifica la instalación principal. Por ejemplo, un edificio podría ser un principal de un aula.</help>
+        <label><!-- Parent Facility --></label>
+        <name>hed__Parent_Facility__c</name>
+        <relationshipLabel><!-- Facilities --></relationshipLabel>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>HEDA Facility Layout</layout>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nombre de instalación</nameFieldLabel>
+</CustomObjectTranslation>

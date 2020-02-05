@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Academic_Program__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Owner</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Academic_Term__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$LastActivityDate</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>5/24/2019</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$School_College__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Adult Undergraduate,Graduate,Seminary</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Academic_Program__c.Academic_Program__c.Parent.Parent.Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$StageName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Accepted,Confirmed,Enrolled,File Closed</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$Academic_Program__c.Academic_Program__c.Parent.Parent.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Copy of No Contact By Division - 42 Days</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities__c</reportType>
+    <roleHierarchyFilter>System_Admin</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$LastActivityDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

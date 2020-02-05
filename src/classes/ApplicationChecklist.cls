@@ -367,7 +367,7 @@ public class ApplicationChecklist {
                     pr.getParameters().put(s,ApexPages.currentPage().getParameters().get(s));
                 }
 
-                // Added a URL parameter to be able to indicate to stop buying adds for this Contact - ej.
+                // Added a URL parameter to be able to indicate to stop buying ads for this Contact - ej.
                 pr.getParameters().put('application-submitted', 'true');
 
                 // Added to create interaction when app is submitted - Todd Mitchell

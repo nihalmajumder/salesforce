@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Opportunities__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Owner</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Opportunity_Term_Code__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Id</field>
+    </columns>
+    <description>All Opportunities at all open stages currently owned by Liz for PSEO students beyond Fall 2019.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Liz Burd</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$StageName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>File Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Opportunity_Term_Code__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>202011</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Student_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>New Student Previous PSEO,PSEO</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$StageName</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Change Owner - Liz to Hannah Leidall</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.Opportunities__r$Opportunity_Term_Code__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

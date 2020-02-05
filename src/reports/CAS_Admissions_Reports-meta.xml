@@ -25,5 +25,15 @@
         <sharedTo>Admissions_CAS</sharedTo>
         <sharedToType>Group</sharedToType>
     </folderShares>
+    <folderShares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>ITS</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>Vendor_Endeveran</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
     <name>CAS Admissions Reports</name>
 </ReportFolder>

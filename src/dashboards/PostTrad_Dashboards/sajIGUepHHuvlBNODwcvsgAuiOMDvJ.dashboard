@@ -34,7 +34,7 @@
                 </groupingSortProperties>
                 <header>CSG_Likely Numbers Fall 2019</header>
                 <legendPosition>Right</legendPosition>
-                <report>CSG_Leadership/CSG_Likely_Numbers_Fall_2019</report>
+                <report>PostTrad_Admissions/CSG_Leadership/CSG_Likely_Numbers_Fall_2019</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -71,7 +71,7 @@
                 <header>CSG_Likely Numbers Spring 2020</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>CSG_Leadership/CSG_Likely_Numbers_Spring_2020</report>
+                <report>PostTrad_Admissions/CSG_Leadership/CSG_Likely_Numbers_Spring_2020</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -213,7 +213,7 @@
                 <indicatorHighColor>#00716B</indicatorHighColor>
                 <indicatorLowColor>#C23934</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>CSG_Leadership/CSG_Coffee_at_Bethel_Count</report>
+                <report>PostTrad_Admissions/CSG_Leadership/CSG_Coffee_at_Bethel_Count</report>
                 <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
@@ -282,7 +282,7 @@
                 <header>Post-Bacc Nursing Funnel–Summer &apos;20</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>10</maxValuesDisplayed>
-                <report>CSG_Leadership/CSG_Post_Bacc_Nursing_Funnel_Summer_2020</report>
+                <report>PostTrad_Admissions/CSG_Leadership/CSG_Post_Bacc_Nursing_Funnel_Summer_2020</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -327,7 +327,7 @@
                 </groupingSortProperties>
                 <header>CSG_MBA Funnel FY20</header>
                 <legendPosition>Right</legendPosition>
-                <report>CSG_Business_and_Leadership/CSG_MBA_Funnel_FY20</report>
+                <report>PostTrad_Admissions/CSG_Business_and_Leadership/CSG_MBA_Funnel_FY20</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -363,7 +363,7 @@
                 <header>Fall &amp; Spring TN Applicants–FY20</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>10</maxValuesDisplayed>
-                <report>CSG_Leadership/CSG_FY20_Fall_Spr_Tennessee_Applicants</report>
+                <report>PostTrad_Admissions/CSG_Leadership/CSG_FY20_Fall_Spr_Tennessee_Applicants</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>

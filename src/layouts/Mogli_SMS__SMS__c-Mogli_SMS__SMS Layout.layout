@@ -55,6 +55,10 @@
                 <behavior>Edit</behavior>
                 <field>Notification_Sent_To__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Event_Log__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -527,9 +527,9 @@
             <componentName>console:relatedRecord</componentName>
             <visibilityRule>
                 <criteria>
-                    <leftValue>{!$User.Department}</leftValue>
-                    <operator>EQUAL</operator>
-                    <rightValue>Post-Trad Admissions</rightValue>
+                    <leftValue>{!Record.School_College__c}</leftValue>
+                    <operator>NE</operator>
+                    <rightValue>Undergraduate</rightValue>
                 </criteria>
             </visibilityRule>
         </componentInstances>
@@ -553,9 +553,9 @@
             <componentName>console:relatedRecord</componentName>
             <visibilityRule>
                 <criteria>
-                    <leftValue>{!$User.Department}</leftValue>
-                    <operator>NE</operator>
-                    <rightValue>Post-Trad Admissions</rightValue>
+                    <leftValue>{!Record.School_College__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Undergraduate</rightValue>
                 </criteria>
             </visibilityRule>
         </componentInstances>
@@ -877,9 +877,9 @@
             <componentName>console:relatedRecord</componentName>
             <visibilityRule>
                 <criteria>
-                    <leftValue>{!$User.Department}</leftValue>
-                    <operator>NE</operator>
-                    <rightValue>Post-Trad Admissions</rightValue>
+                    <leftValue>{!Record.School_College__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Undergraduate</rightValue>
                 </criteria>
             </visibilityRule>
         </componentInstances>
@@ -903,9 +903,9 @@
             <componentName>console:relatedRecord</componentName>
             <visibilityRule>
                 <criteria>
-                    <leftValue>{!$User.Department}</leftValue>
-                    <operator>EQUAL</operator>
-                    <rightValue>Post-Trad Admissions</rightValue>
+                    <leftValue>{!Record.School_College__c}</leftValue>
+                    <operator>NE</operator>
+                    <rightValue>Undergraduate</rightValue>
                 </criteria>
             </visibilityRule>
         </componentInstances>
