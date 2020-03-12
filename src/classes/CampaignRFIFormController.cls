@@ -2,7 +2,7 @@
  * Created by ejc84332 on 2019-08-08.
  */
 
-public with sharing class CampaignRFIFormController {
+public class CampaignRFIFormController {
 
 
     public Interaction__c interaction {get; set;}

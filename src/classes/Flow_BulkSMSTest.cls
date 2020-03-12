@@ -5,9 +5,8 @@
 @IsTest
 private class Flow_BulkSMSTest {
 
-    @IsTest//(SeeAllData=true)
-    static void testFlow_BulkSMS(){
-
+    @IsTest
+    static void testUsingMockData(){
         // Create an Contact object.
         Contact testContact = new Contact(FirstName='First', LastName='Last', Email='test@test.com', Mogli_SMS__Mogli_Number__c = '+12222222222');
         insert testContact;
@@ -31,9 +30,9 @@ private class Flow_BulkSMSTest {
         //Create Campaign object
         Campaign testCampaign = new Campaign(Name = 'Test Campaign');
         insert testCampaign;
-
+//
         //Create Campaign member
-        CampaignMember testMember = new CampaignMember(ContactId = testContact.Id, CampaignId=testCampaign.Id);
+        CampaignMember testMember = new CampaignMember(ContactId = testContact.Id, CampaignId=testCampaign.Id, Registration_Status__c = 'Sent');
         insert testMember;
 
         //Create Gateway
@@ -47,12 +46,13 @@ private class Flow_BulkSMSTest {
         Flow_BulkSMS.BulkSmsRequest request1 = new Flow_BulkSMS.BulkSmsRequest();
         request1.campaignId = testCampaign.Id;
         request1.gateway = testGateway.Id;
-        request1.initiator = String.valueOf(testUser.Id);
-        request1.smsMessage = 'Test Message';
-        request1.requestedTerms = 'Fall 2021 - CAS';
-        request1.stageDetails = 'Inquired;App Started';
-        request1.reportId = '00Of0000000rF0IEAU';
+        request1.initiator = '';
+        request1.smsMessage = 'Test Message {{firstname}}';
+        request1.requestedTerms = '';
+        request1.stageDetails = '';
+        request1.reportId = '';
         request1.requestType = 'campaign total';
+        request1.registrationStatus ='Sent;Registered';
         listOfRequests.add(request1);
 
         //Request to get total contacts in Funnel
@@ -60,47 +60,25 @@ private class Flow_BulkSMSTest {
         request2.campaignId = testCampaign.Id;
         request2.gateway = testGateway.Id;
         request2.initiator = String.valueOf(testUser.Id);
-        request2.smsMessage = 'Test Message';
+        request2.smsMessage = 'Test Message {{firstname}}';
         request2.requestedTerms = 'Fall 2021 - CAS';
         request2.stageDetails = 'Inquired;App Started';
-        request2.reportId = '00Of0000000rF0IEAU';
+        request2.reportId = '';
         request2.requestType = 'funnel total';
+        request2.registrationStatus ='Sent;Registered';
         listOfRequests.add(request2);
-
-        //Request to get total contacts from report
-        Flow_BulkSMS.BulkSmsRequest request3 = new Flow_BulkSMS.BulkSmsRequest();
-        request3.campaignId = testCampaign.Id;
-        request3.gateway = testGateway.Id;
-        request3.initiator = String.valueOf(testUser.Id);
-        request3.smsMessage = 'Test Message';
-        request3.requestedTerms = 'Fall 2021 - CAS';
-        request3.stageDetails = 'Inquired;App Started';
-        request3.reportId = '00Of0000000rF0IEAU';
-        request3.requestType = 'report total';
-        listOfRequests.add(request3);
-
-        //Request to create SMS records for all contacts in report
-        Flow_BulkSMS.BulkSmsRequest request4 = new Flow_BulkSMS.BulkSmsRequest();
-        request4.campaignId = testCampaign.Id;
-        request4.gateway = testGateway.Id;
-        request4.initiator = String.valueOf(testUser.Id);
-        request4.smsMessage = 'Test Message';
-        request4.requestedTerms = 'Fall 2021 - CAS';
-        request4.stageDetails = 'Inquired;App Started';
-        request4.reportId = '00Of0000000rF0IEAU';
-        request4.requestType = 'report';
-        listOfRequests.add(request4);
 
         //Request to create SMS records for all contacts in Campaign
         Flow_BulkSMS.BulkSmsRequest request5 = new Flow_BulkSMS.BulkSmsRequest();
         request5.campaignId = testCampaign.Id;
         request5.gateway = testGateway.Id;
         request5.initiator = String.valueOf(testUser.Id);
-        request5.smsMessage = 'Test Message';
+        request5.smsMessage = 'Test Message {{firstname}}';
         request5.requestedTerms = 'Fall 2021 - CAS';
         request5.stageDetails = 'Inquired;App Started';
-        request5.reportId = '00Of0000000rF0IEAU';
+        request5.reportId = '';
         request5.requestType = 'campaign';
+        request5.registrationStatus ='Sent;Registered';
         listOfRequests.add(request5);
 
         //Request to create SMS records for all contacts in Funnel
@@ -108,14 +86,66 @@ private class Flow_BulkSMSTest {
         request6.campaignId = testCampaign.Id;
         request6.gateway = testGateway.Id;
         request6.initiator = String.valueOf(testUser.Id);
-        request6.smsMessage = 'Test Message';
+        request6.smsMessage = 'Test Message {{firstname}}';
         request6.requestedTerms = 'Fall 2021 - CAS';
         request6.stageDetails = 'Inquired;App Started';
-        request6.reportId = '00Of0000000rF0IEAU';
+        request6.reportId = '';
         request6.requestType = 'funnel';
+        request6.registrationStatus ='Sent;Registered';
         listOfRequests.add(request6);
 
+
         //Test All Request Types
+        Test.startTest();
         Flow_BulkSMS.BulkSMS(listOfRequests);
+        Test.stopTest();
+    }
+
+    @IsTest (SeeAllData='true')
+    static void testUsingRealReportData(){
+        // Get report
+        List <Report> reportList = [SELECT Id FROM Report LIMIT 1];
+        String reportId = (String)reportList.get(0).get('Id');
+
+        //Get a user
+        List <User> userList = [SELECT Id FROM User WHERE Department = 'ITS' AND userrole.name = 'System Admin' LIMIT 1];
+        String userId = (String)userList.get(0).get('Id');
+
+        //Get a Gateway
+        List <Mogli_SMS__Gateway__c> gatewayList = [SELECT Id FROM Mogli_SMS__Gateway__c LIMIT 1];
+        String gatewayId = (String)gatewayList.get(0).get('Id');
+
+
+        //Create requests
+        List<Flow_BulkSMS.BulkSmsRequest> listOfRequests = new List<Flow_BulkSMS.BulkSmsRequest>();
+
+        Flow_BulkSMS.BulkSmsRequest request4 = new Flow_BulkSMS.BulkSmsRequest();
+        request4.campaignId = '';
+        request4.gateway = gatewayId;
+        request4.initiator = userId;
+        request4.smsMessage = 'Test Message {{firstname}}';
+        request4.requestedTerms = 'Fall 2021 - CAS';
+        request4.stageDetails = 'Inquired;App Started';
+        request4.reportId = reportId;
+        request4.requestType = 'report total';
+        request4.registrationStatus ='Sent;Registered';
+        listOfRequests.add(request4);
+
+        //Request to get total contacts from report
+        Flow_BulkSMS.BulkSmsRequest request3 = new Flow_BulkSMS.BulkSmsRequest();
+        request3.campaignId = '';
+        request3.gateway = gatewayId;
+        request3.initiator = userId;
+        request3.smsMessage = 'Test Message {{firstname}}';
+        request3.requestedTerms = '';
+        request3.stageDetails = '';
+        request3.reportId = reportId;
+        request3.requestType = 'report';
+        request3.registrationStatus ='';
+        listOfRequests.add(request3);
+
+        Test.startTest();
+        Flow_BulkSMS.BulkSMS(listOfRequests);
+        Test.stopTest();
     }
 }

@@ -26,6 +26,36 @@ public without sharing class ReAdmissionHelper {
         if (String.isNotBlank(sourceContact.Visa_Type_Code__c)) targetContact.Visa_Type_Code__c = sourceContact.Visa_Type_Code__c;
     }
 
+    public static String createContactDataString(ReAdmissionController.ReAdmissionRequest request) {
+        String data = '';
+        data += Contact.FirstName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.FirstName) ? request.theContact.FirstName : '') + '\n';
+        data += Contact.MiddleName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MiddleName) ? request.theContact.MiddleName : '') + '\n';
+        data += Contact.LastName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.LastName) ? request.theContact.LastName : '') + '\n';
+        data += Contact.Banner_Id__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Banner_Id__c) ? request.theContact.Banner_Id__c : '') + '\n';
+        data += 'Are you or have you ever been known by any other name? : ' + request.hasOtherName + '\n';
+        data += Contact.MailingStreet.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingStreet) ? request.theContact.MailingStreet : '') + '\n';
+        data += Contact.MailingCity.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingCity) ? request.theContact.MailingCity : '') + '\n';
+        data += Contact.MailingStateCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingStateCode) ? request.theContact.MailingStateCode : '') + '\n';
+        data += Contact.MailingCountryCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingCountryCode) ? request.theContact.MailingCountryCode : '') + '\n';
+        data += Contact.MailingPostalCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingPostalCode) ? request.theContact.MailingPostalCode : '') + '\n';
+        data += Contact.Email.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Email) ? request.theContact.Email : '') + '\n';
+        data += Contact.HomePhone.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.HomePhone) ? request.theContact.HomePhone : '') + '\n';
+        data += Contact.MobilePhone.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MobilePhone) ? request.theContact.MobilePhone : '') + '\n';
+        data += Contact.hed__WorkPhone__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__WorkPhone__c) ? request.theContact.hed__WorkPhone__c : '') + '\n';
+        data += Contact.Citizenship__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Citizenship__c) ? request.theContact.Citizenship__c : '') + '\n';
+        data += Contact.hed__Social_Security_Number__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Social_Security_Number__c) ? request.theContact.hed__Social_Security_Number__c : '') + '\n';
+        data += Contact.Alien_Registration_Number__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Alien_Registration_Number__c) ? request.theContact.Alien_Registration_Number__c : '') + '\n';
+        data += Contact.Alien_Registration_Number_Date__c.getDescribe().getLabel() + ' : ' + (request.theContact.Alien_Registration_Number_Date__c != null  ? request.theContact.Alien_Registration_Number_Date__c.format() : '') + '\n';
+        data += Contact.Visa_Type_Code__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Visa_Type_Code__c) ? request.theContact.Visa_Type_Code__c : '') + '\n';
+        data += Contact.Is_Veteran__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Is_Veteran__c) ? request.theContact.Is_Veteran__c : '') + '\n';
+        data += Contact.hed__Gender__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Gender__c) ? request.theContact.hed__Gender__c : '') + '\n';
+        data += Contact.Is_Hispanic__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Is_Hispanic__c) ? request.theContact.Is_Hispanic__c : '') + '\n';
+        data += Contact.hed__Race__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Race__c) ? request.theContact.hed__Race__c : '') + '\n';
+        data += Contact.Pled_Guilty__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Pled_Guilty__c) ? request.theContact.Pled_Guilty__c : '') + '\n';
+        data += Contact.Conviction_Description__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Conviction_Description__c) ? request.theContact.Conviction_Description__c : '') + '\n';
+        return data;
+    }
+
     public static Case createCase(Contact theContact, ReAdmissionController.ReAdmissionRequest request, Id theCohortId) {
         Case c = new Case(
             RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByDeveloperName().get('SSR_Readmission').getRecordTypeId(),
@@ -43,6 +73,7 @@ public without sharing class ReAdmissionHelper {
             Will_Apply_For_Financial_Aid__c = (request.financialAid == 'Yes'),
             Collection_Holds__c = (request.hasBusinessOffice == 'Yes'),
             Has_Information_Changed__c = (request.hasChanged == 'Yes'),
+            Academic_History__c = request.academicRecord,
             Why_Left_Essay__c = request.whyLeftEssay,
             Why_Returning_Essay__c = request.whyBackEssay
         );
@@ -59,13 +90,17 @@ public without sharing class ReAdmissionHelper {
     }
 
     public static ContentVersion attachDocument(Case c, Blob body, String name) {
+        return attachDocument(c.Id, body, name);
+    }
+
+    public static ContentVersion attachDocument(Id theId, Blob body, String name) {
 
         ContentVersion theContentVersion = new ContentVersion();
         theContentVersion.ContentLocation = 'S'; // S = Stored in Salesforce
         theContentVersion.PathOnClient = name;
         theContentVersion.Title = name;
         theContentVersion.VersionData = body;
-        theContentVersion.FirstPublishLocationId = c.Id;
+        theContentVersion.FirstPublishLocationId = theId;
         insert theContentVersion;
         return theContentVersion;
     }
@@ -98,4 +133,79 @@ public without sharing class ReAdmissionHelper {
         }
         return theCohort;
     }
+
+    public static Case getCase(Id theCaseId) {
+        Case c = [
+            SELECT
+                Id,
+                RecordTypeId,
+                ContactId,
+                Contact.FirstName,
+                Contact.MiddleName,
+                Contact.LastName,
+                Contact.Email,
+                Contact.MailingStreet,
+                Contact.MailingCity,
+                Contact.MailingStateCode,
+                Contact.MailingCountryCode,
+                Contact.MailingPostalCode,
+                Contact.HomePhone,
+                Contact.MobilePhone,
+                Contact.hed__Gender__c,
+                Contact.hed__Race__c,
+                Contact.hed__Social_Security_Number__c,
+                Contact.hed__WorkPhone__c,
+                Contact.Alien_Registration_Number__c,
+                Contact.Alien_Registration_Number_Date__c,
+                Contact.Banner_Id__c,
+                Contact.Citizenship__c,
+                Contact.Conviction_Description__c,
+                Contact.Is_Hispanic__c,
+                Contact.Is_Veteran__c,
+                Contact.Pled_Guilty__c,
+                Contact.Visa_Type_Code__c,
+                Cohort__c,
+                Type,
+                Status,
+                Priority,
+                Origin,
+                Subject,
+                Description,
+                School__c,
+                Program__c,
+                New_Term__c,
+                Will_Apply_For_Financial_Aid__c,
+                Collection_Holds__c,
+                Has_Information_Changed__c,
+                Academic_History__c,
+                Why_Left_Essay__c,
+                Why_Returning_Essay__c
+            FROM 
+                Case
+            WHERE 
+                Id = :theCaseId
+        ];
+        return c;
+    }
+
+    public static Employment_History__c getEmploymentHistory(Id theContactId) {
+        Employment_History__c history = null;
+        List<Employment_History__c> histories = [
+            SELECT 
+                Id, Name, Contact__c, Employer_Name__c, Employer_Address__c, Responsibilities__c
+            FROM
+                Employment_History__c
+            WHERE
+                Contact__c = :theContactId
+            ORDER BY 
+                CreatedDate DESC
+
+        ];
+        if (histories != null && !histories.isEmpty()) {
+            history = histories[0];
+        }
+        return history;
+    }
+
+
 }

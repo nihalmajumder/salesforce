@@ -89,6 +89,42 @@ public class ReAdmissionHelperTest {
         System.assertEquals(theContact.hed__Gender__c, existingContact.hed__Gender__c);
     }
 
+    static testMethod void createContactDataStringTest() {
+        
+        Contact existingContact = ContactHelper.getContactFromBethelId('TEST2');
+        System.assert(existingContact != null);
+
+        Contact theContact = new Contact();
+        theContact.FirstName = 'TestFirst2';
+        theContact.MiddleName = 'TestMiddle2';
+        theContact.LastName = 'TestLast2';
+        theContact.Email = 'TestContact2@example.bethel.com';
+        theContact.MailingStreet = '123 Main St';
+        theContact.MailingCity = 'Rochester';
+        theContact.MailingStateCode = 'MN';
+        theContact.MailingCountryCode = 'US';
+        theContact.MailingPostalCode = '55901';
+        theContact.HomePhone = '555-555-5555';
+        theContact.MobilePhone = '555-555-5556';
+        theContact.hed__Gender__c = 'Male';
+        theContact.hed__Race__c = 'White';
+        theContact.hed__Social_Security_Number__c = '123-45-6789';
+        theContact.hed__WorkPhone__c = '555-555-5557';
+        theContact.Banner_Id__c = 'TEST2';
+        theContact.Citizenship__c = 'Citizen';
+        theContact.Is_Hispanic__c = 'No';
+        theContact.Is_Veteran__c = 'No';
+        theContact.Pled_Guilty__c = 'No';
+        ReAdmissionController.ReAdmissionRequest request = new ReAdmissionController.ReAdmissionRequest();
+        request.theContact = theContact;
+
+        test.startTest();
+        String data = ReAdmissionHelper.createContactDataString(request);
+        test.stopTest();
+
+        System.assert(data != null);
+    }
+
     static testMethod void createCaseTest() {
         
         Contact existingContact = ContactHelper.getContactFromBethelId('TEST2');
@@ -142,9 +178,11 @@ public class ReAdmissionHelperTest {
         Case theCase = ReAdmissionHelper.createCase(existingContact, request, null);
         insert theCase;
         ReAdmissionHelper.assignCase(theCase);
+        Case newCase = ReAdmissionHelper.getCase(theCase.Id);
         test.stopTest();
 
         System.assert(theCase.OwnerId != null);
+        System.assert(newCase != null);
     }
 
     static testMethod void attachDocumentTest() {
@@ -185,9 +223,10 @@ public class ReAdmissionHelperTest {
 
         test.startTest();
         Employment_History__c history = ReAdmissionHelper.createEmploymentHistory(existingContact, 'ACME', '123 Main St; Chicago, IL; 66066 US', 'Do stuff');
+        Employment_History__c newHistory = ReAdmissionHelper.getEmploymentHistory(existingContact.Id);
         test.stopTest();
 
-        System.assert(history != null);
+        System.assert(newHistory != null);
     }
 
 }

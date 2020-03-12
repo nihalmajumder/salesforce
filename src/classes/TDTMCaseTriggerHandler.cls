@@ -35,10 +35,10 @@ global class TDTMCaseTriggerHandler extends TDTMVirtualTriggerHandler {
 
     private List<Task> createReadmissionTasks(Case c) {
         List<Task> tasks = new List<Task>();
-        tasks.add(createTask(c, 'Rebuild file', 'Rebuild the student file if the original file was purged from the record archive.'));
-        tasks.add(createTask(c, 'Updates to name and address', 'Updates to name or address should be sent to registrar-data@bethel.edu.'));
-        tasks.add(createTask(c, 'Reactivation and registration', 'SSA: Complete the following information...\nTerm\nProgram\nCatalog Year\nCohort\nSubstitutions and waivers\nIs the file being recreated (Y/N)\nFirst term registration requests'));
-        tasks.add(createTask(c, 'Student Experience - Re-enrollment', 'SSA: Complete the following information...\nStarting term\nAcademic progress\nAcademic progress'));
+        tasks.add(createTask(c, 'Task 1: Rebuild file', 'Rebuild the student file if the original file was purged from the record archive.'));
+        tasks.add(createTask(c, 'Task 2: Updates to name and address', 'Updates to name or address should be sent to registrar-data@bethel.edu.'));
+        tasks.add(createTask(c, 'Task 3: Reactivation and registration', 'SSA: Complete the following information...\nTerm\nProgram\nCatalog Year\nCohort\nSubstitutions and waivers\nIs the file being recreated (Y/N)\nFirst term registration requests'));
+        tasks.add(createTask(c, 'Task 4: Student Experience - Re-enrollment', 'SSA: Complete the following information...\nStarting term\nAcademic progress\nComments to guide coach'));
         return tasks;
 
     }

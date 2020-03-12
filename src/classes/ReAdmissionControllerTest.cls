@@ -91,8 +91,7 @@ public class ReAdmissionControllerTest {
         controller.request.hasBusinessOffice = 'no';
         controller.request.whyLeftEssay = 'I do not know.';
         controller.request.whyBackEssay = 'Why Not?';
-        controller.resumeName = 'My Resume';
-        controller.resumeBody = Blob.valueOf('My Resume');
+        controller.request.race.add('White');
 
         test.startTest();
         PageReference reference = controller.submit();
@@ -151,6 +150,100 @@ public class ReAdmissionControllerTest {
         System.assert(reference == null);
         System.assert(!ApexPages.hasMessages());
         System.assert(controller.createdCase != null);
+    }
+
+    static testMethod void uploadTest() {
+        
+        PageReference pr = Page.Readmission;
+        Test.setCurrentPage(pr);
+
+        Case c = new Case(
+            RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByDeveloperName().get('SSR_Readmission').getRecordTypeId(),
+            Type = 'Readmission',
+            Status = 'New',
+            Priority = 'High',
+            Origin = 'Online Form',
+            Subject = ' Re-enrollment Application - ',
+            Description = 'Re-enrollment application webform submission'
+        );
+        insert c;
+
+        ReAdmissionController controller = new ReAdmissionController();
+        controller.resumeBody = ',' + EncodingUtil.base64Encode(Blob.valueOf('Test'));
+        controller.resumeName = 'Resume';
+        controller.caseId = c.Id;
+
+        test.startTest();
+        PageReference reference = controller.upload();
+        test.stopTest();
+
+        System.assert(reference == null);
+        System.assert(!ApexPages.hasMessages());
+        System.assert(controller.resumeUploaded);
+    }
+
+    static testMethod void loadCaseTest() {
+        
+        PageReference pr = Page.Readmission;
+        Test.setCurrentPage(pr);
+
+        Contact theContact = new Contact(
+            FirstName = 'First', 
+            LastName = 'Last', 
+            Email = 'First.Last@test.com',
+            MailingStreet = '123 Main St',
+            MailingCity = 'Rochester',
+            MailingStateCode = 'MN',
+            MailingCountryCode = 'US',
+            MailingPostalCode = '55901',
+            HomePhone = '555-555-5555',
+            MobilePhone = '555-555-5556',
+            hed__Gender__c = 'Male',
+            hed__Race__c = 'White',
+            hed__Social_Security_Number__c = '123-45-6789',
+            hed__WorkPhone__c = '555-555-5557',
+            Banner_Id__c = 'TEST-123',
+            Citizenship__c = 'Citizen',
+            Is_Hispanic__c = 'No',
+            Is_Veteran__c = 'No',
+            Pled_Guilty__c = 'No'
+        );
+        insert theContact;
+
+        Case c = new Case(
+            RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByDeveloperName().get('SSR_Readmission').getRecordTypeId(),
+            ContactId = theContact.Id,
+            Type = 'Readmission',
+            Status = 'New',
+            Priority = 'High',
+            Origin = 'Online Form',
+            Subject = ' Re-enrollment Application - ' + theContact.Name,
+            Description = 'Re-enrollment application webform submission',
+            School__c = 'Graduate',
+            Academic_History__c = 'Test',
+            Why_Left_Essay__c = 'Test',
+            Why_Returning_Essay__c = 'Test'
+        );
+        insert c;
+        pr.getParameters().put('Id', c.Id);
+
+        Employment_History__c history = new Employment_History__c(
+            Contact__c = theContact.Id,
+            Employer_Name__c = 'Acme',
+            Employer_Address__c = '123 Main St', 
+            Responsibilities__c = 'Doing stuff'
+        );
+        insert history;
+
+        ReAdmissionController controller = new ReAdmissionController();
+
+        test.startTest();
+        PageReference reference = controller.loadCase();
+        test.stopTest();
+
+        System.assert(reference == null);
+        System.assertEquals('First', controller.request.theContact.FirstName);
+        System.assertEquals('Test', controller.request.academicRecord);
     }
     
 }

@@ -1,4 +1,4 @@
-public with sharing class ContactHelper {
+public class ContactHelper {
     public static Contact getContact(Id theId) {
         Contact c = null;
         List<Contact> contacts = [

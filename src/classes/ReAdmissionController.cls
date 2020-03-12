@@ -2,12 +2,13 @@ public class ReAdmissionController {
 
     public Application_Control__c appControl {get; set;}
     public ReAdmissionRequest request {get; set;}
-    public Blob resumeBody {get; set;}
-    public String resumeName {get; set;}
+    public transient String resumeBody {get; set;}
+    public transient String resumeName {get; set;}
     public List<SelectOption> programOptions {get; set;}
     public List<SelectOption> termOptions {get; set;}
     public Case createdCase {get; set;}
     public String caseNumber {get; set;}
+    public Id caseId {get; set;}
     public Boolean resumeUploaded {get; set;}
 
     public ReAdmissionController() {
@@ -58,26 +59,22 @@ public class ReAdmissionController {
                 }
 
                 if (theContact != null) {
-                    ReAdmissionHelper.updateContact(request.theContact, theContact);
-                    if (request.hasOtherName == 'Yes') {
-                        theContact.Former_Last_Name__c = request.otherName;
-                    }
-                    update theContact;
+                    request.theContact.hed__Race__c = request.getRaceString();
+                    String data = ReAdmissionHelper.createContactDataString(request);
                     Id theCohortId = ReAdmissionHelper.findCohort(theContact.Id);
                     Case theCase = ReAdmissionHelper.createCase(theContact, request, theCohortId);
+                    theCase.Re_enrollment_Answers__c = data;
                     insert theCase;
                     ReAdmissionHelper.assignCase(theCase);
                     update theCase;
                     this.createdCase = theCase;
                     this.createdCase = [SELECT Id, CaseNumber FROM Case WHERE Id = :theCase.Id];
                     this.caseNumber = this.createdCase.CaseNumber;
+                    this.caseId = this.createdCase.Id;
                     if (String.isNotBlank(request.employerName)) {
                         ReAdmissionHelper.createEmploymentHistory(theContact, request.employerName, request.employerAddress, request.responsibilities);
                     }
 
-                    if (resumeBody != null) {
-                        ReAdmissionHelper.attachDocument(createdCase, resumeBody, resumeName);
-                    }
                 }
                 else {
                     ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Unable to find or create Contact.'));
@@ -92,9 +89,10 @@ public class ReAdmissionController {
     }
 
     public PageReference upload() {
-       try {
-            if (resumeBody != null) {
-                ReAdmissionHelper.attachDocument(createdCase, resumeBody, resumeName);
+        try {
+            if (resumeBody != null && resumeName != null && caseId != null) {
+                Blob data = EncodingUtil.base64Decode(resumeBody.substringAfter(','));
+                ReAdmissionHelper.attachDocument(caseId, data, resumeName);
                 this.resumeUploaded = true;
             }
         }
@@ -159,6 +157,18 @@ public class ReAdmissionController {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Bethel ID# must not be blank.'));
             isValid = false;
         }
+        if (request.theContact.Citizenship__c == 'Not Citizen or Permanent Resident' && String.isBlank(request.theContact.Visa_Type_Code__c)) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Intended Visa Status must not be blank.'));
+            isValid = false;
+        }
+        if (request.theContact.Citizenship__c == 'Permanent Resident Alien' && String.isBlank(request.theContact.Alien_Registration_Number__c)) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Alien Registration Number must not be blank.'));
+            isValid = false;
+        }
+        if (request.theContact.Citizenship__c == 'Permanent Resident Alien' && request.theContact.Alien_Registration_Number_Date__c == null) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Alien Registration Number Date must not be blank.'));
+            isValid = false;
+        }
         if (request.program == null) {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Program must not be blank.'));
             isValid = false;
@@ -202,6 +212,77 @@ public class ReAdmissionController {
             race = new List<String>();
             compliance = false;
         }
+
+        public String getRaceString() {
+            String raceString = null;
+            if (race != null && !race.isEmpty()) {
+                for (String s : race) {
+                    if (raceString == null) {
+                        raceString = s;
+                    }
+                    else {
+                        raceString = raceString + ';' + s;
+                    }
+                }
+            }
+            return raceString;
+        }
+    }
+
+    public PageReference loadCase() {
+        String theId = ApexPages.currentPage().getParameters().get('Id');
+        if (theId != null) {
+            Case c = ReadmissionHelper.getCase(theId);
+            this.request.theContact.FirstName = c.Contact.FirstName;
+            this.request.theContact.MiddleName = c.Contact.MiddleName;
+            this.request.theContact.LastName = c.Contact.LastName;
+            this.request.theContact.Email = c.Contact.Email;
+            this.request.theContact.MailingStreet = c.Contact.MailingStreet;
+            this.request.theContact.MailingCity = c.Contact.MailingCity;
+            this.request.theContact.MailingStateCode = c.Contact.MailingStateCode;
+            this.request.theContact.MailingCountryCode = c.Contact.MailingCountryCode;
+            this.request.theContact.MailingPostalCode = c.Contact.MailingPostalCode;
+            this.request.theContact.HomePhone = c.Contact.HomePhone;
+            this.request.theContact.MobilePhone = c.Contact.MobilePhone;
+            this.request.theContact.hed__Gender__c = c.Contact.hed__Gender__c;
+            this.request.theContact.hed__Race__c = c.Contact.hed__Race__c;
+            this.request.theContact.hed__Social_Security_Number__c = c.Contact.hed__Social_Security_Number__c;
+            this.request.theContact.hed__WorkPhone__c = c.Contact.hed__WorkPhone__c;
+            this.request.theContact.Alien_Registration_Number__c = c.Contact.Alien_Registration_Number__c;
+            this.request.theContact.Alien_Registration_Number_Date__c = c.Contact.Alien_Registration_Number_Date__c;
+            this.request.theContact.Banner_Id__c = c.Contact.Banner_Id__c;
+            this.request.theContact.Citizenship__c = c.Contact.Citizenship__c;
+            this.request.theContact.Conviction_Description__c = c.Contact.Conviction_Description__c;
+            this.request.theContact.Is_Hispanic__c = c.Contact.Is_Hispanic__c;
+            this.request.theContact.Is_Veteran__c = c.Contact.Is_Veteran__c;
+            this.request.theContact.Pled_Guilty__c = c.Contact.Pled_Guilty__c;
+            this.request.theContact.Visa_Type_Code__c = c.Contact.Visa_Type_Code__c;
+            this.request.school = c.School__c;
+            this.request.program = c.Program__c;
+            this.request.term = c.New_Term__c;
+            this.request.financialAid = c.Will_Apply_For_Financial_Aid__c ? 'Yes' : 'No';
+            this.request.hasBusinessOffice = c.Collection_Holds__c? 'Yes' : 'No';
+            this.request.hasChanged= c.Has_Information_Changed__c? 'Yes' : 'No';
+            this.request.academicRecord = c.Academic_History__c;
+            this.request.whyLeftEssay = c.Why_Left_Essay__c;
+            this.request.whyBackEssay = c.Why_Returning_Essay__c;
+
+            if (c.Contact.hed__Race__c != null) {
+                for (String s : c.Contact.hed__Race__c.split(';')) {
+                    this.request.race.add(s);
+                }
+            }
+
+            Employment_History__c history = ReadmissionHelper.getEmploymentHistory(c.ContactId);
+            if (history != null) {
+                this.request.employerName = history.Employer_Name__c;
+                this.request.employerAddress = history.Employer_Address__c;
+                this.request.responsibilities = history.Responsibilities__c;
+            }
+
+            changeSchool();
+        }
+        return null;
     }
 
 }

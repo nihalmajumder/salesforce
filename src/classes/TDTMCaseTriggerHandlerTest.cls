@@ -18,7 +18,7 @@ public class TDTMCaseTriggerHandlerTest {
         Contact student = new Contact(LastName='TestLast', FirstName = 'TestFirst', Email = 'TestContact@example.bethel.com', MailingStateCode = 'MN', Banner_Id__c = 'TEST2');
         insert student;
         Case c = new Case(
-            RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('SSR - Readmission').getRecordTypeId(),
+            RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByDeveloperName().get('SSR_Readmission').getRecordTypeId(),
             ContactId = student.Id,
             Type = 'Readmission',
             Status = 'New',

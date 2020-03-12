@@ -237,12 +237,10 @@ public class ApplicationQuestion {
     
     public Boolean getShowQuestion(SObject obj) {
 
-
         if (dependencyCalculated)
             return showQuestion;
 
         if (forceShowQuestion == true) return returnShowQuestion(true, obj); //moved return statement to same line - Luke Vang
-
         if (application != null && question != null && !ApplicationFilter.filter(application, question)) return returnShowQuestion(false, obj); //moved return statement to same line - Luke Vang
             
         if (dQuestions == null || controllingQuestions == null || dQuestions.isEmpty() || controllingQuestions.isEmpty())
