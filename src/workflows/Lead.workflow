@@ -27,11 +27,18 @@ SUBSTITUTE(MobilePhone, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot
         <fullName>Mogli_SMS__Update_Mogli_Number_with_WITH_PLUS</fullName>
         <description>Update Mogli Number based on value in Mobile field (remove all non-numerical values) WITH PLUS added to front of Mogli Number</description>
         <field>Mogli_SMS__Mogli_Number__c</field>
-        <formula>&quot;+1&quot;&amp; SUBSTITUTE(
-       SUBSTITUTE(
-        SUBSTITUTE(
-         SUBSTITUTE(
-          SUBSTITUTE(MobilePhone , &quot;(&quot;, &quot;&quot;),&quot;)&quot;,&quot;&quot;),&quot;-&quot;,&quot;&quot;),&quot; &quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;)</formula>
+        <formula>TRIM(SUBSTITUTE(SUBSTITUTE(
+IF(ISBLANK(TRIM(MobilePhone)),
+&quot;&quot;,
+IF(BEGINS(MobilePhone, &apos;+1&apos;),
+&quot;+&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( MobilePhone, &quot;(&quot;,&quot;&quot;), &quot;)&quot;,&quot;&quot;), &quot;-&quot;,&quot;&quot;), &quot; &quot;,&quot;&quot;), &quot;+&quot;,&quot;&quot;), &quot;.&quot;,&quot;&quot;),
+IF(BEGINS(MobilePhone, &apos;1&apos;),
+&quot;+&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( MobilePhone, &quot;(&quot;,&quot;&quot;), &quot;)&quot;,&quot;&quot;), &quot;-&quot;,&quot;&quot;), &quot; &quot;,&quot;&quot;), &quot;+&quot;,&quot;&quot;), &quot;.&quot;,&quot;&quot;),
+&quot;+1&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( MobilePhone, &quot;(&quot;,&quot;&quot;), &quot;)&quot;,&quot;&quot;), &quot;-&quot;,&quot;&quot;), &quot; &quot;,&quot;&quot;), &quot;+&quot;,&quot;&quot;), &quot;.&quot;,&quot;&quot;)))
+),
+&apos;‎&apos;, &apos;&apos;),
+&apos;‎&apos;, &apos;&apos;)
+)</formula>
         <name>Update Mogli Number with WITH PLUS</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
@@ -92,11 +99,8 @@ SUBSTITUTE(MobilePhone, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <criteriaItems>
-            <field>Lead.MobilePhone</field>
-            <operation>notEqual</operation>
-        </criteriaItems>
         <description>Update Mogli Number based on value in Mobile field (remove all non-numerical values) WITH PLUS added to front of Mogli Number</description>
+        <formula>ISBLANK(Mogli_SMS__Mogli_Number__c) || ISCHANGED(MobilePhone)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

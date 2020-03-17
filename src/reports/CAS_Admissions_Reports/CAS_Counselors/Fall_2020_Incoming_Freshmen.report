@@ -58,16 +58,10 @@
             <value>Undergraduate</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Contact.Opportunities__r$StageName</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>notEqual</operator>
-            <value>Inquired</value>
-        </criteriaItems>
-        <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>Inquired - File Closed,Pre-Applied - File Closed</value>
+            <value>Inquired,Pre-Applied,Inquired - File Closed,Pre-Applied - File Closed</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

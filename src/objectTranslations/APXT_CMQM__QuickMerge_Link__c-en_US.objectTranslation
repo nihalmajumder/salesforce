@@ -104,6 +104,10 @@ For example:
     <layouts>
         <layout>MassMerge Layout</layout>
         <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
             <label><!-- Log Activity Settings --></label>
             <section>Log Activity Settings</section>
         </sections>

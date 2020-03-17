@@ -297,7 +297,7 @@
         <description>Text formula that constructs a sentence explaining the relationship between the two Contacts</description>
         <externalId>false</externalId>
         <formula>TEXT(hed__RelatedContact__r.Salutation) + &quot; &quot; + hed__RelatedContact__r.FirstName + &quot; &quot; + hed__RelatedContact__r.LastName
-+ &quot;  &quot;  +  $Label.hed__Relationship_Explanation_Connector + &quot; &quot; + 
++ &quot;  &quot;  +  $Label.hed__relationship_explanation_connector + &quot; &quot; +
 TEXT(hed__Contact__r.Salutation) + &quot; &quot; + hed__Contact__r.FirstName + &quot; &quot; + hed__Contact__r.LastName + &quot;&apos;s &quot; + TEXT(hed__Type__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Text formula that constructs a sentence explaining the relationship between the two Contacts</inlineHelpText>

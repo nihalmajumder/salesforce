@@ -35,7 +35,7 @@
             <column>Opportunity$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Fall 2019</value>
+            <value>Spring 2020</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Program__c</column>

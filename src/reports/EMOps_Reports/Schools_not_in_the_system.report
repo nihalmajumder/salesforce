@@ -7,16 +7,16 @@
         <field>Education_History__c$Educational_Institution__c</field>
     </columns>
     <columns>
-        <field>Education_History__c$Best_School_Name__c</field>
-    </columns>
-    <columns>
         <field>Education_History__c$School_Not_Found_Name__c</field>
     </columns>
     <columns>
         <field>Education_History__c$CreatedDate</field>
     </columns>
+    <columns>
+        <field>Education_History__c$Document_Status__c</field>
+    </columns>
     <filter>
-        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
         <criteriaItems>
             <column>Education_History__c$Educational_Institution__c</column>
             <isUnlocked>true</isUnlocked>
@@ -30,23 +30,17 @@
             <value>,Advanced Placement</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Education_History__c$School_Country__c</column>
+            <column>Education_History__c$Document_Status__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>United States</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Education_History__c$School_Not_Found_Country__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>contains</operator>
-            <value>United States</value>
+            <value>Received,Conditional</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Education_History__c$Document_Status__c</field>
+        <field>Education_History__c$Best_School_Name__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Schools not in the system</name>

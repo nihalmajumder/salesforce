@@ -27,7 +27,7 @@
             <column>Contact.Opportunities__r$StageName</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Accepted,Confirmed</value>
+            <value>Accepted,Confirmed,Enrolled</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Conga_Acceptance_Letter_Sent__c</column>

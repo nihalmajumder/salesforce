@@ -13,6 +13,10 @@
         <name>Mogli_SMS__Error__c</name>
     </fields>
     <fields>
+        <label><!-- Gateway Id --></label>
+        <name>Mogli_SMS__GatewayId__c</name>
+    </fields>
+    <fields>
         <label><!-- Params --></label>
         <name>Mogli_SMS__Params__c</name>
     </fields>

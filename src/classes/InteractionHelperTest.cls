@@ -126,17 +126,4 @@ public  class InteractionHelperTest {
 		test.stopTest();
 		System.assertEquals(opp.Id, result.Id);
 	}
-
-	static testMethod void createInteractionTest(){
-		Interaction__c result = null;
-
-		test.startTest();
-		result = InteractionHelper.createInteraction('Test', 'Bethel-User', 'test.bethel.user@bethel.test.com', 'Re-admission');
-		test.stopTest();
-
-		System.assert(result.Id != null);
-		Interaction__c interaction = [SELECT Id, Contact__c FROM Interaction__c WHERE Id = :result.Id];
-		System.assert(interaction.Contact__c != null);
-
-	}
 }

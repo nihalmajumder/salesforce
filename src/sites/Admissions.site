@@ -28,7 +28,7 @@
         <action>Permanent</action>
         <isActive>true</isActive>
         <source>/admissions/s/</source>
-        <target>https://bethel-univ.force.com/admissions/apex/ApplicationPortal</target>
+        <target>https://full-bethel-univ.cs97.force.com/admissions/apex/ApplicationPortal</target>
     </siteRedirectMappings>
     <siteType>ChatterNetwork</siteType>
     <subdomain>bethel-univ</subdomain>

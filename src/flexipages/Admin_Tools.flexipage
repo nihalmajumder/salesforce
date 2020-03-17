@@ -20,6 +20,17 @@
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>flowLayout</name>
+                <value>oneColumn</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>flowName</name>
+                <value>Admin_Transfer_Object_Ownership</value>
+            </componentInstanceProperties>
+            <componentName>flowruntime:interview</componentName>
+        </componentInstances>
         <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>

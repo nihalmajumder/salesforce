@@ -321,6 +321,10 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
+        <name>Conga_Composer_Lightning</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>standard__Insights</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -329,11 +333,19 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Bulk_Messaging</name>
+        <name>Recruiting</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Recruiting</name>
+        <name>Bulk_Texting</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>LightningGrahicsPack_Lightning</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>permissioner__The_Permissioner_Lightning</name>
         <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>

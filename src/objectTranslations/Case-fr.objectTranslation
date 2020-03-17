@@ -681,16 +681,16 @@
             <translation><!-- Groove license --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Opportunity Assignments</masterLabel>
-            <translation><!-- Opportunity Assignments --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Record transfers needed</masterLabel>
             <translation><!-- Record transfers needed --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Replacing another user</masterLabel>
             <translation><!-- Replacing another user --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Territory Assignments</masterLabel>
+            <translation><!-- Territory Assignments --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Texting access</masterLabel>
@@ -843,6 +843,14 @@
         <help><!-- 1-10; Case priority amongst Admissions, EMOps, and Marketing. --></help>
         <label><!-- Queue Rank --></label>
         <name>Queue_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Re-enrollment Answers --></label>
+        <name>Re_enrollment_Answers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Re-enrollment Application URL --></label>
+        <name>Re_enrollment_Application_URL__c</name>
     </fields>
     <fields>
         <help><!-- Please link to a report with the records that should be moved to this user. Please include the 15-digit ID column in the report for the Opportunities/Cases/Tasks that should be transferred. --></help>
@@ -1618,11 +1626,6 @@
     <recordTypes>
         <label><!-- ITS - Segment/Mailing List --></label>
         <name>ITS_Segment_Mailing_List</name>
-    </recordTypes>
-    <recordTypes>
-        <description><!-- Used for processing of third-party application imports. --></description>
-        <label><!-- ITS - Third-Party App --></label>
-        <name>ITS_Third_Party_App</name>
     </recordTypes>
     <recordTypes>
         <label><!-- SSR - Academic Petition --></label>

@@ -42,7 +42,7 @@
             <column>Contact.Opportunities__r$Opportunity_Term_Code__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>201972</value>
+            <value>202052</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_College__c</column>
@@ -54,7 +54,7 @@
             <column>Contact.Opportunities__r$Admission_Block__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>1,2,3,4</value>
+            <value>2</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
@@ -93,6 +93,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.Opportunities__r$Academic_Term__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

@@ -58,6 +58,10 @@
         <name>Conga_Composer_CAS_Guest_Schedule_TOMORROW</name>
     </webLinks>
     <webLinks>
+        <label><!-- Conga_Composer_CAS_Name_Tags --></label>
+        <name>Conga_Composer_CAS_Name_Tags</name>
+    </webLinks>
+    <webLinks>
         <label><!-- Conga_Composer_CAS_Parking_Signs_3_Days --></label>
         <name>Conga_Composer_CAS_Parking_Signs_3_Days</name>
     </webLinks>

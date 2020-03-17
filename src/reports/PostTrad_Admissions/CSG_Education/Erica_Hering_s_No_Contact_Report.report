@@ -26,7 +26,7 @@
             <column>Opportunity$LastActivityDate</column>
             <isUnlocked>true</isUnlocked>
             <operator>lessThan</operator>
-            <value>6/18/2019</value>
+            <value>LAST_N_DAYS:42</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$School_College__c</column>

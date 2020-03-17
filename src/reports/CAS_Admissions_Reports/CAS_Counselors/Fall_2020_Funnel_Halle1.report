@@ -35,18 +35,21 @@
         <field>Contact$MailingStateCode</field>
     </columns>
     <columns>
-        <field>Contact$Email</field>
-    </columns>
-    <columns>
-        <field>Contact$Phone</field>
-    </columns>
-    <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>Contact$Max_High_School_GPA__c</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>Contact$Highest_ACT_Score__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Program__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$Phone</field>
     </columns>
     <columns>
         <field>Contact.Opportunities__r$Financial_Aid_Reaction__c</field>
@@ -57,6 +60,9 @@
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>Contact.Opportunities__r$Current_Stage_Age__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Application__c.Plan_Music_Scholarship__c</field>
     </columns>
     <filter>
         <criteriaItems>

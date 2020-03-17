@@ -236,6 +236,36 @@
         <name>PTE_Written_Discourse__c</name>
     </fields>
     <fields>
+        <help><!-- PreACT Composite Score --></help>
+        <label><!-- PreACT Composite Score --></label>
+        <name>PreACT_Composite_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- PreACT English Score --></help>
+        <label><!-- PreACT English Score --></label>
+        <name>PreACT_English_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- PreACT Mathematics Score --></help>
+        <label><!-- PreACT Mathematics Score --></label>
+        <name>PreACT_Mathematics_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- PreACT Reading Score --></help>
+        <label><!-- PreACT Reading Score --></label>
+        <name>PreACT_Reading_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- PreACT Science Score --></help>
+        <label><!-- PreACT Science Score --></label>
+        <name>PreACT_Science_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- PreACT Writing Score --></help>
+        <label><!-- PreACT Writing Score --></label>
+        <name>PreACT_Writing_Score__c</name>
+    </fields>
+    <fields>
         <label><!-- Previous Id --></label>
         <name>Previous_Id__c</name>
     </fields>
@@ -463,6 +493,11 @@
     <recordTypes>
         <label><!-- PTE --></label>
         <name>PTE</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type for an PreACT test scores --></description>
+        <label><!-- PreACT --></label>
+        <name>PreACT</name>
     </recordTypes>
     <recordTypes>
         <description><!-- Record type for an SAT test scores --></description>

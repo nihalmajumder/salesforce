@@ -25,9 +25,6 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>ROLLUP_DESCRIPTION</field>
-    </columns>
-    <columns>
         <field>OPPORTUNITY_NAME</field>
     </columns>
     <columns>
@@ -44,7 +41,7 @@
             <column>FULL_NAME</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Garrett,Burgraff,Ulrikson,Blaede,Sebey,Clint</value>
+            <value>Garrett,Burgraff,Ulrikson,Blaede,Sebey,Clint,Kue</value>
         </criteriaItems>
         <criteriaItems>
             <column>STAGE_NAME</column>

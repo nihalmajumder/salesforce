@@ -234,7 +234,7 @@
     </fields>
     <fields>
         <help><!-- Specifies if the person is a Veteran or is eligible for military benefits --></help>
-        <label><!-- Is Is Military / Military Benefits --></label>
+        <label><!-- Is Military / Military Benefits --></label>
         <name>Is_Veteran__c</name>
     </fields>
     <fields>
@@ -389,6 +389,10 @@
             <translation><!-- B2 - Tourist --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>F-2</masterLabel>
+            <translation><!-- F-2 --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>F1 - Student</masterLabel>
             <translation><!-- F1 - Student --></translation>
         </picklistValues>
@@ -407,6 +411,10 @@
         <picklistValues>
             <masterLabel>J2 - Dependent of exchange scholar</masterLabel>
             <translation><!-- J2 - Dependent of exchange scholar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TP - Temporary protection status</masterLabel>
+            <translation><!-- TP - Temporary protection status --></translation>
         </picklistValues>
     </fields>
     <fields>

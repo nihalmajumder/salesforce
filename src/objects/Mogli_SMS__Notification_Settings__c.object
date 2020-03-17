@@ -231,7 +231,7 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <label>Notification Settings</label>
+    <label>Notification Setting</label>
     <listViews>
         <fullName>Mogli_SMS__All</fullName>
         <filterScope>Everything</filterScope>
@@ -239,7 +239,7 @@
     </listViews>
     <nameField>
         <displayFormat>NS-{00000}</displayFormat>
-        <label>Notification Settings Name</label>
+        <label>Notification Setting Name</label>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Notification Settings</pluralLabel>

@@ -13,6 +13,9 @@
         <field>FK_$Application__c.Is_Applying_For_PSEO__c</field>
     </columns>
     <columns>
+        <field>FK_$Application__c.When_College_Credits_Earned__c</field>
+    </columns>
+    <columns>
         <field>OPPORTUNITY_NAME</field>
     </columns>
     <columns>
@@ -30,6 +33,9 @@
     <columns>
         <field>FK_LAST_UPDATE_BY</field>
     </columns>
+    <columns>
+        <field>OPPORTUNITY_ID</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
@@ -42,6 +48,12 @@
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Student_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>New</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -64,7 +76,7 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>CREATED_DATE</sortColumn>
+    <sortColumn>FK_LAST_UPDATE</sortColumn>
     <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CREATED_DATE</dateColumn>

@@ -72,7 +72,7 @@
                 <header>Team Due and Overdue Tasks This Week</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>20</maxValuesDisplayed>
-                <report>PostTrad_Admissions/CSG_Leadership/CSG_Team_Due_and_Overdue_Tasks</report>
+                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CSG_Team_Due_and_Overdue_Tasks</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -183,7 +183,7 @@
                 <header>EC Activity Report</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>20</maxValuesDisplayed>
-                <report>PostTrad_Admissions/CSG_Leadership/CSG_EC_Activity_Report1</report>
+                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CSG_EC_Activity_Report1</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -352,7 +352,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>kristin-wyss@bethel.edu</runningUser>
+    <runningUser>krw32342@bethel.edu</runningUser>
     <textColor>#000000</textColor>
     <title>Post-Trad Directors</title>
     <titleColor>#000000</titleColor>

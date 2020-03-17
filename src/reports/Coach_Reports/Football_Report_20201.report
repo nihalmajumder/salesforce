@@ -26,22 +26,13 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>Contact$Preferred_Name_Calculated__c</field>
-    </columns>
-    <columns>
-        <field>Contact$LastName</field>
+        <field>Contact.Opportunities__r$Name</field>
     </columns>
     <columns>
         <field>Contact.Opportunities__r$Application__c.Sport__c</field>
     </columns>
     <columns>
         <field>Contact.Opportunities__r$StageName</field>
-    </columns>
-    <columns>
-        <field>Contact$MobilePhone</field>
-    </columns>
-    <columns>
-        <field>Contact$Email</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
@@ -56,7 +47,10 @@
         <field>Contact$Highest_SAT_Score__c</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Financial_Aid_Reaction__c</field>
+        <field>Contact$MobilePhone</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
     </columns>
     <filter>
         <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
@@ -95,6 +89,11 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Financial_Aid_Reaction__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
         <field>Contact.Opportunities__r$Stage_Detail__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
@@ -108,6 +107,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.Opportunities__r$Name</sortColumn>
+    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

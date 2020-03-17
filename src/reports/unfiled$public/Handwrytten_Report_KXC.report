@@ -33,6 +33,13 @@
     <columns>
         <field>Contact.Opportunities__r$Id</field>
     </columns>
+    <columns>
+        <field>Contact$Id</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$Sent_Handwrytten_Card__c</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Conga_Bond_Inquiry_Postcard_Sent__c</column>
@@ -104,13 +111,19 @@
             <column>Contact.Opportunities__r$Date_Inquired__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
-            <value>9/1/2019 12:00 AM</value>
+            <value>1/1/2020 12:00 AM</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Sent_Handwrytten_Card__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -125,6 +138,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.Opportunities__r$Date_Inquired__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

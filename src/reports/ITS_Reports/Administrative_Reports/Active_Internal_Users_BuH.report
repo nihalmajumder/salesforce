@@ -36,6 +36,9 @@
         <field>User$FederationIdentifier</field>
     </columns>
     <columns>
+        <field>User$LastLoginDate</field>
+    </columns>
+    <columns>
         <field>User$Alias</field>
     </columns>
     <columns>
@@ -58,9 +61,6 @@
     </columns>
     <columns>
         <field>User*User$Previous_User_ID__c</field>
-    </columns>
-    <columns>
-        <field>User$LastLoginDate</field>
     </columns>
     <columns>
         <field>User$Profile.UserLicense</field>
@@ -111,6 +111,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>User$LastLoginDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>User$ChatterAdoptionStageModifiedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

@@ -489,19 +489,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -625,6 +625,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -645,7 +649,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -705,6 +713,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -721,11 +733,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -865,7 +893,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -1015,10 +1043,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -1049,12 +1077,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -1069,12 +1099,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -1109,7 +1144,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -1542,19 +1577,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -1678,6 +1713,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -1698,7 +1737,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -1758,6 +1801,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -1774,11 +1821,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -1918,7 +1981,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -2069,10 +2132,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -2103,12 +2166,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -2123,12 +2188,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -2163,7 +2233,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -2592,19 +2662,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -2728,6 +2798,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -2748,7 +2822,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -2808,6 +2886,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -2824,11 +2906,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -2968,7 +3066,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -3118,10 +3216,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -3152,12 +3250,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -3172,12 +3272,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -3212,7 +3317,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -3641,19 +3746,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -3777,6 +3882,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -3797,7 +3906,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -3857,6 +3970,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -3873,11 +3990,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -4017,7 +4150,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -4167,10 +4300,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -4201,12 +4334,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -4221,12 +4356,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -4261,7 +4401,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -4694,19 +4834,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -4830,6 +4970,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -4850,7 +4994,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -4910,6 +5058,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -4926,11 +5078,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -5070,7 +5238,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -5221,10 +5389,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -5255,12 +5423,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -5275,12 +5445,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -5315,7 +5490,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -5744,19 +5919,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -5880,6 +6055,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -5900,7 +6079,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -5960,6 +6143,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -5976,11 +6163,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -6120,7 +6323,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -6270,10 +6473,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -6304,12 +6507,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -6324,12 +6529,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -6364,7 +6574,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -6797,19 +7007,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -6933,6 +7143,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -6953,7 +7167,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -7013,6 +7231,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -7029,11 +7251,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -7173,7 +7411,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -7324,10 +7562,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -7358,12 +7596,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -7378,12 +7618,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -7418,7 +7663,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -7847,19 +8092,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -7983,6 +8228,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -8003,7 +8252,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -8063,6 +8316,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -8079,11 +8336,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -8223,7 +8496,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -8373,10 +8646,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -8407,12 +8680,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -8427,12 +8702,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -8467,7 +8747,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -8900,19 +9180,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -9036,6 +9316,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -9056,7 +9340,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -9116,6 +9404,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -9132,11 +9424,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -9276,7 +9584,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -9427,10 +9735,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -9461,12 +9769,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -9481,12 +9791,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -9521,7 +9836,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -9950,19 +10265,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -10086,6 +10401,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -10106,7 +10425,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -10166,6 +10489,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -10182,11 +10509,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -10326,7 +10669,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -10476,10 +10819,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -10510,12 +10853,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -10530,12 +10875,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -10570,7 +10920,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -11003,19 +11353,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -11139,6 +11489,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -11159,7 +11513,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -11219,6 +11577,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -11235,11 +11597,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -11379,7 +11757,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -11530,10 +11908,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -11564,12 +11942,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -11584,12 +11964,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -11624,7 +12009,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>
@@ -12053,19 +12438,19 @@
             <label>Conga Inquired Sophomore FA Card Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdJ</field>
+            <field>00N5A00000MEOZb</field>
             <label>Conga Legacy Notecard #1 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdT</field>
+            <field>00N5A00000MEOZc</field>
             <label>Conga Legacy Notecard #2 Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBcu</field>
+            <field>00N5A00000MEOZd</field>
             <label>Conga Legacy Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZe</field>
             <label>Conga Military Postcard Sent</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -12189,6 +12574,10 @@
             <label>Date Lead</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U000003r7Nn</field>
+            <label>Date Prospect</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G5w</field>
             <label>Date Registered</label>
         </opportunityListFieldsLabelMappings>
@@ -12209,7 +12598,11 @@
             <label>Days Since Inquired Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <label>Default Gateway</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MEONa</field>
             <label>Deferred Acceptance</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -12269,6 +12662,10 @@
             <label>Is International</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJPX6</field>
+            <label>Is Military / Military Benefits</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000KBMBW</field>
             <label>Last Campaign Source</label>
         </opportunityListFieldsLabelMappings>
@@ -12285,11 +12682,27 @@
             <label>Lock Documents Missing</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYKQ</field>
+            <label>Minor</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGq</field>
+            <label>Mogli Avatar URL</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGs</field>
+            <label>Mogli Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N5A00000MJYGt</field>
+            <label>Mogli Opt Out</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000MEEbg</field>
             <label>Music Scholarship</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <label>NCAA Interest</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -12429,7 +12842,7 @@
             <label>Stage Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <label>Stage Value</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
@@ -12579,10 +12992,10 @@
             <field>00N5A00000M0G5S</field>
             <field>00N5A00000M0G5T</field>
             <field>00N5A00000M0G5U</field>
-            <field>00Nf0000005jBdJ</field>
-            <field>00Nf0000005jBdT</field>
-            <field>00Nf0000005jBcu</field>
-            <field>00Nf0000005jBdY</field>
+            <field>00N5A00000MEOZb</field>
+            <field>00N5A00000MEOZc</field>
+            <field>00N5A00000MEOZd</field>
+            <field>00N5A00000MEOZe</field>
             <field>00N5A00000M0G5W</field>
             <field>00N5A00000MEBWx</field>
             <field>00N5A00000M0G5V</field>
@@ -12613,12 +13026,14 @@
             <field>00N5A00000M0G5t</field>
             <field>00N5A00000M0G5u</field>
             <field>00N5A00000M0G5v</field>
+            <field>00N0U000003r7Nn</field>
             <field>00N5A00000M0G5w</field>
             <field>00N5A00000M0G5x</field>
             <field>00N5A00000M0G5y</field>
             <field>00N5A00000M0G5z</field>
             <field>00N5A00000M0G60</field>
-            <field>00Nf0000005j6ZW</field>
+            <field>00N5A00000MJYGr</field>
+            <field>00N5A00000MEONa</field>
             <field>00N5A00000M0GPT</field>
             <field>00N5A00000M0GPU</field>
             <field>00N5A00000KBMBS</field>
@@ -12633,12 +13048,17 @@
             <field>00N5A00000KBMBV</field>
             <field>00N5A00000M0Jcu</field>
             <field>00N5A00000M0G64</field>
+            <field>00N5A00000MJPX6</field>
             <field>00N5A00000KBMBW</field>
             <field>00N5A00000M0G65</field>
             <field>00N5A00000M0G66</field>
             <field>00N5A00000M0HqU</field>
+            <field>00N5A00000MJYKQ</field>
+            <field>00N5A00000MJYGq</field>
+            <field>00N5A00000MJYGs</field>
+            <field>00N5A00000MJYGt</field>
             <field>00N5A00000MEEbg</field>
-            <field>00Nf0000005ilgH</field>
+            <field>00N5A00000MEK8W</field>
             <field>00N5A00000M0HNI</field>
             <field>00N5A00000M0Gwq</field>
             <field>00N5A00000KBMBX</field>
@@ -12673,7 +13093,7 @@
             <field>00N5A00000M0G6S</field>
             <field>00N5A00000KBOze</field>
             <field>00N5A00000M0G6T</field>
-            <field>00Nf0000005iyZ9</field>
+            <field>00N5A00000MEV1S</field>
             <field>00N5A00000M0G6U</field>
             <field>00N5A00000M0G6V</field>
             <field>00N5A00000M0G6W</field>

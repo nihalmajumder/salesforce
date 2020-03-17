@@ -7,7 +7,7 @@
         <field>Contact.Opportunities__r$Academic_Program_Code__c</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Owner</field>
+        <field>Contact$Name</field>
     </columns>
     <columns>
         <field>Contact.Opportunities__r$Academic_Program_Code_2__c</field>
@@ -20,6 +20,9 @@
     </columns>
     <columns>
         <field>Contact.Opportunities__r$Academic_Program__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Owner</field>
     </columns>
     <columns>
         <field>Contact$Id</field>
@@ -42,7 +45,7 @@
             <column>Contact.Opportunities__r$StageName</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Accepted,Confirmed</value>
+            <value>Accepted,Confirmed,Enrolled</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>

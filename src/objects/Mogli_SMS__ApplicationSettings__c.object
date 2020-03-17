@@ -155,6 +155,15 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
+        <fullName>Mogli_SMS__AccountTrigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account Trigger Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Mogli_SMS__Active_Form_Instance_Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -212,11 +221,45 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Mogli_SMS__Association_Strategy__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Association Strategy</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Record has no related Contact or Lead record</fullName>
+                    <default>true</default>
+                    <label>Record has no related Contact or Lead record</label>
+                </value>
+                <value>
+                    <fullName>Record has no related Integrated object records</fullName>
+                    <default>false</default>
+                    <label>Record has no related Integrated object records</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Mogli_SMS__AsyncTaskManagerTrigger__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Async Tasks Trigger Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Mogli_SMS__AttachmentTrigger__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>AttachmentTrigger</label>
+        <label>Attachment Trigger Enabled</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -245,7 +288,7 @@
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>ContactTrigger</label>
+        <label>Contact Trigger Enabled</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -271,7 +314,7 @@
         <fullName>Mogli_SMS__DefaultGatewayMode__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>DefaultGatewayMode</label>
+        <label>Default Gateway Mode</label>
         <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -336,7 +379,7 @@
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>FormTrigger</label>
+        <label>Form Trigger Enabled</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -354,7 +397,7 @@
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>LeadTrigger</label>
+        <label>Lead Trigger Enabled</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -414,6 +457,15 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Mogli_SMS__Platform_Events_Incoming_SMS__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Platform Events for Incoming SMS Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Mogli_SMS__PossibleAnswerDelimiter__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -425,11 +477,29 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Mogli_SMS__QuestionResponseTrigger__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Question Response Trigger Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mogli_SMS__SMSTemplateTrigger__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SMS Template Trigger Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Mogli_SMS__SMSTrigger__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>SMSTrigger</label>
+        <label>SMS Trigger Enabled</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>

@@ -201,6 +201,22 @@ IF(PRIORVALUE(Admission_Integration_Code__c) = &quot;FP&quot;,&quot;FP&quot;,
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Opportunity_Date_Prospect</fullName>
+        <description>Date that an Opportunity was set to a Prospect Stage, if ever.</description>
+        <field>Date_Prospect__c</field>
+        <formula>IF(
+ISBLANK( Date_Prospect__c ) &amp;&amp;
+TEXT(StageName) = &quot;Prospect&quot;,
+
+NOW(),
+Date_Prospect__c
+)</formula>
+        <name>Opportunity: Date Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Opportunity_First_Recruitment_Program</fullName>
         <description>Sets the First Recruitment Program to the Recruitment Program Name.</description>
         <field>First_Recruitment_Program__c</field>
@@ -371,8 +387,63 @@ IF(PRIORVALUE(Admission_Integration_Code__c) = &quot;FP&quot;,&quot;FP&quot;,
         </actions>
         <active>true</active>
         <description>When applicable change was made to the opportunity record that needs to be sync&apos;d to Banner, set a checkbox and date field.</description>
-        <formula>OR (     				ISNEW(),    				ISCHANGED(Academic_Program__c),     				ISCHANGED(School_College__c),    				ISCHANGED(Admit_Type__c),     				ISCHANGED(Cohort__c),    				ISCHANGED(Secondary_Cohort__c),    				ISCHANGED(StageName),     				ISCHANGED(Stage_Detail__c),     				ISCHANGED(Admission_Type__c),     				ISCHANGED(Withdrawal_Reason__c),    				ISCHANGED(Attributes__c)  ) &amp;&amp;   $User.FirstName != &quot;Oracle&quot; &amp;&amp; $User.LastName != &quot;Integration&quot;</formula>
+        <formula>OR ( 
+    ISNEW(),
+    ISCHANGED(Academic_Program__c), 
+    ISCHANGED(School_College__c),
+    ISCHANGED(Admit_Type__c), 
+    ISCHANGED(Cohort__c),
+    ISCHANGED(Secondary_Cohort__c),
+    ISCHANGED(StageName), 
+    ISCHANGED(Stage_Detail__c), 
+    ISCHANGED(Admission_Type__c), 
+    ISCHANGED(Withdrawal_Reason__c),
+    ISCHANGED(Attributes__c)  
+) &amp;&amp;   $User.FirstName != &quot;Oracle&quot; &amp;&amp; $User.LastName != &quot;Integration&quot;</formula>
         <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity%3A Military Task - Inquired</fullName>
+        <actions>
+            <name>Military_Welcome_Call_1</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.Is_Military_Military_Benefits__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Inquired</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Stage_Detail__c</field>
+            <operation>equals</operation>
+            <value>Inquired,Pre-Applied</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Date_App_Started__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Date_App_Submitted__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Date_Inquired__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Term_Start_Date_255__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
         <fullName>Opportunity%3A PA Tasks - App Started</fullName>
@@ -608,14 +679,14 @@ IF(PRIORVALUE(Admission_Integration_Code__c) = &quot;FP&quot;,&quot;FP&quot;,
         </actions>
         <active>true</active>
         <formula>AND(
-ISPICKVAL(Application__r.Is_Applying_For_PSEO__c, &apos;Yes&apos;),
-OR(
-ISPICKVAL(Application__r.When_College_Credits_Earned__c, &quot;During High School (PSEO, AP, CLEP, IB, other)&quot;),
-ISPICKVAL(Application__r.When_College_Credits_Earned__c, &quot;&quot;)
-),
-NOT(ISPICKVAL(Student_Type__c, &quot;New Student Previous PSEO&quot;))
+    ISPICKVAL(Application__r.Is_Applying_For_PSEO__c, &quot;Yes&quot;),
+    OR(
+        ISPICKVAL(Application__r.When_College_Credits_Earned__c, &quot;During High School (PSEO, AP, CLEP, IB, other)&quot;),
+        ISPICKVAL(Application__r.When_College_Credits_Earned__c, &quot;&quot;)
+    ),
+    NOT(ISPICKVAL(Student_Type__c, &quot;New Student Previous PSEO&quot;))
 )</formula>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
         <fullName>Opportunity%3A Set Transfer Student Type</fullName>
@@ -675,6 +746,10 @@ NOT(ISPICKVAL(Student_Type__c, &quot;New Student Previous PSEO&quot;))
         </actions>
         <actions>
             <name>Opportunity_Date_Inquired</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Opportunity_Date_Prospect</name>
             <type>FieldUpdate</type>
         </actions>
         <actions>
@@ -1053,6 +1128,17 @@ NOT(ISPICKVAL(Student_Type__c, &quot;New Student Previous PSEO&quot;))
         <protected>false</protected>
         <status>Not Started</status>
         <subject>Confirmed Enrollment</subject>
+    </tasks>
+    <tasks>
+        <fullName>Military_Welcome_Call_1</fullName>
+        <assignedTo>j-morris@bethel.edu</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Welcome Call 1</subject>
     </tasks>
     <tasks>
         <fullName>Welcome_Call_1</fullName>

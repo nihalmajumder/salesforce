@@ -161,7 +161,6 @@
         <externalId>false</externalId>
         <label>SMS</label>
         <referenceTo>Mogli_SMS__SMS__c</referenceTo>
-        <relationshipLabel>SMS_UserAcknowledges</relationshipLabel>
         <relationshipName>SMS_UserAcknowledges</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
@@ -194,13 +193,13 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
-    <label>SMS_UserAcknowledge</label>
+    <label>SMS User Acknowledge</label>
     <nameField>
         <displayFormat>A-{0000}</displayFormat>
-        <label>SMS_UserAcknowledge Name</label>
+        <label>SMS User Acknowledge Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>SMS_UserAcknowledges</pluralLabel>
+    <pluralLabel>SMS User Acknowledges</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>

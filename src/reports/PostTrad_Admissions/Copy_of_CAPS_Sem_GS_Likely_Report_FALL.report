@@ -32,13 +32,25 @@
             <column>Opportunity$School_College__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Adult Undergraduate,Graduate,Seminary</value>
+            <value>Graduate</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>fall 2019</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Admission_Block__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>2,3</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Academic_Program__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>special education</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

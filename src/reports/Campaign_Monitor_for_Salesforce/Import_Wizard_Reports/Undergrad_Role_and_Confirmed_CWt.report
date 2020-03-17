@@ -25,12 +25,6 @@
             <value>1</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Contact$hed__Preferred_Email__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>notEqual</operator>
-            <value>Secondary Email</value>
-        </criteriaItems>
-        <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>

@@ -9,7 +9,7 @@
     <enableContentDistribution>true</enableContentDistribution>
     <enableContentSupportMultiLanguage>false</enableContentSupportMultiLanguage>
     <enableContentWorkspaceAccess>true</enableContentWorkspaceAccess>
-    <enableFileShareSetByRecord>false</enableFileShareSetByRecord>
+    <enableFileShareSetByRecord>true</enableFileShareSetByRecord>
     <enableFilesUsrShareNetRestricted>false</enableFilesUsrShareNetRestricted>
     <enableJPGPreviews>true</enableJPGPreviews>
     <enableLibraryManagedFiles>false</enableLibraryManagedFiles>

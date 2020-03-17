@@ -347,6 +347,10 @@
             <translation><!-- PASG --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>PBNP</masterLabel>
+            <translation><!-- PBNP --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>PSYP</masterLabel>
             <translation><!-- PSYP --></translation>
         </picklistValues>

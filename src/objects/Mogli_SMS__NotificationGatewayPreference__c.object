@@ -163,7 +163,6 @@
         <externalId>false</externalId>
         <label>Gateway</label>
         <referenceTo>Mogli_SMS__Gateway__c</referenceTo>
-        <relationshipLabel>NotificationGatewayPreference</relationshipLabel>
         <relationshipName>NotificationGatewayPreference</relationshipName>
         <required>true</required>
         <trackTrending>false</trackTrending>
@@ -176,7 +175,6 @@
         <externalId>false</externalId>
         <label>Notification Settings</label>
         <referenceTo>Mogli_SMS__Notification_Settings__c</referenceTo>
-        <relationshipLabel>NotificationGatewayPreference</relationshipLabel>
         <relationshipName>NotificationGatewayPreference</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
@@ -184,17 +182,17 @@
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
-    <label>NotificationGatewayPreference</label>
+    <label>Notification Gateway Preference</label>
     <listViews>
         <fullName>Mogli_SMS__All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>
-        <label>NotificationGatewayPreference Name</label>
+        <label>Notification Gateway Preference Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>NotificationGatewayPreference</pluralLabel>
+    <pluralLabel>Notification Gateway Preferences</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>

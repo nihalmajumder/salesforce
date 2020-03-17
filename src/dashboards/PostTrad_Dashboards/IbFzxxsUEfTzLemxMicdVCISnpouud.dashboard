@@ -3,10 +3,6 @@
     <backgroundEndColor>#FFFFFF</backgroundEndColor>
     <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
     <backgroundStartColor>#FFFFFF</backgroundStartColor>
-    <chartTheme>light</chartTheme>
-    <colorPalette>justice</colorPalette>
-    <dashboardChartTheme>light</dashboardChartTheme>
-    <dashboardColorPalette>justice</dashboardColorPalette>
     <dashboardGridLayout>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
@@ -34,7 +30,7 @@
                 </groupingSortProperties>
                 <header>CAPS/Sem/GS Likely Report</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>PostTrad_Admissions/CSG_Leadership/CAPS_Sem_GS_Likely_Report</report>
+                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CAPS_Sem_GS_Likely_Report</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -58,7 +54,7 @@
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
                 <header>CSG_Team Due and Overdue Tasks</header>
-                <report>PostTrad_Admissions/CSG_Leadership/CSG_Team_Due_and_Overdue_Tasks</report>
+                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CSG_Team_Due_and_Overdue_Tasks</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
@@ -122,7 +118,7 @@
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
                 <header>CSG_EC Activity Report</header>
-                <report>PostTrad_Admissions/CSG_Leadership/CSG_EC_Activity_Report1</report>
+                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CSG_EC_Activity_Report1</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
@@ -137,7 +133,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>del46744@bethel.edu</runningUser>
+    <runningUser>k-gunderson@bethel.edu</runningUser>
     <textColor>#000000</textColor>
     <title>Post-Trad Leads Dashboard</title>
     <titleColor>#000000</titleColor>

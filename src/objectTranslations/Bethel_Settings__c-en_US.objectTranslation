@@ -9,6 +9,10 @@
         <value>Bethel Settings</value>
     </caseValues>
     <fields>
+        <label><!-- Instance URL --></label>
+        <name>Instance_URL__c</name>
+    </fields>
+    <fields>
         <label><!-- Public Domain URL --></label>
         <name>Public_Domain_URL__c</name>
     </fields>

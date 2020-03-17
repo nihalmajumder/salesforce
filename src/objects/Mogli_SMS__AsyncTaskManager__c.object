@@ -150,7 +150,7 @@
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ReadWrite</externalSharingModel>
@@ -186,6 +186,17 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Mogli_SMS__GatewayId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Gateway Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Mogli_SMS__Params__c</fullName>
@@ -256,12 +267,19 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>AsyncTaskManager</label>
+    <label>Async Task</label>
+    <listViews>
+        <fullName>Mogli_SMS__All</fullName>
+        <columns>NAME</columns>
+        <columns>Mogli_SMS__Task_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
-        <label>AsyncTaskManager Name</label>
+        <label>Async Task Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>AsyncTaskManagers</pluralLabel>
+    <pluralLabel>Async Tasks</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

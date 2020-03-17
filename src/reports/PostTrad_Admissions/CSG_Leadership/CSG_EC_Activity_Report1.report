@@ -47,6 +47,9 @@
     <columns>
         <field>Activity.Date_Completed__c</field>
     </columns>
+    <columns>
+        <field>Activity.DaScoopComposer__LastModifiedDate__c</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Opportunity.School_College__c</column>
@@ -58,7 +61,7 @@
             <column>ASSIGNED</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>kari boike,kelly buzzell,tanner balk,devin lehnhoff,gunderson,thorson,holman,Clint,ulrikson,lluch,Blaede,dommeyer,marvin,Van De Walker,Collins,Hering,Tranquillo,Grafsky,Burgraff,Lewicki,Sebey,garrett,lassen</value>
+            <value>daniel kue,jessica rask,kari boike,kelly buzzell,tanner balk,devin lehnhoff,gunderson,thorson,holman,Clint,ulrikson,lluch,Blaede,dommeyer,marvin,Van De Walker,Collins,Hering,Tranquillo,Grafsky,Burgraff,Lewicki,Sebey,garrett,lassen,Jacob Thompson</value>
         </criteriaItems>
         <criteriaItems>
             <column>CREATED_BY</column>

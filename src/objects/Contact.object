@@ -712,7 +712,7 @@
         <label>Address Has Been Cleaned</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <type>Picklist</type>
         <valueSet>
             <restricted>true</restricted>
@@ -1014,7 +1014,7 @@ SUBSTITUTE(SUBSTITUTE(FirstName, &quot; &quot;, &quot;+&quot;), &quot;&amp;&quot
         <length>80</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -1180,7 +1180,7 @@ FALSE
         <fullName>Is_International__c</fullName>
         <description>Used for the CAS Counselors assignment rules.</description>
         <externalId>false</externalId>
-        <formula>MailingCountry != null &amp;&amp; MailingCountry != &apos;United States&apos;</formula>
+        <formula>(MailingCountry != null &amp;&amp; MailingCountry != &apos;United States&apos;) || ISPICKVAL(Citizenship__c, &quot;Not Citizen or Permanent Resident&quot;) || NOT ISBLANK(TEXT(Visa_Type_Code__c))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Is International</label>
         <trackHistory>false</trackHistory>
@@ -1206,7 +1206,7 @@ FALSE
         <description>Specifies if the person is a Veteran or is eligible for military benefits</description>
         <externalId>false</externalId>
         <inlineHelpText>Specifies if the person is a Veteran or is eligible for military benefits</inlineHelpText>
-        <label>Is Is Military / Military Benefits</label>
+        <label>Is Military / Military Benefits</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -1686,7 +1686,7 @@ NOT(ISBLANK(Previous_Contact_ID__c)),
     <fields>
         <fullName>Sent_Handwrytten_Card__c</fullName>
         <defaultValue>false</defaultValue>
-        <description>checkbox for when the contact has received a card sent from the company &quot;Handwrytten&quot;</description>
+        <description>Checkbox for when the contact has received a card sent from the company &quot;Handwrytten&quot;</description>
         <externalId>false</externalId>
         <label>Sent Handwrytten Card</label>
         <trackFeedHistory>false</trackFeedHistory>
@@ -1803,7 +1803,6 @@ NOT(ISBLANK(Previous_Contact_ID__c)),
                 <value>
                     <fullName>F-2</fullName>
                     <default>false</default>
-                    <isActive>false</isActive>
                     <label>F-2</label>
                 </value>
                 <value>
@@ -1853,7 +1852,6 @@ NOT(ISBLANK(Previous_Contact_ID__c)),
                 <value>
                     <fullName>TP - Temporary protection status</fullName>
                     <default>false</default>
-                    <isActive>false</isActive>
                     <label>TP - Temporary protection status</label>
                 </value>
                 <value>
@@ -6717,17 +6715,17 @@ NOT(ISBLANK(Previous_Contact_ID__c)),
         <externalId>false</externalId>
         <formula>if(
     ISPICKVAL(hed__Primary_Address_Type__c,&quot;Work&quot;),
-    if(ISBLANK(MailingStreet) , &quot;&quot; , MailingStreet &amp; &quot;, &quot;) &amp; 
-    if(ISBLANK(MailingCity) , &quot;&quot; , MailingCity &amp; &quot;, &quot;) &amp; 
-    if(ISBLANK(MailingState) , &quot;&quot; , MailingState &amp; &quot; &quot;) &amp; 
-    if(ISBLANK(MailingPostalCode) , &quot;&quot; , MailingPostalCode) &amp; 
+    if(ISBLANK(MailingStreet) , &quot;&quot; , MailingStreet &amp; &quot;, &quot;) &amp;
+    if(ISBLANK(MailingCity) , &quot;&quot; , MailingCity &amp; &quot;, &quot;) &amp;
+    if(ISBLANK(MailingState) , &quot;&quot; , MailingState &amp; &quot; &quot;) &amp;
+    if(ISBLANK(MailingPostalCode) , &quot;&quot; , MailingPostalCode) &amp;
     If(ISBLANK(MailingCountry ) , &quot;&quot; , &quot;, &quot; &amp; MailingCountry)
     ,
     if(ISPICKVAL(hed__Secondary_Address_Type__c,&quot;Work&quot;),
-    if(ISBLANK(OtherStreet) , &quot;&quot; , OtherStreet &amp; &quot;, &quot;) &amp; 
-    if(ISBLANK(OtherCity) , &quot;&quot; , OtherCity &amp; &quot;, &quot;) &amp; 
-    if(ISBLANK(OtherState) , &quot;&quot; , OtherState &amp; &quot; &quot;) &amp; 
-    if(ISBLANK(OtherPostalCode) , &quot;&quot; , OtherPostalCode) &amp; 
+    if(ISBLANK(OtherStreet) , &quot;&quot; , OtherStreet &amp; &quot;, &quot;) &amp;
+    if(ISBLANK(OtherCity) , &quot;&quot; , OtherCity &amp; &quot;, &quot;) &amp;
+    if(ISBLANK(OtherState) , &quot;&quot; , OtherState &amp; &quot; &quot;) &amp;
+    if(ISBLANK(OtherPostalCode) , &quot;&quot; , OtherPostalCode) &amp;
     If(ISBLANK(OtherCountry ) , &quot;&quot; , &quot;, &quot; &amp; OtherCountry)
     ,
     &quot;&quot;)
@@ -6790,7 +6788,6 @@ NOT(ISBLANK(Previous_Contact_ID__c)),
         <searchResultsAdditionalFields>CONTACT.ADDRESS2_STATE_CODE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.PHONE3</searchResultsAdditionalFields>
-        <searchResultsCustomButtons>Mogli_SMS__Send_SMS_Lightning</searchResultsCustomButtons>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
@@ -6945,7 +6942,7 @@ if (recordIds[0] == null){
 alert(&quot;Please select at least one record to send.&quot;)
 }
 else{
-pageUrl = pageUrl+&apos;?contactIDs=&apos;+recordIds+&apos;&amp;contact=1&apos;;
+pageUrl = pageUrl+&apos;?ids=&apos;+recordIds;
 parent.location.href = pageUrl;
 }</url>
     </webLinks>
@@ -6964,9 +6961,9 @@ if ({!NOT( ISNULL(Contact.Mogli_SMS__Mogli_Number__c) )}){
 
 var url;
 if(&apos;{!$Label.mogli_sms__namespace}&apos; === &quot;none&quot;){
-url=&quot;/apex/&quot; + &quot;SendSMS?contactIDs={!Contact.Id}&quot;+&quot;&amp;contact=1&amp;modal=1&quot;; 
+url=&quot;/apex/&quot; + &quot;SendSMS?ids={!Contact.Id}&quot;; 
 } else { 
-url=&quot;/apex/&quot; + &apos;{!$Label.mogli_sms__namespace}&apos; + &quot;SendSMS?contactIDs={!Contact.Id}&quot;+&quot;&amp;contact=1&amp;modal=1&quot;; 
+url=&quot;/apex/&quot; + &apos;{!$Label.mogli_sms__namespace}&apos; + &quot;SendSMS?ids={!Contact.Id}&quot;; 
 }
 
 window.open(url, &apos;Popup&apos;,&apos;height=510,width=1200,top=0,left=0,location=no,menubar=no,titlebar=no,toolbar=no,status=no&apos;);

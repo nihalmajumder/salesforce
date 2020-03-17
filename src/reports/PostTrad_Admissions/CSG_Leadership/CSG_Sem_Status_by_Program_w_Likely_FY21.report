@@ -52,8 +52,8 @@
     <format>Matrix</format>
     <groupingsAcross>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$Academic_Term__c</field>
-        <sortOrder>Desc</sortOrder>
+        <field>Opportunity$Term_Description__c</field>
+        <sortOrder>Asc</sortOrder>
     </groupingsAcross>
     <groupingsAcross>
         <dateGranularity>Day</dateGranularity>

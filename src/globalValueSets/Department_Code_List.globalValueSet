@@ -96,6 +96,11 @@
         <label>EDUC</label>
     </customValue>
     <customValue>
+        <fullName>ENJ</fullName>
+        <default>false</default>
+        <label>ENJ</label>
+    </customValue>
+    <customValue>
         <fullName>ENL</fullName>
         <default>false</default>
         <label>ENL</label>
@@ -141,6 +146,11 @@
         <label>LAN</label>
     </customValue>
     <customValue>
+        <fullName>LCR</fullName>
+        <default>false</default>
+        <label>LCR</label>
+    </customValue>
+    <customValue>
         <fullName>MAT</fullName>
         <default>false</default>
         <label>MAT</label>
@@ -166,6 +176,11 @@
         <label>MWL</label>
     </customValue>
     <customValue>
+        <fullName>NRPB</fullName>
+        <default>false</default>
+        <label>NRPB</label>
+    </customValue>
+    <customValue>
         <fullName>NUR</fullName>
         <default>false</default>
         <label>NUR</label>
@@ -184,6 +199,11 @@
         <fullName>PC</fullName>
         <default>false</default>
         <label>PC</label>
+    </customValue>
+    <customValue>
+        <fullName>PHE</fullName>
+        <default>false</default>
+        <label>PHE</label>
     </customValue>
     <customValue>
         <fullName>PHI</fullName>
@@ -209,6 +229,16 @@
         <fullName>PSYC</fullName>
         <default>false</default>
         <label>PSYC</label>
+    </customValue>
+    <customValue>
+        <fullName>PSYP</fullName>
+        <default>false</default>
+        <label>PSYP</label>
+    </customValue>
+    <customValue>
+        <fullName>SCLA</fullName>
+        <default>false</default>
+        <label>SCLA</label>
     </customValue>
     <customValue>
         <fullName>SOW</fullName>
@@ -239,31 +269,6 @@
         <fullName>TS</fullName>
         <default>false</default>
         <label>TS</label>
-    </customValue>
-    <customValue>
-        <fullName>SCLA</fullName>
-        <default>false</default>
-        <label>SCLA</label>
-    </customValue>
-    <customValue>
-        <fullName>PSYP</fullName>
-        <default>false</default>
-        <label>PSYP</label>
-    </customValue>
-    <customValue>
-        <fullName>ENJ</fullName>
-        <default>false</default>
-        <label>ENJ</label>
-    </customValue>
-    <customValue>
-        <fullName>NRPB</fullName>
-        <default>false</default>
-        <label>NRPB</label>
-    </customValue>
-    <customValue>
-        <fullName>PHE</fullName>
-        <default>false</default>
-        <label>PHE</label>
     </customValue>
     <description>The list of Department Codes</description>
     <masterLabel>Department Code List</masterLabel>

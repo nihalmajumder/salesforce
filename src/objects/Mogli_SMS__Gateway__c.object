@@ -390,6 +390,44 @@
         <unique>true</unique>
     </fields>
     <fields>
+        <fullName>Notification_Email__c</fullName>
+        <description>Email address that should receive notification of received SMS.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email to notify when this gateway is texted.</inlineHelpText>
+        <label>Notification Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notification_User_Preference__c</fullName>
+        <description>Controls the SMS Notification Flow. The flow will send a custom notification and/or email based on this setting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How should the User be notified of a new text?</inlineHelpText>
+        <label>Notification User Preference</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Notification</fullName>
+                    <default>false</default>
+                    <label>Notification</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
         <fullName>Previous_Gateway_Id__c</fullName>
         <caseSensitive>false</caseSensitive>
         <externalId>true</externalId>
@@ -441,15 +479,72 @@
     </fields>
     <label>Gateway</label>
     <listViews>
+        <fullName>Admissions_CAS</fullName>
+        <columns>NAME</columns>
+        <columns>Mogli_SMS__PhoneNumber__c</columns>
+        <columns>User__c</columns>
+        <columns>Notification_User_Preference__c</columns>
+        <columns>Mogli_SMS__WebHookIdentifier__c</columns>
+        <columns>Mogli_SMS__DisplaySequence__c</columns>
+        <columns>Mogli_SMS__Inactive__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>User_Department__c</field>
+            <operation>equals</operation>
+            <value>CAS Admissions</value>
+        </filters>
+        <label>Admissions - CAS</label>
+    </listViews>
+    <listViews>
+        <fullName>Admissions_Post_Trad</fullName>
+        <columns>NAME</columns>
+        <columns>Mogli_SMS__PhoneNumber__c</columns>
+        <columns>User__c</columns>
+        <columns>Notification_User_Preference__c</columns>
+        <columns>Mogli_SMS__WebHookIdentifier__c</columns>
+        <columns>Mogli_SMS__DisplaySequence__c</columns>
+        <columns>Mogli_SMS__Inactive__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>User_Department__c</field>
+            <operation>equals</operation>
+            <value>Post-Trad Admissions</value>
+        </filters>
+        <label>Admissions - Post-Trad</label>
+    </listViews>
+    <listViews>
         <fullName>Mogli_SMS__All</fullName>
+        <columns>NAME</columns>
+        <columns>Mogli_SMS__PhoneNumber__c</columns>
+        <columns>User__c</columns>
+        <columns>Notification_User_Preference__c</columns>
+        <columns>Mogli_SMS__WebHookIdentifier__c</columns>
+        <columns>Mogli_SMS__DisplaySequence__c</columns>
+        <columns>Mogli_SMS__Inactive__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>SSR_Gateways</fullName>
         <columns>NAME</columns>
         <columns>Mogli_SMS__PhoneNumber__c</columns>
         <columns>Mogli_SMS__WebHookIdentifier__c</columns>
         <columns>Mogli_SMS__DisplaySequence__c</columns>
+        <columns>User__c</columns>
+        <columns>Notification_Email__c</columns>
         <columns>Mogli_SMS__Inactive__c</columns>
-        <columns>RECORDTYPE</columns>
         <filterScope>Everything</filterScope>
-        <label>All</label>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>SSR</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Mogli_SMS__Gateway__c.Mogli_SMS__Twilio</value>
+        </filters>
+        <label>SSR Gateways</label>
     </listViews>
     <nameField>
         <label>Gateway Name</label>
@@ -461,22 +556,82 @@
         <active>true</active>
         <description>Custom Gateway</description>
         <label>Custom</label>
+        <picklistValues>
+            <picklist>Notification_User_Preference__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>Mogli_SMS__Telerivet</fullName>
         <active>true</active>
         <label>Telerivet</label>
+        <picklistValues>
+            <picklist>Notification_User_Preference__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>Mogli_SMS__Textwire</fullName>
         <active>true</active>
         <label>Textwire</label>
+        <picklistValues>
+            <picklist>Notification_User_Preference__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>Mogli_SMS__Twilio</fullName>
         <active>true</active>
         <description>Twilio Gateway</description>
         <label>Twilio</label>
+        <picklistValues>
+            <picklist>Notification_User_Preference__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Mogli_SMS__WhatsApp</fullName>
+        <active>true</active>
+        <label>WhatsApp</label>
+        <picklistValues>
+            <picklist>Notification_User_Preference__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>Mogli_SMS__TwilioAccountSid__c</customTabListAdditionalFields>

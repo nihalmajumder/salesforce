@@ -85,6 +85,11 @@
         <default>false</default>
         <label>MAT or GRE</label>
     </customValue>
+    <customValue>
+        <fullName>PreACT</fullName>
+        <default>false</default>
+        <label>PreACT</label>
+    </customValue>
     <description>This is the list of test types which is used when recording test scores</description>
     <masterLabel>Test Types</masterLabel>
     <sorted>true</sorted>

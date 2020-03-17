@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </customValue>
+    <customValue>
         <fullName>Inquired</fullName>
         <default>false</default>
         <label>Inquired</label>
@@ -139,6 +144,11 @@
         <fullName>Unknown - File Close</fullName>
         <default>false</default>
         <label>Unknown - File Close</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospect - File Closed</fullName>
+        <default>false</default>
+        <label>Prospect - File Closed</label>
     </customValue>
     <customValue>
         <fullName>Wait Listed - Wait Listed</fullName>

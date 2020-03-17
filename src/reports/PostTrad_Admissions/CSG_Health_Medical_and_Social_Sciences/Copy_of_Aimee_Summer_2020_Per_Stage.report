@@ -40,7 +40,7 @@
         <language>en_US</language>
     </filter>
     <format>Tabular</format>
-    <name>Summer 2020 - Per Stage</name>
+    <name>PA Summer 2020 - Per Stage</name>
     <params>
         <name>co</name>
         <value>1</value>

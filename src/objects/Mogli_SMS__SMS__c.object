@@ -283,6 +283,17 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Mogli_SMS__Message_SID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Message SID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Mogli_SMS__Message__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -302,6 +313,19 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Mogli_SMS__Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>SMS</relationshipLabel>
+        <relationshipName>SMS</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Mogli_SMS__Phone_Number__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -309,6 +333,15 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Mogli_SMS__Published__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Published</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Mogli_SMS__Scheduled_Delivery__c</fullName>
@@ -369,7 +402,7 @@
         <deprecated>false</deprecated>
         <description>This will determine in the SMSTriggerHandler whether or not the set of recods that comes through are related to a batch Transaction.</description>
         <externalId>false</externalId>
-        <label>isBatchTransaction</label>
+        <label>Is Batch Transaction</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -386,6 +419,16 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Notification_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Tracks status of Bethel custom notification process. The SMS: Trigger Process Builder will set this to true when an SMS is processed and a notification is sent.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Whether the Bethel SMS: Trigger has run and notified the Gateway User/Email of this SMS.</inlineHelpText>
+        <label>Notification Sent</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Previous_Id__c</fullName>
         <caseSensitive>false</caseSensitive>
         <externalId>true</externalId>
@@ -398,6 +441,38 @@
     </fields>
     <label>SMS</label>
     <listViews>
+        <fullName>Incoming_Not_Notified</fullName>
+        <columns>NAME</columns>
+        <columns>Mogli_SMS__Contact__c</columns>
+        <columns>Mogli_SMS__Message__c</columns>
+        <columns>Mogli_SMS__Phone_Number__c</columns>
+        <columns>Mogli_SMS__Gateway__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Mogli_SMS__Direction__c</field>
+            <operation>equals</operation>
+            <value>Incoming</value>
+        </filters>
+        <filters>
+            <field>Notification_Sent_To__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Mogli_SMS__Contact__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Notification_Sent__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Incoming - Not Notified</label>
+        <sharedTo>
+            <group>ITS</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>Mogli_SMS__All</fullName>
         <columns>NAME</columns>
         <columns>Mogli_SMS__Lead__c</columns>
@@ -408,6 +483,7 @@
         <columns>Mogli_SMS__Status__c</columns>
         <columns>CREATED_DATE</columns>
         <columns>Mogli_SMS__Attachments__c</columns>
+        <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -415,13 +491,10 @@
         <fullName>Mogli_SMS__Incoming</fullName>
         <columns>NAME</columns>
         <columns>Mogli_SMS__Contact__c</columns>
-        <columns>Mogli_SMS__Lead__c</columns>
         <columns>Mogli_SMS__Message__c</columns>
         <columns>Mogli_SMS__Phone_Number__c</columns>
+        <columns>Mogli_SMS__Gateway__c</columns>
         <columns>Mogli_SMS__Status__c</columns>
-        <columns>Mogli_SMS__Attachments__c</columns>
-        <columns>Mogli_SMS__Campaign__c</columns>
-        <columns>CREATEDBY_USER</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <filters>

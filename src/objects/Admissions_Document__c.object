@@ -289,7 +289,7 @@
         <relationshipLabel>Admissions Documents</relationshipLabel>
         <relationshipName>Admissions_Documents</relationshipName>
         <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>

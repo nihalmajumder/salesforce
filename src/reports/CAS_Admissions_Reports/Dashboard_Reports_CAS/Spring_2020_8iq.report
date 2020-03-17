@@ -50,6 +50,9 @@
     <columns>
         <field>Contact$MailingStateCode</field>
     </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Owner</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Term__c</column>
@@ -67,7 +70,13 @@
             <column>Contact.Opportunities__r$StageName</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>File Closed</value>
+            <value>Confirmed,Enrolled,File Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Emma Creger</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -77,7 +86,7 @@
         <field>Contact.Opportunities__r$StageName</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Spring 2020</name>
+    <name>Spring 2020 - minus confirmed/enrolled</name>
     <params>
         <name>co</name>
         <value>1</value>

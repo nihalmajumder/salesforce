@@ -25,6 +25,11 @@
         <name>Mogli_SMS__Offline__c</name>
     </fields>
     <fields>
+        <label><!-- Opportunity --></label>
+        <name>Mogli_SMS__Opportunity__c</name>
+        <relationshipLabel><!-- Forms --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Phone Number --></label>
         <name>Mogli_SMS__Phone_Number__c</name>
     </fields>

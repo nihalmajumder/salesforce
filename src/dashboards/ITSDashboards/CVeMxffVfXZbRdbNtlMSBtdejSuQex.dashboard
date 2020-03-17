@@ -3,10 +3,6 @@
     <backgroundEndColor>#FFFFFF</backgroundEndColor>
     <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
     <backgroundStartColor>#FFFFFF</backgroundStartColor>
-    <chartTheme>light</chartTheme>
-    <colorPalette>justice</colorPalette>
-    <dashboardChartTheme>light</dashboardChartTheme>
-    <dashboardColorPalette>justice</dashboardColorPalette>
     <dashboardGridLayout>
         <dashboardGridComponents>
             <colSpan>8</colSpan>
@@ -186,7 +182,8 @@
             <columnIndex>4</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
+                <chartAxisRange>Manual</chartAxisRange>
+                <chartAxisRangeMax>51.0</chartAxisRangeMax>
                 <chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
@@ -223,49 +220,57 @@
             <rowSpan>10</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
+            <colSpan>6</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Manual</chartAxisRange>
-                <chartAxisRangeMax>30.0</chartAxisRangeMax>
-                <chartSummary>
-                    <axisBinding>y</axisBinding>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>Bar</componentType>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>PRIORITY</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>CAS Adm ITS Cases</header>
-                <legendPosition>Bottom</legendPosition>
-                <report>ITS_Reports/DashboardReports/CAS_Adm_ITS_Cases</report>
-                <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <useReportChart>false</useReportChart>
+                <componentType>FlexTable</componentType>
+                <flexComponentProperties>
+                    <decimalPrecision>-1</decimalPrecision>
+                    <flexTableColumn>
+                        <reportColumn>Case.Queue_Rank__c</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>false</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableColumn>
+                        <reportColumn>SUBJECT</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>false</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableColumn>
+                        <reportColumn>OWNER</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>false</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableColumn>
+                        <reportColumn>STATUS</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>false</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableSortInfo>
+                        <sortColumn>Case.Queue_Rank__c</sortColumn>
+                        <sortOrder>1</sortOrder>
+                    </flexTableSortInfo>
+                    <hideChatterPhotos>true</hideChatterPhotos>
+                </flexComponentProperties>
+                <groupingSortProperties/>
+                <header>Queue Rank Cases</header>
+                <report>DashboardReports/Queue_Rank_Cases</report>
             </dashboardComponent>
             <rowIndex>20</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowSpan>10</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>4</columnIndex>
+            <colSpan>6</colSpan>
+            <columnIndex>6</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Manual</chartAxisRange>
-                <chartAxisRangeMax>30.0</chartAxisRangeMax>
+                <chartAxisRangeMax>41.0</chartAxisRangeMax>
                 <chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
@@ -294,15 +299,15 @@
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>20</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowSpan>5</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>8</columnIndex>
+            <colSpan>6</colSpan>
+            <columnIndex>6</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Manual</chartAxisRange>
-                <chartAxisRangeMax>30.0</chartAxisRangeMax>
+                <chartAxisRangeMax>41.0</chartAxisRangeMax>
                 <chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
@@ -321,25 +326,25 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Comm &amp; Mktg ITS Cases</header>
+                <header>CAS Adm ITS Cases</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>ITS_Reports/DashboardReports/Comm_Mktg_ITS_Cases</report>
+                <report>ITS_Reports/DashboardReports/CAS_Adm_ITS_Cases</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
-            <rowIndex>20</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowIndex>25</rowIndex>
+            <rowSpan>5</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
+            <colSpan>3</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Manual</chartAxisRange>
-                <chartAxisRangeMax>30.0</chartAxisRangeMax>
+                <chartAxisRangeMax>16.0</chartAxisRangeMax>
                 <chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
@@ -367,16 +372,53 @@
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
-            <rowIndex>28</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowIndex>30</rowIndex>
+            <rowSpan>5</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>4</columnIndex>
+            <colSpan>3</colSpan>
+            <columnIndex>3</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Manual</chartAxisRange>
-                <chartAxisRangeMax>30.0</chartAxisRangeMax>
+                <chartAxisRangeMax>16.0</chartAxisRangeMax>
+                <chartSummary>
+                    <axisBinding>y</axisBinding>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>PRIORITY</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>Comm &amp; Mktg ITS Cases</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>ITS_Reports/DashboardReports/Comm_Mktg_ITS_Cases</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>true</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>30</rowIndex>
+            <rowSpan>5</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Manual</chartAxisRange>
+                <chartAxisRangeMax>16.0</chartAxisRangeMax>
                 <chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
@@ -404,16 +446,16 @@
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
-            <rowIndex>28</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowIndex>30</rowIndex>
+            <rowSpan>5</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>8</columnIndex>
+            <colSpan>3</colSpan>
+            <columnIndex>9</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Manual</chartAxisRange>
-                <chartAxisRangeMax>30.0</chartAxisRangeMax>
+                <chartAxisRangeMax>16.0</chartAxisRangeMax>
                 <chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
@@ -441,8 +483,8 @@
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
-            <rowIndex>28</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowIndex>30</rowIndex>
+            <rowSpan>5</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>8</colSpan>
@@ -477,7 +519,7 @@
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
-            <rowIndex>36</rowIndex>
+            <rowIndex>35</rowIndex>
             <rowSpan>10</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
@@ -502,7 +544,7 @@
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>true</useReportChart>
             </dashboardComponent>
-            <rowIndex>36</rowIndex>
+            <rowIndex>35</rowIndex>
             <rowSpan>10</rowSpan>
         </dashboardGridComponents>
         <numberOfColumns>12</numberOfColumns>
@@ -510,7 +552,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>a-hall@bethel.edu.bethelneworg</runningUser>
+    <runningUser>josh-saterdalen@bethel.edu</runningUser>
     <textColor>#000000</textColor>
     <title>ITS Case Review</title>
     <titleColor>#000000</titleColor>

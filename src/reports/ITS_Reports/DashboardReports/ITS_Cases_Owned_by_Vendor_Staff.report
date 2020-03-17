@@ -83,7 +83,7 @@
             <column>OWNER</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Matthew Steiner,Todd Mitchell</value>
+            <value>Matthew Steiner,Todd Mitchell,Jennifer Tweed,Michele Quinlan</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

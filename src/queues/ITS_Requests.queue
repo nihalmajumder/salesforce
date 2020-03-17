@@ -3,9 +3,11 @@
     <doesSendEmailToMembers>false</doesSendEmailToMembers>
     <name>ITS - Requests</name>
     <queueMembers>
-        <publicGroups>
-            <publicGroup>ITS</publicGroup>
-        </publicGroups>
+        <users>
+            <user>benjamin-john@bethel.edu</user>
+            <user>e-jameson+neworg@bethel.edu</user>
+            <user>josh-saterdalen@bethel.edu</user>
+        </users>
     </queueMembers>
     <queueSobject>
         <sobjectType>Case</sobjectType>

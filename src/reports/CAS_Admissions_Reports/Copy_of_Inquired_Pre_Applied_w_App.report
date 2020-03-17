@@ -35,7 +35,6 @@
     </columns>
     <description>Report to review CAS students with Opportunities for an open term on the application (Fa19, Sp20, Fa20) where a required application question is answered but the stage detail is not App Started (or beyond)</description>
     <filter>
-        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
             <isUnlocked>true</isUnlocked>
@@ -53,12 +52,6 @@
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Yes,No</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Contact.Opportunities__r$Application__c.Citizenship__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

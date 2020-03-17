@@ -68,6 +68,12 @@
             <operator>greaterOrEqual</operator>
             <value>63</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Contact$hed__Do_Not_Contact__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
         <language>en_US</language>
     </filter>
     <format>Summary</format>

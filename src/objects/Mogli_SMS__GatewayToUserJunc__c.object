@@ -155,13 +155,24 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>Assigned_Gateway_Name__c</fullName>
+        <description>This field is used by Gateway picklists in the Batch Texting Flow</description>
+        <externalId>false</externalId>
+        <formula>Mogli_SMS__Assigned_Gateway__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Assigned Gateway Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Mogli_SMS__Assigned_Gateway__c</fullName>
         <deprecated>false</deprecated>
         <description>The Gateway to which the selected User is assigned.</description>
         <externalId>false</externalId>
         <label>Assigned Gateway</label>
         <referenceTo>Mogli_SMS__Gateway__c</referenceTo>
-        <relationshipLabel>GatewayToUserJuncs</relationshipLabel>
         <relationshipName>GatewayToUserJuncs</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
@@ -182,7 +193,7 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <label>GatewayToUserJunc</label>
+    <label>Gateway User</label>
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
@@ -193,11 +204,11 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <displayFormat>GatewayToUserJunc {0000}</displayFormat>
-        <label>GatewayToUserJunc Name</label>
+        <displayFormat>Gateway User {0000}</displayFormat>
+        <label>Gateway User Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>GatewayToUserJuncs</pluralLabel>
+    <pluralLabel>Gateway Users</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>

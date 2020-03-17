@@ -4,13 +4,25 @@
         <field>Contact.Opportunities__r$Name</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Owner</field>
-    </columns>
-    <columns>
         <field>Contact.Opportunities__r$Opportunity_Term_Code__c</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Id</field>
+        <field>Contact$hed__AlternateEmail__c</field>
+    </columns>
+    <columns>
+        <field>Contact$FirstName</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Application__c.Sport__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Program__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Owner.Email</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Application__c.Plan_Music_Scholarship__c</field>
     </columns>
     <description>All Opportunities at all open stages currently owned by Bret for Fall 2020 and beyond.</description>
     <filter>
@@ -18,13 +30,13 @@
             <column>Contact.Opportunities__r$Owner</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Bret Hyder</value>
+            <value>Spencer Hinseth</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>File Closed</value>
+            <value>Inquired,File Closed</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Opportunity_Term_Code__c</column>
@@ -52,7 +64,7 @@
     </params>
     <reportType>Contacts_with_Opportunities__c</reportType>
     <scope>organization</scope>
-    <showDetails>false</showDetails>
+    <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
     <sortColumn>Contact.Opportunities__r$Opportunity_Term_Code__c</sortColumn>

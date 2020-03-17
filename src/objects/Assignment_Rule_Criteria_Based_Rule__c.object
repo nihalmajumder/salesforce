@@ -411,15 +411,6 @@
     <label>Assignment Rule Criteria Based Rule</label>
     <listViews>
         <fullName>All</fullName>
-        <columns>NAME</columns>
-        <columns>Assignment_Rule__c</columns>
-        <columns>Assignment_Rule_Entry_Criteria__c</columns>
-        <columns>Field__c</columns>
-        <columns>Field_Label__c</columns>
-        <columns>FieldType__c</columns>
-        <columns>Position__c</columns>
-        <columns>SObject_Type__c</columns>
-        <columns>Value__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

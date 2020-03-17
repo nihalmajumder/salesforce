@@ -1513,6 +1513,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -2223,6 +2227,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -3897,6 +3905,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -4599,6 +4611,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -6265,6 +6281,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -6967,6 +6987,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -8641,6 +8665,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -9351,6 +9379,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -10993,6 +11025,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -11695,6 +11731,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -13333,6 +13373,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -14035,6 +14079,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -15701,6 +15749,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -16403,6 +16455,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -18069,6 +18125,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -18771,6 +18831,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -20441,6 +20505,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -21151,6 +21219,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -22781,6 +22853,10 @@ Bin_Number__c
                 <default>false</default>
             </values>
             <values>
+                <fullName>LCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>MAT</fullName>
                 <default>false</default>
             </values>
@@ -23483,6 +23559,10 @@ Bin_Number__c
             </values>
             <values>
                 <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPLT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -24915,6 +24995,17 @@ COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. 
         <showsLocation>false</showsLocation>
         <showsStatus>false</showsStatus>
         <url>http://search.hoovers.com/cgi-bin/hol_search?which=company&amp;query_string={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mogli_SMS__Send_SMS</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Send SMS</masterLabel>
+        <openType>replace</openType>
+        <page>Mogli_SMS__LightningSendSMSAccountAction</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
     </webLinks>
     <webLinks>
         <fullName>YahooMaps</fullName>

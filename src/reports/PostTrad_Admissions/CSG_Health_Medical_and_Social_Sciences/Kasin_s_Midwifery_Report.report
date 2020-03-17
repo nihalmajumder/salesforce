@@ -20,7 +20,7 @@
             <column>Contact.Opportunities__r$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>2018,2019,2020,2021</value>
+            <value>2019,2020,2021</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>

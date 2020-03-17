@@ -10,17 +10,17 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Case_Record_Page_ITS</content>
-        <formFactor>Large</formFactor>
+        <formFactor>Small</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
         <pageOrSobjectType>Case</pageOrSobjectType>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Case_Record_Page_ITS</content>
-        <formFactor>Small</formFactor>
+        <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
         <pageOrSobjectType>Case</pageOrSobjectType>
@@ -45,105 +45,6 @@
         <pageOrSobjectType>Campaign</pageOrSobjectType>
         <recordType>Campaign.Events_and_Conferences</recordType>
         <type>Flexipage</type>
-        <profile>Admissions - CAS</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Admissions - CAS</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Admissions - Post-Trad</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Admissions - Post-Trad</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Comm &amp; Marketing</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Faculty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Faculty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Financial Aid</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Financial Aid</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>ITS - Analyst</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>ITS - Analyst</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
         <profile>ITS - Data</profile>
     </profileActionOverrides>
     <profileActionOverrides>
@@ -181,33 +82,6 @@
         <recordType>Campaign.Events_and_Conferences</recordType>
         <type>Flexipage</type>
         <profile>Seminary</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>Comm &amp; Marketing</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>EMOps</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Campaign_Record_Page_Event</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Events_and_Conferences</recordType>
-        <type>Flexipage</type>
-        <profile>EMOps</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -259,6 +133,15 @@
         <content>Campaign_Record_Page_Event</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>ITS - Analyst</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
         <recordType>Campaign.Event_Campaign_Record</recordType>
         <type>Flexipage</type>
         <profile>Admissions - CAS</profile>
@@ -295,7 +178,34 @@
         <content>Campaign_Record_Page_Event</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Event_Campaign_Record</recordType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>Admissions - CAS</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>Admissions - CAS</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>Admissions - Post-Trad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
         <type>Flexipage</type>
         <profile>Admissions - Post-Trad</profile>
     </profileActionOverrides>
@@ -304,9 +214,81 @@
         <content>Campaign_Record_Page_Event</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Campaign</pageOrSobjectType>
-        <recordType>Campaign.Event_Campaign_Record</recordType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
         <type>Flexipage</type>
-        <profile>Admin</profile>
+        <profile>Comm &amp; Marketing</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>Comm &amp; Marketing</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>EMOps</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>EMOps</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>Faculty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>Faculty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>Financial Aid</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>Financial Aid</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Events_and_Conferences</recordType>
+        <type>Flexipage</type>
+        <profile>ITS - Analyst</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -325,6 +307,24 @@
         <recordType>Campaign.Event_Campaign_Record</recordType>
         <type>Flexipage</type>
         <profile>Admissions - CAS</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Event_Campaign_Record</recordType>
+        <type>Flexipage</type>
+        <profile>Admissions - Post-Trad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page_Event</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.Event_Campaign_Record</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
     </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Task</tabs>

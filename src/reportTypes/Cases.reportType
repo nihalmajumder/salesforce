@@ -4,7 +4,7 @@
     <category>admin</category>
     <deployed>true</deployed>
     <description>Cases</description>
-    <label>Cases</label>
+    <label>Cases (Bethel)</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
@@ -689,6 +689,16 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Zip_Code_Region__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.UserRole</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Profile</field>
             <table>Case</table>
         </columns>
         <masterLabel>Cases</masterLabel>

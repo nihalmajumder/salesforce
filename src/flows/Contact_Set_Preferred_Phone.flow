@@ -38,8 +38,8 @@
         <description>Sets Phone to blank if there are no other numbers.</description>
         <name>NoPhone</name>
         <label>NoPhone</label>
-        <locationX>749</locationX>
-        <locationY>575</locationY>
+        <locationX>752</locationX>
+        <locationY>534</locationY>
         <assignmentItems>
             <assignToReference>Contact.Phone</assignToReference>
             <operator>Assign</operator>
@@ -52,8 +52,8 @@
         <description>sets preferred phone to other</description>
         <name>OtherPref</name>
         <label>OtherPref</label>
-        <locationX>816</locationX>
-        <locationY>443</locationY>
+        <locationX>836</locationX>
+        <locationY>420</locationY>
         <assignmentItems>
             <assignToReference>Contact.hed__PreferredPhone__c</assignToReference>
             <operator>Assign</operator>

@@ -18,6 +18,10 @@
         <label><!-- Text --></label>
         <name>Mogli_SMS__Text__c</name>
     </fields>
+    <fields>
+        <label><!-- WhatsApp Enabled --></label>
+        <name>Mogli_SMS__WhatsApp_Enabled__c</name>
+    </fields>
     <layouts>
         <layout>SMS Template Layout</layout>
         <sections>

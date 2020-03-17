@@ -33,7 +33,7 @@
             <column>Opportunity.Activities$Owner</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Brandon Sebey,Kayla Clint,Mark Blaede,Tim Van De Walker</value>
+            <value>Brandon Sebey,Kayla Clint,Mark Blaede,Tim Van De Walker,Daniel Kue</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

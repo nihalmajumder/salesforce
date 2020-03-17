@@ -642,6 +642,26 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- General Psychology Prerequisite --></label>
+        <name>General_Psychology_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provisional</masterLabel>
+            <translation><!-- Provisional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- Specifies if the applicant has ever been convicted of an offense involving inappropriate sexual conduct or violent behavior or found guilty of a professional or ethical violation --></help>
         <label><!-- Has Been Convicted Of Offense --></label>
         <name>Has_Been_Convicted_Of_Offense__c</name>
@@ -930,6 +950,27 @@
         <help><!-- Applicant&apos;s personal story response --></help>
         <label><!-- Personal Story Response --></label>
         <name>Personal_Story_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- Prerequisite for Physics Course --></help>
+        <label><!-- Physics Prerequisite --></label>
+        <name>Physics_Prerequisite__c</name>
+        <picklistValues>
+            <masterLabel>Conditional</masterLabel>
+            <translation><!-- Conditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provisional</masterLabel>
+            <translation><!-- Provisional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help><!-- Prerequisite for Physiology Course --></help>

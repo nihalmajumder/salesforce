@@ -132,7 +132,8 @@
          ISCHANGED([Contact].MailingCountry),
          ISCHANGED([Contact].MailingPostalCode)
   )
-)</stringValue>
+)
+</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>

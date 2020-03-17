@@ -387,10 +387,6 @@
             <translation><!-- Purchase List --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Re-enrollment</masterLabel>
-            <translation><!-- Re-enrollment --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Register</masterLabel>
             <translation><!-- Register --></translation>
         </picklistValues>
@@ -3260,6 +3256,10 @@
         <picklistValues>
             <masterLabel>Inquired</masterLabel>
             <translation><!-- Inquired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Wait Listed</masterLabel>

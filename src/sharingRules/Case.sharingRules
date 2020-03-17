@@ -69,7 +69,7 @@
         <criteriaItems>
             <field>RecordTypeId</field>
             <operation>equals</operation>
-            <value>SSR - Student Success Case,SSR - Re-enrollment,SSR - Academic Petition,SSR - Commencement</value>
+            <value>SSR - Student Success Case,SSR - Academic Petition,SSR - Commencement</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>

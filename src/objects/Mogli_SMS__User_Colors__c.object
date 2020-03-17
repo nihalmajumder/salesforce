@@ -5,6 +5,7 @@
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>Mogli_SMS__Bubble_Color__c</fullName>
+        <defaultValue>&apos;C62031&apos;</defaultValue>
         <deprecated>false</deprecated>
         <description>Hex code for the user&apos;s message bubbles.</description>
         <externalId>false</externalId>
@@ -18,6 +19,7 @@
     </fields>
     <fields>
         <fullName>Mogli_SMS__Text_Color__c</fullName>
+        <defaultValue>&apos;ffffff&apos;</defaultValue>
         <deprecated>false</deprecated>
         <description>Hex code for the user&apos;s text color</description>
         <externalId>false</externalId>

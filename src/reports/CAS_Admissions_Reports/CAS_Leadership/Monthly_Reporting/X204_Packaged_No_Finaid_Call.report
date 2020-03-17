@@ -18,7 +18,7 @@
             <column>Opportunity.Academic_Term__c</column>
             <isUnlocked>false</isUnlocked>
             <operator>equals</operator>
-            <value>Fall 2019 - CAS</value>
+            <value>Fall 2020 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>StageName</column>
@@ -38,12 +38,6 @@
         <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
     </crossFilters>
     <filter>
-        <criteriaItems>
-            <column>Contact.Financial_Aid__r$EFC_9_Month__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
-        </criteriaItems>
         <criteriaItems>
             <column>Contact.Financial_Aid__r$Package_Date__c</column>
             <isUnlocked>true</isUnlocked>

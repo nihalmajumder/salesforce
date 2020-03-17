@@ -18,11 +18,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Acceptance_Box_and_Letter_NormalCD</report>
+            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_Box_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS Acceptance Box &amp; Letter</title>
+            <title>CAS Acceptance Letter &amp; Box</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -71,7 +71,7 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
-            <header>Send Starting August 1</header>
+            <header>Start Sending July 31, 2020</header>
             <legendPosition>Bottom</legendPosition>
             <report>Conga_Classic_Dashboard/CAS_Waitlist_Ending_Letter_BUILD_CD</report>
             <showPercentage>false</showPercentage>
@@ -91,11 +91,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_BUILD_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_Box_BUILD_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS BUILD Acceptance Box</title>
+            <title>Acceptance Letter &amp; Box (BUILD)</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
@@ -112,11 +112,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_Normal_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_without_Box_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS Acceptance Letter w/no Box</title>
+            <title>Acceptance Letter without Box</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -166,11 +166,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_PSEO_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_Box_PSEO_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS PSEO Acceptance Folder</title>
+            <title>Acceptance Letter &amp; Box (PSEO)</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -206,11 +206,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_Special_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Acceptance_Letter_Box_Special_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS Special Acceptance Letter</title>
+            <title>Acceptance Letter &amp; Box (Special)</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -259,7 +259,7 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
-            <header>Send Starting August 1</header>
+            <header>Start Sending July 31, 2020</header>
             <legendPosition>Bottom</legendPosition>
             <report>Conga_Classic_Dashboard/CAS_Waitlist_Ending_Letter_PSEO_CD</report>
             <showPercentage>false</showPercentage>

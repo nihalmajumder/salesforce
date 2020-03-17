@@ -2,17 +2,12 @@
 <DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>del46744@bethel.edu</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
-    <folderShares>
-        <accessLevel>Manage</accessLevel>
         <sharedTo>k-gunderson@bethel.edu</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>kristin-wyss@bethel.edu</sharedTo>
+        <sharedTo>krw32342@bethel.edu</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
     <folderShares>

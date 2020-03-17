@@ -72,11 +72,11 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Inquired_Years_Events_Pstcrd_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Inquired_Sophomores_Mailer_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS Visit Events Postcard</title>
+            <title>CAS Inquired Sophomores Mailer</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -89,12 +89,13 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
+            <header>Out of Stock - No longer sending</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Conga_Classic_Dashboard/CAS_Inquired_Sophomores_Mailer_CD</report>
+            <report>Conga_Classic_Dashboard/CAS_Inquired_Years_Events_Pstcrd_CD</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>CAS Inquired Sophomores Mailer</title>
+            <title>CAS Visit Events Postcard</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
@@ -182,7 +183,7 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
-            <header>No longer sending</header>
+            <header>HOLD - Not currently using</header>
             <legendPosition>Bottom</legendPosition>
             <report>Conga_Classic_Dashboard/CAS_Inquired_Apply_Mailers_2_CD</report>
             <showPercentage>false</showPercentage>
@@ -276,7 +277,7 @@
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
-            <header>No longer sending</header>
+            <header>HOLD - Not currently using</header>
             <legendPosition>Bottom</legendPosition>
             <report>Conga_Classic_Dashboard/PSEO_Apply_Mailer_CD</report>
             <showPercentage>false</showPercentage>

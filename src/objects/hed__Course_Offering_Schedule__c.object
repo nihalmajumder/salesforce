@@ -157,7 +157,7 @@
     <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>hed__Course_Offering__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
+        <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>The Course Offering to which this record belongs.</description>
         <externalId>false</externalId>

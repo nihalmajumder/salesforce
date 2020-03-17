@@ -18,9 +18,6 @@
     <columns>
         <field>Contact.Education_Histories__r$Name</field>
     </columns>
-    <columns>
-        <field>Contact.Education_Histories__r$Holding_Name__c</field>
-    </columns>
     <filter>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Best_School_Name__c</column>
@@ -39,6 +36,12 @@
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
             <value>5/1/2019 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Education_Histories__r$Best_School_Name__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Unknown International High School</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

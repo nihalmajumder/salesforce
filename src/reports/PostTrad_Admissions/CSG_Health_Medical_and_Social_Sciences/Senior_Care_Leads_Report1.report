@@ -16,6 +16,9 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Contact.Opportunities__r$Likely_to_Enroll__c</field>
     </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>
@@ -27,13 +30,13 @@
             <column>Contact.Opportunities__r$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>2019,2020</value>
+            <value>2020,2019,2021</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
-            <value>File Closed,Test</value>
+            <value>File Closed,Test,enrolled</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Contact__c</column>
@@ -41,12 +44,23 @@
             <operator>notContain</operator>
             <value>Test</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Inquired,Pre-Applied,App Started,App Submitted,App Completed,Accepted</value>
+        </criteriaItems>
         <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Contact.Opportunities__r$Academic_Term__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Senior Care Leads Report</name>

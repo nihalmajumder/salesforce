@@ -19,9 +19,6 @@
         <field>Contact.Opportunities__r$StageName</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Stage_Detail__c</field>
-    </columns>
-    <columns>
         <field>Contact.Opportunities__r$Reviewed_For_Registrar__c</field>
     </columns>
     <columns>
@@ -42,7 +39,12 @@
         </criteriaItems>
         <language>en_US</language>
     </filter>
-    <format>Tabular</format>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>Previous PSEO 2020</name>
     <params>
         <name>co</name>

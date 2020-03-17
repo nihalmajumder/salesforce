@@ -365,6 +365,18 @@ Term_Start_Date__c &lt;= TODAY() &amp;&amp; Term_End_Date__c &gt;= TODAY(), &quo
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>Term_has_ended__c</fullName>
+        <description>True if the Term&apos;s end date is in the past. This is used for the lookup filter on Interaction.Academic_Term__c to limit results to current or future terms.</description>
+        <externalId>false</externalId>
+        <formula>TODAY()&gt;Term_End_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Have we passed this Term&apos;s end date?</inlineHelpText>
+        <label>Term has Ended</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
     <label>Academic Term</label>
     <listViews>
         <fullName>All</fullName>
@@ -378,7 +390,6 @@ Term_Start_Date__c &lt;= TODAY() &amp;&amp; Term_End_Date__c &gt;= TODAY(), &quo
         <columns>Term_Code__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>All_Active_Terms</fullName>

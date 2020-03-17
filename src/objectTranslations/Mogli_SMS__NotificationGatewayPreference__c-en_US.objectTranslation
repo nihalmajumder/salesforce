@@ -3,11 +3,11 @@
     <fields>
         <label><!-- Gateway --></label>
         <name>Mogli_SMS__Gateway__c</name>
-        <relationshipLabel><!-- NotificationGatewayPreference --></relationshipLabel>
+        <relationshipLabel><!-- Notification Gateway Preferences --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Notification Settings --></label>
         <name>Mogli_SMS__Notification_Settings__c</name>
-        <relationshipLabel><!-- NotificationGatewayPreference --></relationshipLabel>
+        <relationshipLabel><!-- Notification Gateway Preferences --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

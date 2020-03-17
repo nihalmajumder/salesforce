@@ -241,9 +241,9 @@
         <fullName>Credits_Earned__c</fullName>
         <externalId>false</externalId>
         <label>Credits Earned</label>
-        <precision>6</precision>
+        <precision>7</precision>
         <required>false</required>
-        <scale>1</scale>
+        <scale>2</scale>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>

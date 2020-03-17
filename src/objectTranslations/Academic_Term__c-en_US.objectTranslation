@@ -81,6 +81,11 @@
         <name>Term__c</name>
         <relationshipLabel><!-- Academic Terms --></relationshipLabel>
     </fields>
+    <fields>
+        <help><!-- Have we passed this Term&apos;s end date? --></help>
+        <label><!-- Term has Ended --></label>
+        <name>Term_has_ended__c</name>
+    </fields>
     <layouts>
         <layout>Academic Term - Master</layout>
         <sections>

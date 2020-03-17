@@ -11,12 +11,6 @@
         <protected>false</protected>
     </fieldUpdates>
     <rules>
-        <fullName>User%3A ContactID Changed</fullName>
-        <active>false</active>
-        <formula>ISCHANGED(ContactId)</formula>
-        <triggerType>onAllChanges</triggerType>
-    </rules>
-    <rules>
         <fullName>User%3A Update Last Login %28Custom%29</fullName>
         <actions>
             <name>User_Update_Last_Login_Custom</name>

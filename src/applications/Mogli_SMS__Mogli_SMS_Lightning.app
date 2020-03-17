@@ -24,7 +24,6 @@
     <tabs>Mogli_SMS__SMS_Template__c</tabs>
     <tabs>Mogli_SMS__FormTemplate__c</tabs>
     <tabs>Mogli_SMS__SendSMS</tabs>
-    <tabs>Mogli_SMS__In_Person_Form</tabs>
     <tabs>Mogli_SMS__Setup_MogliSMS</tabs>
     <tabs>Mogli_SMS__ApplicationSettings__c</tabs>
     <tabs>Mogli_SMS__Gateway__c</tabs>

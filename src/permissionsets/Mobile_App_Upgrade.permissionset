@@ -58,6 +58,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>APXTConga4__Conga_Collection__c.APXTConga4__Is_SF1_Enabled__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>APXTConga4__Conga_Collection__c.APXTConga4__SF1_Binding_sObject_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>APXTConga4__Conga_Email_Staging__c.APXTConga4__HTMLBody__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -594,6 +604,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Academic_Term__c.Term__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Academic_Term__c.Term_has_ended__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1428,6 +1443,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Application__c.General_Psychology_Prerequisite__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Application__c.Has_Been_Convicted_Of_Offense__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1633,6 +1653,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Application__c.Physics_Prerequisite__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Application__c.Physiology_Prerequisite__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1809,6 +1834,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Asset.Description</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Asset.DigitalAssetStatus</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2388,11 +2418,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Campaign.Text_Message__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Campaign.Type</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2853,6 +2878,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.Language</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.Language__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -3019,6 +3049,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.Queue_Rank__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Re_enrollment_Answers__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Re_enrollment_Application_URL__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5053,31 +5093,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Event_Log__c.Campaign__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Log__c.Gateway__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Log__c.Message__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Log__c.Report_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Log__c.Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Extracurricular_Activity__c.Activity__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -6268,6 +6283,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__AccountTrigger__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__Active_Form_Instance_Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -6279,6 +6299,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__Allow_Parallel_Queues__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__Association_Strategy__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__AsyncTaskManagerTrigger__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6358,7 +6388,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__Platform_Events_Incoming_SMS__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__PossibleAnswerDelimiter__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__QuestionResponseTrigger__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__ApplicationSettings__c.Mogli_SMS__SMSTemplateTrigger__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6379,6 +6424,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Mogli_SMS__AsyncTaskManager__c.Mogli_SMS__Error__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__AsyncTaskManager__c.Mogli_SMS__GatewayId__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6433,12 +6483,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mogli_SMS__Form__c.Mogli_SMS__Opportunity__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mogli_SMS__Form__c.Mogli_SMS__Phone_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Mogli_SMS__Form__c.Mogli_SMS__Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__GatewayToUserJunc__c.Assigned_Gateway_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6553,6 +6613,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mogli_SMS__Gateway__c.Notification_Email__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Gateway__c.Notification_User_Preference__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mogli_SMS__Gateway__c.Previous_Gateway_Id__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -6568,7 +6638,42 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mogli_SMS__Log__c.Mogli_SMS__Class__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Log__c.Mogli_SMS__Exception_Line_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Log__c.Mogli_SMS__Exception_Stack_Trace__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Log__c.Mogli_SMS__Exception_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Log__c.Mogli_SMS__Method__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mogli_SMS__Log__c.Mogli_SMS__Text__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Log__c.Mogli_SMS__Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Log__c.Mogli_SMS__User_Profile__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6648,12 +6753,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mogli_SMS__Registered_Gateway__c.Mogli_SMS__Web_Service_Class_Handler__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mogli_SMS__SMS_Template__c.Mogli_SMS__FormTemplate__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Mogli_SMS__SMS_Template__c.Mogli_SMS__Text__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__SMS_Template__c.Mogli_SMS__WhatsApp_Enabled__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6708,6 +6823,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mogli_SMS__SMS__c.Mogli_SMS__Message_SID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mogli_SMS__SMS__c.Mogli_SMS__Message__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -6718,7 +6838,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mogli_SMS__SMS__c.Mogli_SMS__Opportunity__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mogli_SMS__SMS__c.Mogli_SMS__Phone_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__SMS__c.Mogli_SMS__Published__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6739,6 +6869,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Mogli_SMS__SMS__c.Notification_Sent_To__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__SMS__c.Notification_Sent__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7263,6 +7398,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Date_Prospect__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Date_Registered__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -7378,6 +7518,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Is_Military_Military_Benefits__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Last_Campaign_Source__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -7399,6 +7544,31 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Lock_Documents_Missing__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Minor__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Mogli_SMS__Avatar_URL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Mogli_SMS__Default_Gateway__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Mogli_SMS__Mogli_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Mogli_SMS__Mogli_Opt_Out__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10074,6 +10244,36 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Test_Score__c.PTE_Written_Discourse__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Test_Score__c.PreACT_Composite_Score__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Test_Score__c.PreACT_English_Score__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Test_Score__c.PreACT_Mathematics_Score__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Test_Score__c.PreACT_Reading_Score__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Test_Score__c.PreACT_Science_Score__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Test_Score__c.PreACT_Writing_Score__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13244,8 +13444,4 @@
     <hasActivationRequired>false</hasActivationRequired>
     <label>Mobile App Upgrade</label>
     <license>Salesforce</license>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>LightningOnMobile</name>
-    </userPermissions>
 </PermissionSet>

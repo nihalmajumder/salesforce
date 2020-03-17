@@ -37,6 +37,9 @@
         <field>Opportunity.Current_Stage_Age__c</field>
     </columns>
     <columns>
+        <field>Opportunity.ActSix__c</field>
+    </columns>
+    <columns>
         <field>CON.ADDRESS2_CITY</field>
     </columns>
     <columns>

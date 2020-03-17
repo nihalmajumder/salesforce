@@ -9,7 +9,6 @@
     <tabs>standard-report</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Opportunity</tabs>
-    <tabs>APXT_CMM__Conga_Mail_Merge</tabs>
     <tabs>APXTConga4__Conga_Template__c</tabs>
     <tabs>APXT_CMQM__QuickMerge_Link__c</tabs>
 </CustomApplication>

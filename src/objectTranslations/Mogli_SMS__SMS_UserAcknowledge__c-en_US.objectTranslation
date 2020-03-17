@@ -3,7 +3,7 @@
     <fields>
         <label><!-- SMS --></label>
         <name>Mogli_SMS__SMS__c</name>
-        <relationshipLabel><!-- SMS_UserAcknowledges --></relationshipLabel>
+        <relationshipLabel><!-- SMS User Acknowledges --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- ViewedState --></label>

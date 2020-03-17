@@ -148,7 +148,7 @@
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
@@ -163,6 +163,7 @@
         <label>Activity Subject</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -174,6 +175,7 @@
         <externalId>false</externalId>
         <inlineHelpText>With this enabled, Conga Merge will automatically log an activity (based on the Log Activity Options) when you click to download Letters/Documents.</inlineHelpText>
         <label>Automatic Logging</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -184,6 +186,7 @@
         <externalId>false</externalId>
         <inlineHelpText>Enable this field to bypass the Mass Merge wizard and proceed directly to the Download page</inlineHelpText>
         <label>Bypass Wizard</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -195,6 +198,7 @@
         <label>Campaign Id</label>
         <length>15</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -206,6 +210,7 @@
         <externalId>false</externalId>
         <inlineHelpText>Enable this field to set the default output type to PDF</inlineHelpText>
         <label>Default to PDF?</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -215,6 +220,7 @@
         <externalId>false</externalId>
         <label>Description</label>
         <length>2000</length>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
@@ -228,6 +234,7 @@
         <label>Template Id</label>
         <length>15</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -240,6 +247,7 @@
         <label>Envelope Template Id</label>
         <length>15</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -253,6 +261,7 @@
         <precision>3</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
@@ -264,6 +273,7 @@
         <externalId>false</externalId>
         <inlineHelpText>Enable this field to force the output type to PDF</inlineHelpText>
         <label>Force Output as PDF?</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -275,6 +285,7 @@
         <label>Label Template Id</label>
         <length>15</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -314,6 +325,7 @@ Hyperlink( &quot;https://www.appextremes.com/apps/Conga/Welcome.aspx&quot;
 , IMAGE( &quot;https://www.appextremes.com/apps/Conga/Images/Launch.png&quot;, &quot;Launch Conga Merge&quot;) ) )</formula>
         <label>Launch</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -324,6 +336,7 @@ Hyperlink( &quot;https://www.appextremes.com/apps/Conga/Welcome.aspx&quot;
         <externalId>false</externalId>
         <label>Link Type</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -349,6 +362,7 @@ Hyperlink( &quot;https://www.appextremes.com/apps/Conga/Welcome.aspx&quot;
         <externalId>false</externalId>
         <inlineHelpText>Enable this field to store the merged body of the document in the Task record</inlineHelpText>
         <label>Store Body Text?</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -362,6 +376,7 @@ For example:
         <label>Other Parameters</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -374,6 +389,7 @@ For example:
         <label>Query Id 1</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -386,6 +402,7 @@ For example:
         <label>Query Id</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -399,6 +416,7 @@ For example:
         <label>Report Id(s)</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -410,6 +428,7 @@ For example:
         <label>Title</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -488,6 +507,24 @@ For example:
         <language>en_US</language>
     </listViews>
     <listViews>
+        <fullName>General</fullName>
+        <columns>NAME</columns>
+        <columns>APXT_CMQM__Title__c</columns>
+        <columns>APXT_CMQM__Description__c</columns>
+        <columns>APXT_CMQM__Activity_Subject__c</columns>
+        <columns>APXT_CMQM__Bypass_Wizard__c</columns>
+        <columns>APXT_CMQM__Automatic_Logging__c</columns>
+        <columns>APXT_CMQM__Launch__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APXT_CMQM__Title__c</field>
+            <operation>contains</operation>
+            <value>Legacy,Military</value>
+        </filters>
+        <label>General</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
         <fullName>Seminary</fullName>
         <columns>NAME</columns>
         <columns>APXT_CMQM__Launch__c</columns>
@@ -508,9 +545,11 @@ For example:
     <nameField>
         <displayFormat>CMQM-{0000}</displayFormat>
         <label>QuickMerge Name</label>
+        <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>QuickMerge Links</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
         <fullName>APXT_CMQM__MassMerge</fullName>
         <active>true</active>

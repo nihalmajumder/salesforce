@@ -965,6 +965,11 @@
         <default>false</default>
         <label>4-SPE</label>
     </customValue>
+    <customValue>
+        <fullName>2-LIC-T-ARTS</fullName>
+        <default>false</default>
+        <label>2-LIC-T-ARTS</label>
+    </customValue>
     <description>The list of available program codes</description>
     <masterLabel>Program Codes</masterLabel>
     <sorted>true</sorted>

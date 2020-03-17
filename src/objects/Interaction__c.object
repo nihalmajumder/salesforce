@@ -219,6 +219,17 @@
         <externalId>false</externalId>
         <inlineHelpText>The academic term a prospect is interested in.</inlineHelpText>
         <label>Academic Term</label>
+        <lookupFilter>
+            <active>false</active>
+            <errorMessage>Term is no longer active.</errorMessage>
+            <filterItems>
+                <field>Academic_Term__c.Term_has_ended__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </filterItems>
+            <infoMessage>Please select a current or future term.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Academic_Term__c</referenceTo>
         <relationshipLabel>Interactions</relationshipLabel>
         <relationshipName>Interactions</relationshipName>
@@ -1003,11 +1014,6 @@ TEXT(Academic_Program__r.Career__c))</formula>
                     <fullName>Account Register</fullName>
                     <default>false</default>
                     <label>Account Register</label>
-                </value>
-                <value>
-                    <fullName>Re-enrollment</fullName>
-                    <default>false</default>
-                    <label>Re-enrollment</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -6275,6 +6281,11 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                    <label>Prospect</label>
+                </value>
+                <value>
                     <fullName>Inquired</fullName>
                     <default>true</default>
                     <label>Inquired</label>
@@ -7764,10 +7775,14 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
         <columns>Interaction_Status__c</columns>
         <columns>Interaction_Source__c</columns>
         <columns>Contact__c</columns>
-        <columns>Opportunity_Name__c</columns>
+        <columns>Opportunity__c</columns>
         <columns>Lead__c</columns>
         <columns>CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
+        <columns>High_School_Graduation_Year__c</columns>
+        <columns>Birthdate__c</columns>
+        <columns>Age__c</columns>
+        <columns>Email__c</columns>
+        <filterScope>Mine</filterScope>
         <label>All Interactions</label>
     </listViews>
     <listViews>
@@ -7801,23 +7816,6 @@ IF (Academic_Term__r.Name = &apos;&apos;,&apos;&apos;,&apos; - &apos; + Academic
             <value>New</value>
         </filters>
         <label>Interaction Status: New</label>
-    </listViews>
-    <listViews>
-        <fullName>Today_s_Interactions</fullName>
-        <columns>NAME</columns>
-        <columns>Contact__c</columns>
-        <columns>Email__c</columns>
-        <columns>Opportunity__c</columns>
-        <columns>Lead_Source__c</columns>
-        <columns>Source_Detail__c</columns>
-        <columns>Interaction_Status__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>TODAY</value>
-        </filters>
-        <label>Today&apos;s Interactions</label>
     </listViews>
     <nameField>
         <displayFormat>{YYYY}{MM}{DD}-{0000000}</displayFormat>

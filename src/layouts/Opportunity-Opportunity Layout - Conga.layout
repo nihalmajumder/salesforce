@@ -47,6 +47,10 @@
                 <behavior>Edit</behavior>
                 <field>Deferred_Acceptance__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_Prospect__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

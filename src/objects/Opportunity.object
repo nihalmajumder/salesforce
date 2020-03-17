@@ -171,6 +171,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Wait Listed</fullName>
             <default>false</default>
         </values>
@@ -200,6 +204,10 @@
         </values>
         <values>
             <fullName>Inquired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
             <default>false</default>
         </values>
         <values>
@@ -359,6 +367,7 @@ Help Text</description>
         <label>Academic Program</label>
         <lookupFilter>
             <active>true</active>
+            <errorMessage>Selected value is not a valid Program.</errorMessage>
             <filterItems>
                 <field>Program__c.RecordType.Name</field>
                 <operation>equals</operation>
@@ -1691,6 +1700,17 @@ TEXT(School_College__c) = &apos;Undergraduate&apos;,
         <type>DateTime</type>
     </fields>
     <fields>
+        <fullName>Date_Prospect__c</fullName>
+        <description>Date an Opportunity was set to a Prospect Stage</description>
+        <externalId>false</externalId>
+        <label>Date Prospect</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>Date_Registered__c</fullName>
         <externalId>false</externalId>
         <label>Date Registered</label>
@@ -2077,6 +2097,17 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Is_Military_Military_Benefits__c</fullName>
+        <description>Checks to see if the &quot;Is Military / Military Benefits&quot; field on the contact is set to Yes</description>
+        <externalId>false</externalId>
+        <formula>ISPICKVAL(Contact__r.Is_Veteran__c, &quot;Yes&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Military / Military Benefits</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Last_Campaign_Source__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -2145,6 +2176,70 @@ IF(NOT(ISBLANK(Academic_Program__c)),(  Academic_Program__r.Department__r.Name  
         <description>If checked, apex will skip this Opportunity and not overwrite the Documents Missing field.</description>
         <externalId>false</externalId>
         <label>Lock Documents Missing</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Minor__c</fullName>
+        <description>Selected program for a Minor, mostly used for CAPS applicants</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Program selected as a Minor</inlineHelpText>
+        <label>Minor</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mogli_SMS__Avatar_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mogli Avatar URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Mogli_SMS__Default_Gateway__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Gateway</label>
+        <referenceTo>Mogli_SMS__Gateway__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mogli_SMS__Mogli_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Mogli Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mogli_SMS__Mogli_Opt_Out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mogli Opt Out</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -2840,6 +2935,14 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
                 <controllingFieldValue>File Closed</controllingFieldValue>
                 <valueName>Unknown - File Close</valueName>
             </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>File Closed</controllingFieldValue>
+                <valueName>Prospect - File Closed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Prospect</controllingFieldValue>
+                <valueName>Prospect</valueName>
+            </valueSettings>
         </valueSet>
     </fields>
     <fields>
@@ -2858,6 +2961,7 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <description>Calculates a numerical value to more easily compare status</description>
         <externalId>false</externalId>
         <formula>CASE( TEXT(Stage_Detail__c),
+&apos;Prospect&apos;, 5,
 &apos;Inquired&apos;, 10,
 &apos;Pre-Applied&apos;, 15,
 &apos;App Started&apos;, 20,
@@ -3525,9 +3629,14 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <columns>OPPORTUNITY.CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>Stage_Detail__c</field>
-            <operation>equals</operation>
-            <value>Inquired</value>
+            <field>Academic_Program__c</field>
+            <operation>contains</operation>
+            <value>Special Education</value>
+        </filters>
+        <filters>
+            <field>Academic_Program__c</field>
+            <operation>contains</operation>
+            <value>B.A</value>
         </filters>
         <label>All Opportunities</label>
     </listViews>
@@ -4480,6 +4589,14 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
             </values>
             <values>
                 <fullName>Pre-Applied - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect - File Closed</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5653,6 +5770,14 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Registered</fullName>
                 <default>false</default>
             </values>
@@ -6112,6 +6237,7 @@ The second line makes sure that it is moving to accepted. Otherwise its somethin
         <errorConditionFormula>AND(
     ISPICKVAL(StageName, &quot;Accepted&quot;),		 
     NOT(ISPICKVAL(PRIORVALUE(StageName), &quot;Accepted&quot;)),
+				NOT(ISPICKVAL(PRIORVALUE(StageName), &quot;Wait Listed&quot;)),
     AND(
        PRIORVALUE(Status_Text__c) != &quot;Applied:App Completed&quot;,
        NOT(ISPICKVAL(PRIORVALUE(StageName), &quot;File Closed&quot;))
@@ -6146,8 +6272,7 @@ The second line makes sure that it is moving to Confirmed. Otherwise it&apos;s s
         <description>Counselors can only edit this field while the opportunity is at an Inquired:Inquired status.</description>
         <errorConditionFormula>($Profile.Name = &quot;Admissions - Post-Trad&quot; || $Profile.Name = &quot;Admissions - CAS&quot;) 
 &amp;&amp; 
-    (TEXT(Stage_Detail__c) &lt;&gt; &quot;Inquired&quot; &amp;&amp; TEXT(Stage_Detail__c) &lt;&gt; &quot;Pre-Applied&quot;
-    ) &amp;&amp;  
+    (Stage_Value__c &gt;= 20) &amp;&amp;  
     (ISCHANGED(Academic_Program__c) || ISCHANGED(Academic_Term__c) || ISCHANGED( School_College__c )
     )</errorConditionFormula>
         <errorMessage>Program, Term, and School can only be changed by Counselors when the applicant is Inquired.</errorMessage>
@@ -6281,6 +6406,28 @@ COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. 
         <showsLocation>false</showsLocation>
         <showsStatus>false</showsStatus>
         <url>/apex/ApplicationReview?applicationId={!Opportunity.ApplicationId__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Compose</fullName>
+        <availability>online</availability>
+        <description>test compose</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Compose</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?serverUrl={!API.Partner_Server_URL_370}
+&amp;id={!Opportunity.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>Enrollment_Checklist</fullName>

@@ -36,6 +36,10 @@
                 <behavior>Readonly</behavior>
                 <field>X18_digit_User_ID__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Counselor_Website_Profile__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -49,19 +53,11 @@
                 <behavior>Required</behavior>
                 <field>Email</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Address</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Phone</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>MobilePhone</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

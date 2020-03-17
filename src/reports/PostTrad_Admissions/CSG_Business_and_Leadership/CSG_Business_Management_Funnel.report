@@ -7,9 +7,6 @@
         <field>Opportunity$Name</field>
     </columns>
     <columns>
-        <field>Opportunity$StageName</field>
-    </columns>
-    <columns>
         <field>Opportunity$Stage_Detail__c</field>
     </columns>
     <columns>
@@ -33,7 +30,7 @@
             <column>Opportunity$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Fall 2019,spring 2020</value>
+            <value>Summer 2019,Fall 2019,Spring 2020</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
@@ -41,6 +38,11 @@
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Opportunity$Academic_Term__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$StageName</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>CSG_Business Management Funnel</name>

@@ -308,7 +308,7 @@ Stage__c=In Progress</inlineHelpText>
         <columns>LAST_UPDATE</columns>
         <columns>APXTConga4__Template_Group__c</columns>
         <columns>APXTConga4__Template_Type__c</columns>
-        <columns>UPDATEDBY_USER</columns>
+        <columns>APXTConga4__Label_Template_Use_Detail_Data__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
         <language>en_US</language>

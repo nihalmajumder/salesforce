@@ -747,6 +747,27 @@
         <label>All</label>
     </listViews>
     <listViews>
+        <fullName>Graduate</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Requirement__c</columns>
+        <columns>Student_Type__c</columns>
+        <columns>School_College__c</columns>
+        <columns>Degree_Type__c</columns>
+        <columns>Instructions__c</columns>
+        <columns>Citizenship__c</columns>
+        <columns>Residency__c</columns>
+        <columns>Display_Order__c</columns>
+        <columns>Allow_Text_Entry__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>School_College__c</field>
+            <operation>equals</operation>
+            <value>Graduate</value>
+        </filters>
+        <label>Graduate</label>
+    </listViews>
+    <listViews>
         <fullName>Reference_Requirements</fullName>
         <columns>NAME</columns>
         <columns>RECORDTYPE</columns>
@@ -779,6 +800,10 @@
         <label>Document Upload</label>
         <picklistValues>
             <picklist>Admissions_Document_Type__c</picklist>
+            <values>
+                <fullName>ACT or SAT official score</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>BUILD Application</fullName>
                 <default>false</default>
@@ -820,6 +845,14 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>BUILD Physical Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BUILD Physical%2FSpecial Olympics Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>BUILD Release of Information %28Guardians%29</fullName>
                 <default>false</default>
             </values>
@@ -844,6 +877,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Earned BA or BS degree from a regionally accredited or internationally recognized institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Education License</fullName>
                 <default>false</default>
             </values>
@@ -853,6 +890,10 @@
             </values>
             <values>
                 <fullName>Family of Origin Paper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green Card</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -868,11 +909,23 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Immunization Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Int%27l Student Transfer Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Interview</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Ministry Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minnesota Content Standards Grid</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -900,11 +953,23 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Questionnaire</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Resume</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Sponsor%27s Letter of Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Statement of Purpose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript Evaluation</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1693,6 +1758,10 @@
             </values>
             <values>
                 <fullName>2-LIC-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-ARTS</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2951,6 +3020,10 @@
             </values>
             <values>
                 <fullName>2-LIC-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-ARTS</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4216,6 +4289,10 @@
             </values>
             <values>
                 <fullName>2-LIC-S-EBDG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-LIC-T-ARTS</fullName>
                 <default>false</default>
             </values>
             <values>

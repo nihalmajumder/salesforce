@@ -231,6 +231,7 @@
         <columns>NAME</columns>
         <columns>Academic_Interest__c</columns>
         <columns>Program__c</columns>
+        <columns>School_College__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

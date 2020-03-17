@@ -85,6 +85,24 @@
         <name>Mogli_SMS__WebHookIdentifier__c</name>
     </fields>
     <fields>
+        <help><!-- Email to notify when this gateway is texted. --></help>
+        <label><!-- Notification Email --></label>
+        <name>Notification_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- How should the User be notified of a new text? --></help>
+        <label><!-- Notification User Preference --></label>
+        <name>Notification_User_Preference__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Notification</masterLabel>
+            <translation><!-- Notification --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Previous Gateway Id --></label>
         <name>Previous_Gateway_Id__c</name>
     </fields>
@@ -98,17 +116,6 @@
         <name>User__c</name>
         <relationshipLabel><!-- Gateways --></relationshipLabel>
     </fields>
-    <layouts>
-        <layout>Custom Gateway Layout</layout>
-        <sections>
-            <label><!-- Custom Gateway --></label>
-            <section>Custom Gateway</section>
-        </sections>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
     <layouts>
         <layout>Custom Layout</layout>
         <sections>
@@ -125,6 +132,10 @@
         <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notifications --></label>
+            <section>Notifications</section>
         </sections>
         <sections>
             <label><!-- Twilio --></label>
@@ -148,6 +159,10 @@
         <description><!-- Twilio Gateway --></description>
         <label><!-- Twilio --></label>
         <name>Mogli_SMS__Twilio</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- WhatsApp --></label>
+        <name>Mogli_SMS__WhatsApp</name>
     </recordTypes>
     <validationRules>
         <errorMessage><!-- You must enter a Twilio Notify Service SID in order to use Twilio Notify Service. --></errorMessage>

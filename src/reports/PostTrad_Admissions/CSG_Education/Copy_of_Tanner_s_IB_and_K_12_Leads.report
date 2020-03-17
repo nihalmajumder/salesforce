@@ -4,7 +4,7 @@
         <field>Contact$Name</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$StageName</field>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
@@ -24,7 +24,7 @@
             <column>Contact.Opportunities__r$Academic_Program__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>education k-12,International bacc</value>
+            <value>education k-12,International bacc,Special Education: ABS Concentration</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Term__c</column>
@@ -44,6 +44,12 @@
             <operator>notContain</operator>
             <value>doctor</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Filed closed,inquired</value>
+        </criteriaItems>
         <language>en_US</language>
     </filter>
     <format>Tabular</format>
@@ -57,6 +63,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.Opportunities__r$Academic_Term__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

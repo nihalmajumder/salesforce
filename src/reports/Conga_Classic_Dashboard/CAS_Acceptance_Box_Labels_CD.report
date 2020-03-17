@@ -33,7 +33,7 @@
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Accepted,Fee Paid</value>
+            <value>Accepted,Fee Paid,Enrolled</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Communication_Grade_Level__c</column>

@@ -356,7 +356,6 @@
         <columns>hed__Object__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>hed__All_Main_Fields</fullName>

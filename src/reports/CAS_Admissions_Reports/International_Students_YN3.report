@@ -26,7 +26,14 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+    </columns>
+    <columns>
         <field>Contact.Opportunities__r$Contact__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Opportunities__r$Current_Stage_Age__c</field>
     </columns>
     <columns>
         <field>Contact$Preferred_Name_Calculated__c</field>
@@ -35,7 +42,7 @@
         <field>Contact$hed__AlternateEmail__c</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+        <field>Contact.Opportunities__r$Name</field>
     </columns>
     <columns>
         <field>Contact$MailingCity</field>
@@ -63,7 +70,7 @@
             <column>Contact.Opportunities__r$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Fall 2019 - CAS</value>
+            <value>Spring 2020 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact$Citizenship__c</column>
@@ -85,7 +92,7 @@
         <field>Contact$MailingCountryCode</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Fall 19 International</name>
+    <name>Spring 20 International</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -95,8 +102,6 @@
     <showDetails>true</showDetails>
     <showGrandTotal>false</showGrandTotal>
     <showSubTotals>false</showSubTotals>
-    <sortColumn>Contact.Opportunities__r$Stage_Detail__c</sortColumn>
-    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

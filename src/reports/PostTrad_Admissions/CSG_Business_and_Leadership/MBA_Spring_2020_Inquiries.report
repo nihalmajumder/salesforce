@@ -43,6 +43,11 @@
         <field>Contact.Opportunities__r$Stage_Detail__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Admission_Block__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>MBA Spring 2020 Funnel</name>
     <params>
         <name>co</name>

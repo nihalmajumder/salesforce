@@ -7,10 +7,8 @@
         <field>Opportunity$Name</field>
     </columns>
     <columns>
-        <field>Opportunity$Academic_Program__c</field>
-    </columns>
-    <columns>
-        <field>Opportunity$StageName</field>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity$Likely_to_Enroll__c</field>
     </columns>
     <filter>
         <criteriaItems>
@@ -23,7 +21,7 @@
             <column>Opportunity$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Fall 2019,spring 2020</value>
+            <value>spring 2020,summer 2020,fall 2020</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$StageName</column>
@@ -41,15 +39,15 @@
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$Likely_to_Enroll__c</field>
+        <field>Opportunity$Stage_Detail__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$Stage_Detail__c</field>
+        <field>Opportunity$Academic_Program__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Copy of CSG_Dual DNP Funnel</name>
+    <name>DNP Funnel</name>
     <params>
         <name>co</name>
         <value>1</value>

@@ -54,6 +54,10 @@
         <relationshipLabel><!-- SMS --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Message SID --></label>
+        <name>Mogli_SMS__Message_SID__c</name>
+    </fields>
+    <fields>
         <label><!-- Message --></label>
         <name>Mogli_SMS__Message__c</name>
     </fields>
@@ -62,8 +66,17 @@
         <name>Mogli_SMS__Offline__c</name>
     </fields>
     <fields>
+        <label><!-- Opportunity --></label>
+        <name>Mogli_SMS__Opportunity__c</name>
+        <relationshipLabel><!-- SMS --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Phone Number --></label>
         <name>Mogli_SMS__Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Published --></label>
+        <name>Mogli_SMS__Published__c</name>
     </fields>
     <fields>
         <label><!-- Scheduled Delivery --></label>
@@ -98,13 +111,18 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- isBatchTransaction --></label>
+        <label><!-- Is Batch Transaction --></label>
         <name>Mogli_SMS__isBatchTransaction__c</name>
     </fields>
     <fields>
         <label><!-- Notification Sent To --></label>
         <name>Notification_Sent_To__c</name>
         <relationshipLabel><!-- SMS --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Whether the Bethel SMS: Trigger has run and notified the Gateway User/Email of this SMS. --></help>
+        <label><!-- Notification Sent --></label>
+        <name>Notification_Sent__c</name>
     </fields>
     <fields>
         <label><!-- Previous_Id --></label>

@@ -209,12 +209,6 @@
     <label>Assignment Rule Entry</label>
     <listViews>
         <fullName>All</fullName>
-        <columns>NAME</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>Assignment_Rule__c</columns>
-        <columns>Filter_Logic__c</columns>
-        <columns>Order__c</columns>
-        <columns>RECORDTYPE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

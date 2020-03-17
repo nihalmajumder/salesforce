@@ -71,4 +71,15 @@
             <allInternalUsers></allInternalUsers>
         </sharedFrom>
     </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Opportunity_Share_with_Faculty</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Opportunity: Share with Faculty</label>
+        <sharedTo>
+            <group>Faculty</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Admissions_CAS</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
 </SharingRules>

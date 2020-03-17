@@ -3,15 +3,17 @@
     <enableComplianceBcc>false</enableComplianceBcc>
     <enableEmailConsentManagement>false</enableEmailConsentManagement>
     <enableEmailSenderIdCompliance>false</enableEmailSenderIdCompliance>
-    <enableEmailSpfCompliance>true</enableEmailSpfCompliance>
+    <enableEmailSpfCompliance>false</enableEmailSpfCompliance>
     <enableEmailToSalesforce>false</enableEmailToSalesforce>
     <enableEmailWorkflowApproval>false</enableEmailWorkflowApproval>
     <enableEnhancedEmailEnabled>true</enableEnhancedEmailEnabled>
-    <enableHandleBouncedEmails>true</enableHandleBouncedEmails>
+    <enableHandleBouncedEmails>false</enableHandleBouncedEmails>
     <enableHtmlEmail>true</enableHtmlEmail>
-    <enableListEmailLogActivities>true</enableListEmailLogActivities>
+    <enableListEmailLogActivities>false</enableListEmailLogActivities>
     <enableResendBouncedEmails>false</enableResendBouncedEmails>
     <enableRestrictTlsToDomains>false</enableRestrictTlsToDomains>
+    <enableSendViaExchangePref>false</enableSendViaExchangePref>
+    <enableSendViaGmailPref>false</enableSendViaGmailPref>
     <enableSetMatchingEmailsOnBounce>false</enableSetMatchingEmailsOnBounce>
     <enableUseOrgFootersForExtTrans>false</enableUseOrgFootersForExtTrans>
     <sendEmailsEvenWhenAutomationUpdatesSameRecord>false</sendEmailsEvenWhenAutomationUpdatesSameRecord>

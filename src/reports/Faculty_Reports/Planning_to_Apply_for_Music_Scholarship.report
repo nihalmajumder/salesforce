@@ -4,6 +4,9 @@
         <field>Contact$Name</field>
     </columns>
     <columns>
+        <field>Contact$Banner_Id__c</field>
+    </columns>
+    <columns>
         <field>Contact.Opportunities__r$Academic_Program__c</field>
     </columns>
     <columns>

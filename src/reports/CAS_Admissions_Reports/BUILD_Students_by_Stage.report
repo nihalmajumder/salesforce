@@ -48,6 +48,12 @@
     <columns>
         <field>Contact$HomePhone</field>
     </columns>
+    <columns>
+        <field>Contact$hed__Gender__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Secondary_Email__c</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>
@@ -90,6 +96,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>false</showSubTotals>
+    <sortColumn>Contact$hed__Gender__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

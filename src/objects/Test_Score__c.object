@@ -843,6 +843,90 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>PreACT_Composite_Score__c</fullName>
+        <description>PreACT Composite Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PreACT Composite Score</inlineHelpText>
+        <label>PreACT Composite Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PreACT_English_Score__c</fullName>
+        <description>PreACT English Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PreACT English Score</inlineHelpText>
+        <label>PreACT English Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PreACT_Mathematics_Score__c</fullName>
+        <description>PreACT Mathematics Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PreACT Mathematics Score</inlineHelpText>
+        <label>PreACT Mathematics Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PreACT_Reading_Score__c</fullName>
+        <description>PreACT Reading Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PreACT Reading Score</inlineHelpText>
+        <label>PreACT Reading Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PreACT_Science_Score__c</fullName>
+        <description>PreACT Science Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PreACT Science Score</inlineHelpText>
+        <label>PreACT Science Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PreACT_Writing_Score__c</fullName>
+        <description>PreACT Writing Score</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PreACT Writing Score</inlineHelpText>
+        <label>PreACT Writing Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Previous_Id__c</fullName>
         <description>Specifies the previous id if any</description>
         <externalId>true</externalId>
@@ -1731,6 +1815,73 @@
         </picklistValues>
     </recordTypes>
     <recordTypes>
+        <fullName>PreACT</fullName>
+        <active>true</active>
+        <description>Record type for an PreACT test scores</description>
+        <label>PreACT</label>
+        <picklistValues>
+            <picklist>Document_Status__c</picklist>
+            <values>
+                <fullName>Conditional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mandatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waived</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status_Description__c</picklist>
+            <values>
+                <fullName>Not Yet Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Official</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Official%2C not final</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C open envelope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C received by email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C score on transcript</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unofficial%2C see notes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Test_Type__c</picklist>
+            <values>
+                <fullName>PreACT</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
         <fullName>SAT</fullName>
         <active>true</active>
         <compactLayoutAssignment>Test_Score_Compact_Layout_SAT</compactLayoutAssignment>
@@ -1872,7 +2023,7 @@
     </recordTypes>
     <recordTypes>
         <fullName>Test_for_Credit</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Tests such as AP and CLEP</description>
         <label>Test for Credit</label>
         <picklistValues>

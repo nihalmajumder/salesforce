@@ -17,10 +17,10 @@
             <value>BUILD,PSEO</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Contact.Opportunities__r$Application__c.Has_Family_Attended__c</column>
+            <column>Contact$Is_Legacy__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Yes,Y</value>
+            <value>Yes</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

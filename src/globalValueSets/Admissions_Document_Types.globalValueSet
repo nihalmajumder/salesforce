@@ -226,6 +226,11 @@
         <label>BUILD Guardianship or Power of Attorney</label>
     </customValue>
     <customValue>
+        <fullName>Visa</fullName>
+        <default>false</default>
+        <label>Visa</label>
+    </customValue>
+    <customValue>
         <fullName>1-134 Affidavit of Support Form (if US sponsored)</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -920,12 +925,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Two Professional References</label>
-    </customValue>
-    <customValue>
-        <fullName>Visa</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Visa</label>
     </customValue>
     <customValue>
         <fullName>BUILD Transcript(s) Received</fullName>

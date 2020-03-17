@@ -543,14 +543,12 @@ WARNING: This will expose some of your emails to the Unresolved Items Agent.</in
     <listViews>
         <fullName>Internal_Users_Active</fullName>
         <columns>FULL_NAME</columns>
-        <columns>CORE.USERS.ALIAS</columns>
         <columns>CORE.USERS.USERNAME</columns>
-        <columns>CORE.USERS.LAST_LOGIN</columns>
-        <columns>CORE.USER_ROLE.NAME</columns>
-        <columns>CORE.USERS.ACTIVE</columns>
-        <columns>CORE.PROFILE.NAME</columns>
         <columns>CORE.USERS.SAML_SUBJECT</columns>
-        <columns>TIMEZONE</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>X18_digit_User_ID__c</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CORE.PROFILE.NAME</field>
@@ -563,6 +561,29 @@ WARNING: This will expose some of your emails to the Unresolved Items Agent.</in
             <value>1</value>
         </filters>
         <label>Internal Users (Active)</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Recently_Created</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.SAML_SUBJECT</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>X18_digit_User_ID__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>notEqual</operation>
+            <value>Applicant Community Login User</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Recently Created</label>
         <language>en_US</language>
     </listViews>
     <searchLayouts>

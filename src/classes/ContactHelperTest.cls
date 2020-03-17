@@ -10,7 +10,6 @@ public class ContactHelperTest {
     static void testSetup(){
         Contact contact = new Contact();
         contact.LastName = 'L-Test';
-        contact.Banner_Id__c = 'TEST12345';
         insert contact;
     }
     
@@ -45,18 +44,6 @@ public class ContactHelperTest {
         idList.addAll(result.keySet());
         System.assert(!result.isEmpty());
         System.assertEquals(idList[0], contact.Id);
-    }
-
-    static testMethod void getContactFromBethelIdTest(){
-        Contact theContact = [SELECT Id, Banner_Id__c FROM Contact];
-
-        Contact result = null;
-
-        test.startTest();
-        result = ContactHelper.getContactFromBethelId(theContact.Banner_Id__c);
-        test.stopTest();
-
-        System.assertEquals(result.Id, theContact.Id);
     }
     
 }

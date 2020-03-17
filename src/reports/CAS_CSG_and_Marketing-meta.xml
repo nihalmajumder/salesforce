@@ -6,6 +6,11 @@
         <sharedToType>User</sharedToType>
     </folderShares>
     <folderShares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>makayla-jorgensen@bethel.edu</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
         <accessLevel>Manage</accessLevel>
         <sharedTo>timothy-hammer@bethel.edu</sharedTo>
         <sharedToType>User</sharedToType>

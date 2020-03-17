@@ -3,6 +3,16 @@
     <customSettingsType>Hierarchy</customSettingsType>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>Instance_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Instance URL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Public_Domain_URL__c</fullName>
         <description>The public domain of the current SF instance.</description>
         <externalId>false</externalId>

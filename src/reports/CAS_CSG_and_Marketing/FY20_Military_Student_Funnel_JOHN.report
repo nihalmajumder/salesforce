@@ -29,7 +29,7 @@
             <column>Contact.Opportunities__r$School_College__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Adult Undergraduate,Graduate,Seminary</value>
+            <value>Adult Undergraduate,Graduate,Seminary,Undergraduate</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
@@ -41,7 +41,7 @@
             <column>Contact.Opportunities__r$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Summer 2019,Fall 2019,Spring 2020</value>
+            <value>Summer 2019,Fall 2019,Spring 2020,Summer 2020,Fall 2020</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact$Name</column>

@@ -9,6 +9,9 @@
     <columns>
         <field>Opportunity$Stage_Detail__c</field>
     </columns>
+    <columns>
+        <field>Opportunity$Attributes__c</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Opportunity$StageName</column>
@@ -38,19 +41,19 @@
             <column>Opportunity$Academic_Term__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>fall 2019</value>
+            <value>spring 2020</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$Academic_Program__c</field>
+        <field>Opportunity$School_College__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity$School_College__c</field>
+        <field>Opportunity$Academic_Program__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>

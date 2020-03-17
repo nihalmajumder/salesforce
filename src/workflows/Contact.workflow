@@ -47,6 +47,16 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Mogli_Opt_Out</fullName>
+        <description>Set Mogli_SMS__Mogli_Opt_Out__c to True</description>
+        <field>Mogli_SMS__Mogli_Opt_Out__c</field>
+        <literalValue>1</literalValue>
+        <name>Mogli Opt Out</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Mogli_SMS__UpdateMogliNumber</fullName>
         <description>Update Mogli Number based on value in Mobile field (remove all non-numerical values)</description>
         <field>Mogli_SMS__Mogli_Number__c</field>
@@ -63,11 +73,18 @@ SUBSTITUTE(MobilePhone, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot
         <fullName>Mogli_SMS__Update_Mogli_Number_with_WITH_PLUS</fullName>
         <description>Update Mogli Number based on value in Mobile field (remove all non-numerical values) WITH PLUS added to front of Mogli Number</description>
         <field>Mogli_SMS__Mogli_Number__c</field>
-        <formula>&quot;+1&quot;&amp; SUBSTITUTE(
-       SUBSTITUTE(
-        SUBSTITUTE(
-         SUBSTITUTE(
-          SUBSTITUTE(MobilePhone , &quot;(&quot;, &quot;&quot;),&quot;)&quot;,&quot;&quot;),&quot;-&quot;,&quot;&quot;),&quot; &quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;)</formula>
+        <formula>TRIM(SUBSTITUTE(SUBSTITUTE(
+IF(ISBLANK(TRIM(MobilePhone)),
+&quot;&quot;,
+IF(BEGINS(MobilePhone, &apos;+1&apos;),
+&quot;+&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( MobilePhone, &quot;(&quot;,&quot;&quot;), &quot;)&quot;,&quot;&quot;), &quot;-&quot;,&quot;&quot;), &quot; &quot;,&quot;&quot;), &quot;+&quot;,&quot;&quot;), &quot;.&quot;,&quot;&quot;),
+IF(BEGINS(MobilePhone, &apos;1&apos;),
+&quot;+&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( MobilePhone, &quot;(&quot;,&quot;&quot;), &quot;)&quot;,&quot;&quot;), &quot;-&quot;,&quot;&quot;), &quot; &quot;,&quot;&quot;), &quot;+&quot;,&quot;&quot;), &quot;.&quot;,&quot;&quot;),
+&quot;+1&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( MobilePhone, &quot;(&quot;,&quot;&quot;), &quot;)&quot;,&quot;&quot;), &quot;-&quot;,&quot;&quot;), &quot; &quot;,&quot;&quot;), &quot;+&quot;,&quot;&quot;), &quot;.&quot;,&quot;&quot;)))
+),
+&apos;‎&apos;, &apos;&apos;),
+&apos;‎&apos;, &apos;&apos;)
+)</formula>
         <name>Update Mogli Number with WITH PLUS</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
@@ -122,8 +139,12 @@ SUBSTITUTE(MobilePhone, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <description>Users other than Oracle Integration can only set this field to &quot;Overridden&quot; or &quot;Needs Cleaning&quot;.</description>
-        <formula>ISCHANGED(Cleaned_Address__c) &amp;&amp; $User.FirstName != &quot;Oracle&quot; &amp;&amp; $User.LastName != &quot;Integration&quot; &amp;&amp; NOT(ISPICKVAL(Cleaned_Address__c, &quot;Overridden&quot;))</formula>
+        <description>Users other than Oracle Integration User can only set this field to &quot;Overridden&quot; or &quot;Needs Cleaning&quot;.</description>
+        <formula>ISCHANGED(Cleaned_Address__c) 
+&amp;&amp; $User.FirstName != &quot;Oracle&quot;
+&amp;&amp; $User.LastName != &quot;Integration&quot;
+&amp;&amp; $User.ProfileId != &quot;00e5A000001fRDX&quot;
+&amp;&amp; NOT(ISPICKVAL(Cleaned_Address__c, &quot;Overridden&quot;))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -134,7 +155,13 @@ SUBSTITUTE(MobilePhone, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot
         </actions>
         <active>true</active>
         <description>When someone other than the Jitterbit User updates an address on the Contact, set the &quot;Address Has Been Cleaned&quot; field to &quot;Needs Cleaning&quot;.</description>
-        <formula>ISCHANGED(MailingAddress) &amp;&amp;   NOT(ISPICKVAL(Cleaned_Address__c, &quot;Overridden&quot;)) &amp;&amp;  $User.FirstName != &quot;Oracle&quot; &amp;&amp; $User.LastName != &quot;Integration&quot;</formula>
+        <formula>ISCHANGED(MailingAddress) 
+
+&amp;&amp;   NOT(ISPICKVAL(Cleaned_Address__c, &quot;Overridden&quot;)) 
+
+&amp;&amp;  $User.FirstName != &quot;Oracle&quot; 
+
+&amp;&amp; $User.LastName != &quot;Integration&quot;</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -190,11 +217,8 @@ SUBSTITUTE(MobilePhone, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <criteriaItems>
-            <field>Contact.MobilePhone</field>
-            <operation>notEqual</operation>
-        </criteriaItems>
         <description>Update Mogli Number based on value in Mobile field (remove all non-numerical values) WITH PLUS added to front of Mogli Number</description>
+        <formula>ISBLANK(Mogli_SMS__Mogli_Number__c) || ISCHANGED(MobilePhone)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

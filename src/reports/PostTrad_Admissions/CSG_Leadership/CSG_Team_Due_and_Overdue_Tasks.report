@@ -53,7 +53,7 @@
             <column>Opportunity.Activities$Owner</column>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>buzzell,balk,boike,marvin,Laura Grafsky,Alexa,Fiona,Janna,Shatera,Taylor Burgraff,Sean Ulrikson,Adam Dommeyer,Brandon Sebey,Christine Holman,Ellyn Lluch,Erica Garrett,Erica Hering,Kasin Lewicki,Kate Gunderson,Kayla Clint,Mark Blaede,Tim Van De Walker</value>
+            <value>Kue,Rask,Thompson,buzzell,balk,boike,marvin,Laura Grafsky,Alexa,Fiona,Janna,Shatera,Taylor Burgraff,Sean Ulrikson,Adam Dommeyer,Brandon Sebey,Christine Holman,Ellyn Lluch,Erica Garrett,Erica Hering,Kasin Lewicki,Kate Gunderson,Kayla Clint,Mark Blaede,Tim Van De Walker</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

@@ -1,25 +1,13 @@
-import { LightningElement, api, track, wire } from 'lwc';
-import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
+import { LightningElement, api, track } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
-import STAGE_VALUE_FIELD from '@salesforce/schema/Opportunity.Stage_Value__c';
 import cloneOpportunity from '@salesforce/apex/OpportunityCloneController.cloneOpportunity'
 import updateApplication from '@salesforce/apex/OpportunityCloneController.updateApplication'
 
 export default class OpportunityClone extends NavigationMixin(LightningElement) {
    @api recordId;
    @track error;
-   @track stage_value;
    @track clonedOpportunity;
    errorMessage;
-
-    @wire(getRecord, { recordId: '$recordId', fields: [STAGE_VALUE_FIELD]})
-    wireRec({ error, data }) {
-        if (error) {
-            this.error = error;
-        } else if (data) {
-            this.stage_value = data.fields.Stage_Value__c.value;
-        }
-    }
 
     get today(){
         var d = new Date();
@@ -28,11 +16,6 @@ export default class OpportunityClone extends NavigationMixin(LightningElement) 
 
     get true_boolean(){
         return true;
-    }
-
-    get accepeted_or_beyond(){
-        // 40 is Accepted:Accepted
-        return this.stage_value >= 40;
     }
 
    handleSubmit(event) {

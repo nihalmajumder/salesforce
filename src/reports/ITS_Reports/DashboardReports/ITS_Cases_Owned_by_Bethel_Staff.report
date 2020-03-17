@@ -83,7 +83,7 @@
             <column>OWNER</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>ITS - Requests,ITS - Data Team,Student Success,Data Migration,Matthew Steiner,Todd Mitchell,ITS - Processing</value>
+            <value>ITS - Requests,ITS - Data Team,Student Success,Data Migration,Matthew Steiner,Todd Mitchell,ITS - Processing,Jennifer Tweed</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

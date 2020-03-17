@@ -10,9 +10,6 @@
         <field>Contact.Opportunities__r$Academic_Program__c</field>
     </columns>
     <columns>
-        <field>Contact.Opportunities__r$Academic_Term__c</field>
-    </columns>
-    <columns>
         <field>Contact.Opportunities__r$Name</field>
     </columns>
     <columns>
@@ -32,12 +29,6 @@
     </columns>
     <filter>
         <criteriaItems>
-            <column>Contact.Opportunities__r$Academic_Term__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>Fall 2020 - CAS</value>
-        </criteriaItems>
-        <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
@@ -47,11 +38,22 @@
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>App Started</value>
+            <value>Inquired,Pre-Applied,App Started,App Submitted,App Completed,Accepted,Fee Paid,Fee Waived,Registered,Enrolled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Academic_Term__c.Term_Code__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>202111</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>
-    <format>Tabular</format>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Academic_Term__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>BUILD Apps 2020</name>
     <params>
         <name>co</name>
@@ -62,6 +64,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.Opportunities__r$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Contact$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

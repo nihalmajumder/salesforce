@@ -54,6 +54,7 @@
         <value>1</value>
     </params>
     <reportType>Opportunities__c</reportType>
+    <roleHierarchyFilter>Post_Trad_Counselor</roleHierarchyFilter>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>

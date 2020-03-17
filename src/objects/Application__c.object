@@ -1662,6 +1662,43 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>General_Psychology_Prerequisite__c</fullName>
+        <description>Prerequisite for General Psychology Course</description>
+        <externalId>false</externalId>
+        <label>General Psychology Prerequisite</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Satisfied</fullName>
+                    <default>false</default>
+                    <label>Satisfied</label>
+                </value>
+                <value>
+                    <fullName>Waived</fullName>
+                    <default>false</default>
+                    <label>Waived</label>
+                </value>
+                <value>
+                    <fullName>Conditional</fullName>
+                    <default>false</default>
+                    <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Has_Been_Convicted_Of_Offense__c</fullName>
         <description>Specifies if the applicant has ever been convicted of an offense involving inappropriate sexual conduct or violent behavior or found guilty of a professional or ethical violation</description>
         <externalId>false</externalId>
@@ -2349,6 +2386,44 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Physics_Prerequisite__c</fullName>
+        <description>Prerequisite for Physics Course</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prerequisite for Physics Course</inlineHelpText>
+        <label>Physics Prerequisite</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Satisfied</fullName>
+                    <default>false</default>
+                    <label>Satisfied</label>
+                </value>
+                <value>
+                    <fullName>Waived</fullName>
+                    <default>false</default>
+                    <label>Waived</label>
+                </value>
+                <value>
+                    <fullName>Conditional</fullName>
+                    <default>false</default>
+                    <label>Conditional</label>
+                </value>
+                <value>
+                    <fullName>Provisional</fullName>
+                    <default>false</default>
+                    <label>Provisional</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Physiology_Prerequisite__c</fullName>

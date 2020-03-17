@@ -71,16 +71,16 @@
             <value>Fall 2020 - CAS</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Opportunity.Stage_Detail__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>notEqual</operator>
-            <value>Inquired,Pre-Applied</value>
-        </criteriaItems>
-        <criteriaItems>
             <column>STAGE_NAME</column>
             <isUnlocked>false</isUnlocked>
             <operator>equals</operator>
             <value>Inquired,Applied,Accepted,Confirmed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Stage_Detail__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Inquired,Pre-Applied</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

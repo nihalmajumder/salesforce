@@ -6,6 +6,10 @@
                 <name>decorate</name>
                 <value>true</value>
             </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Support&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Use this page to submit new Cases and track recent Case activity for your department.&lt;/span&gt;&lt;/p&gt;</value>
+            </componentInstanceProperties>
             <componentName>flexipage:richText</componentName>
         </componentInstances>
         <name>region1</name>
@@ -14,16 +18,27 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
+                <name>flowLayout</name>
+                <value>oneColumn</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>flowName</name>
+                <value>Support_Case_Quick_Create</value>
+            </componentInstanceProperties>
+            <componentName>flowruntime:interview</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
                 <name>enableInlineEdit</name>
-                <value>true</value>
+                <value>false</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>entityName</name>
-                <value>CollaborationGroup</value>
+                <value>Case</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>filterName</name>
-                <value>All_ChatterGroups</value>
+                <value>Open_ITS_Cases_from_Post_Trad</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>hideActionBar</name>
@@ -35,20 +50,68 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>pageSize</name>
-                <value>3</value>
+                <value>10</value>
             </componentInstanceProperties>
             <componentName>flexipage:filterListCard</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!$User.Department}</leftValue>
+                    <operator>CONTAINS</operator>
+                    <rightValue>Post-Trad</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>enableInlineEdit</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>entityName</name>
+                <value>Case</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>filterName</name>
+                <value>Open_ITS_Cases_from_CAS</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideActionBar</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideSearchBar</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>pageSize</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:filterListCard</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!$User.Department}</leftValue>
+                    <operator>CONTAINS</operator>
+                    <rightValue>CAS</rightValue>
+                </criteria>
+            </visibilityRule>
         </componentInstances>
         <name>region2</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>context</name>
+                <value>TO</value>
+            </componentInstanceProperties>
+            <componentName>forceChatter:exposedFeed</componentName>
+        </componentInstances>
         <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>
     <masterLabel>Support</masterLabel>
     <template>
-        <name>flexipage:appHomeTemplateHeaderTwoColumnsEqualWidth</name>
+        <name>flexipage:appHomeTemplateHeaderTwoColumns</name>
     </template>
     <type>AppPage</type>
 </FlexiPage>

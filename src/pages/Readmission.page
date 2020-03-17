@@ -68,9 +68,9 @@
         </style>
     <c:ApplicationHead />
     <c:ApplicationBody title="Re-enrollment Application" subtitle="" appControl="{!appControl}">
+        <apex:form id="theForm" >
         <apex:outputPanel id="readmissionForm">
         <apex:outputPanel layout="none" rendered="{!IF(createdCase == null, true, false)}">
-        <apex:form id="theForm" >
             <apex:outputPanel id="formPageMessages">
                 <apex:pageMessages />
             </apex:outputPanel>
@@ -243,7 +243,7 @@
 
                                     <apex:outputPanel layout="none" rendered="{!IF(request.theContact.Citizenship__c = 'Not Citizen or Permanent Resident', true, false)}">
                                     <div class="form-group" >
-                                        <label for="visa" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Intended Visa Status?</label>
+                                        <label for="visa" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Intended Visa Status? <span class='required'>*</span></label>
                                         <apex:selectList id="visa" value="{!request.theContact.Visa_Type_Code__c}" size="1" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
                                             <apex:selectOption itemValue="" itemLabel="--None--"/>
                                             <apex:selectOption itemValue="AS - Asylum granted" itemLabel="AS - Asylum granted"/>
@@ -260,12 +260,12 @@
 
                                     <apex:outputPanel layout="none" rendered="{!IF(request.theContact.Citizenship__c = 'Permanent Resident Alien', true, false)}">
                                     <div class="form-group">
-                                        <label for="alienNumber" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Alien Registration Number</label>
+                                        <label for="alienNumber" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Alien Registration Number <span class='required'>*</span></label>
                                         <apex:inputField id="alienNumber" value="{!request.theContact.Alien_Registration_Number__c}" html-placeholder="" html-maxlength="255" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                                     </div>
             
                                     <div class="form-group" >
-                                        <label for="alienDate" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Alien Registration Number Date</label>
+                                        <label for="alienDate" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Alien Registration Number Date <span class='required'>*</span></label>
                                         <apex:inputField id="alienDate" type="auto" value="{!request.theContact.Alien_Registration_Number_Date__c}" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                                     </div>
                                     </apex:outputPanel>
@@ -497,7 +497,7 @@
                         <div class="col-lg-10 col-lg-offset-1" >
                             <apex:outputPanel layout="none" rendered="{!IF(request.school = 'Adult Undergraduate' || request.school = 'Graduate', true, false)}">
                             <p>
-                                <apex:outputText value="Bethel University is an educational community committed to the integration of evangelical faith with learning. A statement called A Covenant for Life Together has been adopted to help clarify how Christian faith informs and guides the lives and actions of members of the Bethel community. This document interprets the values by which Bethel has chosen to define itself and is intended to facilitate growth, development, and learning. Although some of these values relate to the developmental stages of traditional students and are not necessarily the norm for all Christians, students in the College of Adult & Professional Studies and Graduate School are asked to honor this community statement by abstaining from the use of tobacco, alcohol, and profane language on the campus and at off-campus class sites. Additionally, CAPS & GS students are required to abide by the Professional Expectations & Community Conduct Agreement (confluence.bethel.edu/x/SANqAQ).  A physical copy of A Covenant for Life Together is available from the Office of the Associate Provost for the College of Adult & Professional Studies, the Seminary, and the Graduate School." escape="false" />
+                                <apex:outputText value="Bethel University is an educational community committed to the integration of evangelical faith with learning. A statement called A Covenant for Life Together has been adopted to help clarify how Christian faith informs and guides the lives and actions of members of the Bethel community. This document interprets the values by which Bethel has chosen to define itself and is intended to facilitate growth, development, and learning. Although some of these values relate to the developmental stages of traditional students and are not necessarily the norm for all Christians, students in the College of Adult & Professional Studies and Graduate School are asked to honor this community statement by abstaining from the use of tobacco, alcohol, and profane language on the campus and at off-campus class sites. Additionally, CAPS & GS students are required to abide by the Professional Expectations & Community Conduct Agreement (" escape="false" /><a href="//confluence.bethel.edu/x/SANqAQ" target="_agreement">confluence.bethel.edu/x/SANqAQ</a><apex:outputText value=").  A physical copy of A Covenant for Life Together is available from the Office of the Associate Provost for the College of Adult & Professional Studies, the Seminary, and the Graduate School." escape="false" />
                             </p>
                             </apex:outputPanel>
                             <apex:outputPanel layout="none" rendered="{!IF(request.school = 'Seminary', true, false)}">
@@ -505,9 +505,9 @@
                                 <p>
                                 <apex:outputText value="Bethel University is an educational community committed to integrating evangelical Christian faith with learning and life. As people created in the image of the covenant-making God, we covenant together to discover the mind of Christ and to become like Christ. We pursue this mission as people called by Jesus to live holy lives according to the values, expectations, and goals of the Kingdom of God. A crucial part of our mission is to develop whole and holy person who will go into the world to serve others." escape="false" />
                                 <br /><br />
-                                <apex:outputText value="To view the Covenant for Life Together in its entirety please see the following link: " escape="false" /><a href="//bethel.edu/about/faith/covenant">bethel.edu/about/faith/covenant</a>
+                                <apex:outputText value="To view the Covenant for Life Together in its entirety please see the following link: " escape="false" /><a href="//bethel.edu/about/faith/covenant" target="_covenant">bethel.edu/about/faith/covenant</a>
                                 <br />
-                                <apex:outputText value="To view the Affirmation of Faith in its entirety please see the following link: " escape="false" /><a href="//bethel.edu/about/faith/affirmation">bethel.edu/about/faith/affirmation</a>
+                                <apex:outputText value="To view the Affirmation of Faith in its entirety please see the following link: " escape="false" /><a href="//bethel.edu/about/faith/affirmation" target="_affirmation">bethel.edu/about/faith/affirmation</a>
                                 <br /><br />
                                 <apex:outputText value="Because of its crucial role in influencing the ethos of the school, this statement of expectations is subject to change only by action of the Board of Trustees. The board holds these standard to be binding for all who voluntarily choose to become part of the Bethel community." escape="false" />
                                 </p>
@@ -537,11 +537,11 @@
                             <div class="row" >
                                 <div class="col-xs-12">
                                     <div class="form-group" >
-                                        <label for="whyLeft" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a brief description of the reason you left the program</label>
+                                        <label for="whyLeft" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a brief description of the reason you left the program.</label>
                                         <apex:inputTextArea id="whyLeft" value="{!request.whyLeftEssay}" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;resize:none;" />
                                     </div>
                                     <div class="form-group" >
-                                        <label for="whyBack" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a brief description of the reason this is the right time for you to return to complete your degree</label>
+                                        <label for="whyBack" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a brief description of the reason this is the right time for you to return to complete your degree.</label>
                                         <apex:inputTextArea id="whyBack" value="{!request.whyBackEssay}" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;resize:none;" />
                                     </div>
                                 </div>
@@ -574,41 +574,54 @@
                     </div>
                 </div>
             </div>
-        </apex:form>
         </apex:outputPanel>
         </apex:outputPanel>
 
         <apex:outputPanel id="readmissionCompleteForm">
         <apex:outputPanel layout="none" rendered="{!IF(createdCase == null, false, true)}">
-        <apex:form id="theCompleteForm" >
-            <apex:outputPanel id="formCompletePageMessages">
-                <apex:pageMessages />
-            </apex:outputPanel>
             <div class="row" >
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
                     <p class="help-block">
-                        Your re-enrollment form has been submitted. Case {!caseNumber} has been created. 
+                        Thank you for your interest in returning to complete your program at Bethel. Your re-enrollment application has been submitted, and a Student Success Advisor will reach out to you within one business day. 
+                        <apex:outputPanel layout="none" rendered="{!IF(request.school == 'Adult Undergraduate' || request.school == 'Graduate', true, false)}">
+                            <br /><br />Please note that a resume must be uploaded below for your re-enrollment application to be considered complete.
+                        </apex:outputPanel>
                     </p>
                 </div>
             </div>
             <apex:outputPanel layout="none" rendered="{!IF(request.school == 'Adult Undergraduate' || request.school == 'Graduate', true, false)}">
             <div class="row" >
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
-                    <h2 style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:24px;" >RESUME</h2>
                     <div class="row" >
                         <div class="col-lg-10 col-lg-offset-1" >
                             <div class="row" >
                                 <div class="col-xs-12">
-                                    <div class="form-group" >
-                                        <label for="resume" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a resume</label>
-                                        <apex:inputFile id="resume" value="{!resumeBody}"  filename="{!resumeName}" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;resize:none;" />
-                                        <apex:commandButton styleClass="btn btn-lg btn-lightning" style="padding: 10px;color:#{!appControl.Button_Text_Color__c};background-color:#{!appControl.Button_Color__c}; align-content: center; margin: 10px; margin-left: 1px;" value="Upload Resume" action="{!upload}" />
-                                    </div>
-                                    <apex:outputPanel rendered="{!resumeUploaded == true}">
-                                        <p class="help-block">
-                                            Your resume has been uploaded. 
-                                        </p>
+                                    <h3 style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:24px;" >RESUME</h3>
+                                    <!--<apex:iframe src="{!$Site.BaseRequestUrl + '/UploadResume?Id=' + caseId}" scrolling="true" id="updateResume" height="300px" /> -->
+                                    <apex:actionFunction name="saveFile" action="{!upload}" rerender="resumeUpload" oncomplete="appHideLoadingSpinner(); window.scrollTo(0,0);">
+                                        <apex:param name="p1" value="" assignTo="{!resumeName}"/>
+                                        <apex:param name="p2" value="" assignTo="{!resumeBody}"/>
+                                    </apex:actionFunction>
+                            
+                                    <apex:outputPanel id="resumeUpload">
+                                        <apex:outputPanel rendered="{!resumeUploaded}">Resume has been successfully uploaded. Your re-enrollment application is now complete.</apex:outputPanel>
+                                        <apex:outputPanel rendered="{!NOT(resumeUploaded)}">
+                                            <label for="resume" style="font-family:'Open Sans', sans-serif;color:##ffffff;font-weight:400;font-size:18px;" >Please provide a resume</label>
+                                            <input type="file" id="resume" style="font-family:'Open Sans', sans-serif;color:#1f618d;font-weight:400;font-size:14px;resize:none;" />
+                                            <a class="btn btn-lg btn-lightning" style="color:#ffffff;background-color:#1f618d; align-content: center; margin: 10px" onclick="appShowLoadingSpinner();uploadResume();return false;">Upload Resume</a>
+                                        </apex:outputPanel>
                                     </apex:outputPanel>
+                                    <script>
+                                        function uploadResume() {
+                                            var theFile = document.getElementById('resume').files[0];
+                                            var reader = new FileReader();
+                                            reader.addEventListener("load", function () {
+                                                saveFile(theFile.name, reader.result);
+                                            }, false);
+                                            reader.readAsDataURL(theFile);
+                                        }
+                                    </script>
+                            
                                 </div>
                             </div>
                         </div>
@@ -616,9 +629,9 @@
                 </div>
             </div>    
             </apex:outputPanel> 
-        </apex:form>
         </apex:outputPanel> 
         </apex:outputPanel> 
+    </apex:form>
 
     </c:ApplicationBody>
 </apex:page>

@@ -558,7 +558,7 @@
         <externalId>false</externalId>
         <label>Comment On Christian Commitment</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -578,7 +578,7 @@
         <externalId>false</externalId>
         <label>Comment On Interpersonal Skills</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -598,7 +598,7 @@
         <externalId>false</externalId>
         <label>Comment On Strengths</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -618,7 +618,7 @@
         <externalId>false</externalId>
         <label>Comment On Work</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -760,7 +760,7 @@
         <relationshipName>References</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
@@ -864,7 +864,7 @@
         <externalId>false</externalId>
         <label>Date Received</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
@@ -976,7 +976,7 @@
         <externalId>false</externalId>
         <label>Fifteen Hours Commitment Comment</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -1000,7 +1000,7 @@
         <label>First Name</label>
         <length>255</length>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -1368,7 +1368,7 @@
         <externalId>false</externalId>
         <label>Is Seminary Next Step</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -1379,7 +1379,7 @@
         <label>Last Name</label>
         <length>255</length>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -1512,7 +1512,7 @@
         <externalId>false</externalId>
         <label>Mentorship Comments</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -1720,7 +1720,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <externalId>false</externalId>
         <label>Readiness For Ministry</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -1730,7 +1730,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <externalId>false</externalId>
         <label>Recommend?</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -1760,7 +1760,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <label>Relationship To Applicant</label>
         <length>255</length>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -1871,7 +1871,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <externalId>false</externalId>
         <label>Signature Date</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
@@ -1881,7 +1881,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <label>Signature</label>
         <length>255</length>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -1921,7 +1921,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <externalId>false</externalId>
         <label>Three Year Commitment Comment</label>
         <length>16000</length>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
@@ -2024,7 +2024,7 @@ NOT(ISBLANK(Previous_Id__c)),
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Waive Rights?</label>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>

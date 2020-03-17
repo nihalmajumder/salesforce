@@ -22,13 +22,16 @@
         <field>Contact$Preferred_First_Name__c</field>
     </columns>
     <columns>
-        <field>Contact$FirstName</field>
-    </columns>
-    <columns>
         <field>Contact.Education_Histories__r$Best_School_Name__c</field>
     </columns>
     <columns>
+        <field>Contact$FirstName</field>
+    </columns>
+    <columns>
         <field>Contact.Education_Histories__r$School_CEEB__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Primary_Academic_Program__c</field>
     </columns>
     <columns>
         <field>Contact.Education_Histories__r$Document_Status_Description__c</field>
@@ -36,12 +39,15 @@
     <columns>
         <field>Contact$Email</field>
     </columns>
+    <columns>
+        <field>Contact.Education_Histories__r$Degree__c</field>
+    </columns>
     <crossFilters>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
             <isUnlocked>false</isUnlocked>
             <operator>equals</operator>
-            <value>Interim 2019 - CAS,Spring 2019 - CAS,Summer 2019 - CAS,Fall 2019 - CAS,Spring 2020-CAS,Fall 2020-CAS</value>
+            <value>Interim 2019 - CAS,Spring 2019 - CAS,Summer 2019 - CAS,Fall 2019 - CAS,Spring 2020 - CAS,Fall 2020 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>StageName</column>
@@ -60,12 +66,6 @@
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>College,Test for Credit</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Contact.Education_Histories__r$Transcript_Evaluation__c</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>0</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Document_Status__c</column>
@@ -90,6 +90,12 @@
             <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
             <value>4/25/2016</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Education_Histories__r$Needs_Transcript_Evaluation__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

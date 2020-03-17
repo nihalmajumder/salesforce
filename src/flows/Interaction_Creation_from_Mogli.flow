@@ -353,7 +353,6 @@
             <label>Default Double Miss</label>
         </rules>
     </decisions>
-    <description>- Update so CSG &quot;What program...&quot; questions update the Major variable and populate the &quot;all academic interests&quot; field on Interaction.</description>
     <formulas>
         <name>MogliNumberFormula</name>
         <dataType>String</dataType>
@@ -527,7 +526,7 @@
             <targetReference>Find_Question_Responses</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>AdultUndergrad</name>
         <dataType>String</dataType>

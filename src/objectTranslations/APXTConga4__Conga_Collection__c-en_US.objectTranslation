@@ -4,4 +4,13 @@
         <label><!-- Description --></label>
         <name>APXTConga4__Description__c</name>
     </fields>
+    <fields>
+        <help><!-- If use this collection for SalesForce 1. --></help>
+        <label><!-- Is_SF1_Enabled --></label>
+        <name>APXTConga4__Is_SF1_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF1_Binding_sObject_Type --></label>
+        <name>APXTConga4__SF1_Binding_sObject_Type__c</name>
+    </fields>
 </CustomObjectTranslation>

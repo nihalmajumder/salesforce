@@ -139,41 +139,4 @@ public class TDTMTestScoreTriggerHandlerTest {
 
     }
 
-    static testMethod void onAfterInsertOpportunityTest() {
-       Contact c = [Select Id FROM Contact];
-
-       Opportunity opp = new Opportunity(Name='Test Opp', Contact__c = c.Id, StageName = 'Inquired', Stage_Detail__c = 'Inquired', CloseDate = Date.today());
-       insert opp;
-
-       Test.startTest();
-       Test_Score__c testScore = new Test_Score__c(RecordTypeId = Schema.SObjectType.Test_Score__c.getRecordTypeInfosByName().get('ACT').getRecordTypeId(), Contact__c = c.Id, Document_Status__c = 'Received');
-       insert testScore;
-       Test.stopTest();
-
-       Opportunity upOpp = [SELECT Id, StageName, Stage_Detail__c FROM Opportunity WHERE Id = :opp.Id];
-       System.assertEquals('Inquired', upOpp.StageName);
-       System.assertEquals('Pre-Applied', upOpp.Stage_Detail__c);
-
-    }
-
-    static testMethod void onAfterUpdateOpporunityTest() {
-       Contact c = [Select Id FROM Contact];
-
-       Opportunity opp = new Opportunity(Name='Test Opp', Contact__c = c.Id, StageName = 'Inquired', Stage_Detail__c = 'Inquired', CloseDate = Date.today());
-       insert opp;
-
-       Test_Score__c testScore = new Test_Score__c(RecordTypeId = Schema.SObjectType.Test_Score__c.getRecordTypeInfosByName().get('ACT').getRecordTypeId(), Contact__c = c.Id);
-       insert testScore;
-
-       Test.startTest();
-       testScore.Document_Status__c = 'Received';
-       update testScore;
-       Test.stopTest();
-
-       Opportunity upOpp = [SELECT Id, StageName, Stage_Detail__c FROM Opportunity WHERE Id = :opp.Id];
-       System.assertEquals('Inquired', upOpp.StageName);
-       System.assertEquals('Pre-Applied', upOpp.Stage_Detail__c);
-
-    }
-
 }

@@ -401,6 +401,10 @@
         <name>HooversProfile</name>
     </webLinks>
     <webLinks>
+        <label><!-- Send_SMS --></label>
+        <name>Mogli_SMS__Send_SMS</name>
+    </webLinks>
+    <webLinks>
         <label><!-- YahooMaps --></label>
         <name>YahooMaps</name>
     </webLinks>

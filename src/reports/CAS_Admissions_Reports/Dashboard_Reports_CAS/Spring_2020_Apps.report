@@ -77,7 +77,7 @@
             <column>Opportunity.Stage_Detail__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>Inquired,Pre-Applied</value>
+            <value></value>
         </criteriaItems>
         <criteriaItems>
             <column>STAGE_NAME</column>
@@ -98,7 +98,7 @@
         <field>Opportunity.Stage_Detail__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Spring 2020 Apps</name>
+    <name>Spring 2020 Apps - Han</name>
     <params>
         <name>open</name>
         <value>all</value>

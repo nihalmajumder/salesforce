@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<AnalyticsSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+<AnalyticsSettings xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <alwaysGenPreviews>false</alwaysGenPreviews>
     <analyticsAdoptionMetadata>false</analyticsAdoptionMetadata>
     <canAccessAnalyticsViaAPI>false</canAccessAnalyticsViaAPI>
@@ -8,8 +8,7 @@
     <canExploreDataConversationally>false</canExploreDataConversationally>
     <canShareAppsWithCommunities>false</canShareAppsWithCommunities>
     <canSubscribeDashboardWidgets>false</canSubscribeDashboardWidgets>
-    <canViewThumbnailAssets>true</canViewThumbnailAssets>
-    <enableAnalyticsSubtotals>false</enableAnalyticsSubtotals>
+    <canViewThumbnailAssets>false</canViewThumbnailAssets>
     <enableAutoCompleteCombo>true</enableAutoCompleteCombo>
     <enableDashboardComponentSnapshot>false</enableDashboardComponentSnapshot>
     <enableDashboardFlexiTable>true</enableDashboardFlexiTable>
@@ -20,11 +19,14 @@
     <enableLotusNotesImages>false</enableLotusNotesImages>
     <enableMassEnableReportBuilder>true</enableMassEnableReportBuilder>
     <enableNewChartsEngine>true</enableNewChartsEngine>
+    <enablePowerInsights>false</enablePowerInsights>
     <enableRemoveFooterForRepDisplay>false</enableRemoveFooterForRepDisplay>
     <enableRemoveFooterFromRepExp>false</enableRemoveFooterFromRepExp>
-    <enableReportFieldToFieldPref>false</enableReportFieldToFieldPref>
-    <enableReportUniqueRowCountPref>false</enableReportUniqueRowCountPref>
+    <enableReportFieldToFieldPref xsi:nil="true"/>
+    <enableReportNotificationsEnable>true</enableReportNotificationsEnable>
+    <enableS1AnalyticsEclairEnable>true</enableS1AnalyticsEclairEnable>
     <enableSFXJoinedReportsEnable>false</enableSFXJoinedReportsEnable>
+    <enableSmartDataDiscovery>false</enableSmartDataDiscovery>
     <enableUseOldChartsLookAndFeel>false</enableUseOldChartsLookAndFeel>
     <enableWaveReplication>true</enableWaveReplication>
     <enableWaveSharingInheritance>false</enableWaveSharingInheritance>

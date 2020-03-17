@@ -269,6 +269,7 @@
     </compactLayouts>
     <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
+    <externalSharingModel>ReadWriteTransfer</externalSharingModel>
     <fieldSets>
         <fullName>DaScoopComposer__Groove_Default</fullName>
         <availableFields>
@@ -1202,7 +1203,7 @@ if (recordIds[0] == null){
 alert(&quot;Please select at least one record to send.&quot;) 
 } 
 else{ 
-pageUrl = pageUrl+&apos;?leadIDs=&apos;+recordIds+&apos;&amp;lead=1&apos;; 
+pageUrl = pageUrl+&apos;?ids=&apos;+recordIds; 
 parent.location.href = pageUrl; 
 }</url>
     </webLinks>
@@ -1222,9 +1223,9 @@ if ({!NOT( ISNULL(Lead.Mogli_SMS__Mogli_Number__c) )}){
 
 var url;
 if(&apos;{!$Label.mogli_sms__namespace}&apos; === &quot;none&quot;){
-url=&quot;/apex/&quot; + &quot;SendSMS?leadIDs={!Lead.Id}&quot;+&quot;&amp;modal=1&quot;+&quot;&amp;lead=1&quot;; 
+url=&quot;/apex/&quot; + &quot;SendSMS?ids={!Lead.Id}&quot;; 
 } else { 
-url=&quot;/apex/&quot; + &apos;{!$Label.mogli_sms__namespace}&apos; + &quot;SendSMS?leadIDs={!Lead.Id}&quot;+&quot;&amp;modal=1&quot;+&quot;&amp;lead=1&quot;; 
+url=&quot;/apex/&quot; + &apos;{!$Label.mogli_sms__namespace}&apos; + &quot;SendSMS?ids={!Lead.Id}&quot;; 
 }
 window.open(url, &apos;Popup&apos;,&apos;height=510,width=1200,top=0,left=0,location=no,menubar=no,titlebar=no,toolbar=no,status=no&apos;); 
 } 

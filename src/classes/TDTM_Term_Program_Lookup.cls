@@ -20,9 +20,9 @@ global class TDTM_Term_Program_Lookup extends TDTMVirtualTriggerHandler {
         for (SObject o : newList){
             Interaction__c interaction = (Interaction__c)o;
 
-//            if(interaction.Lead_Source__c == 'Website' && interaction.Source_Detail__c == 'Application'){
-//                continue;
-//            }
+            if(interaction.Lead_Source__c == 'Website' && interaction.Source_Detail__c == 'Application'){
+                continue;
+            }
 
             System.debug('INTERACTION STATUS');
             System.debug(interaction.Interaction_Status__c);
@@ -60,10 +60,11 @@ global class TDTM_Term_Program_Lookup extends TDTMVirtualTriggerHandler {
                 // otherwise get term by today's date, if there are more than one result (shouldn't be??), grab the first one.
                 else if(interaction.Academic_Term__c == null && interaction.Term_Search_Text__c == null){
                     String term_search = '%' + term_suffix;
+
                     Academic_Term__c[] term_by_date = [select Id, Name from Academic_Term__c where Term_Start_Date__c <= TODAY and Term_End_Date__c > TODAY and Name like :term_search limit 1];
                     System.debug('FOUND THESE TERMS BY DATE');
                     System.debug(term_by_date);
-                    if(term_by_date.size() > 0){
+                    if(term_by_date != null){
                         interaction.Academic_Term__c = term_by_date[0].Id;
                     }
 
