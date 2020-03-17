@@ -51,15 +51,15 @@ global class Flow_BulkSMS {
                     results.add(createSmsRecords(contacts, request.gateway, request.smsMessage, log));
                 }
                 when 'funnel' {
-                    termList = request.requestedTerms.split(';');
-                    stageDetailList = request.stageDetails.deleteWhitespace().split(';');
+                    termList = request.requestedTerms.split('; ');
+                    stageDetailList = request.stageDetails.split('; ');
                     Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Type__c='Funnel');
                     insert log;
                     contacts = getContactsFromFunnel(termList, stageDetailList, request.initiator);
                     results.add(createSmsRecords(contacts, request.gateway, request.smsMessage, log));
                 }
                 when 'campaign' {
-                    registrationStatusList = request.registrationStatus.deleteWhitespace().split(';');
+                    registrationStatusList = request.registrationStatus.split('; ');
                     Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Campaign__c=request.campaignId, Type__c='Campaign');
                     insert log;
                     contacts = getContactsFromCampaign(request.campaignId, registrationStatusList);
@@ -69,12 +69,12 @@ global class Flow_BulkSMS {
                     results.add(getListOfContacts('report', request.reportId, null, null, null, null, null,request.smsMessage));
                 }
                 when 'funnel total' {
-                    stageDetailList = request.stageDetails.deleteWhitespace().split(';');
-                    termList = request.requestedTerms.split(';');
+                    stageDetailList = request.stageDetails.split('; ');
+                    termList = request.requestedTerms.split('; ');
                     results.add(getListOfContacts('funnel', null, null, termList, stageDetailList, null, request.initiator,request.smsMessage));
                 }
                 when 'campaign total' {
-                    registrationStatusList = request.registrationStatus.deleteWhitespace().split(';');
+                    registrationStatusList = request.registrationStatus.split('; ');
                     results.add(getListOfContacts('campaign', null, request.campaignId, null, null, registrationStatusList, null,request.smsMessage));
                 }
                 when else {
@@ -89,11 +89,12 @@ global class Flow_BulkSMS {
         try{
             List<Mogli_SMS__SMS__c> new_records = new List<Mogli_SMS__SMS__c>();
             String mergedMessage = '';
+            Boolean runningInASanbox = runningInASandbox();
             //Loop through contacts and create SMS record for each
             for(Contact currentContact : contacts) {
                 mergedMessage = mergeFields(message, currentContact);
                 Mogli_SMS__SMS__c newSmsRecord = new Mogli_SMS__SMS__c();
-                if(runningInASandbox()){
+                if(runningInASanbox){
                     newSmsRecord = new Mogli_SMS__SMS__c(Mogli_SMS__Message__c=mergedMessage, Mogli_SMS__Phone_Number__c=currentContact.Mogli_SMS__Mogli_Number__c, Mogli_SMS__Gateway__c=gatewayId, Event_Log__c=log.Id, Mogli_SMS__Contact__c = currentContact.Id, Mogli_SMS__Status__c = 'Sent Successfully');
 
                 }else{
@@ -156,7 +157,7 @@ global class Flow_BulkSMS {
                 FROM
                         Contact
                 WHERE
-                        Id IN :contactIds AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
+                Id IN :contactIds AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
         ];
 
         //Remove Duplicates from Contacts
@@ -171,13 +172,15 @@ global class Flow_BulkSMS {
         List<Opportunity> matchingOpps = new List<Opportunity>();
         List<Id> contact_ids = new List<Id>();
         //Find Opportunities that match the criteria given by the user
+        system.debug(stageDetailList);
+        system.debug(termList);
         matchingOpps = [
-                    SELECT
-                            Contact__c
-                    FROM
-                            Opportunity
-                    WHERE
-                    Stage_Detail__c IN :stageDetailList AND Academic_Term__r.Name IN :termList AND OwnerId = :initiatorId
+                SELECT
+                        Contact__c
+                FROM
+                        Opportunity
+                WHERE
+                Stage_Detail__c IN :stageDetailList AND Academic_Term__r.Name IN :termList AND OwnerId = :initiatorId
         ];
 
         //Get Contact IDs from each Opportunity
@@ -186,30 +189,30 @@ global class Flow_BulkSMS {
         }
         //Return all matching Contacts
         return [
-            SELECT
-                    Id, Name, Mogli_SMS__Mogli_Number__c,FirstName, Preferred_First_Name__c
-            FROM
-                    Contact
-            WHERE
-                    Id IN :contact_ids AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
+                SELECT
+                        Id, Name, Mogli_SMS__Mogli_Number__c,FirstName, Preferred_First_Name__c
+                FROM
+                        Contact
+                WHERE
+                Id IN :contact_ids AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
         ];
     }
 
     public static  List<Contact> getContactsFromCampaign(Id campaignId, List<String> registrationStatusList) {
         List<Contact> contacts = [
-            SELECT
-                    Id, Name, Mogli_SMS__Mogli_Number__c,FirstName, Preferred_First_Name__c
-            FROM
-                    Contact
-            WHERE
-                    Id IN (
-                            SELECT
-                                    ContactId
-                            FROM
-                                    CampaignMember
-                            WHERE
-                            CampaignId = :campaignId AND ContactId != NULL AND Registration_Status__c IN :registrationStatusList
-                    ) AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
+                SELECT
+                        Id, Name, Mogli_SMS__Mogli_Number__c,FirstName, Preferred_First_Name__c
+                FROM
+                        Contact
+                WHERE
+                Id IN (
+                        SELECT
+                                ContactId
+                        FROM
+                                CampaignMember
+                        WHERE
+                        CampaignId = :campaignId AND ContactId != NULL AND Registration_Status__c IN :registrationStatusList
+                ) AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
         ];
         return contacts;
     }
