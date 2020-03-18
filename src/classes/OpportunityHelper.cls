@@ -11,6 +11,7 @@ public class OpportunityHelper {
     public static Id SSR_ADVISING_QUEUE_ID = [SELECT id FROM Group WHERE Name =: 'SSR - Advising'].Id;
     
     public final static String CONFIRMED_STATUS = 'Confirmed';
+    public final static String REGISTERED_STATUS = 'Registered';
     public final static String PROVISIONAL_TYPE = 'Provisional';
     public final static String CONDITIONAL_TYPE = 'Conditional';
     public final static String CONDITIONAL_AND_PROVISIONAL_TYPE = 'Conditional and Provisional';
@@ -24,17 +25,14 @@ public class OpportunityHelper {
         for (Opportunity opp : newList) {
             Opportunity oldOpp = oldMap.get(opp.Id);
             if (oldOpp != null && opp.StageName == CONFIRMED_STATUS && oldOpp.StageName != CONFIRMED_STATUS && opp.School_College__c != 'Undergraduate') {
-                if (opp.Admission_Type__c == PROVISIONAL_TYPE) {
-                    newCases.add(createProvisionalCase(opp));
-                    contactIds.add(opp.Contact__c);
-                }
-                else if (opp.Admission_Type__c == CONDITIONAL_TYPE) {
+                if (opp.Admission_Type__c == CONDITIONAL_TYPE || opp.Admission_Type__c == CONDITIONAL_AND_PROVISIONAL_TYPE) {
                     newCases.add(createConditionalCase(opp));
                     contactIds.add(opp.Contact__c);
                 }
-                else if (opp.Admission_Type__c == CONDITIONAL_AND_PROVISIONAL_TYPE) {
+            }
+            if (oldOpp != null && opp.Stage_Detail__c == REGISTERED_STATUS && oldOpp.Stage_Detail__c != REGISTERED_STATUS && opp.School_College__c != 'Undergraduate') {
+                if (opp.Admission_Type__c == PROVISIONAL_TYPE || opp.Admission_Type__c == CONDITIONAL_AND_PROVISIONAL_TYPE) {
                     newCases.add(createProvisionalCase(opp));
-                    newCases.add(createConditionalCase(opp));
                     contactIds.add(opp.Contact__c);
                 }
             }
