@@ -45,7 +45,7 @@ global class Flow_BulkSMS {
         for(BulkSmsRequest request : requests) {
             switch on request.requestType {
                 when 'report' {
-                    Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Report_Name__c = Reports.ReportManager.describeReport(request.reportId).getReportMetadata().getName(), Type__c='Report');
+                    Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Report_Name__c = Reports.ReportManager.describeReport(request.reportId).getReportMetadata().getName(), Type__c='Report', Status__c = 'In Progress');
                     insert log;
                     contacts = getContactsFromReport(request.reportId);
                     results.add(createSmsRecords(contacts, request.gateway, request.smsMessage, log));
@@ -53,14 +53,14 @@ global class Flow_BulkSMS {
                 when 'funnel' {
                     termList = request.requestedTerms.split('; ');
                     stageDetailList = request.stageDetails.split('; ');
-                    Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Type__c='Funnel');
+                    Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Type__c='Funnel', Status__c = 'In Progress');
                     insert log;
                     contacts = getContactsFromFunnel(termList, stageDetailList, request.initiator);
                     results.add(createSmsRecords(contacts, request.gateway, request.smsMessage, log));
                 }
                 when 'campaign' {
                     registrationStatusList = request.registrationStatus.split('; ');
-                    Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Campaign__c=request.campaignId, Type__c='Campaign');
+                    Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Campaign__c=request.campaignId, Type__c='Campaign', Status__c = 'In Progress');
                     insert log;
                     contacts = getContactsFromCampaign(request.campaignId, registrationStatusList);
                     results.add(createSmsRecords(contacts, request.gateway, request.smsMessage, log));
@@ -110,10 +110,14 @@ global class Flow_BulkSMS {
             dedupedSMS.addAll(tempSet);
 
             //Insert SMS Records
-            insert dedupedSMS;
+            //insert dedupedSMS;
+            BatchCreateSMS myBatchObject = new BatchCreateSMS(dedupedSMS, log);
+            Id batchId = Database.executeBatch(myBatchObject,200);
+            log.Batch_ID__c  = batchId;
+            update log;
 
             //Return confirmation message
-            return 'Successfully sent '+dedupedSMS.size()+' text messages';
+            return 'Successfully scheduled a task to send '+dedupedSMS.size()+' text messages.';
         } catch(Exception e) {
             return 'FLOW ERROR: '+e;
         }
@@ -157,7 +161,7 @@ global class Flow_BulkSMS {
                 FROM
                         Contact
                 WHERE
-                Id IN :contactIds AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
+                        Id IN :contactIds AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
         ];
 
         //Remove Duplicates from Contacts
@@ -180,7 +184,7 @@ global class Flow_BulkSMS {
                 FROM
                         Opportunity
                 WHERE
-                Stage_Detail__c IN :stageDetailList AND Academic_Term__r.Name IN :termList AND OwnerId = :initiatorId
+                        Stage_Detail__c IN :stageDetailList AND Academic_Term__r.Name IN :termList AND OwnerId = :initiatorId
         ];
 
         //Get Contact IDs from each Opportunity
@@ -194,7 +198,7 @@ global class Flow_BulkSMS {
                 FROM
                         Contact
                 WHERE
-                Id IN :contact_ids AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
+                        Id IN :contact_ids AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
         ];
     }
 
@@ -211,7 +215,7 @@ global class Flow_BulkSMS {
                         FROM
                                 CampaignMember
                         WHERE
-                        CampaignId = :campaignId AND ContactId != NULL AND Registration_Status__c IN :registrationStatusList
+                                CampaignId = :campaignId AND ContactId != NULL AND Registration_Status__c IN :registrationStatusList
                 ) AND Mogli_SMS__Mogli_Number__c != NULL AND FirstName != NULL
         ];
         return contacts;
