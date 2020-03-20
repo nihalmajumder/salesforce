@@ -4,7 +4,7 @@ global class TDTMOpportunityPreAppliedTriggerHandler extends TDTMVirtualTriggerH
         Set<Id> contactIds = new Set<Id>();
         for (SObject o : newList) {
             Opportunity opp = (Opportunity) o;
-            if (opp.StageName == 'Inquired' && opp.Stage_Detail__c == 'Inquired' && opp.Contact__c != null) {
+            if ((opp.Stage_Detail__c == 'Prospect' || opp.Stage_Detail__c == 'Inquired') && opp.Contact__c != null) {
                 opps.add(opp);
                 contactIds.add(opp.Contact__c);
             }

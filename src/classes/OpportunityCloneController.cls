@@ -19,7 +19,7 @@ public with sharing class OpportunityCloneController {
 
                     // if it is already File Closed, no need to calculate a new Stage Detail.
                     if(!newOpp.Stage_Detail__c.contains('File Closed')){
-                        Set<String> details = new Set<String>{'Inquired', 'Pre-Applied', 'App Started', 'App Submitted', 'App Completed', 'Wait Listed', 'Accepted', 'Fee Paid', 'Fee Waived', 'Registered'};
+                        Set<String> details = new Set<String>{'Prospect', 'Inquired', 'Pre-Applied', 'App Started', 'App Submitted', 'App Completed', 'Wait Listed', 'Accepted', 'Fee Paid', 'Fee Waived', 'Registered'};
                         if (details.contains(newOpp.Stage_Detail__c)) {
                             newOpp.Stage_Detail__c = newOpp.Stage_Detail__c + ' - File Closed';
                         }

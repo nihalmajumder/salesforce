@@ -17,8 +17,8 @@ global class TDTM_Academic_Interest_Handler extends TDTMVirtualTriggerHandler {
             return false;
         }
 
-        if(interaction.Opportunity_Stage__c != 'Inquired'){
-            System.debug('Opportunity Stage is not Inquired');
+        if(interaction.Opportunity_Stage__c != 'Inquired' && interaction.Opportunity_Stage__c != 'Prospect'){
+            System.debug('Opportunity Stage is not Inquired or Prospect');
             System.debug('Got Opportunity Stage ' + interaction.Opportunity_Stage__c);
             return false;
         }

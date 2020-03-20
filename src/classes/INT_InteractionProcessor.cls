@@ -556,34 +556,39 @@ public class INT_InteractionProcessor {
                     // Add check so that Stage is not reverted to Inquired - Todd Mitchell
                     Opportunity oldOppty = oppMap.get(lcr.getContactId() + interaction.Opportunity_Key__c);
                     String stageName = interaction.Opportunity_Stage__c;
-                    if (oldOppty != null && stageName == 'Inquired' && oldOppty.StageName != 'Inquired') {
-                        stageName = oldOppty.StageName;
+
+                    // Case 00054276 - New Code to handle Stage and Stage Detail - Todd Mitchell
+                    if (oldOppty != null) {
+                        if (stageName == 'Prospect' && oldOppty.StageName != 'Prospect') {
+                            stageName = oldOppty.StageName;
+                        }
+                        else if (stageName == 'Inquired' && oldOppty.StageName != 'Prospect') {
+                            stageName = oldOppty.StageName;
+                        }
+                        
+                        if (interaction.Opportunity_Stage_Detail__c != null && (interaction.Stage_Value__c < oldOppty.Stage_Value__c)) {
+                            interaction.Opportunity_Stage_Detail__c = null;
+                        }    
                     }
+                    else if (stageName == 'Inquired') {
+                        interaction.Opportunity_Stage_Detail__c = 'Inquired';
+                    }
+                    else if (stageName == 'Prospect') {
+                        interaction.Opportunity_Stage_Detail__c = 'Prospect';
+                    }
+                    
                     Opportunity newOppty = new Opportunity(
                         CloseDate = System.today(),
                         StageName = stageName,
                         Opportunity_Key__c = lcr.getContactId() + interaction.Opportunity_Key__c,
                         AccountId = lcr.getAccountId()
                     );
-                    if (stageName == 'Inquired') {
-                        if (oldOppty == null) {
-                            newOppty.Stage_Detail__c = 'Inquired';
-                        }
-                        else if (interaction.Opportunity_Stage_Detail__c == 'Inquired') {
-                            interaction.Opportunity_Stage_Detail__c = null;
-                        }
-                        //else if (interaction.Opportunity_Stage_Detail__c == 'Pre-Applied' && oldOppty.Stage_Detail__c  == 'App Started') {
-                        //    interaction.Opportunity_Stage_Detail__c = null;
-                        //}
-                    }
+
                     if (oldOppty != null && interaction.Academic_Program__c != null && interaction.Academic_Program__c != oldOppty.Academic_Program__c) {
                         if (stageName != 'Inquired' || (oldOppty.Stage_Detail__c == 'App Started' && interaction.Interaction_Source__c != 'Application Change')) {
                             interaction.Secondary_Academic_Program__c = interaction.Academic_Program__c;
                             interaction.Academic_Program__c = oldOppty.Academic_Program__c;
                         }
-                    }
-                    if (oldOppty != null && interaction.Opportunity_Stage_Detail__c != null && (interaction.Stage_Value__c < oldOppty.Stage_Value__c)) {
-                        interaction.Opportunity_Stage_Detail__c = null;
                     }
 
                     // Call custom method for Opportunity - Todd Mitchell

@@ -33,7 +33,7 @@ global class TDTM_Opportunity_Stage_Back extends TDTMVirtualTriggerHandler {
             if (new_opp.StageName != old_opp.StageName || new_opp.Stage_Detail__c != old_opp.Stage_Detail__c) {
 
                 switch on new_opp.Status_Text__c {
-                    when 'Inquired:Inquired', 'Inquired:Pre-Applied', 'Inquired:App Started' {
+                    when 'Prospect:Prospect', 'Inquired:Inquired', 'Inquired:Pre-Applied', 'Inquired:App Started' {
                         if (app.Application_Status__c != 'Started') {
                             app.Application_Status__c = 'Started';
                             update_apps.add(app);
