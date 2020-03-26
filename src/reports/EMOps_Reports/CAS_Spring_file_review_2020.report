@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Program__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Term__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Student_Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Spring 2020 - CAS,Interim 2020 - CAS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$StageName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Confirmed,Enrolled</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>CAS Spring file review 2020</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

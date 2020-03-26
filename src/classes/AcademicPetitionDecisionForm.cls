@@ -18,7 +18,7 @@ public class AcademicPetitionDecisionForm {
                         grade_change_factors__c, approval_academic_year__c, approval_extension_date__c,
                         approval_course_substitution__c, Denial_Description__c, Comments__c, Decision_Submitted__c,
                         Supporting_Documentation__c, Supporting_Documentation2__c, Supporting_Documentation3__c,
-                        Supporting_Documentation4__c, Supporting_Documentation5__c
+                        Supporting_Documentation4__c, Supporting_Documentation5__c, Additional_Comments__c
                 FROM Case WHERE Id = :caseId
         ];
         editCase = c[0];
@@ -300,6 +300,14 @@ public class AcademicPetitionDecisionForm {
         }
         set{
             editCase.Comments__c = value;
+        }
+    }
+    public String additionalComments{
+        get{
+            return editCase.Additional_Comments__c;
+        }
+        set{
+            editCase.Additional_Comments__c = value;
         }
     }
 

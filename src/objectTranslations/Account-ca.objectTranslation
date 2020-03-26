@@ -323,18 +323,18 @@
         <name>Academic_Program_Key_fields</name>
     </quickActions>
     <recordTypes>
-        <description><!-- An Academic Program offered at the University. --></description>
-        <label><!-- Academic Program --></label>
+        <description>Un programa acadèmic ofert a la institució educativa.</description>
+        <label>Programa acadèmic</label>
         <name>Academic_Program</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- An administrative account. --></description>
-        <label><!-- Administrative --></label>
+        <description>Un compte administratiu.</description>
+        <label>Administratiu</label>
         <name>Administrative</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- A business organization. --></description>
-        <label><!-- Business Organization --></label>
+        <description>Una organització empresarial.</description>
+        <label>Organització empresarial</label>
         <name>Business_Organization</name>
     </recordTypes>
     <recordTypes>
@@ -343,23 +343,23 @@
         <name>Church</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- An educational institution. --></description>
-        <label><!-- Educational Institution --></label>
+        <description>Una institució educativa.</description>
+        <label>Institució educativa</label>
         <name>Educational_Institution</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- A Household containing one or more individuals. --></description>
-        <label><!-- Household Account --></label>
+        <description>Una llar que conté una o més persones.</description>
+        <label>Compte domèstic</label>
         <name>HH_Account</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- A sports organization. --></description>
-        <label><!-- Sports Organization --></label>
+        <description>Una organització esportiva.</description>
+        <label>Organització esportiva</label>
         <name>Sports_Organization</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- A department in the university. --></description>
-        <label><!-- University Department --></label>
+        <description>Un departament de la institució educativa.</description>
+        <label>Departament de la Universitat</label>
         <name>University_Department</name>
     </recordTypes>
     <recordTypes>

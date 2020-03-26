@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0069AA</headerColor>
+        <logo>logosfcrest1</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>true</isNavPersonalizationDisabled>
+    <label>Recruiting</label>
+    <navType>Console</navType>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Recruiting_UtilityBar1</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>standard-Dashboard</tab>
+        </mappings>
+        <mappings>
+            <fieldName>Contact__c</fieldName>
+            <tab>standard-Opportunity</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Task</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-report</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

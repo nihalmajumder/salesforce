@@ -157,6 +157,10 @@ public class ReAdmissionController {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Bethel ID# must not be blank.'));
             isValid = false;
         }
+        if (String.isBlank(request.hasOtherName)) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, '"Are you or have you ever been known by any other name?" must not be blank.'));
+            isValid = false;
+        }
         if (request.theContact.Citizenship__c == 'Not Citizen or Permanent Resident' && String.isBlank(request.theContact.Visa_Type_Code__c)) {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Intended Visa Status must not be blank.'));
             isValid = false;
@@ -169,6 +173,10 @@ public class ReAdmissionController {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Alien Registration Number Date must not be blank.'));
             isValid = false;
         }
+        if (request.theContact.Is_Veteran__c == null) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, '"Are you a veteran?" must not be blank.'));
+            isValid = false;
+        }
         if (request.program == null) {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Program must not be blank.'));
             isValid = false;
@@ -177,12 +185,28 @@ public class ReAdmissionController {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Begin time must not be blank.'));
             isValid = false;
         }
+        if (request.financialAid == null) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, '"Will you apply for financial aid?" must not be blank.'));
+            isValid = false;
+        }
+        if (String.isBlank(request.hasBusinessOffice)) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, '"Do you have a business office or collections hold?" must not be blank.'));
+            isValid = false;
+        }
         if (String.isBlank(request.hasChanged)) {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Has information changed must be selected.'));
             isValid = false;
         }
         if (request.school == 'Seminary' && request.compliance != true) {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'You must acknowledge that you have read the Affirmation of Faith.'));
+            isValid = false;
+        }
+        if ((request.school == 'Seminary' || request.school == 'Graduate') && String.isBlank(request.whyLeftEssay)) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Please provide a brief description of the reason you left the program.'));
+            isValid = false;
+        }
+        if ((request.school == 'Seminary' || request.school == 'Graduate') && String.isBlank(request.whyBackEssay)) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Please provide a brief description of the reason this is the right time for you to return to complete your degree.'));
             isValid = false;
         }
         return isValid;

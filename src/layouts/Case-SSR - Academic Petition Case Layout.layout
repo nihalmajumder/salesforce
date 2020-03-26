@@ -331,6 +331,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Additional_Comments__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Other_Notes__c</field>
             </layoutItems>
         </layoutColumns>

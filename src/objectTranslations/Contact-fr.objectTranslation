@@ -315,19 +315,19 @@
         <name>Previous_Contact_ID__c</name>
     </fields>
     <fields>
-        <label><!-- Primary Academic Program --></label>
+        <label>Programme académique principal</label>
         <name>Primary_Academic_Program__c</name>
-        <relationshipLabel><!-- Students --></relationshipLabel>
+        <relationshipLabel>Étudiants</relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Primary Department --></label>
+        <label>Service principal</label>
         <name>Primary_Department__c</name>
-        <relationshipLabel><!-- Department Members --></relationshipLabel>
+        <relationshipLabel>Membres du service</relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Primary Educational Institution --></label>
+        <label>Établissement d&apos;enseignement principal</label>
         <name>Primary_Educational_Institution__c</name>
-        <relationshipLabel><!-- Institution Members --></relationshipLabel>
+        <relationshipLabel>Membres de l&apos;établissement</relationshipLabel>
     </fields>
     <fields>
         <help><!-- The primary language of the person --></help>
@@ -335,9 +335,9 @@
         <name>Primary_Language__c</name>
     </fields>
     <fields>
-        <label><!-- Primary Sports Organization --></label>
+        <label>Organisation sportive principale</label>
         <name>Primary_Sports_Organization__c</name>
-        <relationshipLabel><!-- Organization Members --></relationshipLabel>
+        <relationshipLabel>Membres de l&apos;organisation</relationshipLabel>
     </fields>
     <fields>
         <label><!-- Primary Student Organization --></label>

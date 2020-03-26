@@ -433,6 +433,13 @@
         </sections>
     </layouts>
     <layouts>
+        <layout>Test Score Layout - PreACT</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
         <layout>Test Score Layout - SAT</layout>
         <sections>
             <label><!-- Custom Links --></label>

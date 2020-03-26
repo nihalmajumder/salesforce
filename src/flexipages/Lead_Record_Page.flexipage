@@ -97,15 +97,210 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentName>force:detailPanel</componentName>
+        </componentInstances>
+        <name>Facet-mapy76pmw6</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>runtime_sales_activities:activityPanel</componentName>
+        </componentInstances>
+        <name>Facet-ehll0kfnvku</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>Mogli_SMS:TextMessageComponent</componentName>
+        </componentInstances>
+        <name>Facet-hdh2qinbvq</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Lead.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>Interactions__r</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Lead.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>AttachedContentDocuments</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Lead.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>AttachedContentNotes</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Lead.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>CampaignMembers</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <name>Facet-p52duqy0o9</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Lead.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>Histories</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <name>Facet-u0somfrsfe</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-mapy76pmw6</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Standard.Tab.detail</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-ehll0kfnvku</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Standard.Tab.activity</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-hdh2qinbvq</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Mogli</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-p52duqy0o9</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Standard.Tab.relatedLists</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>active</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-u0somfrsfe</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>History</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <name>Facet-7gl8uca9r3g</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
             <componentInstanceProperties>
                 <name>tabs</name>
                 <value>tabs</value>
             </componentInstanceProperties>
             <componentName>flexipage:tabset</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!$Client.formFactor}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Large</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>tabs</name>
+                <value>Facet-7gl8uca9r3g</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tabset</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!$Client.formFactor}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Small</rightValue>
+                </criteria>
+            </visibilityRule>
         </componentInstances>
         <mode>Replace</mode>
         <name>main</name>
         <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>Mogli_SMS:TextMessageComponent</componentName>
+        </componentInstances>
+        <name>Facet-4cffe56a-689f-4bd2-bbcd-1715e30b56b4</name>
+        <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
@@ -182,6 +377,17 @@
         <componentInstances>
             <componentInstanceProperties>
                 <name>body</name>
+                <value>Facet-4cffe56a-689f-4bd2-bbcd-1715e30b56b4</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Mogli</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
                 <value>Facet-5a339b33-276d-463b-ac48-37255824cd68</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
@@ -222,6 +428,13 @@
                 <value>Facet-939841e4-9c33-4731-a219-78dc47c38aa9</value>
             </componentInstanceProperties>
             <componentName>flexipage:tabset</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!$Client.formFactor}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Large</rightValue>
+                </criteria>
+            </visibilityRule>
         </componentInstances>
         <mode>Replace</mode>
         <name>sidebar</name>

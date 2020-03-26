@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Case Re-enrollment</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;Send an email for Program Director / Dean approval&lt;ul&gt;&lt;li&gt;Attach the filled out re-enrollment form (and essay if grad student)&lt;/li&gt;&lt;li&gt;Provide cumulative GPA and program GPA, last date of attendance, and remaining requirements (Unofficial)&lt;/li&gt;&lt;li&gt;Include any requests for substitutions and waivers&lt;/li&gt;&lt;li&gt;Once email permission is received, groove email to the re-enrollment Case.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Approval</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;You will be notified via email once the student is registered. Contact the student to confirm re-enrollment once registration is completed.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Confirm</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;If required, send a re-evaluation request to caps-sem-gs-evaluation@bethel.edu. Include the student ID, catalog year, and program under which the student is returning.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Evaluation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Task 1: Rebuild file&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Rebuild the student file if the original file was purged from the record archive.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Task 2: Updates to name and address&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;If the &amp;quot;Has Information Changed&amp;quot; field is checked, direct the student update their info using the Change of Data form after they have been registered. ( &lt;/span&gt;&lt;a href=&quot;https://www.bethel.edu/registrar/transcripts-records/change-of-data&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;https://www.bethel.edu/registrar/transcripts-records/change-of-data&lt;/a&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt; )&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Task 3: Reactivation and registration&lt;/p&gt;&lt;ul&gt;&lt;li&gt;SSA: Complete the following information&lt;ul&gt;&lt;li&gt;Term&lt;/li&gt;&lt;li&gt;Program&lt;/li&gt;&lt;li&gt;Catalog Year&lt;/li&gt;&lt;li&gt;Cohort&lt;/li&gt;&lt;li&gt;Substitutions and waivers&lt;/li&gt;&lt;li&gt;Is the file being recreated (Y/N)&lt;/li&gt;&lt;li&gt;First term registration requests&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Assign this task to Assistant Registrar&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Reactivate and Register</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;Has the student checked the box that information has changed in the student&amp;#39;s criminal history? If so, assign the case to your manager. &lt;/li&gt;&lt;li&gt;Under which catalog term will the student re-enroll? If it is not the current term, an appeal will need to be filed.&lt;/li&gt;&lt;li&gt;When would the student like to return? Which delivery method is best?&lt;/li&gt;&lt;li&gt;Do they have any questions about the re-enrollment process?&lt;/li&gt;&lt;li&gt;Have student address any Business Office holds.&lt;/li&gt;&lt;li&gt;Review student contact information and request updates as needed.&lt;/li&gt;&lt;li&gt;Run a ‘What-If’ Analysis for the term in which student will be re-enrolled and give them an “unofficial” degree update. If you or the student have questions, contact the Registrar.&lt;/li&gt;&lt;li&gt;Seminary: Review 10-year credit rule. Submit petition if needed.&lt;/li&gt;&lt;li&gt;CAPS/GS: Resume Uploaded? (See Related Tab &amp;gt; Admissions Documents)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Review</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>SSR_Readmission</recordTypeName>
+</PathAssistant>

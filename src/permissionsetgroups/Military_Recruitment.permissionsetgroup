@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Combined CAS and Post-Trad permissions for recruitment of Military students.</description>
+    <label>Military Recruitment</label>
+    <permissionSets>AdmissionsStandard</permissionSets>
+    <permissionSets>Admissions_CAS</permissionSets>
+    <permissionSets>Admissions_Post_Trad</permissionSets>
+    <permissionSets>Contact_Basic_Editing</permissionSets>
+    <permissionSets>Dashboards_Create</permissionSets>
+    <permissionSets>Lightning_User</permissionSets>
+    <permissionSets>Reports_Create_Edit</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

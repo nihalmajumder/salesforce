@@ -395,6 +395,16 @@ WARNING: This will expose some of your emails to the Unresolved Items Agent.</in
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Sandbox_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Controls access to Full Sandbox by activating the Federation Id and Email for these users after a refresh.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Grants access to use the Full Sandbox after a refresh.</inlineHelpText>
+        <label>Sandbox User</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>X18_digit_User_ID__c</fullName>
         <externalId>false</externalId>
         <formula>CASESAFEID(Id)</formula>

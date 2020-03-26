@@ -229,7 +229,7 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>Account_Compact_Layout_Master</compactLayoutAssignment>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Account_Compact_Academic_Program</fullName>
         <fields>Name</fields>
@@ -1137,8 +1137,7 @@ Bin_Number__c
     <recordTypes>
         <fullName>Academic_Program</fullName>
         <active>true</active>
-        <compactLayoutAssignment>Account_Compact_Academic_Program</compactLayoutAssignment>
-        <description>An Academic Program offered at the University.</description>
+        <description>An Academic Program offered at the educational institution.</description>
         <label>Academic Program</label>
         <picklistValues>
             <picklist>AccountSource</picklist>
@@ -17758,7 +17757,7 @@ Bin_Number__c
     <recordTypes>
         <fullName>University_Department</fullName>
         <active>true</active>
-        <description>A department in the university.</description>
+        <description>A department in the educational institution.</description>
         <label>University Department</label>
         <picklistValues>
             <picklist>AccountSource</picklist>

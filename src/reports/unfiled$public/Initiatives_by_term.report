@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Program__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$StageName</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$School_College__c</field>
+    </columns>
+    <description>This will show all opportunities with an Initiative selected, grouped by initiative and term</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Initiatives__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Academic_Term__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Initiatives__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Initiatives by term</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

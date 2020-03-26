@@ -315,19 +315,19 @@
         <name>Previous_Contact_ID__c</name>
     </fields>
     <fields>
-        <label><!-- Primary Academic Program --></label>
+        <label>Programa acadèmic primari</label>
         <name>Primary_Academic_Program__c</name>
-        <relationshipLabel><!-- Students --></relationshipLabel>
+        <relationshipLabel>Estudiants</relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Primary Department --></label>
+        <label>Departament primari</label>
         <name>Primary_Department__c</name>
-        <relationshipLabel><!-- Department Members --></relationshipLabel>
+        <relationshipLabel>Membres del departament</relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Primary Educational Institution --></label>
+        <label>Institució educativa primària</label>
         <name>Primary_Educational_Institution__c</name>
-        <relationshipLabel><!-- Institution Members --></relationshipLabel>
+        <relationshipLabel>Membres de la institució</relationshipLabel>
     </fields>
     <fields>
         <help><!-- The primary language of the person --></help>
@@ -335,9 +335,9 @@
         <name>Primary_Language__c</name>
     </fields>
     <fields>
-        <label><!-- Primary Sports Organization --></label>
+        <label>Organització esportiva primària</label>
         <name>Primary_Sports_Organization__c</name>
-        <relationshipLabel><!-- Organization Members --></relationshipLabel>
+        <relationshipLabel>Membres de l&apos;organització</relationshipLabel>
     </fields>
     <fields>
         <label><!-- Primary Student Organization --></label>

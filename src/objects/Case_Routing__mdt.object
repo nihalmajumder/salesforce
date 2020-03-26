@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Assignee__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Assignee</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Department</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>CAS Admissions</fullName>
+                    <default>true</default>
+                    <label>CAS Admissions</label>
+                </value>
+                <value>
+                    <fullName>ITS</fullName>
+                    <default>false</default>
+                    <label>ITS</label>
+                </value>
+                <value>
+                    <fullName>Post-Trad Admissions</fullName>
+                    <default>false</default>
+                    <label>Post-Trad Admissions</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Case Routing</label>
+    <pluralLabel>Case Routes</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -277,7 +277,7 @@
     <fields>
         <fullName>hed__Application_Type__c</fullName>
         <deprecated>false</deprecated>
-        <description>The type of program or track the applicant is applying to. For example, Undergraduate, Graduate, or Transfer.</description>
+        <description>The type of program or track the applicant is applying to.</description>
         <externalId>false</externalId>
         <inlineHelpText>The type of program or track the applicant is applying to. For example, Undergraduate, Graduate, or Transfer.</inlineHelpText>
         <label>Application Type</label>

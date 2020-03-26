@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Default Gateway Field --></label>
+        <name>Mogli_SMS__Default_Gateway_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form Lookup Field --></label>
+        <name>Mogli_SMS__Form_Lookup_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gateway Priority --></label>
+        <name>Mogli_SMS__Gateway_Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integrated Object --></label>
+        <name>Mogli_SMS__Integrated_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Active --></label>
+        <name>Mogli_SMS__Is_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merge Fields --></label>
+        <name>Mogli_SMS__Merge_Fields2__c</name>
+    </fields>
+    <fields>
+        <label><!-- (Deprecated) Merge Fields --></label>
+        <name>Mogli_SMS__Merge_Fields__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mogli Avatar URL Field --></label>
+        <name>Mogli_SMS__Mogli_Avatar_URL_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mogli Display Field --></label>
+        <name>Mogli_SMS__Mogli_Display_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mogli Number Field --></label>
+        <name>Mogli_SMS__Mogli_Number_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mogli Opt Out Field --></label>
+        <name>Mogli_SMS__Mogli_Opt_Out_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Lookup Field --></label>
+        <name>Mogli_SMS__SMS_Lookup_Field__c</name>
+    </fields>
+    <layouts>
+        <layout>Integrated Object Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Integrated Object Information --></label>
+            <section>Integrated Object Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mogli Object Relationship Fields --></label>
+            <section>Mogli Object Relationship Fields</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

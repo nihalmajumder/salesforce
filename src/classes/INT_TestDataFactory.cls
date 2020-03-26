@@ -361,6 +361,15 @@ public class INT_TestDataFactory {
             Active__c = true
         );
         testMappingsToInsert.add(opportunityStageMapping);
+
+        // Add Stage Detail for testing - Todd Mitchellk
+        Interaction_Mapping__c opportunityStageDetailMapping = new Interaction_Mapping__c(
+            Target_Object_API_Name__c = 'Opportunity',
+            Interaction_Source_Field_API_Name__c = 'Opportunity_Stage_Detail__c',
+            Target_Field_API_Name__c = 'Stage_Detail__c',
+            Active__c = true
+        );
+        testMappingsToInsert.add(opportunityStageDetailMapping);
                
         if (gd.containsKey('hed__Term__c') && gd.get('Opportunity').getDescribe().fields.getMap().containsKey('Term__c')) {
             Interaction_Mapping__c opportunityTermMapping = new Interaction_Mapping__c(
@@ -402,7 +411,7 @@ public class INT_TestDataFactory {
     public static List<Interaction__c> createBulkTestInteractions() {
         List<Interaction__c> testInteractionsToInsert = new List<Interaction__c>();
 
-        for (Integer i = 0; i < 250; i++) {  // Lower size due to CPU limits (500 to 250)
+        for (Integer i = 0; i < BATCH_SIZE; i++) {  // Lower size due to CPU limits (500 to 250)
             Interaction__c testInt = new Interaction__c(
                 First_Name__c = 'Test' + i,
                 Last_Name__c = 'Person' + i,
@@ -413,4 +422,6 @@ public class INT_TestDataFactory {
 
         return testInteractionsToInsert;
     }
+
+    public final static Integer BATCH_SIZE = 50; // Add batch size static variable - todd mitchell
 }

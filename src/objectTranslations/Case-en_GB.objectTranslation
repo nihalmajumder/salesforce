@@ -40,6 +40,10 @@
         <name>Add_to_Application__c</name>
     </fields>
     <fields>
+        <label><!-- Additional Comments --></label>
+        <name>Additional_Comments__c</name>
+    </fields>
+    <fields>
         <label><!-- Additional Major Name --></label>
         <name>Additional_Major_Name__c</name>
     </fields>
@@ -1626,6 +1630,11 @@
     <recordTypes>
         <label><!-- ITS - Segment/Mailing List --></label>
         <name>ITS_Segment_Mailing_List</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- An event that’s being tracked by this Case. --></description>
+        <label><!-- Incident --></label>
+        <name>Incident</name>
     </recordTypes>
     <recordTypes>
         <label><!-- SSR - Academic Petition --></label>

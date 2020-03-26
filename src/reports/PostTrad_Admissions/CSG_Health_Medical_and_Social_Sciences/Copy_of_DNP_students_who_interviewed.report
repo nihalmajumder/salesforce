@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Program__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$StageName</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Academic_Program__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Doctor of Nursing Practice</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>App Completed,Wait Listed,Accepted,Fee Paid,Fee Waived,Registered,Enrolled,App Completed - File Closed,Wait Listed - File Closed,Accepted - File Closed,Rejected - App Submitted - File Closed,Rejected - App Completed - File Closed,Fee Paid - File Closed,Fee Waived - File Closed,Registered - File Closed,Confirmed - File Closed,Unknown - File Closed</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Academic_Term__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Copy of DNP students who interviewed</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

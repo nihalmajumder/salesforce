@@ -21,6 +21,11 @@
         <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>Bulk_Texting</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>CAS_Admissions</application>
         <default>false</default>
         <visible>false</visible>
@@ -86,6 +91,11 @@
         <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>LightningGrahicsPack_Lightning</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>Marking</application>
         <default>false</default>
         <visible>false</visible>
@@ -112,6 +122,16 @@
     </applicationVisibilities>
     <applicationVisibilities>
         <application>PostTrad_Console</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>Profile2PermSet__Profiles_to_Permission_Sets</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>Recruiting</application>
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
@@ -172,6 +192,11 @@
     </applicationVisibilities>
     <applicationVisibilities>
         <application>permissioner__The_Permissioner</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>permissioner__The_Permissioner_Lightning</application>
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
@@ -455,7 +480,23 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>BatchCreateSMS</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>BatchSaveOpportunities</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>BatchTransferCases</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>BatchTransferOpportunities</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>BatchTransferTasks</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -551,11 +592,39 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Flow_BulkSMS</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Flow_BulkSMSTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Flow_SMSNotificationLauncher</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Flow_SMSNotificationLauncher_Test</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Flow_TransferOwnership</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Flow_TransferOwnershipTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ForgotPasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>ForgotPasswordControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>GraphicsPackController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -584,6 +653,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>INT_TestDataFactory</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>IncomingSMSFlowLauncher</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>IncomingSMSFlowLauncher_Test</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -703,6 +780,18 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SandboxPostRefreshScript_Full</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SendEmailToCaseOwnerAction</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SendEmailToCaseOwnerActionTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SiteLoginController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -804,6 +893,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TDTM_Create_Case_Tasks</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TDTM_Create_Relationship</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -928,6 +1021,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TestFieldValueMappingsEditController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestGraphicsPackController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -3643,6 +3740,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Additional_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Additional_Major_Name__c</field>
         <readable>true</readable>
@@ -4434,6 +4536,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case_Routing__mdt.Assignee__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case_Routing__mdt.Department__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Church__c.Church_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4546,6 +4658,41 @@
         <editable>false</editable>
         <field>Cohort__c.Term__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CommSubscription.DataUsePurposeId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CommSubscription.IsDefault</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CommSubscriptionConsent.EffectiveToDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CommSubscriptionTiming.Offset</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CommSubscriptionTiming.PreferredTimeEnd</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CommSubscriptionTiming.PreferredTimeStart</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CommSubscriptionTiming.PreferredTimeZone</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -5236,6 +5383,161 @@
         <editable>false</editable>
         <field>Contact.hed__is_Address_Override__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointConsent.ContactPointTypeConsentId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointConsent.DataUsePurposeId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointConsent.DoubleConsentCaptureDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointConsent.EffectiveFrom</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointConsent.EffectiveTo</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.ActiveFromDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.ActiveToDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.BestTimeToContactEndTime</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.BestTimeToContactStartTime</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.BestTimeToContactTimezone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.EmailDomain</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.EmailLatestBounceDateTime</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.EmailLatestBounceReasonText</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.EmailMailBox</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.IsPrimary</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointEmail.ParentId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.ActiveFromDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.AreaCode</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.BestTimeToContactEndTime</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.BestTimeToContactStartTime</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.BestTimeToContactTimezone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.ExtensionNumber</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.FormattedInternationalPhoneNumber</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.FormattedNationalPhoneNumber</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.IsBusinessPhone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.IsFaxCapable</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.IsPersonalPhone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.IsPrimary</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.IsSmsCapable</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.ParentId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContactPointPhone.PhoneType</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -5964,6 +6266,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>EngagementChannelType.ContactPointType</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Event.Checklist_Item_Notification__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -6150,6 +6457,46 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Event.wbsendit__Smart_Email_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Batch_ID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Campaign__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Funnel_Criteria__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Gateway__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Message__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Report_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event_Log__c.Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6400,6 +6747,126 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Geographic_Territory__c.State__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackImages__mdt.Graphic_Setting_ID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackImages__mdt.Image_URL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackImages__mdt.Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackSettings__mdt.AttributionText__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackSettings__mdt.AttributionURL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackSettings__mdt.License2__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackSettings__mdt.LicenseURL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackSettings__mdt.License__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>GraphicsPackSettings__mdt.Size__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.First_3_awards__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.First_3_medals__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.First_3_positions__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Out_of_3_currency__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Out_of_3_lightbulbs__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Out_of_3_rating__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Out_of_5_Ticks__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Out_of_5_deck_chair__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Out_of_5_rating__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Red_Amber_Green_Bullet__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Red_Amber_Green_Person__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Red_Amber_Green__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Up_or_Down_Arrows__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Up_or_Down_Thumbs__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Graphics_Pack_Example__c.Up_or_Down__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7696,6 +8163,161 @@
         <editable>false</editable>
         <field>Mogli_SMS__Gateway__c.User__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Attachments__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Batch_Group_ID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Campaign__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Created_By__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Debug__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Direction__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Gateway__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Is_Batch_Transaction__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Last_Modified_By__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Lead__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Message_SID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Message__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Offline__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Opportunity__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Owner__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Phone_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__SMS_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Scheduled_Delivery__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Incoming_SMS__e.Mogli_SMS__Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Default_Gateway_Field__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Form_Lookup_Field__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Gateway_Priority__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Is_Active__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Merge_Fields2__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Merge_Fields__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Mogli_Avatar_URL_Field__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Mogli_Display_Field__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Mogli_Number_Field__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__Mogli_Opt_Out_Field__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mogli_SMS__Integrated_Object__mdt.Mogli_SMS__SMS_Lookup_Field__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -9206,6 +9828,21 @@
         <editable>true</editable>
         <field>OrderItem.ServiceDate</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PartyConsent.DoubleConsentCaptureDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PartyConsent.EffectiveFrom</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PartyConsent.EffectiveTo</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -11664,6 +12301,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>User.Sandbox_User__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>User.X18_digit_User_ID__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -12936,6 +13578,11 @@
         <editable>true</editable>
         <field>hed__Error__c.hed__Stack_Trace__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>hed__Facility__c.Display_Name__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -14679,6 +15326,10 @@
     </fieldPermissions>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Admin_Transfer_Object_Ownership</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Application_Trigger_Assignments_when_Fields_Change</flow>
     </flowAccesses>
     <flowAccesses>
@@ -14687,7 +15338,19 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Bethel_Query_String_BACKUP</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Bulk_SMS</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Call_Interaction_Inquiry_Form_by_Mogli</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Call_Interaction_Inquiry_Form_by_Mogli_BACKUP</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14703,6 +15366,10 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Delete_Files</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>External_Response_Requested</flow>
     </flowAccesses>
     <flowAccesses>
@@ -14715,11 +15382,27 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Incoming_SMS_Alert</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Interaction_Creation_from_Mogli</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Interaction_Creation_from_Mogli_BACKUP</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Interaction_Mogli_Number_to_Associated_Contact</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Interaction_Mogli_Number_to_Associated_Contact_BACKUP</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Move_Tasks_Between_Opportunities</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14728,6 +15411,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Opportunity_Change_Terms</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Opportunity_Trigger</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14747,7 +15434,19 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>SMS_Incoming_Event</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>SMS_Notifications</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Screen_Clean_Test_Applicants</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Support_Case_Quick_Create</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14756,6 +15455,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Task_Trigger</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Tasks_Delete</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14947,7 +15650,14 @@
         <recordType>CampaignMember.Event</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CampaignMemberStatus-Campaign Member Status Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Case-Case Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Case-Case Layout</layout>
+        <recordType>Case.Incident</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-EMOps - Admission Document</layout>
@@ -15049,6 +15759,9 @@
         <recordType>Case.SSR_Academic_Petition</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Case_Routing__mdt-Case Routing Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Church__c-Church Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -15062,6 +15775,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Contact-Contact Layout - Seminary</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ContactPointEmail-Contact Point Email Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ContactPointPhone-Contact Point Phone Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ContentVersion-Content Version Layout</layout>
@@ -15118,6 +15837,9 @@
         <layout>Event-Event Layout - Master</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Event_Log__c-Event Log Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Extracurricular_Activity__c-Extracurricular Activity - Master</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -15148,7 +15870,19 @@
         <layout>Global-Global Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>GraphicsPackImages__mdt-Graphics Pack Image Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GraphicsPackSettings__mdt-Graphics Pack Setting Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Graphics_Pack_Example__c-Graphics Pack Example Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Idea-Idea Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>IframeWhiteListUrl-Whitelisted Domain for Visualforce Inline Frames Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Individual-Individual Layout</layout>
@@ -15207,6 +15941,9 @@
         <recordType>Mogli_SMS__Gateway__c.Mogli_SMS__Twilio</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Mogli_SMS__Integrated_Object__mdt-Mogli_SMS__Integrated Object Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Mogli_SMS__Log__c-Mogli_SMS__Log Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -15252,6 +15989,9 @@
     <layoutAssignments>
         <layout>Opportunity-Opportunity Layout - Master</layout>
         <recordType>Opportunity.Inquiry_Opportunity</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>OpportunityContactRole-Opportunity Contact Role Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>OpportunityLineItem-Opportunity Product Layout</layout>
@@ -15529,6 +16269,10 @@
         <recordType>Test_Score__c.PTE</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Test_Score__c-Test Score Layout - PreACT</layout>
+        <recordType>Test_Score__c.PreACT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Test_Score__c-Test Score Layout - SAT</layout>
         <recordType>Test_Score__c.SAT</recordType>
     </layoutAssignments>
@@ -15643,6 +16387,10 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>hed__Course_Enrollment__c-hed__HEDA Course Enrollment Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>hed__Course_Enrollment__c-hed__HEDA Course Enrollment Layout</layout>
+        <recordType>hed__Course_Enrollment__c.Default</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>hed__Course_Enrollment__c-hed__HEDA Course Enrollment Layout</layout>
@@ -16115,6 +16863,10 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>GraphicsPackLtng</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>IdeasHome</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -16128,6 +16880,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Readmission</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>ReadmissionViewer</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -16294,6 +17050,11 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Case.ITS_Segment_Mailing_List</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Case.Incident</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -16639,6 +17400,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>hed__Course_Enrollment__c.Default</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>hed__Course_Enrollment__c.Faculty</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -16748,6 +17514,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Bulk_Texting</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Church__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -16800,6 +17570,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Event_Log__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Extracurricular_Activity__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
@@ -16828,6 +17602,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>GraphicsPack</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Intended_Program_Term__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
@@ -16841,6 +17619,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Mogli_SMS__ApplicationSettings__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Mogli_SMS__AsyncTaskManager__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -16888,6 +17670,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Mogli_SMS__Registered_Gateway__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Mogli_SMS__SMS_Template__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
@@ -16901,6 +17687,14 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Mogli_SMS__Setup_MogliSMS</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Profile2PermSet__Converter</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Profile2PermSet__Permissions_Analyzer</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -17052,7 +17846,27 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>permissioner__MobileFullPage</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>permissioner__MobilePermissioner</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>permissioner__TestMobile2</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>permissioner__The_Permissioner</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>permissioner__The_Permissioner_Lightning</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>permissioner__mobile</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -17104,8 +17918,28 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-CommSubscription</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-CommSubscriptionChannelType</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-CommSubscriptionConsent</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-CommSubscriptionTiming</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Contact</tab>
         <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ContactPointConsent</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-ContactPointTypeConsent</tab>
@@ -17138,6 +17972,10 @@
     <tabVisibilities>
         <tab>standard-DuplicateRecordSet</tab>
         <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-EngagementChannelType</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Event</tab>
@@ -17186,6 +18024,10 @@
     <tabVisibilities>
         <tab>standard-OtherUserProfile</tab>
         <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-PartyConsent</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Pricebook2</tab>
@@ -17249,6 +18091,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-UserProvisioningRequest</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-WaveHome</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <decisions>
+        <description>Verifies whether there are any tasks that need to be deleted.</description>
+        <name>Decision_Tasks_to_Delete</name>
+        <label>Any Tasks to delete?</label>
+        <locationX>701</locationX>
+        <locationY>185</locationY>
+        <defaultConnectorLabel>No Tasks</defaultConnectorLabel>
+        <rules>
+            <name>Tasks_to_Delete_Outcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Tasks</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_CSG_Tasks</targetReference>
+            </connector>
+            <label>Tasks to Delete</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Get_Process</name>
+        <label>Get Process</label>
+        <locationX>160</locationX>
+        <locationY>186</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Post_Trad_File_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vDeleteType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PostTradClosed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetOpp</targetReference>
+            </connector>
+            <label>Post-Trad File Closed</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Tasks: Delete {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Tasks: Delete</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <description>Deletes Tasks on the passed OppId that are assigned to the Opp owner and were created BEFORE the Opp was closed.</description>
+        <name>Delete_CSG_Tasks</name>
+        <label>Delete CSG Tasks</label>
+        <locationX>928</locationX>
+        <locationY>184</locationY>
+        <inputReference>Get_Tasks</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Get_Tasks</name>
+        <label>Get Tasks</label>
+        <locationX>562</locationX>
+        <locationY>183</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Decision_Tasks_to_Delete</targetReference>
+        </connector>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>GetOpp.Date_File_Closed__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GetOpp.OwnerId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vParentId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Task</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>GetOpp</name>
+        <label>GetOpp</label>
+        <locationX>424</locationX>
+        <locationY>183</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Tasks</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vParentId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Process</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Which process is deleting these Tasks? Allows multiple business processes to run this flow to delete different sets of tasks.</description>
+        <name>vDeleteType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Id of the parent object of Tasks to be deleted.</description>
+        <name>vParentId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

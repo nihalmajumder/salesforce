@@ -9,6 +9,11 @@
         <value>Établissements</value>
     </caseValues>
     <fields>
+        <help><!-- The full name of the Facility. For example, &quot;Thomas Edison Building - Room 201.&quot; --></help>
+        <label><!-- Display Name --></label>
+        <name>Display_Name__c</name>
+    </fields>
+    <fields>
         <help>L&apos;organisation responsable de l&apos;établissement.</help>
         <label><!-- Account --></label>
         <name>hed__Account__c</name>

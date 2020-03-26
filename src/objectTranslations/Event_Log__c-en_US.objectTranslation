@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Event Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Batch ID --></label>
+        <name>Batch_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+        <relationshipLabel><!-- Event Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Funnel Criteria --></label>
+        <name>Funnel_Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mogli Gateway --></label>
+        <name>Gateway__c</name>
+        <relationshipLabel><!-- Event Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Name --></label>
+        <name>Report_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Campaign</masterLabel>
+            <translation><!-- Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funnel</masterLabel>
+            <translation><!-- Funnel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report</masterLabel>
+            <translation><!-- Report --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Event Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

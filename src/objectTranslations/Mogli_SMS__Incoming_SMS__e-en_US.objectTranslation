@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Attachments --></label>
+        <name>Mogli_SMS__Attachments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Group ID --></label>
+        <name>Mogli_SMS__Batch_Group_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Mogli_SMS__Campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Mogli_SMS__Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>Mogli_SMS__Created_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debug --></label>
+        <name>Mogli_SMS__Debug__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direction --></label>
+        <name>Mogli_SMS__Direction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gateway --></label>
+        <name>Mogli_SMS__Gateway__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Batch Transaction --></label>
+        <name>Mogli_SMS__Is_Batch_Transaction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By --></label>
+        <name>Mogli_SMS__Last_Modified_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Mogli_SMS__Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message SID --></label>
+        <name>Mogli_SMS__Message_SID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>Mogli_SMS__Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offline --></label>
+        <name>Mogli_SMS__Offline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Mogli_SMS__Opportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner --></label>
+        <name>Mogli_SMS__Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Mogli_SMS__Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Id --></label>
+        <name>Mogli_SMS__SMS_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Delivery --></label>
+        <name>Mogli_SMS__Scheduled_Delivery__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Mogli_SMS__Status__c</name>
+    </fields>
+</CustomObjectTranslation>

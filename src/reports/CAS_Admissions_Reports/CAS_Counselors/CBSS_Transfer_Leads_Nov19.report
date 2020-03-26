@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead$Name</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$Name</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$Contact__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$School_College__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$Opportunity_Stage__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$Opportunity_Stage_Detail__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$Lead_Source__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$Source_Detail__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Lead.Interactions__r$Is_Primary__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Interactions__r$Academic_Term__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Email</field>
+    </columns>
+    <description>List of leads from CBSS purchase in November 2019 for Transfers.  Goal is to connect with each of these students to encourage a visit, application, or inquiry.</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Interactions__r$Source_Detail__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>CBSS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Interactions__r$Academic_Term__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Fall 2020 - CAS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Interactions__r$CreatedDate</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>11/1/2019 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Interactions__r$Admit_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Transfer Student</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>CBSS Transfer Leads Nov19</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Leads_with_Interactions__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Lead$ConvertedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

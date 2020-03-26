@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Program__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$StageName</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$Max_High_School_GPA__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$Highest_ACT_Score__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Application__c.Agree_To_Covenant__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Application__c.Sport__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Owner</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Fall 2020 - CAS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>App Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Scott Kirchoff,Craig Henkel,Bret Hyder,Spencer Hinseth</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>App Completed - My Funnel</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

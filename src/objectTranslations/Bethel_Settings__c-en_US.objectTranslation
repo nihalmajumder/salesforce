@@ -9,12 +9,12 @@
         <value>Bethel Settings</value>
     </caseValues>
     <fields>
-        <label><!-- Instance URL --></label>
-        <name>Instance_URL__c</name>
+        <label><!-- Community URL (Appeals) --></label>
+        <name>Community_URL_Appeals__c</name>
     </fields>
     <fields>
-        <label><!-- Public Domain URL --></label>
-        <name>Public_Domain_URL__c</name>
+        <label><!-- Instance URL --></label>
+        <name>Instance_URL__c</name>
     </fields>
     <fields>
         <label><!-- Timezone Offset --></label>

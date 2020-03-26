@@ -15,7 +15,8 @@
 + &quot;- Starting Term and Block: &quot; + BR()
 + &quot;- Pace (Standard; Part-time; accelerated): &quot; + BR()
 + &quot;- Applying for Financial Aid (Yes; No; Unknown): &quot; + BR()
-+ &quot;- Veteran (Yes; No):&quot; + BR()</formula>
++ &quot;- Veteran (Yes; No):&quot; + BR()
++ &quot;- Provisional Status (Yes/No/Unknown):&quot; + BR()</formula>
     </fieldOverrides>
     <fieldOverrides>
         <field>Origin</field>

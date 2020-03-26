@@ -138,7 +138,7 @@
                                     </div>
 
                                     <div class="form-group" >
-                                        <label for="hasOtherName" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Are you or have you ever been known by any other name?</label>
+                                        <label for="hasOtherName" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Are you or have you ever been known by any other name? <span class='required'>*</span></label>
                                         <apex:actionRegion > 
                                         <apex:selectRadio id="hasOtherName" value="{!request.hasOtherName}" layout="pageDirection" styleClass="selectRadio" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
                                             <apex:selectOption itemValue="Yes" itemLabel="Yes"/>
@@ -276,7 +276,7 @@
                             <div class="row" >
                                 <div class="col-xs-12">
                                     <div class="form-group" >
-                                        <label for="veteran" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Are you a veteran?</label>
+                                        <label for="veteran" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Are you a veteran? <span class='required'>*</span></label>
                                         <apex:selectRadio id="veteran" value="{!request.theContact.Is_Veteran__c}" layout="pageDirection" styleClass="selectRadio" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
                                             <apex:selectOption itemValue="Yes" itemLabel="Yes"/>
                                             <apex:selectOption itemValue="No" itemLabel="No"/>
@@ -352,7 +352,7 @@
                             <div class="row" >
                                 <div class="col-xs-12">
                                     <div class="form-group" >
-                                        <label for="aid" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Will you apply for financial aid?</label>
+                                        <label for="aid" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Will you apply for financial aid? <span class='required'>*</span></label>
                                         <apex:selectRadio id="aid" value="{!request.financialAid}" layout="pageDirection" styleClass="selectRadio" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
                                             <apex:selectOption itemValue="Yes" itemLabel="Yes"/>
                                             <apex:selectOption itemValue="No" itemLabel="No"/>
@@ -360,7 +360,7 @@
                                     </div>
 
                                     <div class="form-group" >
-                                        <label for="hasBusinessOffice" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Do you have a business office or collections hold? </label>
+                                        <label for="hasBusinessOffice" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Do you have a business office or collections hold? <span class='required'>*</span></label>
                                         <apex:selectRadio id="hasBusinessOffice" value="{!request.hasBusinessOffice}" layout="pageDirection" styleClass="selectRadio" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
                                             <apex:selectOption itemValue="Yes" itemLabel="Yes"/>
                                             <apex:selectOption itemValue="No" itemLabel="No"/>
@@ -372,7 +372,7 @@
                                     </div>
 
                                     <div class="form-group" >
-                                        <label for="hasChanged" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Has any information changed in sections I, II or III below, since you last attended? <span class='required'>*</span></label>
+                                        <label for="hasChanged" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Has any information changed in sections I, II or III below since you last attended? <span class='required'>*</span></label>
                                         <apex:selectRadio id="hasChanged" value="{!request.hasChanged}" layout="pageDirection" styleClass="selectRadio" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
                                             <apex:selectOption itemValue="Yes" itemLabel="Yes"/>
                                             <apex:selectOption itemValue="No" itemLabel="No"/>
@@ -497,7 +497,7 @@
                         <div class="col-lg-10 col-lg-offset-1" >
                             <apex:outputPanel layout="none" rendered="{!IF(request.school = 'Adult Undergraduate' || request.school = 'Graduate', true, false)}">
                             <p>
-                                <apex:outputText value="Bethel University is an educational community committed to the integration of evangelical faith with learning. A statement called A Covenant for Life Together has been adopted to help clarify how Christian faith informs and guides the lives and actions of members of the Bethel community. This document interprets the values by which Bethel has chosen to define itself and is intended to facilitate growth, development, and learning. Although some of these values relate to the developmental stages of traditional students and are not necessarily the norm for all Christians, students in the College of Adult & Professional Studies and Graduate School are asked to honor this community statement by abstaining from the use of tobacco, alcohol, and profane language on the campus and at off-campus class sites. Additionally, CAPS & GS students are required to abide by the Professional Expectations & Community Conduct Agreement (" escape="false" /><a href="//confluence.bethel.edu/x/SANqAQ" target="_agreement">confluence.bethel.edu/x/SANqAQ</a><apex:outputText value=").  A physical copy of A Covenant for Life Together is available from the Office of the Associate Provost for the College of Adult & Professional Studies, the Seminary, and the Graduate School." escape="false" />
+                                <apex:outputText value="Bethel University is an educational community committed to the integration of evangelical faith with learning. A statement called A Covenant for Life Together has been adopted to help clarify how Christian faith informs and guides the lives and actions of members of the Bethel community. This document interprets the values by which Bethel has chosen to define itself and is intended to facilitate growth, development, and learning. Although some of these values relate to the developmental stages of traditional students and are not necessarily the norm for all Christians, students in the College of Adult & Professional Studies and Graduate School are asked to honor this community statement by abstaining from the use of tobacco, alcohol, and profane language on the campus and at off-campus class sites. Additionally, CAPS & GS students are required to abide by the " escape="false" /><a href="//confluence.bethel.edu/x/SANqAQ" target="_agreement">Professional Expectations &amp; Community Conduct Agreement</a><apex:outputText value=".  A physical copy of A Covenant for Life Together is available from the Office of the Associate Provost for the College of Adult & Professional Studies, the Seminary, and the Graduate School." escape="false" />
                             </p>
                             </apex:outputPanel>
                             <apex:outputPanel layout="none" rendered="{!IF(request.school = 'Seminary', true, false)}">
@@ -531,17 +531,17 @@
             <apex:outputPanel layout="none" rendered="{!IF(request.school == 'Graduate' || request.school == 'Seminary', true, false)}">
             <div class="row" >
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" >
-                    <h2 style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:24px;" >RE-ENROLLMENT ESSAY</h2>
+                    <h2 style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:24px;" >CONTEXT FOR RE-ENROLLMENT</h2>
                     <div class="row" >
                         <div class="col-lg-10 col-lg-offset-1" >
                             <div class="row" >
                                 <div class="col-xs-12">
                                     <div class="form-group" >
-                                        <label for="whyLeft" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a brief description of the reason you left the program.</label>
+                                        <label for="whyLeft" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a brief description of the reason you left the program. <span class='required'>*</span></label>
                                         <apex:inputTextArea id="whyLeft" value="{!request.whyLeftEssay}" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;resize:none;" />
                                     </div>
                                     <div class="form-group" >
-                                        <label for="whyBack" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a brief description of the reason this is the right time for you to return to complete your degree.</label>
+                                        <label for="whyBack" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Please provide a brief description of the reason this is the right time for you to return to complete your degree.  <span class='required'>*</span></label>
                                         <apex:inputTextArea id="whyBack" value="{!request.whyBackEssay}" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;resize:none;" />
                                     </div>
                                 </div>

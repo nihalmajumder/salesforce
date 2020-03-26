@@ -112,10 +112,10 @@ private class INT_InteractionProcessor_TEST {
             'Lead count expected to be at 0. Once converted, the Leads should be deleted');
 
         Map<Id, Contact> contactMap = new Map<Id, Contact>([SELECT Name, Account.Name FROM Contact]);
-        System.assert(contactMap.size() == 252, '252 Contacts Expected - 1 for each of the 252 Interactions');
+        System.assert(contactMap.size() == INT_TestDataFactory.BATCH_SIZE + 2, INT_TestDataFactory.BATCH_SIZE + 2 + ' Contacts Expected - 1 for each of the 252 Interactions');
 
         Map<Id, Account> accountMap = new Map<Id, Account>([SELECT Name FROM Account]);
-        System.assert(accountMap.size() == 252, '252 Accounts Expected - 1 for each of the 252 Interactions');
+        System.assert(accountMap.size() == INT_TestDataFactory.BATCH_SIZE + 2, INT_TestDataFactory.BATCH_SIZE + 2 + ' Accounts Expected - 1 for each of the 252 Interactions');
 
         List<Interaction__c> interactions = [
             SELECT First_Name__c, Last_Name__c, Contact__r.Name, Contact__c, Contact_Account_ID__c, Opportunity__c,
@@ -254,7 +254,7 @@ private class INT_InteractionProcessor_TEST {
         }
         
         if (hasTerm) {
-            testInt.put('Term__c', testFallTerm.Id);
+            testInt.put('Academic_Term__c', testFallTerm.Id);
         }
 
         // Act
@@ -379,4 +379,138 @@ private class INT_InteractionProcessor_TEST {
         System.assertEquals(testAddlCampaign.Id, campaignMemberMap.get(testAddlCampaign.Id).CampaignId, 'CampaignMember should have been created for test Campaign.');
         System.assertEquals(assertContacts[0].Id, campaignMemberMap.get(testAddlCampaign.Id).ContactId, 'Contact Id should match Contact created.');
     }
+
+    static testMethod void testOpportunityExisting() { // Added by Todd Mitchell
+        // Arrange
+        Map<String, Schema.RecordTypeInfo> accRTInfo = Account.SObjectType.getDescribe().getRecordTypeInfosByName();
+
+        Account testCollege = new Account(
+            Name = 'College of Arts & Sciences',
+            RecordTypeId = accRTInfo.get('University Department').getRecordTypeId()
+        );
+        insert testCollege;
+
+        Account testUniversity = new Account(
+            Name = 'University of SCI'//,
+            //RecordTypeId = accRTInfo.get('Educational Institution').getRecordTypeId()
+        );
+        insert testUniversity;
+
+        Map<String, Schema.SObjectType> gd = Schema.getGlobalDescribe();
+        Boolean hasProgram = gd.containsKey('Program__c') && gd.get('Opportunity').getDescribe().fields.getMap().containsKey('Academic_Program__c') && gd.get('Opportunity').getDescribe().fields.getMap().containsKey('Recruitment_Program__c');
+        Boolean hasTerm = gd.containsKey('hed__Term__c') && gd.get('Opportunity').getDescribe().fields.getMap().containsKey('Term__c');
+        Boolean hasAffl = gd.containsKey('hed__Affiliation__c');
+        
+        SObject recruitProgram;
+        SObject acadProgram;
+        
+        if (hasProgram) {
+            recruitProgram = Schema.getGlobalDescribe().get('Program__c').newSObject();
+            recruitProgram.put('Name', 'BA - English');
+            recruitProgram.put('Program_Record_Type__c', 'Recruitment Program');
+            recruitProgram.put('RecordTypeId', gd.get('Program__c').getDescribe().getRecordTypeInfosByName().get('Recruitment Program').getRecordTypeId());
+            recruitProgram.put('Department__c', testCollege.Id);
+            recruitProgram.put('Career__c', 'Undergraduate');
+            recruitProgram.put('Active__c', true);
+            
+            insert recruitProgram;
+    
+            acadProgram = Schema.getGlobalDescribe().get('Program__c').newSObject();
+            acadProgram.put('Name', 'Business Administration BA');
+            acadProgram.put('Program_Record_Type__c', 'Academic Program');
+            acadProgram.put('RecordTypeId', gd.get('Program__c').getDescribe().getRecordTypeInfosByName().get('Academic Program').getRecordTypeId());
+            acadProgram.put('Department__c', testCollege.Id);
+            acadProgram.put('Career__c', 'Undergraduate');
+            acadProgram.put('Active__c', true);
+            
+            insert acadProgram;
+        }
+
+        SObject testFallTerm;
+        if (hasTerm) {
+            testFallTerm = Schema.getGlobalDescribe().get('hed__Term__c').newSObject();
+            testFallTerm.put('Name', 'Fall ' + (System.today().year() + 1));
+            testFallTerm.put('hed__Start_Date__c', Date.newInstance((System.today().year() + 1), 8, 15));
+            testFallTerm.put('hed__End_Date__c', Date.newInstance((System.today().year() + 1), 12, 16));
+            testFallTerm.put('hed__Account__c', testCollege.Id);
+            insert testFallTerm;
+        }
+
+        Interaction__c testInt = new Interaction__c(
+            First_Name__c = 'Super',
+            Last_Name__c = 'Gary',
+            Middle_Name__c = 'Duper',
+            Email__c = 'superdgary@nomail.com',
+            Contact_Title__c = 'Mr.',
+            Constituent_ID__c = '123456',
+            Gender__c = 'Male',
+            Race__c = 'White',
+            Birthdate__c = Date.newInstance(1998, 1, 1),
+            Admit_Type__c = 'New Freshman',
+            Lead_Source__c = 'Office Visit',
+            Affiliated_Account__c = testUniversity.Id,
+            Affiliation_Role__c = 'Student',
+            Primary_Affiliation__c = true
+        );
+        
+        if (hasProgram) {
+            testInt.put('Academic_Program__c', acadProgram.Id);
+        }
+        
+        if (hasTerm) {
+            testInt.put('Academic_Term__c', testFallTerm.Id);
+        }
+        insert testInt;
+        Interaction__c firstInteraction = [
+            SELECT First_Name__c, Last_Name__c, Contact__c, Contact_Account_ID__c, Opportunity__c, Opportunity_Key__c, Audit_Reason__c,
+                Interaction_Status__c, Contact_Title__c, Birthdate__c, Opportunity_Name__c, Career__c
+            FROM Interaction__c
+            WHERE Id = :testInt.Id
+        ];
+
+        //Opportunity opp = [SELECT Id, StageName, Stage_Detail__c FROM Opportunity WHERE Id = :firstInteraction.Opportunity__c];
+        //opp.StageName = 'Applied';
+        //opp.Stage_Detail__c = 'App Submitted';
+        //update opp;
+
+        Interaction__c testInt2 = new Interaction__c(
+            First_Name__c = 'Super',
+            Last_Name__c = 'Gary',
+            Middle_Name__c = 'Duper',
+            Email__c = 'superdgary@nomail.com',
+            Contact_Title__c = 'Mr.',
+            Constituent_ID__c = '123456',
+            Gender__c = 'Male',
+            Race__c = 'White',
+            Birthdate__c = Date.newInstance(1998, 1, 1),
+            Admit_Type__c = 'New Freshman',
+            Lead_Source__c = 'Office Visit',
+            Affiliated_Account__c = testUniversity.Id,
+            Affiliation_Role__c = 'Student',
+            Primary_Affiliation__c = true
+        );
+        
+        if (hasProgram) {
+            testInt2.put('Academic_Program__c', acadProgram.Id);
+        }
+        
+        if (hasTerm) {
+            testInt2.put('Term__c', testFallTerm.Id);
+        }
+
+        // Act
+        Test.startTest();
+        insert testInt2;
+        Test.stopTest();
+
+        // Assert
+        Interaction__c assertInteraction2 = [
+            SELECT First_Name__c, Last_Name__c, Contact__c, Contact_Account_ID__c, Opportunity__c, Opportunity__r.StageName, Opportunity__r.Stage_Detail__c, Audit_Reason__c,
+                Interaction_Status__c, Contact_Title__c, Birthdate__c, Opportunity_Name__c, Career__c, Opportunity_Key__c
+            FROM Interaction__c
+            WHERE Id = :testInt2.Id
+        ];
+        System.assert(assertInteraction2.Interaction_Status__c == 'Imported', 'Interaction should have been updated to \'Imported\' status.');
+        System.assertEquals(firstInteraction.Opportunity__c, assertInteraction2.Opportunity__c);
+    }    
 }

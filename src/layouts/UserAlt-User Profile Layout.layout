@@ -38,6 +38,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Sandbox_User__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Counselor_Website_Profile__c</field>
             </layoutItems>
         </layoutColumns>

@@ -323,7 +323,7 @@
         <name>Academic_Program_Key_fields</name>
     </quickActions>
     <recordTypes>
-        <description><!-- An Academic Program offered at the University. --></description>
+        <description><!-- An Academic Program offered at the educational institution. --></description>
         <label><!-- Academic Program --></label>
         <name>Academic_Program</name>
     </recordTypes>
@@ -358,7 +358,7 @@
         <name>Sports_Organization</name>
     </recordTypes>
     <recordTypes>
-        <description><!-- A department in the university. --></description>
+        <description><!-- A department in the educational institution. --></description>
         <label><!-- University Department --></label>
         <name>University_Department</name>
     </recordTypes>

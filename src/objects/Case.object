@@ -203,6 +203,18 @@
         <type>Default</type>
     </actionOverrides>
     <businessProcesses>
+        <fullName>Behavior Management</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
         <fullName>EMOps</fullName>
         <isActive>true</isActive>
         <values>
@@ -570,6 +582,16 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>Additional_Major_Name__c</fullName>
@@ -1159,7 +1181,7 @@ Petition_Type__c,
     <fields>
         <fullName>Decision_Maker_URL__c</fullName>
         <externalId>false</externalId>
-        <formula>$Setup.Bethel_Settings__c.Public_Domain_URL__c + &quot;appeals/apex/AcademicPetitionDecisionForm?ID=&quot;+Id</formula>
+        <formula>$Setup.Bethel_Settings__c.Community_URL_Appeals__c + &quot;appeals/apex/AcademicPetitionDecisionForm?ID=&quot;+Id</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Decision Maker URL</label>
         <required>false</required>
@@ -3061,7 +3083,7 @@ Petition_Type__c,
         <fullName>Student_Notification_URL__c</fullName>
         <description>URL for Student to view their appeals case</description>
         <externalId>false</externalId>
-        <formula>$Setup.Bethel_Settings__c.Public_Domain_URL__c + &quot;appeals/apex/AcademicPetitionStudentView?ID=&quot;+Id</formula>
+        <formula>$Setup.Bethel_Settings__c.Community_URL_Appeals__c + &quot;appeals/apex/AcademicPetitionStudentView?ID=&quot;+Id</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>URL for Student View of Appeals Case</inlineHelpText>
         <label>Student Notification URL</label>
@@ -10396,6 +10418,1246 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Mailing List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Zip_Code_Region__c</picklist>
+            <values>
+                <fullName>100 mile radius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>150 mile radius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50 mile radius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>All</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Only MN Zips</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>grade_change_factors__c</picklist>
+            <values>
+                <fullName>Late withdrawal allowed - grade changed to %E2%80%9CW%E2%80%9D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late work accepted by professor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>hed__Category__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Code of Conduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Violation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Offense</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>hed__Location__c</picklist>
+            <values>
+                <fullName>Off Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Incident</fullName>
+        <active>true</active>
+        <businessProcess>Behavior Management</businessProcess>
+        <description>An event that’s being tracked by this Case.</description>
+        <label>Incident</label>
+        <picklistValues>
+            <picklist>Action__c</picklist>
+            <values>
+                <fullName>Add</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Remove</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Application_Request_Type__c</picklist>
+            <values>
+                <fullName>Application Owner change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Catalog%2FSchool Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Ed History</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Add</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Type Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript Eval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Approval_Description__c</picklist>
+            <values>
+                <fullName>Issue grace grant for full tuition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue grace grant for partial tuition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No refund</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BSSD_Transition_Plan__c</picklist>
+            <values>
+                <fullName>Active - No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete at Bethel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive - No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive - Not Returning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ceremony_Date__c</picklist>
+            <values>
+                <fullName>Fall 2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall 2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spring 2020</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ceremony_Participation__c</picklist>
+            <values>
+                <fullName>I plan to commence in person%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I will commence in absentia%2E I understand this means my name will be listed in the program but I will not be present at commencement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Decision__c</picklist>
+            <values>
+                <fullName>Approve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deny</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Decision_about_refund__c</picklist>
+            <values>
+                <fullName>Issue grace grant for full tuition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue grace grant for partial tuition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No refund</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Denial_Description__c</picklist>
+            <values>
+                <fullName>No room in class</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other sections available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pace of class too intense to allow reasonable time to get work done</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student did not provide enough information about the course to justify a favorable decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student did not provide evidence or report circumstances sufficient to justify an exception to the policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student not yet qualified to be in class</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student participated in the class fully and no drop or withdrawal is justified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student was granted a prior extension and did not complete the class</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student was granted a prior extension and did not complete the degree requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Substitute course did not include important content provided in course that we provide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Substitute course has different objectives than the course in our catalog</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Substitute course was at a lower level than course in our catalog</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The changes to the curriculum are significant enough that the student would not be well served by completing old requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The courses are not available and suitable replacements cannot be identified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Type__c</picklist>
+            <values>
+                <fullName>International Document</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interview Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>References</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resume</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Statement of Purpose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Score</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Groups_to_Include__c</picklist>
+            <values>
+                <fullName>BUILD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Members</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous PSEO %28Q%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Readmits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_Stage_Detail__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accepted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Completed - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Started - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Submitted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed - Ready to Enroll</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Paid - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Waived - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquired - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Applied - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registered - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected - App Completed - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected - App Submitted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait Listed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait Listed - FIle Closed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_User_Attributes__c</picklist>
+            <values>
+                <fullName>Campaign access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groove license</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Record transfers needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacing another user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Territory Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texting access</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Administrative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admission Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email About Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email From Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email To Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Learning Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting About Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting With Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orientation Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call About Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call From Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call To Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registration Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail About Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail From Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail To Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Petition_Type__c</picklist>
+            <values>
+                <fullName>Appeal - Academic Dismissal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appeal - Exception Decision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Complete degree requirements from prior catalog year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Extension of time on credit expiration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Extension of time to complete degree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Grade Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Late Add</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Late drop with refund request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Late drop without refund request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Other academic policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Required course or Directed Study substitution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Residency requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Withdrawal past deadline with refund request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prior_Academic_Dismissal__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prior_Academic_Probation__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Regalia_Order__c</picklist>
+            <values>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not uploaded</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uploaded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Replacement_User_Attributes_del__c</picklist>
+            <values>
+                <fullName>Counselor Assignments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groups</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licenses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mogli Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permissions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resolution__c</picklist>
+            <values>
+                <fullName>Academic Dismissal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved to commence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved with modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Care Area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Cohort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changed Major</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Dropped - All</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Dropped - Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No further action taken at this time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not approved to commence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Readmitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to another department</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repeating Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student is Participating in Course Now</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unresolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawal from Bethel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawal from Course</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Role__c</picklist>
+            <values>
+                <fullName>Committee Chair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dean</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Director</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>School__c</picklist>
+            <values>
+                <fullName>Adult Undergraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undergraduate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage_Details_to_Include__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accepted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Completed - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Started - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>App Submitted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Paid - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Waived - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inquired - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Applied - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registered - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected - App Completed - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected - App Started - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected - App Submitted - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown - File Close</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown - File Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait Listed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait Listed - File Closed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Terms_to_include__c</picklist>
+            <values>
+                <fullName>Adult - Current %26 Future</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAS - Fall %28Seniors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAS - Interim%2FSpring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAS - Juniors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAS - Sophomores</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other - List in Comments</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Academic Advising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Academic Concern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Academic Dishonesty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ActSix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appeal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApplicationU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BSSD Transition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Beacon Import</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Behavioral Concern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CASPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change Permissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commencement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conditional Acceptance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DMin Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Degree Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Segment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception or Grade Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Layout Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership Coaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MFT New Student Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mailing List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Student Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Concern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisional Acceptance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Readmission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule - Admissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Paul Counseling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Paul Formation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Success Coaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vocational Discernment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vocational Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawal</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

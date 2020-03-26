@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$Max_High_School_GPA__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$Highest_ACT_Score__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Opportunities__r$Current_Stage_Age__c</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingAddress</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Owner</field>
+    </columns>
+    <description>Accepted and confirmed kids</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Halle Riveness,Spencer Hinseth</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Fall 2020 - CAS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$StageName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Inquired,Applied,Wait Listed,File Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>inquired,pre-applied,closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Student_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Transfer</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Stage_Detail__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Halle &amp; Spencer - accepted confirm  2020</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Alien_Registration_Number_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

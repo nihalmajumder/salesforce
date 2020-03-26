@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Admissions_Document__c.Type__c</field>
+    </columns>
+    <columns>
+        <field>Admissions_Document__c.Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Admissions_Document__c.Date_Received__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_N_DAYS:7</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Admissions_Document__c.Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Bank statement in U.S. Dollars (family or personal),Certificate of Finance,Green Card,I-20 Form (certificate of eligibility for F-1 student status),I-94,Int&apos;l Student Transfer Release,Passport,Sponsor&apos;s Letter of Support,Visa</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Rec&apos;d International Admission Docs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactCustomEntity$Admissions_Document__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>LAST_ACTIVITY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
