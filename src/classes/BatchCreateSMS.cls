@@ -36,20 +36,22 @@ public class BatchCreateSMS implements Database.Batchable<sObject>, Database.Sta
         eventLog.Status__c = 'Completed';
         update eventLog;
 
-        ContentVersion conVer = new ContentVersion();
-        conVer.ContentLocation = 'S';
-        conVer.PathOnClient = 'ApexLog.txt';
-        conVer.Title = 'Apex Log';
-        conVer.VersionData = Blob.valueOf(apexlog);
-        insert conVer;
+        If(apexlog != ''){
+            ContentVersion conVer = new ContentVersion();
+            conVer.ContentLocation = 'S';
+            conVer.PathOnClient = 'ApexLog.txt';
+            conVer.Title = 'Apex Log';
+            conVer.VersionData = Blob.valueOf(apexlog);
+            insert conVer;
 
-        Id conDoc = [SELECT ContentDocumentId FROM ContentVersion WHERE Id =:conVer.Id].ContentDocumentId;
+            Id conDoc = [SELECT ContentDocumentId FROM ContentVersion WHERE Id =:conVer.Id].ContentDocumentId;
 
-        ContentDocumentLink conDocLink = New ContentDocumentLink();
-        conDocLink.LinkedEntityId = eventLog.Id;
-        conDocLink.ContentDocumentId = conDoc;
-        conDocLink.shareType = 'V';
-        insert conDocLink;
+            ContentDocumentLink conDocLink = New ContentDocumentLink();
+            conDocLink.LinkedEntityId = eventLog.Id;
+            conDocLink.ContentDocumentId = conDoc;
+            conDocLink.shareType = 'V';
+            insert conDocLink;
+        }
     }
 
 }

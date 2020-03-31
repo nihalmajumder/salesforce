@@ -53,7 +53,8 @@ global class Flow_BulkSMS {
                 when 'funnel' {
                     termList = request.requestedTerms.split('; ');
                     stageDetailList = request.stageDetails.split('; ');
-                    Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Type__c='Funnel', Status__c = 'In Progress');
+                    String FunnelCriteria = 'Term(s): '+request.requestedTerms+'\NStage Detail(s): '+ request.stageDetails;
+                    Event_Log__c log = new Event_Log__c(Message__c=request.smsMessage, OwnerId=request.initiator, Gateway__c =request.gateway, Type__c='Funnel', Status__c = 'In Progress', Funnel_Criteria__c = FunnelCriteria);
                     insert log;
                     contacts = getContactsFromFunnel(termList, stageDetailList, request.initiator);
                     results.add(createSmsRecords(contacts, request.gateway, request.smsMessage, log));
@@ -110,7 +111,6 @@ global class Flow_BulkSMS {
             dedupedSMS.addAll(tempSet);
 
             //Insert SMS Records
-            //insert dedupedSMS;
             BatchCreateSMS myBatchObject = new BatchCreateSMS(dedupedSMS, log);
             Id batchId = Database.executeBatch(myBatchObject,200);
             log.Batch_ID__c  = batchId;
@@ -119,6 +119,8 @@ global class Flow_BulkSMS {
             //Return confirmation message
             return 'Successfully scheduled a task to send '+dedupedSMS.size()+' text messages.';
         } catch(Exception e) {
+            log.Status__c = 'Failed';
+            update log;
             return 'FLOW ERROR: '+e;
         }
     }
@@ -176,8 +178,6 @@ global class Flow_BulkSMS {
         List<Opportunity> matchingOpps = new List<Opportunity>();
         List<Id> contact_ids = new List<Id>();
         //Find Opportunities that match the criteria given by the user
-        system.debug(stageDetailList);
-        system.debug(termList);
         matchingOpps = [
                 SELECT
                         Contact__c

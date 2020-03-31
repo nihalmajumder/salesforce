@@ -104,7 +104,7 @@ private class Flow_BulkSMSTest {
     @IsTest (SeeAllData='true')
     static void testUsingRealReportData(){
         // Get report
-        List <Report> reportList = [SELECT Id FROM Report LIMIT 1];
+        List <Report> reportList = [SELECT Id FROM Report WHERE Name LIKE '%Bulk Text Report%' LIMIT 1];
         String reportId = (String)reportList.get(0).get('Id');
 
         //Get a user
