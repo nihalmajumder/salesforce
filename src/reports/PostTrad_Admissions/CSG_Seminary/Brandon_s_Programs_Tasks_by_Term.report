@@ -18,18 +18,21 @@
     <filter>
         <criteriaItems>
             <column>Opportunity.Activities$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Completed</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Activities$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Brandon Sebey,Kayla Clint,Mark Blaede,Taylor Burgraff,Tim Van De Walker</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>M.A. (Theological Studies),Ministry (M.A.),Divinity</value>

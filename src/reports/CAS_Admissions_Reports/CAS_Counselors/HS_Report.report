@@ -45,6 +45,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Type__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>High School</value>

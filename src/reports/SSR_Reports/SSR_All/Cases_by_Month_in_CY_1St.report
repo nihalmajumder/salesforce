@@ -18,12 +18,14 @@
     <filter>
         <criteriaItems>
             <column>Case$RecordType</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Case.SSR_Student_Success_Case</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Type</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Beacon Import</value>

@@ -24,24 +24,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Adult Undergraduate,Graduate</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Spring 2019 - CAPS/GS,Fall 2018 - CAPS/GS,Summer 2018 - CAPS/GS,Spring 2018 - CAPS/GS</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Admission_Type__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Provisional,Conditional,Conditional and Provisional</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Enrolled</value>

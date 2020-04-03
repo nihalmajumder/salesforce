@@ -12,6 +12,7 @@
     <salesforceLoginUrl>https://bethel-university--full.my.salesforce.com?so=00D0U0000009YB8</salesforceLoginUrl>
     <samlEntityId>https://bethel-university--full.my.salesforce.com</samlEntityId>
     <samlVersion>SAML2_0</samlVersion>
+    <useConfigRequestMethod>true</useConfigRequestMethod>
     <userProvisioning>false</userProvisioning>
     <validationCert>MIIDMTCCAhmgAwIBAgIUIZwQ4U/YcTX/bMD1xW4qiS8YLvYwDQYJKoZIhvcNAQEL
 BQAwHzEdMBsGA1UEAwwUYXV0aC1wcm9kLmJldGhlbC5lZHUwHhcNMTgwOTA1MTQx

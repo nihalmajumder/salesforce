@@ -18,24 +18,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Education_Histories__r$School_Not_Found_Name__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Bethel University</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Document_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Mandatory,Conditional</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Id</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Name</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>

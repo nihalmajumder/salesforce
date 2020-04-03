@@ -21,18 +21,21 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Date_Inquired__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
             <value>5/1/2019 12:00 AM</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact$Name</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>TEST,TESTING,TESTING1,TESTING2</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Adult Undergraduate,Graduate,Seminary</value>

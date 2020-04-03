@@ -180,9 +180,10 @@
         <fullName>Funnel_Criteria__c</fullName>
         <externalId>false</externalId>
         <label>Funnel Criteria</label>
-        <required>false</required>
+        <length>1000</length>
         <trackTrending>false</trackTrending>
-        <type>TextArea</type>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>Gateway__c</fullName>

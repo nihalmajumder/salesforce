@@ -27,6 +27,11 @@
             </quickActionLayoutItems>
             <quickActionLayoutItems>
                 <emptySpace>false</emptySpace>
+                <field>Clickable_Phone__c</field>
+                <uiBehavior>Readonly</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
                 <field>High_School_Graduation_Year__c</field>
                 <uiBehavior>Edit</uiBehavior>
             </quickActionLayoutItems>

@@ -12,18 +12,21 @@
     <filter>
         <criteriaItems>
             <column>Contact$Primary_Academic_Program__c.Campus_Code__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>SD</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Type</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Schedule,Schedule - Admissions</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact$Primary_Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Marital and Family Therapy,Mental Health Counseling</value>

@@ -150,6 +150,7 @@
             </value>
         </inputAssignments>
         <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>getAssignee</name>
@@ -263,6 +264,7 @@
             <field>Id</field>
         </outputAssignments>
     </recordLookups>
+    <runInMode>SystemModeWithSharing</runInMode>
     <screens>
         <name>screen_Confirmation</name>
         <label>screen_Confirmation</label>

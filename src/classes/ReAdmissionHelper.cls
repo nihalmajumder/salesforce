@@ -1,5 +1,6 @@
 public without sharing class ReAdmissionHelper {
     public static void updateContact(Contact sourceContact, Contact targetContact) {
+        /*
         if (String.isNotBlank(sourceContact.FirstName)) targetContact.FirstName = sourceContact.FirstName;
         if (String.isNotBlank(sourceContact.MiddleName)) targetContact.MiddleName = sourceContact.MiddleName;
         if (String.isNotBlank(sourceContact.LastName)) targetContact.LastName = sourceContact.LastName;
@@ -24,35 +25,100 @@ public without sharing class ReAdmissionHelper {
         if (String.isNotBlank(sourceContact.Is_Veteran__c)) targetContact.Is_Veteran__c = sourceContact.Is_Veteran__c;
         if (String.isNotBlank(sourceContact.Pled_Guilty__c)) targetContact.Pled_Guilty__c = sourceContact.Pled_Guilty__c;
         if (String.isNotBlank(sourceContact.Visa_Type_Code__c)) targetContact.Visa_Type_Code__c = sourceContact.Visa_Type_Code__c;
+        */
+        Boolean updateContact = false;
+        if (String.isNotBlank(sourceContact.Pled_Guilty__c)) {
+            if (targetContact.Pled_Guilty__c != 'Yes') {
+                targetContact.Pled_Guilty__c = sourceContact.Pled_Guilty__c;
+                updateContact = true;
+            }
+            if (sourceContact.Pled_Guilty__c == 'Yes' && targetContact.Warning_Reviewed__c) {
+                targetContact.Warning_Reviewed__c = false;
+                updateContact = true;
+            }
+        } 
+        if (updateContact) {
+            update targetContact;
+        }
     }
 
-    public static String createContactDataString(ReAdmissionController.ReAdmissionRequest request) {
+    public static String createContactDataString(ReAdmissionController.ReAdmissionRequest request, Contact theContact) {
         String data = '';
-        data += Contact.FirstName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.FirstName) ? request.theContact.FirstName : '') + '\n';
-        data += Contact.MiddleName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MiddleName) ? request.theContact.MiddleName : '') + '\n';
-        data += Contact.LastName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.LastName) ? request.theContact.LastName : '') + '\n';
-        data += Contact.Banner_Id__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Banner_Id__c) ? request.theContact.Banner_Id__c : '') + '\n';
-        data += 'Are you or have you ever been known by any other name? : ' + request.hasOtherName + '\n';
-        data += Contact.MailingStreet.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingStreet) ? request.theContact.MailingStreet : '') + '\n';
-        data += Contact.MailingCity.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingCity) ? request.theContact.MailingCity : '') + '\n';
-        data += Contact.MailingStateCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingStateCode) ? request.theContact.MailingStateCode : '') + '\n';
-        data += Contact.MailingCountryCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingCountryCode) ? request.theContact.MailingCountryCode : '') + '\n';
-        data += Contact.MailingPostalCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingPostalCode) ? request.theContact.MailingPostalCode : '') + '\n';
-        data += Contact.Email.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Email) ? request.theContact.Email : '') + '\n';
-        data += Contact.HomePhone.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.HomePhone) ? request.theContact.HomePhone : '') + '\n';
-        data += Contact.MobilePhone.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MobilePhone) ? request.theContact.MobilePhone : '') + '\n';
-        data += Contact.hed__WorkPhone__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__WorkPhone__c) ? request.theContact.hed__WorkPhone__c : '') + '\n';
-        data += Contact.Citizenship__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Citizenship__c) ? request.theContact.Citizenship__c : '') + '\n';
-        data += Contact.hed__Social_Security_Number__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Social_Security_Number__c) ? request.theContact.hed__Social_Security_Number__c : '') + '\n';
-        data += Contact.Alien_Registration_Number__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Alien_Registration_Number__c) ? request.theContact.Alien_Registration_Number__c : '') + '\n';
-        data += Contact.Alien_Registration_Number_Date__c.getDescribe().getLabel() + ' : ' + (request.theContact.Alien_Registration_Number_Date__c != null  ? request.theContact.Alien_Registration_Number_Date__c.format() : '') + '\n';
-        data += Contact.Visa_Type_Code__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Visa_Type_Code__c) ? request.theContact.Visa_Type_Code__c : '') + '\n';
-        data += Contact.Is_Veteran__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Is_Veteran__c) ? request.theContact.Is_Veteran__c : '') + '\n';
-        data += Contact.hed__Gender__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Gender__c) ? request.theContact.hed__Gender__c : '') + '\n';
-        data += Contact.Is_Hispanic__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Is_Hispanic__c) ? request.theContact.Is_Hispanic__c : '') + '\n';
-        data += Contact.hed__Race__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Race__c) ? request.theContact.hed__Race__c : '') + '\n';
-        data += Contact.Pled_Guilty__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Pled_Guilty__c) ? request.theContact.Pled_Guilty__c : '') + '\n';
-        data += Contact.Conviction_Description__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Conviction_Description__c) ? request.theContact.Conviction_Description__c : '') + '\n';
+        if (request.theContact.FirstName != theContact.FirstName) {
+            data += Contact.FirstName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.FirstName) ? request.theContact.FirstName : '') + '\n';
+        }
+        if (request.theContact.MiddleName != theContact.MiddleName) {
+            data += Contact.MiddleName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MiddleName) ? request.theContact.MiddleName : '') + '\n';
+        }
+        if (request.theContact.LastName != theContact.LastName) {
+            data += Contact.LastName.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.LastName) ? request.theContact.LastName : '') + '\n';
+        }
+        if (request.theContact.Banner_Id__c != theContact.Banner_Id__c) {
+            data += Contact.Banner_Id__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Banner_Id__c) ? request.theContact.Banner_Id__c : '') + '\n';
+        }
+        if (request.hasOtherName == 'Yes' && request.theContact.Former_Last_Name__c != theContact.Former_Last_Name__c) {
+            data += 'Are you or have you ever been known by any other name? : ' + request.theContact.Former_Last_Name__c + '\n';
+        }
+        if (request.theContact.MailingStreet != theContact.MailingStreet) {
+            data += Contact.MailingStreet.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingStreet) ? request.theContact.MailingStreet : '') + '\n';
+        }
+        if (request.theContact.MailingCity != theContact.MailingCity) {
+            data += Contact.MailingCity.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingCity) ? request.theContact.MailingCity : '') + '\n';
+        }
+        if (request.theContact.MailingStateCode != theContact.MailingStateCode) {
+            data += Contact.MailingStateCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingStateCode) ? request.theContact.MailingStateCode : '') + '\n';
+        }
+        if (request.theContact.MailingCountryCode != theContact.MailingCountryCode) {
+            data += Contact.MailingCountryCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingCountryCode) ? request.theContact.MailingCountryCode : '') + '\n';
+        }
+        if (request.theContact.MailingPostalCode != theContact.MailingPostalCode) {
+            data += Contact.MailingPostalCode.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MailingPostalCode) ? request.theContact.MailingPostalCode : '') + '\n';
+        }
+        if (request.theContact.Email != theContact.Email) {
+            data += Contact.Email.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Email) ? request.theContact.Email : '') + '\n';
+        }
+        if (request.theContact.HomePhone != theContact.HomePhone) {
+            data += Contact.HomePhone.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.HomePhone) ? request.theContact.HomePhone : '') + '\n';
+        }
+        if (request.theContact.MobilePhone != theContact.MobilePhone) {
+            data += Contact.MobilePhone.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.MobilePhone) ? request.theContact.MobilePhone : '') + '\n';
+        }
+        if (request.theContact.hed__WorkPhone__c != theContact.hed__WorkPhone__c) {
+            data += Contact.hed__WorkPhone__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__WorkPhone__c) ? request.theContact.hed__WorkPhone__c : '') + '\n';
+        }
+        if (request.theContact.Citizenship__c != theContact.Citizenship__c) {
+            data += Contact.Citizenship__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Citizenship__c) ? request.theContact.Citizenship__c : '') + '\n';
+        }
+        if (request.theContact.hed__Social_Security_Number__c != theContact.hed__Social_Security_Number__c) {
+            data += Contact.hed__Social_Security_Number__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Social_Security_Number__c) ? request.theContact.hed__Social_Security_Number__c : '') + '\n';
+        }
+        if (request.theContact.Alien_Registration_Number__c != theContact.Alien_Registration_Number__c) {
+            data += Contact.Alien_Registration_Number__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Alien_Registration_Number__c) ? request.theContact.Alien_Registration_Number__c : '') + '\n';
+        }
+        if (request.theContact.Alien_Registration_Number_Date__c != theContact.Alien_Registration_Number_Date__c) {
+            data += Contact.Alien_Registration_Number_Date__c.getDescribe().getLabel() + ' : ' + (request.theContact.Alien_Registration_Number_Date__c != null  ? request.theContact.Alien_Registration_Number_Date__c.format() : '') + '\n';
+        }
+        if (request.theContact.Visa_Type_Code__c != theContact.Visa_Type_Code__c) {
+            data += Contact.Visa_Type_Code__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Visa_Type_Code__c) ? request.theContact.Visa_Type_Code__c : '') + '\n';
+        }
+        if (request.theContact.Is_Veteran__c != theContact.Is_Veteran__c) {
+            data += Contact.Is_Veteran__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Is_Veteran__c) ? request.theContact.Is_Veteran__c : '') + '\n';
+        }
+        if (request.theContact.hed__Gender__c != theContact.hed__Gender__c) {
+            data += Contact.hed__Gender__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Gender__c) ? request.theContact.hed__Gender__c : '') + '\n';
+        }
+        if (request.theContact.Is_Hispanic__c != theContact.Is_Hispanic__c) {
+            data += Contact.Is_Hispanic__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Is_Hispanic__c) ? request.theContact.Is_Hispanic__c : '') + '\n';
+        }
+        if (request.theContact.hed__Race__c != theContact.hed__Race__c) {
+            data += Contact.hed__Race__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.hed__Race__c) ? request.theContact.hed__Race__c : '') + '\n';
+        }
+        if (request.theContact.Pled_Guilty__c != theContact.Pled_Guilty__c) {
+            data += Contact.Pled_Guilty__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Pled_Guilty__c) ? request.theContact.Pled_Guilty__c : '') + '\n';
+        }
+        if (request.theContact.Conviction_Description__c != theContact.Conviction_Description__c) {
+            data += Contact.Conviction_Description__c.getDescribe().getLabel() + ' : ' + (String.isNotBlank(request.theContact.Conviction_Description__c) ? request.theContact.Conviction_Description__c : '') + '\n';
+        }
         return data;
     }
 
@@ -65,13 +131,14 @@ public without sharing class ReAdmissionHelper {
             Status = 'New',
             Priority = 'High',
             Origin = 'Online Form',
-            Subject = ' Re-enrollment Application - ' + theContact.Name,
+            Subject = 'Re-enrollment Application - ' + theContact.Name,
             Description = 'Re-enrollment application webform submission',
             School__c = request.school,
             Program__c = request.program,
             New_Term__c = request.term,
-            Will_Apply_For_Financial_Aid__c = (request.financialAid == 'Yes'),
-            Collection_Holds__c = (request.hasBusinessOffice == 'Yes'),
+            Preferred_Delivery_Format__c = request.deliveryFormat,
+            Financial_Aid__c = request.financialAid,
+            Collection_Hold__c = request.hasBusinessOffice,
             Has_Information_Changed__c = (request.hasChanged == 'Yes'),
             Academic_History__c = request.academicRecord,
             Why_Left_Essay__c = request.whyLeftEssay,
@@ -174,8 +241,9 @@ public without sharing class ReAdmissionHelper {
                 School__c,
                 Program__c,
                 New_Term__c,
-                Will_Apply_For_Financial_Aid__c,
-                Collection_Holds__c,
+                Preferred_Delivery_Format__c,
+                Financial_Aid__c,
+                Collection_Hold__c,
                 Has_Information_Changed__c,
                 Academic_History__c,
                 Why_Left_Essay__c,

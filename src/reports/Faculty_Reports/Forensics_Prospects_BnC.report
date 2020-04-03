@@ -73,12 +73,14 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>fall 2019 - cas</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>closed</value>

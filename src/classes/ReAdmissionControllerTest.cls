@@ -33,7 +33,7 @@ public class ReAdmissionControllerTest {
         System.assert(controller.programOptions != null);
         System.assertEquals(4, controller.programOptions.size());
         System.assert(controller.termOptions != null);
-        System.assertEquals(2, controller.termOptions.size());
+        System.assertEquals(3, controller.termOptions.size());
     }
 
     static testMethod void submitValidationFailTest() {
@@ -139,7 +139,7 @@ public class ReAdmissionControllerTest {
         controller.request.responsibilities = 'Do stuff';
         controller.request.hasOtherName = 'Yes';
         controller.request.otherName = 'Tester1';
-        controller.request.hasBusinessOffice = 'no';
+        controller.request.hasBusinessOffice = 'No';
         controller.request.whyLeftEssay = 'I do not know.';
         controller.request.whyBackEssay = 'Why Not?';
 

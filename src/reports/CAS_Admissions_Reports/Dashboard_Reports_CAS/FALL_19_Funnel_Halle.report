@@ -63,18 +63,21 @@
     <filter>
         <criteriaItems>
             <column>STAGE_NAME</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>File Closed</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>inquired,pre-applied,closed</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Fall 2019 - CAS</value>

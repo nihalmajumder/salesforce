@@ -21,12 +21,14 @@
     <filter>
         <criteriaItems>
             <column>Contact$Visa_Type_Code__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>J1 - Exchange scholar,J2 - Dependent of exchange scholar</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Applied,Accepted,Confirmed,Enrolled,File Closed</value>

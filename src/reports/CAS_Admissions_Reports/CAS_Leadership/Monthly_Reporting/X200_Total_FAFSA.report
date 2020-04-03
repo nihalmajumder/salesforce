@@ -25,12 +25,14 @@
     <filter>
         <criteriaItems>
             <column>Contact.Financial_Aid__r$EFC_9_Month__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Financial_Aid__r$Name</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>2020-21</value>

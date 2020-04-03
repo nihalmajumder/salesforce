@@ -38,12 +38,14 @@
     <filter>
         <criteriaItems>
             <column>Program__c.School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Undergraduate</value>
         </criteriaItems>
         <criteriaItems>
             <column>Program__c.Active__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>1</value>

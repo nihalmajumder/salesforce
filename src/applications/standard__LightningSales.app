@@ -24,6 +24,5 @@
     <tabs>standard-OtherUserProfile</tabs>
     <tabs>standard-Case</tabs>
     <tabs>standard-Forecasting3</tabs>
-    <tabs>standard-WaveHomeLightning</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

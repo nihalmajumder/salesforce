@@ -15,12 +15,14 @@
     <filter>
         <criteriaItems>
             <column>Education_History__c$Type__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>High School</value>
         </criteriaItems>
         <criteriaItems>
             <column>Education_History__c$Minnesota_MARSS_Number__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>,None</value>

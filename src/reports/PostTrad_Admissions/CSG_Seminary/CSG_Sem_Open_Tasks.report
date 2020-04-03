@@ -25,12 +25,14 @@
     <filter>
         <criteriaItems>
             <column>Opportunity.Activities$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Completed</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Activities$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Brandon Sebey,Kayla Clint,Mark Blaede,Tim Van De Walker,Daniel Kue</value>

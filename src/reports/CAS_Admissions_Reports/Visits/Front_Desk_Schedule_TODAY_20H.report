@@ -21,18 +21,21 @@
     <filter>
         <criteriaItems>
             <column>Campaign$StartDate</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>TODAY</value>
         </criteriaItems>
         <criteriaItems>
             <column>Campaign$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Aborted,Canceled</value>
         </criteriaItems>
         <criteriaItems>
             <column>Campaign$RecordType</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Campaign.Visit</value>

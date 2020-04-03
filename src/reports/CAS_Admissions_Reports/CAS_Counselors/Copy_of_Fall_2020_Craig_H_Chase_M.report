@@ -16,24 +16,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Craig Henkel</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Application__c.Plan_Play_Sport__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>No</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Opportunity_Term_Code__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
             <value>202111</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>File Closed</value>

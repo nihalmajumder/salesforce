@@ -22,12 +22,14 @@
     <filter>
         <criteriaItems>
             <column>Opportunity$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>business management</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Summer 2019,Fall 2019,Spring 2020</value>

@@ -24,24 +24,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Opportunity_Term_Code__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
             <value>201952</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>,Adult Undergraduate,Graduate,Seminary</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Data migration,Holly Pierson,Bethel DBA,Kristin Marvin</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Inquired,Applied</value>

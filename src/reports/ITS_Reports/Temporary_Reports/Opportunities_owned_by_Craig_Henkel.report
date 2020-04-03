@@ -31,18 +31,21 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>craig</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Opportunity_Term_Code__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
             <value>202011</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Enrolled,File Closed</value>

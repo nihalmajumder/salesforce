@@ -13,18 +13,21 @@
     <filter>
         <criteriaItems>
             <column>Opportunity$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>doctor of nursing practice</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>spring 2020,summer 2020,fall 2020</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>File closed</value>

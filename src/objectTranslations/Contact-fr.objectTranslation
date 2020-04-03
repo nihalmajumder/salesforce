@@ -93,6 +93,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Clickable Phone --></label>
+        <name>Clickable_Phone__c</name>
+    </fields>
+    <fields>
         <help><!-- From Banner, whether student has confidentiality flag. --></help>
         <label><!-- Confidential --></label>
         <name>Confidential__c</name>

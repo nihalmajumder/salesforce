@@ -24,18 +24,21 @@
     <filter>
         <criteriaItems>
             <column>FK_$Application__c.Is_Applying_For_PSEO__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Yes,Y</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Fall 2019 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Student_Type__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>PSEO</value>

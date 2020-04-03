@@ -19,18 +19,21 @@
         <booleanFilter>1 AND 2 AND 3</booleanFilter>
         <criteriaItems>
             <column>Education_History__c$Educational_Institution__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>,Unknown College</value>
         </criteriaItems>
         <criteriaItems>
             <column>Education_History__c$School_Not_Found_Name__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>,Advanced Placement</value>
         </criteriaItems>
         <criteriaItems>
             <column>Education_History__c$Document_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Received,Conditional</value>

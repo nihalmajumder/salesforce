@@ -31,18 +31,21 @@
     <filter>
         <criteriaItems>
             <column>Opportunity$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>international</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>2018,2019,2020</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>file closed,enrolled</value>

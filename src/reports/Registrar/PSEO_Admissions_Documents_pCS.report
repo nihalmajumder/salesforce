@@ -52,6 +52,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Admissions_Documents__r$Date_Received__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
             <value>12/6/2018</value>

@@ -51,18 +51,21 @@
     <filter>
         <criteriaItems>
             <column>Contact.Cases$RecordType</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Case.SSR_Student_Success_Case</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Type</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Schedule - Admissions</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases.Activities$Subject</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>startsWith</operator>
             <value>Create Schedule</value>

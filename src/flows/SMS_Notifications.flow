@@ -664,6 +664,7 @@
         </inputAssignments>
         <object>Mogli_SMS__SMS__c</object>
     </recordUpdates>
+    <runInMode>SystemModeWithSharing</runInMode>
     <start>
         <locationX>50</locationX>
         <locationY>51</locationY>

@@ -54,24 +54,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Adult Undergraduate,Graduate,Seminary</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Auditor,Marriage,Marital,Non-Degree,Divinity,Theological Studies,Christian Ministries (B.A.),Ministry (M.A.),(D.Min),Transformational Leadership (M.A.),Children&apos;s,Christian Thought,Theological Studies Certificate,Biblical Studies</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Inquired,Pre-Applied,App Started,App Submitted,App Completed,Wait Listed,Accepted,Fee Paid,Fee Waived,Registered,Enrolled</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Term_Description__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Fall 2019,Summer 2019,Spring 2020</value>

@@ -48,7 +48,7 @@ public class ReAdmissionHelperTest {
 		Intended_Program_Term__c ipt3 = new Intended_Program_Term__c(Academic_Term__c = at.Id, Intended_Program__c = p3.Id, Activate_Application_Date__c = Date.TODAY().addDays(-1), End_Application_Date__c = Date.TODAY().addDays(1), School_College__c = 'Graduate');
         insert new List<Intended_Program_Term__c>{ipt1, ipt2, ipt3};
 
-        Contact student = new Contact(LastName='TestLast2', FirstName = 'TestFirst2', Email = 'TestContact2@example.bethel.com', MailingStateCode = 'MN', Banner_Id__c = 'TEST2');
+        Contact student = new Contact(LastName='TestLast2', FirstName = 'TestFirst2', Email = 'TestContact2@example.bethel.com', MailingStateCode = 'MN', Banner_Id__c = 'TEST2', Warning_Reviewed__c = true);
         insert student;
 
    }
@@ -78,15 +78,16 @@ public class ReAdmissionHelperTest {
         theContact.Citizenship__c = 'Citizen';
         theContact.Is_Hispanic__c = 'No';
         theContact.Is_Veteran__c = 'No';
-        theContact.Pled_Guilty__c = 'No';
+        theContact.Pled_Guilty__c = 'Yes';
 
         test.startTest();
         ReAdmissionHelper.updateContact(theContact, existingContact);
         test.stopTest();
 
-        System.assertEquals(theContact.LastName, existingContact.LastName);
-        System.assertEquals(theContact.Email, existingContact.Email);
-        System.assertEquals(theContact.hed__Gender__c, existingContact.hed__Gender__c);
+        Contact updatedContact = ContactHelper.getContactFromBethelId('TEST2');
+
+        System.assertEquals(theContact.Pled_Guilty__c, updatedContact.Pled_Guilty__c);
+        System.assertEquals(false, updatedContact.Warning_Reviewed__c);
     }
 
     static testMethod void createContactDataStringTest() {
@@ -119,7 +120,7 @@ public class ReAdmissionHelperTest {
         request.theContact = theContact;
 
         test.startTest();
-        String data = ReAdmissionHelper.createContactDataString(request);
+        String data = ReAdmissionHelper.createContactDataString(request, existingContact);
         test.stopTest();
 
         System.assert(data != null);
@@ -142,7 +143,7 @@ public class ReAdmissionHelperTest {
         request.responsibilities = 'Do stuff';
         request.hasOtherName = 'Yes';
         request.otherName = 'Tester2';
-        request.hasBusinessOffice = 'no';
+        request.hasBusinessOffice = 'No';
         request.whyLeftEssay = 'I do not know.';
         request.whyBackEssay = 'Why Not?';
 
@@ -170,7 +171,7 @@ public class ReAdmissionHelperTest {
         request.responsibilities = 'Do stuff';
         request.hasOtherName = 'Yes';
         request.otherName = 'Tester2';
-        request.hasBusinessOffice = 'no';
+        request.hasBusinessOffice = 'No';
         request.whyLeftEssay = 'I do not know.';
         request.whyBackEssay = 'Why Not?';
 
@@ -202,7 +203,7 @@ public class ReAdmissionHelperTest {
         request.responsibilities = 'Do stuff';
         request.hasOtherName = 'Yes';
         request.otherName = 'Tester2';
-        request.hasBusinessOffice = 'no';
+        request.hasBusinessOffice = 'No';
         request.whyLeftEssay = 'I do not know.';
         request.whyBackEssay = 'Why Not?';
 

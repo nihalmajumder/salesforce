@@ -410,7 +410,7 @@
                 </groupingSortProperties>
                 <header>CAS to CAPS initiative</header>
                 <legendPosition>Right</legendPosition>
-                <report>EMOps_Reports/Dashboard_Reports_EMOps/CAS_to_CAPS_initiative</report>
+                <report>Dashboard_Reports_EMOps/CAS_to_CAPS_initiative</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>

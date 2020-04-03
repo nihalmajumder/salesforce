@@ -52,36 +52,42 @@
         <booleanFilter>2 AND 3 AND 4 AND (1 OR 5 OR 6)</booleanFilter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Application__c.Sport__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Hockey</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact$hed__Gender__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Male</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Wait Listed,File Closed</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Term_Description__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>fall 2019</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$RFI_Notes__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Hockey</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Application__c.Sport_2__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Hockey</value>

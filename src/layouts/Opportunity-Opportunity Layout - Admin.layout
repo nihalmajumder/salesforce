@@ -245,6 +245,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Test_Optional_COVID_19__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Financial_Aid_Reaction__c</field>
             </layoutItems>
             <layoutItems>
@@ -900,11 +904,6 @@
             <actionName>Application_Admin_View</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>21</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Opportunity.Move_Tasks</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>22</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedContent>

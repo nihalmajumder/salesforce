@@ -67,6 +67,7 @@
     <filter>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>fall 2019 - CAS</value>

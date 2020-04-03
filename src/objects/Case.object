@@ -914,6 +914,22 @@ if( text(Status) = &quot;Closed&quot;,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Case__c</fullName>
+        <description>Used for Power of One calculations in reporting.
+https://www.salesforce.com/video/296533/</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Case</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Ceremony_Date__c</fullName>
         <externalId>false</externalId>
         <label>Ceremony Date</label>
@@ -1012,15 +1028,36 @@ if( text(Status) = &quot;Closed&quot;,
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Collection_Holds__c</fullName>
-        <defaultValue>false</defaultValue>
+        <fullName>Collection_Hold__c</fullName>
         <description>Answer to question &quot;Do you have a business office or collections hold? &quot; for re-enrollment</description>
         <externalId>false</externalId>
-        <label>Collection Holds</label>
+        <label>Collection Hold</label>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unsure</fullName>
+                    <default>false</default>
+                    <label>Unsure</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Comments</fullName>
@@ -1591,6 +1628,38 @@ Petition_Type__c,
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Financial_Aid__c</fullName>
+        <description>Answer to &quot;Will you apply for financial aid?&quot; for Re-Enrollment</description>
+        <externalId>false</externalId>
+        <label>Will Apply For Financial Aid</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unsure</fullName>
+                    <default>false</default>
+                    <label>Unsure</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Form_Changes__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Please enter the form changes.</inlineHelpText>
@@ -1668,7 +1737,7 @@ Petition_Type__c,
         <defaultValue>false</defaultValue>
         <description>Answer to question &quot;Has any information changed in sections I, II or III since you last attended?&quot; for re-enrollment</description>
         <externalId>false</externalId>
-        <label>Has Information Changed</label>
+        <label>Change: Ed, Employment, Criminal History</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -2356,6 +2425,21 @@ Petition_Type__c,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Preferred_Delivery_Format__c</fullName>
+        <description>The Preferred Delivery Format from the re-enrollment form</description>
+        <externalId>false</externalId>
+        <label>Preferred Delivery Format</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Delivery_Types</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Previous_Case_Number__c</fullName>
         <description>This field is for migration to reference the old case number</description>
         <externalId>false</externalId>
@@ -2527,7 +2611,7 @@ Petition_Type__c,
         <fullName>Re_enrollment_Answers__c</fullName>
         <description>The answers from the Re-enrollment form related to Contact will be stored in this field.</description>
         <externalId>false</externalId>
-        <label>Re-enrollment Answers</label>
+        <label>Response Exceptions</label>
         <length>32768</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -3383,17 +3467,6 @@ Petition_Type__c,
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>Will_Apply_For_Financial_Aid__c</fullName>
-        <defaultValue>false</defaultValue>
-        <description>Answer to &quot;Will you apply for financial aid?&quot; for Re-Enrollment</description>
-        <externalId>false</externalId>
-        <label>Will Apply For Financial Aid</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>Zip_Code_Region__c</fullName>
         <externalId>false</externalId>
         <label>Zip Code Region</label>
@@ -3721,13 +3794,14 @@ if(isblank(approval_extension_date__c) = FALSE,
         <columns>CASES.PRIORITY</columns>
         <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
         <columns>OWNER_NAME</columns>
-        <filterScope>Mine</filterScope>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>equals</operation>
             <value>0</value>
         </filters>
         <label>All Open Cases</label>
+        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>Closed_Cases_from_Marketing</fullName>
@@ -4511,6 +4585,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -4583,6 +4672,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4746,6 +4850,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5343,6 +5470,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -5467,6 +5609,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5706,6 +5863,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -6415,6 +6595,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -6487,6 +6682,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -6650,6 +6860,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -7247,6 +7480,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -7371,6 +7619,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -7610,6 +7873,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8243,6 +8529,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -8315,6 +8616,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8478,6 +8794,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -9023,6 +9362,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -9095,6 +9449,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -9258,6 +9627,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -9783,6 +10175,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -9855,6 +10262,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -10102,6 +10524,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -10627,6 +11072,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -10755,6 +11215,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -11086,6 +11561,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -11867,6 +12365,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -11991,6 +12504,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -12162,6 +12690,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -12755,6 +13306,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -12827,6 +13393,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -12990,6 +13571,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -13579,6 +14183,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -13651,6 +14270,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -13814,6 +14448,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -14403,6 +15060,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -14475,6 +15147,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -14714,6 +15401,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -15346,6 +16056,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Collection_Hold__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Decision__c</picklist>
             <values>
                 <fullName>Approve</fullName>
@@ -15418,6 +16143,21 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Transcript</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Aid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -15625,6 +16365,29 @@ if(isblank(approval_extension_date__c) = FALSE,
             </values>
             <values>
                 <fullName>Exception - Withdrawal past deadline without refund request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Delivery_Format__c</picklist>
+            <values>
+                <fullName>Blended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face-to-Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SemPM</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -16137,6 +16900,17 @@ if(isblank(approval_extension_date__c) = FALSE,
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Cannot_be_confirmed_with_Warnings</fullName>
+        <active>true</active>
+        <description>Re-enrollment cases cannot advance past Review if the contact has pled guilty to a crime.</description>
+        <errorConditionFormula>AND(
+$RecordType.Name = &quot;SSR - Re-enrollment&quot;, 
+( TEXT( Contact.Pled_Guilty__c ) = &quot;Yes&quot;),
+Contact.Warning_Reviewed__c = FALSE,
+CONTAINS(&quot;Evaluation:Approval:Reactivation and Register:Confirm&quot;, TEXT(Status)))</errorConditionFormula>
+        <errorMessage>Applicant has pled guilty of a crime, and the issue has not been reviewed. Therefore, the re-enrollment application cannot be accepted until the Applicant&apos;s contact record has been updated.</errorMessage>
+    </validationRules>
     <validationRules>
         <fullName>Phone_Number_Required</fullName>
         <active>true</active>

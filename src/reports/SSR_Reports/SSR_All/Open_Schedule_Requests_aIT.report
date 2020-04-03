@@ -18,24 +18,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Cases$RecordType</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Case.SSR_Student_Success_Case</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Type</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Schedule - Admissions</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>New,In Progress,Waiting on someone else</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>

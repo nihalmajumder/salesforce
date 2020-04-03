@@ -24,6 +24,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program_Code__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>2-AS-INDA</value>

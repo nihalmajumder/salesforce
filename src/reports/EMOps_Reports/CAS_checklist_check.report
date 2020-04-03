@@ -15,12 +15,14 @@
     <filter>
         <criteriaItems>
             <column>Opportunity$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Fall 2019 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>App Submitted</value>

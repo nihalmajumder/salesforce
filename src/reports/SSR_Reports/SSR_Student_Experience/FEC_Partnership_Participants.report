@@ -28,6 +28,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Attributes__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>FEC Partnership Participant</value>

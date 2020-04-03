@@ -36,12 +36,14 @@
     <filter>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Best_School_Name__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Bethel University,Bethel Seminary</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Document_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>,Mandatory</value>

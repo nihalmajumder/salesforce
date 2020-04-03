@@ -937,6 +937,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -1155,6 +1159,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -2025,6 +2030,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -2244,6 +2253,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -3110,6 +3120,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -3328,6 +3342,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -4194,6 +4209,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -4412,6 +4431,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -5282,6 +5302,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -5501,6 +5525,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -6367,6 +6392,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -6585,6 +6614,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -7455,6 +7485,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -7674,6 +7708,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -8540,6 +8575,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -8758,6 +8797,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -9628,6 +9668,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -9847,6 +9891,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -10713,6 +10758,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -10931,6 +10980,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -11801,6 +11851,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -12020,6 +12074,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>
@@ -12886,6 +12941,10 @@
             <label>Test Optional</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N0U00000490dM</field>
+            <label>Test Optional COVID-19</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N5A00000M0G6c</field>
             <label>Withdrawal Detail</label>
         </opportunityListFieldsLabelMappings>
@@ -13104,6 +13163,7 @@
             <field>00N5A00000M0G6b</field>
             <field>00N5A00000M0G6a</field>
             <field>00N5A00000M0HJV</field>
+            <field>00N0U00000490dM</field>
             <field>00N5A00000M0G6c</field>
             <field>00N5A00000M0G6d</field>
         </opportunityListFieldsUnselectedSettings>

@@ -21,12 +21,14 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Spring 2020 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Date_App_Submitted__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>

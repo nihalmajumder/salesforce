@@ -167,6 +167,10 @@
         <name>Case_Age_Business_Hours__c</name>
     </fields>
     <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+    </fields>
+    <fields>
         <label><!-- Ceremony Date --></label>
         <name>Ceremony_Date__c</name>
         <picklistValues>
@@ -210,8 +214,20 @@
         <relationshipLabel><!-- Cases --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Collection Holds --></label>
-        <name>Collection_Holds__c</name>
+        <label><!-- Collection Hold --></label>
+        <name>Collection_Hold__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsure</masterLabel>
+            <translation><!-- Unsure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Comments --></label>
@@ -429,6 +445,22 @@
         <name>Escalate_Affecting_Multiple__c</name>
     </fields>
     <fields>
+        <label><!-- Will Apply For Financial Aid --></label>
+        <name>Financial_Aid__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsure</masterLabel>
+            <translation><!-- Unsure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- Please enter the form changes. --></help>
         <label><!-- Form Changes --></label>
         <name>Form_Changes__c</name>
@@ -474,7 +506,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Has Information Changed --></label>
+        <label><!-- Change: Ed, Employment, Criminal History --></label>
         <name>Has_Information_Changed__c</name>
     </fields>
     <fields>
@@ -799,6 +831,10 @@
         <name>Phonetic_Pronunciation__c</name>
     </fields>
     <fields>
+        <label><!-- Preferred Delivery Format --></label>
+        <name>Preferred_Delivery_Format__c</name>
+    </fields>
+    <fields>
         <help><!-- This field is population by the migration process. Should not be need after the migration. --></help>
         <label><!-- Previous Case Number --></label>
         <name>Previous_Case_Number__c</name>
@@ -849,7 +885,7 @@
         <name>Queue_Rank__c</name>
     </fields>
     <fields>
-        <label><!-- Re-enrollment Answers --></label>
+        <label><!-- Response Exceptions --></label>
         <name>Re_enrollment_Answers__c</name>
     </fields>
     <fields>
@@ -1214,10 +1250,6 @@
     <fields>
         <label><!-- Why Returning Essay --></label>
         <name>Why_Returning_Essay__c</name>
-    </fields>
-    <fields>
-        <label><!-- Will Apply For Financial Aid --></label>
-        <name>Will_Apply_For_Financial_Aid__c</name>
     </fields>
     <fields>
         <label><!-- Zip Code Region --></label>
@@ -1656,6 +1688,10 @@
         <label><!-- Seminary --></label>
         <name>Seminary</name>
     </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Applicant has pled guilty of a crime, and the issue has not been reviewed. Therefore, the re-enrollment application cannot be accepted until the Applicant&apos;s contact record has been updated. --></errorMessage>
+        <name>Cannot_be_confirmed_with_Warnings</name>
+    </validationRules>
     <validationRules>
         <errorMessage><!-- Please include the phone number to use for texting. --></errorMessage>
         <name>Phone_Number_Required</name>

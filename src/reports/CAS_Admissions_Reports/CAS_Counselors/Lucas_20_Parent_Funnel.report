@@ -48,6 +48,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Families__r$Type__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Father,Guardian,Mother,Stepfather,Stepmother</value>

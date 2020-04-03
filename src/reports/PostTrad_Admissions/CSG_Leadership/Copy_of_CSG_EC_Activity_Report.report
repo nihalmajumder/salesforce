@@ -50,30 +50,35 @@
     <filter>
         <criteriaItems>
             <column>Opportunity.School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Adult Undergraduate,Graduate,Seminary</value>
         </criteriaItems>
         <criteriaItems>
             <column>ASSIGNED</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>kari boike,kelly buzzell,tanner balk,devin lehnhoff,gunderson,thorson,holman,Clint,ulrikson,lluch,Blaede,dommeyer,marvin,Van De Walker,Collins,Hering,Tranquillo,Grafsky,Roddel,Burgraff,Lewicki,Sebey,garrett,lassen</value>
         </criteriaItems>
         <criteriaItems>
             <column>CREATED_BY</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Angelique Eagen,Lynell Gupta,Billi Jo Mehrer,Daniel Moe,Ellen Erdman,Amie Graebner,Ben Groff</value>
         </criteriaItems>
         <criteriaItems>
             <column>Activity.Date_Completed__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>THIS_WEEK</value>
         </criteriaItems>
         <criteriaItems>
             <column>Activity.Outcome__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Bypassed</value>

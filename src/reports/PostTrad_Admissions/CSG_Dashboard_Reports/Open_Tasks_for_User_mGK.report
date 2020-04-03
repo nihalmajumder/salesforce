@@ -15,6 +15,7 @@
     <filter>
         <criteriaItems>
             <column>Opportunity.Activities$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Completed</value>

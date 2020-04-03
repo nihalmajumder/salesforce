@@ -28,12 +28,14 @@
         <booleanFilter>2 AND 1</booleanFilter>
         <criteriaItems>
             <column>Admissions_Document__c.Unofficial_Received_Date_1__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
             <value>1/1/2018</value>
         </criteriaItems>
         <criteriaItems>
             <column>Admissions_Document__c.Type__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Interview</value>

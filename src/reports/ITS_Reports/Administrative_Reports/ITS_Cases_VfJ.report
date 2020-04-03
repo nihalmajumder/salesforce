@@ -40,6 +40,7 @@
     <filter>
         <criteriaItems>
             <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Case.ITS_New_User,Case.ITS_General_Request,Case.ITS_Segment_Mailing_List</value>

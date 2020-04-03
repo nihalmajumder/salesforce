@@ -21,18 +21,21 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Undergraduate</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_Going_To_Instead__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Northwestern,UNW,NW</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_Going_To_Instead__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>IA,Iowa,Capernwray,Orange City,Dunwoody,Oklahoma</value>

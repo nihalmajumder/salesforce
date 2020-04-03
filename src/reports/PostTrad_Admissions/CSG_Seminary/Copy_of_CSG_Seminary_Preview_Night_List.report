@@ -30,30 +30,35 @@
     <filter>
         <criteriaItems>
             <column>Opportunity$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Seminary</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>accepted,File,enrolled,registered,Paid,waived,completed,submitted</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Name</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Test,ZZ</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Doctor,non,auditor,marriage</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Summer 2019,Fall 2019,Spring 2020</value>

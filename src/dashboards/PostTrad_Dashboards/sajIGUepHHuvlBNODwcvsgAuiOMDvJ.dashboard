@@ -108,7 +108,7 @@
                 </groupingSortProperties>
                 <header>CSG_Likely Numbers Summer 2020</header>
                 <legendPosition>Right</legendPosition>
-                <report>PostTrad_Admissions/CSG_Leadership/CSG_Likely_Numbers_Summer_2020</report>
+                <report>CSG_Leadership/CSG_Likely_Numbers_Summer_2020</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -146,7 +146,7 @@
                 <header>Team Due and Overdue Tasks This Week</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>20</maxValuesDisplayed>
-                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CSG_Team_Due_and_Overdue_Tasks</report>
+                <report>Devin_s_Reports1/CSG_Team_Due_and_Overdue_Tasks</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -184,7 +184,7 @@
                 <header>EC Activity Report</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>20</maxValuesDisplayed>
-                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CSG_EC_Activity_Report1</report>
+                <report>Devin_s_Reports1/CSG_EC_Activity_Report1</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -261,7 +261,7 @@
                 </groupingSortProperties>
                 <header>FY21 Likely Count by School &amp; Program</header>
                 <legendPosition>Right</legendPosition>
-                <report>PostTrad_Admissions/CSG_Leadership/CSG_FY21_Likely_to_Enroll</report>
+                <report>CSG_Leadership/CSG_FY21_Likely_to_Enroll</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>

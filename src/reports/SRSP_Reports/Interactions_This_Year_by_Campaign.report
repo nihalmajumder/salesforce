@@ -34,6 +34,7 @@
     <filter>
         <criteriaItems>
             <column>Interaction__c.Interaction_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>false</isUnlocked>
             <operator>equals</operator>
             <value>Imported</value>

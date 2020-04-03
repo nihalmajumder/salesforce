@@ -742,6 +742,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Clickable_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;tel:&quot;&amp;Phone,Phone)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Clickable Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Confidential__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Field from Banner to indicate confidentiality; APAIDEN

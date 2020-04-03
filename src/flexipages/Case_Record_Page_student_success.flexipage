@@ -29,6 +29,30 @@
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
+                <name>decorate</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Warning &lt;/b&gt;&lt;/p&gt;&lt;p&gt;Applicant has pled guilty to a crime. &lt;/p&gt;&lt;p&gt;Conviction information on the Contact record must be reviewed before this student can be accepted.&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+            <visibilityRule>
+                <booleanFilter>1 AND 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!Record.Contact.Pled_Guilty__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Yes</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!Record.Contact.Warning_Reviewed__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>false</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
                 <name>hideHeader</name>
                 <value>false</value>
             </componentInstanceProperties>

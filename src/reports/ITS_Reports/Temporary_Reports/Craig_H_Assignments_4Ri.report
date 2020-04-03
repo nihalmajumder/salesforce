@@ -12,6 +12,7 @@
     <filter>
         <criteriaItems>
             <column>Geographic_Territory_Assignment__c$User__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Craig H</value>

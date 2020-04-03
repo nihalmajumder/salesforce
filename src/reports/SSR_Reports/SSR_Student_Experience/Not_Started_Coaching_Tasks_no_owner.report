@@ -16,24 +16,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Cases$Type</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Success Coaching</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases.Activities$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Not Started</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>New</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Marsha Bradt,Beccah Carlson</value>

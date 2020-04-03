@@ -30,7 +30,7 @@
                 </groupingSortProperties>
                 <header>CAPS/Sem/GS Likely Report</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CAPS_Sem_GS_Likely_Report</report>
+                <report>Devin_s_Reports1/CAPS_Sem_GS_Likely_Report</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -54,7 +54,7 @@
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
                 <header>CSG_Team Due and Overdue Tasks</header>
-                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CSG_Team_Due_and_Overdue_Tasks</report>
+                <report>Devin_s_Reports1/CSG_Team_Due_and_Overdue_Tasks</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
@@ -118,7 +118,7 @@
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
                 <header>CSG_EC Activity Report</header>
-                <report>PostTrad_Admissions/CSG_Leadership/Devin_s_Reports1/CSG_EC_Activity_Report1</report>
+                <report>Devin_s_Reports1/CSG_EC_Activity_Report1</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>

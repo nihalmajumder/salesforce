@@ -52,18 +52,21 @@
     <filter>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Document_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Waived</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Internal_Comments__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Added from ARIF form</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Internal_Comments__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Waived for New students</value>

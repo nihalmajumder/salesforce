@@ -21,6 +21,7 @@
     <filter>
         <criteriaItems>
             <column>START_DATE</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>NEXT_N_DAYS:30</value>

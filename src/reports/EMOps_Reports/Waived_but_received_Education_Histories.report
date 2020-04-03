@@ -24,12 +24,14 @@
     <filter>
         <criteriaItems>
             <column>Education_History__c$Document_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Waived</value>
         </criteriaItems>
         <criteriaItems>
             <column>Education_History__c$Document_Status_Description__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>

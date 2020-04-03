@@ -40,6 +40,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Financial_Aid__r$Package_Date__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>

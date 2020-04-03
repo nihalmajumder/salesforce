@@ -50,30 +50,35 @@
         <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Fall 2020 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Pre-Applied,App Started,App Submitted,App Completed,Accepted,Fee Paid,Fee Waived</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact$hed__Gender__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Male</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Application__c.Sport__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Tennis</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Application__c.Sport_2__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Tennis</value>

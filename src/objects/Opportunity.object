@@ -3125,6 +3125,17 @@ IF((right(RNL_Graded_Bin__c, 1)=&quot;I&quot;),8,9)
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>Test_Optional_COVID_19__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to indicate that the SAT and ACT scores are optional due to COVID-19. See Case: ITS-209752</description>
+        <externalId>false</externalId>
+        <label>Test Optional COVID-19</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Test_Optional__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Used for Data Integrations</description>

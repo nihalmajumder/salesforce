@@ -30,6 +30,7 @@
     <filter>
         <criteriaItems>
             <column>SUBJECT</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>startsWith</operator>
             <value>Call to invite to &quot;Coffee at Bethel&quot; info session</value>

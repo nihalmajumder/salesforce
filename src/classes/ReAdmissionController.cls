@@ -6,6 +6,7 @@ public class ReAdmissionController {
     public transient String resumeName {get; set;}
     public List<SelectOption> programOptions {get; set;}
     public List<SelectOption> termOptions {get; set;}
+    public List<SelectOption> deliveryFormatOptions {get; set;}
     public Case createdCase {get; set;}
     public String caseNumber {get; set;}
     public Id caseId {get; set;}
@@ -28,12 +29,19 @@ public class ReAdmissionController {
                 programOptions.add(new SelectOption(p.Academic_Program__c, p.Name));
             }
 	
-            List<Academic_Term__c> terms = [SELECT Id, Name, Term__r.Term_Description__c FROM Academic_Term__c WHERE ID IN (SELECT Academic_Term__c FROM Intended_Program_Term__c WHERE Intended_Program__r.School_College__c = :request.school AND Intended_Program__r.Active__c = true AND Academic_Term__r.Term__r.hed__Start_Date__c >= TODAY AND Academic_Term__r.Term__r.hed__Start_Date__c <= NEXT_N_DAYS:365) ORDER BY Term__r.hed__Start_Date__c];
+            List<Academic_Term__c> terms = [SELECT Id, Name, Term__r.Term_Description__c FROM Academic_Term__c WHERE ID IN (SELECT Academic_Term__c FROM Intended_Program_Term__c WHERE Intended_Program__r.School_College__c = :request.school AND Intended_Program__r.Active__c = true AND Academic_Term__r.Term__r.hed__End_Date__c >= TODAY AND Academic_Term__r.Term__r.hed__Start_Date__c <= NEXT_N_DAYS:365) ORDER BY Term__r.hed__Start_Date__c];
             termOptions = new List<SelectOption>();
             termOptions.add(new SelectOption('','--None--'));
+            termOptions.add(new SelectOption('As Soon As Possible','As Soon As Possible'));
             for (Academic_Term__c t : terms) {
                 termOptions.add(new SelectOption(t.Term__r.Term_Description__c, t.Term__r.Term_Description__c));
             }
+
+            deliveryFormatOptions = new List<SelectOption>();
+            deliveryFormatOptions.add(new SelectOption('','--None--'));
+            deliveryFormatOptions.add(new SelectOption('Face-to-Face','Face-to-Face'));
+            deliveryFormatOptions.add(new SelectOption('Online','Online'));
+            deliveryFormatOptions.add(new SelectOption('Blended','Blended'));
         }
         return null;
     }
@@ -60,7 +68,8 @@ public class ReAdmissionController {
 
                 if (theContact != null) {
                     request.theContact.hed__Race__c = request.getRaceString();
-                    String data = ReAdmissionHelper.createContactDataString(request);
+                    String data = ReAdmissionHelper.createContactDataString(request, theContact);
+                    ReAdmissionHelper.updateContact(request.theContact, theContact);
                     Id theCohortId = ReAdmissionHelper.findCohort(theContact.Id);
                     Case theCase = ReAdmissionHelper.createCase(theContact, request, theCohortId);
                     theCase.Re_enrollment_Answers__c = data;
@@ -161,6 +170,10 @@ public class ReAdmissionController {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, '"Are you or have you ever been known by any other name?" must not be blank.'));
             isValid = false;
         }
+        if (request.hasOtherName == 'Yes' && String.isBlank(request.otherName)) {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Other name must not be blank.'));
+            isValid = false;
+        }
         if (request.theContact.Citizenship__c == 'Not Citizen or Permanent Resident' && String.isBlank(request.theContact.Visa_Type_Code__c)) {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Intended Visa Status must not be blank.'));
             isValid = false;
@@ -197,7 +210,7 @@ public class ReAdmissionController {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'Has information changed must be selected.'));
             isValid = false;
         }
-        if (request.school == 'Seminary' && request.compliance != true) {
+       if (request.school == 'Seminary' && request.compliance != true) {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.Error, 'You must acknowledge that you have read the Affirmation of Faith.'));
             isValid = false;
         }
@@ -218,7 +231,9 @@ public class ReAdmissionController {
         public String financialAid {get; set;}
         public String hasChanged {get; set;}
         public Id program {get; set;}
+        public String whenBegin {get; set;}
         public String term {get; set;}
+        public String deliveryFormat {get; set;}
         public String academicRecord {get; set;}
         public String employerName {get; set;}
         public String employerAddress {get; set;}
@@ -284,8 +299,9 @@ public class ReAdmissionController {
             this.request.school = c.School__c;
             this.request.program = c.Program__c;
             this.request.term = c.New_Term__c;
-            this.request.financialAid = c.Will_Apply_For_Financial_Aid__c ? 'Yes' : 'No';
-            this.request.hasBusinessOffice = c.Collection_Holds__c? 'Yes' : 'No';
+            this.request.deliveryFormat = c.Preferred_Delivery_Format__c;
+            this.request.financialAid = c.Financial_Aid__c;
+            this.request.hasBusinessOffice = c.Collection_Hold__c;
             this.request.hasChanged= c.Has_Information_Changed__c? 'Yes' : 'No';
             this.request.academicRecord = c.Academic_History__c;
             this.request.whyLeftEssay = c.Why_Left_Essay__c;

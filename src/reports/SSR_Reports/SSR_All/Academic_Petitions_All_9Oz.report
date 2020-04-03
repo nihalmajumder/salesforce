@@ -9,18 +9,21 @@
     <filter>
         <criteriaItems>
             <column>Contact.Cases$RecordType</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Case.SSR_Academic_Petition</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Decision_Maker_Name__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>No Decision,Blanket Approval</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Closed</value>

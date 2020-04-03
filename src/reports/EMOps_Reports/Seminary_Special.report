@@ -27,12 +27,14 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program_Code__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>4-spe,4-spe-cc,4-spe-yl,4-ma-mn-mc</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>File Closed</value>

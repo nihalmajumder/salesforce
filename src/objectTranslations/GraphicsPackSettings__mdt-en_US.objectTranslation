@@ -8,37 +8,5 @@
         <plural>true</plural>
         <value>Graphics Pack Settings</value>
     </caseValues>
-    <fields>
-        <label><!-- Attribution Text --></label>
-        <name>AttributionText__c</name>
-    </fields>
-    <fields>
-        <label><!-- Attribution URL --></label>
-        <name>AttributionURL__c</name>
-    </fields>
-    <fields>
-        <label><!-- License2 --></label>
-        <name>License2__c</name>
-    </fields>
-    <fields>
-        <label><!-- License URL --></label>
-        <name>LicenseURL__c</name>
-    </fields>
-    <fields>
-        <label><!-- License --></label>
-        <name>License__c</name>
-    </fields>
-    <fields>
-        <label><!-- Size --></label>
-        <name>Size__c</name>
-        <picklistValues>
-            <masterLabel>16</masterLabel>
-            <translation><!-- 16 --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>32</masterLabel>
-            <translation><!-- 32 --></translation>
-        </picklistValues>
-    </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

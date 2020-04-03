@@ -259,7 +259,7 @@
                 </flexComponentProperties>
                 <groupingSortProperties/>
                 <header>Queue Rank Cases</header>
-                <report>ITS_Reports/DashboardReports/Queue_Rank_Cases</report>
+                <report>DashboardReports/Queue_Rank_Cases</report>
             </dashboardComponent>
             <rowIndex>20</rowIndex>
             <rowSpan>10</rowSpan>

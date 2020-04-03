@@ -151,7 +151,7 @@
                                     <apex:outputPanel id="otherNameQuestion">
                                     <apex:outputPanel layout="none" rendered="{!IF(request.hasOtherName = 'Yes', true, false)}" >
                                     <div class="form-group">
-                                        <label for="otherName" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Other Name</label>
+                                        <label for="otherName" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Other Name <span class='required'>*</span></label>
                                         <apex:inputText id="otherName" value="{!request.otherName}" maxlength="255" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" />
                                     </div>
                                     </apex:outputPanel>
@@ -345,6 +345,12 @@
                                             <apex:selectOptions value="{!termOptions}"/>    
                                         </apex:selectList>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="deliveryFormat" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:18px;" >Preferred delivery format</label>
+                                        <apex:selectList id="deliveryFormat" value="{!request.deliveryFormat}" size="1" styleClass="form-control" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
+                                            <apex:selectOptions value="{!deliveryFormatOptions}"/>    
+                                        </apex:selectList>
+                                    </div>
                                 </div>
                             </div>
                             </apex:outputPanel>
@@ -356,6 +362,7 @@
                                         <apex:selectRadio id="aid" value="{!request.financialAid}" layout="pageDirection" styleClass="selectRadio" style="font-family:'Open Sans', sans-serif;color:#{!appControl.Text_Color__c};font-weight:400;font-size:14px;height:36px;" >
                                             <apex:selectOption itemValue="Yes" itemLabel="Yes"/>
                                             <apex:selectOption itemValue="No" itemLabel="No"/>
+                                            <apex:selectOption itemValue="Unsure" itemLabel="Unsure"/>
                                         </apex:selectRadio>
                                     </div>
 
@@ -604,7 +611,7 @@
                                     </apex:actionFunction>
                             
                                     <apex:outputPanel id="resumeUpload">
-                                        <apex:outputPanel rendered="{!resumeUploaded}">Resume has been successfully uploaded. Your re-enrollment application is now complete.</apex:outputPanel>
+                                        <apex:outputPanel rendered="{!resumeUploaded}">Your resume has been successfully uploaded. Your re-enrollment application is now complete.</apex:outputPanel>
                                         <apex:outputPanel rendered="{!NOT(resumeUploaded)}">
                                             <label for="resume" style="font-family:'Open Sans', sans-serif;color:##ffffff;font-weight:400;font-size:18px;" >Please provide a resume</label>
                                             <input type="file" id="resume" style="font-family:'Open Sans', sans-serif;color:#1f618d;font-weight:400;font-size:14px;resize:none;" />

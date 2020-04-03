@@ -18,24 +18,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Inquired - File Closed,Pre-Applied - File Closed,App Started - File Closed,App Submitted - File Closed,App Completed - File Closed,Wait Listed - File Closed,Accepted - File Closed,Rejected - App Submitted - File Closed,Rejected - App Completed - File Closed,Fee Paid - File Closed,Fee Waived - File Closed,Registered - File Closed,Confirmed - File Closed,Unknown - File Closed,Lead - File Closed,Rejected - App Started - File Closed,Unknown - File Close</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Adult Undergraduate</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Enrolled</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Summer 2018,Summer 2019</value>

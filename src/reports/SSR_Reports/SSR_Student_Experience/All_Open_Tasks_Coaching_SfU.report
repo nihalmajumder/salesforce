@@ -27,24 +27,28 @@
     <filter>
         <criteriaItems>
             <column>Contact.Cases$RecordType</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Case.SSR_Student_Success_Case</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Type</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Success Coaching</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases.Activities$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Not Started,In Progress,Open</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Cases$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>New</value>

@@ -57,36 +57,42 @@
     <filter>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Record_Type_Name__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>College,Test for Credit</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Transcript_Evaluation__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>0</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Document_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Received</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$Document_Status_Description__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>unofficial</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact$Banner_Id__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
             <value>0</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Education_Histories__r$School_Not_Found_Name__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Advanced Placement</value>

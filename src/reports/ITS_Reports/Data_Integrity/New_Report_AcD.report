@@ -46,6 +46,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Opportunities__r$Admission_Type__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>

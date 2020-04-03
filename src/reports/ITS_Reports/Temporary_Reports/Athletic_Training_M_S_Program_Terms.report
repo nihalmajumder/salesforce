@@ -15,6 +15,7 @@
     <filter>
         <criteriaItems>
             <column>Program__c$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Athletic Training (M.S.)</value>

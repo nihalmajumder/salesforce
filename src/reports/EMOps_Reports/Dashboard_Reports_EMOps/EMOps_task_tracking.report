@@ -18,12 +18,14 @@
     <filter>
         <criteriaItems>
             <column>Activity$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Amie Graebner,Ellen Erdman,Daniel Moe,Angelique Eagen,Ben Groff</value>
         </criteriaItems>
         <criteriaItems>
             <column>Activity$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Completed</value>

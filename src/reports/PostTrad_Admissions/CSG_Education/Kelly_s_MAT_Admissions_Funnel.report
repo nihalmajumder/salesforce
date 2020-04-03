@@ -56,12 +56,14 @@
     <filter>
         <criteriaItems>
             <column>Opportunity$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Teaching (M.A.),teaching license</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>file closed</value>

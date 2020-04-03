@@ -12,6 +12,7 @@
     <filter>
         <criteriaItems>
             <column>Application__c.Contact__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>AUGUST TWELVE</value>

@@ -47,54 +47,63 @@
         <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND (7 OR 8) AND 9</booleanFilter>
         <criteriaItems>
             <column>Contact.Opportunities__r$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Undergraduate</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$StageName</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>File Closed</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Fall 2019</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>BUILD</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Withdrawal_Reason__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>RA - Readmit,AT - Athletics,BA - Bad Contact Info,BV - Bad Experience,DR - Do Not Recruit,NA - App Not Complete,NR - No Response,SC - STAR contact:not interested,ST - Switching Term/Prog,UN - Unknown,WA - Wrong School/Catalog,WB - Wrong Bethel,SF - Switching to Future Term,DF - Deferred to new term,WY - Wrong grad year,BA - Bad Address,BV - Bad visit,CA - Coach Contact:not interested,CU - Needed class unavailable,DC - Deceased,DI - Duplicate ID,HE - Health Issues,JH - Junior&apos;s Hockey,PS - Applying as PSEO,RM - Remove:No Longer Interested,SP - Switching to Previous Term,ST - Switching Terms,TE - Terminate,US - Unsubscribed:Email Blast,WC - Wrong Term Chosen on BNR App,WT - Wrong Term,YO - Taking year off,PD - Declining PSEO offer,RC - RuffaloCody ESP:not interest</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Inquired</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Undecided,Communication,Organizational,Business,Psychology,Social,Finance,Accounting</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact.Opportunities__r$Academic_Program_2__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>Communication,Organizational,Business,Psychology,Social,Finance,Accounting</value>
         </criteriaItems>
         <criteriaItems>
             <column>Contact$Name</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Yvonne Nyirenda,Madelyn Rose Schaback,Angie Yeridth Del Ange,Alexandra Angela Isaacson,Abdikadir Mohamed,Stanley Cullen Fleming,Olivia Moravec,Natalie Taylor Anderson,Aleia Paige,Emma Grace Kirby</value>

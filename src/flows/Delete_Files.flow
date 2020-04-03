@@ -3,7 +3,7 @@
     <assignments>
         <name>Add_Document_To_List</name>
         <label>Add Document To List</label>
-        <locationX>623</locationX>
+        <locationX>624</locationX>
         <locationY>546</locationY>
         <assignmentItems>
             <assignToReference>All_Content_Documents</assignToReference>
@@ -44,6 +44,20 @@
         <choiceText>{!All_Content_Document_Titles}</choiceText>
         <dataType>String</dataType>
     </choices>
+    <dynamicChoiceSets>
+        <name>Choice_Links</name>
+        <dataType>String</dataType>
+        <displayField>ContentDocumentId</displayField>
+        <filters>
+            <field>LinkedEntityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>ContentDocumentLink</object>
+        <valueField>ContentDocumentId</valueField>
+    </dynamicChoiceSets>
     <interviewLabel>Delete Files {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Delete Files</label>
     <loops>
@@ -143,8 +157,8 @@
     <recordLookups>
         <name>Get_Current_Document</name>
         <label>Get Current Document</label>
-        <locationX>625</locationX>
-        <locationY>404</locationY>
+        <locationX>730</locationX>
+        <locationY>395</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Add_Document_To_List</targetReference>
@@ -160,17 +174,18 @@
         <object>ContentDocument</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <runInMode>SystemModeWithSharing</runInMode>
     <screens>
         <name>Screen_Get_Files</name>
         <label>Screen Get Files</label>
         <locationX>841</locationX>
-        <locationY>178</locationY>
+        <locationY>179</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
             <name>Select_one_or_more_files_to_delete</name>
-            <choiceReferences>Choice_Document_Titles</choiceReferences>
+            <choiceReferences>Choice_Links</choiceReferences>
             <dataType>String</dataType>
             <fieldText>Select one or more files to delete.</fieldText>
             <fieldType>MultiSelectPicklist</fieldType>

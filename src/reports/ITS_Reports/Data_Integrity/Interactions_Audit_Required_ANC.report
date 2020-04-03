@@ -56,12 +56,14 @@
     <filter>
         <criteriaItems>
             <column>Interaction__c$Interaction_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Audit Required</value>
         </criteriaItems>
         <criteriaItems>
             <column>Interaction__c$Id</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>a0N5A00001Jz3Is</value>

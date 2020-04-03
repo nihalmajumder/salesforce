@@ -25,6 +25,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Financial_Aid__r$EFC_9_Month__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>

@@ -313,10 +313,6 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>STARS_Console</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>STARS_Callers</name>
         <type>CustomApplication</type>
     </appMenuItems>

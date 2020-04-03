@@ -24,6 +24,7 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <siteAdmin>josh-saterdalen@bethel.edu</siteAdmin>
+    <siteGuestRecordDefaultOwner>josh-saterdalen@bethel.edu</siteGuestRecordDefaultOwner>
     <siteTemplate>Mogli_SMS__SiteTemplate</siteTemplate>
     <siteType>Visualforce</siteType>
     <subdomain>bethelu</subdomain>

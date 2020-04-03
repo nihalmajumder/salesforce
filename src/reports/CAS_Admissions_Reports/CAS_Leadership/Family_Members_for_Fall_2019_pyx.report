@@ -37,6 +37,7 @@
     <filter>
         <criteriaItems>
             <column>Contact.Families__r$Email__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>

@@ -47,42 +47,49 @@
         <booleanFilter>((1 AND 2 AND 3) AND (4 OR (5 AND 6))) AND 7</booleanFilter>
         <criteriaItems>
             <column>Case$RecordType</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Case.SSR_Academic_Petition,Case.SSR_Readmission,Case.SSR_Student_Success_Case</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Type</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Academic Advising,Academic Concern,Academic Dishonesty,Appeal,Behavioral Concern,Commencement,Degree Change,Exception Request,Leadership Coaching,Orientation,Readmission,Retention,Schedule,Schedule - Admissions,Support Referral,Withdrawal</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case.Activities$Status</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Not Started,In Progress,Waiting on someone else</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case.Activities$Completion_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Past Due</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case.Activities$ActivityDate</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Case_Age_Business_Days__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
             <value>1</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case.Activities$Owner</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Alexandra Dennis,Allyson Mancuso,Amanda Buol,Britt Olson,Charity Glaeser,Dan Nimlos,Danielle Dworak,Holly Pierson,Kathleen Sipprell,Kimberly Thorstad,Kristin Kishaba,Maeve Olson,Marsha Bradt,Matt McCoy,Mi Chue Thao,Peter Yang,Yuliya Mudraya,Kristin Wilson,Jinna Johnson,Philip Hohl,Eric Jameson</value>

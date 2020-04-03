@@ -38,18 +38,21 @@
     <filter>
         <criteriaItems>
             <column>Opportunity.Academic_Term__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Fall 2020 - CAS</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Date_App_Submitted__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Rejected - App Submitted - File Closed,Rejected - App Completed - File Closed,Rejected - App Started - File Closed</value>

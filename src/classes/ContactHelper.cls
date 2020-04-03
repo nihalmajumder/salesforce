@@ -29,7 +29,9 @@ public class ContactHelper {
                 Is_Hispanic__c,
                 Is_Veteran__c,
                 Pled_Guilty__c,
-                Visa_Type_Code__c
+                Visa_Type_Code__c,
+                Former_Last_Name__c,
+                Warning_Reviewed__c
             FROM 
                 Contact
             WHERE
@@ -91,7 +93,9 @@ public class ContactHelper {
                 Is_Hispanic__c,
                 Is_Veteran__c,
                 Pled_Guilty__c,
-                Visa_Type_Code__c
+                Visa_Type_Code__c,
+                Former_Last_Name__c,
+                Warning_Reviewed__c
             FROM 
                 Contact
             WHERE

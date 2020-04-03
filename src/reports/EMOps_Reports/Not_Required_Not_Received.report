@@ -21,6 +21,7 @@
     <filter>
         <criteriaItems>
             <column>Education_History__c$Document_Status__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Not Received,Not Required</value>

@@ -22,30 +22,35 @@
     <filter>
         <criteriaItems>
             <column>Opportunity$School_College__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Seminary</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Stage_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>File,enrolled,registered,Paid</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Name</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Test,ZZ</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Academic_Program__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>Doctor,Crusade,YL,Young Life</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Attributes__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value>Partner - Young Life,Partner - Campus Crusade</value>

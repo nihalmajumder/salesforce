@@ -28,6 +28,7 @@
     <filter>
         <criteriaItems>
             <column>Opportunity.Interactions__r$Source_Detail__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>PTK</value>

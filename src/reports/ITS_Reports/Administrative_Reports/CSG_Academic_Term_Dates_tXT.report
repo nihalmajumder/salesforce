@@ -15,6 +15,7 @@
     <filter>
         <criteriaItems>
             <column>Academic_Term__c$Name</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
             <value>cas</value>

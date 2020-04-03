@@ -22,18 +22,21 @@
     <filter>
         <criteriaItems>
             <column>Mogli_SMS__SMS__c.Mogli_SMS__Gateway__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>6516358051,6516358098,6516358062,6516358080</value>
         </criteriaItems>
         <criteriaItems>
             <column>Mogli_SMS__SMS__c.Mogli_SMS__Direction__c</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Incoming</value>
         </criteriaItems>
         <criteriaItems>
             <column>CUST_CREATED_DATE</column>
+            <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
             <value>10/11/2019 12:00 AM</value>
