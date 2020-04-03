@@ -19,17 +19,10 @@ global class SandboxPostRefreshScript_Full implements SandboxPostCopy {
         validateUsers();
         updateBethelSettings();
         updateApplicationSettings();
-
+        createTestApplicants();
     }
 
     public void validateUsers() {
-        // find users who have Sandbox User checked
-        List<User> usersToActivate = new List<User>([SELECT Id, Email FROM User WHERE Sandbox_User__c=TRUE AND IsActive=TRUE]);
-
-        // clean these users' email addresses
-        for (User u : usersToActivate) {
-            u.Email = u.Email.replaceAll('\\.invalid','');
-        }
 
         // find users to DO NOT have Sandbox User checked; we want to ignore anyone without a FederationId to begin with
         List<User> usersToInvalidate = new List<User>([SELECT Id, FederationIdentifier FROM User WHERE Sandbox_User__c=FALSE AND IsActive=TRUE AND (NOT Profile.Name LIKE '%community%') AND FederationIdentifier!=NULL]);
@@ -39,12 +32,12 @@ global class SandboxPostRefreshScript_Full implements SandboxPostCopy {
             u.FederationIdentifier = u.FederationIdentifier + '.invalid';
         }
 
-        update usersToActivate;
+//        update usersToActivate;
         update usersToInvalidate;
     }
 
     public void updateBethelSettings() {
-        // our Full Sandbox MyDomain
+        // Bethel's Full Sandbox MyDomain
         String domain = 'https://bethel-university--full.lightning.force.com';
 
         // update the Custom Setting "Bethel Settings" for Full
@@ -65,7 +58,20 @@ global class SandboxPostRefreshScript_Full implements SandboxPostCopy {
         applicationSettings[0].Permission_Set_Id__c = [SELECT Id FROM PermissionSet WHERE Name = 'Application_Community'].Id;
         applicationSettings[0].Community_Profile_Ids__c = [SELECT Id FROM Profile WHERE Name='Applicant Community Login User'].Id;
 
+        System.debug('Community URL: '+applicationSettings[0].Community_URL__c);
+
         update applicationSettings;
+    }
+
+    public void createTestApplicants() {
+        List<User> tApps = new List<User>();
+        tApps.add(BethelDataFactory.spawnApplicant('Miles','Morales','salesforce+miles@bethel.edu'));
+        tApps.add(BethelDataFactory.spawnApplicant('Gwen','Stacy','salesforce+gwen@bethel.edu'));
+        tApps.add(BethelDataFactory.spawnApplicant('Mary Jane','Watson','salesforce+mj@bethel.edu'));
+
+        for(User u : tApps) {
+            System.debug('Successfully created '+u.FirstName+' '+u.LastName);
+        }
     }
 
 }

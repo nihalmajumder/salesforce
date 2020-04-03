@@ -28,6 +28,12 @@ IlluminatedCloud
 out
 .idea
 *.iml
+src/*
+!src/classes
+!src/lwc
+!src/triggers
+!src/components
+!src/pages
 
 # Mavensmate
 *.sublime-project
