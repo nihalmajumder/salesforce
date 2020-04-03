@@ -1,4 +1,5 @@
 *
+!.gitignore
 !src/classes
 !src/lwc
 !src/triggers
