@@ -1,7 +1,0 @@
-<!--
- - Created by ejc84332 on 2019-07-31.
- -->
-
-<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" >
-    <c:updateReference recordId="{!v.recordId}" onclose="{!c.handleClose}" />
-</aura:component>

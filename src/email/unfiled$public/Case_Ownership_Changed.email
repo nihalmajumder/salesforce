@@ -1,3 +1,0 @@
-Case #{!Case.CaseNumber}: "{!Case.Subject}" has been assigned to you.
-
-https://bethel-university.my.salesforce.com/{!Case.Id}

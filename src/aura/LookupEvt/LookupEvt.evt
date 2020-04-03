@@ -1,3 +1,0 @@
-<aura:event type="COMPONENT" description="event fired when user is selected">
-    <aura:attribute name="record" type="Object" description="record of whatever was selected from lookup cmp"/>
-</aura:event>

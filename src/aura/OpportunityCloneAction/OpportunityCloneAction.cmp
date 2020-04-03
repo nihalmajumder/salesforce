@@ -1,3 +1,0 @@
-<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" >
-    <c:opportunityClone recordId="{!v.recordId}" onclose="{!c.handleClose}" />
-</aura:component>

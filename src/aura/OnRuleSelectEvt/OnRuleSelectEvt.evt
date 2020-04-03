@@ -1,4 +1,0 @@
-<aura:event type="APPLICATION" description="Event template" >
-    <aura:attribute name="recordId" type="String" />
-    <aura:attribute name="sobjectType" type="String" />
-</aura:event>

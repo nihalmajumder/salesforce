@@ -1,3 +1,0 @@
-<aura:event type="APPLICATION" description="Generic event fired, when notifcation of success is needed" >
-    <aura:attribute name="data" type="Object" description="generic data attribute to hold whatever data needs to be returned, if needed, not required" />
-</aura:event>
