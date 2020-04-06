@@ -17,12 +17,13 @@ public class BethelTestDataFactory {
                 lastName = lName,
                 email = uniqueName + '@test' + orgId + '.org',
                 Username = uniqueName + '@test' + orgId + '.org',
-                EmailEncodingKey = 'ISO-8859-1',
+                EmailEncodingKey = 'UTF-8',
                 Alias = uniqueName.substring(18, 23),
-                TimeZoneSidKey = 'America/Los_Angeles',
+                TimeZoneSidKey = 'America/Chicago',
                 LocaleSidKey = 'en_US',
                 LanguageLocaleKey = 'en_US',
-                ProfileId = profId);
+                IsActive = true,
+                ProfileId = profID);
 //                UserRoleId = roleId
         return tuser;
     }
