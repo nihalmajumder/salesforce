@@ -106,7 +106,7 @@ global class Flow_TransferOwnership {
 
     public static List<Opportunity> getOpps(String oldOwnerId, String newOwnerId, List<String> programCodes) {
         List<Opportunity> opportunities = new List<Opportunity>();
-        if(programCodes.size() > 0  && oldOwnerId == null){
+        if(programCodes.size() > 0  && oldOwnerId == ''){
             opportunities = [
                     SELECT
                             Name,Id,OwnerId
@@ -116,7 +116,8 @@ global class Flow_TransferOwnership {
                             Academic_Program_Code__c IN :programCodes AND StageName != 'Enrolled' AND StageName != 'File Closed' AND StageName != 'Prospect' AND OwnerId != :newOwnerId
                     LIMIT 10000
             ];
-        }else if(programCodes.size() == 0 && oldOwnerId != null){
+            System.debug(opportunities);
+        }else if(programCodes.size() == 0 && oldOwnerId != ''){
             opportunities = [
                     SELECT
                             Name,Id,OwnerId
@@ -126,7 +127,7 @@ global class Flow_TransferOwnership {
                             OwnerId = :oldOwnerId AND StageName != 'Enrolled' AND StageName != 'File Closed' AND StageName != 'Prospect'
                     LIMIT 10000
             ];
-        } else if(programCodes.size() > 0 && oldOwnerId != null){
+        } else if(programCodes.size() > 0 && oldOwnerId != ''){
             opportunities = [
                     SELECT
                             Name,Id,OwnerId
@@ -142,7 +143,7 @@ global class Flow_TransferOwnership {
 
     public static List<Case> getCases(String oldOwnerId, String newOwnerId, List<String> programCodes) {
         List<Case> cases = new List<Case>();
-        if(programCodes.size() > 0  && oldOwnerId == null){
+        if(programCodes.size() > 0  && oldOwnerId == ''){
             cases = [
                     SELECT
                             Id,OwnerId
@@ -152,7 +153,7 @@ global class Flow_TransferOwnership {
                             Academic_Program_Code__c IN :programCodes AND Status != 'Closed' AND (Owner.UserRole.Name LIKE '%Post-Trad%' OR Owner.UserRole.Name LIKE '%CAS%') AND OwnerId != :newOwnerId
                     LIMIT 10000
             ];
-        }else if(programCodes.size() == 0 && oldOwnerId != null){
+        }else if(programCodes.size() == 0 && oldOwnerId != ''){
             cases = [
                     SELECT
                             Id,OwnerId
@@ -162,7 +163,7 @@ global class Flow_TransferOwnership {
                             OwnerId = :oldOwnerId AND Status != 'Closed' AND (Owner.UserRole.Name LIKE '%Post-Trad%' OR Owner.UserRole.Name LIKE '%CAS%')
                     LIMIT 10000
             ];
-        } else if(programCodes.size() > 0 && oldOwnerId != null){
+        } else if(programCodes.size() > 0 && oldOwnerId != ''){
             cases = [
                     SELECT
                             Id,OwnerId
@@ -178,7 +179,7 @@ global class Flow_TransferOwnership {
 
     public static List<Task> getTasks(String oldOwnerId, String newOwnerId, List<String> programCodes) {
         List<Task> tasks = new List<Task>();
-        if(programCodes.size() > 0  && oldOwnerId == null){
+        if(programCodes.size() > 0  && oldOwnerId == ''){
             //Get open Tasks on open Opportunities for specified program codes
             tasks.addAll([
                     SELECT
@@ -234,7 +235,7 @@ global class Flow_TransferOwnership {
                             Status != 'Completed'  AND OwnerId != :newOwnerId
                     LIMIT 10000
             ]);
-        }else if(programCodes.size() == 0 && oldOwnerId != null){
+        }else if(programCodes.size() == 0 && oldOwnerId != ''){
             //Get open Tasks assigned to specified user
             tasks.addAll([
                     SELECT
@@ -245,7 +246,7 @@ global class Flow_TransferOwnership {
                             OwnerId = :oldOwnerId AND Status != 'Completed'
                     LIMIT 10000
             ]);
-        } else if(programCodes.size() > 0 && oldOwnerId != null){
+        } else if(programCodes.size() > 0 && oldOwnerId != ''){
             //Get open Tasks assigned to specified user on open Opportunities for specified program codes
             tasks.addAll([
                     SELECT
@@ -324,4 +325,3 @@ global class Flow_TransferOwnership {
         return 'Success';
     }
 }
-
