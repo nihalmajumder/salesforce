@@ -6,6 +6,8 @@ global class TDTM_Case_Assignment extends TDTMVirtualTriggerHandler {
 
     global override void onBeforeUpdate(List<SObject> newList, List<SObject> oldList, Map<Id, SObject> newMap, Map<Id, SObject> oldMap, hed.TDTM_Runnable.DmlWrapper wrapper) {
 
+        String ssrAdvisingQueueId = [SELECT Queue.Id FROM QueueSObject WHERE Queue.Type ='Queue' AND Queue.DeveloperName = 'SSR_Advising'].Id;
+
         for (SObject s : newList) {
             Case new_Case = (Case) s;
             Case old_Case = (Case) oldMap.get(new_Case.Id);
@@ -13,7 +15,7 @@ global class TDTM_Case_Assignment extends TDTMVirtualTriggerHandler {
             Boolean ownerChanged = old_Case.OwnerId != new_Case.OwnerId;
             Boolean statusChanged = old_Case.Status != new_Case.Status;
 
-            if(new_Case.Type == 'readmission' && ownerChanged && old_Case.Status == 'New' && !statusChanged) {
+            if(new_Case.Type == 'readmission' && ownerChanged && old_Case.OwnerId == ssrAdvisingQueueId && old_Case.Status == 'New' && !statusChanged) {
                 new_Case.Status = 'Review';
             }
         }
