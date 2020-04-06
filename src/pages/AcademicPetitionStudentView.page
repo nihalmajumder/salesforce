@@ -308,6 +308,16 @@
                                     </select>
                                 </td>
                             </tr>
+                            <tr>
+                                <td class="left">
+                                    <label for="decision">Comments</label>
+                                </td>
+                                <td class="right">
+                                    <select id="decision" disabled="disabled">
+                                        <option id="decisionOption" selected="selected">{!additionalComments}</option>
+                                    </select>
+                                </td>
+                            </tr>
                         </table>
                     </form>
                 </apex:outputPanel>

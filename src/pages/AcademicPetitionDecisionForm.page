@@ -12,6 +12,13 @@
             <title>Academic Petition Decision Form</title>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+            <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function($scope) {
+                    $scope.maxLength = 255;
+                });
+            </script>
             <style>
                 @font-face {
                     font-family: 'Salesforce Sans';
@@ -562,7 +569,7 @@
                     <hr/>
                     <div>
                         <h2>PLEASE COMPLETE YOUR DECISION</h2>
-                        <apex:form id="decision">
+                        <apex:form id="decision" html-ng-app="myApp" html-ng-controller="myCtrl">
                             <table>
                                 <tr>
                                     <td class="left">
@@ -758,11 +765,20 @@
                                     <!-- Old field: Other_Notes2  -->
                                     <tr>
                                         <td class="left">
-                                            <label for="comments">Comments</label>
+                                            <label for="comments">Internal Comments</label>
                                         </td>
                                         <td class="right">
-                                            <apex:inputTextarea id="comments" value="{!comments}"/>
-                                            <div style="font-size: 12px;"><i> 255 character limit. Error will occur on submit if over limit. </i></div>
+                                            <apex:inputTextarea id="comments" value="{!comments}" html-ng-model="txt1" html-maxlength="255"/>
+                                            <div style="font-size: 12px;"><i><apex:outputText >{{maxLength - txt1.length}} characters remaining</apex:outputText></i></div><br/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">
+                                            <label for="comments">Comments for the Student</label>
+                                        </td>
+                                        <td class="right">
+                                            <apex:inputTextarea id="additionalComments" value="{!additionalComments}" html-ng-model="txt" html-maxlength="255"/>
+                                            <div style="font-size: 12px;"><i><apex:outputText >{{maxLength - txt.length}} characters remaining</apex:outputText></i></div>
                                         </td>
                                     </tr>
                                 </table>
